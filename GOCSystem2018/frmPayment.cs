@@ -222,202 +222,8 @@ namespace GOCSystem2018
             this.Dispose();         
         } //Computation and Saving the record to Billing Partial
 
-        public void saveOR()
+        public void PartialSecondPay()
         {
-
-        }
-
-        public void PartialNoReserve()
-        {           
-            if (payment_status.Equals("PARTIAL PAYMENT") && payment_no == 0)// magbabayad palang for FIRST payment - no reservation
-            {
-                #if PARTIALPAYMENT_FIRST_PAYMENT_NO_RESERVATION
-                AmountGiven = Convert.ToDouble(txtAmountGiven.Text); //Convert to Double               
-
-                if (AmountGiven > Convert.ToDouble(fee_for_reservation))//kapag mas malaki ang binigay na amount kaysa initial reservation fee this will be then divide to 10
-                {
-                    #region PARTIAL PAYMENT - NO RESERVATION                                 
-                    //madidivide ang tutiton sa 10
-                    total_tuition = total_tuition - AmountGiven;
-                    total_tuition = total_tuition - voucher_amount;
-                    total_tuition = total_tuition / 10;
-
-                    StudNoGenerate(); // Generate StudNo
-                    CountPayment(); // Count the payment
-                    bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
-                    bill.OrNo = txtORNo.Text;
-                    bill.StudentId = GOCNo;
-                    bill.RegNo = reg_no;
-                    bill.PaymentNo = count.ToString();
-                    bill.MOP = "Partial Payment " + count;
-                    bill.Save();
-
-                    //Update the GOC Number in Studprofile Table
-                    studProfile.StudRegistrationNo = reg_no;
-                    studProfile.StudGOCNo = GOCNo;
-                    studProfile.Reservee = "0";
-                    studProfile.SaveGOCNumber(); //update GOC number in the student profile table
-
-                    //For reservation - Public Voucher            
-                    billingPartial.IdNo = GOCNo;
-                    billingPartial.ORNo = txtORNo.Text;
-                    billingPartial.Full_name = full_name;
-
-                    billingPartial.DownPayment = Convert.ToDouble(DP).ToString("n");
-
-                    billingPartial.P1 = total_tuition.ToString("n");
-                    billingPartial.P2 = total_tuition.ToString("n");
-                    billingPartial.P3 = total_tuition.ToString("n");
-                    billingPartial.P4 = total_tuition.ToString("n");
-                    billingPartial.P5 = total_tuition.ToString("n");
-                    billingPartial.P6 = total_tuition.ToString("n");
-                    billingPartial.P7 = total_tuition.ToString("n");
-                    billingPartial.P8 = total_tuition.ToString("n");
-                    billingPartial.P9 = total_tuition.ToString("n");
-                    billingPartial.P10 = total_tuition.ToString("n");
-
-                    Double sum = 0;
-                    sum = Convert.ToDouble(billingPartial.P1) + Convert.ToDouble(billingPartial.P2) + Convert.ToDouble(billingPartial.P3) + Convert.ToDouble(billingPartial.P4) + Convert.ToDouble(billingPartial.P5) + Convert.ToDouble(billingPartial.P6) + Convert.ToDouble(billingPartial.P7) + Convert.ToDouble(billingPartial.P8) + Convert.ToDouble(billingPartial.P9) + Convert.ToDouble(billingPartial.P10);
-                    billingPartial.Balance = sum.ToString("n");
-                    billingPartial.EnStatus = "Enrolled";
-                    billingPartial.RegNo = reg_no;
-
-                    billingPartial.Save();
-
-                    this.Hide();
-                    this.Dispose();
-                    #endregion
-                }
-
-                else if (AmountGiven < Convert.ToDouble(fee_for_reservation))//mas maliit  sa initial reservation fee this will be tag as reservation fee
-                {
-                    string message = "The Minimum amount for Reservation is :" + fee_for_reservation +" Pesos.";
-                    string title = "GOC_INFO_SYS";
-
-                    MessageBoxButtons buttons = MessageBoxButtons.OK;
-                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
-                }
-
-                else if (AmountGiven == Convert.ToDouble(fee_for_reservation))// this will be tag as reservation fee
-                {
-                    string message = "The amount given is for Reservation Fee Only.\n Do you want to proceed to Reservation?";
-                    string title = "GOC_INFO_SYS";
-
-                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
-
-                    if (result == DialogResult.Yes)//responce
-                    {
-#region RESERVATION ONLY
-                        // Generate StudNo
-                        StudNoGenerate();
-                        // Count the payments
-                        CountPayment();
-
-                        bill.StudentId = GOCNo;
-                        bill.RegNo = reg_no;
-                        //Convert amount given
-                        bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
-                        //tag for the OR number
-                        bill.OrNo = txtORNo.Text;
-                        //count the payment number                    
-                        bill.PaymentNo = count.ToString();
-                        //tag for the payment Status
-                        bill.MOP = "Reservation Fee";
-                        //save for the billing OR table
-                        bill.Save();
-
-                        //********************************************************************************//
-                        //Update the GOC Number in Studprofile Table
-                        studProfile.StudRegistrationNo = reg_no;
-                        studProfile.StudGOCNo = GOCNo;
-
-                        studProfile.Reservee = "0";//update the status
-
-                        //update GOC number in the student profile table
-                        studProfile.SaveGOCNumber();
-
-                        Reservation();//Computation per month and Balance
-#endregion
-                    }
-                    else
-                    {
-                        return;
-                    }                    
-                }
-                                 #endif
-            }
-            
-            else
-            {
-                return;
-            }
-        }
-
-        /***********************************************************************************/
-        /*Private Methods*/
-        /**********************************************************************************/
-
-        private void frmPayment_Load(object sender, EventArgs e)
-        {
-            lblAmount_Due.Text = amount_due.ToString("n");
-        }
-
-
-        //For billing
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(enroll_status +" " + payment_status +" "+ payment_no);
-             
-            if (payment_status.Equals("RESERVATION"))
-            {
-                 #region RESERVATION - ASSESSMENT - RESERVE
-                            ///Allow Student to pay the exact amount of the reservation fee or else student cannot reserve
-                            if (fee_for_reservation == Convert.ToDouble(txtAmountGiven.Text))
-                            {
-                                // Generate StudNo
-                                StudNoGenerate();
-                                // Count the payments
-                                CountPayment();
-
-                                bill.StudentId = GOCNo;
-                                bill.RegNo = reg_no;
-                                //Convert amount given
-                                bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
-                                //tag for the OR number
-                                bill.OrNo = txtORNo.Text;
-                                //count the payment number                    
-                                bill.PaymentNo = count.ToString();
-                                //tag for the payment Status
-                                bill.MOP = "Reservation Fee";
-                                //save for the billing OR table
-                                bill.Save();
-
-                                //********************************************************************************//
-                                //Update the GOC Number in Studprofile Table
-                                studProfile.StudRegistrationNo = reg_no;
-                                studProfile.StudGOCNo = GOCNo;
-
-                                studProfile.Reservee = "0";//update the status
-
-                                //update GOC number in the student profile table
-                                studProfile.SaveGOCNumber();
-
-                                Reservation();//Computation per month and Balance
-                    return;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Please pay the exact reservation fee", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
-            #endregion
-            }
-            else if (payment_status.Equals("PARTIAL PAYMENT")) //Diretso sa payment walang reservation
-            {
-                PartialNoReserve();
-            }
-            
-
             if (enroll_status.Equals("Reservee"))//MAGBABAYAD NG 2nd Payment - For Reservee
             {
                 MessageBox.Show(enroll_status + " " + payment_status + " " + payment_no);
@@ -527,12 +333,12 @@ namespace GOCSystem2018
 
 
                     //This will count  the remaining balance before computation
-                    double Total_Amount = 0;                    
+                    double Total_Amount = 0;
                     for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
                     {
                         Total_Amount += Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value);
                     }
-                   
+
                     if (Total_Amount > Convert.ToDouble(txtAmountGiven.Text))
                     {
                         //get the sum of all amount in dgv
@@ -580,11 +386,201 @@ namespace GOCSystem2018
                         MessageBox.Show("Please check the amount given is morethan the Total Balance", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
-                   
                     #endregion
                 }
 
             }
+        }
+
+        public void PartialNoReserve()
+        {
+            if (payment_status.Equals("PARTIAL PAYMENT") && payment_no == 0)// magbabayad palang for FIRST payment - no reservation
+            {
+
+                AmountGiven = Convert.ToDouble(txtAmountGiven.Text); //Convert to Double               
+
+                if (AmountGiven > Convert.ToDouble(fee_for_reservation))//kapag mas malaki ang binigay na amount kaysa initial reservation fee this will be then divide to 10
+                {
+                    #region PARTIAL PAYMENT - NO RESERVATION                                 
+                    //madidivide ang tutiton sa 10
+                    total_tuition = total_tuition - AmountGiven;
+                    total_tuition = total_tuition - voucher_amount;
+                    total_tuition = total_tuition / 10;
+
+                    StudNoGenerate(); // Generate StudNo
+                    CountPayment(); // Count the payment
+                    bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+                    bill.OrNo = txtORNo.Text;
+                    bill.StudentId = GOCNo;
+                    bill.RegNo = reg_no;
+                    bill.PaymentNo = count.ToString();
+                    bill.MOP = "Partial Payment " + count;
+                    bill.Save();
+
+                    //Update the GOC Number in Studprofile Table
+                    studProfile.StudRegistrationNo = reg_no;
+                    studProfile.StudGOCNo = GOCNo;
+                    studProfile.Reservee = "0";
+                    studProfile.SaveGOCNumber(); //update GOC number in the student profile table
+
+                    //For reservation - Public Voucher            
+                    billingPartial.IdNo = GOCNo;
+                    billingPartial.ORNo = txtORNo.Text;
+                    billingPartial.Full_name = full_name;
+
+                    billingPartial.DownPayment = Convert.ToDouble(DP).ToString("n");
+
+                    billingPartial.P1 = total_tuition.ToString("n");
+                    billingPartial.P2 = total_tuition.ToString("n");
+                    billingPartial.P3 = total_tuition.ToString("n");
+                    billingPartial.P4 = total_tuition.ToString("n");
+                    billingPartial.P5 = total_tuition.ToString("n");
+                    billingPartial.P6 = total_tuition.ToString("n");
+                    billingPartial.P7 = total_tuition.ToString("n");
+                    billingPartial.P8 = total_tuition.ToString("n");
+                    billingPartial.P9 = total_tuition.ToString("n");
+                    billingPartial.P10 = total_tuition.ToString("n");
+
+                    Double sum = 0;
+                    sum = Convert.ToDouble(billingPartial.P1) + Convert.ToDouble(billingPartial.P2) + Convert.ToDouble(billingPartial.P3) + Convert.ToDouble(billingPartial.P4) + Convert.ToDouble(billingPartial.P5) + Convert.ToDouble(billingPartial.P6) + Convert.ToDouble(billingPartial.P7) + Convert.ToDouble(billingPartial.P8) + Convert.ToDouble(billingPartial.P9) + Convert.ToDouble(billingPartial.P10);
+                    billingPartial.Balance = sum.ToString("n");
+                    billingPartial.EnStatus = "Enrolled";
+                    billingPartial.RegNo = reg_no;
+
+                    billingPartial.Save();
+
+                    this.Hide();
+                    this.Dispose();
+                    #endregion
+                }
+
+                else if (AmountGiven < Convert.ToDouble(fee_for_reservation))//mas maliit  sa initial reservation fee this will be tag as reservation fee
+                {
+                    string message = "The Minimum amount for Reservation is :" + fee_for_reservation + " Pesos.";
+                    string title = "GOC_INFO_SYS";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+                }
+
+                else if (AmountGiven == Convert.ToDouble(fee_for_reservation))// this will be tag as reservation fee
+                {
+                    string message = "The amount given is for Reservation Fee Only.\n Do you want to proceed to Reservation?";
+                    string title = "GOC_INFO_SYS";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
+
+                    if (result == DialogResult.Yes)//responce
+                    {
+                        #region RESERVATION ONLY
+                        // Generate StudNo
+                        StudNoGenerate();
+                        // Count the payments
+                        CountPayment();
+
+                        bill.StudentId = GOCNo;
+                        bill.RegNo = reg_no;
+                        //Convert amount given
+                        bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+                        //tag for the OR number
+                        bill.OrNo = txtORNo.Text;
+                        //count the payment number                    
+                        bill.PaymentNo = count.ToString();
+                        //tag for the payment Status
+                        bill.MOP = "Reservation Fee";
+                        //save for the billing OR table
+                        bill.Save();
+
+                        //********************************************************************************//
+                        //Update the GOC Number in Studprofile Table
+                        studProfile.StudRegistrationNo = reg_no;
+                        studProfile.StudGOCNo = GOCNo;
+
+                        studProfile.Reservee = "0";//update the status
+
+                        //update GOC number in the student profile table
+                        studProfile.SaveGOCNumber();
+
+                        Reservation();//Computation per month and Balance
+                        #endregion
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+
+            }
+
+            else
+            {
+                return;
+            }
+        }
+
+        public void Reservations()
+        {
+            if (payment_status.Equals("RESERVATION"))
+            {
+                #region RESERVATION - ASSESSMENT - RESERVE
+                ///Allow Student to pay the exact amount of the reservation fee or else student cannot reserve
+                if (fee_for_reservation == Convert.ToDouble(txtAmountGiven.Text))
+                {
+                    // Generate StudNo
+                    StudNoGenerate();
+                    // Count the payments
+                    CountPayment();
+
+                    bill.StudentId = GOCNo;
+                    bill.RegNo = reg_no;
+                    //Convert amount given
+                    bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+                    //tag for the OR number
+                    bill.OrNo = txtORNo.Text;
+                    //count the payment number                    
+                    bill.PaymentNo = count.ToString();
+                    //tag for the payment Status
+                    bill.MOP = "Reservation Fee";
+                    //save for the billing OR table
+                    bill.Save();
+
+                    //********************************************************************************//
+                    //Update the GOC Number in Studprofile Table
+                    studProfile.StudRegistrationNo = reg_no;
+                    studProfile.StudGOCNo = GOCNo;
+
+                    studProfile.Reservee = "0";//update the status
+
+                    //update GOC number in the student profile table
+                    studProfile.SaveGOCNumber();
+
+                    Reservation();//Computation per month and Balance
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Please pay the exact reservation fee", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                #endregion
+            }
+        }
+        /***********************************************************************************/
+        /*Private Methods*/
+        /**********************************************************************************/
+
+        private void frmPayment_Load(object sender, EventArgs e)
+        {
+            lblAmount_Due.Text = amount_due.ToString("n");
+        }
+
+        //For billing
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(enroll_status +" " + payment_status +" "+ payment_no);
+            Reservations();
+            PartialNoReserve();
+            PartialSecondPay();
         }
         
                       
