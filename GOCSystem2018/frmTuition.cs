@@ -114,7 +114,6 @@ namespace GOCSystem2018
                 pnlEditVoucher.Visible = false;
                 pnlNewTuition.Visible = true;
                 btnAdd.Enabled = true;
-                
             }
         }
         private void btnAdd_Click(object sender, EventArgs e)
@@ -150,9 +149,6 @@ namespace GOCSystem2018
 
                 //reset all objects
                 this.Reset();
-
-            
-
             }
         }
 
@@ -174,7 +170,6 @@ namespace GOCSystem2018
 
                 //Load Records
                 this.LoadRecords();
-
             }
         }
 

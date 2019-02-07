@@ -20,12 +20,12 @@ namespace GOCSystem2018
         private void label19_Click(object sender, EventArgs e)
         {
             panel2.Visible = false;
-            TeachLbl.Text = "";
-            TeachFNTb.Text = "";
-            TeachMNTb.Text = "";
-            TeachLNTb.Text = "";
-            TeachSpTb.Text = "";
-            Advisory1.Text = "";
+            //TeachLbl.Text = "";
+            txtFName.Text = "";
+            txtMName.Text = "";
+            txtLastName.Text = "";
+            txtSpecial.Text = "";
+            cmbAdvisory.Text = "";
             Advisory2.Text = "";
             Advisory3.Text = "";
             Advisory4.Text = "";
@@ -33,12 +33,12 @@ namespace GOCSystem2018
         private void label4_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            EditTeachLbl.Text = "";
-            EditTeachFNTb.Text = "";
-            EditTeachMNTb.Text = "";
-            EditTeachLNTb.Text = "";
-            EditTeachSpTb.Text = "";
-            EditAdvisory1.Text = "";
+           // EditTeachLbl.Text = "";
+            txtEditFName.Text = "";
+            txtEMName.Text = "";
+            txtELName.Text = "";
+            txtESpecial.Text = "";
+            cmbEAdvisory.Text = "";
             EditAdvisory2.Text = "";
             EditAdvisory3.Text = "";
             EditAdvisory4.Text = "";
@@ -50,24 +50,24 @@ namespace GOCSystem2018
 
             //clear add teacher window
             panel2.Visible = false;
-            TeachLbl.Text = "";
-            TeachFNTb.Text = "";
-            TeachMNTb.Text = "";
-            TeachLNTb.Text = "";
-            TeachSpTb.Text = "";
-            Advisory1.Text = "";
+            //TeachLbl.Text = "";
+            txtFName.Text = "";
+            txtMName.Text = "";
+            txtLastName.Text = "";
+            txtSpecial.Text = "";
+            cmbAdvisory.Text = "";
             Advisory2.Text = "";
             Advisory3.Text = "";
             Advisory4.Text = "";
 
             //clear edit teacher window
             panel1.Visible = false;
-            EditTeachLbl.Text = "";
-            EditTeachFNTb.Text = "";
-            EditTeachMNTb.Text = "";
-            EditTeachLNTb.Text = "";
-            EditTeachSpTb.Text = "";
-            EditAdvisory1.Text = "";
+            //EditTeachLbl.Text = "";
+            txtEditFName.Text = "";
+            txtEMName.Text = "";
+            txtELName.Text = "";
+            txtESpecial.Text = "";
+            cmbEAdvisory.Text = "";
             EditAdvisory2.Text = "";
             EditAdvisory3.Text = "";
             EditAdvisory4.Text = "";

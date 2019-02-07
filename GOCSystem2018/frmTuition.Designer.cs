@@ -128,7 +128,7 @@
             this.pnlNewTuition.Controls.Add(this.txtTuitionAmount);
             this.pnlNewTuition.Controls.Add(this.txtTuition);
             this.pnlNewTuition.Controls.Add(this.label7);
-            this.pnlNewTuition.Location = new System.Drawing.Point(91, 153);
+            this.pnlNewTuition.Location = new System.Drawing.Point(86, 155);
             this.pnlNewTuition.Name = "pnlNewTuition";
             this.pnlNewTuition.Size = new System.Drawing.Size(325, 249);
             this.pnlNewTuition.TabIndex = 27;

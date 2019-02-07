@@ -35,57 +35,60 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Advisory4 = new System.Windows.Forms.ComboBox();
-            this.Advisory3 = new System.Windows.Forms.ComboBox();
-            this.Advisory2 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TeachSpTb = new System.Windows.Forms.TextBox();
-            this.Advisory1 = new System.Windows.Forms.ComboBox();
-            this.TeachLNTb = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.TeachLbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.TeachMNTb = new System.Windows.Forms.TextBox();
-            this.TeachFNTb = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.EditAdvisory4 = new System.Windows.Forms.ComboBox();
-            this.EditAdvisory3 = new System.Windows.Forms.ComboBox();
-            this.EditAdvisory2 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.EditTeachSpTb = new System.Windows.Forms.TextBox();
-            this.EditAdvisory1 = new System.Windows.Forms.ComboBox();
-            this.EditTeachLNTb = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.txtESpecial = new System.Windows.Forms.TextBox();
+            this.txtELName = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.EditTeachLbl = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCommit = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.EditTeachMNTb = new System.Windows.Forms.TextBox();
-            this.EditTeachFNTb = new System.Windows.Forms.TextBox();
+            this.txtEMName = new System.Windows.Forms.TextBox();
+            this.txtEditFName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.dgvTeacher = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
+            this.btnEdit = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.PictureBox();
+            this.txtFName = new System.Windows.Forms.TextBox();
+            this.txtMName = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.cmbAdvisory = new System.Windows.Forms.ComboBox();
+            this.txtSpecial = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Advisory2 = new System.Windows.Forms.ComboBox();
+            this.Advisory3 = new System.Windows.Forms.ComboBox();
+            this.Advisory4 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbEAdvisory = new System.Windows.Forms.ComboBox();
+            this.EditAdvisory2 = new System.Windows.Forms.ComboBox();
+            this.EditAdvisory3 = new System.Windows.Forms.ComboBox();
+            this.EditAdvisory4 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEmpNo = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -116,11 +119,11 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Myriad Hebrew", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(17, 46);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(181, 36);
+            this.label16.Size = new System.Drawing.Size(204, 33);
             this.label16.TabIndex = 17;
             this.label16.Text = "Teachers List";
             // 
@@ -128,6 +131,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.txtEmpNo);
             this.panel2.Controls.Add(this.label19);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -135,19 +140,17 @@
             this.panel2.Controls.Add(this.Advisory3);
             this.panel2.Controls.Add(this.Advisory2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.TeachSpTb);
-            this.panel2.Controls.Add(this.Advisory1);
-            this.panel2.Controls.Add(this.TeachLNTb);
-            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.txtSpecial);
+            this.panel2.Controls.Add(this.cmbAdvisory);
+            this.panel2.Controls.Add(this.txtLastName);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.TeachLbl);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.TeachMNTb);
-            this.panel2.Controls.Add(this.TeachFNTb);
+            this.panel2.Controls.Add(this.txtMName);
+            this.panel2.Controls.Add(this.txtFName);
             this.panel2.Location = new System.Drawing.Point(73, 171);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(349, 355);
@@ -170,111 +173,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
             this.label3.Location = new System.Drawing.Point(264, 192);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(15, 22);
+            this.label3.Size = new System.Drawing.Size(15, 20);
             this.label3.TabIndex = 22;
             this.label3.Text = "-";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.label2.Location = new System.Drawing.Point(239, 192);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 22);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "+";
-            // 
-            // Advisory4
-            // 
-            this.Advisory4.FormattingEnabled = true;
-            this.Advisory4.Location = new System.Drawing.Point(116, 273);
-            this.Advisory4.Name = "Advisory4";
-            this.Advisory4.Size = new System.Drawing.Size(117, 21);
-            this.Advisory4.TabIndex = 20;
-            this.Advisory4.Visible = false;
-            // 
-            // Advisory3
-            // 
-            this.Advisory3.FormattingEnabled = true;
-            this.Advisory3.Location = new System.Drawing.Point(116, 246);
-            this.Advisory3.Name = "Advisory3";
-            this.Advisory3.Size = new System.Drawing.Size(117, 21);
-            this.Advisory3.TabIndex = 19;
-            this.Advisory3.Visible = false;
-            // 
-            // Advisory2
-            // 
-            this.Advisory2.FormattingEnabled = true;
-            this.Advisory2.Location = new System.Drawing.Point(116, 219);
-            this.Advisory2.Name = "Advisory2";
-            this.Advisory2.Size = new System.Drawing.Size(117, 21);
-            this.Advisory2.TabIndex = 18;
-            this.Advisory2.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 192);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 13);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Advisory Class";
-            // 
-            // TeachSpTb
-            // 
-            this.TeachSpTb.Location = new System.Drawing.Point(116, 163);
-            this.TeachSpTb.Multiline = true;
-            this.TeachSpTb.Name = "TeachSpTb";
-            this.TeachSpTb.Size = new System.Drawing.Size(191, 20);
-            this.TeachSpTb.TabIndex = 16;
-            // 
-            // Advisory1
-            // 
-            this.Advisory1.FormattingEnabled = true;
-            this.Advisory1.Location = new System.Drawing.Point(116, 192);
-            this.Advisory1.Name = "Advisory1";
-            this.Advisory1.Size = new System.Drawing.Size(117, 21);
-            this.Advisory1.TabIndex = 15;
-            // 
-            // TeachLNTb
-            // 
-            this.TeachLNTb.Location = new System.Drawing.Point(116, 136);
-            this.TeachLNTb.Multiline = true;
-            this.TeachLNTb.Name = "TeachLNTb";
-            this.TeachLNTb.Size = new System.Drawing.Size(191, 20);
-            this.TeachLNTb.TabIndex = 14;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(86, 61);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 13);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "ID:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(50, 87);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 13);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "First Name:";
-            // 
-            // TeachLbl
-            // 
-            this.TeachLbl.AutoSize = true;
-            this.TeachLbl.Location = new System.Drawing.Point(116, 61);
-            this.TeachLbl.Name = "TeachLbl";
-            this.TeachLbl.Size = new System.Drawing.Size(42, 13);
-            this.TeachLbl.TabIndex = 11;
-            this.TeachLbl.Text = "ID here";
             // 
             // label9
             // 
@@ -285,61 +190,19 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Add new Teacher";
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-1, 327);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(349, 27);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(32, 166);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 13);
-            this.label10.TabIndex = 8;
-            this.label10.Text = "Specialization:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(56, 139);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
-            this.label11.TabIndex = 7;
-            this.label11.Text = "Surname:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(41, 113);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 13);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "MiddleName:";
-            // 
-            // TeachMNTb
-            // 
-            this.TeachMNTb.Location = new System.Drawing.Point(116, 110);
-            this.TeachMNTb.Multiline = true;
-            this.TeachMNTb.Name = "TeachMNTb";
-            this.TeachMNTb.Size = new System.Drawing.Size(191, 20);
-            this.TeachMNTb.TabIndex = 4;
-            // 
-            // TeachFNTb
-            // 
-            this.TeachFNTb.Location = new System.Drawing.Point(116, 84);
-            this.TeachFNTb.Name = "TeachFNTb";
-            this.TeachFNTb.Size = new System.Drawing.Size(191, 20);
-            this.TeachFNTb.TabIndex = 2;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(-1, 327);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(349, 27);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Add";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -352,19 +215,17 @@
             this.panel1.Controls.Add(this.EditAdvisory3);
             this.panel1.Controls.Add(this.EditAdvisory2);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.EditTeachSpTb);
-            this.panel1.Controls.Add(this.EditAdvisory1);
-            this.panel1.Controls.Add(this.EditTeachLNTb);
-            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.txtESpecial);
+            this.panel1.Controls.Add(this.cmbEAdvisory);
+            this.panel1.Controls.Add(this.txtELName);
             this.panel1.Controls.Add(this.label20);
-            this.panel1.Controls.Add(this.EditTeachLbl);
             this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnCommit);
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.label25);
-            this.panel1.Controls.Add(this.EditTeachMNTb);
-            this.panel1.Controls.Add(this.EditTeachFNTb);
+            this.panel1.Controls.Add(this.txtEMName);
+            this.panel1.Controls.Add(this.txtEditFName);
             this.panel1.Location = new System.Drawing.Point(454, 171);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 355);
@@ -384,55 +245,6 @@
             this.label4.Text = "X";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.label5.Location = new System.Drawing.Point(264, 192);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(15, 22);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "-";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Minion Pro", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.label6.Location = new System.Drawing.Point(239, 192);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(19, 22);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "+";
-            // 
-            // EditAdvisory4
-            // 
-            this.EditAdvisory4.FormattingEnabled = true;
-            this.EditAdvisory4.Location = new System.Drawing.Point(116, 273);
-            this.EditAdvisory4.Name = "EditAdvisory4";
-            this.EditAdvisory4.Size = new System.Drawing.Size(117, 21);
-            this.EditAdvisory4.TabIndex = 20;
-            this.EditAdvisory4.Visible = false;
-            // 
-            // EditAdvisory3
-            // 
-            this.EditAdvisory3.FormattingEnabled = true;
-            this.EditAdvisory3.Location = new System.Drawing.Point(116, 246);
-            this.EditAdvisory3.Name = "EditAdvisory3";
-            this.EditAdvisory3.Size = new System.Drawing.Size(117, 21);
-            this.EditAdvisory3.TabIndex = 19;
-            this.EditAdvisory3.Visible = false;
-            // 
-            // EditAdvisory2
-            // 
-            this.EditAdvisory2.FormattingEnabled = true;
-            this.EditAdvisory2.Location = new System.Drawing.Point(116, 219);
-            this.EditAdvisory2.Name = "EditAdvisory2";
-            this.EditAdvisory2.Size = new System.Drawing.Size(117, 21);
-            this.EditAdvisory2.TabIndex = 18;
-            this.EditAdvisory2.Visible = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -442,38 +254,21 @@
             this.label7.TabIndex = 17;
             this.label7.Text = "Advisory Class";
             // 
-            // EditTeachSpTb
+            // txtESpecial
             // 
-            this.EditTeachSpTb.Location = new System.Drawing.Point(116, 163);
-            this.EditTeachSpTb.Multiline = true;
-            this.EditTeachSpTb.Name = "EditTeachSpTb";
-            this.EditTeachSpTb.Size = new System.Drawing.Size(191, 20);
-            this.EditTeachSpTb.TabIndex = 16;
+            this.txtESpecial.Location = new System.Drawing.Point(116, 163);
+            this.txtESpecial.Multiline = true;
+            this.txtESpecial.Name = "txtESpecial";
+            this.txtESpecial.Size = new System.Drawing.Size(191, 20);
+            this.txtESpecial.TabIndex = 16;
             // 
-            // EditAdvisory1
+            // txtELName
             // 
-            this.EditAdvisory1.FormattingEnabled = true;
-            this.EditAdvisory1.Location = new System.Drawing.Point(116, 192);
-            this.EditAdvisory1.Name = "EditAdvisory1";
-            this.EditAdvisory1.Size = new System.Drawing.Size(117, 21);
-            this.EditAdvisory1.TabIndex = 15;
-            // 
-            // EditTeachLNTb
-            // 
-            this.EditTeachLNTb.Location = new System.Drawing.Point(116, 136);
-            this.EditTeachLNTb.Multiline = true;
-            this.EditTeachLNTb.Name = "EditTeachLNTb";
-            this.EditTeachLNTb.Size = new System.Drawing.Size(191, 20);
-            this.EditTeachLNTb.TabIndex = 14;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(86, 61);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(21, 13);
-            this.label18.TabIndex = 12;
-            this.label18.Text = "ID:";
+            this.txtELName.Location = new System.Drawing.Point(116, 136);
+            this.txtELName.Multiline = true;
+            this.txtELName.Name = "txtELName";
+            this.txtELName.Size = new System.Drawing.Size(191, 20);
+            this.txtELName.TabIndex = 14;
             // 
             // label20
             // 
@@ -484,15 +279,6 @@
             this.label20.TabIndex = 13;
             this.label20.Text = "First Name:";
             // 
-            // EditTeachLbl
-            // 
-            this.EditTeachLbl.AutoSize = true;
-            this.EditTeachLbl.Location = new System.Drawing.Point(116, 61);
-            this.EditTeachLbl.Name = "EditTeachLbl";
-            this.EditTeachLbl.Size = new System.Drawing.Size(42, 13);
-            this.EditTeachLbl.TabIndex = 11;
-            this.EditTeachLbl.Text = "ID here";
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -502,19 +288,19 @@
             this.label22.TabIndex = 10;
             this.label22.Text = "Edit Teacher Info";
             // 
-            // button1
+            // btnCommit
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(-1, 327);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(349, 27);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Commit";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnCommit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnCommit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCommit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCommit.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCommit.ForeColor = System.Drawing.Color.White;
+            this.btnCommit.Location = new System.Drawing.Point(-1, 327);
+            this.btnCommit.Name = "btnCommit";
+            this.btnCommit.Size = new System.Drawing.Size(349, 27);
+            this.btnCommit.TabIndex = 9;
+            this.btnCommit.Text = "Commit";
+            this.btnCommit.UseVisualStyleBackColor = false;
             // 
             // label23
             // 
@@ -543,20 +329,20 @@
             this.label25.TabIndex = 5;
             this.label25.Text = "MiddleName:";
             // 
-            // EditTeachMNTb
+            // txtEMName
             // 
-            this.EditTeachMNTb.Location = new System.Drawing.Point(116, 110);
-            this.EditTeachMNTb.Multiline = true;
-            this.EditTeachMNTb.Name = "EditTeachMNTb";
-            this.EditTeachMNTb.Size = new System.Drawing.Size(191, 20);
-            this.EditTeachMNTb.TabIndex = 4;
+            this.txtEMName.Location = new System.Drawing.Point(116, 110);
+            this.txtEMName.Multiline = true;
+            this.txtEMName.Name = "txtEMName";
+            this.txtEMName.Size = new System.Drawing.Size(191, 20);
+            this.txtEMName.TabIndex = 4;
             // 
-            // EditTeachFNTb
+            // txtEditFName
             // 
-            this.EditTeachFNTb.Location = new System.Drawing.Point(116, 84);
-            this.EditTeachFNTb.Name = "EditTeachFNTb";
-            this.EditTeachFNTb.Size = new System.Drawing.Size(191, 20);
-            this.EditTeachFNTb.TabIndex = 2;
+            this.txtEditFName.Location = new System.Drawing.Point(116, 84);
+            this.txtEditFName.Name = "txtEditFName";
+            this.txtEditFName.Size = new System.Drawing.Size(191, 20);
+            this.txtEditFName.TabIndex = 2;
             // 
             // label15
             // 
@@ -567,45 +353,282 @@
             this.label15.TabIndex = 38;
             this.label15.Text = resources.GetString("label15.Text");
             // 
-            // dataGridView1
+            // dgvTeacher
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(44, 147);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(773, 407);
-            this.dataGridView1.TabIndex = 37;
+            this.dgvTeacher.AllowUserToAddRows = false;
+            this.dgvTeacher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTeacher.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dgvTeacher.Location = new System.Drawing.Point(50, 147);
+            this.dgvTeacher.Name = "dgvTeacher";
+            this.dgvTeacher.ReadOnly = true;
+            this.dgvTeacher.Size = new System.Drawing.Size(753, 407);
+            this.dgvTeacher.TabIndex = 37;
             // 
-            // pictureBox4
+            // btnDelete
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(713, 594);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(104, 28);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 31;
-            this.pictureBox4.TabStop = false;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(713, 594);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(104, 28);
+            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDelete.TabIndex = 31;
+            this.btnDelete.TabStop = false;
             // 
-            // pictureBox5
+            // btnEdit
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(607, 594);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(104, 28);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 30;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(607, 594);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(104, 28);
+            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEdit.TabIndex = 30;
+            this.btnEdit.TabStop = false;
+            this.btnEdit.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // pictureBox6
+            // btnAdd
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(607, 560);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(210, 28);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 29;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(607, 560);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(210, 28);
+            this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAdd.TabIndex = 29;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // txtFName
+            // 
+            this.txtFName.Location = new System.Drawing.Point(116, 84);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Size = new System.Drawing.Size(191, 20);
+            this.txtFName.TabIndex = 2;
+            // 
+            // txtMName
+            // 
+            this.txtMName.Location = new System.Drawing.Point(116, 110);
+            this.txtMName.Multiline = true;
+            this.txtMName.Name = "txtMName";
+            this.txtMName.Size = new System.Drawing.Size(191, 20);
+            this.txtMName.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(41, 113);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(69, 13);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "MiddleName:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(56, 139);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Surname:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(32, 166);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(75, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "Specialization:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(50, 87);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 13);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "First Name:";
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.Location = new System.Drawing.Point(116, 136);
+            this.txtLastName.Multiline = true;
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(191, 20);
+            this.txtLastName.TabIndex = 14;
+            // 
+            // cmbAdvisory
+            // 
+            this.cmbAdvisory.FormattingEnabled = true;
+            this.cmbAdvisory.Location = new System.Drawing.Point(116, 192);
+            this.cmbAdvisory.Name = "cmbAdvisory";
+            this.cmbAdvisory.Size = new System.Drawing.Size(117, 21);
+            this.cmbAdvisory.TabIndex = 15;
+            // 
+            // txtSpecial
+            // 
+            this.txtSpecial.Location = new System.Drawing.Point(116, 163);
+            this.txtSpecial.Multiline = true;
+            this.txtSpecial.Name = "txtSpecial";
+            this.txtSpecial.Size = new System.Drawing.Size(191, 20);
+            this.txtSpecial.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(32, 192);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 13);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Advisory Class";
+            // 
+            // Advisory2
+            // 
+            this.Advisory2.FormattingEnabled = true;
+            this.Advisory2.Location = new System.Drawing.Point(116, 219);
+            this.Advisory2.Name = "Advisory2";
+            this.Advisory2.Size = new System.Drawing.Size(117, 21);
+            this.Advisory2.TabIndex = 18;
+            this.Advisory2.Visible = false;
+            // 
+            // Advisory3
+            // 
+            this.Advisory3.FormattingEnabled = true;
+            this.Advisory3.Location = new System.Drawing.Point(116, 246);
+            this.Advisory3.Name = "Advisory3";
+            this.Advisory3.Size = new System.Drawing.Size(117, 21);
+            this.Advisory3.TabIndex = 19;
+            this.Advisory3.Visible = false;
+            // 
+            // Advisory4
+            // 
+            this.Advisory4.FormattingEnabled = true;
+            this.Advisory4.Location = new System.Drawing.Point(116, 273);
+            this.Advisory4.Name = "Advisory4";
+            this.Advisory4.Size = new System.Drawing.Size(117, 21);
+            this.Advisory4.TabIndex = 20;
+            this.Advisory4.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(239, 192);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 20);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "+";
+            // 
+            // cmbEAdvisory
+            // 
+            this.cmbEAdvisory.FormattingEnabled = true;
+            this.cmbEAdvisory.Location = new System.Drawing.Point(116, 192);
+            this.cmbEAdvisory.Name = "cmbEAdvisory";
+            this.cmbEAdvisory.Size = new System.Drawing.Size(117, 21);
+            this.cmbEAdvisory.TabIndex = 15;
+            // 
+            // EditAdvisory2
+            // 
+            this.EditAdvisory2.FormattingEnabled = true;
+            this.EditAdvisory2.Location = new System.Drawing.Point(116, 219);
+            this.EditAdvisory2.Name = "EditAdvisory2";
+            this.EditAdvisory2.Size = new System.Drawing.Size(117, 21);
+            this.EditAdvisory2.TabIndex = 18;
+            this.EditAdvisory2.Visible = false;
+            // 
+            // EditAdvisory3
+            // 
+            this.EditAdvisory3.FormattingEnabled = true;
+            this.EditAdvisory3.Location = new System.Drawing.Point(116, 246);
+            this.EditAdvisory3.Name = "EditAdvisory3";
+            this.EditAdvisory3.Size = new System.Drawing.Size(117, 21);
+            this.EditAdvisory3.TabIndex = 19;
+            this.EditAdvisory3.Visible = false;
+            // 
+            // EditAdvisory4
+            // 
+            this.EditAdvisory4.FormattingEnabled = true;
+            this.EditAdvisory4.Location = new System.Drawing.Point(116, 273);
+            this.EditAdvisory4.Name = "EditAdvisory4";
+            this.EditAdvisory4.Size = new System.Drawing.Size(117, 21);
+            this.EditAdvisory4.TabIndex = 20;
+            this.EditAdvisory4.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.label6.Location = new System.Drawing.Point(239, 192);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(19, 20);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "+";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(264, 192);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(15, 20);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "-";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(11, 61);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "GOC Employee No.";
+            // 
+            // txtEmpNo
+            // 
+            this.txtEmpNo.Location = new System.Drawing.Point(116, 58);
+            this.txtEmpNo.Name = "txtEmpNo";
+            this.txtEmpNo.Size = new System.Drawing.Size(191, 20);
+            this.txtEmpNo.TabIndex = 24;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Employee No.";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Name";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Specialization";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 250;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Advisory";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
             // 
             // frmTeacher
             // 
@@ -613,14 +636,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(868, 647);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvTeacher);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTeacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -631,10 +654,10 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTeacher)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -645,52 +668,55 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label TeachLbl;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox TeachMNTb;
-        private System.Windows.Forms.TextBox TeachFNTb;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox Advisory4;
-        private System.Windows.Forms.ComboBox Advisory3;
-        private System.Windows.Forms.ComboBox Advisory2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TeachSpTb;
-        private System.Windows.Forms.ComboBox Advisory1;
-        private System.Windows.Forms.TextBox TeachLNTb;
+        private System.Windows.Forms.DataGridView dgvTeacher;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtESpecial;
+        private System.Windows.Forms.TextBox txtELName;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Button btnCommit;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox txtEMName;
+        private System.Windows.Forms.TextBox txtEditFName;
+        private System.Windows.Forms.PictureBox btnDelete;
+        private System.Windows.Forms.PictureBox btnEdit;
+        private System.Windows.Forms.PictureBox btnAdd;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox Advisory4;
+        private System.Windows.Forms.ComboBox Advisory3;
+        private System.Windows.Forms.ComboBox Advisory2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtSpecial;
+        private System.Windows.Forms.ComboBox cmbAdvisory;
+        private System.Windows.Forms.TextBox txtLastName;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtMName;
+        private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox EditAdvisory4;
         private System.Windows.Forms.ComboBox EditAdvisory3;
         private System.Windows.Forms.ComboBox EditAdvisory2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox EditTeachSpTb;
-        private System.Windows.Forms.ComboBox EditAdvisory1;
-        private System.Windows.Forms.TextBox EditTeachLNTb;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label EditTeachLbl;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox EditTeachMNTb;
-        private System.Windows.Forms.TextBox EditTeachFNTb;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.ComboBox cmbEAdvisory;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtEmpNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

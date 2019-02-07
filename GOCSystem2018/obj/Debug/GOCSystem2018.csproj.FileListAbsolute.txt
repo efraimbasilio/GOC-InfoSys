@@ -46,3 +46,86 @@ C:\Users\GloomyFish\Documents\GitHub\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\
 C:\Users\GloomyFish\Documents\GitHub\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmStrand.resources
 C:\Users\GloomyFish\Documents\GitHub\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSubject.resources
 C:\Users\GloomyFish\Documents\GitHub\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmUser.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.exe
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.exe
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.pdb
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmDiscountFee.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmLogin.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmMiscFees.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmOtherFees.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmRoom.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSched.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSchoolYear.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSection.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmStrand.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSubject.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmTeacher.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmTuition.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmUser.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmVoucher.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.MainWindow.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
+C:\Users\Ef-PC\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
+C:\Users\Ef-PC\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.exe
+C:\Users\Ef-PC\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmRegistration.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmAssesment.resources
+C:\Users\Instructor\Desktop\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmAssesmentSearch.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.exe
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.exe
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.pdb
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmAssesment.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmAssesmentSearch.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmDiscountFee.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmLogin.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmMiscFees.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmOtherFees.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmRegistration.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmRoom.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSched.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSchoolYear.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSection.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmStrand.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSubject.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmTeacher.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmTuition.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmUser.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmVoucher.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.MainWindow.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
+C:\Users\Ef-PC\Desktop\TULOY NATIN\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.exe
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.exe
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.pdb
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmAssesment.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmAssesmentSearch.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmDiscountFee.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmLogin.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmMiscFees.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmOtherFees.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmRegistration.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmRoom.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSched.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSchoolYear.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSection.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmStrand.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmSubject.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmTeacher.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmTuition.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmUser.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.frmVoucher.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.MainWindow.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
+C:\Users\Instructor\Desktop\TULOY NATIN v1\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
+C:\Users\Instructor\Documents\GitHub\GOCInfoSys2019\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
+C:\Users\Instructor\Documents\GitHub\GOCInfoSys2019\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.exe
+C:\Users\Instructor\Documents\GitHub\GOCInfoSys2019\GOCInfoSys2018\GOCSystem2018\GOCSystem2018\obj\Debug\GOCSystem2018.pdb

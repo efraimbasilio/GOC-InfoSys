@@ -19,16 +19,16 @@ namespace GOCSystem2018
 
         private void label18_Click(object sender, EventArgs e)
         {
-            panel1.Visible = false;
+            pnlNew.Visible = false;
             UserLbl.Text = "";
-            UserTb.Text = "";
+            txt.Text = "";
             PwTb.Text = "";
             ConPwTb.Text = "";
             ATCb.Text = "";
         }//add user close window
         private void label19_Click(object sender, EventArgs e)
         {
-            panel2.Visible = false;
+            pnlEdit.Visible = false;
             EditUserLbl.Text = "";
             EditUserTb.Text = "";
             EditPwTb.Text = "";
@@ -41,15 +41,15 @@ namespace GOCSystem2018
             this.Dispose();
 
             //clear add user window
-            panel1.Visible = false;
+            pnlNew.Visible = false;
             UserLbl.Text = "";
-            UserTb.Text = "";
+            txt.Text = "";
             PwTb.Text = "";
             ConPwTb.Text = "";
             ATCb.Text = "";
 
             //clear edit user window
-            panel2.Visible = false;
+            pnlEdit.Visible = false;
             EditUserLbl.Text = "";
             EditUserTb.Text = "";
             EditPwTb.Text = "";
@@ -59,12 +59,12 @@ namespace GOCSystem2018
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            panel1.Visible = true;
+            pnlNew.Visible = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            panel2.Visible = true;
+            pnlEdit.Visible = true;
         }
     }
 }

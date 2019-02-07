@@ -32,44 +32,47 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMiscFee = new System.Windows.Forms.DataGridView();
             this.MiscLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.MiscCommentTb = new System.Windows.Forms.TextBox();
+            this.txtMiscComment = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.MiscAmountTb = new System.Windows.Forms.TextBox();
-            this.MiscTb = new System.Windows.Forms.TextBox();
+            this.txtMiscAmount = new System.Windows.Forms.TextBox();
+            this.txtMiscName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlNewMisc = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.EditMiscLbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCommit = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.EditMiscCommentTb = new System.Windows.Forms.TextBox();
+            this.txtEditMiscComment = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.EditMiscAmountTb = new System.Windows.Forms.TextBox();
-            this.EditMiscTb = new System.Windows.Forms.TextBox();
+            this.txtEditMiscAmount = new System.Windows.Forms.TextBox();
+            this.txtEditMiscName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlEditMisc = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
+            this.btnEdit = new System.Windows.Forms.PictureBox();
+            this.btnAdd1 = new System.Windows.Forms.PictureBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Misc_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.misc_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMiscFee)).BeginInit();
+            this.pnlNewMisc.SuspendLayout();
+            this.pnlEditMisc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -100,21 +103,29 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Myriad Hebrew", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(17, 46);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(148, 36);
+            this.label16.Size = new System.Drawing.Size(179, 33);
             this.label16.TabIndex = 17;
             this.label16.Text = "MISC FEES";
             // 
-            // dataGridView1
+            // dgvMiscFee
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 153);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(773, 407);
-            this.dataGridView1.TabIndex = 26;
+            this.dgvMiscFee.AllowUserToAddRows = false;
+            this.dgvMiscFee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMiscFee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Misc_Name,
+            this.misc_amount});
+            this.dgvMiscFee.Location = new System.Drawing.Point(468, 154);
+            this.dgvMiscFee.Name = "dgvMiscFee";
+            this.dgvMiscFee.ReadOnly = true;
+            this.dgvMiscFee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMiscFee.Size = new System.Drawing.Size(345, 407);
+            this.dgvMiscFee.TabIndex = 26;
+            this.dgvMiscFee.Click += new System.EventHandler(this.dgvMiscFee_Click);
             // 
             // MiscLbl
             // 
@@ -124,6 +135,7 @@
             this.MiscLbl.Size = new System.Drawing.Size(44, 13);
             this.MiscLbl.TabIndex = 11;
             this.MiscLbl.Text = "ID Here";
+            this.MiscLbl.Visible = false;
             // 
             // label2
             // 
@@ -134,19 +146,20 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "New Misc Fee";
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(-1, 221);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 27);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnAdd.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(-1, 221);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(325, 27);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label3
             // 
@@ -166,13 +179,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Comment:";
             // 
-            // MiscCommentTb
+            // txtMiscComment
             // 
-            this.MiscCommentTb.Location = new System.Drawing.Point(93, 133);
-            this.MiscCommentTb.Multiline = true;
-            this.MiscCommentTb.Name = "MiscCommentTb";
-            this.MiscCommentTb.Size = new System.Drawing.Size(191, 51);
-            this.MiscCommentTb.TabIndex = 6;
+            this.txtMiscComment.Location = new System.Drawing.Point(93, 133);
+            this.txtMiscComment.Multiline = true;
+            this.txtMiscComment.Name = "txtMiscComment";
+            this.txtMiscComment.Size = new System.Drawing.Size(191, 51);
+            this.txtMiscComment.TabIndex = 6;
             // 
             // label5
             // 
@@ -191,21 +204,22 @@
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Misc Fee ID:";
+            this.label6.Visible = false;
             // 
-            // MiscAmountTb
+            // txtMiscAmount
             // 
-            this.MiscAmountTb.Location = new System.Drawing.Point(93, 107);
-            this.MiscAmountTb.Multiline = true;
-            this.MiscAmountTb.Name = "MiscAmountTb";
-            this.MiscAmountTb.Size = new System.Drawing.Size(100, 20);
-            this.MiscAmountTb.TabIndex = 4;
+            this.txtMiscAmount.Location = new System.Drawing.Point(93, 107);
+            this.txtMiscAmount.Multiline = true;
+            this.txtMiscAmount.Name = "txtMiscAmount";
+            this.txtMiscAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtMiscAmount.TabIndex = 4;
             // 
-            // MiscTb
+            // txtMiscName
             // 
-            this.MiscTb.Location = new System.Drawing.Point(93, 81);
-            this.MiscTb.Name = "MiscTb";
-            this.MiscTb.Size = new System.Drawing.Size(191, 20);
-            this.MiscTb.TabIndex = 2;
+            this.txtMiscName.Location = new System.Drawing.Point(93, 81);
+            this.txtMiscName.Name = "txtMiscName";
+            this.txtMiscName.Size = new System.Drawing.Size(191, 20);
+            this.txtMiscName.TabIndex = 2;
             // 
             // label7
             // 
@@ -216,27 +230,27 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Misc Fee Name:";
             // 
-            // panel1
+            // pnlNewMisc
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.MiscLbl);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.MiscCommentTb);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.MiscAmountTb);
-            this.panel1.Controls.Add(this.MiscTb);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(93, 183);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 249);
-            this.panel1.TabIndex = 24;
-            this.panel1.Visible = false;
+            this.pnlNewMisc.BackColor = System.Drawing.Color.White;
+            this.pnlNewMisc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlNewMisc.Controls.Add(this.label18);
+            this.pnlNewMisc.Controls.Add(this.MiscLbl);
+            this.pnlNewMisc.Controls.Add(this.label2);
+            this.pnlNewMisc.Controls.Add(this.btnAdd);
+            this.pnlNewMisc.Controls.Add(this.label3);
+            this.pnlNewMisc.Controls.Add(this.label4);
+            this.pnlNewMisc.Controls.Add(this.txtMiscComment);
+            this.pnlNewMisc.Controls.Add(this.label5);
+            this.pnlNewMisc.Controls.Add(this.label6);
+            this.pnlNewMisc.Controls.Add(this.txtMiscAmount);
+            this.pnlNewMisc.Controls.Add(this.txtMiscName);
+            this.pnlNewMisc.Controls.Add(this.label7);
+            this.pnlNewMisc.Location = new System.Drawing.Point(41, 153);
+            this.pnlNewMisc.Name = "pnlNewMisc";
+            this.pnlNewMisc.Size = new System.Drawing.Size(325, 249);
+            this.pnlNewMisc.TabIndex = 24;
+            this.pnlNewMisc.Visible = false;
             // 
             // label18
             // 
@@ -268,6 +282,7 @@
             this.EditMiscLbl.Size = new System.Drawing.Size(53, 13);
             this.EditMiscLbl.TabIndex = 11;
             this.EditMiscLbl.Text = "Misc here";
+            this.EditMiscLbl.Visible = false;
             // 
             // label10
             // 
@@ -278,19 +293,20 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Edit Misc Fee";
             // 
-            // button2
+            // btnCommit
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-1, 221);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(325, 27);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Commit";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCommit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnCommit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCommit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCommit.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCommit.ForeColor = System.Drawing.Color.White;
+            this.btnCommit.Location = new System.Drawing.Point(-1, 221);
+            this.btnCommit.Name = "btnCommit";
+            this.btnCommit.Size = new System.Drawing.Size(325, 27);
+            this.btnCommit.TabIndex = 9;
+            this.btnCommit.Text = "Commit";
+            this.btnCommit.UseVisualStyleBackColor = false;
+            this.btnCommit.Click += new System.EventHandler(this.btnCommit_Click);
             // 
             // label11
             // 
@@ -310,13 +326,13 @@
             this.label12.TabIndex = 7;
             this.label12.Text = "Comment:";
             // 
-            // EditMiscCommentTb
+            // txtEditMiscComment
             // 
-            this.EditMiscCommentTb.Location = new System.Drawing.Point(93, 133);
-            this.EditMiscCommentTb.Multiline = true;
-            this.EditMiscCommentTb.Name = "EditMiscCommentTb";
-            this.EditMiscCommentTb.Size = new System.Drawing.Size(191, 51);
-            this.EditMiscCommentTb.TabIndex = 6;
+            this.txtEditMiscComment.Location = new System.Drawing.Point(93, 133);
+            this.txtEditMiscComment.Multiline = true;
+            this.txtEditMiscComment.Name = "txtEditMiscComment";
+            this.txtEditMiscComment.Size = new System.Drawing.Size(191, 51);
+            this.txtEditMiscComment.TabIndex = 6;
             // 
             // label13
             // 
@@ -335,21 +351,23 @@
             this.label14.Size = new System.Drawing.Size(67, 13);
             this.label14.TabIndex = 1;
             this.label14.Text = "Misc Fee ID:";
+            this.label14.Visible = false;
             // 
-            // EditMiscAmountTb
+            // txtEditMiscAmount
             // 
-            this.EditMiscAmountTb.Location = new System.Drawing.Point(93, 107);
-            this.EditMiscAmountTb.Multiline = true;
-            this.EditMiscAmountTb.Name = "EditMiscAmountTb";
-            this.EditMiscAmountTb.Size = new System.Drawing.Size(100, 20);
-            this.EditMiscAmountTb.TabIndex = 4;
+            this.txtEditMiscAmount.Location = new System.Drawing.Point(93, 107);
+            this.txtEditMiscAmount.Multiline = true;
+            this.txtEditMiscAmount.Name = "txtEditMiscAmount";
+            this.txtEditMiscAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtEditMiscAmount.TabIndex = 4;
+            this.txtEditMiscAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // EditMiscTb
+            // txtEditMiscName
             // 
-            this.EditMiscTb.Location = new System.Drawing.Point(93, 81);
-            this.EditMiscTb.Name = "EditMiscTb";
-            this.EditMiscTb.Size = new System.Drawing.Size(191, 20);
-            this.EditMiscTb.TabIndex = 2;
+            this.txtEditMiscName.Location = new System.Drawing.Point(93, 81);
+            this.txtEditMiscName.Name = "txtEditMiscName";
+            this.txtEditMiscName.Size = new System.Drawing.Size(191, 20);
+            this.txtEditMiscName.TabIndex = 2;
             // 
             // label15
             // 
@@ -360,27 +378,27 @@
             this.label15.TabIndex = 3;
             this.label15.Text = "Misc Fee Name:";
             // 
-            // panel2
+            // pnlEditMisc
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Controls.Add(this.EditMiscLbl);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.EditMiscCommentTb);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.EditMiscAmountTb);
-            this.panel2.Controls.Add(this.EditMiscTb);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Location = new System.Drawing.Point(449, 183);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(325, 249);
-            this.panel2.TabIndex = 25;
-            this.panel2.Visible = false;
+            this.pnlEditMisc.BackColor = System.Drawing.Color.White;
+            this.pnlEditMisc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEditMisc.Controls.Add(this.label19);
+            this.pnlEditMisc.Controls.Add(this.EditMiscLbl);
+            this.pnlEditMisc.Controls.Add(this.label10);
+            this.pnlEditMisc.Controls.Add(this.btnCommit);
+            this.pnlEditMisc.Controls.Add(this.label11);
+            this.pnlEditMisc.Controls.Add(this.label12);
+            this.pnlEditMisc.Controls.Add(this.txtEditMiscComment);
+            this.pnlEditMisc.Controls.Add(this.label13);
+            this.pnlEditMisc.Controls.Add(this.label14);
+            this.pnlEditMisc.Controls.Add(this.txtEditMiscAmount);
+            this.pnlEditMisc.Controls.Add(this.txtEditMiscName);
+            this.pnlEditMisc.Controls.Add(this.label15);
+            this.pnlEditMisc.Location = new System.Drawing.Point(45, 149);
+            this.pnlEditMisc.Name = "pnlEditMisc";
+            this.pnlEditMisc.Size = new System.Drawing.Size(325, 249);
+            this.pnlEditMisc.TabIndex = 25;
+            this.pnlEditMisc.Visible = false;
             // 
             // label19
             // 
@@ -395,37 +413,58 @@
             this.label19.Text = "X";
             this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
-            // pictureBox2
+            // btnDelete
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(709, 600);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(104, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 31;
-            this.pictureBox2.TabStop = false;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(709, 600);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(104, 28);
+            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDelete.TabIndex = 31;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // pictureBox1
+            // btnEdit
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(603, 600);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 30;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(603, 600);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(104, 28);
+            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEdit.TabIndex = 30;
+            this.btnEdit.TabStop = false;
+            this.btnEdit.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox3
+            // btnAdd1
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(603, 566);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(210, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 29;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.btnAdd1.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd1.Image")));
+            this.btnAdd1.Location = new System.Drawing.Point(603, 566);
+            this.btnAdd1.Name = "btnAdd1";
+            this.btnAdd1.Size = new System.Drawing.Size(210, 28);
+            this.btnAdd1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAdd1.TabIndex = 29;
+            this.btnAdd1.TabStop = false;
+            this.btnAdd1.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Misc_Name
+            // 
+            this.Misc_Name.HeaderText = "Miscellaneous Name";
+            this.Misc_Name.Name = "Misc_Name";
+            this.Misc_Name.ReadOnly = true;
+            this.Misc_Name.Width = 200;
+            // 
+            // misc_amount
+            // 
+            this.misc_amount.HeaderText = "Amount";
+            this.misc_amount.Name = "misc_amount";
+            this.misc_amount.ReadOnly = true;
             // 
             // frmMiscFees
             // 
@@ -433,14 +472,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(868, 647);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd1);
+            this.Controls.Add(this.pnlEditMisc);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlNewMisc);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMiscFee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMiscFees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -448,14 +487,14 @@
             this.Load += new System.EventHandler(this.frmMiscFees_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMiscFee)).EndInit();
+            this.pnlNewMisc.ResumeLayout(false);
+            this.pnlNewMisc.PerformLayout();
+            this.pnlEditMisc.ResumeLayout(false);
+            this.pnlEditMisc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,37 +504,40 @@
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMiscFee;
         private System.Windows.Forms.Label MiscLbl;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox MiscCommentTb;
+        private System.Windows.Forms.TextBox txtMiscComment;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox MiscAmountTb;
-        private System.Windows.Forms.TextBox MiscTb;
+        private System.Windows.Forms.TextBox txtMiscAmount;
+        private System.Windows.Forms.TextBox txtMiscName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlNewMisc;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label EditMiscLbl;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCommit;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox EditMiscCommentTb;
+        private System.Windows.Forms.TextBox txtEditMiscComment;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox EditMiscAmountTb;
-        private System.Windows.Forms.TextBox EditMiscTb;
+        private System.Windows.Forms.TextBox txtEditMiscAmount;
+        private System.Windows.Forms.TextBox txtEditMiscName;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlEditMisc;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox btnDelete;
+        private System.Windows.Forms.PictureBox btnEdit;
+        private System.Windows.Forms.PictureBox btnAdd1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Misc_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn misc_amount;
     }
 }

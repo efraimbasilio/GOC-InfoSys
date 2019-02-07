@@ -32,44 +32,47 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdd = new System.Windows.Forms.PictureBox();
+            this.pnlNew = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.VoucherLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.VoucherCommentTb = new System.Windows.Forms.TextBox();
+            this.txtComment = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.VoucherAmountTb = new System.Windows.Forms.TextBox();
-            this.VoucherTb = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.txtVoucher = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlEdit = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.EditVoucherLbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnCommit = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.EditVoucherCommentTb = new System.Windows.Forms.TextBox();
+            this.txtEditComment = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.EditVoucherAmountTb = new System.Windows.Forms.TextBox();
-            this.EditVoucherTb = new System.Windows.Forms.TextBox();
+            this.txtEditAmount = new System.Windows.Forms.TextBox();
+            this.txtEditVoucher = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnEdit = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
+            this.dgvVoucher = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Misc_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.misc_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
+            this.pnlNew.SuspendLayout();
+            this.pnlEdit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVoucher)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -100,46 +103,46 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Myriad Hebrew", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(17, 46);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(143, 36);
+            this.label16.Size = new System.Drawing.Size(167, 33);
             this.label16.TabIndex = 17;
             this.label16.Text = "VOUCHER";
             // 
-            // pictureBox3
+            // btnAdd
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(612, 570);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(210, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 25;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(612, 570);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(210, 28);
+            this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAdd.TabIndex = 25;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // panel1
+            // pnlNew
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.VoucherLbl);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.VoucherCommentTb);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.VoucherAmountTb);
-            this.panel1.Controls.Add(this.VoucherTb);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(87, 189);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 249);
-            this.panel1.TabIndex = 19;
-            this.panel1.Visible = false;
+            this.pnlNew.BackColor = System.Drawing.Color.White;
+            this.pnlNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlNew.Controls.Add(this.label18);
+            this.pnlNew.Controls.Add(this.VoucherLbl);
+            this.pnlNew.Controls.Add(this.label2);
+            this.pnlNew.Controls.Add(this.btnSave);
+            this.pnlNew.Controls.Add(this.label3);
+            this.pnlNew.Controls.Add(this.label4);
+            this.pnlNew.Controls.Add(this.txtComment);
+            this.pnlNew.Controls.Add(this.label5);
+            this.pnlNew.Controls.Add(this.label6);
+            this.pnlNew.Controls.Add(this.txtAmount);
+            this.pnlNew.Controls.Add(this.txtVoucher);
+            this.pnlNew.Controls.Add(this.label7);
+            this.pnlNew.Location = new System.Drawing.Point(12, 125);
+            this.pnlNew.Name = "pnlNew";
+            this.pnlNew.Size = new System.Drawing.Size(325, 249);
+            this.pnlNew.TabIndex = 19;
+            this.pnlNew.Visible = false;
             // 
             // label18
             // 
@@ -162,6 +165,7 @@
             this.VoucherLbl.Size = new System.Drawing.Size(44, 13);
             this.VoucherLbl.TabIndex = 11;
             this.VoucherLbl.Text = "ID Here";
+            this.VoucherLbl.Visible = false;
             // 
             // label2
             // 
@@ -172,19 +176,20 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "New Voucher";
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(-1, 221);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 27);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(-1, 221);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(325, 27);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Add";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label3
             // 
@@ -204,13 +209,13 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Comment:";
             // 
-            // VoucherCommentTb
+            // txtComment
             // 
-            this.VoucherCommentTb.Location = new System.Drawing.Point(93, 133);
-            this.VoucherCommentTb.Multiline = true;
-            this.VoucherCommentTb.Name = "VoucherCommentTb";
-            this.VoucherCommentTb.Size = new System.Drawing.Size(191, 51);
-            this.VoucherCommentTb.TabIndex = 6;
+            this.txtComment.Location = new System.Drawing.Point(93, 133);
+            this.txtComment.Multiline = true;
+            this.txtComment.Name = "txtComment";
+            this.txtComment.Size = new System.Drawing.Size(191, 51);
+            this.txtComment.TabIndex = 6;
             // 
             // label5
             // 
@@ -229,21 +234,22 @@
             this.label6.Size = new System.Drawing.Size(64, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Voucher ID:";
+            this.label6.Visible = false;
             // 
-            // VoucherAmountTb
+            // txtAmount
             // 
-            this.VoucherAmountTb.Location = new System.Drawing.Point(93, 107);
-            this.VoucherAmountTb.Multiline = true;
-            this.VoucherAmountTb.Name = "VoucherAmountTb";
-            this.VoucherAmountTb.Size = new System.Drawing.Size(100, 20);
-            this.VoucherAmountTb.TabIndex = 4;
+            this.txtAmount.Location = new System.Drawing.Point(93, 107);
+            this.txtAmount.Multiline = true;
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtAmount.TabIndex = 4;
             // 
-            // VoucherTb
+            // txtVoucher
             // 
-            this.VoucherTb.Location = new System.Drawing.Point(93, 81);
-            this.VoucherTb.Name = "VoucherTb";
-            this.VoucherTb.Size = new System.Drawing.Size(191, 20);
-            this.VoucherTb.TabIndex = 2;
+            this.txtVoucher.Location = new System.Drawing.Point(93, 81);
+            this.txtVoucher.Name = "txtVoucher";
+            this.txtVoucher.Size = new System.Drawing.Size(191, 20);
+            this.txtVoucher.TabIndex = 2;
             // 
             // label7
             // 
@@ -254,27 +260,27 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "Voucher from:";
             // 
-            // panel2
+            // pnlEdit
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.EditVoucherLbl);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.EditVoucherCommentTb);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.EditVoucherAmountTb);
-            this.panel2.Controls.Add(this.EditVoucherTb);
-            this.panel2.Location = new System.Drawing.Point(460, 189);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(325, 249);
-            this.panel2.TabIndex = 20;
-            this.panel2.Visible = false;
+            this.pnlEdit.BackColor = System.Drawing.Color.White;
+            this.pnlEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEdit.Controls.Add(this.label19);
+            this.pnlEdit.Controls.Add(this.label13);
+            this.pnlEdit.Controls.Add(this.label14);
+            this.pnlEdit.Controls.Add(this.EditVoucherLbl);
+            this.pnlEdit.Controls.Add(this.label9);
+            this.pnlEdit.Controls.Add(this.btnCommit);
+            this.pnlEdit.Controls.Add(this.label10);
+            this.pnlEdit.Controls.Add(this.label11);
+            this.pnlEdit.Controls.Add(this.txtEditComment);
+            this.pnlEdit.Controls.Add(this.label12);
+            this.pnlEdit.Controls.Add(this.txtEditAmount);
+            this.pnlEdit.Controls.Add(this.txtEditVoucher);
+            this.pnlEdit.Location = new System.Drawing.Point(12, 380);
+            this.pnlEdit.Name = "pnlEdit";
+            this.pnlEdit.Size = new System.Drawing.Size(325, 249);
+            this.pnlEdit.TabIndex = 20;
+            this.pnlEdit.Visible = false;
             // 
             // label19
             // 
@@ -297,6 +303,7 @@
             this.label13.Size = new System.Drawing.Size(64, 13);
             this.label13.TabIndex = 12;
             this.label13.Text = "Voucher ID:";
+            this.label13.Visible = false;
             // 
             // label14
             // 
@@ -315,6 +322,7 @@
             this.EditVoucherLbl.Size = new System.Drawing.Size(42, 13);
             this.EditVoucherLbl.TabIndex = 11;
             this.EditVoucherLbl.Text = "ID here";
+            this.EditVoucherLbl.Visible = false;
             // 
             // label9
             // 
@@ -325,19 +333,20 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Edit Voucher";
             // 
-            // button2
+            // btnCommit
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-1, 221);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(325, 27);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Commit";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCommit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnCommit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCommit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCommit.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCommit.ForeColor = System.Drawing.Color.White;
+            this.btnCommit.Location = new System.Drawing.Point(-1, 221);
+            this.btnCommit.Name = "btnCommit";
+            this.btnCommit.Size = new System.Drawing.Size(325, 27);
+            this.btnCommit.TabIndex = 9;
+            this.btnCommit.Text = "Commit";
+            this.btnCommit.UseVisualStyleBackColor = false;
+            this.btnCommit.Click += new System.EventHandler(this.btnCommit_Click);
             // 
             // label10
             // 
@@ -357,13 +366,13 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "Comment:";
             // 
-            // EditVoucherCommentTb
+            // txtEditComment
             // 
-            this.EditVoucherCommentTb.Location = new System.Drawing.Point(93, 133);
-            this.EditVoucherCommentTb.Multiline = true;
-            this.EditVoucherCommentTb.Name = "EditVoucherCommentTb";
-            this.EditVoucherCommentTb.Size = new System.Drawing.Size(191, 51);
-            this.EditVoucherCommentTb.TabIndex = 6;
+            this.txtEditComment.Location = new System.Drawing.Point(93, 133);
+            this.txtEditComment.Multiline = true;
+            this.txtEditComment.Name = "txtEditComment";
+            this.txtEditComment.Size = new System.Drawing.Size(191, 51);
+            this.txtEditComment.TabIndex = 6;
             // 
             // label12
             // 
@@ -374,20 +383,20 @@
             this.label12.TabIndex = 5;
             this.label12.Text = "Amount:";
             // 
-            // EditVoucherAmountTb
+            // txtEditAmount
             // 
-            this.EditVoucherAmountTb.Location = new System.Drawing.Point(93, 107);
-            this.EditVoucherAmountTb.Multiline = true;
-            this.EditVoucherAmountTb.Name = "EditVoucherAmountTb";
-            this.EditVoucherAmountTb.Size = new System.Drawing.Size(100, 20);
-            this.EditVoucherAmountTb.TabIndex = 4;
+            this.txtEditAmount.Location = new System.Drawing.Point(93, 107);
+            this.txtEditAmount.Multiline = true;
+            this.txtEditAmount.Name = "txtEditAmount";
+            this.txtEditAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtEditAmount.TabIndex = 4;
             // 
-            // EditVoucherTb
+            // txtEditVoucher
             // 
-            this.EditVoucherTb.Location = new System.Drawing.Point(93, 81);
-            this.EditVoucherTb.Name = "EditVoucherTb";
-            this.EditVoucherTb.Size = new System.Drawing.Size(191, 20);
-            this.EditVoucherTb.TabIndex = 2;
+            this.txtEditVoucher.Location = new System.Drawing.Point(93, 81);
+            this.txtEditVoucher.Name = "txtEditVoucher";
+            this.txtEditVoucher.Size = new System.Drawing.Size(191, 20);
+            this.txtEditVoucher.TabIndex = 2;
             // 
             // label15
             // 
@@ -398,34 +407,63 @@
             this.label15.TabIndex = 22;
             this.label15.Text = resources.GetString("label15.Text");
             // 
-            // dataGridView1
+            // btnEdit
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(49, 152);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(773, 407);
-            this.dataGridView1.TabIndex = 21;
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(612, 604);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(104, 28);
+            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEdit.TabIndex = 27;
+            this.btnEdit.TabStop = false;
+            this.btnEdit.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox1
+            // btnDelete
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(612, 604);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(718, 604);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(104, 28);
+            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDelete.TabIndex = 28;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // pictureBox2
+            // dgvVoucher
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(718, 604);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(104, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
+            this.dgvVoucher.AllowUserToAddRows = false;
+            this.dgvVoucher.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVoucher.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Misc_Name,
+            this.misc_amount});
+            this.dgvVoucher.Location = new System.Drawing.Point(477, 147);
+            this.dgvVoucher.Name = "dgvVoucher";
+            this.dgvVoucher.ReadOnly = true;
+            this.dgvVoucher.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVoucher.Size = new System.Drawing.Size(345, 407);
+            this.dgvVoucher.TabIndex = 29;
+            this.dgvVoucher.Click += new System.EventHandler(this.dgvVoucher_Click_1);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Misc_Name
+            // 
+            this.Misc_Name.HeaderText = "Voucher From";
+            this.Misc_Name.Name = "Misc_Name";
+            this.Misc_Name.ReadOnly = true;
+            this.Misc_Name.Width = 200;
+            // 
+            // misc_amount
+            // 
+            this.misc_amount.HeaderText = "Amount";
+            this.misc_amount.Name = "misc_amount";
+            this.misc_amount.ReadOnly = true;
             // 
             // frmVoucher
             // 
@@ -433,28 +471,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(868, 647);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.pnlNew);
+            this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvVoucher);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVoucher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVoucher";
+            this.Load += new System.EventHandler(this.frmVoucher_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
+            this.pnlNew.ResumeLayout(false);
+            this.pnlNew.PerformLayout();
+            this.pnlEdit.ResumeLayout(false);
+            this.pnlEdit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVoucher)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,37 +503,40 @@
 
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox btnAdd;
+        private System.Windows.Forms.Panel pnlNew;
         private System.Windows.Forms.Label VoucherLbl;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox VoucherCommentTb;
+        private System.Windows.Forms.TextBox txtComment;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox VoucherAmountTb;
-        private System.Windows.Forms.TextBox VoucherTb;
+        private System.Windows.Forms.TextBox txtAmount;
+        private System.Windows.Forms.TextBox txtVoucher;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlEdit;
         private System.Windows.Forms.Label EditVoucherLbl;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCommit;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox EditVoucherCommentTb;
+        private System.Windows.Forms.TextBox txtEditComment;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox EditVoucherAmountTb;
-        private System.Windows.Forms.TextBox EditVoucherTb;
+        private System.Windows.Forms.TextBox txtEditAmount;
+        private System.Windows.Forms.TextBox txtEditVoucher;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox btnEdit;
+        private System.Windows.Forms.PictureBox btnDelete;
+        private System.Windows.Forms.DataGridView dgvVoucher;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Misc_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn misc_amount;
     }
 }

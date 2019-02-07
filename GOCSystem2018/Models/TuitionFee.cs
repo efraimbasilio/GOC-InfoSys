@@ -132,7 +132,7 @@ namespace GOCSystem2018.Models
             catch (MySqlException ex)
             {
 
-                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return tuitionFees;
         }//End of Load
@@ -160,12 +160,12 @@ namespace GOCSystem2018.Models
 
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Recorde Updated!", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Recorde Updated!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }

@@ -25,6 +25,8 @@ namespace GOCSystem2018
             EnrollmentPanel.Visible = false;
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = false;
+            panel5.Height = pictureBox23.Height;
+            panel5.Top = pictureBox23.Top;
         }
 
         private void EnrollmentBtn_Click(object sender, EventArgs e)
@@ -33,6 +35,8 @@ namespace GOCSystem2018
             EnrollmentPanel.Visible = true;
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = false;
+            panel5.Height = pictureBox24.Height;
+            panel5.Top = pictureBox24.Top;
         }
 
         private void StudlistBtn_Click(object sender, EventArgs e)
@@ -41,6 +45,8 @@ namespace GOCSystem2018
             EnrollmentPanel.Visible = false;
             StudentlistPanel.Visible = true;
             MaintenancePanel.Visible = false;
+            panel5.Height = pictureBox25.Height;
+            panel5.Top = pictureBox25.Top;
         }
 
         private void MaintenanceBtn_Click(object sender, EventArgs e)
@@ -49,6 +55,8 @@ namespace GOCSystem2018
             EnrollmentPanel.Visible = false;
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = true;
+            panel5.Height = pictureBox29.Height;
+            panel5.Top = pictureBox29.Top;
         }
 
 
@@ -244,7 +252,210 @@ namespace GOCSystem2018
         #endregion
 
 
-    
+
+
+        private void LRNtxt_TextChanged(object sender, EventArgs e)
+        {
+            if (LRNtxt.Text.Equals(""))
+            {
+                label55.Text = "LRN";
+            }
+            else
+            {
+                label55.Text = "";
+            }
+        }
+
+        private void FNtxt_TextChanged(object sender, EventArgs e)
+        {
+            if (FNtxt.Text.Equals(""))
+            {
+                label3.Text = "FIRST NAME";
+            }
+            else
+            {
+                label3.Text = "";
+            }
+        }
+
+        private void MNtxt_TextChanged(object sender, EventArgs e)
+        {
+            if (MNtxt.Text.Equals(""))
+            {
+                label4.Text = "MIDDLE NAME";
+            }
+            else
+            {
+                label4.Text = "";
+            }
+        }
+        private void LNtxt_TextChanged_1(object sender, EventArgs e)
+        {
+            if (LNtxt.Text.Equals(""))
+            {
+                label5.Text = "SURNAME";
+            }
+            else
+            {
+                label5.Text = "";
+            }
+        }
+
+        private void BirthPlacetxt_TextChanged(object sender, EventArgs e)
+        {
+            if (BirthPlacetxt.Text.Equals(""))
+            {
+                label110.Text = "BIRTHPLACE";
+            }
+            else
+            {
+                label110.Text = "";
+            }
+        }
+
+        private void Addtxt_TextChanged(object sender, EventArgs e)
+        {
+            if (Addtxt.Text.Equals(""))
+            {
+                label64.Text = "ADDRESS";
+            }
+            else
+            {
+                label64.Text = "";
+            }
+        }
+
+        private void MotherTtxt_TextChanged(object sender, EventArgs e)
+        {
+            if (MotherTtxt.Text.Equals(""))
+            {
+                label113.Text = "MOTHERTONGUE";
+            }
+            else
+            {
+                label113.Text = "";
+            }
+        }
+
+        private void Ethnicitytxt_TextChanged(object sender, EventArgs e)
+        {
+            if (Ethnicitytxt.Text.Equals(""))
+            {
+                label112.Text = "ETHNICITY";
+            }
+            else
+            {
+                label112.Text = "";
+            }
+        }
+
+        private void Reltxt_TextChanged(object sender, EventArgs e)
+        {
+            if (Reltxt.Text.Equals(""))
+            {
+                label111.Text = "RELIGION";
+            }
+            else
+            {
+                label111.Text = "";
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            FNtxt.Focus();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            MNtxt.Focus();
+        }
+
+        private void label110_Click(object sender, EventArgs e)
+        {
+            BirthPlacetxt.Focus();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            LNtxt.Focus();
+        }
+
+        private void label64_Click(object sender, EventArgs e)
+        {
+            Addtxt.Focus();
+        }
+
+        private void label113_Click(object sender, EventArgs e)
+        {
+            MotherTtxt.Focus();
+        }
+
+        private void label112_Click(object sender, EventArgs e)
+        {
+            Ethnicitytxt.Focus();
+        }
+
+        private void label111_Click(object sender, EventArgs e)
+        {
+            Reltxt.Focus();
+        }
+
+        private void label55_Click(object sender, EventArgs e)
+        {
+            LRNtxt.Focus();
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            //Me.ScrollControlIntoView(Label6)
+            Dashboardpanel.ScrollControlIntoView(label10);
+        }
+
+        private void label73_Click(object sender, EventArgs e)
+        {
+            fathertxt.Focus();
+        }
+
+        private void label71_Click(object sender, EventArgs e)
+        {
+            mothertxt.Focus();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            guardiantxt.Focus();
+        }
+
+        private void label80_Click(object sender, EventArgs e)
+        {
+            fcntxt.Focus();
+        }
+
+        private void label77_Click(object sender, EventArgs e)
+        {
+            mcntxt.Focus();
+        }
+
+        private void label75_Click(object sender, EventArgs e)
+        {
+            gcntxt.Focus();
+        }
+
+        private void label120_Click(object sender, EventArgs e)
+        {
+            fotxt.Focus();
+        }
+
+        private void label84_Click(object sender, EventArgs e)
+        {
+            motxt.Focus();
+        }
+
+        private void label82_Click(object sender, EventArgs e)
+        {
+            gotxt.Focus();
+        }
     }
     }
 

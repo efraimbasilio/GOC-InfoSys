@@ -29,93 +29,97 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStrand));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
+            this.btnEdit = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.PictureBox();
+            this.pnlEdit = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.EditStrandLbl = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.EditStrandDescTb = new System.Windows.Forms.TextBox();
-            this.EditStrandTb = new System.Windows.Forms.TextBox();
+            this.btnCommit = new System.Windows.Forms.Button();
+            this.txtEditDesc = new System.Windows.Forms.TextBox();
+            this.txtEditStrand = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlNew = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.StrandLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.StrandDescTb = new System.Windows.Forms.TextBox();
-            this.StrandTb = new System.Windows.Forms.TextBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.txtStrand = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.dgvStrands = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Misc_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.misc_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
+            this.pnlEdit.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pnlNew.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStrands)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox2
+            // btnDelete
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(709, 614);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(104, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(709, 614);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(104, 28);
+            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDelete.TabIndex = 47;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // pictureBox1
+            // btnEdit
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(603, 614);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 46;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(603, 614);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(104, 28);
+            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEdit.TabIndex = 46;
+            this.btnEdit.TabStop = false;
+            this.btnEdit.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox3
+            // btnAdd
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(603, 580);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(210, 28);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 45;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(603, 580);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(210, 28);
+            this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAdd.TabIndex = 45;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // panel2
+            // pnlEdit
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Controls.Add(this.EditStrandLbl);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.EditStrandDescTb);
-            this.panel2.Controls.Add(this.EditStrandTb);
-            this.panel2.Location = new System.Drawing.Point(449, 197);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(325, 249);
-            this.panel2.TabIndex = 42;
-            this.panel2.Visible = false;
+            this.pnlEdit.BackColor = System.Drawing.Color.White;
+            this.pnlEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEdit.Controls.Add(this.label1);
+            this.pnlEdit.Controls.Add(this.label3);
+            this.pnlEdit.Controls.Add(this.label4);
+            this.pnlEdit.Controls.Add(this.label19);
+            this.pnlEdit.Controls.Add(this.EditStrandLbl);
+            this.pnlEdit.Controls.Add(this.label10);
+            this.pnlEdit.Controls.Add(this.btnCommit);
+            this.pnlEdit.Controls.Add(this.txtEditDesc);
+            this.pnlEdit.Controls.Add(this.txtEditStrand);
+            this.pnlEdit.Location = new System.Drawing.Point(12, 378);
+            this.pnlEdit.Name = "pnlEdit";
+            this.pnlEdit.Size = new System.Drawing.Size(325, 249);
+            this.pnlEdit.TabIndex = 42;
+            this.pnlEdit.Visible = false;
             // 
             // label1
             // 
@@ -134,6 +138,7 @@
             this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 22;
             this.label3.Text = "Strand ID:";
+            this.label3.Visible = false;
             // 
             // label4
             // 
@@ -165,6 +170,7 @@
             this.EditStrandLbl.Size = new System.Drawing.Size(42, 13);
             this.EditStrandLbl.TabIndex = 11;
             this.EditStrandLbl.Text = "ID here";
+            this.EditStrandLbl.Visible = false;
             // 
             // label10
             // 
@@ -175,34 +181,35 @@
             this.label10.TabIndex = 10;
             this.label10.Text = "Edit Strand";
             // 
-            // button2
+            // btnCommit
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-1, 221);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(325, 27);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Commit";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnCommit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnCommit.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCommit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCommit.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCommit.ForeColor = System.Drawing.Color.White;
+            this.btnCommit.Location = new System.Drawing.Point(-1, 221);
+            this.btnCommit.Name = "btnCommit";
+            this.btnCommit.Size = new System.Drawing.Size(325, 27);
+            this.btnCommit.TabIndex = 9;
+            this.btnCommit.Text = "Commit";
+            this.btnCommit.UseVisualStyleBackColor = false;
+            this.btnCommit.Click += new System.EventHandler(this.btnCommit_Click);
             // 
-            // EditStrandDescTb
+            // txtEditDesc
             // 
-            this.EditStrandDescTb.Location = new System.Drawing.Point(108, 137);
-            this.EditStrandDescTb.Multiline = true;
-            this.EditStrandDescTb.Name = "EditStrandDescTb";
-            this.EditStrandDescTb.Size = new System.Drawing.Size(191, 20);
-            this.EditStrandDescTb.TabIndex = 4;
+            this.txtEditDesc.Location = new System.Drawing.Point(108, 137);
+            this.txtEditDesc.Multiline = true;
+            this.txtEditDesc.Name = "txtEditDesc";
+            this.txtEditDesc.Size = new System.Drawing.Size(191, 20);
+            this.txtEditDesc.TabIndex = 4;
             // 
-            // EditStrandTb
+            // txtEditStrand
             // 
-            this.EditStrandTb.Location = new System.Drawing.Point(108, 111);
-            this.EditStrandTb.Name = "EditStrandTb";
-            this.EditStrandTb.Size = new System.Drawing.Size(191, 20);
-            this.EditStrandTb.TabIndex = 2;
+            this.txtEditStrand.Location = new System.Drawing.Point(108, 111);
+            this.txtEditStrand.Name = "txtEditStrand";
+            this.txtEditStrand.Size = new System.Drawing.Size(191, 20);
+            this.txtEditStrand.TabIndex = 2;
             // 
             // panel3
             // 
@@ -232,32 +239,32 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Myriad Hebrew", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(17, 46);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(139, 36);
+            this.label16.Size = new System.Drawing.Size(160, 33);
             this.label16.TabIndex = 17;
             this.label16.Text = "STRANDS";
             // 
-            // panel1
+            // pnlNew
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.StrandLbl);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.StrandDescTb);
-            this.panel1.Controls.Add(this.StrandTb);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(93, 197);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 249);
-            this.panel1.TabIndex = 41;
-            this.panel1.Visible = false;
+            this.pnlNew.BackColor = System.Drawing.Color.White;
+            this.pnlNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlNew.Controls.Add(this.label18);
+            this.pnlNew.Controls.Add(this.StrandLbl);
+            this.pnlNew.Controls.Add(this.label2);
+            this.pnlNew.Controls.Add(this.btnSave);
+            this.pnlNew.Controls.Add(this.label5);
+            this.pnlNew.Controls.Add(this.label6);
+            this.pnlNew.Controls.Add(this.txtDesc);
+            this.pnlNew.Controls.Add(this.txtStrand);
+            this.pnlNew.Controls.Add(this.label7);
+            this.pnlNew.Location = new System.Drawing.Point(12, 123);
+            this.pnlNew.Name = "pnlNew";
+            this.pnlNew.Size = new System.Drawing.Size(325, 249);
+            this.pnlNew.TabIndex = 41;
+            this.pnlNew.Visible = false;
             // 
             // label18
             // 
@@ -280,6 +287,7 @@
             this.StrandLbl.Size = new System.Drawing.Size(44, 13);
             this.StrandLbl.TabIndex = 11;
             this.StrandLbl.Text = "ID Here";
+            this.StrandLbl.Visible = false;
             // 
             // label2
             // 
@@ -290,19 +298,20 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "New Strand";
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(-1, 221);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(325, 27);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(-1, 221);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(325, 27);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Add";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label5
             // 
@@ -321,21 +330,22 @@
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Strand ID:";
+            this.label6.Visible = false;
             // 
-            // StrandDescTb
+            // txtDesc
             // 
-            this.StrandDescTb.Location = new System.Drawing.Point(111, 137);
-            this.StrandDescTb.Multiline = true;
-            this.StrandDescTb.Name = "StrandDescTb";
-            this.StrandDescTb.Size = new System.Drawing.Size(191, 20);
-            this.StrandDescTb.TabIndex = 4;
+            this.txtDesc.Location = new System.Drawing.Point(111, 137);
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(191, 20);
+            this.txtDesc.TabIndex = 4;
             // 
-            // StrandTb
+            // txtStrand
             // 
-            this.StrandTb.Location = new System.Drawing.Point(111, 111);
-            this.StrandTb.Name = "StrandTb";
-            this.StrandTb.Size = new System.Drawing.Size(191, 20);
-            this.StrandTb.TabIndex = 2;
+            this.txtStrand.Location = new System.Drawing.Point(111, 111);
+            this.txtStrand.Name = "txtStrand";
+            this.txtStrand.Size = new System.Drawing.Size(191, 20);
+            this.txtStrand.TabIndex = 2;
             // 
             // label7
             // 
@@ -355,13 +365,41 @@
             this.label8.TabIndex = 44;
             this.label8.Text = resources.GetString("label8.Text");
             // 
-            // dataGridView1
+            // dgvStrands
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(40, 167);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(773, 407);
-            this.dataGridView1.TabIndex = 43;
+            this.dgvStrands.AllowUserToAddRows = false;
+            this.dgvStrands.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStrands.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Misc_Name,
+            this.misc_amount});
+            this.dgvStrands.Location = new System.Drawing.Point(468, 145);
+            this.dgvStrands.Name = "dgvStrands";
+            this.dgvStrands.ReadOnly = true;
+            this.dgvStrands.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStrands.Size = new System.Drawing.Size(345, 407);
+            this.dgvStrands.TabIndex = 48;
+            this.dgvStrands.Click += new System.EventHandler(this.dgvStrands_Click);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // Misc_Name
+            // 
+            this.Misc_Name.HeaderText = "Strand Name";
+            this.Misc_Name.Name = "Misc_Name";
+            this.Misc_Name.ReadOnly = true;
+            this.Misc_Name.Width = 200;
+            // 
+            // misc_amount
+            // 
+            this.misc_amount.HeaderText = "Description";
+            this.misc_amount.Name = "misc_amount";
+            this.misc_amount.ReadOnly = true;
             // 
             // frmStrand
             // 
@@ -369,28 +407,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(868, 647);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlNew);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvStrands);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStrand";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmStrand";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Load += new System.EventHandler(this.frmStrand_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
+            this.pnlEdit.ResumeLayout(false);
+            this.pnlEdit.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.pnlNew.ResumeLayout(false);
+            this.pnlNew.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStrands)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,33 +437,36 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox btnDelete;
+        private System.Windows.Forms.PictureBox btnEdit;
+        private System.Windows.Forms.PictureBox btnAdd;
+        private System.Windows.Forms.Panel pnlEdit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label EditStrandLbl;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox EditStrandDescTb;
-        private System.Windows.Forms.TextBox EditStrandTb;
+        private System.Windows.Forms.Button btnCommit;
+        private System.Windows.Forms.TextBox txtEditDesc;
+        private System.Windows.Forms.TextBox txtEditStrand;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlNew;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label StrandLbl;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox StrandDescTb;
-        private System.Windows.Forms.TextBox StrandTb;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.TextBox txtStrand;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStrands;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Misc_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn misc_amount;
     }
 }
