@@ -195,6 +195,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(985, 1260);
             this.panel6.TabIndex = 74;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // button1
             // 
@@ -1078,11 +1079,10 @@
             // txtRegno
             // 
             this.txtRegno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRegno.Location = new System.Drawing.Point(341, 331);
+            this.txtRegno.Location = new System.Drawing.Point(36, 313);
             this.txtRegno.Name = "txtRegno";
             this.txtRegno.Size = new System.Drawing.Size(299, 20);
             this.txtRegno.TabIndex = 106;
-            this.txtRegno.Visible = false;
             // 
             // frmRegistration
             // 

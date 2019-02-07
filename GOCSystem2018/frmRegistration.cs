@@ -114,6 +114,8 @@ namespace GOCSystem2018
 
         private void frmRegistration_Load(object sender, EventArgs e)
         {
+            txtRegno.Text = "REG-" + DateTime.Today.ToString("yyyy")+"-";
+
             opt1stYear.Text = "11";
             opt2ndYear.Text = "12";
             opt3rdYear.Visible = false;
@@ -198,6 +200,11 @@ namespace GOCSystem2018
             frmAssesment.LoadStrand();
             this.Hide();
             frmAssesment.Show();
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
