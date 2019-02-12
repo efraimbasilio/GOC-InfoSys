@@ -18,6 +18,11 @@ namespace GOCSystem2018
         protected string subjectCode;
         protected string subjectDesc;
 
+        protected string subjSemester;
+        protected string subjGradeLevel;
+        protected string subjStrand;
+        protected string subjType;
+
         //protected int flag;
 
         /******************************
@@ -37,11 +42,39 @@ namespace GOCSystem2018
             get { return subjectCode; }
             set { subjectCode = value; }
         }
+
+        public string SubjSemester
+        {
+            get { return subjSemester; }
+            set { subjSemester = value; }
+        }
+
         public string SubjectDesc
         {
             get { return subjectDesc; }
             set { subjectDesc = value; }
         }
+
+        public string SubjGradeLevel
+        {
+            get { return subjGradeLevel; }
+            set { subjGradeLevel = value; }
+        }
+      
+        public string SubjStrand
+        {
+            get { return subjStrand; }
+            set { subjStrand = value; }
+        }
+
+        public string SubjType
+        {
+            get { return subjType; }
+            set { subjType = value; }
+        }
+
+
+
         //variable name should always to be plural for every list
         //Camel casing
         List<Subject> subjects = new List<Subject>();
@@ -123,6 +156,61 @@ namespace GOCSystem2018
                         subject.id = Convert.ToInt32(reader["id"].ToString());
                         subject.subjectCode = reader["subject_code"].ToString();
                         subject.subjectDesc = reader["subject_desc"].ToString();
+
+                        subjects.Add(subject);
+
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return subjects;
+        }
+
+
+        public List<Subject> GetSubjectById()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM subject WHERE semester=@subjSemester AND grade_level=@subjGradeLevel;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    //cmd.Parameters.AddWithValue("id", id);
+                    cmd.Parameters.AddWithValue("subjSemester", subjSemester);                    
+                    cmd.Parameters.AddWithValue("subjGradeLevel", subjGradeLevel);
+                    cmd.Parameters.AddWithValue("subjStrand", subjStrand);
+                    cmd.Parameters.AddWithValue("subjType", subjType);
+           
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Subject subject = new Subject();
+
+                        //prepare properties
+                        subject.id = Convert.ToInt32(reader["id"].ToString());
+                        subject.subjectCode = reader["subject_code"].ToString();
+                        subject.subjectDesc = reader["subject_desc"].ToString();
+
+                        subject.subjSemester = reader["semester"].ToString();
+                        subject.subjGradeLevel = reader["grade_level"].ToString();
+                        subject.SubjType = reader["subject_type"].ToString();
+                        subject.subjStrand = reader["strand"].ToString();
+
+
 
                         subjects.Add(subject);
 

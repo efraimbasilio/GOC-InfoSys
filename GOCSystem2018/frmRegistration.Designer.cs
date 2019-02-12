@@ -30,11 +30,9 @@
         {
             this.panel6 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.mtxtRegnoMask = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbStudType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.label82 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
@@ -95,11 +93,9 @@
             this.label102 = new System.Windows.Forms.Label();
             this.label101 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.label105 = new System.Windows.Forms.Label();
             this.label103 = new System.Windows.Forms.Label();
             this.label104 = new System.Windows.Forms.Label();
             this.LRNtxt = new System.Windows.Forms.TextBox();
-            this.label109 = new System.Windows.Forms.Label();
             this.guardiantxt2 = new System.Windows.Forms.Label();
             this.mothertxt2 = new System.Windows.Forms.Label();
             this.fathertxt2 = new System.Windows.Forms.Label();
@@ -111,6 +107,9 @@
             this.label121 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtRegno = new System.Windows.Forms.TextBox();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -123,11 +122,9 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.button1);
-            this.panel6.Controls.Add(this.mtxtRegnoMask);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.cmbStudType);
             this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.textBox1);
             this.panel6.Controls.Add(this.btnSave);
             this.panel6.Controls.Add(this.label82);
             this.panel6.Controls.Add(this.label84);
@@ -175,11 +172,9 @@
             this.panel6.Controls.Add(this.label102);
             this.panel6.Controls.Add(this.label101);
             this.panel6.Controls.Add(this.txtLastName);
-            this.panel6.Controls.Add(this.label105);
             this.panel6.Controls.Add(this.label103);
             this.panel6.Controls.Add(this.label104);
             this.panel6.Controls.Add(this.LRNtxt);
-            this.panel6.Controls.Add(this.label109);
             this.panel6.Controls.Add(this.guardiantxt2);
             this.panel6.Controls.Add(this.mothertxt2);
             this.panel6.Controls.Add(this.fathertxt2);
@@ -191,6 +186,9 @@
             this.panel6.Controls.Add(this.label121);
             this.panel6.Controls.Add(this.txtAddress);
             this.panel6.Controls.Add(this.txtRegno);
+            this.panel6.Controls.Add(this.label109);
+            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.label10);
             this.panel6.Location = new System.Drawing.Point(81, -316);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(985, 1260);
@@ -199,27 +197,19 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(638, 377);
+            this.button1.Location = new System.Drawing.Point(879, 827);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 39);
             this.button1.TabIndex = 110;
-            this.button1.Text = "&Assesment";
+            this.button1.Text = "&Assessment";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // mtxtRegnoMask
-            // 
-            this.mtxtRegnoMask.Location = new System.Drawing.Point(104, 336);
-            this.mtxtRegnoMask.Mask = "REG-0000";
-            this.mtxtRegnoMask.Name = "mtxtRegnoMask";
-            this.mtxtRegnoMask.Size = new System.Drawing.Size(225, 20);
-            this.mtxtRegnoMask.TabIndex = 109;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 492);
+            this.label2.Location = new System.Drawing.Point(221, 515);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 15);
             this.label2.TabIndex = 108;
@@ -228,12 +218,11 @@
             // cmbStudType
             // 
             this.cmbStudType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStudType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbStudType.FormattingEnabled = true;
             this.cmbStudType.Items.AddRange(new object[] {
             "New Student",
             "Old Student"});
-            this.cmbStudType.Location = new System.Drawing.Point(128, 489);
+            this.cmbStudType.Location = new System.Drawing.Point(319, 512);
             this.cmbStudType.Name = "cmbStudType";
             this.cmbStudType.Size = new System.Drawing.Size(195, 21);
             this.cmbStudType.TabIndex = 107;
@@ -244,23 +233,15 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(24, 336);
+            this.label1.Location = new System.Drawing.Point(172, 349);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 15);
             this.label1.TabIndex = 105;
             this.label1.Text = "REGNO";
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(376, 343);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(299, 13);
-            this.textBox1.TabIndex = 104;
-            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(551, 377);
+            this.btnSave.Location = new System.Drawing.Point(790, 826);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(81, 39);
             this.btnSave.TabIndex = 101;
@@ -274,7 +255,7 @@
             this.label82.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label82.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.ForeColor = System.Drawing.Color.Gray;
-            this.label82.Location = new System.Drawing.Point(647, 1049);
+            this.label82.Location = new System.Drawing.Point(647, 1088);
             this.label82.Name = "label82";
             this.label82.Size = new System.Drawing.Size(76, 15);
             this.label82.TabIndex = 94;
@@ -286,7 +267,7 @@
             this.label84.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label84.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.ForeColor = System.Drawing.Color.Gray;
-            this.label84.Location = new System.Drawing.Point(647, 1016);
+            this.label84.Location = new System.Drawing.Point(647, 1055);
             this.label84.Name = "label84";
             this.label84.Size = new System.Drawing.Size(76, 15);
             this.label84.TabIndex = 95;
@@ -298,7 +279,7 @@
             this.label120.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label120.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label120.ForeColor = System.Drawing.Color.Gray;
-            this.label120.Location = new System.Drawing.Point(647, 982);
+            this.label120.Location = new System.Drawing.Point(647, 1021);
             this.label120.Name = "label120";
             this.label120.Size = new System.Drawing.Size(76, 15);
             this.label120.TabIndex = 96;
@@ -308,7 +289,7 @@
             // 
             this.gotxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gotxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gotxt.Location = new System.Drawing.Point(641, 1049);
+            this.gotxt.Location = new System.Drawing.Point(641, 1088);
             this.gotxt.Name = "gotxt";
             this.gotxt.Size = new System.Drawing.Size(162, 13);
             this.gotxt.TabIndex = 93;
@@ -317,7 +298,7 @@
             // 
             this.motxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.motxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.motxt.Location = new System.Drawing.Point(641, 1016);
+            this.motxt.Location = new System.Drawing.Point(641, 1055);
             this.motxt.Name = "motxt";
             this.motxt.Size = new System.Drawing.Size(161, 13);
             this.motxt.TabIndex = 92;
@@ -326,7 +307,7 @@
             // 
             this.fotxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fotxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.fotxt.Location = new System.Drawing.Point(644, 982);
+            this.fotxt.Location = new System.Drawing.Point(644, 1021);
             this.fotxt.Name = "fotxt";
             this.fotxt.Size = new System.Drawing.Size(159, 13);
             this.fotxt.TabIndex = 91;
@@ -336,7 +317,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Sultan Nahia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label15.Location = new System.Drawing.Point(427, 39);
+            this.label15.Location = new System.Drawing.Point(427, 78);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(199, 28);
             this.label15.TabIndex = 22;
@@ -348,7 +329,7 @@
             this.label75.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label75.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label75.ForeColor = System.Drawing.Color.Gray;
-            this.label75.Location = new System.Drawing.Point(465, 1049);
+            this.label75.Location = new System.Drawing.Point(465, 1088);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(66, 15);
             this.label75.TabIndex = 85;
@@ -360,7 +341,7 @@
             this.label77.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label77.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label77.ForeColor = System.Drawing.Color.Gray;
-            this.label77.Location = new System.Drawing.Point(465, 1016);
+            this.label77.Location = new System.Drawing.Point(465, 1055);
             this.label77.Name = "label77";
             this.label77.Size = new System.Drawing.Size(66, 15);
             this.label77.TabIndex = 86;
@@ -372,7 +353,7 @@
             this.label80.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label80.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label80.ForeColor = System.Drawing.Color.Gray;
-            this.label80.Location = new System.Drawing.Point(465, 982);
+            this.label80.Location = new System.Drawing.Point(465, 1021);
             this.label80.Name = "label80";
             this.label80.Size = new System.Drawing.Size(66, 15);
             this.label80.TabIndex = 87;
@@ -382,7 +363,7 @@
             // 
             this.gcntxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.gcntxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gcntxt.Location = new System.Drawing.Point(459, 1049);
+            this.gcntxt.Location = new System.Drawing.Point(459, 1088);
             this.gcntxt.Name = "gcntxt";
             this.gcntxt.Size = new System.Drawing.Size(165, 13);
             this.gcntxt.TabIndex = 84;
@@ -391,7 +372,7 @@
             // 
             this.mcntxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mcntxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.mcntxt.Location = new System.Drawing.Point(459, 1016);
+            this.mcntxt.Location = new System.Drawing.Point(459, 1055);
             this.mcntxt.Name = "mcntxt";
             this.mcntxt.Size = new System.Drawing.Size(161, 13);
             this.mcntxt.TabIndex = 83;
@@ -400,7 +381,7 @@
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(490, 67);
+            this.label60.Location = new System.Drawing.Point(490, 106);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(70, 16);
             this.label60.TabIndex = 42;
@@ -410,7 +391,7 @@
             // 
             this.fcntxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fcntxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.fcntxt.Location = new System.Drawing.Point(462, 982);
+            this.fcntxt.Location = new System.Drawing.Point(462, 1021);
             this.fcntxt.Name = "fcntxt";
             this.fcntxt.Size = new System.Drawing.Size(161, 13);
             this.fcntxt.TabIndex = 82;
@@ -418,7 +399,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox8.Location = new System.Drawing.Point(449, 137);
+            this.pictureBox8.Location = new System.Drawing.Point(449, 176);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(138, 127);
             this.pictureBox8.TabIndex = 33;
@@ -430,7 +411,7 @@
             this.label7.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(280, 1049);
+            this.label7.Location = new System.Drawing.Point(280, 1088);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 15);
             this.label7.TabIndex = 76;
@@ -442,7 +423,7 @@
             this.label71.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label71.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.ForeColor = System.Drawing.Color.Gray;
-            this.label71.Location = new System.Drawing.Point(280, 1016);
+            this.label71.Location = new System.Drawing.Point(280, 1055);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(96, 15);
             this.label71.TabIndex = 77;
@@ -452,7 +433,7 @@
             // 
             this.label54.AutoSize = true;
             this.label54.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label54.Location = new System.Drawing.Point(490, 101);
+            this.label54.Location = new System.Drawing.Point(490, 140);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(61, 13);
             this.label54.TabIndex = 36;
@@ -464,7 +445,7 @@
             this.label73.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label73.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.ForeColor = System.Drawing.Color.Gray;
-            this.label73.Location = new System.Drawing.Point(280, 982);
+            this.label73.Location = new System.Drawing.Point(280, 1021);
             this.label73.Name = "label73";
             this.label73.Size = new System.Drawing.Size(89, 15);
             this.label73.TabIndex = 78;
@@ -474,7 +455,7 @@
             // 
             this.guardiantxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guardiantxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guardiantxt.Location = new System.Drawing.Point(274, 1049);
+            this.guardiantxt.Location = new System.Drawing.Point(274, 1088);
             this.guardiantxt.Name = "guardiantxt";
             this.guardiantxt.Size = new System.Drawing.Size(166, 13);
             this.guardiantxt.TabIndex = 75;
@@ -483,7 +464,7 @@
             // 
             this.mothertxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mothertxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.mothertxt.Location = new System.Drawing.Point(274, 1016);
+            this.mothertxt.Location = new System.Drawing.Point(274, 1055);
             this.mothertxt.Name = "mothertxt";
             this.mothertxt.Size = new System.Drawing.Size(161, 13);
             this.mothertxt.TabIndex = 74;
@@ -492,7 +473,7 @@
             // 
             this.fathertxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.fathertxt.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.fathertxt.Location = new System.Drawing.Point(277, 982);
+            this.fathertxt.Location = new System.Drawing.Point(277, 1021);
             this.fathertxt.Name = "fathertxt";
             this.fathertxt.Size = new System.Drawing.Size(163, 13);
             this.fathertxt.TabIndex = 73;
@@ -503,7 +484,7 @@
             this.groupBox5.Controls.Add(this.opt2ndYear);
             this.groupBox5.Controls.Add(this.opt3rdYear);
             this.groupBox5.Controls.Add(this.opt4thYear);
-            this.groupBox5.Location = new System.Drawing.Point(166, 422);
+            this.groupBox5.Location = new System.Drawing.Point(357, 445);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(157, 34);
             this.groupBox5.TabIndex = 72;
@@ -558,7 +539,7 @@
             this.groupBox4.Controls.Add(this.optTVL);
             this.groupBox4.Controls.Add(this.optAcademic);
             this.groupBox4.Controls.Add(this.optCollege);
-            this.groupBox4.Location = new System.Drawing.Point(73, 377);
+            this.groupBox4.Location = new System.Drawing.Point(264, 400);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(250, 39);
             this.groupBox4.TabIndex = 71;
@@ -591,7 +572,7 @@
             // optCollege
             // 
             this.optCollege.AutoSize = true;
-            this.optCollege.Location = new System.Drawing.Point(163, 15);
+            this.optCollege.Location = new System.Drawing.Point(150, 15);
             this.optCollege.Name = "optCollege";
             this.optCollege.Size = new System.Drawing.Size(74, 17);
             this.optCollege.TabIndex = 50;
@@ -604,7 +585,7 @@
             this.groupBox3.Controls.Add(this.optMale);
             this.groupBox3.Controls.Add(this.optFemale);
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox3.Location = new System.Drawing.Point(86, 731);
+            this.groupBox3.Location = new System.Drawing.Point(277, 754);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(138, 35);
             this.groupBox3.TabIndex = 70;
@@ -636,7 +617,7 @@
             // 
             this.label114.AutoSize = true;
             this.label114.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label114.Location = new System.Drawing.Point(27, 435);
+            this.label114.Location = new System.Drawing.Point(218, 458);
             this.label114.Name = "label114";
             this.label114.Size = new System.Drawing.Size(137, 15);
             this.label114.TabIndex = 67;
@@ -648,7 +629,7 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label4.Location = new System.Drawing.Point(30, 575);
+            this.label4.Location = new System.Drawing.Point(221, 598);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 15);
             this.label4.TabIndex = 2;
@@ -660,7 +641,7 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label5.Location = new System.Drawing.Point(27, 606);
+            this.label5.Location = new System.Drawing.Point(218, 629);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 15);
             this.label5.TabIndex = 4;
@@ -672,7 +653,7 @@
             this.label110.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label110.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label110.ForeColor = System.Drawing.Color.Gray;
-            this.label110.Location = new System.Drawing.Point(30, 691);
+            this.label110.Location = new System.Drawing.Point(221, 714);
             this.label110.Name = "label110";
             this.label110.Size = new System.Drawing.Size(71, 15);
             this.label110.TabIndex = 56;
@@ -684,7 +665,7 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label3.Location = new System.Drawing.Point(30, 545);
+            this.label3.Location = new System.Drawing.Point(221, 568);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 15);
             this.label3.TabIndex = 0;
@@ -694,7 +675,7 @@
             // 
             this.label98.AutoSize = true;
             this.label98.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label98.Location = new System.Drawing.Point(30, 465);
+            this.label98.Location = new System.Drawing.Point(221, 488);
             this.label98.Name = "label98";
             this.label98.Size = new System.Drawing.Size(92, 15);
             this.label98.TabIndex = 52;
@@ -703,9 +684,8 @@
             // cmbCourseStrand
             // 
             this.cmbCourseStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCourseStrand.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cmbCourseStrand.FormattingEnabled = true;
-            this.cmbCourseStrand.Location = new System.Drawing.Point(128, 462);
+            this.cmbCourseStrand.Location = new System.Drawing.Point(319, 485);
             this.cmbCourseStrand.Name = "cmbCourseStrand";
             this.cmbCourseStrand.Size = new System.Drawing.Size(195, 21);
             this.cmbCourseStrand.TabIndex = 51;
@@ -716,7 +696,7 @@
             this.label64.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label64.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.ForeColor = System.Drawing.Color.Gray;
-            this.label64.Location = new System.Drawing.Point(42, 776);
+            this.label64.Location = new System.Drawing.Point(218, 800);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(56, 15);
             this.label64.TabIndex = 31;
@@ -726,7 +706,7 @@
             // 
             this.label57.AutoSize = true;
             this.label57.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label57.Location = new System.Drawing.Point(27, 392);
+            this.label57.Location = new System.Drawing.Point(218, 415);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(40, 15);
             this.label57.TabIndex = 49;
@@ -736,7 +716,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(30, 742);
+            this.label63.Location = new System.Drawing.Point(221, 765);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(52, 15);
             this.label63.TabIndex = 28;
@@ -748,7 +728,7 @@
             this.groupBox1.Controls.Add(this.chkDrugtest);
             this.groupBox1.Controls.Add(this.chk138);
             this.groupBox1.Controls.Add(this.chkBirthCertificate);
-            this.groupBox1.Location = new System.Drawing.Point(341, 362);
+            this.groupBox1.Location = new System.Drawing.Point(535, 400);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(182, 133);
             this.groupBox1.TabIndex = 24;
@@ -802,7 +782,7 @@
             this.label55.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label55.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.Color.Gray;
-            this.label55.Location = new System.Drawing.Point(24, 354);
+            this.label55.Location = new System.Drawing.Point(192, 377);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(27, 15);
             this.label55.TabIndex = 38;
@@ -810,7 +790,7 @@
             // 
             // dtBirthday
             // 
-            this.dtBirthday.Location = new System.Drawing.Point(96, 650);
+            this.dtBirthday.Location = new System.Drawing.Point(287, 673);
             this.dtBirthday.Name = "dtBirthday";
             this.dtBirthday.Size = new System.Drawing.Size(152, 20);
             this.dtBirthday.TabIndex = 6;
@@ -819,7 +799,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(279, 655);
+            this.label8.Location = new System.Drawing.Point(470, 678);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 9;
@@ -829,7 +809,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 652);
+            this.label6.Location = new System.Drawing.Point(221, 675);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 15);
             this.label6.TabIndex = 7;
@@ -838,7 +818,8 @@
             // txtBirthPlace
             // 
             this.txtBirthPlace.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBirthPlace.Location = new System.Drawing.Point(101, 692);
+            this.txtBirthPlace.ForeColor = System.Drawing.Color.Black;
+            this.txtBirthPlace.Location = new System.Drawing.Point(292, 715);
             this.txtBirthPlace.Name = "txtBirthPlace";
             this.txtBirthPlace.Size = new System.Drawing.Size(399, 13);
             this.txtBirthPlace.TabIndex = 43;
@@ -847,19 +828,19 @@
             // 
             this.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFName.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtFName.Location = new System.Drawing.Point(104, 544);
+            this.txtFName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtFName.Location = new System.Drawing.Point(328, 567);
             this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(396, 15);
+            this.txtFName.Size = new System.Drawing.Size(389, 15);
             this.txtFName.TabIndex = 1;
             // 
             // txtMName
             // 
             this.txtMName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMName.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtMName.Location = new System.Drawing.Point(118, 577);
+            this.txtMName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtMName.Location = new System.Drawing.Point(337, 598);
             this.txtMName.Name = "txtMName";
-            this.txtMName.Size = new System.Drawing.Size(396, 13);
+            this.txtMName.Size = new System.Drawing.Size(389, 13);
             this.txtMName.TabIndex = 3;
             // 
             // label102
@@ -868,7 +849,7 @@
             this.label102.BackColor = System.Drawing.Color.Transparent;
             this.label102.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label102.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label102.Location = new System.Drawing.Point(22, 575);
+            this.label102.Location = new System.Drawing.Point(213, 598);
             this.label102.Name = "label102";
             this.label102.Size = new System.Drawing.Size(513, 20);
             this.label102.TabIndex = 57;
@@ -880,7 +861,7 @@
             this.label101.BackColor = System.Drawing.Color.Transparent;
             this.label101.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label101.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label101.Location = new System.Drawing.Point(23, 545);
+            this.label101.Location = new System.Drawing.Point(214, 568);
             this.label101.Name = "label101";
             this.label101.Size = new System.Drawing.Size(513, 20);
             this.label101.TabIndex = 56;
@@ -889,23 +870,11 @@
             // txtLastName
             // 
             this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLastName.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.txtLastName.Location = new System.Drawing.Point(104, 606);
+            this.txtLastName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtLastName.Location = new System.Drawing.Point(327, 634);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(397, 13);
+            this.txtLastName.Size = new System.Drawing.Size(390, 13);
             this.txtLastName.TabIndex = 5;
-            // 
-            // label105
-            // 
-            this.label105.AutoSize = true;
-            this.label105.BackColor = System.Drawing.Color.Transparent;
-            this.label105.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label105.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label105.Location = new System.Drawing.Point(279, 288);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(513, 20);
-            this.label105.TabIndex = 60;
-            this.label105.Text = "________________________________________________________";
             // 
             // label103
             // 
@@ -913,7 +882,7 @@
             this.label103.BackColor = System.Drawing.Color.Transparent;
             this.label103.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label103.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label103.Location = new System.Drawing.Point(20, 608);
+            this.label103.Location = new System.Drawing.Point(211, 631);
             this.label103.Name = "label103";
             this.label103.Size = new System.Drawing.Size(513, 20);
             this.label103.TabIndex = 58;
@@ -925,7 +894,7 @@
             this.label104.BackColor = System.Drawing.Color.Transparent;
             this.label104.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label104.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label104.Location = new System.Drawing.Point(20, 691);
+            this.label104.Location = new System.Drawing.Point(211, 714);
             this.label104.Name = "label104";
             this.label104.Size = new System.Drawing.Size(513, 20);
             this.label104.TabIndex = 59;
@@ -934,22 +903,10 @@
             // LRNtxt
             // 
             this.LRNtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LRNtxt.Location = new System.Drawing.Point(57, 354);
+            this.LRNtxt.Location = new System.Drawing.Point(225, 374);
             this.LRNtxt.Name = "LRNtxt";
             this.LRNtxt.Size = new System.Drawing.Size(299, 13);
             this.LRNtxt.TabIndex = 37;
-            // 
-            // label109
-            // 
-            this.label109.AutoSize = true;
-            this.label109.BackColor = System.Drawing.Color.Transparent;
-            this.label109.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label109.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label109.Location = new System.Drawing.Point(29, 354);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(306, 20);
-            this.label109.TabIndex = 64;
-            this.label109.Text = "_________________________________";
             // 
             // guardiantxt2
             // 
@@ -958,7 +915,7 @@
             this.guardiantxt2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guardiantxt2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guardiantxt2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.guardiantxt2.Location = new System.Drawing.Point(270, 1049);
+            this.guardiantxt2.Location = new System.Drawing.Point(270, 1088);
             this.guardiantxt2.Name = "guardiantxt2";
             this.guardiantxt2.Size = new System.Drawing.Size(171, 20);
             this.guardiantxt2.TabIndex = 81;
@@ -971,7 +928,7 @@
             this.mothertxt2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.mothertxt2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mothertxt2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.mothertxt2.Location = new System.Drawing.Point(270, 1016);
+            this.mothertxt2.Location = new System.Drawing.Point(270, 1055);
             this.mothertxt2.Name = "mothertxt2";
             this.mothertxt2.Size = new System.Drawing.Size(171, 20);
             this.mothertxt2.TabIndex = 80;
@@ -984,7 +941,7 @@
             this.fathertxt2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fathertxt2.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fathertxt2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.fathertxt2.Location = new System.Drawing.Point(272, 982);
+            this.fathertxt2.Location = new System.Drawing.Point(272, 1021);
             this.fathertxt2.Name = "fathertxt2";
             this.fathertxt2.Size = new System.Drawing.Size(171, 20);
             this.fathertxt2.TabIndex = 79;
@@ -997,7 +954,7 @@
             this.label81.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label81.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label81.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label81.Location = new System.Drawing.Point(457, 982);
+            this.label81.Location = new System.Drawing.Point(457, 1021);
             this.label81.Name = "label81";
             this.label81.Size = new System.Drawing.Size(171, 20);
             this.label81.TabIndex = 88;
@@ -1010,7 +967,7 @@
             this.label78.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label78.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label78.Location = new System.Drawing.Point(455, 1016);
+            this.label78.Location = new System.Drawing.Point(455, 1055);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(171, 20);
             this.label78.TabIndex = 89;
@@ -1023,7 +980,7 @@
             this.label76.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label76.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label76.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label76.Location = new System.Drawing.Point(455, 1049);
+            this.label76.Location = new System.Drawing.Point(455, 1088);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(171, 20);
             this.label76.TabIndex = 90;
@@ -1036,7 +993,7 @@
             this.label83.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label83.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label83.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label83.Location = new System.Drawing.Point(637, 1049);
+            this.label83.Location = new System.Drawing.Point(637, 1088);
             this.label83.Name = "label83";
             this.label83.Size = new System.Drawing.Size(171, 20);
             this.label83.TabIndex = 99;
@@ -1049,7 +1006,7 @@
             this.label118.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label118.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label118.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label118.Location = new System.Drawing.Point(637, 1016);
+            this.label118.Location = new System.Drawing.Point(637, 1055);
             this.label118.Name = "label118";
             this.label118.Size = new System.Drawing.Size(171, 20);
             this.label118.TabIndex = 98;
@@ -1062,7 +1019,7 @@
             this.label121.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label121.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label121.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
-            this.label121.Location = new System.Drawing.Point(639, 982);
+            this.label121.Location = new System.Drawing.Point(639, 1021);
             this.label121.Name = "label121";
             this.label121.Size = new System.Drawing.Size(171, 20);
             this.label121.TabIndex = 97;
@@ -1071,18 +1028,57 @@
             // txtAddress
             // 
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Location = new System.Drawing.Point(104, 784);
+            this.txtAddress.ForeColor = System.Drawing.Color.Black;
+            this.txtAddress.Location = new System.Drawing.Point(283, 805);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(399, 13);
             this.txtAddress.TabIndex = 100;
             // 
             // txtRegno
             // 
-            this.txtRegno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRegno.Location = new System.Drawing.Point(36, 313);
+            this.txtRegno.BackColor = System.Drawing.Color.White;
+            this.txtRegno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRegno.Location = new System.Drawing.Point(225, 346);
             this.txtRegno.Name = "txtRegno";
-            this.txtRegno.Size = new System.Drawing.Size(299, 20);
+            this.txtRegno.ReadOnly = true;
+            this.txtRegno.Size = new System.Drawing.Size(299, 13);
             this.txtRegno.TabIndex = 106;
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.BackColor = System.Drawing.Color.Transparent;
+            this.label109.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label109.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
+            this.label109.Location = new System.Drawing.Point(221, 372);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(306, 20);
+            this.label109.TabIndex = 64;
+            this.label109.Text = "_________________________________";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
+            this.label9.Location = new System.Drawing.Point(221, 344);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(306, 20);
+            this.label9.TabIndex = 111;
+            this.label9.Text = "_________________________________";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(220, 802);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(513, 20);
+            this.label10.TabIndex = 112;
+            this.label10.Text = "________________________________________________________";
             // 
             // frmRegistration
             // 
@@ -1172,7 +1168,6 @@
         private System.Windows.Forms.Label label102;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.Label label105;
         private System.Windows.Forms.Label label103;
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.TextBox LRNtxt;
@@ -1189,11 +1184,11 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtRegno;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbStudType;
-        private System.Windows.Forms.MaskedTextBox mtxtRegnoMask;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

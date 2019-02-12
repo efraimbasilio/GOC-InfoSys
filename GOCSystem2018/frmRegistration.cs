@@ -13,10 +13,33 @@ namespace GOCSystem2018
     public partial class frmRegistration : Form
     {
         Registration registration = new Registration();
-        Assesment assesment = new Assesment();
 
-        public String theLRN;
-        
+        Assesment assesment = new Assesment();
+       
+        List<Assesment> assements = new List<Assesment>();
+        frmAssesment frmAssesment = new frmAssesment();
+
+        public void LoadAutoGen()
+        {
+            //clear list           
+            assements.Clear();  
+                               
+            //pass value to list
+            assements = assesment.Load();
+                  
+            foreach (var item in assements)
+            {
+                if (assements.Count() < 1)
+                {
+                    txtRegno.Text = "REG-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");                  
+                }
+                else
+                {                    
+                    txtRegno.Text = "REG-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");
+                }                                      
+            }
+        }//End LoadRecords() OK
+
         public frmRegistration()
         {
             InitializeComponent();
@@ -25,8 +48,7 @@ namespace GOCSystem2018
         private void btnSave_Click(object sender, EventArgs e)
         {
             registration.StudLRN = LRNtxt.Text;
-            registration.StudRegistrationNo = mtxtRegnoMask.Text;
-            registration.StudGOCNo = "";
+            registration.StudRegistrationNo = txtRegno.Text;
             registration.StudLastName = txtLastName.Text;
             registration.StudMiddleName = txtMName.Text;
             registration.StudFirstName = txtFName.Text;
@@ -36,25 +58,35 @@ namespace GOCSystem2018
             registration.StudBirthPlace = txtBirthPlace.Text;
             registration.StudAddress1 = txtAddress.Text;
             registration.StudType = cmbStudType.Text;
-
+            
+            //function to load important filtering
             checkYearLevel();
             CheckTrack();
             checkRequirements();
             checkGender();
 
-          
+            //save the info to database
             registration.Save();
+
+            //clear in assesment
+            frmAssesment.Reset();
+            assements.Clear();
+
+            frmAssesment.RegNo = txtRegno.Text;
+            frmAssesment.StudName = txtLastName.Text + " , " + txtFName.Text + " " + txtMName.Text;
+            frmAssesment.LRN = LRNtxt.Text;
+                       
+            frmAssesment.LoadSection();
+            frmAssesment.LoadSchoolYear();
+            frmAssesment.LoadStrand();
+            frmAssesment.RenderStudNo();
+
+
+
             this.Hide();
+            frmAssesment.Show();
 
-            frmAssesment frmAssesment1 = new frmAssesment();            
-            assesment.StudLRN = registration.StudLRN;
-            assesment.GetById();
-            frmAssesment1.LoadRecords();
-            frmAssesment1.LoadSection();
-            frmAssesment1.LoadSchoolYear();
-            frmAssesment1.LoadStrand();
 
-            frmAssesment1.Show();           
         }
 
         private void checkGender()
@@ -74,20 +106,24 @@ namespace GOCSystem2018
            if (opt1stYear.Checked)
             {
                 registration.StudGradeLevel = opt1stYear.Text;
+                frmAssesment.GradeLevel = opt1stYear.Text;
             }
 
             else if (opt2ndYear.Checked)
             {
                 registration.StudGradeLevel = opt2ndYear.Text;
+                frmAssesment.GradeLevel = opt1stYear.Text;
             }
 
             else if (opt3rdYear.Checked)
             {
                 registration.StudGradeLevel = opt3rdYear.Text;
+                frmAssesment.GradeLevel = opt1stYear.Text;
             }
             else if (opt4thYear.Checked)
             {
                 registration.StudGradeLevel = opt4thYear.Text;
+                frmAssesment.GradeLevel = opt1stYear.Text;
             }
         }
 
@@ -96,11 +132,13 @@ namespace GOCSystem2018
             if (optAcademic.Checked)
             {
                 registration.StudAcadTrack = optAcademic.Text;
+                frmAssesment.Track = optAcademic.Text;
             }
 
             else if (optTVL.Checked)
             {
                 registration.StudAcadTrack = optTVL.Text;
+                frmAssesment.Track = optAcademic.Text;
             }
         }
 
@@ -110,20 +148,35 @@ namespace GOCSystem2018
             {
                 registration.ReqAdmissionTest = chkEntranceExam.Text;
             }
+
+            if (chkBirthCertificate.Checked)
+            {
+                registration.ReqPSA = chkBirthCertificate.Text;
+            }
+
+            if (chkDrugtest.Checked)
+            {
+                registration.ReqDrugTest = chkDrugtest.Text;
+            }
+
+            if (chk138.Checked)
+            {
+                registration.ReqForm138 = chk138.Text;
+            }
+
+            
         }
 
         private void frmRegistration_Load(object sender, EventArgs e)
         {
-            txtRegno.Text = "REG-" + DateTime.Today.ToString("yyyy")+"-";
-
+            LoadAutoGen();
+                       
             opt1stYear.Text = "11";
             opt2ndYear.Text = "12";
             opt3rdYear.Visible = false;
             opt4thYear.Visible = false;
             cmbCourseStrand.Text = "";
-            LoadCombo();
-
-         
+            LoadCombo();            
         }
 
         void LoadCombo()
@@ -193,17 +246,27 @@ namespace GOCSystem2018
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmAssesment frmAssesment = new frmAssesment();
+
             frmAssesment.Reset();
             frmAssesment.LoadSection();
             frmAssesment.LoadSchoolYear();
             frmAssesment.LoadStrand();
+            frmAssesment.RenderStudNo();
+
+
             this.Hide();
             frmAssesment.Show();
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+
 
         }
     }

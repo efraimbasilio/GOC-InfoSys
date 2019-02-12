@@ -59,15 +59,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assesment.cs" />
+    <Compile Include="Models\Assesment.cs" />
     <Compile Include="Config.cs" />
-    <Compile Include="Models\Discount.cs" />
     <Compile Include="frmAssesment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAssesment.Designer.cs">
+    <Compile Include="frmAssesment.designer.cs">
       <DependentUpon>frmAssesment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Discount.cs" />
     <Compile Include="frmAssesmentSearch.cs">
       <SubType>Form</SubType>
     </Compile>
