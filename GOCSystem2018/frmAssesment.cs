@@ -16,6 +16,7 @@ namespace GOCSystem2018
         string b = "APPLIED SUBJECTS";
         string c = "CORE SUBJECTS";
         string allStrand = "All Strand";
+
         Assesment assesment = new Assesment();
         Registration registration = new Registration();
         Section section = new Section();
@@ -177,25 +178,16 @@ namespace GOCSystem2018
 
 
         private void btnAsses_Click(object sender, EventArgs e)
-        {
+        {            
+            //subject.SubjType = a;
+            //loop2();
+
+            subject.SubjType = b;           
+            loop();
             //string a = "SPECIALIZED SUBJECTS";
             //string b = "APPLIED SUBJECTS";
-            //string c = "CORE SUBJECTS";            
-            //subjects.Clear();   
-
-            //subject.SubjType = a;          
-            //loop();
-
-            subject.SubjType = b;
-            ////subject.SubjStrand = allStrand;
-            //loop();
-
-            //subject.SubjType = c;
-            ////subject.SubjStrand = allStrand;
-            //loop();
-
-            loop();
-            
+            //string c = "CORE SUBJECTS";
+            //string allStrand = "All Strand";
         }
 
         public void loop()
@@ -210,24 +202,57 @@ namespace GOCSystem2018
 
             foreach (var item in subjects)
             {
-                //if (item.SubjStrand.Equals(cmbStrand.Text))
-                //{
-                //    //pass variable 
-                //    dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
-                //}
-
                 if (item.SubjType.Equals(b) && item.SubjStrand.Equals(allStrand))
                 {
                     //pass variable 
                     dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
                 }
+            }
 
-                //if (item.SubjType.Equals(a) && item.SubjStrand.Equals(cmbStrand.Text))
-                //{
-                //    //pass variable 
-                //    dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
-                //}
+            foreach (var item in subjects)
+            {
+                if (item.SubjType.Equals(a) && item.SubjStrand.Equals(cmbStrand.Text))
+                {
+                    //pass variable 
+                    dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
+                }
+            }
 
+            foreach (var item in subjects)
+            {
+                if (item.SubjType.Equals(c) && item.SubjStrand.Equals(allStrand))
+                {
+                    //pass variable 
+                    dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
+                }
+            }
+        }
+        public void loop2()
+        {
+            subject.SubjGradeLevel = GradeLevel;
+            subject.SubjSemester = cmbSemester.Text;
+            subject.SubjStrand = cmbStrand.Text;
+
+            subjects.Clear();
+            dgvSubject.Rows.Clear();
+            subjects = subject.GetSubjectById();
+
+            //foreach (var item in subjects)
+            //{
+            //    if (item.SubjType.Equals(b) && item.SubjStrand.Equals(allStrand))
+            //    {
+            //        pass variable
+            //        dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
+            //    }
+            //}
+
+            foreach (var item in subjects)
+            {
+                if (item.SubjType.Equals(a) && item.SubjStrand.Equals(cmbStrand.Text))
+                {
+                    //pass variable 
+                    dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
+                }
             }
         }
 
