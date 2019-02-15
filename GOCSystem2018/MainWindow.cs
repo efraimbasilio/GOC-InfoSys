@@ -456,6 +456,12 @@ namespace GOCSystem2018
         {
             gotxt.Focus();
         }
+
+        private void SettingsBtn_Click(object sender, EventArgs e)
+        {
+            frmSetting setting = new frmSetting();
+            setting.ShowDialog();          
+        }
     }
     }
 

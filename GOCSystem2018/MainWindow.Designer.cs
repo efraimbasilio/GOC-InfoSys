@@ -468,6 +468,7 @@
             this.SettingsBtn.Size = new System.Drawing.Size(72, 21);
             this.SettingsBtn.TabIndex = 16;
             this.SettingsBtn.Text = "Settings";
+            this.SettingsBtn.Click += new System.EventHandler(this.SettingsBtn_Click);
             // 
             // MaintenanceBtn
             // 

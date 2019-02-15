@@ -104,5 +104,12 @@ namespace GOCSystem2018
                 btnSaveConfiguration.PerformClick();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MainWindow mw = new MainWindow();
+            mw.Show();
+            this.Hide();
+        }
     }
 }
