@@ -127,6 +127,50 @@ namespace GOCSystem2018
             return miscFees;
         }//End of Load
 
+        public List<MiscFee> GetMiscFeeById()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM misc_fee;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("misc_fee_name", miscFeeName);
+                    cmd.Parameters.AddWithValue("misc_amount", miscFeeAmount);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        MiscFee miscFee = new MiscFee();
+
+                        //prepare properties
+                        //miscFee.id = Convert.ToInt32(reader["id"].ToString());
+                        miscFee.miscFeeName = reader["misc_fee_name"].ToString();
+                        miscFee.miscFeeAmount = reader["misc_amount"].ToString();
+                        
+
+                        miscFees.Add(miscFee);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return miscFees;
+        }
+
         public void Update()
         {
             try

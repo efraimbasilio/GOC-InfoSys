@@ -169,6 +169,48 @@ namespace GOCSystem2018.Models
 
             }
         }
+        public List<TuitionFee> GetTuitionFeeById()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM tuition_fee;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("tuition_fee_name", this.tuitionFeeName);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        TuitionFee tuitionFee = new TuitionFee();
+
+                        //prepare properties
+                        tuitionFee.id = Convert.ToInt32(reader["id"].ToString());
+                        tuitionFee.tuitionFeeName = reader["tuition_fee_name"].ToString();
+                        tuitionFee.tuitionFeeAmount = reader["tuition_amount"].ToString();
+                        tuitionFee.tuitionFeeDescription = reader["tuition_desc"].ToString();
+
+                        tuitionFees.Add(tuitionFee);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return tuitionFees;
+        }
 
         public List<TuitionFee>GetById()
         {
@@ -242,5 +284,9 @@ namespace GOCSystem2018.Models
 
             }
         }
+
+
+
+        
     }
 }

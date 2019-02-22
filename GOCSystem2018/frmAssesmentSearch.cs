@@ -74,9 +74,11 @@ namespace GOCSystem2018
                 this.Dispose();
             }
         }
-        
 
+        private void button1_Click(object sender, EventArgs e)
+        {
 
-     }
+        }
+    }
 }
 

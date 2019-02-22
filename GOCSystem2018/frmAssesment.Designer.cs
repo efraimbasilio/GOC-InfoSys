@@ -58,7 +58,24 @@
             this.lblGOCNo = new System.Windows.Forms.Label();
             this.btnAsses = new System.Windows.Forms.Button();
             this.cmbType = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dgvSchedule = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txtTuitionFee = new System.Windows.Forms.TextBox();
+            this.lblSY = new System.Windows.Forms.Label();
+            this.lblSem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -362,11 +379,150 @@
             this.cmbType.Size = new System.Drawing.Size(95, 23);
             this.cmbType.TabIndex = 32;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(726, 336);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(113, 55);
+            this.button2.TabIndex = 33;
+            this.button2.Text = "Asses Print";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(595, 397);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(168, 21);
+            this.textBox1.TabIndex = 34;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(595, 336);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 55);
+            this.button3.TabIndex = 35;
+            this.button3.Text = "Asses Print parameter";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dgvSchedule
+            // 
+            this.dgvSchedule.AllowUserToAddRows = false;
+            this.dgvSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9});
+            this.dgvSchedule.Location = new System.Drawing.Point(87, 488);
+            this.dgvSchedule.Name = "dgvSchedule";
+            this.dgvSchedule.ReadOnly = true;
+            this.dgvSchedule.Size = new System.Drawing.Size(717, 157);
+            this.dgvSchedule.TabIndex = 36;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Time Start";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Time End";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Monday";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Tuesday";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Wednesday";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Thursday";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Friday";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Section";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(814, 260);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(125, 27);
+            this.button4.TabIndex = 37;
+            this.button4.Text = "Asses Schedule";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txtTuitionFee
+            // 
+            this.txtTuitionFee.Location = new System.Drawing.Point(595, 448);
+            this.txtTuitionFee.Name = "txtTuitionFee";
+            this.txtTuitionFee.Size = new System.Drawing.Size(168, 21);
+            this.txtTuitionFee.TabIndex = 38;
+            // 
+            // lblSY
+            // 
+            this.lblSY.AutoSize = true;
+            this.lblSY.Location = new System.Drawing.Point(799, 152);
+            this.lblSY.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSY.Name = "lblSY";
+            this.lblSY.Size = new System.Drawing.Size(67, 15);
+            this.lblSY.TabIndex = 39;
+            this.lblSY.Text = "2018-2019";
+            // 
+            // lblSem
+            // 
+            this.lblSem.AutoSize = true;
+            this.lblSem.Location = new System.Drawing.Point(799, 213);
+            this.lblSem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSem.Name = "lblSem";
+            this.lblSem.Size = new System.Drawing.Size(52, 15);
+            this.lblSem.TabIndex = 40;
+            this.lblSem.Text = "1st Sem";
+            // 
             // frmAssesment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 628);
+            this.ClientSize = new System.Drawing.Size(1344, 725);
+            this.Controls.Add(this.lblSem);
+            this.Controls.Add(this.lblSY);
+            this.Controls.Add(this.txtTuitionFee);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.dgvSchedule);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.cmbType);
             this.Controls.Add(this.btnAsses);
             this.Controls.Add(this.lblGOCNo);
@@ -400,8 +556,10 @@
             this.Name = "frmAssesment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAssesment";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAssesment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -439,5 +597,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
         private System.Windows.Forms.Button btnAsses;
         private System.Windows.Forms.ComboBox cmbType;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridView dgvSchedule;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.TextBox txtTuitionFee;
+        private System.Windows.Forms.Label lblSY;
+        private System.Windows.Forms.Label lblSem;
     }
 }

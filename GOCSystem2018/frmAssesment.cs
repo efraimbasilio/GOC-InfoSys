@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+
 namespace GOCSystem2018
 {
     public partial class frmAssesment : Form
@@ -17,19 +20,28 @@ namespace GOCSystem2018
         string c = "CORE SUBJECTS";
         string allStrand = "All Strand";
 
+        //Reports
+        
+        rptAssesment cr = new rptAssesment();
+
         Assesment assesment = new Assesment();
         Registration registration = new Registration();
         Section section = new Section();
         Strand strand = new Strand();
         SchoolYear schoolYear = new SchoolYear();
         Subject subject = new Subject();
+        Schedule schedule = new Schedule();
+        Models.TuitionFee tuitionFee = new Models.TuitionFee();
+        MiscFee miscfee = new MiscFee();
 
+        List<Models.TuitionFee> tuitionFees = new List<Models.TuitionFee>();
         List<Section> sections = new List<Section>();
         List<Strand> strands = new List<Strand>();
         List<Assesment> assesments = new List<Assesment>();
         List<SchoolYear> schoolYears = new List<SchoolYear>();
-
         List<Subject> subjects = new List<Subject>();
+        List<Schedule> schedules = new List<Schedule>();
+        List<MiscFee> miscFees = new List<MiscFee>();
 
 
         public string StudName, LRN, Track, GradeLevel, RegNo;
@@ -135,26 +147,25 @@ namespace GOCSystem2018
             }
         }//End LoadRecords()//NO
 
-        public void LoadSubjects()
+        /// <summary>
+        /// Working but need improvement
+        /// </summary>
+        public void LoadSchedule()
         {
             //clear list
-            cmbSchoolYear.Items.Clear();
-            schoolYears.Clear();
+
+            schedules.Clear();
 
             //pass value to list
-            schoolYears = schoolYear.Load();
+            schedules = schedule.Load();
 
             //loop through load it to list view
-            foreach (var item in schoolYears)
+            foreach (var item in schedules)
             {
                 //Load to datagridView
-                //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
-                string School;
-                School = (item.YearStart + " - " + item.YearEnd);
-                cmbSchoolYear.Items.Add(School);
-            }
-        }//End LoadRecords()
-
+                dgvSchedule.Rows.Add(item.TimeStart, item.TimeEnd, item.Day1, item.Day2, item.Day3, item.Day4, item.Day5);
+            }//End LoadSchedule()
+        }
         public void RenderStudNo()
         {
             //clear list
@@ -179,17 +190,23 @@ namespace GOCSystem2018
 
         private void btnAsses_Click(object sender, EventArgs e)
         {            
-            //subject.SubjType = a;
-            //loop2();
-
             subject.SubjType = b;           
-            loop();
-            //string a = "SPECIALIZED SUBJECTS";
-            //string b = "APPLIED SUBJECTS";
-            //string c = "CORE SUBJECTS";
-            //string allStrand = "All Strand";
+            loop();     
         }
+        private void Schedule_loop()
+        {
+            schedules.Clear();
+            dgvSchedule.Rows.Clear();
+            schedules = schedule.GetScheduleById();
 
+            foreach (var item in schedules)
+            {
+                if (item.Section.Equals(cmbSection.Text))
+                {
+                    dgvSchedule.Rows.Add(item.TimeStart, item.TimeEnd, item.Day1, item.Day2, item.Day3, item.Day4, item.Day5, item.Section);
+                }
+            }
+        }
         public void loop()
         {   
             subject.SubjGradeLevel = GradeLevel;
@@ -266,6 +283,172 @@ namespace GOCSystem2018
            // loop();
         }
 
+        /// <summary>
+        /// Working - Ready to filer by Section // for Printing Code
+        /// </summary>
+        private void scheduleMain()
+        {
+            TextObject Start = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["Start"];
+            TextObject End = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["End"];
+            TextObject Mon = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["Mon"];
+            TextObject Tue = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["Tue"];
+            TextObject Wed = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["Wed"];
+            TextObject Thur = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["Thur"];
+            TextObject Fri = (TextObject)cr.ReportDefinition.Sections["Section1"].ReportObjects["Fri"];
+           
+            schedules.Clear();
+            dgvSchedule.Rows.Clear();
+            schedules = schedule.GetScheduleById();
+          
+            foreach (var item in schedules)
+            {
+                if (item.Section.Equals(cmbSection.Text))
+                {
+                    Start.Text = Start.Text + "\n\n" + item.TimeStart;
+                    End.Text = End.Text + "\n\n" + item.TimeEnd;
+                    Mon.Text = Mon.Text + "\n\n" + item.Day1;
+                    Tue.Text = Tue.Text + "\n\n" + item.Day2;
+                    Wed.Text = Wed.Text + "\n\n" + item.Day3;
+                    Thur.Text = Thur.Text + "\n\n" + item.Day4;
+                    Fri.Text = Fri.Text + "\n\n" + item.Day5;
+                }
+            }
+        }
+
+        private void tuitionFees2()
+        {
+            tuitionFees.Clear();
+            txtTuitionFee.Clear();
+            tuitionFee.TuitionFeeName = cmbStrand.Text;
+
+           
+            tuitionFees = tuitionFee.GetTuitionFeeById();
+
+            foreach (var item in tuitionFees)
+            {
+                if (item.TuitionFeeName.Equals(cmbStrand.Text))
+                {
+                    txtTuitionFee.Text = item.TuitionFeeAmount;
+                }               
+            }
+        }
+   
+        private void tuitionFeeReport()
+        {
+            TextObject tuitionFeeRpt = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtTuitionFee"];
+
+            tuitionFees.Clear();
+            txtTuitionFee.Clear();
+            tuitionFees = tuitionFee.GetTuitionFeeById();
+
+            foreach (var item in tuitionFees)
+            {
+                if (item.TuitionFeeName.Equals(cmbStrand.Text))
+                {
+                    tuitionFeeRpt.Text = tuitionFeeRpt.Text + item.TuitionFeeAmount;
+                }
+            }
+        }
+
+        private void miscFeeReport()
+        {
+            //TextObject miscFeeRpt = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtMiscFee"];
+            //TextObject miscDescRpt = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtDesc"];
+
+            //miscFees.Clear();
+            ////txtTuitionFee.Clear();
+            //miscFees = miscfee.GetMiscFeeById();
+
+            //foreach (var item in miscFees)
+            //{
+            //    miscDescRpt.Text = miscDescRpt.Text +"\n"+ item.MiscFeeName;
+            //    miscFeeRpt.Text = miscFeeRpt.Text +"\n\n"+ item.MiscFeeAmount;
+            //}
+        }
+        
+        private void StudInfoRpt()
+        {
+            TextObject SY = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtSchoolYear"];
+            TextObject GOCNo = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtGOCNo"];
+            TextObject Strand = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtStrand"];
+            TextObject Semester = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtSemester"];
+            TextObject StudName = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtStudName"];
+            TextObject GradeLevel = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtGradeLevel"];
+            TextObject Section = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtSection"];
+
+            SY.Text = lblSY.Text;
+            GOCNo.Text = lblGOCNo.Text;
+            Strand.Text = lblTrack.Text;
+            Semester.Text = lblSem.Text;
+            StudName.Text = lblName.Text;
+            GradeLevel.Text = lblGradeLevel.Text;
+            Section.Text = cmbSection.Text;            
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //scheduleMain();
+            //tuitionFeeReport();
+            //miscFeeReport();
+            //StudInfoRpt();
+
+            //rpt.crystalReportViewer1.ReportSource = cr;
+            //rpt.crystalReportViewer1.Refresh();
+            
+            
+            //lblGradeLevel.Text = GradeLevel;
+            //lblLRN.Text = LRN;
+            //lblTrack.Text = Track;
+            //lblRegNo.Text = RegNo;
+
+            frmReports rpt = new frmReports();
+
+            schedules.Clear();
+            dgvSchedule.Rows.Clear();
+            schedules = schedule.GetScheduleById();
+
+            foreach (var item in schedules)
+            {
+                rpt.Room = item.Section;
+                if (item.Section.Equals(cmbSection.Text))
+                {
+                    rpt.Start = rpt.Start + "\n\n" + item.TimeStart;
+                    rpt.End = rpt.End + "\n\n" + item.TimeEnd;
+                    rpt.Mon = rpt.Mon + "\n\n" + item.Day1;
+                    rpt.Tue = rpt.Tue + "\n\n" + item.Day2;
+                    rpt.Wed = rpt.Wed + "\n\n" + item.Day3;
+                    rpt.Thur = rpt.Thur + "\n\n" + item.Day4;
+                    rpt.Fri = rpt.Fri + "\n\n" + item.Day5;
+
+                }
+            }
+
+            rpt.studName = lblName.Text;
+            rpt.SY = lblSY.Text;
+            rpt.GOCNO = lblGOCNo.Text;
+            rpt.Strand = lblTrack.Text;
+            rpt.StudName = lblName.Text;
+            rpt.GradeLevel = lblGradeLevel.Text;
+            rpt.Section = cmbSection.Text;
+            rpt.Semester = lblSem.Text;
+            rpt.Tuition = Convert.ToDouble(txtTuitionFee.Text);
+
+            rpt.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Parameter.TheID = textBox1.Text;
+            frmReports frmReports = new frmReports();
+            frmReports.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Schedule_loop();
+            tuitionFees2();
+           
+        }
+
         public void Reset()
         {
             txtSearhAssesment.Text = string.Empty;
@@ -290,12 +473,8 @@ namespace GOCSystem2018
             frmStudSearch.LoadRecords();
 
             frmStudSearch.Show();
-            this.Dispose();
-            
-
+            this.Dispose();           
         }
-
-
         public void LoadRecordsWithRegno()
         {
             //clear list                      
@@ -316,3 +495,4 @@ namespace GOCSystem2018
         }
     }
 }
+

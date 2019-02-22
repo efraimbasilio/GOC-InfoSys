@@ -904,9 +904,12 @@
             // 
             this.LRNtxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LRNtxt.Location = new System.Drawing.Point(225, 374);
+            this.LRNtxt.MaxLength = 12;
             this.LRNtxt.Name = "LRNtxt";
             this.LRNtxt.Size = new System.Drawing.Size(299, 13);
             this.LRNtxt.TabIndex = 37;
+            this.LRNtxt.TextChanged += new System.EventHandler(this.LRNtxt_TextChanged);
+            this.LRNtxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LRNtxt_KeyPress);
             // 
             // guardiantxt2
             // 

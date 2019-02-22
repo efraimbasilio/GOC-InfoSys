@@ -172,3 +172,108 @@ C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\Crystal
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\stdole.dll
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\FlashControlV71.dll
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmReports.resources
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\frmReports.resx
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\frmReports.cs
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\frmReports.Designer.cs
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.exe
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\frmReports.resx
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\frmReports.cs
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\frmReports.Designer.cs
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\GOCSystem2018.exe
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\GOCSystem2018.pdb
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\FlashControlV71.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\stdole.dll
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmAssesment.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStudSearch.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmDiscountFee.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmLogin.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmMiscFees.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmOtherFees.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmRegistration.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmRoom.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSched.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSchoolYear.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSection.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSetting.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStrand.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSubject.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmTeacher.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmTuition.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmUser.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmVoucher.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.MainWindow.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmReports.resources
+C:\Users\Ef-PC\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.exe
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\frmReports.resx
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\frmReports.cs
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\frmReports.Designer.cs
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\GOCSystem2018.exe
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\GOCSystem2018.pdb
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\FlashControlV71.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\stdole.dll
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmAssesment.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStudSearch.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmDiscountFee.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmLogin.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmMiscFees.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmOtherFees.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmRegistration.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmRoom.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSched.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSchoolYear.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSection.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSetting.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStrand.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSubject.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmTeacher.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmTuition.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmUser.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmVoucher.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.MainWindow.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmReports.resources
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\rptAssesment.rpt
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\bin\Debug\rptAssesment.cs
+C:\Users\Instructor\Desktop\FEBRUARY GOC\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache

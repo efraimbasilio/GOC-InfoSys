@@ -269,5 +269,33 @@ namespace GOCSystem2018
 
 
         }
+
+        private void LRNtxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtLRN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLRN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void LRNtxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
