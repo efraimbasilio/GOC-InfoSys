@@ -74,6 +74,7 @@
             this.txtTuitionFee = new System.Windows.Forms.TextBox();
             this.lblSY = new System.Windows.Forms.Label();
             this.lblSem = new System.Windows.Forms.Label();
+            this.lblStrand = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             this.SuspendLayout();
@@ -510,11 +511,22 @@
             this.lblSem.TabIndex = 40;
             this.lblSem.Text = "1st Sem";
             // 
+            // lblStrand
+            // 
+            this.lblStrand.AutoSize = true;
+            this.lblStrand.Location = new System.Drawing.Point(799, 179);
+            this.lblStrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStrand.Name = "lblStrand";
+            this.lblStrand.Size = new System.Drawing.Size(41, 15);
+            this.lblStrand.TabIndex = 41;
+            this.lblStrand.Text = "STEM";
+            // 
             // frmAssesment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1344, 725);
+            this.Controls.Add(this.lblStrand);
             this.Controls.Add(this.lblSem);
             this.Controls.Add(this.lblSY);
             this.Controls.Add(this.txtTuitionFee);
@@ -613,5 +625,6 @@
         private System.Windows.Forms.TextBox txtTuitionFee;
         private System.Windows.Forms.Label lblSY;
         private System.Windows.Forms.Label lblSem;
+        private System.Windows.Forms.Label lblStrand;
     }
 }

@@ -62,7 +62,8 @@ namespace GOCSystem2018
                     frmAssesment.GradeLevel = item.StudGradeLevel;
                     frmAssesment.Track = item.StudAcadTrack;
                     frmAssesment.RegNo = item.StudRegistrationNo;
-
+                    frmAssesment.Strand = item.StudStrand;
+                    
                     frmAssesment.Reset();
                     frmAssesment.LoadSection();
                     frmAssesment.LoadSchoolYear();
@@ -78,6 +79,19 @@ namespace GOCSystem2018
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                textBox1.Location = new Point(80, 141);
+                pictureBox1.Location = new Point(12, 87);
+                label2.Visible = false;
+                label1.Visible = false;
+
+                dgvSearch.Visible = true;
+            }
         }
     }
 }

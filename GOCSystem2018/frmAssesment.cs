@@ -44,7 +44,7 @@ namespace GOCSystem2018
         List<MiscFee> miscFees = new List<MiscFee>();
 
 
-        public string StudName, LRN, Track, GradeLevel, RegNo;
+        public string StudName, LRN, Track, GradeLevel, RegNo, Strand;
 
 
         public frmAssesment()
@@ -59,6 +59,7 @@ namespace GOCSystem2018
             lblLRN.Text = LRN;
             lblTrack.Text = Track;
             lblRegNo.Text = RegNo;
+            lblStrand.Text = Strand;
         }
 
         private void Render()
@@ -386,20 +387,6 @@ namespace GOCSystem2018
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            //scheduleMain();
-            //tuitionFeeReport();
-            //miscFeeReport();
-            //StudInfoRpt();
-
-            //rpt.crystalReportViewer1.ReportSource = cr;
-            //rpt.crystalReportViewer1.Refresh();
-            
-            
-            //lblGradeLevel.Text = GradeLevel;
-            //lblLRN.Text = LRN;
-            //lblTrack.Text = Track;
-            //lblRegNo.Text = RegNo;
-
             frmReports rpt = new frmReports();
 
             schedules.Clear();
@@ -418,7 +405,6 @@ namespace GOCSystem2018
                     rpt.Wed = rpt.Wed + "\n\n" + item.Day3;
                     rpt.Thur = rpt.Thur + "\n\n" + item.Day4;
                     rpt.Fri = rpt.Fri + "\n\n" + item.Day5;
-
                 }
             }
 

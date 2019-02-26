@@ -61,7 +61,7 @@
             this.txtDSN.Name = "txtDSN";
             this.txtDSN.Size = new System.Drawing.Size(200, 23);
             this.txtDSN.TabIndex = 129;
-            this.txtDSN.Text = "AcquaintanceSTI2016";
+            this.txtDSN.Text = "GOCINFOSYS";
             // 
             // label4
             // 
@@ -93,7 +93,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(200, 23);
             this.txtName.TabIndex = 131;
-            this.txtName.Text = "db_mrmssti2017";
+            this.txtName.Text = "goc_info_sys";
             // 
             // txtHost
             // 
@@ -102,7 +102,7 @@
             this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(200, 23);
             this.txtHost.TabIndex = 130;
-            this.txtHost.Text = "rjain";
+            this.txtHost.Text = "CLABSERVER";
             // 
             // label3
             // 
@@ -146,7 +146,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(200, 23);
             this.txtPassword.TabIndex = 133;
-            this.txtPassword.Text = "12345";
+            this.txtPassword.Text = "0332018";
             // 
             // txtUser
             // 
@@ -155,7 +155,7 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(200, 23);
             this.txtUser.TabIndex = 132;
-            this.txtUser.Text = "myuser";
+            this.txtUser.Text = "emaru04";
             // 
             // label1
             // 

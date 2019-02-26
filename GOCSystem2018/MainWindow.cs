@@ -199,7 +199,7 @@ namespace GOCSystem2018
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-           frmDiscountFee frmDiscountFee = new frmDiscountFee();
+            frmDiscountFee frmDiscountFee = new frmDiscountFee();
             frmDiscountFee.ShowDialog();
         }//discount form
 
@@ -211,7 +211,7 @@ namespace GOCSystem2018
 
         private void pictureBox20_Click(object sender, EventArgs e)
         {
-           frmTeacher frmTeacher = new frmTeacher();
+            frmTeacher frmTeacher = new frmTeacher();
             frmTeacher.ShowDialog();
         }//teacher form
         private void pictureBox14_Click(object sender, EventArgs e)
@@ -254,213 +254,232 @@ namespace GOCSystem2018
 
 
 
-        private void LRNtxt_TextChanged(object sender, EventArgs e)
-        {
-            if (LRNtxt.Text.Equals(""))
-            {
-                label55.Text = "LRN";
-            }
-            else
-            {
-                label55.Text = "";
-            }
-        }
 
-        private void FNtxt_TextChanged(object sender, EventArgs e)
-        {
-            if (FNtxt.Text.Equals(""))
-            {
-                label3.Text = "FIRST NAME";
-            }
-            else
-            {
-                label3.Text = "";
-            }
-        }
-
-        private void MNtxt_TextChanged(object sender, EventArgs e)
-        {
-            if (MNtxt.Text.Equals(""))
-            {
-                label4.Text = "MIDDLE NAME";
-            }
-            else
-            {
-                label4.Text = "";
-            }
-        }
-        private void LNtxt_TextChanged_1(object sender, EventArgs e)
-        {
-            if (LNtxt.Text.Equals(""))
-            {
-                label5.Text = "SURNAME";
-            }
-            else
-            {
-                label5.Text = "";
-            }
-        }
-
-        private void BirthPlacetxt_TextChanged(object sender, EventArgs e)
-        {
-            if (BirthPlacetxt.Text.Equals(""))
-            {
-                label110.Text = "BIRTHPLACE";
-            }
-            else
-            {
-                label110.Text = "";
-            }
-        }
-
-        private void Addtxt_TextChanged(object sender, EventArgs e)
-        {
-            if (Addtxt.Text.Equals(""))
-            {
-                label64.Text = "ADDRESS";
-            }
-            else
-            {
-                label64.Text = "";
-            }
-        }
-
-        private void MotherTtxt_TextChanged(object sender, EventArgs e)
-        {
-            if (MotherTtxt.Text.Equals(""))
-            {
-                label113.Text = "MOTHERTONGUE";
-            }
-            else
-            {
-                label113.Text = "";
-            }
-        }
-
-        private void Ethnicitytxt_TextChanged(object sender, EventArgs e)
-        {
-            if (Ethnicitytxt.Text.Equals(""))
-            {
-                label112.Text = "ETHNICITY";
-            }
-            else
-            {
-                label112.Text = "";
-            }
-        }
-
-        private void Reltxt_TextChanged(object sender, EventArgs e)
-        {
-            if (Reltxt.Text.Equals(""))
-            {
-                label111.Text = "RELIGION";
-            }
-            else
-            {
-                label111.Text = "";
-            }
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            FNtxt.Focus();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-            MNtxt.Focus();
-        }
-
-        private void label110_Click(object sender, EventArgs e)
-        {
-            BirthPlacetxt.Focus();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            LNtxt.Focus();
-        }
-
-        private void label64_Click(object sender, EventArgs e)
-        {
-            Addtxt.Focus();
-        }
-
-        private void label113_Click(object sender, EventArgs e)
-        {
-            MotherTtxt.Focus();
-        }
-
-        private void label112_Click(object sender, EventArgs e)
-        {
-            Ethnicitytxt.Focus();
-        }
-
-        private void label111_Click(object sender, EventArgs e)
-        {
-            Reltxt.Focus();
-        }
-
-        private void label55_Click(object sender, EventArgs e)
-        {
-            LRNtxt.Focus();
-        }
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            //Me.ScrollControlIntoView(Label6)
-            Dashboardpanel.ScrollControlIntoView(label10);
+            this.chart2.Series["Population"].Points.AddXY("STEM", label134.Text);
+            this.chart2.Series["Population"].Points.AddXY("HUMSS", label133.Text);
+            this.chart2.Series["Population"].Points.AddXY("ABM", label132.Text);
+            this.chart2.Series["Population"].Points.AddXY("TVL", label131.Text);
+            this.chart2.Series["Population"].Points.AddXY("TOURISM", label130.Text);
+            this.chart2.Series["Population"].Points.AddXY("REAL ESTATE", label129.Text);
+            this.chart2.Series["Population"].Points.AddXY("ACCOUNTANCY", label128.Text);
+
+            chart3.ChartAreas["ChartArea1"].AxisX.MajorGrid.LineWidth = 0;
+            chart3.ChartAreas["ChartArea1"].AxisY.MajorGrid.LineWidth = 0;
+
+            this.chart3.Series["Performance"].Points.AddXY("STEM", 97);
+            this.chart3.Series["Performance"].Points.AddXY("HUMSS", 95);
+            this.chart3.Series["Performance"].Points.AddXY("ABM", 96);
+            this.chart3.Series["Performance"].Points.AddXY("TVL", 93);
+            this.chart3.Series["Performance"].Points.AddXY("TOURISM", 90);
+            this.chart3.Series["Performance"].Points.AddXY("REAL ESTATE", 0);
+            this.chart3.Series["Performance"].Points.AddXY("ACCOUNTANCY", 0);
         }
 
-        private void label73_Click(object sender, EventArgs e)
-        {
-            fathertxt.Focus();
-        }
 
-        private void label71_Click(object sender, EventArgs e)
-        {
-            mothertxt.Focus();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-            guardiantxt.Focus();
-        }
-
-        private void label80_Click(object sender, EventArgs e)
-        {
-            fcntxt.Focus();
-        }
-
-        private void label77_Click(object sender, EventArgs e)
-        {
-            mcntxt.Focus();
-        }
-
-        private void label75_Click(object sender, EventArgs e)
-        {
-            gcntxt.Focus();
-        }
-
-        private void label120_Click(object sender, EventArgs e)
-        {
-            fotxt.Focus();
-        }
-
-        private void label84_Click(object sender, EventArgs e)
-        {
-            motxt.Focus();
-        }
-
-        private void label82_Click(object sender, EventArgs e)
-        {
-            gotxt.Focus();
-        }
 
         private void SettingsBtn_Click(object sender, EventArgs e)
         {
             frmSetting setting = new frmSetting();
-            setting.ShowDialog();          
+            setting.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox24_Click(object sender, EventArgs e)
+        {
+            frmRegistration frm = new frmRegistration();
+            frm.Show();
+        }
+
+        private void pictureBox25_Click(object sender, EventArgs e)
+        {
+            
+        }
+        //dynamic label*************************************************************************************************************************
+        //**************************************************************************************************************************************
+        #region dynamic label
+        Label addLabel(int i, int start, int end, String studname)
+        {
+            Label l = new Label();
+
+            l.Name = "li" + i.ToString();
+            l.Text = studname;
+            l.ForeColor = Color.Gray;
+            l.BackColor = Color.Transparent;
+            l.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
+            l.Location = new Point(start, end);
+
+            return l;
+        }
+        Label addLabel2(int i, int start, int end, int start2, int end2)
+        {
+            Label lsn = new Label();
+            lsn.Name = "lsn" + i.ToString();
+            lsn.Text = "label" + i.ToString();
+            lsn.ForeColor = Color.Gray;
+            lsn.BackColor = Color.Transparent;
+            lsn.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
+            lsn.Location = new Point(start + (3 * 150), end);
+            return lsn;
+        }
+        Label addLabel3(int i, int start, int end, int start2, int end2)
+        {
+            Label lsection = new Label();
+            lsection.Name = "ls" + i.ToString();
+            lsection.Text = "label" + i.ToString();
+            lsection.ForeColor = Color.Gray;
+            lsection.BackColor = Color.Transparent;
+            lsection.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
+            lsection.Location = new Point(start + (4 * 150), end);
+            return lsection;
+        }
+        Label addLabel4(int i, int start, int end, int start2, int end2)
+        {
+            Label lgrade = new Label();
+            lgrade.Name = "lg" + i.ToString();
+            lgrade.Text = "label" + i.ToString();
+            lgrade.ForeColor = Color.Gray;
+            lgrade.BackColor = Color.Transparent;
+            lgrade.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
+            lgrade.Location = new Point(start + (2 * 150), end);
+            return lgrade;
+        }
+
+        Label addLabel5(int i, int start, int end, int start2, int end2)
+        {
+            Label lstrand = new Label();
+            lstrand.Name = "lst" + i.ToString();
+            lstrand.Text = "label" + i.ToString();
+            lstrand.ForeColor = Color.Gray;
+            lstrand.BackColor = Color.Transparent;
+            lstrand.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
+            lstrand.Location = new Point(start + 150, end);
+            return lstrand;
+        }
+
+        Label addLabel6(int i, int start, int end, int start2, int end2)
+        {
+            Label lline = new Label();
+            lline.Name = "ll" + i.ToString();
+            lline.Text = "______________________________________________________________________________________________________________________________";
+            lline.ForeColor = Color.Gray;
+            lline.Width = 750;
+            lline.BackColor = Color.Transparent;
+            lline.Font = new Font("Microsoft Sans Serif", 9, FontStyle.Regular);
+            lline.Location = new Point(start2, end2);
+            return lline;
+        }
+
+        #endregion
+        //**************************************************************************************************************************************
+        //**************************************************************************************************************************************
+        private void pictureBox25_Click_1(object sender, EventArgs e)
+        {
+            StudentlistPanel.Visible = true;
+            int startposition = 170;
+            int endposition = 142;
+
+            int startposition2 = 110;
+            int endposition2 = 155;
+
+            for (int ldc = 0; ldc < listBox1.Items.Count; ldc++)
+            {
+                Label l = addLabel(ldc, startposition, endposition, listBox1.Items[ldc].ToString());
+                Label l2 = addLabel2(ldc, startposition, endposition, startposition2, endposition2);
+                Label l3 = addLabel3(ldc, startposition, endposition, startposition2, endposition2);
+                Label l4 = addLabel4(ldc, startposition, endposition, startposition2, endposition2);
+                Label l5 = addLabel5(ldc, startposition, endposition, startposition2, endposition2);
+                Label l6 = addLabel6(ldc, startposition, endposition, startposition2, endposition2);
+                panel8.Controls.Add(l);
+                panel8.Controls.Add(l2);
+                panel8.Controls.Add(l3);
+                panel8.Controls.Add(l4);
+                panel8.Controls.Add(l5);
+                panel8.Controls.Add(l6);
+                endposition += 40;
+                endposition2 += 40;
+            }
+        }
+
+        //search in the student list************************************************************************************************************
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            listBox2.Items.Clear();
+            
+            for(int sfilter = 0; sfilter < listBox1.Items.Count; sfilter++)
+            {
+                if (listBox1.Items[sfilter].ToString().Contains(textBox1.Text))
+                {
+                    listBox2.Items.Add(listBox1.Items[sfilter]);
+                }
+            }
+        }
+        //*************************t************************************************************************************************************
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            for(int a = 0; a < listBox1.Items.Count; a++)
+            {
+                
+                Label li = this.Controls.Find("li" + a.ToString(), true).FirstOrDefault() as Label;
+               
+                Label lsn = this.Controls.Find("lsn" + a.ToString(), true).FirstOrDefault() as Label;
+               
+                Label ls = this.Controls.Find("ls" + a.ToString(), true).FirstOrDefault() as Label;
+                
+                Label lg = this.Controls.Find("lg" + a.ToString(), true).FirstOrDefault() as Label;
+            
+                Label ll = this.Controls.Find("ll" + a.ToString(), true).FirstOrDefault() as Label;
+
+                Label lst = this.Controls.Find("lst" + a.ToString(), true).FirstOrDefault() as Label;
+                panel8.Controls.Remove(li);
+                li.Dispose();
+                panel8.Controls.Remove(lsn);
+                lsn.Dispose();
+                panel8.Controls.Remove(ll);
+                ll.Dispose();
+                panel8.Controls.Remove(lg);
+                lg.Dispose();
+                panel8.Controls.Remove(lst);
+                lst.Dispose();
+                panel8.Controls.Remove(ls);
+                ls.Dispose();
+
+            }
+            
+        }
+
+        private void searchtxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchtxt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                StudentlistPanel.Visible = true;
+                listBox2.Items.Clear();
+
+                for (int sfilter = 0; sfilter < listBox1.Items.Count; sfilter++)
+                {
+                    if (listBox1.Items[sfilter].ToString().Contains(searchtxt.Text))
+                    {
+                        listBox2.Items.Add(listBox1.Items[sfilter]);
+                    }
+                }
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            frmSetting setting = new frmSetting();
+            setting.Show();
         }
     }
     }
