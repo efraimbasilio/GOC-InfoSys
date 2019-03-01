@@ -153,7 +153,6 @@ C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSyst
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.MainWindow.resources
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
-C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStudSearch.resources
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSetting.resources
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
@@ -429,3 +428,5 @@ C:\Users\Instructor\Desktop\GOC-InfoSys--2020\GOCSystem2018\obj\Debug\GOCSystem2
 C:\Users\Instructor\Desktop\GOC-InfoSys--2020\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
 C:\Users\Instructor\Desktop\GOC-InfoSys--2020\GOCSystem2018\obj\Debug\GOCSystem2018.frmReports.resources
 C:\Users\Instructor\Desktop\GOC-InfoSys--2020\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\rptAssesment.rpt
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\rptAssesment.cs

@@ -200,7 +200,7 @@ namespace GOCSystem2018
                 frmAssesment.StudName = txtLastName.Text + " , " + txtFName.Text + " " + txtMName.Text;
                 frmAssesment.LRN = LRNtxt.Text;
                 frmAssesment.Strand = cmbCourseStrand.Text;
-                frmAssesment.tuitionFees2();
+                //frmAssesment.tuitionFees2();
 
                 frmAssesment.LoadSection();
                 frmAssesment.LoadSchoolYear();
@@ -392,7 +392,7 @@ namespace GOCSystem2018
             frmAssesment.Reset();
             frmAssesment.LoadSection();
             frmAssesment.LoadSchoolYear();
-            frmAssesment.tuitionFees2();
+            //frmAssesment.tuitionFees2();
             //frmAssesment.LoadStrand();
             // frmAssesment.RenderStudNo();
 

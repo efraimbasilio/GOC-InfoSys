@@ -319,32 +319,32 @@ namespace GOCSystem2018
             }
         }
 
-        public void tuitionFees2()
-        {
-            tuitionFees.Clear();
-            txtTuitionFee.Clear();
+        //public void tuitionFees2()
+        //{
+        //    tuitionFees.Clear();
+        //    txtTuitionFee.Clear();
 
-            tuitionFee.TuitionFeeName = lblStrand.Text;
+        //    tuitionFee.TuitionFeeName = lblStrand.Text;
            
-            tuitionFees = tuitionFee.GetTuitionFeeById();
+        //    tuitionFees = tuitionFee.GetTuitionFeeById();
 
-            foreach (var item in tuitionFees)
-            {
-                //MessageBox.Show(lblStrand.Text);
+        //    foreach (var item in tuitionFees)
+        //    {
+        //        //MessageBox.Show(lblStrand.Text);
               
-                if (item.TuitionFeeName.Equals(lblStrand.Text))
-                {
-                    txtTuitionFee.Text = item.TuitionFeeAmount;
-                    rpt.Tuition = Convert.ToDouble(txtTuitionFee.Text);
-                }
-                else
-                {
-                    txtTuitionFee.Text = item.TuitionFeeAmount;
-                    rpt.Tuition = Convert.ToDouble(txtTuitionFee.Text);
-                }               
-            }
+        //        if (item.TuitionFeeName.Equals(lblStrand.Text))
+        //        {
+        //            txtTuitionFee.Text = item.TuitionFeeAmount;
+        //            rpt.Tuition = Convert.ToDouble(txtTuitionFee.Text);
+        //        }
+        //        else
+        //        {
+        //            txtTuitionFee.Text = item.TuitionFeeAmount;
+        //            rpt.Tuition = Convert.ToDouble(txtTuitionFee.Text);
+        //        }               
+        //    }
             
-        }
+        //}
    
         private void tuitionFeeReport()
         {
@@ -386,7 +386,7 @@ namespace GOCSystem2018
         private void button2_Click(object sender, EventArgs e)
         {
             Schedule_loop();
-            tuitionFees2();
+            //tuitionFees2();
 
             schedules.Clear();
             dgvSchedule.Rows.Clear();
@@ -424,19 +424,19 @@ namespace GOCSystem2018
             //GradeLevel.Text = lblGradeLevel.Text;
             //Section.Text = cmbSection.Text;
 
-            
+
 
             rpt.studName = lblName.Text;
             rpt.SY = lblSY.Text;
             rpt.GOCNO = lblGOCNo.Text;
-
+            
             rpt.Strand = lblTrack.Text;
             rpt.StudName = lblName.Text;
             rpt.GradeLevel = lblGradeLevel.Text;
             rpt.Section = cmbSection.Text;
             rpt.Semester = lblSem.Text;
             rpt.Strand2 = lblStrand.Text;
-
+            rpt.Tuition = Convert.ToDouble(lblTuition.Text);
             rpt.Show();
         }
 
@@ -455,7 +455,7 @@ namespace GOCSystem2018
         private void button4_Click(object sender, EventArgs e)
         {
             Schedule_loop();
-            tuitionFees2();           
+            //tuitionFees2();           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

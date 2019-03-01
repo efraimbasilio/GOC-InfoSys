@@ -69,7 +69,7 @@ namespace GOCSystem2018
                     frmAssesment.LoadSchoolYear();
                    // frmAssesment.LoadStrand();
                     frmAssesment.RenderStudNo();
-                    frmAssesment.tuitionFees2();
+                    ///frmAssesment.tuitionFees2();
                 }
                 //show assesment                             
                 frmAssesment.Show();

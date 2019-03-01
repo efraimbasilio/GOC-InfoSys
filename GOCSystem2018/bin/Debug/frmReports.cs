@@ -87,7 +87,6 @@ namespace GOCSystem2018
             cryRpt.SetParameterValue("Tuition", Tuition);
             cryRpt.SetParameterValue("Strand2", Strand2);
 
-
             crystalReportViewer1.ReportSource = cryRpt;
             crystalReportViewer1.Refresh();
         }
