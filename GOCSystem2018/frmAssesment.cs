@@ -45,8 +45,6 @@ namespace GOCSystem2018
         List<MiscFee> miscFees = new List<MiscFee>();
         List<OtherFee> otherFees = new List<OtherFee>();
 
-
-
         public string StudName, LRN, Track, GradeLevel, RegNo, Strand,Voucher;
 
 
@@ -71,10 +69,8 @@ namespace GOCSystem2018
         }
         private void TotalTuition()
         {
-
             double total = Convert.ToDouble(lblTuition.Text) + Convert.ToDouble(lblOther.Text) + Convert.ToDouble(lblTotalMiscFee.Text);
             lbl.Text = total.ToString("n");
-
         }
 
         public void LoadAssesMiscFees()
@@ -154,10 +150,7 @@ namespace GOCSystem2018
                 lblDP.Text = DP.ToString("n");
             }
         }
-
-           
                
-                
         private void Render()
         {
             lblLRN.Text = assesment.StudLRN;
@@ -205,8 +198,6 @@ namespace GOCSystem2018
             }
 
         }//End LoadRecords()
-
-        
 
         public void LoadRecords2()
         {
@@ -266,17 +257,11 @@ namespace GOCSystem2018
         {
 
         }
-
-
         private void btnAsses_Click(object sender, EventArgs e)
         {            
             subject.SubjType = b;           
             //loop();     
         }
-        
-       
-       
-
         private void cmbStrand_SelectedIndexChanged(object sender, EventArgs e)
         {
            
@@ -319,33 +304,6 @@ namespace GOCSystem2018
             }
         }
 
-        //public void tuitionFees2()
-        //{
-        //    tuitionFees.Clear();
-        //    txtTuitionFee.Clear();
-
-        //    tuitionFee.TuitionFeeName = lblStrand.Text;
-           
-        //    tuitionFees = tuitionFee.GetTuitionFeeById();
-
-        //    foreach (var item in tuitionFees)
-        //    {
-        //        //MessageBox.Show(lblStrand.Text);
-              
-        //        if (item.TuitionFeeName.Equals(lblStrand.Text))
-        //        {
-        //            txtTuitionFee.Text = item.TuitionFeeAmount;
-        //            rpt.Tuition = Convert.ToDouble(txtTuitionFee.Text);
-        //        }
-        //        else
-        //        {
-        //            txtTuitionFee.Text = item.TuitionFeeAmount;
-        //            rpt.Tuition = Convert.ToDouble(txtTuitionFee.Text);
-        //        }               
-        //    }
-            
-        //}
-   
         private void tuitionFeeReport()
         {
             TextObject tuitionFeeRpt = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtTuitionFee"];
@@ -363,8 +321,6 @@ namespace GOCSystem2018
             }
         }
 
-        
-        
         private void StudInfoRpt()
         {
             TextObject SY = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtSchoolYear"];
@@ -442,7 +398,6 @@ namespace GOCSystem2018
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
             frmReports frmReports = new frmReports();
             frmReports.Show();
         }
@@ -480,7 +435,6 @@ namespace GOCSystem2018
         }
         private void Schedule_loop()
         {
-
             schedules.Clear();
             dgvSchedule.Rows.Clear();
             schedules = schedule.GetScheduleById();
@@ -492,9 +446,6 @@ namespace GOCSystem2018
                     dgvSchedule.Rows.Add(item.TimeStart, item.TimeEnd, item.Day1, item.Day2, item.Day3, item.Day4, item.Day5, item.Section);
                 }
             }  
-
-
-
         }
 
         private void label21_Click(object sender, EventArgs e)
@@ -510,6 +461,47 @@ namespace GOCSystem2018
         private void label10_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void cmbMOP_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //Full Payment
+            //Partial Payment
+            if (cmbMOP.Text == "Partial Payment")
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        public void LoadPerMonth()
+        {
+            //clear list                      
+            otherFees.Clear();
+            dgvOtherFee.Rows.Clear();
+            //pass value to list
+            otherFees = otherFee.Load();
+
+            //loop through load it to list view
+            foreach (var item in otherFees)
+            {
+                // int a = Convert.ToInt16(item.MiscFeeAmount);
+                dgvOtherFee.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
+                // dgvSubjectLoad.Rows.Add(item.MiscFeeName, a);
+                //Convert.ToInt32(dgvSubjectLoad.Rows[i].Cells[1].Value);
+            }
+
+            double sum = 0;
+            for (int i = 0; i < dgvOtherFee.Rows.Count; i++)
+            {
+                sum += Convert.ToDouble(dgvOtherFee.Rows[i].Cells[1].Value);
+            }
+
+            lblOther.Text = sum.ToString("n");
+
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -572,7 +564,6 @@ namespace GOCSystem2018
             }
         }
 
-        
     }
 }
 

@@ -76,6 +76,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalConnection1.cs" />
+    <Compile Include="frmBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBilling.Designer.cs">
+      <DependentUpon>frmBilling.cs</DependentUpon>
+    </Compile>
     <Compile Include="Parameter.cs" />
     <Compile Include="rptAssesment.cs">
       <AutoGen>True</AutoGen>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAssesmentSearch.resx">
       <DependentUpon>frmAssesmentSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBilling.resx">
+      <DependentUpon>frmBilling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDiscountFee.resx">
       <DependentUpon>frmDiscountFee.cs</DependentUpon>
