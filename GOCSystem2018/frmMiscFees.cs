@@ -125,7 +125,7 @@ namespace GOCSystem2018
                 {
                     //pass value to textboxes
                     txtEditMiscName.Text = item.MiscFeeName;
-                    txtEditMiscAmount.Text = item.MiscFeeAmount;
+                    txtEditMiscAmount.Text = item.MiscFeeAmount.ToString(); 
                     //txtEditMiscComment.Text = item.TuitionFeeDescription;
                 }
             }
@@ -142,7 +142,7 @@ namespace GOCSystem2018
             {
                 //pass values
                 miscfee.MiscFeeName = txtMiscName.Text;
-                miscfee.MiscFeeAmount = txtMiscAmount.Text;
+                miscfee.MiscFeeAmount = Convert.ToDouble(txtMiscAmount.Text);
 
                 // call save method
                 miscfee.Save();
@@ -165,7 +165,7 @@ namespace GOCSystem2018
             else //Save Method
             {
                 miscfee.MiscFeeName = txtEditMiscName.Text;
-                miscfee.MiscFeeAmount = txtEditMiscAmount.Text;
+                miscfee.MiscFeeAmount = Convert.ToDouble(txtMiscAmount.Text);
 
                 miscfee.Id = Int32.Parse(dgvMiscFee.CurrentRow.Cells[0].FormattedValue.ToString());
                 miscfee.Update();
@@ -222,7 +222,7 @@ namespace GOCSystem2018
                 {
                     //pass value to textboxes
                     txtEditMiscName.Text = item.MiscFeeName;
-                    txtEditMiscAmount.Text = item.MiscFeeAmount;
+                    txtEditMiscAmount.Text = item.MiscFeeAmount.ToString();
                     //txtEditMiscComment.Text = item.TuitionFeeDescription;
                 }
 

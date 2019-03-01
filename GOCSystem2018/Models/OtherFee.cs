@@ -15,7 +15,7 @@ namespace GOCSystem2018
         * ***************************/
         protected int id;
         protected string otherFeeName;
-        protected string otherFeeAmount;
+        protected double otherFeeAmount;
 
         //protected int flag;
 
@@ -37,7 +37,7 @@ namespace GOCSystem2018
             set { otherFeeName = value; }
         }
 
-        public string OtherFeeAmount
+        public double OtherFeeAmount
         {
             get { return otherFeeAmount; }
             set { otherFeeAmount = value; }
@@ -111,7 +111,8 @@ namespace GOCSystem2018
                         //prepare properties
                         otherFee.id = Convert.ToInt32(reader["id"].ToString());
                         otherFee.otherFeeName = reader["other_fee_name"].ToString();
-                        otherFee.otherFeeAmount = reader["other_fee_amount"].ToString();
+                        otherFee.otherFeeAmount = Convert.ToDouble(reader["other_fee_amount"]);
+
 
                         otherFees.Add(otherFee);
 
@@ -188,7 +189,7 @@ namespace GOCSystem2018
                         //prepare properties
                         otherFee.id = Convert.ToInt32(reader["id"].ToString());
                         otherFee.otherFeeName = reader["other_fee_name"].ToString();
-                        otherFee.otherFeeAmount = reader["other_fee_amount"].ToString();
+                        otherFee.otherFeeAmount = Convert.ToDouble(reader["other_fee_amount"]);
 
                         otherFees.Add(otherFee);
 

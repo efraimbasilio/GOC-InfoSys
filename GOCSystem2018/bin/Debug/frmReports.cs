@@ -37,6 +37,7 @@ namespace GOCSystem2018
         public string Fri { get; set; }
         public double Tuition { get; set; }
         public string Room { get; set; }
+        public string Strand2 { get; set; }
 
 
         Schedule schedule = new Schedule();
@@ -53,7 +54,7 @@ namespace GOCSystem2018
 
         private void frmReports_Load(object sender, EventArgs e)
         {
-          
+            button1.PerformClick();
         }
         public string studname;
         private void button1_Click(object sender, EventArgs e)
@@ -79,12 +80,12 @@ namespace GOCSystem2018
             cryRpt.SetParameterValue("Mon", Mon);
             cryRpt.SetParameterValue("Tue", Tue);
             cryRpt.SetParameterValue("Wed", Wed);
-            cryRpt.SetParameterValue("Thur",Thur);
+            cryRpt.SetParameterValue("Thur", Thur);
             cryRpt.SetParameterValue("Fri", Fri);
             cryRpt.SetParameterValue("Room", Room);
 
             cryRpt.SetParameterValue("Tuition", Tuition);
-
+            cryRpt.SetParameterValue("Strand2", Strand2);
 
 
             crystalReportViewer1.ReportSource = cryRpt;

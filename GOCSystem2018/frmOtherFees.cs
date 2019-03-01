@@ -157,7 +157,7 @@ namespace GOCSystem2018
                 {
                     //pass value to textboxes
                     txtEditName.Text = item.OtherFeeName;
-                    txtEditFeeAmount.Text = item.OtherFeeAmount;
+                    txtEditFeeAmount.Text = item.OtherFeeAmount.ToString();
                     //txtEditMiscComment.Text = item.TuitionFeeDescription;
                 }
 
@@ -177,7 +177,7 @@ namespace GOCSystem2018
             {
                 //pass values
                 otherFee.OtherFeeName = txtFeeName.Text;
-                otherFee.OtherFeeAmount = txtFeeAmount.Text;
+                otherFee.OtherFeeAmount = Convert.ToDouble(txtFeeAmount.Text); 
 
                 // call save method
                 otherFee.Save();
@@ -200,7 +200,7 @@ namespace GOCSystem2018
             else //Save Method
             {
                 otherFee.OtherFeeName = txtEditName.Text;
-                otherFee.OtherFeeAmount = txtEditFeeAmount.Text;
+                otherFee.OtherFeeAmount = Convert.ToDouble(txtFeeAmount.Text);
 
 
                 otherFee.Id = Int32.Parse(dgvOtherFee.CurrentRow.Cells[0].FormattedValue.ToString());
@@ -258,7 +258,7 @@ namespace GOCSystem2018
                 {
                     //pass value to textboxes
                     txtEditName.Text = item.OtherFeeName;
-                    txtEditFeeAmount.Text = item.OtherFeeAmount;
+                    txtEditFeeAmount.Text = item.OtherFeeAmount.ToString();
                     //txtEditMiscComment.Text = item.TuitionFeeDescription;
                 }
 

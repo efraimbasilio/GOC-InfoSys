@@ -67,8 +67,9 @@ namespace GOCSystem2018
                     frmAssesment.Reset();
                     frmAssesment.LoadSection();
                     frmAssesment.LoadSchoolYear();
-                    frmAssesment.LoadStrand();
+                   // frmAssesment.LoadStrand();
                     frmAssesment.RenderStudNo();
+                    frmAssesment.tuitionFees2();
                 }
                 //show assesment                             
                 frmAssesment.Show();
@@ -92,6 +93,16 @@ namespace GOCSystem2018
 
                 dgvSearch.Visible = true;
             }
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

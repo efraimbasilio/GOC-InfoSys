@@ -48,6 +48,8 @@
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,12 +72,12 @@
             this.FirstName,
             this.GradeLevel,
             this.Strand});
-            this.dgvSearch.Location = new System.Drawing.Point(27, 199);
+            this.dgvSearch.Location = new System.Drawing.Point(257, 187);
             this.dgvSearch.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(871, 455);
+            this.dgvSearch.Size = new System.Drawing.Size(846, 455);
             this.dgvSearch.TabIndex = 0;
             this.dgvSearch.Visible = false;
             this.dgvSearch.DoubleClick += new System.EventHandler(this.dgvSearch_DoubleClick);
@@ -162,6 +164,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.label17);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -169,7 +173,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1264, 54);
+            this.panel2.Size = new System.Drawing.Size(1280, 54);
             this.panel2.TabIndex = 1019;
             // 
             // label14
@@ -235,12 +239,36 @@
             this.label2.TabIndex = 1021;
             this.label2.Text = "Assesment";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(1220, 16);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(18, 17);
+            this.label17.TabIndex = 1024;
+            this.label17.Text = "__";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1251, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 17);
+            this.label3.TabIndex = 1023;
+            this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // frmStudSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
@@ -287,5 +315,7 @@
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label3;
     }
 }

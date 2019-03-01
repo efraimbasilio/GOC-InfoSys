@@ -16,7 +16,7 @@ namespace GOCSystem2018
          * ***************************/
         protected int id;
         protected string miscFeeName;
-        protected string miscFeeAmount;
+        protected double miscFeeAmount;
 
         //protected int flag;
 
@@ -38,7 +38,7 @@ namespace GOCSystem2018
             set { miscFeeName = value; }
         }
 
-        public string MiscFeeAmount
+        public double MiscFeeAmount
         {
             get { return miscFeeAmount; }
             set { miscFeeAmount = value; }
@@ -112,8 +112,8 @@ namespace GOCSystem2018
                         //prepare properties
                         miscFee.id = Convert.ToInt32(reader["id"].ToString());
                         miscFee.miscFeeName = reader["misc_fee_name"].ToString();
-                        miscFee.miscFeeAmount = reader["misc_amount"].ToString();
-
+                        //miscFee.miscFeeAmount = reader["misc_amount"].ToString();
+                        miscFee.miscFeeAmount = Convert.ToDouble(reader["misc_amount"]);
                         miscFees.Add(miscFee);
 
                     }
@@ -156,8 +156,9 @@ namespace GOCSystem2018
                         //prepare properties
                         //miscFee.id = Convert.ToInt32(reader["id"].ToString());
                         miscFee.miscFeeName = reader["misc_fee_name"].ToString();
-                        miscFee.miscFeeAmount = reader["misc_amount"].ToString();
-                        
+                        //miscFee.miscFeeAmount = reader["misc_amount"].ToString();
+                       miscFee.miscFeeAmount = Convert.ToDouble(reader["misc_amount"]);
+
 
                         miscFees.Add(miscFee);
                     }
@@ -233,8 +234,8 @@ namespace GOCSystem2018
                         //prepare properties
                         miscFee.id = Convert.ToInt32(reader["id"].ToString());
                         miscFee.miscFeeName = reader["misc_fee_name"].ToString();
-                        miscFee.miscFeeAmount = reader["misc_amount"].ToString();
-
+                        // miscFee.miscFeeAmount = reader["misc_amount"].ToString();
+                        miscFee.miscFeeAmount = Convert.ToDouble(reader["misc_amount"]);
                         miscFees.Add(miscFee);
 
                     }

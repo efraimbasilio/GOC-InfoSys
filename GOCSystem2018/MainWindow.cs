@@ -17,12 +17,14 @@ namespace GOCSystem2018
             InitializeComponent();
         }
 
+        SchoolYear schoolYear = new SchoolYear();
+        List<SchoolYear> schoolYears = new List<SchoolYear>();
 
         #region sidebar code
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = true;
-            EnrollmentPanel.Visible = false;
+            studprofpanel.Visible = false;
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = false;
             panel5.Height = pictureBox23.Height;
@@ -32,7 +34,7 @@ namespace GOCSystem2018
         private void EnrollmentBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = false;
-            EnrollmentPanel.Visible = true;
+            studprofpanel.Visible = true;
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = false;
             panel5.Height = pictureBox24.Height;
@@ -42,7 +44,7 @@ namespace GOCSystem2018
         private void StudlistBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = false;
-            EnrollmentPanel.Visible = false;
+            studprofpanel.Visible = false;
             StudentlistPanel.Visible = true;
             MaintenancePanel.Visible = false;
             panel5.Height = pictureBox25.Height;
@@ -52,7 +54,7 @@ namespace GOCSystem2018
         private void MaintenanceBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = false;
-            EnrollmentPanel.Visible = false;
+            studprofpanel.Visible = false;
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = true;
             panel5.Height = pictureBox29.Height;
@@ -253,11 +255,36 @@ namespace GOCSystem2018
 
 
 
+        public void LoadSchoolYear()
+        {
+            //clear list
+
+            //dgvDiscount.Rows.Clear();
+           
+            schoolYears.Clear();
+
+            //pass value to list
+            schoolYears = schoolYear.Load();
+
+            //loop through load it to list view
+            foreach (var item in schoolYears)
+            {
+                //Load to datagridView
+                //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
+                string School;
+                School = (item.YearStart + " - " + item.YearEnd);
+                lblSY.Text = School;
+                //cmbSchoolYear.Items.Add(School);
+            }
+        }//End LoadRecords()
 
 
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
+            LoadSchoolYear();
+
+
             this.chart2.Series["Population"].Points.AddXY("STEM", label134.Text);
             this.chart2.Series["Population"].Points.AddXY("HUMSS", label133.Text);
             this.chart2.Series["Population"].Points.AddXY("ABM", label132.Text);
@@ -295,6 +322,11 @@ namespace GOCSystem2018
         {
             frmRegistration frm = new frmRegistration();
             frm.Show();
+            StudentlistPanel.Visible = false;
+            MaintenancePanel.Visible = false;
+            studprofpanel.Visible = false;
+            Dashboardpanel.Visible = true;
+
         }
 
         private void pictureBox25_Click(object sender, EventArgs e)
@@ -382,6 +414,10 @@ namespace GOCSystem2018
         private void pictureBox25_Click_1(object sender, EventArgs e)
         {
             StudentlistPanel.Visible = true;
+            Dashboardpanel.Visible = false;
+            MaintenancePanel.Visible = false;
+            studprofpanel.Visible = false;
+
             int startposition = 170;
             int endposition = 142;
 
@@ -477,6 +513,54 @@ namespace GOCSystem2018
         }
 
         private void label13_Click(object sender, EventArgs e)
+        {
+            frmSetting setting = new frmSetting();
+            setting.Show();
+        }
+
+        private void pictureBox28_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox23_Click(object sender, EventArgs e)
+        {
+            StudentlistPanel.Visible = false;
+            MaintenancePanel.Visible = false;
+            studprofpanel.Visible = false;
+            Dashboardpanel.Visible = true;
+           
+        }
+
+        private void pictureBox27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox26_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox29_Click(object sender, EventArgs e)
+        {
+            MaintenancePanel.Visible = true;
+            studprofpanel.Visible = false;
+            StudentlistPanel.Visible = false;
+            Dashboardpanel.Visible = false;
+        }
+
+        private void pictureBox30_Click(object sender, EventArgs e)
         {
             frmSetting setting = new frmSetting();
             setting.Show();
