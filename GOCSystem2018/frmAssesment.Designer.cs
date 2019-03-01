@@ -38,7 +38,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbSection = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lblRegNo = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -105,11 +104,9 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label136 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label135 = new System.Windows.Forms.Label();
@@ -204,16 +201,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Strand:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 249);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 15);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "School Year:";
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -287,7 +274,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(492, 25);
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(682, 22);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 15);
@@ -421,7 +409,8 @@
             // lblSY
             // 
             this.lblSY.AutoSize = true;
-            this.lblSY.Location = new System.Drawing.Point(120, 249);
+            this.lblSY.BackColor = System.Drawing.Color.White;
+            this.lblSY.Location = new System.Drawing.Point(469, 22);
             this.lblSY.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSY.Name = "lblSY";
             this.lblSY.Size = new System.Drawing.Size(182, 15);
@@ -431,7 +420,8 @@
             // lblSem
             // 
             this.lblSem.AutoSize = true;
-            this.lblSem.Location = new System.Drawing.Point(563, 25);
+            this.lblSem.BackColor = System.Drawing.Color.White;
+            this.lblSem.Location = new System.Drawing.Point(753, 22);
             this.lblSem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSem.Name = "lblSem";
             this.lblSem.Size = new System.Drawing.Size(79, 15);
@@ -474,10 +464,8 @@
             this.panel1.Controls.Add(this.lblStrand);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblLRN);
-            this.panel1.Controls.Add(this.lblSem);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.lblName);
-            this.panel1.Controls.Add(this.lblSY);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label17);
@@ -493,8 +481,6 @@
             this.panel1.Controls.Add(this.cmbMOP);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(12, 60);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1258, 800);
@@ -918,31 +904,21 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.label136);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.label135);
             this.panel2.Controls.Add(this.pictureBox22);
+            this.panel2.Controls.Add(this.lblSem);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lblSY);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1280, 54);
             this.panel2.TabIndex = 1012;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(564, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 16);
-            this.label3.TabIndex = 1023;
-            this.label3.Text = "label3";
             // 
             // label10
             // 
@@ -979,17 +955,6 @@
             this.label14.TabIndex = 1021;
             this.label14.Text = "Help";
             // 
-            // label136
-            // 
-            this.label136.AutoSize = true;
-            this.label136.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label136.ForeColor = System.Drawing.Color.DimGray;
-            this.label136.Location = new System.Drawing.Point(693, 22);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(98, 16);
-            this.label136.TabIndex = 10;
-            this.label136.Text = "1st Semester";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -1014,9 +979,10 @@
             // label135
             // 
             this.label135.AutoSize = true;
+            this.label135.BackColor = System.Drawing.Color.White;
             this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label135.ForeColor = System.Drawing.Color.DimGray;
-            this.label135.Location = new System.Drawing.Point(457, 21);
+            this.label135.Location = new System.Drawing.Point(361, 21);
             this.label135.Name = "label135";
             this.label135.Size = new System.Drawing.Size(101, 16);
             this.label135.TabIndex = 9;
@@ -1086,7 +1052,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbSection;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblRegNo;
         private System.Windows.Forms.Label label13;
@@ -1114,11 +1079,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label136;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label135;
