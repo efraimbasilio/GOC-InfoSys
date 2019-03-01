@@ -658,5 +658,10 @@ namespace GOCSystem2018
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void label34_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

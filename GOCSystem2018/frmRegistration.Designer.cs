@@ -32,8 +32,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.cmbVoucher = new System.Windows.Forms.ComboBox();
-            this.chckGM = new System.Windows.Forms.CheckBox();
-            this.chkNCAEResult = new System.Windows.Forms.CheckBox();
             this.label24 = new System.Windows.Forms.Label();
             this.cmbProvince = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
@@ -42,12 +40,7 @@
             this.cmbMunicipality = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.chkEntranceExam = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chkDrugtest = new System.Windows.Forms.CheckBox();
-            this.chk138 = new System.Windows.Forms.CheckBox();
-            this.chkBirthCertificate = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbStudType = new System.Windows.Forms.ComboBox();
@@ -112,6 +105,49 @@
             this.label29 = new System.Windows.Forms.Label();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.chckGM = new System.Windows.Forms.CheckBox();
+            this.chkNCAEResult = new System.Windows.Forms.CheckBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.chkEntranceExam = new System.Windows.Forms.CheckBox();
+            this.chkDrugtest = new System.Windows.Forms.CheckBox();
+            this.chk138 = new System.Windows.Forms.CheckBox();
+            this.chkBirthCertificate = new System.Windows.Forms.CheckBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtFatherName = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtMother = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.panel6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -120,12 +156,20 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
             // 
             this.panel6.AutoScroll = true;
             this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.label48);
+            this.panel6.Controls.Add(this.textBox10);
+            this.panel6.Controls.Add(this.label47);
+            this.panel6.Controls.Add(this.textBox9);
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Controls.Add(this.panel3);
             this.panel6.Controls.Add(this.button2);
             this.panel6.Controls.Add(this.maskedTextBox2);
             this.panel6.Controls.Add(this.label29);
@@ -138,8 +182,6 @@
             this.panel6.Controls.Add(this.textBox1);
             this.panel6.Controls.Add(this.label17);
             this.panel6.Controls.Add(this.cmbVoucher);
-            this.panel6.Controls.Add(this.chckGM);
-            this.panel6.Controls.Add(this.chkNCAEResult);
             this.panel6.Controls.Add(this.label24);
             this.panel6.Controls.Add(this.cmbProvince);
             this.panel6.Controls.Add(this.label23);
@@ -148,12 +190,7 @@
             this.panel6.Controls.Add(this.cmbMunicipality);
             this.panel6.Controls.Add(this.label21);
             this.panel6.Controls.Add(this.label20);
-            this.panel6.Controls.Add(this.label16);
-            this.panel6.Controls.Add(this.chkEntranceExam);
             this.panel6.Controls.Add(this.panel1);
-            this.panel6.Controls.Add(this.chkDrugtest);
-            this.panel6.Controls.Add(this.chk138);
-            this.panel6.Controls.Add(this.chkBirthCertificate);
             this.panel6.Controls.Add(this.button1);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.cmbStudType);
@@ -195,7 +232,7 @@
             this.panel6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel6.Location = new System.Drawing.Point(204, 60);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(907, 720);
+            this.panel6.Size = new System.Drawing.Size(907, 717);
             this.panel6.TabIndex = 74;
             this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
@@ -203,7 +240,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(352, 313);
+            this.label17.Location = new System.Drawing.Point(372, 313);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(83, 15);
             this.label17.TabIndex = 138;
@@ -217,30 +254,10 @@
             "Public Voucher ",
             "Private Voucher ",
             "Non Voucher"});
-            this.cmbVoucher.Location = new System.Drawing.Point(355, 331);
+            this.cmbVoucher.Location = new System.Drawing.Point(375, 331);
             this.cmbVoucher.Name = "cmbVoucher";
-            this.cmbVoucher.Size = new System.Drawing.Size(195, 21);
+            this.cmbVoucher.Size = new System.Drawing.Size(175, 21);
             this.cmbVoucher.TabIndex = 137;
-            // 
-            // chckGM
-            // 
-            this.chckGM.AutoSize = true;
-            this.chckGM.Location = new System.Drawing.Point(307, 705);
-            this.chckGM.Name = "chckGM";
-            this.chckGM.Size = new System.Drawing.Size(81, 17);
-            this.chckGM.TabIndex = 134;
-            this.chckGM.Text = "Good Moral";
-            this.chckGM.UseVisualStyleBackColor = true;
-            // 
-            // chkNCAEResult
-            // 
-            this.chkNCAEResult.AutoSize = true;
-            this.chkNCAEResult.Location = new System.Drawing.Point(495, 705);
-            this.chkNCAEResult.Name = "chkNCAEResult";
-            this.chkNCAEResult.Size = new System.Drawing.Size(88, 17);
-            this.chkNCAEResult.TabIndex = 133;
-            this.chkNCAEResult.Text = "NCAE Result";
-            this.chkNCAEResult.UseVisualStyleBackColor = true;
             // 
             // label24
             // 
@@ -250,9 +267,9 @@
             this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label24.Location = new System.Drawing.Point(721, 471);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(65, 15);
+            this.label24.Size = new System.Drawing.Size(55, 15);
             this.label24.TabIndex = 132;
-            this.label24.Text = "PROVINCE";
+            this.label24.Text = "Province";
             // 
             // cmbProvince
             // 
@@ -302,9 +319,9 @@
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label22.Location = new System.Drawing.Point(562, 471);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(82, 15);
+            this.label22.Size = new System.Drawing.Size(76, 15);
             this.label22.TabIndex = 128;
-            this.label22.Text = "MUNICIPALITY";
+            this.label22.Text = "Municipality";
             // 
             // cmbMunicipality
             // 
@@ -340,70 +357,18 @@
             this.label20.TabIndex = 125;
             this.label20.Text = "Step by step process of Enrollment";
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(50, 662);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(475, 26);
-            this.label16.TabIndex = 117;
-            this.label16.Text = "Make sure all required fields and requirements are accomplished before proceeding" +
-    " in the next step.\r\nPlease check all the accomplished requirements below.\r\n";
-            // 
-            // chkEntranceExam
-            // 
-            this.chkEntranceExam.AutoSize = true;
-            this.chkEntranceExam.Location = new System.Drawing.Point(391, 705);
-            this.chkEntranceExam.Name = "chkEntranceExam";
-            this.chkEntranceExam.Size = new System.Drawing.Size(98, 17);
-            this.chkEntranceExam.TabIndex = 3;
-            this.chkEntranceExam.Text = "Entrance Exam";
-            this.chkEntranceExam.UseVisualStyleBackColor = true;
-            this.chkEntranceExam.CheckedChanged += new System.EventHandler(this.chkEntranceExam_CheckedChanged);
-            // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(15, 968);
+            this.panel1.Location = new System.Drawing.Point(15, 1148);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(858, 13);
             this.panel1.TabIndex = 116;
             // 
-            // chkDrugtest
-            // 
-            this.chkDrugtest.AutoSize = true;
-            this.chkDrugtest.Location = new System.Drawing.Point(228, 705);
-            this.chkDrugtest.Name = "chkDrugtest";
-            this.chkDrugtest.Size = new System.Drawing.Size(73, 17);
-            this.chkDrugtest.TabIndex = 2;
-            this.chkDrugtest.Text = "Drug Test";
-            this.chkDrugtest.UseVisualStyleBackColor = true;
-            // 
-            // chk138
-            // 
-            this.chk138.AutoSize = true;
-            this.chk138.Location = new System.Drawing.Point(156, 705);
-            this.chk138.Name = "chk138";
-            this.chk138.Size = new System.Drawing.Size(70, 17);
-            this.chk138.TabIndex = 1;
-            this.chk138.Text = "Form 138";
-            this.chk138.UseVisualStyleBackColor = true;
-            // 
-            // chkBirthCertificate
-            // 
-            this.chkBirthCertificate.AutoSize = true;
-            this.chkBirthCertificate.Location = new System.Drawing.Point(53, 705);
-            this.chkBirthCertificate.Name = "chkBirthCertificate";
-            this.chkBirthCertificate.Size = new System.Drawing.Size(97, 17);
-            this.chkBirthCertificate.TabIndex = 0;
-            this.chkBirthCertificate.Text = "Birth Certificate";
-            this.chkBirthCertificate.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(137, 728);
+            this.button1.Location = new System.Drawing.Point(155, 1081);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 39);
+            this.button1.Size = new System.Drawing.Size(116, 39);
             this.button1.TabIndex = 110;
             this.button1.Text = "&Assessment";
             this.button1.UseVisualStyleBackColor = true;
@@ -444,9 +409,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(50, 728);
+            this.btnSave.Location = new System.Drawing.Point(31, 1081);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(81, 39);
+            this.btnSave.Size = new System.Drawing.Size(116, 39);
             this.btnSave.TabIndex = 101;
             this.btnSave.Text = "&Register";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -571,7 +536,7 @@
             this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox3.Location = new System.Drawing.Point(50, 593);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(125, 41);
+            this.groupBox3.Size = new System.Drawing.Size(125, 25);
             this.groupBox3.TabIndex = 70;
             this.groupBox3.TabStop = false;
             // 
@@ -615,9 +580,9 @@
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(304, 429);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 15);
+            this.label4.Size = new System.Drawing.Size(81, 15);
             this.label4.TabIndex = 2;
-            this.label4.Text = "MIDDLE NAME";
+            this.label4.Text = "Middle Name";
             // 
             // label5
             // 
@@ -627,9 +592,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(562, 429);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 15);
+            this.label5.Size = new System.Drawing.Size(65, 15);
             this.label5.TabIndex = 4;
-            this.label5.Text = "SURNAME";
+            this.label5.Text = "Last name";
             // 
             // label110
             // 
@@ -651,9 +616,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(43, 429);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 15);
+            this.label3.Size = new System.Drawing.Size(64, 15);
             this.label3.TabIndex = 0;
-            this.label3.Text = "FIRST NAME";
+            this.label3.Text = "First name";
             // 
             // label98
             // 
@@ -1057,10 +1022,10 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(307, 596);
+            this.maskedTextBox1.Location = new System.Drawing.Point(419, 598);
             this.maskedTextBox1.Mask = "(9999) 000-0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(105, 20);
+            this.maskedTextBox1.Size = new System.Drawing.Size(125, 20);
             this.maskedTextBox1.TabIndex = 146;
             // 
             // label28
@@ -1069,7 +1034,7 @@
             this.label28.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label28.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(454, 619);
+            this.label28.Location = new System.Drawing.Point(562, 596);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(85, 15);
             this.label28.TabIndex = 147;
@@ -1081,7 +1046,7 @@
             this.label29.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label29.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(311, 619);
+            this.label29.Location = new System.Drawing.Point(306, 600);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(84, 15);
             this.label29.TabIndex = 148;
@@ -1089,7 +1054,7 @@
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(434, 596);
+            this.maskedTextBox2.Location = new System.Drawing.Point(655, 598);
             this.maskedTextBox2.Mask = "(999) 000-0000";
             this.maskedTextBox2.Name = "maskedTextBox2";
             this.maskedTextBox2.Size = new System.Drawing.Size(105, 20);
@@ -1097,19 +1062,521 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(555, 592);
+            this.button2.Location = new System.Drawing.Point(565, 640);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(99, 26);
+            this.button2.Size = new System.Drawing.Size(88, 26);
             this.button2.TabIndex = 150;
             this.button2.Text = "&Add &More Info?";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.chckGM);
+            this.panel3.Controls.Add(this.chkNCAEResult);
+            this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.chkEntranceExam);
+            this.panel3.Controls.Add(this.chkDrugtest);
+            this.panel3.Controls.Add(this.chk138);
+            this.panel3.Controls.Add(this.chkBirthCertificate);
+            this.panel3.Location = new System.Drawing.Point(31, 998);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(842, 77);
+            this.panel3.TabIndex = 151;
+            // 
+            // chckGM
+            // 
+            this.chckGM.AutoSize = true;
+            this.chckGM.Location = new System.Drawing.Point(267, 52);
+            this.chckGM.Name = "chckGM";
+            this.chckGM.Size = new System.Drawing.Size(81, 17);
+            this.chckGM.TabIndex = 141;
+            this.chckGM.Text = "Good Moral";
+            this.chckGM.UseVisualStyleBackColor = true;
+            // 
+            // chkNCAEResult
+            // 
+            this.chkNCAEResult.AutoSize = true;
+            this.chkNCAEResult.Location = new System.Drawing.Point(455, 52);
+            this.chkNCAEResult.Name = "chkNCAEResult";
+            this.chkNCAEResult.Size = new System.Drawing.Size(88, 17);
+            this.chkNCAEResult.TabIndex = 140;
+            this.chkNCAEResult.Text = "NCAE Result";
+            this.chkNCAEResult.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(10, 9);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(475, 26);
+            this.label16.TabIndex = 139;
+            this.label16.Text = "Make sure all required fields and requirements are accomplished before proceeding" +
+    " in the next step.\r\nPlease check all the accomplished requirements below.\r\n";
+            // 
+            // chkEntranceExam
+            // 
+            this.chkEntranceExam.AutoSize = true;
+            this.chkEntranceExam.Location = new System.Drawing.Point(351, 52);
+            this.chkEntranceExam.Name = "chkEntranceExam";
+            this.chkEntranceExam.Size = new System.Drawing.Size(98, 17);
+            this.chkEntranceExam.TabIndex = 138;
+            this.chkEntranceExam.Text = "Entrance Exam";
+            this.chkEntranceExam.UseVisualStyleBackColor = true;
+            // 
+            // chkDrugtest
+            // 
+            this.chkDrugtest.AutoSize = true;
+            this.chkDrugtest.Location = new System.Drawing.Point(188, 52);
+            this.chkDrugtest.Name = "chkDrugtest";
+            this.chkDrugtest.Size = new System.Drawing.Size(73, 17);
+            this.chkDrugtest.TabIndex = 137;
+            this.chkDrugtest.Text = "Drug Test";
+            this.chkDrugtest.UseVisualStyleBackColor = true;
+            // 
+            // chk138
+            // 
+            this.chk138.AutoSize = true;
+            this.chk138.Location = new System.Drawing.Point(116, 52);
+            this.chk138.Name = "chk138";
+            this.chk138.Size = new System.Drawing.Size(70, 17);
+            this.chk138.TabIndex = 136;
+            this.chk138.Text = "Form 138";
+            this.chk138.UseVisualStyleBackColor = true;
+            // 
+            // chkBirthCertificate
+            // 
+            this.chkBirthCertificate.AutoSize = true;
+            this.chkBirthCertificate.Location = new System.Drawing.Point(13, 52);
+            this.chkBirthCertificate.Name = "chkBirthCertificate";
+            this.chkBirthCertificate.Size = new System.Drawing.Size(97, 17);
+            this.chkBirthCertificate.TabIndex = 135;
+            this.chkBirthCertificate.Text = "Birth Certificate";
+            this.chkBirthCertificate.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label46);
+            this.panel4.Controls.Add(this.textBox8);
+            this.panel4.Controls.Add(this.maskedTextBox3);
+            this.panel4.Controls.Add(this.label43);
+            this.panel4.Controls.Add(this.label44);
+            this.panel4.Controls.Add(this.maskedTextBox4);
+            this.panel4.Controls.Add(this.label45);
+            this.panel4.Controls.Add(this.label37);
+            this.panel4.Controls.Add(this.comboBox2);
+            this.panel4.Controls.Add(this.label38);
+            this.panel4.Controls.Add(this.textBox6);
+            this.panel4.Controls.Add(this.label39);
+            this.panel4.Controls.Add(this.comboBox3);
+            this.panel4.Controls.Add(this.label40);
+            this.panel4.Controls.Add(this.textBox7);
+            this.panel4.Controls.Add(this.label41);
+            this.panel4.Controls.Add(this.label42);
+            this.panel4.Controls.Add(this.label35);
+            this.panel4.Controls.Add(this.textBox4);
+            this.panel4.Controls.Add(this.label36);
+            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Controls.Add(this.label34);
+            this.panel4.Controls.Add(this.label32);
+            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.label33);
+            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.label31);
+            this.panel4.Controls.Add(this.txtMother);
+            this.panel4.Controls.Add(this.label30);
+            this.panel4.Controls.Add(this.txtFatherName);
+            this.panel4.Location = new System.Drawing.Point(31, 690);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(842, 288);
+            this.panel4.TabIndex = 152;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label30.Location = new System.Drawing.Point(12, 12);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(95, 15);
+            this.label30.TabIndex = 2;
+            this.label30.Text = "Name of Father:";
+            // 
+            // txtFatherName
+            // 
+            this.txtFatherName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFatherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFatherName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtFatherName.Location = new System.Drawing.Point(15, 30);
+            this.txtFatherName.Name = "txtFatherName";
+            this.txtFatherName.Size = new System.Drawing.Size(221, 22);
+            this.txtFatherName.TabIndex = 3;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label31.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label31.Location = new System.Drawing.Point(12, 55);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(99, 15);
+            this.label31.TabIndex = 4;
+            this.label31.Text = "Name of Mother:";
+            // 
+            // txtMother
+            // 
+            this.txtMother.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMother.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMother.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtMother.Location = new System.Drawing.Point(15, 73);
+            this.txtMother.Name = "txtMother";
+            this.txtMother.Size = new System.Drawing.Size(221, 22);
+            this.txtMother.TabIndex = 5;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label32.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label32.Location = new System.Drawing.Point(274, 55);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(79, 15);
+            this.label32.TabIndex = 8;
+            this.label32.Text = "Occupation:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox2.Location = new System.Drawing.Point(277, 73);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(221, 22);
+            this.textBox2.TabIndex = 9;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label33.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label33.Location = new System.Drawing.Point(274, 12);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(79, 15);
+            this.label33.TabIndex = 6;
+            this.label33.Text = "Occupation:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox3.Location = new System.Drawing.Point(277, 30);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(221, 22);
+            this.textBox3.TabIndex = 7;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.Black;
+            this.label34.Location = new System.Drawing.Point(16, 108);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(169, 13);
+            this.label34.TabIndex = 140;
+            this.label34.Text = "If student is not living with parents:";
+            this.label34.Click += new System.EventHandler(this.label34_Click);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label35.Location = new System.Drawing.Point(275, 127);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(79, 15);
+            this.label35.TabIndex = 143;
+            this.label35.Text = "Occupation:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox4.Location = new System.Drawing.Point(278, 145);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(221, 22);
+            this.textBox4.TabIndex = 144;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label36.Location = new System.Drawing.Point(13, 127);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(113, 15);
+            this.label36.TabIndex = 141;
+            this.label36.Text = "Name of Guardian:";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox5.Location = new System.Drawing.Point(16, 145);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(221, 22);
+            this.textBox5.TabIndex = 142;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label37.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label37.Location = new System.Drawing.Point(690, 175);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(55, 15);
+            this.label37.TabIndex = 152;
+            this.label37.Text = "Province";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.White;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Aurora",
+            "Bataan",
+            "Bulacan",
+            "Nueva Ecija",
+            "Pampanga",
+            "Tarlac",
+            "Zambales"});
+            this.comboBox2.Location = new System.Drawing.Point(681, 199);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(146, 21);
+            this.comboBox2.TabIndex = 151;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label38.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label38.Location = new System.Drawing.Point(275, 175);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(61, 15);
+            this.label38.TabIndex = 150;
+            this.label38.Text = "Barangay";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.ForeColor = System.Drawing.Color.Black;
+            this.textBox6.Location = new System.Drawing.Point(284, 200);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(221, 13);
+            this.textBox6.TabIndex = 149;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label39.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label39.Location = new System.Drawing.Point(531, 175);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(76, 15);
+            this.label39.TabIndex = 148;
+            this.label39.Text = "Municipality";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.BackColor = System.Drawing.Color.White;
+            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(534, 200);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(131, 21);
+            this.comboBox3.TabIndex = 147;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label40.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label40.Location = new System.Drawing.Point(16, 175);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(130, 15);
+            this.label40.TabIndex = 145;
+            this.label40.Text = "House No./Street/Sitio";
+            // 
+            // textBox7
+            // 
+            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox7.ForeColor = System.Drawing.Color.Black;
+            this.textBox7.Location = new System.Drawing.Point(22, 200);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(227, 13);
+            this.textBox7.TabIndex = 146;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label41.Location = new System.Drawing.Point(18, 200);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(234, 20);
+            this.label41.TabIndex = 153;
+            this.label41.Text = "_________________________";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label42.Location = new System.Drawing.Point(279, 200);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(234, 20);
+            this.label42.TabIndex = 154;
+            this.label42.Text = "_________________________";
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(640, 253);
+            this.maskedTextBox3.Mask = "(999) 000-0000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(105, 20);
+            this.maskedTextBox3.TabIndex = 159;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label43.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.Black;
+            this.label43.Location = new System.Drawing.Point(280, 253);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(84, 15);
+            this.label43.TabIndex = 158;
+            this.label43.Text = "Cellphone No.";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label44.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Black;
+            this.label44.Location = new System.Drawing.Point(538, 254);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(85, 15);
+            this.label44.TabIndex = 157;
+            this.label44.Text = "Telephone No.";
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.Location = new System.Drawing.Point(370, 252);
+            this.maskedTextBox4.Mask = "(9999) 000-0000";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(105, 20);
+            this.maskedTextBox4.TabIndex = 156;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label45.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.Black;
+            this.label45.Location = new System.Drawing.Point(281, 231);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(124, 15);
+            this.label45.TabIndex = 155;
+            this.label45.Text = "Student Contact No.";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label46.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label46.Location = new System.Drawing.Point(16, 232);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(76, 15);
+            this.label46.TabIndex = 160;
+            this.label46.Text = "Relationship";
+            // 
+            // textBox8
+            // 
+            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox8.Location = new System.Drawing.Point(19, 250);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(221, 22);
+            this.textBox8.TabIndex = 161;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label48.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label48.Location = new System.Drawing.Point(301, 626);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(55, 15);
+            this.label48.TabIndex = 168;
+            this.label48.Text = "Address:";
+            // 
+            // textBox10
+            // 
+            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox10.Location = new System.Drawing.Point(304, 644);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(221, 22);
+            this.textBox10.TabIndex = 169;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label47.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label47.Location = new System.Drawing.Point(47, 626);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(179, 15);
+            this.label47.TabIndex = 166;
+            this.label47.Text = "Name of School Last Attended:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.textBox9.Location = new System.Drawing.Point(50, 644);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(221, 22);
+            this.textBox9.TabIndex = 167;
             // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1280, 780);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.ForeColor = System.Drawing.Color.Black;
@@ -1131,6 +1598,10 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1161,10 +1632,6 @@
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.CheckBox chkEntranceExam;
-        private System.Windows.Forms.CheckBox chkDrugtest;
-        private System.Windows.Forms.CheckBox chk138;
-        private System.Windows.Forms.CheckBox chkBirthCertificate;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.DateTimePicker dtBirthday;
         private System.Windows.Forms.Label label8;
@@ -1188,7 +1655,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -1202,8 +1668,6 @@
         private System.Windows.Forms.ComboBox cmbMunicipality;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox cmbProvince;
-        private System.Windows.Forms.CheckBox chckGM;
-        private System.Windows.Forms.CheckBox chkNCAEResult;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label17;
@@ -1220,5 +1684,48 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox txtMother;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox txtFatherName;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.CheckBox chckGM;
+        private System.Windows.Forms.CheckBox chkNCAEResult;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.CheckBox chkEntranceExam;
+        private System.Windows.Forms.CheckBox chkDrugtest;
+        private System.Windows.Forms.CheckBox chk138;
+        private System.Windows.Forms.CheckBox chkBirthCertificate;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }
