@@ -504,6 +504,11 @@ namespace GOCSystem2018
 
         }
 
+        private void dgvOtherFee_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void button4_Click_1(object sender, EventArgs e)
         {
             Schedule_loop();
