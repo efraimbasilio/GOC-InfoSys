@@ -381,6 +381,9 @@ namespace GOCSystem2018
             //Section.Text = cmbSection.Text;
 
 
+            
+
+
 
             rpt.studName = lblName.Text;
             rpt.SY = lblSY.Text;
@@ -394,6 +397,8 @@ namespace GOCSystem2018
             rpt.Strand2 = lblStrand.Text;
             rpt.Tuition = Convert.ToDouble(lblTuition.Text);
             rpt.Show();
+
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -568,6 +573,9 @@ namespace GOCSystem2018
 
             }
         }
+
+
+
 
     }
 }

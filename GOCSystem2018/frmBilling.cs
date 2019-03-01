@@ -16,5 +16,14 @@ namespace GOCSystem2018
         {
             InitializeComponent();
         }
+
+        public double TotalTuition, TotalMiscFee, TotalOtherFee, GrantFee, VoucherType;
+        public string LRN, StudID, StudName, GradeLevel, Track, SY, Strand, Semester, MOP;
+
+
+
+
+
+
     }
 }

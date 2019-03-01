@@ -432,3 +432,4 @@ C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\rptAsse
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\rptAssesment.cs
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmBilling.resources
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmPayment.resources

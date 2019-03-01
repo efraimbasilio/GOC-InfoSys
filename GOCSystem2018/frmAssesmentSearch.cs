@@ -86,10 +86,10 @@ namespace GOCSystem2018
         {
             if (e.KeyData == Keys.Enter)
             {
-                textBox1.Location = new Point(80, 141);
-                pictureBox1.Location = new Point(12, 87);
-                label2.Visible = false;
-                label1.Visible = false;
+                //textBox1.Location = new Point(80, 141);
+                //pictureBox1.Location = new Point(5, 87);
+               // label2.Visible = false;
+               // label1.Visible = false;
 
                 dgvSearch.Visible = true;
             }
@@ -103,6 +103,11 @@ namespace GOCSystem2018
         private void label3_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

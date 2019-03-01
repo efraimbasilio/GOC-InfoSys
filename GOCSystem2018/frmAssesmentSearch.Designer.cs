@@ -30,6 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStudSearch));
             this.dgvSearch = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studLRN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegistrationNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,18 +49,6 @@
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GradeLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Strand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,91 +71,34 @@
             this.FirstName,
             this.GradeLevel,
             this.Strand});
-            this.dgvSearch.Location = new System.Drawing.Point(257, 187);
+            this.dgvSearch.Location = new System.Drawing.Point(38, 134);
             this.dgvSearch.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(846, 455);
+            this.dgvSearch.Size = new System.Drawing.Size(1200, 557);
             this.dgvSearch.TabIndex = 0;
             this.dgvSearch.Visible = false;
             this.dgvSearch.DoubleClick += new System.EventHandler(this.dgvSearch_DoubleClick);
             // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // studLRN
-            // 
-            this.studLRN.HeaderText = "LRN";
-            this.studLRN.Name = "studLRN";
-            this.studLRN.ReadOnly = true;
-            // 
-            // RegistrationNo
-            // 
-            this.RegistrationNo.HeaderText = "RegNo";
-            this.RegistrationNo.Name = "RegistrationNo";
-            this.RegistrationNo.ReadOnly = true;
-            // 
-            // GOCNO
-            // 
-            this.GOCNO.HeaderText = "GOC No";
-            this.GOCNO.Name = "GOCNO";
-            this.GOCNO.ReadOnly = true;
-            // 
-            // LastName
-            // 
-            this.LastName.HeaderText = "Lastname";
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            // 
-            // FirstName
-            // 
-            this.FirstName.HeaderText = "Firstname";
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            // 
-            // GradeLevel
-            // 
-            this.GradeLevel.HeaderText = "Grade Level";
-            this.GradeLevel.Name = "GradeLevel";
-            this.GradeLevel.ReadOnly = true;
-            // 
-            // Strand
-            // 
-            this.Strand.HeaderText = "Strand";
-            this.Strand.Name = "Strand";
-            this.Strand.ReadOnly = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1179, 646);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(72, 22);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(516, 396);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(38, 98);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(342, 14);
+            this.textBox1.Size = new System.Drawing.Size(281, 17);
             this.textBox1.TabIndex = 2;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GOCSystem2018.Properties.Resources.Untitled_1;
-            this.pictureBox1.Location = new System.Drawing.Point(448, 342);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 53);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(478, 84);
+            this.pictureBox1.Size = new System.Drawing.Size(353, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1018;
             this.pictureBox1.TabStop = false;
@@ -175,6 +117,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1280, 54);
             this.panel2.TabIndex = 1019;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(1220, 16);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(18, 17);
+            this.label17.TabIndex = 1024;
+            this.label17.Text = "__";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(1251, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(17, 17);
+            this.label3.TabIndex = 1023;
+            this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label14
             // 
@@ -222,7 +188,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(595, 439);
+            this.label1.Location = new System.Drawing.Point(362, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(218, 15);
             this.label1.TabIndex = 1020;
@@ -231,37 +197,62 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(632, 342);
+            this.label2.Location = new System.Drawing.Point(12, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 29);
+            this.label2.Size = new System.Drawing.Size(153, 24);
             this.label2.TabIndex = 1021;
-            this.label2.Text = "Assesment";
+            this.label2.Text = "Search Student";
             // 
-            // label17
+            // id
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(1220, 16);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(18, 17);
-            this.label17.TabIndex = 1024;
-            this.label17.Text = "__";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
-            // label3
+            // studLRN
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(1251, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 17);
-            this.label3.TabIndex = 1023;
-            this.label3.Text = "X";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.studLRN.HeaderText = "LRN No.";
+            this.studLRN.Name = "studLRN";
+            this.studLRN.ReadOnly = true;
+            // 
+            // RegistrationNo
+            // 
+            this.RegistrationNo.HeaderText = "Reg. No.";
+            this.RegistrationNo.Name = "RegistrationNo";
+            this.RegistrationNo.ReadOnly = true;
+            // 
+            // GOCNO
+            // 
+            this.GOCNO.HeaderText = "ID No.";
+            this.GOCNO.Name = "GOCNO";
+            this.GOCNO.ReadOnly = true;
+            // 
+            // LastName
+            // 
+            this.LastName.HeaderText = "Last Name";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            // 
+            // FirstName
+            // 
+            this.FirstName.HeaderText = "First Name";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            // 
+            // GradeLevel
+            // 
+            this.GradeLevel.HeaderText = "Grade Level";
+            this.GradeLevel.Name = "GradeLevel";
+            this.GradeLevel.ReadOnly = true;
+            // 
+            // Strand
+            // 
+            this.Strand.HeaderText = "Strand";
+            this.Strand.Name = "Strand";
+            this.Strand.ReadOnly = true;
             // 
             // frmStudSearch
             // 
@@ -274,7 +265,6 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvSearch);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -297,16 +287,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvSearch;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studLRN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GOCNO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GradeLevel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Strand;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label14;
@@ -317,5 +298,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studLRN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GOCNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GradeLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Strand;
     }
 }
