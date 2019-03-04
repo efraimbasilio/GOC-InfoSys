@@ -13,13 +13,37 @@ namespace GOCSystem2018
     public partial class frmRegistration : Form
     {
         Registration registration = new Registration();
-
+        SchoolYear schoolYear = new SchoolYear();
         Assesment assesment = new Assesment();
        
         List<Assesment> assements = new List<Assesment>();
         frmAssesment frmAssesment = new frmAssesment();
+        List<SchoolYear> schoolYears = new List<SchoolYear>();
+        public string School;
+        public void LoadSchoolYear()
+        {
+            //clear list
 
-        
+            //dgvDiscount.Rows.Clear();
+
+            schoolYears.Clear();
+
+            //pass value to list
+            schoolYears = schoolYear.Load();
+
+            //loop through load it to list view
+            foreach (var item in schoolYears)
+            {
+                //Load to datagridView
+                //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
+               
+                School = (item.YearStart + " - " + item.YearEnd);
+               
+                //cmbSchoolYear.Items.Add(School);
+            }
+        }//End LoadRecords()
+
+
         public void LoadAutoGen()
         {
             //clear list           
@@ -171,17 +195,50 @@ namespace GOCSystem2018
 
             if (this.CheckRequiredFields() == true)
             {
+                registration.StudType = cmbStudType.Text;
+
                 registration.StudLRN = LRNtxt.Text;
+                registration.StudGOCNo = "GOC";
                 registration.StudRegistrationNo = txtRegno.Text;
                 registration.StudLastName = txtLastName.Text;
                 registration.StudMiddleName = txtMName.Text;
                 registration.StudFirstName = txtFName.Text;
-
+                
                 registration.StudStrand = cmbCourseStrand.Text;
+                registration.StudVoucher = cmbVoucher.Text;
+                registration.StudAddress1 = txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text;
+
                 registration.StudDateOfBirth = dtBirthday.Value.ToString("yyyy-MM-dd");
                 registration.StudBirthPlace = txtBirthPlace.Text;
-                registration.StudAddress1 = txtAddress.Text +" " + txtBarangay.Text +" "+ cmbMunicipality.Text +" "+ cmbProvince.Text;
-                registration.StudType = cmbStudType.Text;
+
+                registration.Religion = txtReligion.Text;
+                registration.Nationality = cmbNationality.Text;
+                //registration.StudGender = checkGender.Text;
+                registration.StudContactNo = txtStudCell.Text;
+                registration.StudTelNo = txtTelNo.Text;
+                registration.StudPrevSchool = txtLastSchool.Text;
+                registration.StudPrevSchoolAddress = txtLastSchAddress.Text;
+
+                registration.FatherName = txtFatherName.Text;
+                registration.MotherName = txtMother.Text;
+                registration.MotherWork = txtMotherWork.Text;
+                registration.FatherWork = txtFatherWork.Text;
+
+                registration.GuardianName = txtGuardianName.Text;
+                registration.GuardianWork = txtGuardianWork.Text;
+                registration.GuardianCompleteAddress = txtAddress2.Text + " " + txtBarangay2.Text + " " + cmbMunicipality2.Text + " " + cmbProvince2.Text;
+                registration.GuardianRelationship = txtRelation.Text;
+                registration.GuardianContactNo = txtGuardianCell.Text;
+                registration.GuardianTelNo = txtGuardianTel.Text;
+                registration.SYEnrolled = School;
+                registration.DateEnrolled = DateTime.Today.ToString("yyyy-mm-dd");
+
+                //registration.ReqPSA = chkBirthCertificate.Text;
+                //registration.ReqForm138 = chk138.Text;
+                //registration.ReqDrugTest = chkDrugtest.Text;
+                //registration.ReqGoodMoral = chckGM.Text;
+                //registration.ReqAdmissionTest = chkEntranceExam.Text;
+                //registration.ReqNCAE = chkNCAEResult.Text;
 
                 //function to load important filtering
                 checkYearLevel();
@@ -208,8 +265,6 @@ namespace GOCSystem2018
 
                 //frmAssesment.LoadStrand();
                 //frmAssesment.RenderStudNo();
-
-
 
                 this.Hide();
                 frmAssesment.Show();
@@ -304,13 +359,27 @@ namespace GOCSystem2018
                 registration.ReqForm138 = chk138.Text;
             }
 
-            
+            if (chckGM.Checked)
+            {
+                registration.ReqGoodMoral = chckGM.Text;
+            }
+
+            if (chkEntranceExam.Checked)
+            {
+                registration.ReqAdmissionTest = chkEntranceExam.Text;
+            }
+
+            if (chkNCAEResult.Checked)
+            {
+                registration.ReqNCAE = chkNCAEResult.Text;
+            }
+
         }
 
         private void frmRegistration_Load(object sender, EventArgs e)
         {
             LoadAutoGen();
-                       
+            LoadSchoolYear();   
             opt1stYear.Text = "11";
             opt2ndYear.Text = "12";
             opt3rdYear.Visible = false;

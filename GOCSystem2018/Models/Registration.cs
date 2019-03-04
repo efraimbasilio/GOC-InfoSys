@@ -13,46 +13,68 @@ namespace GOCSystem2018
         /******************************
          * Protected Properties
          * ***************************/
+
         protected int id;
+        protected string photoLoc;//*
         protected string studLRN;
         protected string studRegistrationNo;
         protected string studGOCNo;
+
         protected string studLastName;
         protected string studFirstName;
         protected string studMiddleName;
+
         protected string studGradeLevel;
-        protected string studType;
-        protected string studCourse;
-        protected string studStrand;
-        protected string studAcadTrack;
-        protected string studSemEnroll;
-        protected string studGWA;
+        protected string studAcadTrack;//ACADEMIC / TECHVOC
+        protected string studType;//SHS or College
+        protected string studCourse; //FOR College
+        protected string studStrand;//ABM, STEM
+        protected string studVoucher;//*OK
+         
+        protected string studAddress1;      
+        protected string studDateOfBirth;
+        protected string studBirthPlace;
+        protected string religion;//*OK
+        protected string nationality;//*OK
+        protected string studGender;
+
+        protected string studContactNo;//*
+        protected string studTelNo;//*
         protected string studPrevSchool;
+        protected string studPrevSchoolAddress;
 
-        protected string studPublicVoucher;
-        protected string studPrivateVoucher;
-
+        //Additional
+        protected string fatherName;//*
+        protected string motherName;//*
+        protected string fatherWork;//*
+        protected string motherWork;//*
+        protected string guardianName;
+        protected string guardianWork;//*
+        protected string guardianRelationship;//*
+        protected string guardianContactNo;//*ok
+        protected string guardianCompleteAddress;
+        protected string guardianTelNo;//*
+        //REQ
         protected string reqPSA;
         protected string reqGoodMoral;
         protected string reqDrugTest;
-        protected string reqAdmissionTest;
-        protected string reqClassCard;
         protected string reqForm138;
+        protected string reqNCAE;//OK
+        protected string dateEnrolled;//*
+        protected string syEnrolled;//*
 
-        protected string studDateOfBirth;
-        protected string studBirthPlace;
-        protected string studGender;
-        protected string studAddress1;
-        protected string studAddress2;
-        protected string studEmail;
-        protected string studCivilStatus;
-
-        protected string guardianName;
-        protected string guardianContactNo;
-        protected string guardianCompleteAddress;
+        ///
         protected string guardianEmail;
         protected string relationshipToGuardian;
-
+        protected string studSemEnroll;
+        protected string studGWA;
+        protected string studAddress2;
+        protected string studPublicVoucher;
+        protected string studPrivateVoucher;
+        protected string reqAdmissionTest;
+        protected string reqClassCard;
+        protected string studEmail;
+        protected string studCivilStatus;
         //protected int flag;
 
         /******************************
@@ -66,6 +88,110 @@ namespace GOCSystem2018
         {
             get { return id; }
             set { id = value; }
+        }
+
+        public string DateEnrolled
+        {
+            get { return dateEnrolled; }
+            set { dateEnrolled = value; }
+        }
+
+        public string StudPrevSchool
+        {
+            get { return studPrevSchool; }
+            set { studPrevSchool = value; }
+        }
+
+        public string StudPrevSchoolAddress
+        {
+            get { return studPrevSchoolAddress; }
+            set { studPrevSchoolAddress = value; }
+        }
+
+        public string SYEnrolled
+        {
+            get { return syEnrolled; }
+            set { syEnrolled = value; }
+        }
+
+        public string GuardianTelNo
+        {
+            get { return guardianTelNo; }
+            set { guardianTelNo = value; }
+        }
+
+        public string GuardianWork
+        {
+            get { return guardianWork; }
+            set { guardianWork = value; }
+        }
+
+        public string MotherWork
+        {
+            get { return motherWork; }
+            set { motherWork = value; }
+        }
+
+        public string FatherWork
+        {
+            get { return fatherWork; }
+            set { fatherWork = value; }
+        }
+
+        public string MotherName
+        {
+            get { return motherName; }
+            set { motherName = value; }
+        }
+
+        public string FatherName
+        {
+            get { return fatherName; }
+            set { fatherName = value; }
+        }
+
+        public string GuardianRelationship
+        {
+            get { return guardianRelationship; }
+            set { guardianRelationship = value; }
+        }
+
+
+        public string StudTelNo
+        {
+            get { return studTelNo; }
+            set { studTelNo = value; }
+        }
+
+
+        public string StudContactNo
+        {
+            get { return studContactNo; }
+            set { studContactNo = value; }
+        }
+
+        public string Religion
+        {
+            get { return religion; }
+            set { religion = value; }
+        }
+
+        public string Nationality
+        {
+            get { return nationality; }
+            set { nationality = value; }
+        }
+
+        public string StudVoucher
+        {
+            get { return studVoucher; }
+            set { studVoucher = value; }
+        }
+
+        public string ReqNCAE
+        {
+            get { return reqNCAE; }
+            set { reqNCAE = value; }
         }
 
         public string StudLRN
@@ -135,11 +261,7 @@ namespace GOCSystem2018
             get { return studGWA; }
             set { studGWA = value; }
         }
-        public string StudPrevSchool
-        {
-            get { return studPrevSchool; }
-            set { studPrevSchool = value; }
-        }
+        
 
         public string StudPublicVoucher
         {
@@ -264,35 +386,56 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO stud_registration(stud_LRN,stud_regNo,stud_GOCNo,stud_lastName,stud_middleName,stud_firstName,stud_grade_level,stud_strand,stud_Acad_Track,stud_date_of_birth,stud_gender,stud_birth_place,stud_address1, req_BC, req_form138, req_drug_test,req_entrance_exam,stud_type ) " +
-                                 "VALUES (@studLRN,@studRegistrationNo,@studGOCNo,@studLastName,@studMiddleName,@studFirstName,@studGradeLevel, @studStrand, @studAcadTrack,@studDateOfBirth,@studGender,@studBirthPlace,@studAddress1, @reqPSA, @reqForm138, @reqDrugTest,@reqAdmissionTest,@studType);";
+                    string sql = "INSERT INTO student_profile(IDNo,LRN,regNo,last_name,middle_name,first_name,grade_Level,strand,track,voucher_type,address,date_of_birth,place_of_birth,religion,nationality,gender,stud_contactNo,stud_telNo,prev_school,prev_school_address,father_name,mother_name,mother_work,father_work,guardian_name,guardian_work,guardian_address,guardian_relationship,guardian_contactNo,guardian_telNo,bc,form138,drugtest,good_moral,en_exam,ncae,date_enrolled,sy_enrolled) " +
+                                 "VALUES (@studGOCNo,@studLRN,@studRegistrationNo,@studLastName,@studMiddleName,@studFirstName,@studGradeLevel, @studStrand, @studAcadTrack, @studVoucher, @studAddress1, @studDateOfBirth,@studBirthPlace, @religion, @nationality, @studGender, @studContactNo, @studTelNo, @studPrevSchool, @studPrevSchoolAddress, @fatherName,@motherName, @motherWork, @fatherWork, @guardianName, @guardianWork, @guardianCompleteAddress, @guardianRelationship,@guardianContactNo,@guardianTelNo,@reqPSA, @reqForm138, @reqDrugTest,@reqAdmissionTest,@reqNCAE,@reqGoodMoral,@dateEnrolled,@syEnrolled); ";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
-                    cmd.Parameters.AddWithValue("studLRN", studLRN);
                     cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
                     cmd.Parameters.AddWithValue("studGOCNo", studGOCNo);
+                    cmd.Parameters.AddWithValue("studLRN", studLRN);
 
                     cmd.Parameters.AddWithValue("studLastName", studLastName);
                     cmd.Parameters.AddWithValue("studMiddleName", studMiddleName);
                     cmd.Parameters.AddWithValue("studFirstName", studFirstName);
 
-
                     cmd.Parameters.AddWithValue("studGradeLevel", studGradeLevel);
                     cmd.Parameters.AddWithValue("studStrand", studStrand);
                     cmd.Parameters.AddWithValue("studAcadTrack", studAcadTrack);
-
-                    cmd.Parameters.AddWithValue("studDateOfBirth", studDateOfBirth);
-                    cmd.Parameters.AddWithValue("studBirthPlace", studBirthPlace);
-
-                    cmd.Parameters.AddWithValue("studGender", studGender);
+                    cmd.Parameters.AddWithValue("studVoucher", studVoucher);
                     cmd.Parameters.AddWithValue("studAddress1", studAddress1);
-                    cmd.Parameters.AddWithValue("studType", studType);
+                    cmd.Parameters.AddWithValue("studDateOfBirth", studDateOfBirth);
+
+                    cmd.Parameters.AddWithValue("studBirthPlace", studBirthPlace);
+                    cmd.Parameters.AddWithValue("religion", religion);
+                    cmd.Parameters.AddWithValue("nationality", nationality);
+                    cmd.Parameters.AddWithValue("studGender", studGender);
+                    cmd.Parameters.AddWithValue("studContactNo", studContactNo);
+
+                    cmd.Parameters.AddWithValue("studTelNo", studTelNo);
+                    cmd.Parameters.AddWithValue("studPrevSchool", studPrevSchool);
+                    cmd.Parameters.AddWithValue("studPrevSchoolAddress", studPrevSchoolAddress);
+                    cmd.Parameters.AddWithValue("fatherName", fatherName);
+                    cmd.Parameters.AddWithValue("motherName", motherName);
+                    cmd.Parameters.AddWithValue("motherWork", motherWork);
+                    cmd.Parameters.AddWithValue("fatherWork", fatherWork);
+
+                    cmd.Parameters.AddWithValue("guardianName", guardianName);
+                    cmd.Parameters.AddWithValue("guardianWork", guardianWork);
+                    cmd.Parameters.AddWithValue("guardianCompleteAddress", guardianCompleteAddress);
+                    cmd.Parameters.AddWithValue("guardianRelationship", guardianRelationship);
+                    cmd.Parameters.AddWithValue("guardianContactNo", guardianContactNo);
+                    cmd.Parameters.AddWithValue("guardianTelNo", guardianTelNo);
 
                     cmd.Parameters.AddWithValue("reqPSA", reqPSA);
                     cmd.Parameters.AddWithValue("reqForm138", reqForm138);
                     cmd.Parameters.AddWithValue("reqDrugTest", reqDrugTest);
+                    cmd.Parameters.AddWithValue("reqGoodMoral", reqGoodMoral);
                     cmd.Parameters.AddWithValue("reqAdmissionTest", reqAdmissionTest);
+                    cmd.Parameters.AddWithValue("reqNCAE", reqNCAE);
+
+                    cmd.Parameters.AddWithValue("dateEnrolled", dateEnrolled);
+                    cmd.Parameters.AddWithValue("syEnrolled", syEnrolled);
 
                     cmd.ExecuteNonQuery();
 
