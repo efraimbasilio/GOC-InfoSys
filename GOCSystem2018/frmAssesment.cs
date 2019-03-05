@@ -147,6 +147,34 @@ namespace GOCSystem2018
             
         }
 
+        public void SaveForGrading()
+        {
+            string a,b;
+            for (int i = 0; i < dgvSubject.Rows.Count; i++)
+            {
+                a= dgvSubject.Rows[i].Cells[0].FormattedValue.ToString();
+                b = dgvSubject.Rows[i].Cells[1].FormattedValue.ToString();
+                //a = dgvSubject.CurrentRow.Cells[i].FormattedValue.ToString();
+                MessageBox.Show(a +"\t"+b);
+            }
+
+            //lblGradeLevel.Text;
+            //lblSem.Text;
+            //cmbSection.Text;
+            //lblStrand.Text;
+            //lblName.Text;
+
+
+
+            
+            
+
+
+
+            //lblTotalMiscFee.Text = sum1.ToString("n");
+
+        }
+
         public void LoadAssesOtherFees()
         {
             //clear list                      
@@ -622,6 +650,11 @@ namespace GOCSystem2018
         private void button4_Click_3(object sender, EventArgs e)
         {
             LoadSubject();
+        }
+
+        private void btnEnroll_Click(object sender, EventArgs e)
+        {
+            SaveForGrading();
         }
 
         private void button4_Click_1(object sender, EventArgs e)

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssesment));
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -112,6 +112,7 @@
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.lblSubjSemester = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnEnroll = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -426,6 +427,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnEnroll);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.dgvSubject);
             this.panel1.Controls.Add(this.groupBox6);
@@ -469,7 +471,7 @@
             this.dgvSubject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Subject1,
             this.Desc});
-            this.dgvSubject.Location = new System.Drawing.Point(612, 337);
+            this.dgvSubject.Location = new System.Drawing.Point(685, 343);
             this.dgvSubject.Name = "dgvSubject";
             this.dgvSubject.ReadOnly = true;
             this.dgvSubject.Size = new System.Drawing.Size(543, 293);
@@ -527,11 +529,11 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "n";
-            dataGridViewCellStyle9.NullValue = "0.00";
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "n";
+            dataGridViewCellStyle5.NullValue = "0.00";
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -894,11 +896,11 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.Format = "n";
-            dataGridViewCellStyle10.NullValue = "0.00";
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "n";
+            dataGridViewCellStyle6.NullValue = "0.00";
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -1006,13 +1008,26 @@
             this.button4.BackColor = System.Drawing.Color.Black;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(478, 343);
+            this.button4.Location = new System.Drawing.Point(570, 345);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(109, 27);
             this.button4.TabIndex = 1019;
             this.button4.Text = "Search";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_3);
+            // 
+            // btnEnroll
+            // 
+            this.btnEnroll.BackColor = System.Drawing.Color.Black;
+            this.btnEnroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnroll.ForeColor = System.Drawing.Color.White;
+            this.btnEnroll.Location = new System.Drawing.Point(318, 345);
+            this.btnEnroll.Name = "btnEnroll";
+            this.btnEnroll.Size = new System.Drawing.Size(109, 27);
+            this.btnEnroll.TabIndex = 1020;
+            this.btnEnroll.Text = "Enroll";
+            this.btnEnroll.UseVisualStyleBackColor = false;
+            this.btnEnroll.Click += new System.EventHandler(this.btnEnroll_Click);
             // 
             // frmAssesment
             // 
@@ -1140,5 +1155,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
         private System.Windows.Forms.Label lblSubjSemester;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnEnroll;
     }
 }
