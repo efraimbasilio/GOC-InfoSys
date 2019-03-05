@@ -250,7 +250,7 @@ namespace GOCSystem2018
         {
             //clear list
 
-            //dgvDiscount.Rows.Clear();
+            dgvSubject.Rows.Clear();
             //cmbSection.Items.Clear();
             subjects.Clear();
 
@@ -258,20 +258,19 @@ namespace GOCSystem2018
             subjects = subject.Load();
 
             //loop through load it to list view
-            foreach (var item in subjects)
-            {
-                //Load to datagridView
-                dgvSubject.Rows.Add(item.Id, item.SubjectCode, item.SubjectDesc);
-            }
+            //foreach (var item in subjects)
+            //{
+            //    //Load to datagridView
+            //    dgvSubject.Rows.Add(item.Id, item.SubjectCode, item.SubjectDesc);
+            //}
 
             foreach (var item in subjects)
             {
-                if (item.SubjType.Equals(core) && item.SubjSemester.Equals(lblSubjSemester.Text))
+                if (item.SubjType.Equals(core) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(lblGradeLevel.Text))
                 {
                     //Load to datagridView
-                    dgvSubject.Rows.Add(item.Id, item.SubjectCode, item.SubjectDesc);
+                    dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
                 }
-                
             }
 
 
@@ -338,7 +337,7 @@ namespace GOCSystem2018
         }
         private void btnAsses_Click(object sender, EventArgs e)
         {            
-            subject.SubjType = b;           
+            subject.SubjType = applied;           
             //loop();     
         }
         private void cmbStrand_SelectedIndexChanged(object sender, EventArgs e)
@@ -591,6 +590,11 @@ namespace GOCSystem2018
         private void dgvOtherFee_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button4_Click_3(object sender, EventArgs e)
+        {
+            LoadSubject();
         }
 
         private void button4_Click_1(object sender, EventArgs e)
