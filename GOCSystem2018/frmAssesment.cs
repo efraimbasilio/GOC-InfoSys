@@ -273,6 +273,33 @@ namespace GOCSystem2018
                 }
             }
 
+            foreach (var item in subjects)
+            {
+                if (item.SubjType.Equals(applied) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(lblGradeLevel.Text) && item.SubjStrand.Equals(allStrand))
+                {
+                    //Load to datagridView
+                    dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
+                }
+            }
+
+            foreach (var item in subjects)
+            {
+                if (item.SubjType.Equals(specialized) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(lblGradeLevel.Text) && item.SubjStrand.Equals(lblStrand.Text))
+                {
+                    //Load to datagridView
+                    dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
+                }
+            }
+
+            //foreach (var item in subjects)
+            //{
+            //    if (item.SubjType.Equals(core) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(lblGradeLevel.Text) && item.SubjStrand.Equals(allStrand))
+            //    {
+            //        //Load to datagridView
+            //        dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
+            //    }
+            //}
+
 
 
         }//End LoadRecords()

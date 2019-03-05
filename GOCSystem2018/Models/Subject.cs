@@ -113,6 +113,11 @@ namespace GOCSystem2018
                         subject.subjectCode = reader["subject_code"].ToString();
                         subject.subjectDesc = reader["subject_desc"].ToString();
 
+                        subject.subjSemester = reader["semester"].ToString();
+                        subject.subjGradeLevel = reader["grade_level"].ToString();
+                        subject.SubjType = reader["subject_type"].ToString();
+                        subject.subjStrand = reader["strand"].ToString();
+
                         subjects.Add(subject);
 
                     }
@@ -209,8 +214,6 @@ namespace GOCSystem2018
                         subject.subjGradeLevel = reader["grade_level"].ToString();
                         subject.SubjType = reader["subject_type"].ToString();
                         subject.subjStrand = reader["strand"].ToString();
-
-
 
                         subjects.Add(subject);
 

@@ -336,8 +336,8 @@ namespace GOCSystem2018
             {
       
                 cmbCourseStrand.Items.Clear();
-                cmbCourseStrand.Items.Add("TVL-ICT");
-                cmbCourseStrand.Items.Add("TVL-HE");
+                cmbCourseStrand.Items.Add("TVL - ICT");
+                cmbCourseStrand.Items.Add("TVL - HE");
                 frmAssesment.Track = optTVL.Text;
             }
             else if(optAcademic.Checked)
