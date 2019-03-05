@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssesment));
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -46,9 +46,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dgvSubject = new System.Windows.Forms.DataGridView();
-            this.Subjects = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbMOP = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -63,6 +60,9 @@
             this.lblStrand = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvSubject = new System.Windows.Forms.DataGridView();
+            this.Subject1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvOtherFee = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,8 +110,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label135 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
+            this.lblSubjSemester = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFee)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -281,34 +282,6 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Semester:";
             // 
-            // dgvSubject
-            // 
-            this.dgvSubject.AllowUserToAddRows = false;
-            this.dgvSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSubject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Subjects,
-            this.Desc});
-            this.dgvSubject.Location = new System.Drawing.Point(1269, 166);
-            this.dgvSubject.Name = "dgvSubject";
-            this.dgvSubject.ReadOnly = true;
-            this.dgvSubject.Size = new System.Drawing.Size(35, 205);
-            this.dgvSubject.TabIndex = 24;
-            this.dgvSubject.Visible = false;
-            // 
-            // Subjects
-            // 
-            this.Subjects.HeaderText = "Subject Code";
-            this.Subjects.Name = "Subjects";
-            this.Subjects.ReadOnly = true;
-            this.Subjects.Width = 200;
-            // 
-            // Desc
-            // 
-            this.Desc.HeaderText = "Description";
-            this.Desc.Name = "Desc";
-            this.Desc.ReadOnly = true;
-            this.Desc.Width = 300;
-            // 
             // cmbMOP
             // 
             this.cmbMOP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -452,6 +425,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dgvSubject);
             this.panel1.Controls.Add(this.groupBox6);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox5);
@@ -485,6 +459,34 @@
             this.panel1.Size = new System.Drawing.Size(1258, 800);
             this.panel1.TabIndex = 43;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dgvSubject
+            // 
+            this.dgvSubject.AllowUserToAddRows = false;
+            this.dgvSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Subject1,
+            this.Desc});
+            this.dgvSubject.Location = new System.Drawing.Point(612, 337);
+            this.dgvSubject.Name = "dgvSubject";
+            this.dgvSubject.ReadOnly = true;
+            this.dgvSubject.Size = new System.Drawing.Size(543, 205);
+            this.dgvSubject.TabIndex = 1018;
+            this.dgvSubject.Visible = false;
+            // 
+            // Subject1
+            // 
+            this.Subject1.HeaderText = "Subject Code";
+            this.Subject1.Name = "Subject1";
+            this.Subject1.ReadOnly = true;
+            this.Subject1.Width = 200;
+            // 
+            // Desc
+            // 
+            this.Desc.HeaderText = "Description";
+            this.Desc.Name = "Desc";
+            this.Desc.ReadOnly = true;
+            this.Desc.Width = 300;
             // 
             // groupBox6
             // 
@@ -524,11 +526,11 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "n";
-            dataGridViewCellStyle3.NullValue = "0.00";
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "n";
+            dataGridViewCellStyle1.NullValue = "0.00";
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -891,11 +893,11 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "n";
-            dataGridViewCellStyle4.NullValue = "0.00";
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "n";
+            dataGridViewCellStyle2.NullValue = "0.00";
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -903,6 +905,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.lblSubjSemester);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label18);
@@ -986,6 +989,17 @@
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
             // 
+            // lblSubjSemester
+            // 
+            this.lblSubjSemester.AutoSize = true;
+            this.lblSubjSemester.BackColor = System.Drawing.Color.White;
+            this.lblSubjSemester.Location = new System.Drawing.Point(840, 22);
+            this.lblSubjSemester.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSubjSemester.Name = "lblSubjSemester";
+            this.lblSubjSemester.Size = new System.Drawing.Size(30, 15);
+            this.lblSubjSemester.TabIndex = 1023;
+            this.lblSubjSemester.Text = "First";
+            // 
             // frmAssesment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -996,7 +1010,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtTuitionFee);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.dgvSubject);
             this.Controls.Add(this.textBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1005,9 +1018,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAssesment";
             this.Load += new System.EventHandler(this.frmAssesment_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFee)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -1047,14 +1060,11 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dgvSubject;
         private System.Windows.Forms.ComboBox cmbMOP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblTrack;
         private System.Windows.Forms.Label lblGOCNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subjects;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
@@ -1111,5 +1121,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridView dgvSubject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subject1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Desc;
+        private System.Windows.Forms.Label lblSubjSemester;
     }
 }

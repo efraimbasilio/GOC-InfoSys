@@ -15,9 +15,9 @@ namespace GOCSystem2018
 {
     public partial class frmAssesment : Form
     {
-        string a = "SPECIALIZED SUBJECTS";
-        string b = "APPLIED SUBJECTS";
-        string c = "CORE SUBJECTS";
+        string specialized = "SPECIALIZED SUBJECTS";
+        string applied = "APPLIED SUBJECTS";
+        string core = "CORE SUBJECTS";
         string allStrand = "All Strand";
 
         //Reports
@@ -243,6 +243,38 @@ namespace GOCSystem2018
                 //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
                 cmbSection.Items.Add(item.SectionName);
             }
+
+        }//End LoadRecords()
+
+        public void LoadSubject()
+        {
+            //clear list
+
+            //dgvDiscount.Rows.Clear();
+            //cmbSection.Items.Clear();
+            subjects.Clear();
+
+            //pass value to list
+            subjects = subject.Load();
+
+            //loop through load it to list view
+            foreach (var item in subjects)
+            {
+                //Load to datagridView
+                dgvSubject.Rows.Add(item.Id, item.SubjectCode, item.SubjectDesc);
+            }
+
+            foreach (var item in subjects)
+            {
+                if (item.SubjType.Equals(core) && item.SubjSemester.Equals(lblSubjSemester.Text))
+                {
+                    //Load to datagridView
+                    dgvSubject.Rows.Add(item.Id, item.SubjectCode, item.SubjectDesc);
+                }
+                
+            }
+
+
 
         }//End LoadRecords()
 
