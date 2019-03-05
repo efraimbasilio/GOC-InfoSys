@@ -19,6 +19,7 @@ namespace GOCSystem2018.Models
         protected string tuitionFeeName;
         protected string tuitionFeeAmount;
         protected string tuitionFeeDescription;
+        protected string status;
         //protected int flag;
 
         /******************************
@@ -34,6 +35,11 @@ namespace GOCSystem2018.Models
             set { id = value; }
         }
 
+        public string Status
+        {
+            get { return status; }
+            set { status = value; }
+        }
         //Pascal Casing For Every Public Variables
         public string TuitionFeeName
         {
@@ -85,7 +91,8 @@ namespace GOCSystem2018.Models
                     cmd.Parameters.AddWithValue("tuitionFeeName", tuitionFeeName);
                     cmd.Parameters.AddWithValue("tuitionFeeAmount", tuitionFeeAmount);
                     cmd.Parameters.AddWithValue("tuitionFeeDescription", tuitionFeeDescription);
-                   
+                    //cmd.Parameters.AddWithValue("status", status);
+
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Record Saved!", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -123,7 +130,9 @@ namespace GOCSystem2018.Models
                         tuitionFee.tuitionFeeName = reader["tuition_fee_name"].ToString();
                         tuitionFee.tuitionFeeAmount = reader["tuition_amount"].ToString();
                         tuitionFee.tuitionFeeDescription = reader["tuition_desc"].ToString();
-                       
+                        tuitionFee.status = reader["status"].ToString();
+
+
                         tuitionFees.Add(tuitionFee);
 
                     }
@@ -199,6 +208,7 @@ namespace GOCSystem2018.Models
                         tuitionFee.tuitionFeeName = reader["tuition_fee_name"].ToString();
                         tuitionFee.tuitionFeeAmount = reader["tuition_amount"].ToString();
                         tuitionFee.tuitionFeeDescription = reader["tuition_desc"].ToString();
+                        tuitionFee.status = reader["status"].ToString();
 
                         tuitionFees.Add(tuitionFee);
                     }
@@ -243,6 +253,7 @@ namespace GOCSystem2018.Models
                         tuitionFee.tuitionFeeName = reader["tuition_fee_name"].ToString();
                         tuitionFee.tuitionFeeAmount = reader["tuition_amount"].ToString();
                         tuitionFee.tuitionFeeDescription = reader["tuition_desc"].ToString();
+                        tuitionFee.status = reader["status"].ToString();
 
                         tuitionFees.Add(tuitionFee);
 

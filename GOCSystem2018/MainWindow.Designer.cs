@@ -396,9 +396,9 @@
             this.SidebarPanel.Controls.Add(this.EnrollmentBtn);
             this.SidebarPanel.Controls.Add(this.DashboardBtn);
             this.SidebarPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SidebarPanel.Location = new System.Drawing.Point(0, 54);
+            this.SidebarPanel.Location = new System.Drawing.Point(0, 0);
             this.SidebarPanel.Name = "SidebarPanel";
-            this.SidebarPanel.Size = new System.Drawing.Size(65, 666);
+            this.SidebarPanel.Size = new System.Drawing.Size(65, 720);
             this.SidebarPanel.TabIndex = 0;
             // 
             // panel5
@@ -3608,9 +3608,9 @@
             this.panel1.Controls.Add(this.label135);
             this.panel1.Controls.Add(this.pictureBox22);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(65, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 54);
+            this.panel1.Size = new System.Drawing.Size(1215, 54);
             this.panel1.TabIndex = 1011;
             // 
             // lblSY
@@ -3687,12 +3687,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.StudentlistPanel);
             this.Controls.Add(this.Dashboardpanel);
-            this.Controls.Add(this.MaintenancePanel);
-            this.Controls.Add(this.studprofpanel);
-            this.Controls.Add(this.SidebarPanel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.SidebarPanel);
+            this.Controls.Add(this.studprofpanel);
+            this.Controls.Add(this.StudentlistPanel);
+            this.Controls.Add(this.MaintenancePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

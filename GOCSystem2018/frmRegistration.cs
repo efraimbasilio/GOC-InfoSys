@@ -15,7 +15,9 @@ namespace GOCSystem2018
         Registration registration = new Registration();
         SchoolYear schoolYear = new SchoolYear();
         Assesment assesment = new Assesment();
-       
+        Voucher voucher = new Voucher();
+
+        List<Voucher> vouchers = new List<Voucher>();
         List<Assesment> assements = new List<Assesment>();
         frmAssesment frmAssesment = new frmAssesment();
         List<SchoolYear> schoolYears = new List<SchoolYear>();
@@ -193,88 +195,7 @@ namespace GOCSystem2018
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if (this.CheckRequiredFields() == true)
-            {
-                registration.StudType = cmbStudType.Text;
-
-                registration.StudLRN = LRNtxt.Text;
-                registration.StudGOCNo = "GOC";
-                registration.StudRegistrationNo = txtRegno.Text;
-                registration.StudLastName = txtLastName.Text;
-                registration.StudMiddleName = txtMName.Text;
-                registration.StudFirstName = txtFName.Text;
-                
-                registration.StudStrand = cmbCourseStrand.Text;
-                registration.StudVoucher = cmbVoucher.Text;
-                registration.StudAddress1 = txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text;
-
-                registration.StudDateOfBirth = dtBirthday.Value.ToString("yyyy-MM-dd");
-                registration.StudBirthPlace = txtBirthPlace.Text;
-
-                registration.Religion = txtReligion.Text;
-                registration.Nationality = cmbNationality.Text;
-                //registration.StudGender = checkGender.Text;
-                registration.StudContactNo = txtStudCell.Text;
-                registration.StudTelNo = txtTelNo.Text;
-                registration.StudPrevSchool = txtLastSchool.Text;
-                registration.StudPrevSchoolAddress = txtLastSchAddress.Text;
-
-                registration.FatherName = txtFatherName.Text;
-                registration.MotherName = txtMother.Text;
-                registration.MotherWork = txtMotherWork.Text;
-                registration.FatherWork = txtFatherWork.Text;
-
-                registration.GuardianName = txtGuardianName.Text;
-                registration.GuardianWork = txtGuardianWork.Text;
-                registration.GuardianCompleteAddress = txtAddress2.Text + " " + txtBarangay2.Text + " " + cmbMunicipality2.Text + " " + cmbProvince2.Text;
-                registration.GuardianRelationship = txtRelation.Text;
-                registration.GuardianContactNo = txtGuardianCell.Text;
-                registration.GuardianTelNo = txtGuardianTel.Text;
-                registration.SYEnrolled = School;
-                registration.DateEnrolled = DateTime.Today.ToString("yyyy-mm-dd");
-
-                //registration.ReqPSA = chkBirthCertificate.Text;
-                //registration.ReqForm138 = chk138.Text;
-                //registration.ReqDrugTest = chkDrugtest.Text;
-                //registration.ReqGoodMoral = chckGM.Text;
-                //registration.ReqAdmissionTest = chkEntranceExam.Text;
-                //registration.ReqNCAE = chkNCAEResult.Text;
-
-                //function to load important filtering
-                checkYearLevel();
-                CheckTrack();
-                checkRequirements();
-                checkGender();
-
-                //save the info to database
-                registration.Save();
-
-                //clear in assesment
-                frmAssesment.Reset();
-                assements.Clear();
-
-                frmAssesment.RegNo = txtRegno.Text;
-                frmAssesment.StudName = txtLastName.Text + " , " + txtFName.Text + " " + txtMName.Text;
-                frmAssesment.LRN = LRNtxt.Text;
-                frmAssesment.Strand = cmbCourseStrand.Text;
-                //frmAssesment.tuitionFees2();
-
-                frmAssesment.LoadSection();
-                frmAssesment.LoadSchoolYear();
-                frmAssesment.Voucher = cmbVoucher.Text;
-
-                //frmAssesment.LoadStrand();
-                //frmAssesment.RenderStudNo();
-
-                this.Hide();
-                frmAssesment.Show();
-
-            }
-            else
-            {
-                MessageBox.Show("Please fill out all required fields", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
+           
            
         }
 
@@ -375,6 +296,23 @@ namespace GOCSystem2018
             }
 
         }
+        public void LoadVoucher()
+        {
+            //clear list
+            cmbVoucher.Items.Clear();
+            vouchers.Clear();
+
+            //pass value to list
+            vouchers = voucher.Load();
+
+            //loop through load it to list view
+            foreach (var item in vouchers)
+            {
+                //Load to datagridView
+                //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
+                cmbVoucher.Items.Add(item.VoucherFrom);
+            }
+        }//End LoadRecords(
 
         private void frmRegistration_Load(object sender, EventArgs e)
         {
@@ -385,10 +323,14 @@ namespace GOCSystem2018
             opt3rdYear.Visible = false;
             opt4thYear.Visible = false;
             cmbCourseStrand.Text = "";
-            LoadCombo();            
+            LoadCombo();
+            panel4.Visible = false;
+            panel3.Location = new Point(31, 690);
+            LoadVoucher();
+
         }
 
-        void LoadCombo()
+    void LoadCombo()
         {
             if (optTVL.Checked)
             {
@@ -458,16 +400,7 @@ namespace GOCSystem2018
         private void button1_Click(object sender, EventArgs e)
         {
 
-            frmAssesment.Reset();
-            frmAssesment.LoadSection();
-            frmAssesment.LoadSchoolYear();
-            //frmAssesment.tuitionFees2();
-            //frmAssesment.LoadStrand();
-            // frmAssesment.RenderStudNo();
-
-
-            this.Hide();
-            frmAssesment.Show();
+           
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
@@ -674,6 +607,7 @@ namespace GOCSystem2018
             if (cmbProvince.SelectedItem.Equals("Tarlac"))
             {
                 cmbMunicipality.Items.Clear();
+                cmbMunicipality.Items.Add("Anao");
                 cmbMunicipality.Items.Add("Bamban ");
                 cmbMunicipality.Items.Add("Camiling ");
                 cmbMunicipality.Items.Add("Capas ");
@@ -730,6 +664,110 @@ namespace GOCSystem2018
 
         private void label34_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            
+            panel4.Visible = true;
+            panel3.Location = new Point(31, 998);
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmAssesment.Reset();
+            frmAssesment.LoadSection();
+            frmAssesment.LoadSchoolYear();
+
+            this.Hide();
+            frmAssesment.Show();
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            if (this.CheckRequiredFields() == true)
+            {
+                registration.StudType = cmbStudType.Text;
+
+                registration.StudLRN = LRNtxt.Text;
+                registration.StudGOCNo = "GOC";
+                registration.StudRegistrationNo = txtRegno.Text;
+                registration.StudLastName = txtLastName.Text;
+                registration.StudMiddleName = txtMName.Text;
+                registration.StudFirstName = txtFName.Text;
+
+                registration.StudStrand = cmbCourseStrand.Text;
+                registration.StudVoucher = cmbVoucher.Text;
+                registration.StudAddress1 = txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text;
+
+                registration.StudDateOfBirth = dtBirthday.Value.ToString("yyyy-MM-dd");
+                registration.StudBirthPlace = txtBirthPlace.Text;
+
+                registration.Religion = txtReligion.Text;
+                registration.Nationality = cmbNationality.Text;
+                //registration.StudGender = checkGender.Text;
+                registration.StudContactNo = txtStudCell.Text;
+                registration.StudTelNo = txtTelNo.Text;
+                registration.StudPrevSchool = txtLastSchool.Text;
+                registration.StudPrevSchoolAddress = txtLastSchAddress.Text;
+
+                registration.FatherName = txtFatherName.Text;
+                registration.MotherName = txtMother.Text;
+                registration.MotherWork = txtMotherWork.Text;
+                registration.FatherWork = txtFatherWork.Text;
+
+                registration.GuardianName = txtGuardianName.Text;
+                registration.GuardianWork = txtGuardianWork.Text;
+                registration.GuardianCompleteAddress = txtAddress2.Text + " " + txtBarangay2.Text + " " + cmbMunicipality2.Text + " " + cmbProvince2.Text;
+                registration.GuardianRelationship = txtRelation.Text;
+                registration.GuardianContactNo = txtGuardianCell.Text;
+                registration.GuardianTelNo = txtGuardianTel.Text;
+                registration.SYEnrolled = School;
+                registration.DateEnrolled = DateTime.Today.ToString("yyyy-mm-dd");
+
+                //registration.ReqPSA = chkBirthCertificate.Text;
+                //registration.ReqForm138 = chk138.Text;
+                //registration.ReqDrugTest = chkDrugtest.Text;
+                //registration.ReqGoodMoral = chckGM.Text;
+                //registration.ReqAdmissionTest = chkEntranceExam.Text;
+                //registration.ReqNCAE = chkNCAEResult.Text;
+
+                //function to load important filtering
+                checkYearLevel();
+                CheckTrack();
+                checkRequirements();
+                checkGender();
+
+                //save the info to database
+                registration.Save();
+
+                //clear in assesment
+                frmAssesment.Reset();
+                assements.Clear();
+
+                frmAssesment.RegNo = txtRegno.Text;
+                frmAssesment.StudName = txtLastName.Text + " , " + txtFName.Text + " " + txtMName.Text;
+                frmAssesment.LRN = LRNtxt.Text;
+                frmAssesment.Strand = cmbCourseStrand.Text;
+                //frmAssesment.tuitionFees2();
+
+                frmAssesment.LoadSection();
+                frmAssesment.LoadSchoolYear();
+                frmAssesment.Voucher = cmbVoucher.Text;
+                frmAssesment.ComputeVoucher();
+                //frmAssesment.LoadStrand();
+                //frmAssesment.RenderStudNo();
+
+                this.Hide();
+                frmAssesment.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Please fill out all required fields", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
         }
     }

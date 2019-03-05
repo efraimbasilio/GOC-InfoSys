@@ -16,6 +16,7 @@ namespace GOCSystem2018
         protected int id;
         protected string otherFeeName;
         protected double otherFeeAmount;
+        protected string strand;
 
         //protected int flag;
 
@@ -31,6 +32,11 @@ namespace GOCSystem2018
             set { id = value; }
         }
 
+        public string Strand
+        {
+            get { return strand; }
+            set { strand = value; }
+        }
         public string OtherFeeName
         {
             get { return otherFeeName; }
@@ -74,7 +80,7 @@ namespace GOCSystem2018
 
                     cmd.Parameters.AddWithValue("otherFeeName", otherFeeName);
                     cmd.Parameters.AddWithValue("otherFeeAmount", otherFeeAmount);
-
+                    cmd.Parameters.AddWithValue("strand", strand);
 
                     cmd.ExecuteNonQuery();
 
@@ -112,6 +118,7 @@ namespace GOCSystem2018
                         otherFee.id = Convert.ToInt32(reader["id"].ToString());
                         otherFee.otherFeeName = reader["other_fee_name"].ToString();
                         otherFee.otherFeeAmount = Convert.ToDouble(reader["other_fee_amount"]);
+                        otherFee.strand = reader["strand"].ToString();
 
 
                         otherFees.Add(otherFee);
@@ -138,7 +145,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE other_fee SET other_fee_name=@otherFeeName,other_fee_amount=@otherFeeAmount" +
+                    string sql = "UPDATE other_fee SET other_fee_name=@otherFeeName,other_fee_amount=@otherFeeAmount,strand=@strand" +
                                     " WHERE id=@id;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -146,7 +153,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("id", id);
                     cmd.Parameters.AddWithValue("otherFeeName", otherFeeName);
                     cmd.Parameters.AddWithValue("otherFeeAmount", otherFeeAmount);
-
+                    cmd.Parameters.AddWithValue("strand", strand);
 
                     cmd.ExecuteNonQuery();
 
@@ -190,7 +197,7 @@ namespace GOCSystem2018
                         otherFee.id = Convert.ToInt32(reader["id"].ToString());
                         otherFee.otherFeeName = reader["other_fee_name"].ToString();
                         otherFee.otherFeeAmount = Convert.ToDouble(reader["other_fee_amount"]);
-
+                        otherFee.strand = reader["strand"].ToString();
                         otherFees.Add(otherFee);
 
                     }

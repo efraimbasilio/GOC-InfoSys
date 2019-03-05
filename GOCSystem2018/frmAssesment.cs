@@ -34,6 +34,8 @@ namespace GOCSystem2018
         Models.TuitionFee tuitionFee = new Models.TuitionFee();
         MiscFee miscfee = new MiscFee();
         OtherFee otherFee = new OtherFee();
+        Voucher voucher = new Voucher();
+        
 
         List<Models.TuitionFee> tuitionFees = new List<Models.TuitionFee>();
         List<Section> sections = new List<Section>();
@@ -44,6 +46,7 @@ namespace GOCSystem2018
         List<Schedule> schedules = new List<Schedule>();
         List<MiscFee> miscFees = new List<MiscFee>();
         List<OtherFee> otherFees = new List<OtherFee>();
+        List<Voucher> vouchers = new List<Voucher>();
 
         public string StudName, LRN, Track, GradeLevel, RegNo, Strand,Voucher;
 
@@ -61,12 +64,56 @@ namespace GOCSystem2018
             lblTrack.Text = Track;
             lblRegNo.Text = RegNo;
             lblStrand.Text = Strand;
+            lblVoucher.Text = Voucher;
 
             LoadAssesMiscFees();
             Downpayment();
             LoadAssesOtherFees();
+            
+           
+            LoadTuitionFee();
             TotalTuition();
+
+
         }
+        public void ComputeVoucher()
+        {
+            //clear list
+            vouchers.Clear();
+            //pass value to list
+            vouchers = voucher.Load();
+
+            //loop through load it to list view
+            foreach (var item in vouchers)
+            {
+                if (item.VoucherFrom.Equals(Voucher))
+                {
+                    double b=
+                    b = Convert.ToDouble(item.VoucherAmount);
+                    lblDP.Text = b.ToString("n");
+                }
+            }
+        }//End LoadRecords
+
+        public void LoadTuitionFee()
+        {
+            //clear list
+            tuitionFees.Clear();
+            //pass value to list
+            tuitionFees = tuitionFee.Load();
+
+            //loop through load it to list view
+            foreach (var item in tuitionFees)
+            {
+                if (item.Status.Equals("1"))
+                {
+                    double a;
+                     a = Convert.ToDouble(item.TuitionFeeAmount);
+                    lblTuition.Text = a.ToString("n");
+                }
+            }
+        }//End LoadRecords
+
         private void TotalTuition()
         {
             double total = Convert.ToDouble(lblTuition.Text) + Convert.ToDouble(lblOther.Text) + Convert.ToDouble(lblTotalMiscFee.Text);
@@ -111,10 +158,23 @@ namespace GOCSystem2018
             //loop through load it to list view
             foreach (var item in otherFees)
             {
-                // int a = Convert.ToInt16(item.MiscFeeAmount);
-                dgvOtherFee.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
-                // dgvSubjectLoad.Rows.Add(item.MiscFeeName, a);
-                //Convert.ToInt32(dgvSubjectLoad.Rows[i].Cells[1].Value);
+                if (item.Strand.Equals(Strand))
+                {
+                    dgvOtherFee.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
+
+                    foreach (var item2 in otherFees)
+                    {
+                        if (item.Strand.Equals("Non-STEM"))
+                        {
+                            dgvOtherFee.Rows.Add(item2.OtherFeeName, item2.OtherFeeAmount);
+                        }
+                    }
+                }
+
+                if (item.Strand.Equals("Non-STEM"))
+                {
+                    dgvOtherFee.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
+                }
             }
 
             double sum = 0;
@@ -122,10 +182,10 @@ namespace GOCSystem2018
             {
                 sum += Convert.ToDouble(dgvOtherFee.Rows[i].Cells[1].Value);
             }
-
-            lblOther.Text = sum.ToString("n");
-           
+            lblOther.Text = sum.ToString("n");           
         }
+
+        
         public void Downpayment()
         {
             //50000 pub
@@ -135,20 +195,7 @@ namespace GOCSystem2018
             //Private Voucher
             //Non Voucher
 
-            double tuition = 21000;
-            lblTuition.Text = tuition.ToString("n");
-
-            if (lblVoucher.Text == "Public Voucher")
-            {
-                double DP = 17500;
-                lblDP.Text = DP.ToString("n");
-            }
-
-            if (lblVoucher.Text == "Private Voucher")
-            {
-                double DP = 14000;
-                lblDP.Text = DP.ToString("n");
-            }
+            
         }
                
         private void Render()

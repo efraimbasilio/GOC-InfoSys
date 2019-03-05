@@ -94,11 +94,9 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbStudType = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.opt1stYear = new System.Windows.Forms.RadioButton();
@@ -148,6 +146,8 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -191,11 +191,9 @@
             this.panel6.Controls.Add(this.label21);
             this.panel6.Controls.Add(this.label20);
             this.panel6.Controls.Add(this.panel1);
-            this.panel6.Controls.Add(this.button1);
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.cmbStudType);
             this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.btnSave);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.groupBox5);
             this.panel6.Controls.Add(this.groupBox4);
@@ -655,6 +653,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnSave);
             this.panel3.Controls.Add(this.chckGM);
             this.panel3.Controls.Add(this.chkNCAEResult);
             this.panel3.Controls.Add(this.label16);
@@ -664,7 +664,7 @@
             this.panel3.Controls.Add(this.chkBirthCertificate);
             this.panel3.Location = new System.Drawing.Point(31, 998);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(842, 77);
+            this.panel3.Size = new System.Drawing.Size(842, 123);
             this.panel3.TabIndex = 151;
             // 
             // chckGM
@@ -746,6 +746,7 @@
             this.button2.TabIndex = 150;
             this.button2.Text = "&Add &More Info?";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // txtTelNo
             // 
@@ -858,10 +859,6 @@
             // 
             this.cmbVoucher.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbVoucher.FormattingEnabled = true;
-            this.cmbVoucher.Items.AddRange(new object[] {
-            "Public Voucher ",
-            "Private Voucher ",
-            "Non Voucher"});
             this.cmbVoucher.Location = new System.Drawing.Point(375, 331);
             this.cmbVoucher.Name = "cmbVoucher";
             this.cmbVoucher.Size = new System.Drawing.Size(175, 21);
@@ -972,16 +969,6 @@
             this.panel1.Size = new System.Drawing.Size(858, 13);
             this.panel1.TabIndex = 116;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(155, 1081);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 39);
-            this.button1.TabIndex = 110;
-            this.button1.Text = "&Assessment";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -1014,16 +1001,6 @@
             this.label1.Size = new System.Drawing.Size(47, 15);
             this.label1.TabIndex = 105;
             this.label1.Text = "REGNO";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(31, 1081);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(116, 39);
-            this.btnSave.TabIndex = 101;
-            this.btnSave.Text = "&Register";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label15
             // 
@@ -1571,6 +1548,26 @@
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(139, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 39);
+            this.button1.TabIndex = 143;
+            this.button1.Text = "&Assessment";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(15, 75);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(116, 39);
+            this.btnSave.TabIndex = 142;
+            this.btnSave.Text = "&Register";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
+            // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1644,12 +1641,10 @@
         private System.Windows.Forms.TextBox LRNtxt;
         private System.Windows.Forms.Label label109;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtRegno;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbStudType;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label11;
@@ -1727,5 +1722,7 @@
         private System.Windows.Forms.TextBox txtLastSchAddress;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox txtLastSchool;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
     }
 }
