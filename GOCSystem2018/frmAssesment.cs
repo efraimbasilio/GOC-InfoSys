@@ -36,6 +36,7 @@ namespace GOCSystem2018
         OtherFee otherFee = new OtherFee();
         Voucher voucher = new Voucher();
         Grading grade = new Grading();
+        Billing_Partial billingPartial = new Billing_Partial();
         
 
         List<Models.TuitionFee> tuitionFees = new List<Models.TuitionFee>();
@@ -48,8 +49,8 @@ namespace GOCSystem2018
         List<MiscFee> miscFees = new List<MiscFee>();
         List<OtherFee> otherFees = new List<OtherFee>();
         List<Voucher> vouchers = new List<Voucher>();
-
         List<Grading> grades = new List<Grading>();
+        List<Billing_Partial> billingPartials = new List<Billing_Partial>();
 
         public string StudName, LRN, Track, GradeLevel, RegNo, Strand,Voucher;
 
@@ -628,7 +629,23 @@ namespace GOCSystem2018
             //Partial Payment
             if (cmbMOP.Text == "Partial Payment")
             {
+                billingPartial.RegNo = lblRegNo.Text;
+                //billingPartial.ORNo = 
+                billingPartial.IdNo = lblGOCNo.Text;
+                billingPartial.Full_name = lblName.Text;
+                billingPartial.DownPayment = lblDownpayment.Text;
 
+                //billingPartial.P1;
+                //billingPartial.P2;
+                //billingPartial.P3;
+                //billingPartial.P4;
+                //billingPartial.P5;
+                //billingPartial.P6;
+                //billingPartial.P7;
+                //billingPartial.P8;
+                //billingPartial.P9;
+                //billingPartial.P10;
+                //billingPartial.Balance;
             }
             else
             {
@@ -678,6 +695,11 @@ namespace GOCSystem2018
         private void button5_Click(object sender, EventArgs e)
         {
             GetDownPayment();
+        }
+
+        private void cmbMOP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button4_Click_1(object sender, EventArgs e)

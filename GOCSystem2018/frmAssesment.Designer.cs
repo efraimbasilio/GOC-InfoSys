@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssesment));
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -74,6 +74,8 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblDownpayment = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.lbl = new System.Windows.Forms.Label();
@@ -113,8 +115,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label135 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblDownpayment = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -297,6 +297,7 @@
             this.cmbMOP.Name = "cmbMOP";
             this.cmbMOP.Size = new System.Drawing.Size(130, 23);
             this.cmbMOP.TabIndex = 26;
+            this.cmbMOP.SelectedIndexChanged += new System.EventHandler(this.cmbMOP_SelectedIndexChanged);
             this.cmbMOP.SelectedValueChanged += new System.EventHandler(this.cmbMOP_SelectedValueChanged);
             // 
             // label8
@@ -557,11 +558,11 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "n";
-            dataGridViewCellStyle7.NullValue = "0.00";
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "n";
+            dataGridViewCellStyle1.NullValue = "0.00";
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -630,6 +631,26 @@
             this.groupBox5.TabIndex = 1017;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Student Fees";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 78);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 15);
+            this.label3.TabIndex = 1025;
+            this.label3.Text = "Downpayment:";
+            // 
+            // lblDownpayment
+            // 
+            this.lblDownpayment.Location = new System.Drawing.Point(164, 78);
+            this.lblDownpayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDownpayment.Name = "lblDownpayment";
+            this.lblDownpayment.Size = new System.Drawing.Size(89, 15);
+            this.lblDownpayment.TabIndex = 1024;
+            this.lblDownpayment.Text = "__________________";
+            this.lblDownpayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label26
             // 
@@ -926,11 +947,11 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "n";
-            dataGridViewCellStyle8.NullValue = "0.00";
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "n";
+            dataGridViewCellStyle2.NullValue = "0.00";
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -1032,26 +1053,6 @@
             this.pictureBox22.TabIndex = 18;
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 78);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 15);
-            this.label3.TabIndex = 1025;
-            this.label3.Text = "Downpayment:";
-            // 
-            // lblDownpayment
-            // 
-            this.lblDownpayment.Location = new System.Drawing.Point(164, 78);
-            this.lblDownpayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDownpayment.Name = "lblDownpayment";
-            this.lblDownpayment.Size = new System.Drawing.Size(89, 15);
-            this.lblDownpayment.TabIndex = 1024;
-            this.lblDownpayment.Text = "__________________";
-            this.lblDownpayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmAssesment
             // 

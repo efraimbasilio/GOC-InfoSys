@@ -30,8 +30,6 @@ namespace GOCSystem2018
         {
             LoadRecords();
         }
-
-
         /// <summary>
         /// Methods
         /// </summary>

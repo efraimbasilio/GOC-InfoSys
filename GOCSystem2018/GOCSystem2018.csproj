@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Billing_Partial.cs" />
     <Compile Include="frmBillingSearch.cs">
       <SubType>Form</SubType>
     </Compile>
