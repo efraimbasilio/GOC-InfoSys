@@ -31,6 +31,10 @@ namespace GOCSystem2018
             LoadRecords();
         }
 
+
+        /// <summary>
+        /// Methods
+        /// </summary>
         private void LoadRecords()
         {
             try
@@ -108,6 +112,7 @@ namespace GOCSystem2018
                     frmAssesment.Track = item.Track;
                     frmAssesment.RegNo = item.StudRegistrationNo;
                     frmAssesment.Strand = item.StudStrand;
+                    frmAssesment.Voucher = item.VoucherType;
                 }
 
                 //set up before form load
@@ -116,8 +121,10 @@ namespace GOCSystem2018
                 frmAssesment.LoadSchoolYear();
                 frmAssesment.RenderStudNo();
                 frmAssesment.LoadAssesMiscFees();
+
                 frmAssesment.Downpayment();
                 frmAssesment.LoadAssesOtherFees();
+                frmAssesment.ComputeVoucher();
 
                 //show assesment                             
                 frmAssesment.Show();
@@ -138,10 +145,7 @@ namespace GOCSystem2018
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Enter)
-            {
-                dgvSearch.Visible = true;
-            }
+           
         }
 
         private void label17_Click(object sender, EventArgs e)
@@ -171,6 +175,11 @@ namespace GOCSystem2018
             {
                 SelectData();
             }
+        }
+
+        private void dgvSearch_DoubleClick_1(object sender, EventArgs e)
+        {
+            SelectData();
         }
     }
 }

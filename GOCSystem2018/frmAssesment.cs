@@ -71,8 +71,6 @@ namespace GOCSystem2018
 
             LoadTuitionFee();
             TotalTuition();
-
-
         }
         public void ComputeVoucher()
         {
