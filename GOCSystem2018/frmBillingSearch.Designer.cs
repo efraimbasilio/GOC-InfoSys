@@ -142,12 +142,14 @@
             this.txtSearch.Size = new System.Drawing.Size(281, 17);
             this.txtSearch.TabIndex = 1023;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // dgvSearch
             // 
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSearch.Location = new System.Drawing.Point(24, 166);
             this.dgvSearch.Name = "dgvSearch";
+            this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSearch.Size = new System.Drawing.Size(1234, 507);
             this.dgvSearch.TabIndex = 1025;
             // 
