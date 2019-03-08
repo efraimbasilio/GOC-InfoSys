@@ -430,7 +430,6 @@ C:\Users\Instructor\Desktop\GOC-InfoSys--2020\GOCSystem2018\obj\Debug\GOCSystem2
 C:\Users\Instructor\Desktop\GOC-InfoSys--2020\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\rptAssesment.rpt
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\rptAssesment.cs
-C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmBilling.resources
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmPayment.resources
 C:\Users\Instructor\Desktop\a\GOC-InfoSys\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
@@ -541,3 +540,5 @@ C:\Users\Instructor\Desktop\GOC-InfoSys - Im Working\GOCSystem2018\obj\Debug\GOC
 C:\Users\Instructor\Desktop\GOC-InfoSys - Im Working\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
 C:\Users\Instructor\Desktop\GOC-InfoSys - Im Working\GOCSystem2018\obj\Debug\GOCSystem2018.frmReports.resources
 C:\Users\Instructor\Desktop\GOC-InfoSys - Im Working\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmBillingSearch.resources
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache

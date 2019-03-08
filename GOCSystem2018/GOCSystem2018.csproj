@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBillingSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBillingSearch.Designer.cs">
+      <DependentUpon>frmBillingSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Billing.cs" />
     <Compile Include="crpHeader.cs">
       <AutoGen>True</AutoGen>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBilling.resx">
       <DependentUpon>frmBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillingSearch.resx">
+      <DependentUpon>frmBillingSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDiscountFee.resx">
       <DependentUpon>frmDiscountFee.cs</DependentUpon>

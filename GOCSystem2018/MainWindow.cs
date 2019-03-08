@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace GOCSystem2018
 {
@@ -16,7 +17,7 @@ namespace GOCSystem2018
         {
             InitializeComponent();
         }
-
+        DataTable dt = new DataTable();
         SchoolYear schoolYear = new SchoolYear();
         List<SchoolYear> schoolYears = new List<SchoolYear>();
 
@@ -278,12 +279,40 @@ namespace GOCSystem2018
             }
         }//End LoadRecords()
 
+        private void LoadRecords()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM student_profile";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    dt = new DataTable();
+
+                    da.Fill(dt);
+                    dgvSearch.DataSource = dt;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
             LoadSchoolYear();
-
+            LoadRecords();
 
             this.chart2.Series["Population"].Points.AddXY("STEM", label134.Text);
             this.chart2.Series["Population"].Points.AddXY("HUMSS", label133.Text);
