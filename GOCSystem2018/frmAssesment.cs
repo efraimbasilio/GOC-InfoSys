@@ -643,14 +643,11 @@ namespace GOCSystem2018
             dgvOtherFee.Rows.Clear();
             //pass value to list
             otherFees = otherFee.Load();
-
             //loop through load it to list view
             foreach (var item in otherFees)
-            {
-                // int a = Convert.ToInt16(item.MiscFeeAmount);
+            {               
                 dgvOtherFee.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
-                // dgvSubjectLoad.Rows.Add(item.MiscFeeName, a);
-                //Convert.ToInt32(dgvSubjectLoad.Rows[i].Cells[1].Value);
+                
             }
 
             double sum = 0;
