@@ -46,10 +46,10 @@ namespace GOCSystem2018
         {
 
             //CrystalConnection.HOST = AcquaintanceSTI2016.Config.DB_HOST;
-            //CrystalConnection1.DSN = GOCSystem2018.Config.DSN;
-            //CrystalConnection1.database = GOCSystem2018.Config.DB_NAME;
-            //CrystalConnection1.username = GOCSystem2018.Config.DB_USER;
-            //CrystalConnection1.password = GOCSystem2018.Config.DB_PASSWORD;
+            CrystalConnection1.DSN = GOCSystem2018.Config.DSN;
+            CrystalConnection1.database = GOCSystem2018.Config.DB_NAME;
+            CrystalConnection1.username = GOCSystem2018.Config.DB_USER;
+            CrystalConnection1.password = GOCSystem2018.Config.DB_PASSWORD;
         }
 
         private void frmReports_Load(object sender, EventArgs e)
@@ -59,36 +59,36 @@ namespace GOCSystem2018
         public string studname;
         private void button1_Click(object sender, EventArgs e)
         {
-        //    Credential();
+            Credential();
 
-        //    ReportDocument cryRpt = new ReportDocument();
+            ReportDocument cryRpt = new ReportDocument();
 
-        //    cryRpt.Load(Application.StartupPath + "/rptAssesment.rpt");
+            cryRpt.Load(Application.StartupPath + "/rptAssesment.rpt");
 
-        //    CrystalConnection1.Instance.SetConnection(ref cryRpt);
+            CrystalConnection1.Instance.SetConnection(ref cryRpt);
 
-        //    cryRpt.SetParameterValue("StudentName", studName);
-        //    cryRpt.SetParameterValue("SY", SY);
-        //    cryRpt.SetParameterValue("Strand", Strand);
-        //    cryRpt.SetParameterValue("Semester", Semester);
-        //    cryRpt.SetParameterValue("Section", Section);
-        //    cryRpt.SetParameterValue("GradeLevel", GradeLevel);
-        //    cryRpt.SetParameterValue("GOCNo", GOCNO);
+            cryRpt.SetParameterValue("StudentName", studName);
+            cryRpt.SetParameterValue("SY", SY);
+            cryRpt.SetParameterValue("Strand", Strand);
+            cryRpt.SetParameterValue("Semester", Semester);
+            cryRpt.SetParameterValue("Section", Section);
+            cryRpt.SetParameterValue("GradeLevel", GradeLevel);
+            cryRpt.SetParameterValue("GOCNo", GOCNO);
 
-        //    cryRpt.SetParameterValue("Start", Start);
-        //    cryRpt.SetParameterValue("End", End);
-        //    cryRpt.SetParameterValue("Mon", Mon);
-        //    cryRpt.SetParameterValue("Tue", Tue);
-        //    cryRpt.SetParameterValue("Wed", Wed);
-        //    cryRpt.SetParameterValue("Thur", Thur);
-        //    cryRpt.SetParameterValue("Fri", Fri);
-        //    cryRpt.SetParameterValue("Room", Room);
+            cryRpt.SetParameterValue("Start", Start);
+            cryRpt.SetParameterValue("End", End);
+            cryRpt.SetParameterValue("Mon", Mon);
+            cryRpt.SetParameterValue("Tue", Tue);
+            cryRpt.SetParameterValue("Wed", Wed);
+            cryRpt.SetParameterValue("Thur", Thur);
+            cryRpt.SetParameterValue("Fri", Fri);
+            cryRpt.SetParameterValue("Room", Room);
 
-        //    cryRpt.SetParameterValue("Tuition", Tuition);
-        //    cryRpt.SetParameterValue("Strand2", Strand2);
+            cryRpt.SetParameterValue("Tuition", Tuition);
+            cryRpt.SetParameterValue("Strand2", Strand2);
 
-        //    crystalReportViewer1.ReportSource = cryRpt;
-        //    crystalReportViewer1.Refresh();
+            crystalReportViewer1.ReportSource = cryRpt;
+            crystalReportViewer1.Refresh();
         }
     }
 }

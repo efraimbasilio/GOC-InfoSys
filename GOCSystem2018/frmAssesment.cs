@@ -35,6 +35,7 @@ namespace GOCSystem2018
         MiscFee miscfee = new MiscFee();
         OtherFee otherFee = new OtherFee();
         Voucher voucher = new Voucher();
+        Grading grade = new Grading();
         
 
         List<Models.TuitionFee> tuitionFees = new List<Models.TuitionFee>();
@@ -47,6 +48,8 @@ namespace GOCSystem2018
         List<MiscFee> miscFees = new List<MiscFee>();
         List<OtherFee> otherFees = new List<OtherFee>();
         List<Voucher> vouchers = new List<Voucher>();
+
+        List<Grading> grades = new List<Grading>();
 
         public string StudName, LRN, Track, GradeLevel, RegNo, Strand,Voucher;
 
@@ -149,30 +152,34 @@ namespace GOCSystem2018
 
         public void SaveForGrading()
         {
-            string a,b;
+            //string a,b;
+
             for (int i = 0; i < dgvSubject.Rows.Count; i++)
             {
-                a= dgvSubject.Rows[i].Cells[0].FormattedValue.ToString();
-                b = dgvSubject.Rows[i].Cells[1].FormattedValue.ToString();
-                //a = dgvSubject.CurrentRow.Cells[i].FormattedValue.ToString();
-                MessageBox.Show(a +"\t"+b);
+                grade.StudentId = "";
+                grade.Fullname = lblName.Text;
+                grade.SubjectCode = dgvSubject.Rows[i].Cells[0].FormattedValue.ToString();
+                grade.SubjectDesc = dgvSubject.Rows[i].Cells[1].FormattedValue.ToString();
+                grade.Units = "";
+                grade.FirstQ = 0;
+                grade.SecondQ = 0;
+                grade.Average = 0;
+                grade.Remarks = "";
+                grade.Term = lblSem.Text;
+                grade.GradeLevel = lblGradeLevel.Text;
+                grade.Section = cmbSection.Text;
+                grade.Strand = lblStrand.Text;
+
+                grade.Save();
+
             }
+            MessageBox.Show("Subject Saved to grading!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             //lblGradeLevel.Text;
             //lblSem.Text;
             //cmbSection.Text;
             //lblStrand.Text;
             //lblName.Text;
-
-
-
-            
-            
-
-
-
-            //lblTotalMiscFee.Text = sum1.ToString("n");
-
         }
 
         public void LoadAssesOtherFees()

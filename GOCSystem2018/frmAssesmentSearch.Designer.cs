@@ -49,6 +49,8 @@
             this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GradeLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Strand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.track = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.voucher = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,7 +72,9 @@
             this.LastName,
             this.FirstName,
             this.GradeLevel,
-            this.Strand});
+            this.Strand,
+            this.track,
+            this.voucher});
             this.dgvSearch.Location = new System.Drawing.Point(38, 134);
             this.dgvSearch.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSearch.Name = "dgvSearch";
@@ -254,6 +258,18 @@
             this.Strand.Name = "Strand";
             this.Strand.ReadOnly = true;
             // 
+            // track
+            // 
+            this.track.HeaderText = "Track";
+            this.track.Name = "track";
+            this.track.ReadOnly = true;
+            // 
+            // voucher
+            // 
+            this.voucher.HeaderText = "Voucher Type";
+            this.voucher.Name = "voucher";
+            this.voucher.ReadOnly = true;
+            // 
             // frmStudSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -306,5 +322,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn FirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GradeLevel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Strand;
+        private System.Windows.Forms.DataGridViewTextBoxColumn track;
+        private System.Windows.Forms.DataGridViewTextBoxColumn voucher;
     }
 }

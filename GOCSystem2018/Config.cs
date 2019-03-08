@@ -11,37 +11,75 @@ namespace GOCSystem2018
 {
     class Config
     {
-        protected static string server = "localhost";
-        protected static string port = "3306";
-        protected static string username = "root";
-        protected static string password = "";
-        protected static string database = "goc_info_sys";
+        //server host name
+        public static string DB_HOST = Properties.Settings.Default.HOST;
 
+        //server database
+        public static string DB_NAME = Properties.Settings.Default.DATABASE;
 
+        //server username
+        public static string DB_USER = Properties.Settings.Default.USERNAME;
 
-        public static string GetConnectionString()
+        //server password
+        public static string DB_PASSWORD = Properties.Settings.Default.PASSWORD;
+
+        //server DSN
+        public static string DSN = Properties.Settings.Default.DSN;
+
+        /// <summary>
+        /// save settings to property.
+        /// </summary>
+        public static void saveSettings()
         {
-            return string.Format("SERVER = {0};PORT= {1};USERNAME = {2};PASSWORD = {3}; DATABASE = {4};", server, port, username, password, database);
+            Properties.Settings.Default.HOST = DB_HOST;
+            Properties.Settings.Default.DATABASE = DB_NAME;
+            Properties.Settings.Default.USERNAME = DB_USER;
+            Properties.Settings.Default.PASSWORD = DB_PASSWORD;
+            Properties.Settings.Default.DSN = DSN;
+
+            //save settings
+            Properties.Settings.Default.Save();
         }
 
-        public void TestConnection()
+        /// <summary>
+        /// Get all the credentials on the properties and create a connection string
+        /// </summary>
+        /// <returns>String - Connectionstring</returns>
+        public static string GetConnectionString()
+        {
+            return string.Format("Server={0};Database={1};Uid={2};Pwd={3};Convert Zero Datetime=True; Default Command Timeout=0", DB_HOST, DB_NAME, DB_USER, DB_PASSWORD);
+        }
+
+        //test connection for server
+        public static bool TestConnection()
         {
             try
             {
-                //prepare connection string 
+                //set database connection
                 using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
                 {
-
-                    //try to open connection
+                    //open connection
                     con.Open();
 
-                    MessageBox.Show("Connection Success!!!", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
                 }
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //revert settings
+                Properties.Settings.Default.HOST = String.Empty;
+                Properties.Settings.Default.DATABASE = String.Empty;
+                Properties.Settings.Default.USERNAME = String.Empty;
+                Properties.Settings.Default.PASSWORD = String.Empty;
+                Properties.Settings.Default.DSN = String.Empty;
 
+                //save settings
+                Properties.Settings.Default.Save();
+
+                //error configuration
+                MessageBox.Show("Error: Cannot connect to server" + ex.Message.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
             }
         }
     }

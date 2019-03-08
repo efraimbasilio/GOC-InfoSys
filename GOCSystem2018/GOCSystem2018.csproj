@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Billing.cs" />
     <Compile Include="crpHeader.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,6 +89,7 @@
     <Compile Include="frmPayment.Designer.cs">
       <DependentUpon>frmPayment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Grading.cs" />
     <Compile Include="rptAssesment.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -246,7 +248,8 @@
       <DependentUpon>rptSubject.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Schedule.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Settings.cs" />
     <EmbeddedResource Include="crpHeader.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpHeader.cs</LastGenOutput>

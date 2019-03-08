@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssesment));
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -60,6 +60,8 @@
             this.lblStrand = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEnroll = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.dgvSubject = new System.Windows.Forms.DataGridView();
             this.Subject1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -104,15 +106,13 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblSubjSemester = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label135 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.lblSubjSemester = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.btnEnroll = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -464,6 +464,32 @@
             this.panel1.TabIndex = 43;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btnEnroll
+            // 
+            this.btnEnroll.BackColor = System.Drawing.Color.Black;
+            this.btnEnroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnroll.ForeColor = System.Drawing.Color.White;
+            this.btnEnroll.Location = new System.Drawing.Point(318, 345);
+            this.btnEnroll.Name = "btnEnroll";
+            this.btnEnroll.Size = new System.Drawing.Size(109, 27);
+            this.btnEnroll.TabIndex = 1020;
+            this.btnEnroll.Text = "Enroll";
+            this.btnEnroll.UseVisualStyleBackColor = false;
+            this.btnEnroll.Click += new System.EventHandler(this.btnEnroll_Click);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Black;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(570, 345);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(109, 27);
+            this.button4.TabIndex = 1019;
+            this.button4.Text = "Search";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_3);
+            // 
             // dgvSubject
             // 
             this.dgvSubject.AllowUserToAddRows = false;
@@ -471,7 +497,7 @@
             this.dgvSubject.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Subject1,
             this.Desc});
-            this.dgvSubject.Location = new System.Drawing.Point(685, 343);
+            this.dgvSubject.Location = new System.Drawing.Point(689, 333);
             this.dgvSubject.Name = "dgvSubject";
             this.dgvSubject.ReadOnly = true;
             this.dgvSubject.Size = new System.Drawing.Size(543, 293);
@@ -529,11 +555,11 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "n";
-            dataGridViewCellStyle5.NullValue = "0.00";
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "n";
+            dataGridViewCellStyle3.NullValue = "0.00";
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -896,11 +922,11 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "n";
-            dataGridViewCellStyle6.NullValue = "0.00";
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "n";
+            dataGridViewCellStyle4.NullValue = "0.00";
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -923,6 +949,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1280, 54);
             this.panel2.TabIndex = 1012;
+            // 
+            // lblSubjSemester
+            // 
+            this.lblSubjSemester.AutoSize = true;
+            this.lblSubjSemester.BackColor = System.Drawing.Color.White;
+            this.lblSubjSemester.Location = new System.Drawing.Point(840, 22);
+            this.lblSubjSemester.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSubjSemester.Name = "lblSubjSemester";
+            this.lblSubjSemester.Size = new System.Drawing.Size(49, 15);
+            this.lblSubjSemester.TabIndex = 1023;
+            this.lblSubjSemester.Text = "Second";
             // 
             // label10
             // 
@@ -991,43 +1028,6 @@
             this.pictureBox22.TabIndex = 18;
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
-            // 
-            // lblSubjSemester
-            // 
-            this.lblSubjSemester.AutoSize = true;
-            this.lblSubjSemester.BackColor = System.Drawing.Color.White;
-            this.lblSubjSemester.Location = new System.Drawing.Point(840, 22);
-            this.lblSubjSemester.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSubjSemester.Name = "lblSubjSemester";
-            this.lblSubjSemester.Size = new System.Drawing.Size(49, 15);
-            this.lblSubjSemester.TabIndex = 1023;
-            this.lblSubjSemester.Text = "Second";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(570, 345);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 27);
-            this.button4.TabIndex = 1019;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_3);
-            // 
-            // btnEnroll
-            // 
-            this.btnEnroll.BackColor = System.Drawing.Color.Black;
-            this.btnEnroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnroll.ForeColor = System.Drawing.Color.White;
-            this.btnEnroll.Location = new System.Drawing.Point(318, 345);
-            this.btnEnroll.Name = "btnEnroll";
-            this.btnEnroll.Size = new System.Drawing.Size(109, 27);
-            this.btnEnroll.TabIndex = 1020;
-            this.btnEnroll.Text = "Enroll";
-            this.btnEnroll.UseVisualStyleBackColor = false;
-            this.btnEnroll.Click += new System.EventHandler(this.btnEnroll_Click);
             // 
             // frmAssesment
             // 
