@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssesment));
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -78,11 +78,11 @@
             this.lblDownpayment = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.lbl = new System.Windows.Forms.Label();
+            this.lblTotalFees = new System.Windows.Forms.Label();
             this.lblVoucher = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
-            this.lblDP = new System.Windows.Forms.Label();
+            this.lblVoucherAmount = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.lblOther = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -177,7 +177,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 320);
+            this.label6.Location = new System.Drawing.Point(14, 317);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 15);
@@ -188,7 +188,7 @@
             // 
             this.cmbSection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSection.FormattingEnabled = true;
-            this.cmbSection.Location = new System.Drawing.Point(123, 317);
+            this.cmbSection.Location = new System.Drawing.Point(123, 314);
             this.cmbSection.Name = "cmbSection";
             this.cmbSection.Size = new System.Drawing.Size(130, 23);
             this.cmbSection.TabIndex = 5;
@@ -293,7 +293,7 @@
             this.cmbMOP.Items.AddRange(new object[] {
             "Full Payment",
             "Partial Payment"});
-            this.cmbMOP.Location = new System.Drawing.Point(123, 288);
+            this.cmbMOP.Location = new System.Drawing.Point(123, 285);
             this.cmbMOP.Name = "cmbMOP";
             this.cmbMOP.Size = new System.Drawing.Size(130, 23);
             this.cmbMOP.TabIndex = 26;
@@ -303,7 +303,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 291);
+            this.label8.Location = new System.Drawing.Point(14, 288);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 15);
@@ -558,11 +558,11 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "n";
-            dataGridViewCellStyle1.NullValue = "0.00";
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "n";
+            dataGridViewCellStyle5.NullValue = "0.00";
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -613,11 +613,11 @@
             this.groupBox5.Controls.Add(this.lblDownpayment);
             this.groupBox5.Controls.Add(this.label26);
             this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.lbl);
+            this.groupBox5.Controls.Add(this.lblTotalFees);
             this.groupBox5.Controls.Add(this.lblVoucher);
             this.groupBox5.Controls.Add(this.label24);
             this.groupBox5.Controls.Add(this.label25);
-            this.groupBox5.Controls.Add(this.lblDP);
+            this.groupBox5.Controls.Add(this.lblVoucherAmount);
             this.groupBox5.Controls.Add(this.label23);
             this.groupBox5.Controls.Add(this.lblOther);
             this.groupBox5.Controls.Add(this.label20);
@@ -674,15 +674,15 @@
             this.label22.TabIndex = 1023;
             this.label22.Text = "Total Tuition and Other School Fee:";
             // 
-            // lbl
+            // lblTotalFees
             // 
-            this.lbl.Location = new System.Drawing.Point(164, 218);
-            this.lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(89, 15);
-            this.lbl.TabIndex = 1022;
-            this.lbl.Text = "__________________";
-            this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalFees.Location = new System.Drawing.Point(164, 218);
+            this.lblTotalFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalFees.Name = "lblTotalFees";
+            this.lblTotalFees.Size = new System.Drawing.Size(89, 15);
+            this.lblTotalFees.TabIndex = 1022;
+            this.lblTotalFees.Text = "__________________";
+            this.lblTotalFees.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblVoucher
             // 
@@ -715,15 +715,15 @@
             this.label25.TabIndex = 38;
             this.label25.Text = "Voucher Amount:";
             // 
-            // lblDP
+            // lblVoucherAmount
             // 
-            this.lblDP.Location = new System.Drawing.Point(164, 55);
-            this.lblDP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDP.Name = "lblDP";
-            this.lblDP.Size = new System.Drawing.Size(89, 15);
-            this.lblDP.TabIndex = 37;
-            this.lblDP.Text = "__________________";
-            this.lblDP.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblVoucherAmount.Location = new System.Drawing.Point(164, 55);
+            this.lblVoucherAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVoucherAmount.Name = "lblVoucherAmount";
+            this.lblVoucherAmount.Size = new System.Drawing.Size(89, 15);
+            this.lblVoucherAmount.TabIndex = 37;
+            this.lblVoucherAmount.Text = "__________________";
+            this.lblVoucherAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label23
             // 
@@ -947,11 +947,11 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "n";
-            dataGridViewCellStyle2.NullValue = "0.00";
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "n";
+            dataGridViewCellStyle6.NullValue = "0.00";
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -1145,7 +1145,7 @@
         private System.Windows.Forms.DataGridView dgvPerMonth;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label lblDP;
+        private System.Windows.Forms.Label lblVoucherAmount;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label lblOther;
         private System.Windows.Forms.Label label20;
@@ -1156,7 +1156,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Label lblVoucher;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label lblTotalFees;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dgvOtherFee;

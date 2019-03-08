@@ -108,7 +108,7 @@ namespace GOCSystem2018
                 {
                     double b=
                     b = Convert.ToDouble(item.VoucherAmount);
-                    lblDP.Text = b.ToString("n");
+                    lblVoucherAmount.Text = b.ToString("n");
                 }
             }
         }//End LoadRecords
@@ -135,7 +135,7 @@ namespace GOCSystem2018
         private void TotalTuition()
         {
             double total = Convert.ToDouble(lblTuition.Text) + Convert.ToDouble(lblOther.Text) + Convert.ToDouble(lblTotalMiscFee.Text);
-            lbl.Text = total.ToString("n");
+            lblTotalFees.Text = total.ToString("n");
         }
 
         public void LoadAssesMiscFees()
@@ -635,6 +635,10 @@ namespace GOCSystem2018
                 billingPartial.Full_name = lblName.Text;
                 billingPartial.DownPayment = lblDownpayment.Text;
 
+                //lblTotalFees.Text;
+                double ans = Convert.ToDouble(lblTotalFees.Text) - Convert.ToDouble(lblVoucherAmount.Text);
+                MessageBox.Show(ans.ToString("n"));
+
                 //billingPartial.P1;
                 //billingPartial.P2;
                 //billingPartial.P3;
@@ -646,6 +650,8 @@ namespace GOCSystem2018
                 //billingPartial.P9;
                 //billingPartial.P10;
                 //billingPartial.Balance;
+
+
             }
             else
             {
