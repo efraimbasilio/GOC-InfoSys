@@ -71,7 +71,28 @@ namespace GOCSystem2018
 
             LoadTuitionFee();
             TotalTuition();
+            //GetDownPayment();
         }
+        /// <summary>
+        /// Working to filter the Downpayment per department
+        /// </summary>
+        public void GetDownPayment()
+        {
+            //clear list
+            vouchers.Clear();
+            //pass value to list
+            voucher.VoucherFrom = Voucher;
+            vouchers = voucher.GetDownpaymnet();
+
+            //loop through load it to list view
+            foreach (var item in vouchers)
+            {               
+                    double b =
+                    b = Convert.ToDouble(item.DpAmount);
+                lblDownpayment.Text = b.ToString("n");
+               // MessageBox.Show(lblDownpayment.Text);           
+            }
+        }//End LoadRecords
         public void ComputeVoucher()
         {
             //clear list
@@ -655,6 +676,11 @@ namespace GOCSystem2018
         private void btnEnroll_Click(object sender, EventArgs e)
         {
             SaveForGrading();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            GetDownPayment();
         }
 
         private void button4_Click_1(object sender, EventArgs e)

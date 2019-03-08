@@ -16,6 +16,7 @@ namespace GOCSystem2018
         protected int id;
         protected string voucherFrom;
         protected string voucherAmount;
+        protected string dpAmount;
 
         //protected int flag;
 
@@ -41,6 +42,11 @@ namespace GOCSystem2018
         {
             get { return voucherAmount; }
             set { voucherAmount = value; }
+        }
+        public string DpAmount
+        {
+            get { return dpAmount; }
+            set { dpAmount = value; }
         }
 
         //variable name should always to be plural for every list
@@ -124,6 +130,49 @@ namespace GOCSystem2018
                         voucher.id = Convert.ToInt32(reader["id"].ToString());
                         voucher.voucherFrom = reader["voucher_from"].ToString();
                         voucher.voucherAmount = reader["voucher_amount"].ToString();
+
+                        vouchers.Add(voucher);
+
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return vouchers;
+        }
+
+        public List<Voucher> GetDownpaymnet()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM voucher WHERE voucher_from =@voucherFrom;";
+
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    //this is the criteria for filtering
+                    cmd.Parameters.AddWithValue("voucherFrom", voucherFrom);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Voucher voucher = new Voucher();
+
+                        //prepare properties to be send out
+                        voucher.DpAmount = reader["DP_amount"].ToString();
 
                         vouchers.Add(voucher);
 

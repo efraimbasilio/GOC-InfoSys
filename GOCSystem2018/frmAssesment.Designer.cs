@@ -113,6 +113,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label135 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblDownpayment = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -427,6 +430,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.btnEnroll);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.dgvSubject);
@@ -606,6 +610,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label3);
+            this.groupBox5.Controls.Add(this.lblDownpayment);
             this.groupBox5.Controls.Add(this.label26);
             this.groupBox5.Controls.Add(this.label22);
             this.groupBox5.Controls.Add(this.lbl);
@@ -1029,6 +1035,39 @@
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 78);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 15);
+            this.label3.TabIndex = 1025;
+            this.label3.Text = "Downpayment:";
+            // 
+            // lblDownpayment
+            // 
+            this.lblDownpayment.Location = new System.Drawing.Point(164, 78);
+            this.lblDownpayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDownpayment.Name = "lblDownpayment";
+            this.lblDownpayment.Size = new System.Drawing.Size(89, 15);
+            this.lblDownpayment.TabIndex = 1024;
+            this.lblDownpayment.Text = "__________________";
+            this.lblDownpayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(455, 345);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(109, 27);
+            this.button5.TabIndex = 1021;
+            this.button5.Text = "Search";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // frmAssesment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1156,5 +1195,8 @@
         private System.Windows.Forms.Label lblSubjSemester;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnEnroll;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDownpayment;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -256,7 +256,7 @@
     </Compile>
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="StudentProfile.cs" />
+    <Compile Include="Models\StudentProfile.cs" />
     <EmbeddedResource Include="crpHeader.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpHeader.cs</LastGenOutput>

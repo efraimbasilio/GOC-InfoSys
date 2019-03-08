@@ -125,7 +125,7 @@ namespace GOCSystem2018
                 frmAssesment.Downpayment();
                 frmAssesment.LoadAssesOtherFees();
                 frmAssesment.ComputeVoucher();
-
+                frmAssesment.GetDownPayment();
                 //show assesment                             
                 frmAssesment.Show();
                 //this.Dispose();
