@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace GOCSystem2018
 {
     public partial class frmStudSearch : Form
     {
         Assesment assesment = new Assesment();
+        StudentProfile studProfile = new StudentProfile();
+
+        List<StudentProfile> studProfiles = new List<StudentProfile>();
         List<Assesment> assesments = new List<Assesment>();
 
         frmAssesment frmAssesment = new frmAssesment();
@@ -22,59 +26,109 @@ namespace GOCSystem2018
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Load all record From stud registration table
-        /// </summary>
-        public void LoadRecords()
+        private void frmStudSearch_Load(object sender, EventArgs e)
         {
-            //clear list        
-            dgvSearch.Rows.Clear();
-            assesments.Clear();        
-            //pass value to list
-            assesments = assesment.Load();
-            //loop through load it to list view
-            foreach (var item in assesments)
-            {               
-                dgvSearch.Rows.Add(item.Id, item.StudLRN, item.StudRegistrationNo, item.StudGOCNo, item.StudLastName, item.StudFirstName, item.StudGradeLevel, item.StudStrand);
+            LoadRecords();
+        }
+
+        private void LoadRecords()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM student_profile";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+                    dgvSearch.DataSource = dt;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void frmStudSearch_Load(object sender, EventArgs e)
+        public void searchData(string valueToSearch)
         {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
 
+                    string sql = "SELECT * FROM student_profile WHERE CONCAT(`last_name`, `first_name`,`regno`) LIKE '%" + valueToSearch + "%'";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+                    dgvSearch.DataSource = dt;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        private void dgvSearch_DoubleClick(object sender, EventArgs e)
-        {            
+        private void SelectData()
+        {
             if (dgvSearch.SelectedRows.Count > 0)
             {
                 //clear list
-                assesments.Clear();
+                studProfiles.Clear();
                 //pass value
-                assesment.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
-                assesments = assesment.GetById();
+                studProfile.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
+                studProfiles = studProfile.GetById();
 
-                foreach (var item in assesments)
-                {                    
+                foreach (var item in studProfiles)
+                {
                     //pass variable to form Assesment
-                    frmAssesment.StudName = item.StudLastName+", "+item.StudFirstName +" "+item.StudMiddleName;
+                    frmAssesment.StudName = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
                     frmAssesment.LRN = item.StudLRN;
                     frmAssesment.GradeLevel = item.StudGradeLevel;
-                    frmAssesment.Track = item.StudAcadTrack;
+                    frmAssesment.Track = item.Track;
                     frmAssesment.RegNo = item.StudRegistrationNo;
                     frmAssesment.Strand = item.StudStrand;
-                    
-                    frmAssesment.Reset();
-                    frmAssesment.LoadSection();
-                    frmAssesment.LoadSchoolYear();
-                   // frmAssesment.LoadStrand();
-                    frmAssesment.RenderStudNo();
-                    ///frmAssesment.tuitionFees2();
                 }
+
+                //set up before form load
+                frmAssesment.Reset();
+                frmAssesment.LoadSection();
+                frmAssesment.LoadSchoolYear();
+                frmAssesment.RenderStudNo();
+                frmAssesment.LoadAssesMiscFees();
+                frmAssesment.Downpayment();
+                frmAssesment.LoadAssesOtherFees();
+
                 //show assesment                             
                 frmAssesment.Show();
-                this.Dispose();
+                //this.Dispose();
             }
+        }
+
+
+        private void dgvSearch_DoubleClick(object sender, EventArgs e)
+        {            
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -86,11 +140,6 @@ namespace GOCSystem2018
         {
             if (e.KeyData == Keys.Enter)
             {
-                //textBox1.Location = new Point(80, 141);
-                //pictureBox1.Location = new Point(5, 87);
-               // label2.Visible = false;
-               // label1.Visible = false;
-
                 dgvSearch.Visible = true;
             }
         }
@@ -108,6 +157,20 @@ namespace GOCSystem2018
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string valueToSearch = txtSearch.Text.ToString();
+            searchData(valueToSearch);
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                SelectData();
+            }
         }
     }
 }

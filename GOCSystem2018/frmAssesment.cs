@@ -69,11 +69,6 @@ namespace GOCSystem2018
             lblStrand.Text = Strand;
             lblVoucher.Text = Voucher;
 
-            LoadAssesMiscFees();
-            Downpayment();
-            LoadAssesOtherFees();
-            
-           
             LoadTuitionFee();
             TotalTuition();
 
@@ -700,7 +695,7 @@ namespace GOCSystem2018
         private void button1_Click(object sender, EventArgs e)
         {
             frmStudSearch frmStudSearch = new frmStudSearch();
-            frmStudSearch.LoadRecords();
+            //frmStudSearch.LoadRecords();
 
             frmStudSearch.Show();
             this.Dispose();           
