@@ -59,5 +59,12 @@ namespace GOCSystem2018
         {
             
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            DataView dv = new DataView(dt);
+            dv.RowFilter = string.Format("last_name LIKE '%{0}%'", txtSearch.Text);
+            dgvSearch.DataSource = dv;
+        }
     }
 }
