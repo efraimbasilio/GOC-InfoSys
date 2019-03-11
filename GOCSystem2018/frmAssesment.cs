@@ -628,8 +628,6 @@ namespace GOCSystem2018
                 //billingPartial.P9;
                 //billingPartial.P10;
                 //billingPartial.Balance;
-
-
             }
             else
             {

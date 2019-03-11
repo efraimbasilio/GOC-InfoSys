@@ -350,7 +350,6 @@
             this.StudentlistPanel = new System.Windows.Forms.Panel();
             this.Headertit = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -381,6 +380,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.SidebarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -414,7 +414,6 @@
             this.panel6.SuspendLayout();
             this.StudentlistPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -436,6 +435,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // SidebarPanel
@@ -3950,9 +3950,9 @@
             // 
             this.StudentlistPanel.AutoScroll = true;
             this.StudentlistPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
+            this.StudentlistPanel.Controls.Add(this.dgvSearch);
             this.StudentlistPanel.Controls.Add(this.Headertit);
             this.StudentlistPanel.Controls.Add(this.pictureBox10);
-            this.StudentlistPanel.Controls.Add(this.dgvSearch);
             this.StudentlistPanel.Controls.Add(this.pictureBox5);
             this.StudentlistPanel.Controls.Add(this.button1);
             this.StudentlistPanel.Controls.Add(this.pictureBox4);
@@ -3987,14 +3987,6 @@
             this.pictureBox10.TabIndex = 1035;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Visible = false;
-            // 
-            // dgvSearch
-            // 
-            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(56, 6);
-            this.dgvSearch.Name = "dgvSearch";
-            this.dgvSearch.Size = new System.Drawing.Size(284, 56);
-            this.dgvSearch.TabIndex = 1036;
             // 
             // pictureBox5
             // 
@@ -4373,6 +4365,18 @@
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
             // 
+            // dgvSearch
+            // 
+            this.dgvSearch.AllowUserToAddRows = false;
+            this.dgvSearch.AllowUserToDeleteRows = false;
+            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSearch.Location = new System.Drawing.Point(10, 6);
+            this.dgvSearch.Name = "dgvSearch";
+            this.dgvSearch.ReadOnly = true;
+            this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSearch.Size = new System.Drawing.Size(583, 73);
+            this.dgvSearch.TabIndex = 1036;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4439,7 +4443,6 @@
             this.StudentlistPanel.ResumeLayout(false);
             this.StudentlistPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -4463,6 +4466,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4749,7 +4753,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label lblSY;
-        private System.Windows.Forms.DataGridView dgvSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel15;
@@ -4814,5 +4817,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.DataGridView dgvSearch;
     }
 }
