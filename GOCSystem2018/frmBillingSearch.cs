@@ -13,40 +13,103 @@ namespace GOCSystem2018
 {
     public partial class frmBillingSearch : Form
     {
-        public frmBillingSearch()
+        /*Models*/
+        StudentProfile studentProfile = new StudentProfile();
+        /***************************************************************/
+
+        /*Array List*/
+        List<StudentProfile> studentProfiles = new List<StudentProfile>();
+        /***************************************************************/
+
+        /*Forms*/
+        frmBilling frmBilling = new frmBilling();
+        /***************************************************************/
+
+        /***********************************************************************************/
+        /*PUBLIC VARIABLES*/
+        /**********************************************************************************/
+
+        /***********************************************************************************/
+        /*PUBLIC METHOD*/
+        /**********************************************************************************/
+        public void searchData(string valueToSearch)
         {
-            InitializeComponent();
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM student_profile WHERE CONCAT(`last_name`, `first_name`,`regno`) LIKE '%" + valueToSearch + "%'";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+                    dgvSearch.DataSource = dt;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-      
-      private void DataSelected()
+        /***********************************************************************************/
+        /*PRIVATE METHOD*/
+        /**********************************************************************************/
+        private void SelectData()
         {
             if (dgvSearch.SelectedRows.Count > 0)
             {
-                ////clear list
-                //assesments.Clear();
-                ////pass value
-                //assesment.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
-                //assesments = assesment.GetById();
+                //clear list
+                studentProfiles.Clear();
+                //pass value
+                studentProfile.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
+                studentProfiles = studentProfile.GetById();
 
-                //foreach (var item in assesments)
-                //{
-                //    //pass variable to form Assesment
-                //    frmAssesment.StudName = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
-                //    frmAssesment.LRN = item.StudLRN;
-                //    frmAssesment.GradeLevel = item.StudGradeLevel;
-                //    frmAssesment.Track = item.StudAcadTrack;
-                //    frmAssesment.RegNo = item.StudRegistrationNo;
-                //    frmAssesment.Strand = item.StudStrand;
+                foreach (var item in studentProfiles)
+                {
+                    //pass variable to form Assesment
+                    frmBilling.StudName = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
+                    frmBilling.StudID = item.StudGOCNo;
+                    frmBilling.LRN = item.StudLRN;
+                    frmBilling.GradeLevel = item.StudGradeLevel;
+                    frmBilling.Track = item.Track;
+                    frmBilling.Strand = item.StudStrand;
+                    frmBilling.VoucherType = item.VoucherType;
+                    frmBilling.RegNo = item.StudRegistrationNo;
 
-                //    frmAssesment.Reset();
-                //    frmAssesment.LoadSection();
-                //    frmAssesment.LoadSchoolYear();
-                //    // frmAssesment.LoadStrand();
-                //    frmAssesment.RenderStudNo();
-                //    ///frmAssesment.tuitionFees2();
-                //}
-                ////show assesment                             
-                //frmAssesment.Show();
+                    if (item.Reservee.Equals("1"))
+                    {
+                        frmBilling.lblReservation.ForeColor = Color.Red;
+                        frmBilling.lblReservation.BackColor = Color.Black;
+
+                    }
+
+                    if (item.PartialPayment.Equals("1"))
+                    {
+                        frmBilling.lblPartial.ForeColor = Color.Red;
+                        frmBilling.lblPartial.BackColor = Color.Black;
+                        frmBilling.cmbMOP.Text = "Partial Payment";
+                    }
+
+                    if (item.FullPayment.Equals("1"))
+                    {
+                        frmBilling.lblFullPayment.ForeColor = Color.Red;
+                        frmBilling.lblFullPayment.BackColor = Color.Black;
+                        frmBilling.cmbMOP.Text = "Full Payment";
+                    }                    
+                }
+
+                //set up before form load
+                frmBilling.Render();
+                frmBilling.Show();
                 //this.Dispose();
             }
         }
@@ -80,33 +143,13 @@ namespace GOCSystem2018
             }
         }
 
-        public void searchData(string valueToSearch)
+        /***********************************************************************************/
+        /*PRINTING METHOD*/
+        /**********************************************************************************/
+
+        public frmBillingSearch()
         {
-            try
-            {
-                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
-                {
-                    con.Open();
-
-                    string sql = "SELECT * FROM student_profile WHERE CONCAT(`last_name`, `first_name`,`regno`) LIKE '%" + valueToSearch + "%'";
-
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
-
-                    MySqlDataAdapter da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    //initialize new datatable
-                    DataTable dt = new DataTable();
-
-                    da.Fill(dt);
-                    dgvSearch.DataSource = dt;
-
-                }
-            }
-            catch (MySqlException ex)
-            {
-
-                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            InitializeComponent();
         }
 
         private void frmBillingSearch_Load(object sender, EventArgs e)
@@ -121,21 +164,26 @@ namespace GOCSystem2018
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            //DataView dv = new DataView(dt);
-            //dv.RowFilter = string.Format("last_name LIKE '%{0}%'", txtSearch.Text);
-            //dgvSearch.DataSource = dv;
-
             string valueToSearch = txtSearch.Text.ToString();
             searchData(valueToSearch);
-
         }
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
             {
-              
+                SelectData();
             }
+        }
+
+        private void dgvSearch_DoubleClick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void dgvSearch_DoubleClick_1(object sender, EventArgs e)
+        {
+            SelectData();
         }
     }
 }

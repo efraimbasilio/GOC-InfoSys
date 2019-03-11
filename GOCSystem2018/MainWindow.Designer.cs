@@ -30,14 +30,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.SidebarPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
@@ -57,11 +57,10 @@
             this.StudlistBtn = new System.Windows.Forms.Label();
             this.EnrollmentBtn = new System.Windows.Forms.Label();
             this.DashboardBtn = new System.Windows.Forms.Label();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.Dashboardpanel = new System.Windows.Forms.Panel();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
+            this.sectiontxt = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label22 = new System.Windows.Forms.Label();
@@ -120,10 +119,57 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label136 = new System.Windows.Forms.Label();
+            this.lblSem = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.studprofpanel = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label35 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label96 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label106 = new System.Windows.Forms.Label();
+            this.label107 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.tp10txt = new System.Windows.Forms.Label();
+            this.tp9txt = new System.Windows.Forms.Label();
+            this.tp8txt = new System.Windows.Forms.Label();
+            this.tp7txt = new System.Windows.Forms.Label();
+            this.tp6txt = new System.Windows.Forms.Label();
+            this.tp5txt = new System.Windows.Forms.Label();
+            this.tp4txt = new System.Windows.Forms.Label();
+            this.tp3txt = new System.Windows.Forms.Label();
+            this.tp2txt = new System.Windows.Forms.Label();
+            this.tp1txt = new System.Windows.Forms.Label();
+            this.M10txt = new System.Windows.Forms.Label();
+            this.M9txt = new System.Windows.Forms.Label();
+            this.M8txt = new System.Windows.Forms.Label();
+            this.M7txt = new System.Windows.Forms.Label();
+            this.M6txt = new System.Windows.Forms.Label();
+            this.M5txt = new System.Windows.Forms.Label();
+            this.M4txt = new System.Windows.Forms.Label();
+            this.M3txt = new System.Windows.Forms.Label();
+            this.M2txt = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.M1txt = new System.Windows.Forms.Label();
+            this.vttxt = new System.Windows.Forms.Label();
+            this.moptxt = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -131,130 +177,133 @@
             this.label223 = new System.Windows.Forms.Label();
             this.label188 = new System.Windows.Forms.Label();
             this.label212 = new System.Windows.Forms.Label();
-            this.label189 = new System.Windows.Forms.Label();
+            this.G12_AS12 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
             this.label219 = new System.Windows.Forms.Label();
-            this.label190 = new System.Windows.Forms.Label();
+            this.G12_AS11 = new System.Windows.Forms.Label();
             this.label218 = new System.Windows.Forms.Label();
-            this.label191 = new System.Windows.Forms.Label();
+            this.G12_AS14 = new System.Windows.Forms.Label();
             this.label217 = new System.Windows.Forms.Label();
-            this.label192 = new System.Windows.Forms.Label();
+            this.G12_AS13 = new System.Windows.Forms.Label();
             this.label216 = new System.Windows.Forms.Label();
-            this.label193 = new System.Windows.Forms.Label();
+            this.G12_AS10 = new System.Windows.Forms.Label();
             this.label215 = new System.Windows.Forms.Label();
-            this.label194 = new System.Windows.Forms.Label();
+            this.G12_AS9 = new System.Windows.Forms.Label();
             this.label214 = new System.Windows.Forms.Label();
-            this.label195 = new System.Windows.Forms.Label();
+            this.G12_AS8 = new System.Windows.Forms.Label();
             this.label213 = new System.Windows.Forms.Label();
             this.label196 = new System.Windows.Forms.Label();
-            this.label211 = new System.Windows.Forms.Label();
-            this.label197 = new System.Windows.Forms.Label();
-            this.label210 = new System.Windows.Forms.Label();
-            this.label198 = new System.Windows.Forms.Label();
-            this.label209 = new System.Windows.Forms.Label();
-            this.label199 = new System.Windows.Forms.Label();
-            this.label208 = new System.Windows.Forms.Label();
-            this.label200 = new System.Windows.Forms.Label();
-            this.label207 = new System.Windows.Forms.Label();
-            this.label201 = new System.Windows.Forms.Label();
-            this.label206 = new System.Windows.Forms.Label();
-            this.label202 = new System.Windows.Forms.Label();
-            this.label205 = new System.Windows.Forms.Label();
-            this.label203 = new System.Windows.Forms.Label();
+            this.G12_1S8 = new System.Windows.Forms.Label();
+            this.G12_2S12 = new System.Windows.Forms.Label();
+            this.G12_1S9 = new System.Windows.Forms.Label();
+            this.G12_2S11 = new System.Windows.Forms.Label();
+            this.G12_1S10 = new System.Windows.Forms.Label();
+            this.G12_2S14 = new System.Windows.Forms.Label();
+            this.G12_1S13 = new System.Windows.Forms.Label();
+            this.G12_2S13 = new System.Windows.Forms.Label();
+            this.G12_1S14 = new System.Windows.Forms.Label();
+            this.G12_2S10 = new System.Windows.Forms.Label();
+            this.G12_1S11 = new System.Windows.Forms.Label();
+            this.G12_2S9 = new System.Windows.Forms.Label();
+            this.G12_1S12 = new System.Windows.Forms.Label();
+            this.G12_2S8 = new System.Windows.Forms.Label();
             this.label204 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label221 = new System.Windows.Forms.Label();
             this.label104 = new System.Windows.Forms.Label();
             this.label148 = new System.Windows.Forms.Label();
-            this.label105 = new System.Windows.Forms.Label();
+            this.G11_AS12 = new System.Windows.Forms.Label();
             this.label155 = new System.Windows.Forms.Label();
-            this.label106 = new System.Windows.Forms.Label();
+            this.G11_AS11 = new System.Windows.Forms.Label();
             this.label154 = new System.Windows.Forms.Label();
-            this.label107 = new System.Windows.Forms.Label();
+            this.G11_AS14 = new System.Windows.Forms.Label();
             this.label153 = new System.Windows.Forms.Label();
-            this.label108 = new System.Windows.Forms.Label();
+            this.G11_AS13 = new System.Windows.Forms.Label();
             this.label152 = new System.Windows.Forms.Label();
-            this.label109 = new System.Windows.Forms.Label();
+            this.G11_AS10 = new System.Windows.Forms.Label();
             this.label151 = new System.Windows.Forms.Label();
-            this.label110 = new System.Windows.Forms.Label();
+            this.G11_AS9 = new System.Windows.Forms.Label();
             this.label150 = new System.Windows.Forms.Label();
-            this.label111 = new System.Windows.Forms.Label();
+            this.G11_AS8 = new System.Windows.Forms.Label();
             this.label149 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
-            this.label147 = new System.Windows.Forms.Label();
-            this.label113 = new System.Windows.Forms.Label();
-            this.label146 = new System.Windows.Forms.Label();
-            this.label114 = new System.Windows.Forms.Label();
-            this.label145 = new System.Windows.Forms.Label();
-            this.label116 = new System.Windows.Forms.Label();
-            this.label144 = new System.Windows.Forms.Label();
-            this.label118 = new System.Windows.Forms.Label();
-            this.label143 = new System.Windows.Forms.Label();
-            this.label120 = new System.Windows.Forms.Label();
-            this.label142 = new System.Windows.Forms.Label();
-            this.label121 = new System.Windows.Forms.Label();
-            this.label141 = new System.Windows.Forms.Label();
-            this.label139 = new System.Windows.Forms.Label();
+            this.G11_1S8 = new System.Windows.Forms.Label();
+            this.G11_2S12 = new System.Windows.Forms.Label();
+            this.G11_1S9 = new System.Windows.Forms.Label();
+            this.G11_2S11 = new System.Windows.Forms.Label();
+            this.G11_1S10 = new System.Windows.Forms.Label();
+            this.G11_2S14 = new System.Windows.Forms.Label();
+            this.G11_1S13 = new System.Windows.Forms.Label();
+            this.G11_2S13 = new System.Windows.Forms.Label();
+            this.G11_1S14 = new System.Windows.Forms.Label();
+            this.G11_2S10 = new System.Windows.Forms.Label();
+            this.G11_1S11 = new System.Windows.Forms.Label();
+            this.G11_2S9 = new System.Windows.Forms.Label();
+            this.G11_1S12 = new System.Windows.Forms.Label();
+            this.G11_2S8 = new System.Windows.Forms.Label();
             this.label140 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.label222 = new System.Windows.Forms.Label();
             this.label156 = new System.Windows.Forms.Label();
             this.label180 = new System.Windows.Forms.Label();
-            this.label157 = new System.Windows.Forms.Label();
+            this.G12_AS5 = new System.Windows.Forms.Label();
             this.label187 = new System.Windows.Forms.Label();
-            this.label158 = new System.Windows.Forms.Label();
+            this.G12_AS4 = new System.Windows.Forms.Label();
             this.label186 = new System.Windows.Forms.Label();
-            this.label159 = new System.Windows.Forms.Label();
+            this.G12_AS7 = new System.Windows.Forms.Label();
             this.label185 = new System.Windows.Forms.Label();
-            this.label160 = new System.Windows.Forms.Label();
+            this.G12_AS6 = new System.Windows.Forms.Label();
             this.label184 = new System.Windows.Forms.Label();
-            this.label161 = new System.Windows.Forms.Label();
+            this.G12_AS3 = new System.Windows.Forms.Label();
             this.label183 = new System.Windows.Forms.Label();
-            this.label162 = new System.Windows.Forms.Label();
+            this.G12_AS2 = new System.Windows.Forms.Label();
             this.label182 = new System.Windows.Forms.Label();
-            this.label163 = new System.Windows.Forms.Label();
+            this.G12_AS1 = new System.Windows.Forms.Label();
             this.label181 = new System.Windows.Forms.Label();
             this.label164 = new System.Windows.Forms.Label();
-            this.label179 = new System.Windows.Forms.Label();
-            this.label165 = new System.Windows.Forms.Label();
-            this.label178 = new System.Windows.Forms.Label();
-            this.label166 = new System.Windows.Forms.Label();
-            this.label177 = new System.Windows.Forms.Label();
-            this.label167 = new System.Windows.Forms.Label();
-            this.label176 = new System.Windows.Forms.Label();
-            this.label168 = new System.Windows.Forms.Label();
-            this.label175 = new System.Windows.Forms.Label();
-            this.label169 = new System.Windows.Forms.Label();
-            this.label174 = new System.Windows.Forms.Label();
-            this.label170 = new System.Windows.Forms.Label();
-            this.label173 = new System.Windows.Forms.Label();
-            this.label171 = new System.Windows.Forms.Label();
+            this.G12_1S1 = new System.Windows.Forms.Label();
+            this.G12_2S5 = new System.Windows.Forms.Label();
+            this.G12_1S2 = new System.Windows.Forms.Label();
+            this.G12_2S4 = new System.Windows.Forms.Label();
+            this.G12_1S3 = new System.Windows.Forms.Label();
+            this.G12_2S7 = new System.Windows.Forms.Label();
+            this.G12_1S6 = new System.Windows.Forms.Label();
+            this.G12_2S6 = new System.Windows.Forms.Label();
+            this.G12_1S7 = new System.Windows.Forms.Label();
+            this.G12_2S3 = new System.Windows.Forms.Label();
+            this.G12_1S4 = new System.Windows.Forms.Label();
+            this.G12_2S2 = new System.Windows.Forms.Label();
+            this.G12_1S5 = new System.Windows.Forms.Label();
+            this.G12_2S1 = new System.Windows.Forms.Label();
             this.label172 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label220 = new System.Windows.Forms.Label();
             this.label92 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label94 = new System.Windows.Forms.Label();
-            this.label96 = new System.Windows.Forms.Label();
-            this.label98 = new System.Windows.Forms.Label();
-            this.label101 = new System.Windows.Forms.Label();
-            this.label102 = new System.Windows.Forms.Label();
-            this.label103 = new System.Windows.Forms.Label();
+            this.G11_AS5 = new System.Windows.Forms.Label();
+            this.G11_AS4 = new System.Windows.Forms.Label();
+            this.G11_AS7 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.G11_AS6 = new System.Windows.Forms.Label();
+            this.G11_AS3 = new System.Windows.Forms.Label();
+            this.G11_AS2 = new System.Windows.Forms.Label();
+            this.G11_AS1 = new System.Windows.Forms.Label();
             this.label84 = new System.Windows.Forms.Label();
-            this.label85 = new System.Windows.Forms.Label();
-            this.label86 = new System.Windows.Forms.Label();
-            this.label87 = new System.Windows.Forms.Label();
-            this.label88 = new System.Windows.Forms.Label();
-            this.label89 = new System.Windows.Forms.Label();
-            this.label90 = new System.Windows.Forms.Label();
-            this.label91 = new System.Windows.Forms.Label();
+            this.G11_2S5 = new System.Windows.Forms.Label();
+            this.G11_2S4 = new System.Windows.Forms.Label();
+            this.G11_2S7 = new System.Windows.Forms.Label();
+            this.G11_2S6 = new System.Windows.Forms.Label();
+            this.G11_2S3 = new System.Windows.Forms.Label();
+            this.G11_2S2 = new System.Windows.Forms.Label();
+            this.G11_2S1 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
-            this.label66 = new System.Windows.Forms.Label();
-            this.label67 = new System.Windows.Forms.Label();
-            this.label71 = new System.Windows.Forms.Label();
-            this.label82 = new System.Windows.Forms.Label();
-            this.label83 = new System.Windows.Forms.Label();
+            this.G11_1S5 = new System.Windows.Forms.Label();
+            this.G11_1S4 = new System.Windows.Forms.Label();
+            this.G11_1S7 = new System.Windows.Forms.Label();
+            this.G11_1S6 = new System.Windows.Forms.Label();
+            this.G11_1S3 = new System.Windows.Forms.Label();
+            this.G11_1S2 = new System.Windows.Forms.Label();
+            this.G11_1S1 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.label73 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
@@ -264,15 +313,30 @@
             this.label80 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.gcontactnotxt = new System.Windows.Forms.Label();
+            this.guardiantxt = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
+            this.mcontactnotxt = new System.Windows.Forms.Label();
+            this.mothertxt = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.fcontactnotxt = new System.Windows.Forms.Label();
+            this.fathertxt = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.religiontxt = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.nationalitytxt = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.glvltxt = new System.Windows.Forms.Label();
+            this.strandtxt = new System.Windows.Forms.Label();
+            this.bptxt = new System.Windows.Forms.Label();
+            this.Gendertxt = new System.Windows.Forms.Label();
+            this.addtxt = new System.Windows.Forms.Label();
+            this.bdtxt = new System.Windows.Forms.Label();
+            this.Contactnotxt = new System.Windows.Forms.Label();
+            this.studnotxt = new System.Windows.Forms.Label();
+            this.lrntxt = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
@@ -283,20 +347,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.StudentlistPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Headertit = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.dgvSearch = new System.Windows.Forms.DataGridView();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Headerline = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MaintenancePanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -320,7 +380,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.dgvSearch = new System.Windows.Forms.DataGridView();
+            this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.SidebarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
@@ -330,7 +390,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.Dashboardpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.panel14.SuspendLayout();
@@ -343,16 +402,19 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.studprofpanel.SuspendLayout();
+            this.panel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.StudentlistPanel.SuspendLayout();
-            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -373,7 +435,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.SuspendLayout();
             // 
             // SidebarPanel
@@ -398,9 +460,9 @@
             this.SidebarPanel.Controls.Add(this.EnrollmentBtn);
             this.SidebarPanel.Controls.Add(this.DashboardBtn);
             this.SidebarPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.SidebarPanel.Location = new System.Drawing.Point(0, 0);
+            this.SidebarPanel.Location = new System.Drawing.Point(0, 54);
             this.SidebarPanel.Name = "SidebarPanel";
-            this.SidebarPanel.Size = new System.Drawing.Size(65, 720);
+            this.SidebarPanel.Size = new System.Drawing.Size(65, 666);
             this.SidebarPanel.TabIndex = 0;
             // 
             // panel5
@@ -612,17 +674,6 @@
             this.DashboardBtn.Text = "Dashboard";
             this.DashboardBtn.Click += new System.EventHandler(this.DashboardBtn_Click);
             // 
-            // pictureBox22
-            // 
-            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.Location = new System.Drawing.Point(10, 8);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(45, 39);
-            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox22.TabIndex = 18;
-            this.pictureBox22.TabStop = false;
-            this.pictureBox22.WaitOnLoad = true;
-            // 
             // Dashboardpanel
             // 
             this.Dashboardpanel.AutoScroll = true;
@@ -651,31 +702,31 @@
             // 
             this.chart3.BorderSkin.BackColor = System.Drawing.Color.Transparent;
             this.chart3.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
-            chartArea7.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea7);
-            legend5.Name = "Legend1";
-            this.chart3.Legends.Add(legend5);
+            chartArea4.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea4);
+            legend3.Name = "Legend1";
+            this.chart3.Legends.Add(legend3);
             this.chart3.Location = new System.Drawing.Point(358, 168);
             this.chart3.Name = "chart3";
-            series7.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series7.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            series7.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            series7.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
-            series7.BackSecondaryColor = System.Drawing.Color.Transparent;
-            series7.BorderColor = System.Drawing.Color.Transparent;
-            series7.BorderWidth = 5;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series7.Color = System.Drawing.Color.Cyan;
-            series7.IsXValueIndexed = true;
-            series7.LabelForeColor = System.Drawing.Color.DimGray;
-            series7.Legend = "Legend1";
-            series7.MarkerBorderColor = System.Drawing.Color.White;
-            series7.MarkerColor = System.Drawing.Color.Red;
-            series7.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series7.Name = "Performance";
-            series7.ShadowColor = System.Drawing.Color.White;
-            this.chart3.Series.Add(series7);
+            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series4.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            series4.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series4.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            series4.BackSecondaryColor = System.Drawing.Color.Transparent;
+            series4.BorderColor = System.Drawing.Color.Transparent;
+            series4.BorderWidth = 5;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series4.Color = System.Drawing.Color.Cyan;
+            series4.IsXValueIndexed = true;
+            series4.LabelForeColor = System.Drawing.Color.DimGray;
+            series4.Legend = "Legend1";
+            series4.MarkerBorderColor = System.Drawing.Color.White;
+            series4.MarkerColor = System.Drawing.Color.Red;
+            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series4.Name = "Performance";
+            series4.ShadowColor = System.Drawing.Color.White;
+            this.chart3.Series.Add(series4);
             this.chart3.Size = new System.Drawing.Size(788, 202);
             this.chart3.TabIndex = 1022;
             this.chart3.Text = "chart3";
@@ -683,23 +734,23 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Controls.Add(this.label24);
+            this.panel14.Controls.Add(this.sectiontxt);
             this.panel14.Controls.Add(this.label23);
             this.panel14.Location = new System.Drawing.Point(44, 549);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(283, 137);
             this.panel14.TabIndex = 1021;
             // 
-            // label24
+            // sectiontxt
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(22, 47);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(96, 48);
-            this.label24.TabIndex = 5;
-            this.label24.Text = "Weekly Meeting\r\nOrientation\r\nPlanning\r\n";
+            this.sectiontxt.AutoSize = true;
+            this.sectiontxt.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sectiontxt.ForeColor = System.Drawing.Color.Black;
+            this.sectiontxt.Location = new System.Drawing.Point(22, 47);
+            this.sectiontxt.Name = "sectiontxt";
+            this.sectiontxt.Size = new System.Drawing.Size(96, 48);
+            this.sectiontxt.TabIndex = 5;
+            this.sectiontxt.Text = "Weekly Meeting\r\nOrientation\r\nPlanning\r\n";
             // 
             // label23
             // 
@@ -1185,8 +1236,8 @@
             // chart2
             // 
             this.chart2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.Cross;
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
+            chartArea5.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea5);
             this.chart2.Location = new System.Drawing.Point(344, 15);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
@@ -1197,18 +1248,18 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192))))),
         System.Drawing.Color.Teal,
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))))};
-            series8.BackSecondaryColor = System.Drawing.Color.White;
-            series8.BorderColor = System.Drawing.Color.White;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            series8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series8.LabelBackColor = System.Drawing.Color.Transparent;
-            series8.LabelForeColor = System.Drawing.Color.White;
-            series8.Name = "Population";
-            series8.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series8.ShadowColor = System.Drawing.Color.Transparent;
-            this.chart2.Series.Add(series8);
+            series5.BackSecondaryColor = System.Drawing.Color.White;
+            series5.BorderColor = System.Drawing.Color.White;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            series5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.LabelBackColor = System.Drawing.Color.Transparent;
+            series5.LabelForeColor = System.Drawing.Color.White;
+            series5.Name = "Population";
+            series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
+            series5.ShadowColor = System.Drawing.Color.Transparent;
+            this.chart2.Series.Add(series5);
             this.chart2.Size = new System.Drawing.Size(360, 263);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
@@ -1393,25 +1444,25 @@
             this.label9.TabIndex = 48;
             this.label9.Text = "REPRESENT  YOURSELF";
             // 
-            // label136
+            // lblSem
             // 
-            this.label136.AutoSize = true;
-            this.label136.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label136.ForeColor = System.Drawing.Color.DimGray;
-            this.label136.Location = new System.Drawing.Point(693, 22);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(98, 16);
-            this.label136.TabIndex = 10;
-            this.label136.Text = "1st Semester";
+            this.lblSem.AutoSize = true;
+            this.lblSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSem.ForeColor = System.Drawing.Color.White;
+            this.lblSem.Location = new System.Drawing.Point(693, 22);
+            this.lblSem.Name = "lblSem";
+            this.lblSem.Size = new System.Drawing.Size(48, 16);
+            this.lblSem.TabIndex = 10;
+            this.lblSem.Text = "lblsem";
             // 
             // label135
             // 
             this.label135.AutoSize = true;
-            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label135.ForeColor = System.Drawing.Color.DimGray;
-            this.label135.Location = new System.Drawing.Point(457, 21);
+            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label135.ForeColor = System.Drawing.Color.White;
+            this.label135.Location = new System.Drawing.Point(462, 22);
             this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(101, 16);
+            this.label135.Size = new System.Drawing.Size(88, 16);
             this.label135.TabIndex = 9;
             this.label135.Text = "School Year: ";
             // 
@@ -1419,23 +1470,30 @@
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
             this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea9.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea9);
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(16, 17);
             this.chart1.Name = "chart1";
-            series9.ChartArea = "ChartArea1";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.chart1.Series.Add(series9);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
             this.chart1.Size = new System.Drawing.Size(881, 283);
             this.chart1.TabIndex = 10;
             this.chart1.Text = "chart1";
             // 
             // studprofpanel
             // 
+            this.studprofpanel.AutoScroll = true;
             this.studprofpanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
+            this.studprofpanel.Controls.Add(this.panel19);
+            this.studprofpanel.Controls.Add(this.label24);
+            this.studprofpanel.Controls.Add(this.panel18);
+            this.studprofpanel.Controls.Add(this.label4);
+            this.studprofpanel.Controls.Add(this.panel15);
+            this.studprofpanel.Controls.Add(this.pictureBox7);
             this.studprofpanel.Controls.Add(this.label3);
             this.studprofpanel.Controls.Add(this.textBox2);
             this.studprofpanel.Controls.Add(this.pictureBox8);
@@ -1449,22 +1507,529 @@
             this.studprofpanel.Size = new System.Drawing.Size(1215, 666);
             this.studprofpanel.TabIndex = 19;
             // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel19.Location = new System.Drawing.Point(141, 1560);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(936, 26);
+            this.panel19.TabIndex = 47;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Sultan Nahia", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.DimGray;
+            this.label24.Location = new System.Drawing.Point(135, 1513);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(151, 31);
+            this.label24.TabIndex = 1021;
+            this.label24.Text = "ACCOUNTING";
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.White;
+            this.panel18.Controls.Add(this.dataGridView2);
+            this.panel18.Controls.Add(this.label35);
+            this.panel18.Controls.Add(this.groupBox1);
+            this.panel18.Controls.Add(this.vttxt);
+            this.panel18.Controls.Add(this.moptxt);
+            this.panel18.Controls.Add(this.label32);
+            this.panel18.Controls.Add(this.label34);
+            this.panel18.Location = new System.Drawing.Point(141, 1560);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(936, 627);
+            this.panel18.TabIndex = 1020;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(508, 161);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(401, 405);
+            this.dataGridView2.TabIndex = 24;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.ForeColor = System.Drawing.Color.Black;
+            this.label35.Location = new System.Drawing.Point(505, 145);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(98, 13);
+            this.label35.TabIndex = 23;
+            this.label35.Text = "Transaction History";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label94);
+            this.groupBox1.Controls.Add(this.label96);
+            this.groupBox1.Controls.Add(this.label98);
+            this.groupBox1.Controls.Add(this.label101);
+            this.groupBox1.Controls.Add(this.label102);
+            this.groupBox1.Controls.Add(this.label103);
+            this.groupBox1.Controls.Add(this.label105);
+            this.groupBox1.Controls.Add(this.label106);
+            this.groupBox1.Controls.Add(this.label107);
+            this.groupBox1.Controls.Add(this.label108);
+            this.groupBox1.Controls.Add(this.tp10txt);
+            this.groupBox1.Controls.Add(this.tp9txt);
+            this.groupBox1.Controls.Add(this.tp8txt);
+            this.groupBox1.Controls.Add(this.tp7txt);
+            this.groupBox1.Controls.Add(this.tp6txt);
+            this.groupBox1.Controls.Add(this.tp5txt);
+            this.groupBox1.Controls.Add(this.tp4txt);
+            this.groupBox1.Controls.Add(this.tp3txt);
+            this.groupBox1.Controls.Add(this.tp2txt);
+            this.groupBox1.Controls.Add(this.tp1txt);
+            this.groupBox1.Controls.Add(this.M10txt);
+            this.groupBox1.Controls.Add(this.M9txt);
+            this.groupBox1.Controls.Add(this.M8txt);
+            this.groupBox1.Controls.Add(this.M7txt);
+            this.groupBox1.Controls.Add(this.M6txt);
+            this.groupBox1.Controls.Add(this.M5txt);
+            this.groupBox1.Controls.Add(this.M4txt);
+            this.groupBox1.Controls.Add(this.M3txt);
+            this.groupBox1.Controls.Add(this.M2txt);
+            this.groupBox1.Controls.Add(this.label44);
+            this.groupBox1.Controls.Add(this.label43);
+            this.groupBox1.Controls.Add(this.label42);
+            this.groupBox1.Controls.Add(this.label41);
+            this.groupBox1.Controls.Add(this.M1txt);
+            this.groupBox1.Location = new System.Drawing.Point(27, 147);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(457, 420);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Statement of account";
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.ForeColor = System.Drawing.Color.DimGray;
+            this.label94.Location = new System.Drawing.Point(374, 301);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(52, 13);
+            this.label94.TabIndex = 54;
+            this.label94.Text = "data here";
+            // 
+            // label96
+            // 
+            this.label96.AutoSize = true;
+            this.label96.ForeColor = System.Drawing.Color.DimGray;
+            this.label96.Location = new System.Drawing.Point(374, 278);
+            this.label96.Name = "label96";
+            this.label96.Size = new System.Drawing.Size(52, 13);
+            this.label96.TabIndex = 53;
+            this.label96.Text = "data here";
+            // 
+            // label98
+            // 
+            this.label98.AutoSize = true;
+            this.label98.ForeColor = System.Drawing.Color.DimGray;
+            this.label98.Location = new System.Drawing.Point(374, 255);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(52, 13);
+            this.label98.TabIndex = 52;
+            this.label98.Text = "data here";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.ForeColor = System.Drawing.Color.DimGray;
+            this.label101.Location = new System.Drawing.Point(374, 232);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(52, 13);
+            this.label101.TabIndex = 51;
+            this.label101.Text = "data here";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.ForeColor = System.Drawing.Color.DimGray;
+            this.label102.Location = new System.Drawing.Point(374, 209);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(52, 13);
+            this.label102.TabIndex = 50;
+            this.label102.Text = "data here";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.ForeColor = System.Drawing.Color.DimGray;
+            this.label103.Location = new System.Drawing.Point(374, 186);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(52, 13);
+            this.label103.TabIndex = 49;
+            this.label103.Text = "data here";
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.ForeColor = System.Drawing.Color.DimGray;
+            this.label105.Location = new System.Drawing.Point(374, 163);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(52, 13);
+            this.label105.TabIndex = 48;
+            this.label105.Text = "data here";
+            // 
+            // label106
+            // 
+            this.label106.AutoSize = true;
+            this.label106.ForeColor = System.Drawing.Color.DimGray;
+            this.label106.Location = new System.Drawing.Point(374, 140);
+            this.label106.Name = "label106";
+            this.label106.Size = new System.Drawing.Size(52, 13);
+            this.label106.TabIndex = 47;
+            this.label106.Text = "data here";
+            // 
+            // label107
+            // 
+            this.label107.AutoSize = true;
+            this.label107.ForeColor = System.Drawing.Color.DimGray;
+            this.label107.Location = new System.Drawing.Point(374, 117);
+            this.label107.Name = "label107";
+            this.label107.Size = new System.Drawing.Size(52, 13);
+            this.label107.TabIndex = 46;
+            this.label107.Text = "data here";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.ForeColor = System.Drawing.Color.DimGray;
+            this.label108.Location = new System.Drawing.Point(374, 94);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(52, 13);
+            this.label108.TabIndex = 45;
+            this.label108.Text = "data here";
+            // 
+            // tp10txt
+            // 
+            this.tp10txt.AutoSize = true;
+            this.tp10txt.ForeColor = System.Drawing.Color.DimGray;
+            this.tp10txt.Location = new System.Drawing.Point(197, 301);
+            this.tp10txt.Name = "tp10txt";
+            this.tp10txt.Size = new System.Drawing.Size(52, 13);
+            this.tp10txt.TabIndex = 44;
+            this.tp10txt.Text = "data here";
+            // 
+            // tp9txt
+            // 
+            this.tp9txt.AutoSize = true;
+            this.tp9txt.ForeColor = System.Drawing.Color.DimGray;
+            this.tp9txt.Location = new System.Drawing.Point(197, 278);
+            this.tp9txt.Name = "tp9txt";
+            this.tp9txt.Size = new System.Drawing.Size(52, 13);
+            this.tp9txt.TabIndex = 43;
+            this.tp9txt.Text = "data here";
+            // 
+            // tp8txt
+            // 
+            this.tp8txt.AutoSize = true;
+            this.tp8txt.ForeColor = System.Drawing.Color.DimGray;
+            this.tp8txt.Location = new System.Drawing.Point(197, 255);
+            this.tp8txt.Name = "tp8txt";
+            this.tp8txt.Size = new System.Drawing.Size(52, 13);
+            this.tp8txt.TabIndex = 42;
+            this.tp8txt.Text = "data here";
+            // 
+            // tp7txt
+            // 
+            this.tp7txt.AutoSize = true;
+            this.tp7txt.ForeColor = System.Drawing.Color.DimGray;
+            this.tp7txt.Location = new System.Drawing.Point(197, 232);
+            this.tp7txt.Name = "tp7txt";
+            this.tp7txt.Size = new System.Drawing.Size(52, 13);
+            this.tp7txt.TabIndex = 41;
+            this.tp7txt.Text = "data here";
+            // 
+            // tp6txt
+            // 
+            this.tp6txt.AutoSize = true;
+            this.tp6txt.ForeColor = System.Drawing.Color.DimGray;
+            this.tp6txt.Location = new System.Drawing.Point(197, 209);
+            this.tp6txt.Name = "tp6txt";
+            this.tp6txt.Size = new System.Drawing.Size(52, 13);
+            this.tp6txt.TabIndex = 40;
+            this.tp6txt.Text = "data here";
+            // 
+            // tp5txt
+            // 
+            this.tp5txt.AutoSize = true;
+            this.tp5txt.ForeColor = System.Drawing.Color.DimGray;
+            this.tp5txt.Location = new System.Drawing.Point(197, 186);
+            this.tp5txt.Name = "tp5txt";
+            this.tp5txt.Size = new System.Drawing.Size(52, 13);
+            this.tp5txt.TabIndex = 39;
+            this.tp5txt.Text = "data here";
+            // 
+            // tp4txt
+            // 
+            this.tp4txt.AutoSize = true;
+            this.tp4txt.ForeColor = System.Drawing.Color.DimGray;
+            this.tp4txt.Location = new System.Drawing.Point(197, 163);
+            this.tp4txt.Name = "tp4txt";
+            this.tp4txt.Size = new System.Drawing.Size(52, 13);
+            this.tp4txt.TabIndex = 38;
+            this.tp4txt.Text = "data here";
+            // 
+            // tp3txt
+            // 
+            this.tp3txt.AutoSize = true;
+            this.tp3txt.ForeColor = System.Drawing.Color.DimGray;
+            this.tp3txt.Location = new System.Drawing.Point(197, 140);
+            this.tp3txt.Name = "tp3txt";
+            this.tp3txt.Size = new System.Drawing.Size(52, 13);
+            this.tp3txt.TabIndex = 37;
+            this.tp3txt.Text = "data here";
+            // 
+            // tp2txt
+            // 
+            this.tp2txt.AutoSize = true;
+            this.tp2txt.ForeColor = System.Drawing.Color.DimGray;
+            this.tp2txt.Location = new System.Drawing.Point(197, 117);
+            this.tp2txt.Name = "tp2txt";
+            this.tp2txt.Size = new System.Drawing.Size(52, 13);
+            this.tp2txt.TabIndex = 36;
+            this.tp2txt.Text = "data here";
+            // 
+            // tp1txt
+            // 
+            this.tp1txt.AutoSize = true;
+            this.tp1txt.ForeColor = System.Drawing.Color.DimGray;
+            this.tp1txt.Location = new System.Drawing.Point(197, 94);
+            this.tp1txt.Name = "tp1txt";
+            this.tp1txt.Size = new System.Drawing.Size(52, 13);
+            this.tp1txt.TabIndex = 35;
+            this.tp1txt.Text = "data here";
+            // 
+            // M10txt
+            // 
+            this.M10txt.AutoSize = true;
+            this.M10txt.ForeColor = System.Drawing.Color.DimGray;
+            this.M10txt.Location = new System.Drawing.Point(39, 301);
+            this.M10txt.Name = "M10txt";
+            this.M10txt.Size = new System.Drawing.Size(49, 13);
+            this.M10txt.TabIndex = 34;
+            this.M10txt.Text = "Month 1:";
+            // 
+            // M9txt
+            // 
+            this.M9txt.AutoSize = true;
+            this.M9txt.ForeColor = System.Drawing.Color.DimGray;
+            this.M9txt.Location = new System.Drawing.Point(39, 278);
+            this.M9txt.Name = "M9txt";
+            this.M9txt.Size = new System.Drawing.Size(49, 13);
+            this.M9txt.TabIndex = 33;
+            this.M9txt.Text = "Month 1:";
+            // 
+            // M8txt
+            // 
+            this.M8txt.AutoSize = true;
+            this.M8txt.ForeColor = System.Drawing.Color.DimGray;
+            this.M8txt.Location = new System.Drawing.Point(39, 255);
+            this.M8txt.Name = "M8txt";
+            this.M8txt.Size = new System.Drawing.Size(49, 13);
+            this.M8txt.TabIndex = 32;
+            this.M8txt.Text = "Month 1:";
+            // 
+            // M7txt
+            // 
+            this.M7txt.AutoSize = true;
+            this.M7txt.ForeColor = System.Drawing.Color.DimGray;
+            this.M7txt.Location = new System.Drawing.Point(39, 232);
+            this.M7txt.Name = "M7txt";
+            this.M7txt.Size = new System.Drawing.Size(49, 13);
+            this.M7txt.TabIndex = 31;
+            this.M7txt.Text = "Month 1:";
+            // 
+            // M6txt
+            // 
+            this.M6txt.AutoSize = true;
+            this.M6txt.ForeColor = System.Drawing.Color.DimGray;
+            this.M6txt.Location = new System.Drawing.Point(39, 209);
+            this.M6txt.Name = "M6txt";
+            this.M6txt.Size = new System.Drawing.Size(49, 13);
+            this.M6txt.TabIndex = 30;
+            this.M6txt.Text = "Month 1:";
+            // 
+            // M5txt
+            // 
+            this.M5txt.AutoSize = true;
+            this.M5txt.ForeColor = System.Drawing.Color.DimGray;
+            this.M5txt.Location = new System.Drawing.Point(39, 186);
+            this.M5txt.Name = "M5txt";
+            this.M5txt.Size = new System.Drawing.Size(49, 13);
+            this.M5txt.TabIndex = 29;
+            this.M5txt.Text = "Month 1:";
+            // 
+            // M4txt
+            // 
+            this.M4txt.AutoSize = true;
+            this.M4txt.ForeColor = System.Drawing.Color.DimGray;
+            this.M4txt.Location = new System.Drawing.Point(39, 163);
+            this.M4txt.Name = "M4txt";
+            this.M4txt.Size = new System.Drawing.Size(49, 13);
+            this.M4txt.TabIndex = 28;
+            this.M4txt.Text = "Month 1:";
+            // 
+            // M3txt
+            // 
+            this.M3txt.AutoSize = true;
+            this.M3txt.ForeColor = System.Drawing.Color.DimGray;
+            this.M3txt.Location = new System.Drawing.Point(39, 140);
+            this.M3txt.Name = "M3txt";
+            this.M3txt.Size = new System.Drawing.Size(49, 13);
+            this.M3txt.TabIndex = 27;
+            this.M3txt.Text = "Month 1:";
+            // 
+            // M2txt
+            // 
+            this.M2txt.AutoSize = true;
+            this.M2txt.ForeColor = System.Drawing.Color.DimGray;
+            this.M2txt.Location = new System.Drawing.Point(39, 117);
+            this.M2txt.Name = "M2txt";
+            this.M2txt.Size = new System.Drawing.Size(49, 13);
+            this.M2txt.TabIndex = 26;
+            this.M2txt.Text = "Month 1:";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.Red;
+            this.label44.Location = new System.Drawing.Point(375, 55);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(53, 13);
+            this.label44.TabIndex = 25;
+            this.label44.Text = "Balance";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.DimGray;
+            this.label43.Location = new System.Drawing.Point(197, 55);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(47, 13);
+            this.label43.TabIndex = 24;
+            this.label43.Text = "To Pay";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.DimGray;
+            this.label42.Location = new System.Drawing.Point(39, 55);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(42, 13);
+            this.label42.TabIndex = 23;
+            this.label42.Text = "Month";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.ForeColor = System.Drawing.Color.DimGray;
+            this.label41.Location = new System.Drawing.Point(38, 60);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(397, 13);
+            this.label41.TabIndex = 22;
+            this.label41.Text = "_________________________________________________________________";
+            // 
+            // M1txt
+            // 
+            this.M1txt.AutoSize = true;
+            this.M1txt.ForeColor = System.Drawing.Color.DimGray;
+            this.M1txt.Location = new System.Drawing.Point(39, 94);
+            this.M1txt.Name = "M1txt";
+            this.M1txt.Size = new System.Drawing.Size(49, 13);
+            this.M1txt.TabIndex = 21;
+            this.M1txt.Text = "Month 1:";
+            // 
+            // vttxt
+            // 
+            this.vttxt.AutoSize = true;
+            this.vttxt.ForeColor = System.Drawing.Color.DimGray;
+            this.vttxt.Location = new System.Drawing.Point(140, 73);
+            this.vttxt.Name = "vttxt";
+            this.vttxt.Size = new System.Drawing.Size(54, 13);
+            this.vttxt.TabIndex = 20;
+            this.vttxt.Text = "Data here";
+            // 
+            // moptxt
+            // 
+            this.moptxt.AutoSize = true;
+            this.moptxt.ForeColor = System.Drawing.Color.DimGray;
+            this.moptxt.Location = new System.Drawing.Point(140, 49);
+            this.moptxt.Name = "moptxt";
+            this.moptxt.Size = new System.Drawing.Size(54, 13);
+            this.moptxt.TabIndex = 19;
+            this.moptxt.Text = "Data here";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.Color.DimGray;
+            this.label32.Location = new System.Drawing.Point(47, 73);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(73, 13);
+            this.label32.TabIndex = 18;
+            this.label32.Text = "Voucher type:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.ForeColor = System.Drawing.Color.DimGray;
+            this.label34.Location = new System.Drawing.Point(27, 49);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(93, 13);
+            this.label34.TabIndex = 17;
+            this.label34.Text = "Mode of Payment:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Sultan Nahia", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(138, 857);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(210, 31);
+            this.label4.TabIndex = 1019;
+            this.label4.Text = "ACADEMIC PROFILE";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel15.Location = new System.Drawing.Point(646, 902);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(442, 26);
+            this.panel15.TabIndex = 47;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(516, 259);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(197, 197);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Sultan Nahia", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(65, 41);
+            this.label3.Location = new System.Drawing.Point(469, 69);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(186, 29);
+            this.label3.Size = new System.Drawing.Size(279, 43);
             this.label3.TabIndex = 1013;
-            this.label3.Text = "Student Profile";
+            this.label3.Text = "STUDENT PROFILE";
             // 
             // textBox2
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox2.Location = new System.Drawing.Point(94, 97);
+            this.textBox2.Location = new System.Drawing.Point(444, 140);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(352, 22);
@@ -1474,7 +2039,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::GOCSystem2018.Properties.Resources.Untitled_1;
-            this.pictureBox8.Location = new System.Drawing.Point(29, 42);
+            this.pictureBox8.Location = new System.Drawing.Point(379, 85);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(478, 84);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1487,39 +2052,40 @@
             this.panel11.Controls.Add(this.label223);
             this.panel11.Controls.Add(this.label188);
             this.panel11.Controls.Add(this.label212);
-            this.panel11.Controls.Add(this.label189);
+            this.panel11.Controls.Add(this.G12_AS12);
+            this.panel11.Controls.Add(this.panel17);
             this.panel11.Controls.Add(this.label219);
-            this.panel11.Controls.Add(this.label190);
+            this.panel11.Controls.Add(this.G12_AS11);
             this.panel11.Controls.Add(this.label218);
-            this.panel11.Controls.Add(this.label191);
+            this.panel11.Controls.Add(this.G12_AS14);
             this.panel11.Controls.Add(this.label217);
-            this.panel11.Controls.Add(this.label192);
+            this.panel11.Controls.Add(this.G12_AS13);
             this.panel11.Controls.Add(this.label216);
-            this.panel11.Controls.Add(this.label193);
+            this.panel11.Controls.Add(this.G12_AS10);
             this.panel11.Controls.Add(this.label215);
-            this.panel11.Controls.Add(this.label194);
+            this.panel11.Controls.Add(this.G12_AS9);
             this.panel11.Controls.Add(this.label214);
-            this.panel11.Controls.Add(this.label195);
+            this.panel11.Controls.Add(this.G12_AS8);
             this.panel11.Controls.Add(this.label213);
             this.panel11.Controls.Add(this.label196);
-            this.panel11.Controls.Add(this.label211);
-            this.panel11.Controls.Add(this.label197);
-            this.panel11.Controls.Add(this.label210);
-            this.panel11.Controls.Add(this.label198);
-            this.panel11.Controls.Add(this.label209);
-            this.panel11.Controls.Add(this.label199);
-            this.panel11.Controls.Add(this.label208);
-            this.panel11.Controls.Add(this.label200);
-            this.panel11.Controls.Add(this.label207);
-            this.panel11.Controls.Add(this.label201);
-            this.panel11.Controls.Add(this.label206);
-            this.panel11.Controls.Add(this.label202);
-            this.panel11.Controls.Add(this.label205);
-            this.panel11.Controls.Add(this.label203);
+            this.panel11.Controls.Add(this.G12_1S8);
+            this.panel11.Controls.Add(this.G12_2S12);
+            this.panel11.Controls.Add(this.G12_1S9);
+            this.panel11.Controls.Add(this.G12_2S11);
+            this.panel11.Controls.Add(this.G12_1S10);
+            this.panel11.Controls.Add(this.G12_2S14);
+            this.panel11.Controls.Add(this.G12_1S13);
+            this.panel11.Controls.Add(this.G12_2S13);
+            this.panel11.Controls.Add(this.G12_1S14);
+            this.panel11.Controls.Add(this.G12_2S10);
+            this.panel11.Controls.Add(this.G12_1S11);
+            this.panel11.Controls.Add(this.G12_2S9);
+            this.panel11.Controls.Add(this.G12_1S12);
+            this.panel11.Controls.Add(this.G12_2S8);
             this.panel11.Controls.Add(this.label204);
-            this.panel11.Location = new System.Drawing.Point(802, 398);
+            this.panel11.Location = new System.Drawing.Point(646, 1205);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(376, 249);
+            this.panel11.Size = new System.Drawing.Size(442, 249);
             this.panel11.TabIndex = 4;
             // 
             // label223
@@ -1527,7 +2093,7 @@
             this.label223.AutoSize = true;
             this.label223.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label223.ForeColor = System.Drawing.Color.Black;
-            this.label223.Location = new System.Drawing.Point(28, 14);
+            this.label223.Location = new System.Drawing.Point(29, 31);
             this.label223.Name = "label223";
             this.label223.Size = new System.Drawing.Size(294, 16);
             this.label223.TabIndex = 85;
@@ -1553,15 +2119,23 @@
             this.label212.TabIndex = 124;
             this.label212.Text = "SUBJECT";
             // 
-            // label189
+            // G12_AS12
             // 
-            this.label189.AutoSize = true;
-            this.label189.ForeColor = System.Drawing.Color.DimGray;
-            this.label189.Location = new System.Drawing.Point(303, 172);
-            this.label189.Name = "label189";
-            this.label189.Size = new System.Drawing.Size(19, 13);
-            this.label189.TabIndex = 147;
-            this.label189.Text = "80";
+            this.G12_AS12.AutoSize = true;
+            this.G12_AS12.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS12.Location = new System.Drawing.Point(303, 172);
+            this.G12_AS12.Name = "G12_AS12";
+            this.G12_AS12.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS12.TabIndex = 147;
+            this.G12_AS12.Text = "80";
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(442, 26);
+            this.panel17.TabIndex = 47;
             // 
             // label219
             // 
@@ -1573,15 +2147,15 @@
             this.label219.TabIndex = 117;
             this.label219.Text = "English:";
             // 
-            // label190
+            // G12_AS11
             // 
-            this.label190.AutoSize = true;
-            this.label190.ForeColor = System.Drawing.Color.DimGray;
-            this.label190.Location = new System.Drawing.Point(303, 151);
-            this.label190.Name = "label190";
-            this.label190.Size = new System.Drawing.Size(19, 13);
-            this.label190.TabIndex = 146;
-            this.label190.Text = "80";
+            this.G12_AS11.AutoSize = true;
+            this.G12_AS11.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS11.Location = new System.Drawing.Point(303, 151);
+            this.G12_AS11.Name = "G12_AS11";
+            this.G12_AS11.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS11.TabIndex = 146;
+            this.G12_AS11.Text = "80";
             // 
             // label218
             // 
@@ -1593,15 +2167,15 @@
             this.label218.TabIndex = 118;
             this.label218.Text = "Filipino:";
             // 
-            // label191
+            // G12_AS14
             // 
-            this.label191.AutoSize = true;
-            this.label191.ForeColor = System.Drawing.Color.DimGray;
-            this.label191.Location = new System.Drawing.Point(303, 214);
-            this.label191.Name = "label191";
-            this.label191.Size = new System.Drawing.Size(19, 13);
-            this.label191.TabIndex = 145;
-            this.label191.Text = "80";
+            this.G12_AS14.AutoSize = true;
+            this.G12_AS14.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS14.Location = new System.Drawing.Point(303, 214);
+            this.G12_AS14.Name = "G12_AS14";
+            this.G12_AS14.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS14.TabIndex = 145;
+            this.G12_AS14.Text = "80";
             // 
             // label217
             // 
@@ -1613,15 +2187,15 @@
             this.label217.TabIndex = 119;
             this.label217.Text = "Empowerment Technology:";
             // 
-            // label192
+            // G12_AS13
             // 
-            this.label192.AutoSize = true;
-            this.label192.ForeColor = System.Drawing.Color.DimGray;
-            this.label192.Location = new System.Drawing.Point(303, 193);
-            this.label192.Name = "label192";
-            this.label192.Size = new System.Drawing.Size(19, 13);
-            this.label192.TabIndex = 144;
-            this.label192.Text = "80";
+            this.G12_AS13.AutoSize = true;
+            this.G12_AS13.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS13.Location = new System.Drawing.Point(303, 193);
+            this.G12_AS13.Name = "G12_AS13";
+            this.G12_AS13.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS13.TabIndex = 144;
+            this.G12_AS13.Text = "80";
             // 
             // label216
             // 
@@ -1633,15 +2207,15 @@
             this.label216.TabIndex = 120;
             this.label216.Text = "Calculus:";
             // 
-            // label193
+            // G12_AS10
             // 
-            this.label193.AutoSize = true;
-            this.label193.ForeColor = System.Drawing.Color.DimGray;
-            this.label193.Location = new System.Drawing.Point(303, 130);
-            this.label193.Name = "label193";
-            this.label193.Size = new System.Drawing.Size(19, 13);
-            this.label193.TabIndex = 143;
-            this.label193.Text = "80";
+            this.G12_AS10.AutoSize = true;
+            this.G12_AS10.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS10.Location = new System.Drawing.Point(303, 130);
+            this.G12_AS10.Name = "G12_AS10";
+            this.G12_AS10.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS10.TabIndex = 143;
+            this.G12_AS10.Text = "80";
             // 
             // label215
             // 
@@ -1653,15 +2227,15 @@
             this.label215.TabIndex = 121;
             this.label215.Text = "Oral Comm:";
             // 
-            // label194
+            // G12_AS9
             // 
-            this.label194.AutoSize = true;
-            this.label194.ForeColor = System.Drawing.Color.DimGray;
-            this.label194.Location = new System.Drawing.Point(303, 109);
-            this.label194.Name = "label194";
-            this.label194.Size = new System.Drawing.Size(19, 13);
-            this.label194.TabIndex = 142;
-            this.label194.Text = "80";
+            this.G12_AS9.AutoSize = true;
+            this.G12_AS9.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS9.Location = new System.Drawing.Point(303, 109);
+            this.G12_AS9.Name = "G12_AS9";
+            this.G12_AS9.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS9.TabIndex = 142;
+            this.G12_AS9.Text = "80";
             // 
             // label214
             // 
@@ -1673,15 +2247,15 @@
             this.label214.TabIndex = 122;
             this.label214.Text = "Practical Research:";
             // 
-            // label195
+            // G12_AS8
             // 
-            this.label195.AutoSize = true;
-            this.label195.ForeColor = System.Drawing.Color.DimGray;
-            this.label195.Location = new System.Drawing.Point(303, 88);
-            this.label195.Name = "label195";
-            this.label195.Size = new System.Drawing.Size(19, 13);
-            this.label195.TabIndex = 141;
-            this.label195.Text = "80";
+            this.G12_AS8.AutoSize = true;
+            this.G12_AS8.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS8.Location = new System.Drawing.Point(303, 88);
+            this.G12_AS8.Name = "G12_AS8";
+            this.G12_AS8.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS8.TabIndex = 141;
+            this.G12_AS8.Text = "80";
             // 
             // label213
             // 
@@ -1703,145 +2277,145 @@
             this.label196.TabIndex = 140;
             this.label196.Text = "2nd";
             // 
-            // label211
+            // G12_1S8
             // 
-            this.label211.AutoSize = true;
-            this.label211.ForeColor = System.Drawing.Color.DimGray;
-            this.label211.Location = new System.Drawing.Point(190, 88);
-            this.label211.Name = "label211";
-            this.label211.Size = new System.Drawing.Size(19, 13);
-            this.label211.TabIndex = 125;
-            this.label211.Text = "80";
+            this.G12_1S8.AutoSize = true;
+            this.G12_1S8.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S8.Location = new System.Drawing.Point(190, 88);
+            this.G12_1S8.Name = "G12_1S8";
+            this.G12_1S8.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S8.TabIndex = 125;
+            this.G12_1S8.Text = "80";
             // 
-            // label197
+            // G12_2S12
             // 
-            this.label197.AutoSize = true;
-            this.label197.ForeColor = System.Drawing.Color.DimGray;
-            this.label197.Location = new System.Drawing.Point(246, 172);
-            this.label197.Name = "label197";
-            this.label197.Size = new System.Drawing.Size(19, 13);
-            this.label197.TabIndex = 139;
-            this.label197.Text = "80";
+            this.G12_2S12.AutoSize = true;
+            this.G12_2S12.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S12.Location = new System.Drawing.Point(246, 172);
+            this.G12_2S12.Name = "G12_2S12";
+            this.G12_2S12.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S12.TabIndex = 139;
+            this.G12_2S12.Text = "80";
             // 
-            // label210
+            // G12_1S9
             // 
-            this.label210.AutoSize = true;
-            this.label210.ForeColor = System.Drawing.Color.DimGray;
-            this.label210.Location = new System.Drawing.Point(190, 109);
-            this.label210.Name = "label210";
-            this.label210.Size = new System.Drawing.Size(19, 13);
-            this.label210.TabIndex = 126;
-            this.label210.Text = "80";
+            this.G12_1S9.AutoSize = true;
+            this.G12_1S9.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S9.Location = new System.Drawing.Point(190, 109);
+            this.G12_1S9.Name = "G12_1S9";
+            this.G12_1S9.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S9.TabIndex = 126;
+            this.G12_1S9.Text = "80";
             // 
-            // label198
+            // G12_2S11
             // 
-            this.label198.AutoSize = true;
-            this.label198.ForeColor = System.Drawing.Color.DimGray;
-            this.label198.Location = new System.Drawing.Point(246, 151);
-            this.label198.Name = "label198";
-            this.label198.Size = new System.Drawing.Size(19, 13);
-            this.label198.TabIndex = 138;
-            this.label198.Text = "80";
+            this.G12_2S11.AutoSize = true;
+            this.G12_2S11.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S11.Location = new System.Drawing.Point(246, 151);
+            this.G12_2S11.Name = "G12_2S11";
+            this.G12_2S11.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S11.TabIndex = 138;
+            this.G12_2S11.Text = "80";
             // 
-            // label209
+            // G12_1S10
             // 
-            this.label209.AutoSize = true;
-            this.label209.ForeColor = System.Drawing.Color.DimGray;
-            this.label209.Location = new System.Drawing.Point(190, 130);
-            this.label209.Name = "label209";
-            this.label209.Size = new System.Drawing.Size(19, 13);
-            this.label209.TabIndex = 127;
-            this.label209.Text = "80";
+            this.G12_1S10.AutoSize = true;
+            this.G12_1S10.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S10.Location = new System.Drawing.Point(190, 130);
+            this.G12_1S10.Name = "G12_1S10";
+            this.G12_1S10.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S10.TabIndex = 127;
+            this.G12_1S10.Text = "80";
             // 
-            // label199
+            // G12_2S14
             // 
-            this.label199.AutoSize = true;
-            this.label199.ForeColor = System.Drawing.Color.DimGray;
-            this.label199.Location = new System.Drawing.Point(246, 214);
-            this.label199.Name = "label199";
-            this.label199.Size = new System.Drawing.Size(19, 13);
-            this.label199.TabIndex = 137;
-            this.label199.Text = "80";
+            this.G12_2S14.AutoSize = true;
+            this.G12_2S14.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S14.Location = new System.Drawing.Point(246, 214);
+            this.G12_2S14.Name = "G12_2S14";
+            this.G12_2S14.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S14.TabIndex = 137;
+            this.G12_2S14.Text = "80";
             // 
-            // label208
+            // G12_1S13
             // 
-            this.label208.AutoSize = true;
-            this.label208.ForeColor = System.Drawing.Color.DimGray;
-            this.label208.Location = new System.Drawing.Point(190, 193);
-            this.label208.Name = "label208";
-            this.label208.Size = new System.Drawing.Size(19, 13);
-            this.label208.TabIndex = 128;
-            this.label208.Text = "80";
+            this.G12_1S13.AutoSize = true;
+            this.G12_1S13.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S13.Location = new System.Drawing.Point(190, 193);
+            this.G12_1S13.Name = "G12_1S13";
+            this.G12_1S13.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S13.TabIndex = 128;
+            this.G12_1S13.Text = "80";
             // 
-            // label200
+            // G12_2S13
             // 
-            this.label200.AutoSize = true;
-            this.label200.ForeColor = System.Drawing.Color.DimGray;
-            this.label200.Location = new System.Drawing.Point(246, 193);
-            this.label200.Name = "label200";
-            this.label200.Size = new System.Drawing.Size(19, 13);
-            this.label200.TabIndex = 136;
-            this.label200.Text = "80";
+            this.G12_2S13.AutoSize = true;
+            this.G12_2S13.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S13.Location = new System.Drawing.Point(246, 193);
+            this.G12_2S13.Name = "G12_2S13";
+            this.G12_2S13.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S13.TabIndex = 136;
+            this.G12_2S13.Text = "80";
             // 
-            // label207
+            // G12_1S14
             // 
-            this.label207.AutoSize = true;
-            this.label207.ForeColor = System.Drawing.Color.DimGray;
-            this.label207.Location = new System.Drawing.Point(190, 214);
-            this.label207.Name = "label207";
-            this.label207.Size = new System.Drawing.Size(19, 13);
-            this.label207.TabIndex = 129;
-            this.label207.Text = "80";
+            this.G12_1S14.AutoSize = true;
+            this.G12_1S14.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S14.Location = new System.Drawing.Point(190, 214);
+            this.G12_1S14.Name = "G12_1S14";
+            this.G12_1S14.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S14.TabIndex = 129;
+            this.G12_1S14.Text = "80";
             // 
-            // label201
+            // G12_2S10
             // 
-            this.label201.AutoSize = true;
-            this.label201.ForeColor = System.Drawing.Color.DimGray;
-            this.label201.Location = new System.Drawing.Point(246, 130);
-            this.label201.Name = "label201";
-            this.label201.Size = new System.Drawing.Size(19, 13);
-            this.label201.TabIndex = 135;
-            this.label201.Text = "80";
+            this.G12_2S10.AutoSize = true;
+            this.G12_2S10.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S10.Location = new System.Drawing.Point(246, 130);
+            this.G12_2S10.Name = "G12_2S10";
+            this.G12_2S10.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S10.TabIndex = 135;
+            this.G12_2S10.Text = "80";
             // 
-            // label206
+            // G12_1S11
             // 
-            this.label206.AutoSize = true;
-            this.label206.ForeColor = System.Drawing.Color.DimGray;
-            this.label206.Location = new System.Drawing.Point(190, 151);
-            this.label206.Name = "label206";
-            this.label206.Size = new System.Drawing.Size(19, 13);
-            this.label206.TabIndex = 130;
-            this.label206.Text = "80";
+            this.G12_1S11.AutoSize = true;
+            this.G12_1S11.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S11.Location = new System.Drawing.Point(190, 151);
+            this.G12_1S11.Name = "G12_1S11";
+            this.G12_1S11.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S11.TabIndex = 130;
+            this.G12_1S11.Text = "80";
             // 
-            // label202
+            // G12_2S9
             // 
-            this.label202.AutoSize = true;
-            this.label202.ForeColor = System.Drawing.Color.DimGray;
-            this.label202.Location = new System.Drawing.Point(246, 109);
-            this.label202.Name = "label202";
-            this.label202.Size = new System.Drawing.Size(19, 13);
-            this.label202.TabIndex = 134;
-            this.label202.Text = "80";
+            this.G12_2S9.AutoSize = true;
+            this.G12_2S9.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S9.Location = new System.Drawing.Point(246, 109);
+            this.G12_2S9.Name = "G12_2S9";
+            this.G12_2S9.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S9.TabIndex = 134;
+            this.G12_2S9.Text = "80";
             // 
-            // label205
+            // G12_1S12
             // 
-            this.label205.AutoSize = true;
-            this.label205.ForeColor = System.Drawing.Color.DimGray;
-            this.label205.Location = new System.Drawing.Point(190, 172);
-            this.label205.Name = "label205";
-            this.label205.Size = new System.Drawing.Size(19, 13);
-            this.label205.TabIndex = 131;
-            this.label205.Text = "80";
+            this.G12_1S12.AutoSize = true;
+            this.G12_1S12.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S12.Location = new System.Drawing.Point(190, 172);
+            this.G12_1S12.Name = "G12_1S12";
+            this.G12_1S12.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S12.TabIndex = 131;
+            this.G12_1S12.Text = "80";
             // 
-            // label203
+            // G12_2S8
             // 
-            this.label203.AutoSize = true;
-            this.label203.ForeColor = System.Drawing.Color.DimGray;
-            this.label203.Location = new System.Drawing.Point(246, 88);
-            this.label203.Name = "label203";
-            this.label203.Size = new System.Drawing.Size(19, 13);
-            this.label203.TabIndex = 133;
-            this.label203.Text = "80";
+            this.G12_2S8.AutoSize = true;
+            this.G12_2S8.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S8.Location = new System.Drawing.Point(246, 88);
+            this.G12_2S8.Name = "G12_2S8";
+            this.G12_2S8.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S8.TabIndex = 133;
+            this.G12_2S8.Text = "80";
             // 
             // label204
             // 
@@ -1859,39 +2433,39 @@
             this.panel10.Controls.Add(this.label221);
             this.panel10.Controls.Add(this.label104);
             this.panel10.Controls.Add(this.label148);
-            this.panel10.Controls.Add(this.label105);
+            this.panel10.Controls.Add(this.G11_AS12);
             this.panel10.Controls.Add(this.label155);
-            this.panel10.Controls.Add(this.label106);
+            this.panel10.Controls.Add(this.G11_AS11);
             this.panel10.Controls.Add(this.label154);
-            this.panel10.Controls.Add(this.label107);
+            this.panel10.Controls.Add(this.G11_AS14);
             this.panel10.Controls.Add(this.label153);
-            this.panel10.Controls.Add(this.label108);
+            this.panel10.Controls.Add(this.G11_AS13);
             this.panel10.Controls.Add(this.label152);
-            this.panel10.Controls.Add(this.label109);
+            this.panel10.Controls.Add(this.G11_AS10);
             this.panel10.Controls.Add(this.label151);
-            this.panel10.Controls.Add(this.label110);
+            this.panel10.Controls.Add(this.G11_AS9);
             this.panel10.Controls.Add(this.label150);
-            this.panel10.Controls.Add(this.label111);
+            this.panel10.Controls.Add(this.G11_AS8);
             this.panel10.Controls.Add(this.label149);
             this.panel10.Controls.Add(this.label112);
-            this.panel10.Controls.Add(this.label147);
-            this.panel10.Controls.Add(this.label113);
-            this.panel10.Controls.Add(this.label146);
-            this.panel10.Controls.Add(this.label114);
-            this.panel10.Controls.Add(this.label145);
-            this.panel10.Controls.Add(this.label116);
-            this.panel10.Controls.Add(this.label144);
-            this.panel10.Controls.Add(this.label118);
-            this.panel10.Controls.Add(this.label143);
-            this.panel10.Controls.Add(this.label120);
-            this.panel10.Controls.Add(this.label142);
-            this.panel10.Controls.Add(this.label121);
-            this.panel10.Controls.Add(this.label141);
-            this.panel10.Controls.Add(this.label139);
+            this.panel10.Controls.Add(this.G11_1S8);
+            this.panel10.Controls.Add(this.G11_2S12);
+            this.panel10.Controls.Add(this.G11_1S9);
+            this.panel10.Controls.Add(this.G11_2S11);
+            this.panel10.Controls.Add(this.G11_1S10);
+            this.panel10.Controls.Add(this.G11_2S14);
+            this.panel10.Controls.Add(this.G11_1S13);
+            this.panel10.Controls.Add(this.G11_2S13);
+            this.panel10.Controls.Add(this.G11_1S14);
+            this.panel10.Controls.Add(this.G11_2S10);
+            this.panel10.Controls.Add(this.G11_1S11);
+            this.panel10.Controls.Add(this.G11_2S9);
+            this.panel10.Controls.Add(this.G11_1S12);
+            this.panel10.Controls.Add(this.G11_2S8);
             this.panel10.Controls.Add(this.label140);
-            this.panel10.Location = new System.Drawing.Point(802, 143);
+            this.panel10.Location = new System.Drawing.Point(646, 903);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(376, 249);
+            this.panel10.Size = new System.Drawing.Size(442, 249);
             this.panel10.TabIndex = 2;
             // 
             // label221
@@ -1899,7 +2473,7 @@
             this.label221.AutoSize = true;
             this.label221.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label221.ForeColor = System.Drawing.Color.Black;
-            this.label221.Location = new System.Drawing.Point(29, 16);
+            this.label221.Location = new System.Drawing.Point(29, 39);
             this.label221.Name = "label221";
             this.label221.Size = new System.Drawing.Size(294, 16);
             this.label221.TabIndex = 54;
@@ -1925,15 +2499,15 @@
             this.label148.TabIndex = 60;
             this.label148.Text = "SUBJECT";
             // 
-            // label105
+            // G11_AS12
             // 
-            this.label105.AutoSize = true;
-            this.label105.ForeColor = System.Drawing.Color.DimGray;
-            this.label105.Location = new System.Drawing.Point(303, 179);
-            this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(19, 13);
-            this.label105.TabIndex = 83;
-            this.label105.Text = "80";
+            this.G11_AS12.AutoSize = true;
+            this.G11_AS12.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS12.Location = new System.Drawing.Point(303, 179);
+            this.G11_AS12.Name = "G11_AS12";
+            this.G11_AS12.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS12.TabIndex = 83;
+            this.G11_AS12.Text = "80";
             // 
             // label155
             // 
@@ -1945,15 +2519,15 @@
             this.label155.TabIndex = 53;
             this.label155.Text = "English:";
             // 
-            // label106
+            // G11_AS11
             // 
-            this.label106.AutoSize = true;
-            this.label106.ForeColor = System.Drawing.Color.DimGray;
-            this.label106.Location = new System.Drawing.Point(303, 158);
-            this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(19, 13);
-            this.label106.TabIndex = 82;
-            this.label106.Text = "80";
+            this.G11_AS11.AutoSize = true;
+            this.G11_AS11.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS11.Location = new System.Drawing.Point(303, 158);
+            this.G11_AS11.Name = "G11_AS11";
+            this.G11_AS11.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS11.TabIndex = 82;
+            this.G11_AS11.Text = "80";
             // 
             // label154
             // 
@@ -1965,15 +2539,15 @@
             this.label154.TabIndex = 54;
             this.label154.Text = "Filipino:";
             // 
-            // label107
+            // G11_AS14
             // 
-            this.label107.AutoSize = true;
-            this.label107.ForeColor = System.Drawing.Color.DimGray;
-            this.label107.Location = new System.Drawing.Point(303, 221);
-            this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(19, 13);
-            this.label107.TabIndex = 81;
-            this.label107.Text = "80";
+            this.G11_AS14.AutoSize = true;
+            this.G11_AS14.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS14.Location = new System.Drawing.Point(303, 221);
+            this.G11_AS14.Name = "G11_AS14";
+            this.G11_AS14.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS14.TabIndex = 81;
+            this.G11_AS14.Text = "80";
             // 
             // label153
             // 
@@ -1985,15 +2559,15 @@
             this.label153.TabIndex = 55;
             this.label153.Text = "Empowerment Technology:";
             // 
-            // label108
+            // G11_AS13
             // 
-            this.label108.AutoSize = true;
-            this.label108.ForeColor = System.Drawing.Color.DimGray;
-            this.label108.Location = new System.Drawing.Point(303, 200);
-            this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(19, 13);
-            this.label108.TabIndex = 80;
-            this.label108.Text = "80";
+            this.G11_AS13.AutoSize = true;
+            this.G11_AS13.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS13.Location = new System.Drawing.Point(303, 200);
+            this.G11_AS13.Name = "G11_AS13";
+            this.G11_AS13.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS13.TabIndex = 80;
+            this.G11_AS13.Text = "80";
             // 
             // label152
             // 
@@ -2005,15 +2579,15 @@
             this.label152.TabIndex = 56;
             this.label152.Text = "Calculus:";
             // 
-            // label109
+            // G11_AS10
             // 
-            this.label109.AutoSize = true;
-            this.label109.ForeColor = System.Drawing.Color.DimGray;
-            this.label109.Location = new System.Drawing.Point(303, 137);
-            this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(19, 13);
-            this.label109.TabIndex = 79;
-            this.label109.Text = "80";
+            this.G11_AS10.AutoSize = true;
+            this.G11_AS10.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS10.Location = new System.Drawing.Point(303, 137);
+            this.G11_AS10.Name = "G11_AS10";
+            this.G11_AS10.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS10.TabIndex = 79;
+            this.G11_AS10.Text = "80";
             // 
             // label151
             // 
@@ -2025,15 +2599,15 @@
             this.label151.TabIndex = 57;
             this.label151.Text = "Oral Comm:";
             // 
-            // label110
+            // G11_AS9
             // 
-            this.label110.AutoSize = true;
-            this.label110.ForeColor = System.Drawing.Color.DimGray;
-            this.label110.Location = new System.Drawing.Point(303, 116);
-            this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(19, 13);
-            this.label110.TabIndex = 78;
-            this.label110.Text = "80";
+            this.G11_AS9.AutoSize = true;
+            this.G11_AS9.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS9.Location = new System.Drawing.Point(303, 116);
+            this.G11_AS9.Name = "G11_AS9";
+            this.G11_AS9.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS9.TabIndex = 78;
+            this.G11_AS9.Text = "80";
             // 
             // label150
             // 
@@ -2045,15 +2619,15 @@
             this.label150.TabIndex = 58;
             this.label150.Text = "Practical Research:";
             // 
-            // label111
+            // G11_AS8
             // 
-            this.label111.AutoSize = true;
-            this.label111.ForeColor = System.Drawing.Color.DimGray;
-            this.label111.Location = new System.Drawing.Point(303, 95);
-            this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(19, 13);
-            this.label111.TabIndex = 77;
-            this.label111.Text = "80";
+            this.G11_AS8.AutoSize = true;
+            this.G11_AS8.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS8.Location = new System.Drawing.Point(303, 95);
+            this.G11_AS8.Name = "G11_AS8";
+            this.G11_AS8.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS8.TabIndex = 77;
+            this.G11_AS8.Text = "80";
             // 
             // label149
             // 
@@ -2075,145 +2649,145 @@
             this.label112.TabIndex = 76;
             this.label112.Text = "2nd";
             // 
-            // label147
+            // G11_1S8
             // 
-            this.label147.AutoSize = true;
-            this.label147.ForeColor = System.Drawing.Color.DimGray;
-            this.label147.Location = new System.Drawing.Point(190, 95);
-            this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(19, 13);
-            this.label147.TabIndex = 61;
-            this.label147.Text = "80";
+            this.G11_1S8.AutoSize = true;
+            this.G11_1S8.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S8.Location = new System.Drawing.Point(190, 95);
+            this.G11_1S8.Name = "G11_1S8";
+            this.G11_1S8.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S8.TabIndex = 61;
+            this.G11_1S8.Text = "80";
             // 
-            // label113
+            // G11_2S12
             // 
-            this.label113.AutoSize = true;
-            this.label113.ForeColor = System.Drawing.Color.DimGray;
-            this.label113.Location = new System.Drawing.Point(246, 179);
-            this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(19, 13);
-            this.label113.TabIndex = 75;
-            this.label113.Text = "80";
+            this.G11_2S12.AutoSize = true;
+            this.G11_2S12.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S12.Location = new System.Drawing.Point(246, 179);
+            this.G11_2S12.Name = "G11_2S12";
+            this.G11_2S12.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S12.TabIndex = 75;
+            this.G11_2S12.Text = "80";
             // 
-            // label146
+            // G11_1S9
             // 
-            this.label146.AutoSize = true;
-            this.label146.ForeColor = System.Drawing.Color.DimGray;
-            this.label146.Location = new System.Drawing.Point(190, 116);
-            this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(19, 13);
-            this.label146.TabIndex = 62;
-            this.label146.Text = "80";
+            this.G11_1S9.AutoSize = true;
+            this.G11_1S9.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S9.Location = new System.Drawing.Point(190, 116);
+            this.G11_1S9.Name = "G11_1S9";
+            this.G11_1S9.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S9.TabIndex = 62;
+            this.G11_1S9.Text = "80";
             // 
-            // label114
+            // G11_2S11
             // 
-            this.label114.AutoSize = true;
-            this.label114.ForeColor = System.Drawing.Color.DimGray;
-            this.label114.Location = new System.Drawing.Point(246, 158);
-            this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(19, 13);
-            this.label114.TabIndex = 74;
-            this.label114.Text = "80";
+            this.G11_2S11.AutoSize = true;
+            this.G11_2S11.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S11.Location = new System.Drawing.Point(246, 158);
+            this.G11_2S11.Name = "G11_2S11";
+            this.G11_2S11.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S11.TabIndex = 74;
+            this.G11_2S11.Text = "80";
             // 
-            // label145
+            // G11_1S10
             // 
-            this.label145.AutoSize = true;
-            this.label145.ForeColor = System.Drawing.Color.DimGray;
-            this.label145.Location = new System.Drawing.Point(190, 137);
-            this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(19, 13);
-            this.label145.TabIndex = 63;
-            this.label145.Text = "80";
+            this.G11_1S10.AutoSize = true;
+            this.G11_1S10.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S10.Location = new System.Drawing.Point(190, 137);
+            this.G11_1S10.Name = "G11_1S10";
+            this.G11_1S10.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S10.TabIndex = 63;
+            this.G11_1S10.Text = "80";
             // 
-            // label116
+            // G11_2S14
             // 
-            this.label116.AutoSize = true;
-            this.label116.ForeColor = System.Drawing.Color.DimGray;
-            this.label116.Location = new System.Drawing.Point(246, 221);
-            this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(19, 13);
-            this.label116.TabIndex = 73;
-            this.label116.Text = "80";
+            this.G11_2S14.AutoSize = true;
+            this.G11_2S14.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S14.Location = new System.Drawing.Point(246, 221);
+            this.G11_2S14.Name = "G11_2S14";
+            this.G11_2S14.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S14.TabIndex = 73;
+            this.G11_2S14.Text = "80";
             // 
-            // label144
+            // G11_1S13
             // 
-            this.label144.AutoSize = true;
-            this.label144.ForeColor = System.Drawing.Color.DimGray;
-            this.label144.Location = new System.Drawing.Point(190, 200);
-            this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(19, 13);
-            this.label144.TabIndex = 64;
-            this.label144.Text = "80";
+            this.G11_1S13.AutoSize = true;
+            this.G11_1S13.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S13.Location = new System.Drawing.Point(190, 200);
+            this.G11_1S13.Name = "G11_1S13";
+            this.G11_1S13.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S13.TabIndex = 64;
+            this.G11_1S13.Text = "80";
             // 
-            // label118
+            // G11_2S13
             // 
-            this.label118.AutoSize = true;
-            this.label118.ForeColor = System.Drawing.Color.DimGray;
-            this.label118.Location = new System.Drawing.Point(246, 200);
-            this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(19, 13);
-            this.label118.TabIndex = 72;
-            this.label118.Text = "80";
+            this.G11_2S13.AutoSize = true;
+            this.G11_2S13.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S13.Location = new System.Drawing.Point(246, 200);
+            this.G11_2S13.Name = "G11_2S13";
+            this.G11_2S13.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S13.TabIndex = 72;
+            this.G11_2S13.Text = "80";
             // 
-            // label143
+            // G11_1S14
             // 
-            this.label143.AutoSize = true;
-            this.label143.ForeColor = System.Drawing.Color.DimGray;
-            this.label143.Location = new System.Drawing.Point(190, 221);
-            this.label143.Name = "label143";
-            this.label143.Size = new System.Drawing.Size(19, 13);
-            this.label143.TabIndex = 65;
-            this.label143.Text = "80";
+            this.G11_1S14.AutoSize = true;
+            this.G11_1S14.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S14.Location = new System.Drawing.Point(190, 221);
+            this.G11_1S14.Name = "G11_1S14";
+            this.G11_1S14.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S14.TabIndex = 65;
+            this.G11_1S14.Text = "80";
             // 
-            // label120
+            // G11_2S10
             // 
-            this.label120.AutoSize = true;
-            this.label120.ForeColor = System.Drawing.Color.DimGray;
-            this.label120.Location = new System.Drawing.Point(246, 137);
-            this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(19, 13);
-            this.label120.TabIndex = 71;
-            this.label120.Text = "80";
+            this.G11_2S10.AutoSize = true;
+            this.G11_2S10.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S10.Location = new System.Drawing.Point(246, 137);
+            this.G11_2S10.Name = "G11_2S10";
+            this.G11_2S10.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S10.TabIndex = 71;
+            this.G11_2S10.Text = "80";
             // 
-            // label142
+            // G11_1S11
             // 
-            this.label142.AutoSize = true;
-            this.label142.ForeColor = System.Drawing.Color.DimGray;
-            this.label142.Location = new System.Drawing.Point(190, 158);
-            this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(19, 13);
-            this.label142.TabIndex = 66;
-            this.label142.Text = "80";
+            this.G11_1S11.AutoSize = true;
+            this.G11_1S11.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S11.Location = new System.Drawing.Point(190, 158);
+            this.G11_1S11.Name = "G11_1S11";
+            this.G11_1S11.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S11.TabIndex = 66;
+            this.G11_1S11.Text = "80";
             // 
-            // label121
+            // G11_2S9
             // 
-            this.label121.AutoSize = true;
-            this.label121.ForeColor = System.Drawing.Color.DimGray;
-            this.label121.Location = new System.Drawing.Point(246, 116);
-            this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(19, 13);
-            this.label121.TabIndex = 70;
-            this.label121.Text = "80";
+            this.G11_2S9.AutoSize = true;
+            this.G11_2S9.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S9.Location = new System.Drawing.Point(246, 116);
+            this.G11_2S9.Name = "G11_2S9";
+            this.G11_2S9.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S9.TabIndex = 70;
+            this.G11_2S9.Text = "80";
             // 
-            // label141
+            // G11_1S12
             // 
-            this.label141.AutoSize = true;
-            this.label141.ForeColor = System.Drawing.Color.DimGray;
-            this.label141.Location = new System.Drawing.Point(190, 179);
-            this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(19, 13);
-            this.label141.TabIndex = 67;
-            this.label141.Text = "80";
+            this.G11_1S12.AutoSize = true;
+            this.G11_1S12.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S12.Location = new System.Drawing.Point(190, 179);
+            this.G11_1S12.Name = "G11_1S12";
+            this.G11_1S12.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S12.TabIndex = 67;
+            this.G11_1S12.Text = "80";
             // 
-            // label139
+            // G11_2S8
             // 
-            this.label139.AutoSize = true;
-            this.label139.ForeColor = System.Drawing.Color.DimGray;
-            this.label139.Location = new System.Drawing.Point(246, 95);
-            this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(19, 13);
-            this.label139.TabIndex = 69;
-            this.label139.Text = "80";
+            this.G11_2S8.AutoSize = true;
+            this.G11_2S8.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S8.Location = new System.Drawing.Point(246, 95);
+            this.G11_2S8.Name = "G11_2S8";
+            this.G11_2S8.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S8.TabIndex = 69;
+            this.G11_2S8.Text = "80";
             // 
             // label140
             // 
@@ -2228,50 +2802,59 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.panel16);
             this.panel12.Controls.Add(this.label222);
             this.panel12.Controls.Add(this.label156);
             this.panel12.Controls.Add(this.label180);
-            this.panel12.Controls.Add(this.label157);
+            this.panel12.Controls.Add(this.G12_AS5);
             this.panel12.Controls.Add(this.label187);
-            this.panel12.Controls.Add(this.label158);
+            this.panel12.Controls.Add(this.G12_AS4);
             this.panel12.Controls.Add(this.label186);
-            this.panel12.Controls.Add(this.label159);
+            this.panel12.Controls.Add(this.G12_AS7);
             this.panel12.Controls.Add(this.label185);
-            this.panel12.Controls.Add(this.label160);
+            this.panel12.Controls.Add(this.G12_AS6);
             this.panel12.Controls.Add(this.label184);
-            this.panel12.Controls.Add(this.label161);
+            this.panel12.Controls.Add(this.G12_AS3);
             this.panel12.Controls.Add(this.label183);
-            this.panel12.Controls.Add(this.label162);
+            this.panel12.Controls.Add(this.G12_AS2);
             this.panel12.Controls.Add(this.label182);
-            this.panel12.Controls.Add(this.label163);
+            this.panel12.Controls.Add(this.G12_AS1);
             this.panel12.Controls.Add(this.label181);
             this.panel12.Controls.Add(this.label164);
-            this.panel12.Controls.Add(this.label179);
-            this.panel12.Controls.Add(this.label165);
-            this.panel12.Controls.Add(this.label178);
-            this.panel12.Controls.Add(this.label166);
-            this.panel12.Controls.Add(this.label177);
-            this.panel12.Controls.Add(this.label167);
-            this.panel12.Controls.Add(this.label176);
-            this.panel12.Controls.Add(this.label168);
-            this.panel12.Controls.Add(this.label175);
-            this.panel12.Controls.Add(this.label169);
-            this.panel12.Controls.Add(this.label174);
-            this.panel12.Controls.Add(this.label170);
-            this.panel12.Controls.Add(this.label173);
-            this.panel12.Controls.Add(this.label171);
+            this.panel12.Controls.Add(this.G12_1S1);
+            this.panel12.Controls.Add(this.G12_2S5);
+            this.panel12.Controls.Add(this.G12_1S2);
+            this.panel12.Controls.Add(this.G12_2S4);
+            this.panel12.Controls.Add(this.G12_1S3);
+            this.panel12.Controls.Add(this.G12_2S7);
+            this.panel12.Controls.Add(this.G12_1S6);
+            this.panel12.Controls.Add(this.G12_2S6);
+            this.panel12.Controls.Add(this.G12_1S7);
+            this.panel12.Controls.Add(this.G12_2S3);
+            this.panel12.Controls.Add(this.G12_1S4);
+            this.panel12.Controls.Add(this.G12_2S2);
+            this.panel12.Controls.Add(this.G12_1S5);
+            this.panel12.Controls.Add(this.G12_2S1);
             this.panel12.Controls.Add(this.label172);
-            this.panel12.Location = new System.Drawing.Point(417, 398);
+            this.panel12.Location = new System.Drawing.Point(152, 1204);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(376, 249);
+            this.panel12.Size = new System.Drawing.Size(442, 249);
             this.panel12.TabIndex = 3;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel16.Location = new System.Drawing.Point(0, 1);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(442, 26);
+            this.panel16.TabIndex = 1019;
             // 
             // label222
             // 
             this.label222.AutoSize = true;
             this.label222.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label222.ForeColor = System.Drawing.Color.Black;
-            this.label222.Location = new System.Drawing.Point(27, 14);
+            this.label222.Location = new System.Drawing.Point(27, 31);
             this.label222.Name = "label222";
             this.label222.Size = new System.Drawing.Size(289, 16);
             this.label222.TabIndex = 54;
@@ -2297,15 +2880,15 @@
             this.label180.TabIndex = 92;
             this.label180.Text = "SUBJECT";
             // 
-            // label157
+            // G12_AS5
             // 
-            this.label157.AutoSize = true;
-            this.label157.ForeColor = System.Drawing.Color.DimGray;
-            this.label157.Location = new System.Drawing.Point(301, 172);
-            this.label157.Name = "label157";
-            this.label157.Size = new System.Drawing.Size(19, 13);
-            this.label157.TabIndex = 115;
-            this.label157.Text = "80";
+            this.G12_AS5.AutoSize = true;
+            this.G12_AS5.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS5.Location = new System.Drawing.Point(301, 172);
+            this.G12_AS5.Name = "G12_AS5";
+            this.G12_AS5.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS5.TabIndex = 115;
+            this.G12_AS5.Text = "80";
             // 
             // label187
             // 
@@ -2317,15 +2900,15 @@
             this.label187.TabIndex = 85;
             this.label187.Text = "English:";
             // 
-            // label158
+            // G12_AS4
             // 
-            this.label158.AutoSize = true;
-            this.label158.ForeColor = System.Drawing.Color.DimGray;
-            this.label158.Location = new System.Drawing.Point(301, 151);
-            this.label158.Name = "label158";
-            this.label158.Size = new System.Drawing.Size(19, 13);
-            this.label158.TabIndex = 114;
-            this.label158.Text = "80";
+            this.G12_AS4.AutoSize = true;
+            this.G12_AS4.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS4.Location = new System.Drawing.Point(301, 151);
+            this.G12_AS4.Name = "G12_AS4";
+            this.G12_AS4.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS4.TabIndex = 114;
+            this.G12_AS4.Text = "80";
             // 
             // label186
             // 
@@ -2337,15 +2920,15 @@
             this.label186.TabIndex = 86;
             this.label186.Text = "Filipino:";
             // 
-            // label159
+            // G12_AS7
             // 
-            this.label159.AutoSize = true;
-            this.label159.ForeColor = System.Drawing.Color.DimGray;
-            this.label159.Location = new System.Drawing.Point(301, 214);
-            this.label159.Name = "label159";
-            this.label159.Size = new System.Drawing.Size(19, 13);
-            this.label159.TabIndex = 113;
-            this.label159.Text = "80";
+            this.G12_AS7.AutoSize = true;
+            this.G12_AS7.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS7.Location = new System.Drawing.Point(301, 214);
+            this.G12_AS7.Name = "G12_AS7";
+            this.G12_AS7.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS7.TabIndex = 113;
+            this.G12_AS7.Text = "80";
             // 
             // label185
             // 
@@ -2357,15 +2940,15 @@
             this.label185.TabIndex = 87;
             this.label185.Text = "Empowerment Technology:";
             // 
-            // label160
+            // G12_AS6
             // 
-            this.label160.AutoSize = true;
-            this.label160.ForeColor = System.Drawing.Color.DimGray;
-            this.label160.Location = new System.Drawing.Point(301, 193);
-            this.label160.Name = "label160";
-            this.label160.Size = new System.Drawing.Size(19, 13);
-            this.label160.TabIndex = 112;
-            this.label160.Text = "80";
+            this.G12_AS6.AutoSize = true;
+            this.G12_AS6.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS6.Location = new System.Drawing.Point(301, 193);
+            this.G12_AS6.Name = "G12_AS6";
+            this.G12_AS6.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS6.TabIndex = 112;
+            this.G12_AS6.Text = "80";
             // 
             // label184
             // 
@@ -2377,15 +2960,15 @@
             this.label184.TabIndex = 88;
             this.label184.Text = "Calculus:";
             // 
-            // label161
+            // G12_AS3
             // 
-            this.label161.AutoSize = true;
-            this.label161.ForeColor = System.Drawing.Color.DimGray;
-            this.label161.Location = new System.Drawing.Point(301, 130);
-            this.label161.Name = "label161";
-            this.label161.Size = new System.Drawing.Size(19, 13);
-            this.label161.TabIndex = 111;
-            this.label161.Text = "80";
+            this.G12_AS3.AutoSize = true;
+            this.G12_AS3.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS3.Location = new System.Drawing.Point(301, 130);
+            this.G12_AS3.Name = "G12_AS3";
+            this.G12_AS3.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS3.TabIndex = 111;
+            this.G12_AS3.Text = "80";
             // 
             // label183
             // 
@@ -2397,15 +2980,15 @@
             this.label183.TabIndex = 89;
             this.label183.Text = "Oral Comm:";
             // 
-            // label162
+            // G12_AS2
             // 
-            this.label162.AutoSize = true;
-            this.label162.ForeColor = System.Drawing.Color.DimGray;
-            this.label162.Location = new System.Drawing.Point(301, 109);
-            this.label162.Name = "label162";
-            this.label162.Size = new System.Drawing.Size(19, 13);
-            this.label162.TabIndex = 110;
-            this.label162.Text = "80";
+            this.G12_AS2.AutoSize = true;
+            this.G12_AS2.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS2.Location = new System.Drawing.Point(301, 109);
+            this.G12_AS2.Name = "G12_AS2";
+            this.G12_AS2.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS2.TabIndex = 110;
+            this.G12_AS2.Text = "80";
             // 
             // label182
             // 
@@ -2417,15 +3000,15 @@
             this.label182.TabIndex = 90;
             this.label182.Text = "Practical Research:";
             // 
-            // label163
+            // G12_AS1
             // 
-            this.label163.AutoSize = true;
-            this.label163.ForeColor = System.Drawing.Color.DimGray;
-            this.label163.Location = new System.Drawing.Point(301, 88);
-            this.label163.Name = "label163";
-            this.label163.Size = new System.Drawing.Size(19, 13);
-            this.label163.TabIndex = 109;
-            this.label163.Text = "80";
+            this.G12_AS1.AutoSize = true;
+            this.G12_AS1.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_AS1.Location = new System.Drawing.Point(301, 88);
+            this.G12_AS1.Name = "G12_AS1";
+            this.G12_AS1.Size = new System.Drawing.Size(19, 13);
+            this.G12_AS1.TabIndex = 109;
+            this.G12_AS1.Text = "80";
             // 
             // label181
             // 
@@ -2447,145 +3030,145 @@
             this.label164.TabIndex = 108;
             this.label164.Text = "2nd";
             // 
-            // label179
+            // G12_1S1
             // 
-            this.label179.AutoSize = true;
-            this.label179.ForeColor = System.Drawing.Color.DimGray;
-            this.label179.Location = new System.Drawing.Point(188, 88);
-            this.label179.Name = "label179";
-            this.label179.Size = new System.Drawing.Size(19, 13);
-            this.label179.TabIndex = 93;
-            this.label179.Text = "80";
+            this.G12_1S1.AutoSize = true;
+            this.G12_1S1.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S1.Location = new System.Drawing.Point(188, 88);
+            this.G12_1S1.Name = "G12_1S1";
+            this.G12_1S1.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S1.TabIndex = 93;
+            this.G12_1S1.Text = "80";
             // 
-            // label165
+            // G12_2S5
             // 
-            this.label165.AutoSize = true;
-            this.label165.ForeColor = System.Drawing.Color.DimGray;
-            this.label165.Location = new System.Drawing.Point(244, 172);
-            this.label165.Name = "label165";
-            this.label165.Size = new System.Drawing.Size(19, 13);
-            this.label165.TabIndex = 107;
-            this.label165.Text = "80";
+            this.G12_2S5.AutoSize = true;
+            this.G12_2S5.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S5.Location = new System.Drawing.Point(244, 172);
+            this.G12_2S5.Name = "G12_2S5";
+            this.G12_2S5.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S5.TabIndex = 107;
+            this.G12_2S5.Text = "80";
             // 
-            // label178
+            // G12_1S2
             // 
-            this.label178.AutoSize = true;
-            this.label178.ForeColor = System.Drawing.Color.DimGray;
-            this.label178.Location = new System.Drawing.Point(188, 109);
-            this.label178.Name = "label178";
-            this.label178.Size = new System.Drawing.Size(19, 13);
-            this.label178.TabIndex = 94;
-            this.label178.Text = "80";
+            this.G12_1S2.AutoSize = true;
+            this.G12_1S2.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S2.Location = new System.Drawing.Point(188, 109);
+            this.G12_1S2.Name = "G12_1S2";
+            this.G12_1S2.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S2.TabIndex = 94;
+            this.G12_1S2.Text = "80";
             // 
-            // label166
+            // G12_2S4
             // 
-            this.label166.AutoSize = true;
-            this.label166.ForeColor = System.Drawing.Color.DimGray;
-            this.label166.Location = new System.Drawing.Point(244, 151);
-            this.label166.Name = "label166";
-            this.label166.Size = new System.Drawing.Size(19, 13);
-            this.label166.TabIndex = 106;
-            this.label166.Text = "80";
+            this.G12_2S4.AutoSize = true;
+            this.G12_2S4.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S4.Location = new System.Drawing.Point(244, 151);
+            this.G12_2S4.Name = "G12_2S4";
+            this.G12_2S4.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S4.TabIndex = 106;
+            this.G12_2S4.Text = "80";
             // 
-            // label177
+            // G12_1S3
             // 
-            this.label177.AutoSize = true;
-            this.label177.ForeColor = System.Drawing.Color.DimGray;
-            this.label177.Location = new System.Drawing.Point(188, 130);
-            this.label177.Name = "label177";
-            this.label177.Size = new System.Drawing.Size(19, 13);
-            this.label177.TabIndex = 95;
-            this.label177.Text = "80";
+            this.G12_1S3.AutoSize = true;
+            this.G12_1S3.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S3.Location = new System.Drawing.Point(188, 130);
+            this.G12_1S3.Name = "G12_1S3";
+            this.G12_1S3.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S3.TabIndex = 95;
+            this.G12_1S3.Text = "80";
             // 
-            // label167
+            // G12_2S7
             // 
-            this.label167.AutoSize = true;
-            this.label167.ForeColor = System.Drawing.Color.DimGray;
-            this.label167.Location = new System.Drawing.Point(244, 214);
-            this.label167.Name = "label167";
-            this.label167.Size = new System.Drawing.Size(19, 13);
-            this.label167.TabIndex = 105;
-            this.label167.Text = "80";
+            this.G12_2S7.AutoSize = true;
+            this.G12_2S7.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S7.Location = new System.Drawing.Point(244, 214);
+            this.G12_2S7.Name = "G12_2S7";
+            this.G12_2S7.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S7.TabIndex = 105;
+            this.G12_2S7.Text = "80";
             // 
-            // label176
+            // G12_1S6
             // 
-            this.label176.AutoSize = true;
-            this.label176.ForeColor = System.Drawing.Color.DimGray;
-            this.label176.Location = new System.Drawing.Point(188, 193);
-            this.label176.Name = "label176";
-            this.label176.Size = new System.Drawing.Size(19, 13);
-            this.label176.TabIndex = 96;
-            this.label176.Text = "80";
+            this.G12_1S6.AutoSize = true;
+            this.G12_1S6.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S6.Location = new System.Drawing.Point(188, 193);
+            this.G12_1S6.Name = "G12_1S6";
+            this.G12_1S6.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S6.TabIndex = 96;
+            this.G12_1S6.Text = "80";
             // 
-            // label168
+            // G12_2S6
             // 
-            this.label168.AutoSize = true;
-            this.label168.ForeColor = System.Drawing.Color.DimGray;
-            this.label168.Location = new System.Drawing.Point(244, 193);
-            this.label168.Name = "label168";
-            this.label168.Size = new System.Drawing.Size(19, 13);
-            this.label168.TabIndex = 104;
-            this.label168.Text = "80";
+            this.G12_2S6.AutoSize = true;
+            this.G12_2S6.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S6.Location = new System.Drawing.Point(244, 193);
+            this.G12_2S6.Name = "G12_2S6";
+            this.G12_2S6.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S6.TabIndex = 104;
+            this.G12_2S6.Text = "80";
             // 
-            // label175
+            // G12_1S7
             // 
-            this.label175.AutoSize = true;
-            this.label175.ForeColor = System.Drawing.Color.DimGray;
-            this.label175.Location = new System.Drawing.Point(188, 214);
-            this.label175.Name = "label175";
-            this.label175.Size = new System.Drawing.Size(19, 13);
-            this.label175.TabIndex = 97;
-            this.label175.Text = "80";
+            this.G12_1S7.AutoSize = true;
+            this.G12_1S7.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S7.Location = new System.Drawing.Point(188, 214);
+            this.G12_1S7.Name = "G12_1S7";
+            this.G12_1S7.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S7.TabIndex = 97;
+            this.G12_1S7.Text = "80";
             // 
-            // label169
+            // G12_2S3
             // 
-            this.label169.AutoSize = true;
-            this.label169.ForeColor = System.Drawing.Color.DimGray;
-            this.label169.Location = new System.Drawing.Point(244, 130);
-            this.label169.Name = "label169";
-            this.label169.Size = new System.Drawing.Size(19, 13);
-            this.label169.TabIndex = 103;
-            this.label169.Text = "80";
+            this.G12_2S3.AutoSize = true;
+            this.G12_2S3.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S3.Location = new System.Drawing.Point(244, 130);
+            this.G12_2S3.Name = "G12_2S3";
+            this.G12_2S3.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S3.TabIndex = 103;
+            this.G12_2S3.Text = "80";
             // 
-            // label174
+            // G12_1S4
             // 
-            this.label174.AutoSize = true;
-            this.label174.ForeColor = System.Drawing.Color.DimGray;
-            this.label174.Location = new System.Drawing.Point(188, 151);
-            this.label174.Name = "label174";
-            this.label174.Size = new System.Drawing.Size(19, 13);
-            this.label174.TabIndex = 98;
-            this.label174.Text = "80";
+            this.G12_1S4.AutoSize = true;
+            this.G12_1S4.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S4.Location = new System.Drawing.Point(188, 151);
+            this.G12_1S4.Name = "G12_1S4";
+            this.G12_1S4.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S4.TabIndex = 98;
+            this.G12_1S4.Text = "80";
             // 
-            // label170
+            // G12_2S2
             // 
-            this.label170.AutoSize = true;
-            this.label170.ForeColor = System.Drawing.Color.DimGray;
-            this.label170.Location = new System.Drawing.Point(244, 109);
-            this.label170.Name = "label170";
-            this.label170.Size = new System.Drawing.Size(19, 13);
-            this.label170.TabIndex = 102;
-            this.label170.Text = "80";
+            this.G12_2S2.AutoSize = true;
+            this.G12_2S2.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S2.Location = new System.Drawing.Point(244, 109);
+            this.G12_2S2.Name = "G12_2S2";
+            this.G12_2S2.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S2.TabIndex = 102;
+            this.G12_2S2.Text = "80";
             // 
-            // label173
+            // G12_1S5
             // 
-            this.label173.AutoSize = true;
-            this.label173.ForeColor = System.Drawing.Color.DimGray;
-            this.label173.Location = new System.Drawing.Point(188, 172);
-            this.label173.Name = "label173";
-            this.label173.Size = new System.Drawing.Size(19, 13);
-            this.label173.TabIndex = 99;
-            this.label173.Text = "80";
+            this.G12_1S5.AutoSize = true;
+            this.G12_1S5.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_1S5.Location = new System.Drawing.Point(188, 172);
+            this.G12_1S5.Name = "G12_1S5";
+            this.G12_1S5.Size = new System.Drawing.Size(19, 13);
+            this.G12_1S5.TabIndex = 99;
+            this.G12_1S5.Text = "80";
             // 
-            // label171
+            // G12_2S1
             // 
-            this.label171.AutoSize = true;
-            this.label171.ForeColor = System.Drawing.Color.DimGray;
-            this.label171.Location = new System.Drawing.Point(244, 88);
-            this.label171.Name = "label171";
-            this.label171.Size = new System.Drawing.Size(19, 13);
-            this.label171.TabIndex = 101;
-            this.label171.Text = "80";
+            this.G12_2S1.AutoSize = true;
+            this.G12_2S1.ForeColor = System.Drawing.Color.DimGray;
+            this.G12_2S1.Location = new System.Drawing.Point(244, 88);
+            this.G12_2S1.Name = "G12_2S1";
+            this.G12_2S1.Size = new System.Drawing.Size(19, 13);
+            this.G12_2S1.TabIndex = 101;
+            this.G12_2S1.Text = "80";
             // 
             // label172
             // 
@@ -2602,29 +3185,30 @@
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.Controls.Add(this.label220);
             this.panel9.Controls.Add(this.label92);
-            this.panel9.Controls.Add(this.label93);
-            this.panel9.Controls.Add(this.label94);
-            this.panel9.Controls.Add(this.label96);
-            this.panel9.Controls.Add(this.label98);
-            this.panel9.Controls.Add(this.label101);
-            this.panel9.Controls.Add(this.label102);
-            this.panel9.Controls.Add(this.label103);
+            this.panel9.Controls.Add(this.G11_AS5);
+            this.panel9.Controls.Add(this.G11_AS4);
+            this.panel9.Controls.Add(this.G11_AS7);
+            this.panel9.Controls.Add(this.panel8);
+            this.panel9.Controls.Add(this.G11_AS6);
+            this.panel9.Controls.Add(this.G11_AS3);
+            this.panel9.Controls.Add(this.G11_AS2);
+            this.panel9.Controls.Add(this.G11_AS1);
             this.panel9.Controls.Add(this.label84);
-            this.panel9.Controls.Add(this.label85);
-            this.panel9.Controls.Add(this.label86);
-            this.panel9.Controls.Add(this.label87);
-            this.panel9.Controls.Add(this.label88);
-            this.panel9.Controls.Add(this.label89);
-            this.panel9.Controls.Add(this.label90);
-            this.panel9.Controls.Add(this.label91);
+            this.panel9.Controls.Add(this.G11_2S5);
+            this.panel9.Controls.Add(this.G11_2S4);
+            this.panel9.Controls.Add(this.G11_2S7);
+            this.panel9.Controls.Add(this.G11_2S6);
+            this.panel9.Controls.Add(this.G11_2S3);
+            this.panel9.Controls.Add(this.G11_2S2);
+            this.panel9.Controls.Add(this.G11_2S1);
             this.panel9.Controls.Add(this.label61);
-            this.panel9.Controls.Add(this.label63);
-            this.panel9.Controls.Add(this.label64);
-            this.panel9.Controls.Add(this.label66);
-            this.panel9.Controls.Add(this.label67);
-            this.panel9.Controls.Add(this.label71);
-            this.panel9.Controls.Add(this.label82);
-            this.panel9.Controls.Add(this.label83);
+            this.panel9.Controls.Add(this.G11_1S5);
+            this.panel9.Controls.Add(this.G11_1S4);
+            this.panel9.Controls.Add(this.G11_1S7);
+            this.panel9.Controls.Add(this.G11_1S6);
+            this.panel9.Controls.Add(this.G11_1S3);
+            this.panel9.Controls.Add(this.G11_1S2);
+            this.panel9.Controls.Add(this.G11_1S1);
             this.panel9.Controls.Add(this.label60);
             this.panel9.Controls.Add(this.label73);
             this.panel9.Controls.Add(this.label75);
@@ -2633,9 +3217,9 @@
             this.panel9.Controls.Add(this.label78);
             this.panel9.Controls.Add(this.label80);
             this.panel9.Controls.Add(this.label81);
-            this.panel9.Location = new System.Drawing.Point(417, 143);
+            this.panel9.Location = new System.Drawing.Point(152, 902);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(376, 249);
+            this.panel9.Size = new System.Drawing.Size(442, 249);
             this.panel9.TabIndex = 1;
             // 
             // label220
@@ -2643,7 +3227,7 @@
             this.label220.AutoSize = true;
             this.label220.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label220.ForeColor = System.Drawing.Color.Black;
-            this.label220.Location = new System.Drawing.Point(27, 16);
+            this.label220.Location = new System.Drawing.Point(27, 39);
             this.label220.Name = "label220";
             this.label220.Size = new System.Drawing.Size(289, 16);
             this.label220.TabIndex = 53;
@@ -2659,75 +3243,83 @@
             this.label92.TabIndex = 52;
             this.label92.Text = "Average";
             // 
-            // label93
+            // G11_AS5
             // 
-            this.label93.AutoSize = true;
-            this.label93.ForeColor = System.Drawing.Color.DimGray;
-            this.label93.Location = new System.Drawing.Point(301, 179);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(19, 13);
-            this.label93.TabIndex = 51;
-            this.label93.Text = "80";
+            this.G11_AS5.AutoSize = true;
+            this.G11_AS5.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS5.Location = new System.Drawing.Point(301, 179);
+            this.G11_AS5.Name = "G11_AS5";
+            this.G11_AS5.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS5.TabIndex = 51;
+            this.G11_AS5.Text = "80";
             // 
-            // label94
+            // G11_AS4
             // 
-            this.label94.AutoSize = true;
-            this.label94.ForeColor = System.Drawing.Color.DimGray;
-            this.label94.Location = new System.Drawing.Point(301, 158);
-            this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(19, 13);
-            this.label94.TabIndex = 50;
-            this.label94.Text = "80";
+            this.G11_AS4.AutoSize = true;
+            this.G11_AS4.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS4.Location = new System.Drawing.Point(301, 158);
+            this.G11_AS4.Name = "G11_AS4";
+            this.G11_AS4.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS4.TabIndex = 50;
+            this.G11_AS4.Text = "80";
             // 
-            // label96
+            // G11_AS7
             // 
-            this.label96.AutoSize = true;
-            this.label96.ForeColor = System.Drawing.Color.DimGray;
-            this.label96.Location = new System.Drawing.Point(301, 221);
-            this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(19, 13);
-            this.label96.TabIndex = 49;
-            this.label96.Text = "80";
+            this.G11_AS7.AutoSize = true;
+            this.G11_AS7.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS7.Location = new System.Drawing.Point(301, 221);
+            this.G11_AS7.Name = "G11_AS7";
+            this.G11_AS7.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS7.TabIndex = 49;
+            this.G11_AS7.Text = "80";
             // 
-            // label98
+            // panel8
             // 
-            this.label98.AutoSize = true;
-            this.label98.ForeColor = System.Drawing.Color.DimGray;
-            this.label98.Location = new System.Drawing.Point(301, 200);
-            this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(19, 13);
-            this.label98.TabIndex = 48;
-            this.label98.Text = "80";
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.panel8.Location = new System.Drawing.Point(0, 1);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(442, 26);
+            this.panel8.TabIndex = 46;
             // 
-            // label101
+            // G11_AS6
             // 
-            this.label101.AutoSize = true;
-            this.label101.ForeColor = System.Drawing.Color.DimGray;
-            this.label101.Location = new System.Drawing.Point(301, 137);
-            this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(19, 13);
-            this.label101.TabIndex = 47;
-            this.label101.Text = "80";
+            this.G11_AS6.AutoSize = true;
+            this.G11_AS6.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS6.Location = new System.Drawing.Point(301, 200);
+            this.G11_AS6.Name = "G11_AS6";
+            this.G11_AS6.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS6.TabIndex = 48;
+            this.G11_AS6.Text = "80";
             // 
-            // label102
+            // G11_AS3
             // 
-            this.label102.AutoSize = true;
-            this.label102.ForeColor = System.Drawing.Color.DimGray;
-            this.label102.Location = new System.Drawing.Point(301, 116);
-            this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(19, 13);
-            this.label102.TabIndex = 46;
-            this.label102.Text = "80";
+            this.G11_AS3.AutoSize = true;
+            this.G11_AS3.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS3.Location = new System.Drawing.Point(301, 137);
+            this.G11_AS3.Name = "G11_AS3";
+            this.G11_AS3.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS3.TabIndex = 47;
+            this.G11_AS3.Text = "80";
             // 
-            // label103
+            // G11_AS2
             // 
-            this.label103.AutoSize = true;
-            this.label103.ForeColor = System.Drawing.Color.DimGray;
-            this.label103.Location = new System.Drawing.Point(301, 95);
-            this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(19, 13);
-            this.label103.TabIndex = 45;
-            this.label103.Text = "80";
+            this.G11_AS2.AutoSize = true;
+            this.G11_AS2.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS2.Location = new System.Drawing.Point(301, 116);
+            this.G11_AS2.Name = "G11_AS2";
+            this.G11_AS2.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS2.TabIndex = 46;
+            this.G11_AS2.Text = "80";
+            // 
+            // G11_AS1
+            // 
+            this.G11_AS1.AutoSize = true;
+            this.G11_AS1.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_AS1.Location = new System.Drawing.Point(301, 95);
+            this.G11_AS1.Name = "G11_AS1";
+            this.G11_AS1.Size = new System.Drawing.Size(19, 13);
+            this.G11_AS1.TabIndex = 45;
+            this.G11_AS1.Text = "80";
             // 
             // label84
             // 
@@ -2739,75 +3331,76 @@
             this.label84.TabIndex = 44;
             this.label84.Text = "2nd";
             // 
-            // label85
+            // G11_2S5
             // 
-            this.label85.AutoSize = true;
-            this.label85.ForeColor = System.Drawing.Color.DimGray;
-            this.label85.Location = new System.Drawing.Point(244, 179);
-            this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(19, 13);
-            this.label85.TabIndex = 43;
-            this.label85.Text = "80";
+            this.G11_2S5.AutoSize = true;
+            this.G11_2S5.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S5.Location = new System.Drawing.Point(244, 179);
+            this.G11_2S5.Name = "G11_2S5";
+            this.G11_2S5.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S5.TabIndex = 43;
+            this.G11_2S5.Text = "80";
             // 
-            // label86
+            // G11_2S4
             // 
-            this.label86.AutoSize = true;
-            this.label86.ForeColor = System.Drawing.Color.DimGray;
-            this.label86.Location = new System.Drawing.Point(244, 158);
-            this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(19, 13);
-            this.label86.TabIndex = 42;
-            this.label86.Text = "80";
+            this.G11_2S4.AutoSize = true;
+            this.G11_2S4.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S4.Location = new System.Drawing.Point(244, 158);
+            this.G11_2S4.Name = "G11_2S4";
+            this.G11_2S4.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S4.TabIndex = 42;
+            this.G11_2S4.Text = "80";
+            this.G11_2S4.Click += new System.EventHandler(this.label86_Click);
             // 
-            // label87
+            // G11_2S7
             // 
-            this.label87.AutoSize = true;
-            this.label87.ForeColor = System.Drawing.Color.DimGray;
-            this.label87.Location = new System.Drawing.Point(244, 221);
-            this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(19, 13);
-            this.label87.TabIndex = 41;
-            this.label87.Text = "80";
+            this.G11_2S7.AutoSize = true;
+            this.G11_2S7.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S7.Location = new System.Drawing.Point(244, 221);
+            this.G11_2S7.Name = "G11_2S7";
+            this.G11_2S7.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S7.TabIndex = 41;
+            this.G11_2S7.Text = "80";
             // 
-            // label88
+            // G11_2S6
             // 
-            this.label88.AutoSize = true;
-            this.label88.ForeColor = System.Drawing.Color.DimGray;
-            this.label88.Location = new System.Drawing.Point(244, 200);
-            this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(19, 13);
-            this.label88.TabIndex = 40;
-            this.label88.Text = "80";
+            this.G11_2S6.AutoSize = true;
+            this.G11_2S6.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S6.Location = new System.Drawing.Point(244, 200);
+            this.G11_2S6.Name = "G11_2S6";
+            this.G11_2S6.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S6.TabIndex = 40;
+            this.G11_2S6.Text = "80";
             // 
-            // label89
+            // G11_2S3
             // 
-            this.label89.AutoSize = true;
-            this.label89.ForeColor = System.Drawing.Color.DimGray;
-            this.label89.Location = new System.Drawing.Point(244, 137);
-            this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(19, 13);
-            this.label89.TabIndex = 39;
-            this.label89.Text = "80";
+            this.G11_2S3.AutoSize = true;
+            this.G11_2S3.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S3.Location = new System.Drawing.Point(244, 137);
+            this.G11_2S3.Name = "G11_2S3";
+            this.G11_2S3.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S3.TabIndex = 39;
+            this.G11_2S3.Text = "80";
             // 
-            // label90
+            // G11_2S2
             // 
-            this.label90.AutoSize = true;
-            this.label90.ForeColor = System.Drawing.Color.DimGray;
-            this.label90.Location = new System.Drawing.Point(244, 116);
-            this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(19, 13);
-            this.label90.TabIndex = 38;
-            this.label90.Text = "80";
+            this.G11_2S2.AutoSize = true;
+            this.G11_2S2.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S2.Location = new System.Drawing.Point(244, 116);
+            this.G11_2S2.Name = "G11_2S2";
+            this.G11_2S2.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S2.TabIndex = 38;
+            this.G11_2S2.Text = "80";
             // 
-            // label91
+            // G11_2S1
             // 
-            this.label91.AutoSize = true;
-            this.label91.ForeColor = System.Drawing.Color.DimGray;
-            this.label91.Location = new System.Drawing.Point(244, 95);
-            this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(19, 13);
-            this.label91.TabIndex = 37;
-            this.label91.Text = "80";
+            this.G11_2S1.AutoSize = true;
+            this.G11_2S1.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_2S1.Location = new System.Drawing.Point(244, 95);
+            this.G11_2S1.Name = "G11_2S1";
+            this.G11_2S1.Size = new System.Drawing.Size(19, 13);
+            this.G11_2S1.TabIndex = 37;
+            this.G11_2S1.Text = "80";
             // 
             // label61
             // 
@@ -2819,75 +3412,75 @@
             this.label61.TabIndex = 36;
             this.label61.Text = "1st";
             // 
-            // label63
+            // G11_1S5
             // 
-            this.label63.AutoSize = true;
-            this.label63.ForeColor = System.Drawing.Color.DimGray;
-            this.label63.Location = new System.Drawing.Point(188, 179);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(19, 13);
-            this.label63.TabIndex = 35;
-            this.label63.Text = "80";
+            this.G11_1S5.AutoSize = true;
+            this.G11_1S5.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S5.Location = new System.Drawing.Point(188, 179);
+            this.G11_1S5.Name = "G11_1S5";
+            this.G11_1S5.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S5.TabIndex = 35;
+            this.G11_1S5.Text = "80";
             // 
-            // label64
+            // G11_1S4
             // 
-            this.label64.AutoSize = true;
-            this.label64.ForeColor = System.Drawing.Color.DimGray;
-            this.label64.Location = new System.Drawing.Point(188, 158);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(19, 13);
-            this.label64.TabIndex = 34;
-            this.label64.Text = "80";
+            this.G11_1S4.AutoSize = true;
+            this.G11_1S4.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S4.Location = new System.Drawing.Point(188, 158);
+            this.G11_1S4.Name = "G11_1S4";
+            this.G11_1S4.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S4.TabIndex = 34;
+            this.G11_1S4.Text = "80";
             // 
-            // label66
+            // G11_1S7
             // 
-            this.label66.AutoSize = true;
-            this.label66.ForeColor = System.Drawing.Color.DimGray;
-            this.label66.Location = new System.Drawing.Point(188, 221);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(19, 13);
-            this.label66.TabIndex = 33;
-            this.label66.Text = "80";
+            this.G11_1S7.AutoSize = true;
+            this.G11_1S7.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S7.Location = new System.Drawing.Point(188, 221);
+            this.G11_1S7.Name = "G11_1S7";
+            this.G11_1S7.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S7.TabIndex = 33;
+            this.G11_1S7.Text = "80";
             // 
-            // label67
+            // G11_1S6
             // 
-            this.label67.AutoSize = true;
-            this.label67.ForeColor = System.Drawing.Color.DimGray;
-            this.label67.Location = new System.Drawing.Point(188, 200);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(19, 13);
-            this.label67.TabIndex = 32;
-            this.label67.Text = "80";
+            this.G11_1S6.AutoSize = true;
+            this.G11_1S6.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S6.Location = new System.Drawing.Point(188, 200);
+            this.G11_1S6.Name = "G11_1S6";
+            this.G11_1S6.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S6.TabIndex = 32;
+            this.G11_1S6.Text = "80";
             // 
-            // label71
+            // G11_1S3
             // 
-            this.label71.AutoSize = true;
-            this.label71.ForeColor = System.Drawing.Color.DimGray;
-            this.label71.Location = new System.Drawing.Point(188, 137);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(19, 13);
-            this.label71.TabIndex = 31;
-            this.label71.Text = "80";
+            this.G11_1S3.AutoSize = true;
+            this.G11_1S3.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S3.Location = new System.Drawing.Point(188, 137);
+            this.G11_1S3.Name = "G11_1S3";
+            this.G11_1S3.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S3.TabIndex = 31;
+            this.G11_1S3.Text = "80";
             // 
-            // label82
+            // G11_1S2
             // 
-            this.label82.AutoSize = true;
-            this.label82.ForeColor = System.Drawing.Color.DimGray;
-            this.label82.Location = new System.Drawing.Point(188, 116);
-            this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(19, 13);
-            this.label82.TabIndex = 30;
-            this.label82.Text = "80";
+            this.G11_1S2.AutoSize = true;
+            this.G11_1S2.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S2.Location = new System.Drawing.Point(188, 116);
+            this.G11_1S2.Name = "G11_1S2";
+            this.G11_1S2.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S2.TabIndex = 30;
+            this.G11_1S2.Text = "80";
             // 
-            // label83
+            // G11_1S1
             // 
-            this.label83.AutoSize = true;
-            this.label83.ForeColor = System.Drawing.Color.DimGray;
-            this.label83.Location = new System.Drawing.Point(188, 95);
-            this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(19, 13);
-            this.label83.TabIndex = 29;
-            this.label83.Text = "80";
+            this.G11_1S1.AutoSize = true;
+            this.G11_1S1.ForeColor = System.Drawing.Color.DimGray;
+            this.G11_1S1.Location = new System.Drawing.Point(188, 95);
+            this.G11_1S1.Name = "G11_1S1";
+            this.G11_1S1.Size = new System.Drawing.Size(19, 13);
+            this.G11_1S1.TabIndex = 29;
+            this.G11_1S1.Text = "80";
             // 
             // label60
             // 
@@ -2972,15 +3565,30 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.gcontactnotxt);
+            this.panel6.Controls.Add(this.guardiantxt);
             this.panel6.Controls.Add(this.label40);
-            this.panel6.Controls.Add(this.label41);
-            this.panel6.Controls.Add(this.label42);
-            this.panel6.Controls.Add(this.label43);
-            this.panel6.Controls.Add(this.label44);
-            this.panel6.Controls.Add(this.label52);
-            this.panel6.Controls.Add(this.label54);
-            this.panel6.Controls.Add(this.label55);
-            this.panel6.Controls.Add(this.label56);
+            this.panel6.Controls.Add(this.mcontactnotxt);
+            this.panel6.Controls.Add(this.mothertxt);
+            this.panel6.Controls.Add(this.label33);
+            this.panel6.Controls.Add(this.fcontactnotxt);
+            this.panel6.Controls.Add(this.fathertxt);
+            this.panel6.Controls.Add(this.label29);
+            this.panel6.Controls.Add(this.label25);
+            this.panel6.Controls.Add(this.label27);
+            this.panel6.Controls.Add(this.religiontxt);
+            this.panel6.Controls.Add(this.label28);
+            this.panel6.Controls.Add(this.nationalitytxt);
+            this.panel6.Controls.Add(this.label26);
+            this.panel6.Controls.Add(this.glvltxt);
+            this.panel6.Controls.Add(this.strandtxt);
+            this.panel6.Controls.Add(this.bptxt);
+            this.panel6.Controls.Add(this.Gendertxt);
+            this.panel6.Controls.Add(this.addtxt);
+            this.panel6.Controls.Add(this.bdtxt);
+            this.panel6.Controls.Add(this.Contactnotxt);
+            this.panel6.Controls.Add(this.studnotxt);
+            this.panel6.Controls.Add(this.lrntxt);
             this.panel6.Controls.Add(this.label57);
             this.panel6.Controls.Add(this.label39);
             this.panel6.Controls.Add(this.label38);
@@ -2991,118 +3599,268 @@
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.pictureBox7);
-            this.panel6.Location = new System.Drawing.Point(59, 143);
+            this.panel6.Location = new System.Drawing.Point(142, 378);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(349, 504);
+            this.panel6.Size = new System.Drawing.Size(957, 370);
             this.panel6.TabIndex = 0;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // gcontactnotxt
+            // 
+            this.gcontactnotxt.AutoSize = true;
+            this.gcontactnotxt.ForeColor = System.Drawing.Color.DimGray;
+            this.gcontactnotxt.Location = new System.Drawing.Point(792, 229);
+            this.gcontactnotxt.Name = "gcontactnotxt";
+            this.gcontactnotxt.Size = new System.Drawing.Size(54, 13);
+            this.gcontactnotxt.TabIndex = 35;
+            this.gcontactnotxt.Text = "Data here";
+            // 
+            // guardiantxt
+            // 
+            this.guardiantxt.AutoSize = true;
+            this.guardiantxt.ForeColor = System.Drawing.Color.DimGray;
+            this.guardiantxt.Location = new System.Drawing.Point(618, 229);
+            this.guardiantxt.Name = "guardiantxt";
+            this.guardiantxt.Size = new System.Drawing.Size(54, 13);
+            this.guardiantxt.TabIndex = 34;
+            this.guardiantxt.Text = "Data here";
             // 
             // label40
             // 
             this.label40.AutoSize = true;
             this.label40.ForeColor = System.Drawing.Color.DimGray;
-            this.label40.Location = new System.Drawing.Point(127, 300);
+            this.label40.Location = new System.Drawing.Point(548, 229);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(54, 13);
-            this.label40.TabIndex = 20;
-            this.label40.Text = "Data here";
+            this.label40.Size = new System.Drawing.Size(53, 13);
+            this.label40.TabIndex = 33;
+            this.label40.Text = "Guardian:";
             // 
-            // label41
+            // mcontactnotxt
             // 
-            this.label41.AutoSize = true;
-            this.label41.ForeColor = System.Drawing.Color.DimGray;
-            this.label41.Location = new System.Drawing.Point(127, 268);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(54, 13);
-            this.label41.TabIndex = 19;
-            this.label41.Text = "Data here";
+            this.mcontactnotxt.AutoSize = true;
+            this.mcontactnotxt.ForeColor = System.Drawing.Color.DimGray;
+            this.mcontactnotxt.Location = new System.Drawing.Point(792, 204);
+            this.mcontactnotxt.Name = "mcontactnotxt";
+            this.mcontactnotxt.Size = new System.Drawing.Size(54, 13);
+            this.mcontactnotxt.TabIndex = 32;
+            this.mcontactnotxt.Text = "Data here";
             // 
-            // label42
+            // mothertxt
             // 
-            this.label42.AutoSize = true;
-            this.label42.ForeColor = System.Drawing.Color.DimGray;
-            this.label42.Location = new System.Drawing.Point(127, 364);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(54, 13);
-            this.label42.TabIndex = 18;
-            this.label42.Text = "Data here";
+            this.mothertxt.AutoSize = true;
+            this.mothertxt.ForeColor = System.Drawing.Color.DimGray;
+            this.mothertxt.Location = new System.Drawing.Point(618, 204);
+            this.mothertxt.Name = "mothertxt";
+            this.mothertxt.Size = new System.Drawing.Size(54, 13);
+            this.mothertxt.TabIndex = 31;
+            this.mothertxt.Text = "Data here";
             // 
-            // label43
+            // label33
             // 
-            this.label43.AutoSize = true;
-            this.label43.ForeColor = System.Drawing.Color.DimGray;
-            this.label43.Location = new System.Drawing.Point(127, 428);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(54, 13);
-            this.label43.TabIndex = 17;
-            this.label43.Text = "Data here";
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.Color.DimGray;
+            this.label33.Location = new System.Drawing.Point(558, 204);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(43, 13);
+            this.label33.TabIndex = 30;
+            this.label33.Text = "Mother:";
             // 
-            // label44
+            // fcontactnotxt
             // 
-            this.label44.AutoSize = true;
-            this.label44.ForeColor = System.Drawing.Color.DimGray;
-            this.label44.Location = new System.Drawing.Point(127, 396);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(54, 13);
-            this.label44.TabIndex = 16;
-            this.label44.Text = "Data here";
+            this.fcontactnotxt.AutoSize = true;
+            this.fcontactnotxt.ForeColor = System.Drawing.Color.DimGray;
+            this.fcontactnotxt.Location = new System.Drawing.Point(791, 180);
+            this.fcontactnotxt.Name = "fcontactnotxt";
+            this.fcontactnotxt.Size = new System.Drawing.Size(54, 13);
+            this.fcontactnotxt.TabIndex = 29;
+            this.fcontactnotxt.Text = "Data here";
             // 
-            // label52
+            // fathertxt
             // 
-            this.label52.AutoSize = true;
-            this.label52.ForeColor = System.Drawing.Color.DimGray;
-            this.label52.Location = new System.Drawing.Point(127, 332);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(54, 13);
-            this.label52.TabIndex = 15;
-            this.label52.Text = "Data here";
+            this.fathertxt.AutoSize = true;
+            this.fathertxt.ForeColor = System.Drawing.Color.DimGray;
+            this.fathertxt.Location = new System.Drawing.Point(617, 180);
+            this.fathertxt.Name = "fathertxt";
+            this.fathertxt.Size = new System.Drawing.Size(54, 13);
+            this.fathertxt.TabIndex = 28;
+            this.fathertxt.Text = "Data here";
             // 
-            // label54
+            // label29
             // 
-            this.label54.AutoSize = true;
-            this.label54.ForeColor = System.Drawing.Color.DimGray;
-            this.label54.Location = new System.Drawing.Point(127, 460);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(54, 13);
-            this.label54.TabIndex = 14;
-            this.label54.Text = "Data here";
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.Color.DimGray;
+            this.label29.Location = new System.Drawing.Point(561, 180);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(40, 13);
+            this.label29.TabIndex = 27;
+            this.label29.Text = "Father:";
             // 
-            // label55
+            // label25
             // 
-            this.label55.AutoSize = true;
-            this.label55.ForeColor = System.Drawing.Color.DimGray;
-            this.label55.Location = new System.Drawing.Point(127, 236);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(54, 13);
-            this.label55.TabIndex = 13;
-            this.label55.Text = "Data here";
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.DimGray;
+            this.label25.Location = new System.Drawing.Point(778, 127);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(54, 13);
+            this.label25.TabIndex = 26;
+            this.label25.Text = "Data here";
             // 
-            // label56
+            // label27
             // 
-            this.label56.AutoSize = true;
-            this.label56.ForeColor = System.Drawing.Color.DimGray;
-            this.label56.Location = new System.Drawing.Point(127, 204);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(54, 13);
-            this.label56.TabIndex = 12;
-            this.label56.Text = "Data here";
+            this.label27.AutoSize = true;
+            this.label27.ForeColor = System.Drawing.Color.DimGray;
+            this.label27.Location = new System.Drawing.Point(726, 127);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(46, 13);
+            this.label27.TabIndex = 25;
+            this.label27.Text = "Section:";
+            // 
+            // religiontxt
+            // 
+            this.religiontxt.AutoSize = true;
+            this.religiontxt.ForeColor = System.Drawing.Color.DimGray;
+            this.religiontxt.Location = new System.Drawing.Point(118, 301);
+            this.religiontxt.Name = "religiontxt";
+            this.religiontxt.Size = new System.Drawing.Size(54, 13);
+            this.religiontxt.TabIndex = 24;
+            this.religiontxt.Text = "Data here";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.Color.DimGray;
+            this.label28.Location = new System.Drawing.Point(48, 301);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(48, 13);
+            this.label28.TabIndex = 23;
+            this.label28.Text = "Religion:";
+            // 
+            // nationalitytxt
+            // 
+            this.nationalitytxt.AutoSize = true;
+            this.nationalitytxt.ForeColor = System.Drawing.Color.DimGray;
+            this.nationalitytxt.Location = new System.Drawing.Point(118, 277);
+            this.nationalitytxt.Name = "nationalitytxt";
+            this.nationalitytxt.Size = new System.Drawing.Size(54, 13);
+            this.nationalitytxt.TabIndex = 22;
+            this.nationalitytxt.Text = "Data here";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.Color.DimGray;
+            this.label26.Location = new System.Drawing.Point(37, 277);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(59, 13);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "Nationality:";
+            // 
+            // glvltxt
+            // 
+            this.glvltxt.AutoSize = true;
+            this.glvltxt.ForeColor = System.Drawing.Color.DimGray;
+            this.glvltxt.Location = new System.Drawing.Point(652, 127);
+            this.glvltxt.Name = "glvltxt";
+            this.glvltxt.Size = new System.Drawing.Size(54, 13);
+            this.glvltxt.TabIndex = 20;
+            this.glvltxt.Text = "Data here";
+            // 
+            // strandtxt
+            // 
+            this.strandtxt.AutoSize = true;
+            this.strandtxt.ForeColor = System.Drawing.Color.DimGray;
+            this.strandtxt.Location = new System.Drawing.Point(483, 127);
+            this.strandtxt.Name = "strandtxt";
+            this.strandtxt.Size = new System.Drawing.Size(54, 13);
+            this.strandtxt.TabIndex = 19;
+            this.strandtxt.Text = "Data here";
+            // 
+            // bptxt
+            // 
+            this.bptxt.AutoSize = true;
+            this.bptxt.ForeColor = System.Drawing.Color.DimGray;
+            this.bptxt.Location = new System.Drawing.Point(308, 181);
+            this.bptxt.Name = "bptxt";
+            this.bptxt.Size = new System.Drawing.Size(54, 13);
+            this.bptxt.TabIndex = 18;
+            this.bptxt.Text = "Data here";
+            // 
+            // Gendertxt
+            // 
+            this.Gendertxt.AutoSize = true;
+            this.Gendertxt.ForeColor = System.Drawing.Color.DimGray;
+            this.Gendertxt.Location = new System.Drawing.Point(118, 228);
+            this.Gendertxt.Name = "Gendertxt";
+            this.Gendertxt.Size = new System.Drawing.Size(54, 13);
+            this.Gendertxt.TabIndex = 17;
+            this.Gendertxt.Text = "Data here";
+            // 
+            // addtxt
+            // 
+            this.addtxt.AutoSize = true;
+            this.addtxt.ForeColor = System.Drawing.Color.DimGray;
+            this.addtxt.Location = new System.Drawing.Point(118, 205);
+            this.addtxt.Name = "addtxt";
+            this.addtxt.Size = new System.Drawing.Size(54, 13);
+            this.addtxt.TabIndex = 16;
+            this.addtxt.Text = "Data here";
+            // 
+            // bdtxt
+            // 
+            this.bdtxt.AutoSize = true;
+            this.bdtxt.ForeColor = System.Drawing.Color.DimGray;
+            this.bdtxt.Location = new System.Drawing.Point(118, 181);
+            this.bdtxt.Name = "bdtxt";
+            this.bdtxt.Size = new System.Drawing.Size(54, 13);
+            this.bdtxt.TabIndex = 15;
+            this.bdtxt.Text = "Data here";
+            // 
+            // Contactnotxt
+            // 
+            this.Contactnotxt.AutoSize = true;
+            this.Contactnotxt.ForeColor = System.Drawing.Color.DimGray;
+            this.Contactnotxt.Location = new System.Drawing.Point(118, 251);
+            this.Contactnotxt.Name = "Contactnotxt";
+            this.Contactnotxt.Size = new System.Drawing.Size(54, 13);
+            this.Contactnotxt.TabIndex = 14;
+            this.Contactnotxt.Text = "Data here";
+            // 
+            // studnotxt
+            // 
+            this.studnotxt.AutoSize = true;
+            this.studnotxt.ForeColor = System.Drawing.Color.DimGray;
+            this.studnotxt.Location = new System.Drawing.Point(292, 127);
+            this.studnotxt.Name = "studnotxt";
+            this.studnotxt.Size = new System.Drawing.Size(54, 13);
+            this.studnotxt.TabIndex = 13;
+            this.studnotxt.Text = "Data here";
+            // 
+            // lrntxt
+            // 
+            this.lrntxt.AutoSize = true;
+            this.lrntxt.ForeColor = System.Drawing.Color.DimGray;
+            this.lrntxt.Location = new System.Drawing.Point(79, 127);
+            this.lrntxt.Name = "lrntxt";
+            this.lrntxt.Size = new System.Drawing.Size(54, 13);
+            this.lrntxt.TabIndex = 12;
+            this.lrntxt.Text = "Data here";
             // 
             // label57
             // 
             this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Sultan Nahia", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.ForeColor = System.Drawing.Color.DimGray;
-            this.label57.Location = new System.Drawing.Point(127, 172);
+            this.label57.Location = new System.Drawing.Point(303, 77);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(54, 13);
+            this.label57.Size = new System.Drawing.Size(343, 38);
             this.label57.TabIndex = 11;
-            this.label57.Text = "Data here";
+            this.label57.Text = "RICKSON ZOREN V. PINEDA";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.ForeColor = System.Drawing.Color.DimGray;
-            this.label39.Location = new System.Drawing.Point(32, 300);
+            this.label39.Location = new System.Drawing.Point(573, 127);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(73, 13);
             this.label39.TabIndex = 10;
@@ -3112,7 +3870,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.ForeColor = System.Drawing.Color.DimGray;
-            this.label38.Location = new System.Drawing.Point(64, 268);
+            this.label38.Location = new System.Drawing.Point(436, 127);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(41, 13);
             this.label38.TabIndex = 9;
@@ -3122,7 +3880,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.ForeColor = System.Drawing.Color.DimGray;
-            this.label37.Location = new System.Drawing.Point(48, 364);
+            this.label37.Location = new System.Drawing.Point(229, 181);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(57, 13);
             this.label37.TabIndex = 8;
@@ -3132,7 +3890,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.ForeColor = System.Drawing.Color.DimGray;
-            this.label36.Location = new System.Drawing.Point(60, 428);
+            this.label36.Location = new System.Drawing.Point(51, 228);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(45, 13);
             this.label36.TabIndex = 7;
@@ -3142,7 +3900,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.DimGray;
-            this.label15.Location = new System.Drawing.Point(57, 396);
+            this.label15.Location = new System.Drawing.Point(48, 205);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(48, 13);
             this.label15.TabIndex = 6;
@@ -3152,7 +3910,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(53, 332);
+            this.label8.Location = new System.Drawing.Point(44, 181);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 5;
@@ -3162,7 +3920,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(41, 460);
+            this.label7.Location = new System.Drawing.Point(32, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(64, 13);
             this.label7.TabIndex = 4;
@@ -3172,7 +3930,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(41, 236);
+            this.label6.Location = new System.Drawing.Point(222, 127);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 13);
             this.label6.TabIndex = 3;
@@ -3182,43 +3940,73 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(73, 204);
+            this.label5.Location = new System.Drawing.Point(41, 127);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 2;
             this.label5.Text = "LRN:";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(67, 172);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Name:";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(108, 35);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(136, 113);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
-            // 
             // StudentlistPanel
             // 
+            this.StudentlistPanel.AutoScroll = true;
             this.StudentlistPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
+            this.StudentlistPanel.Controls.Add(this.Headertit);
+            this.StudentlistPanel.Controls.Add(this.pictureBox10);
+            this.StudentlistPanel.Controls.Add(this.dgvSearch);
+            this.StudentlistPanel.Controls.Add(this.pictureBox5);
             this.StudentlistPanel.Controls.Add(this.button1);
-            this.StudentlistPanel.Controls.Add(this.listBox1);
-            this.StudentlistPanel.Controls.Add(this.panel8);
+            this.StudentlistPanel.Controls.Add(this.pictureBox4);
+            this.StudentlistPanel.Controls.Add(this.textBox1);
+            this.StudentlistPanel.Controls.Add(this.Headerline);
+            this.StudentlistPanel.Controls.Add(this.pictureBox1);
             this.StudentlistPanel.Location = new System.Drawing.Point(65, 54);
             this.StudentlistPanel.Name = "StudentlistPanel";
             this.StudentlistPanel.Size = new System.Drawing.Size(1215, 666);
             this.StudentlistPanel.TabIndex = 20;
             this.StudentlistPanel.Visible = false;
+            // 
+            // Headertit
+            // 
+            this.Headertit.AutoSize = true;
+            this.Headertit.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Headertit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Headertit.Location = new System.Drawing.Point(94, 80);
+            this.Headertit.Name = "Headertit";
+            this.Headertit.Size = new System.Drawing.Size(233, 19);
+            this.Headertit.TabIndex = 1019;
+            this.Headertit.Text = "Currently Enrolled Students";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(23, 216);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(32, 31);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 1035;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Visible = false;
+            // 
+            // dgvSearch
+            // 
+            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSearch.Location = new System.Drawing.Point(56, 6);
+            this.dgvSearch.Name = "dgvSearch";
+            this.dgvSearch.Size = new System.Drawing.Size(284, 56);
+            this.dgvSearch.TabIndex = 1036;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(23, 159);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 31);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 1028;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
             // 
             // button1
             // 
@@ -3230,110 +4018,11 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Mark",
-            "Jay",
-            "Vincent",
-            "Johnny",
-            "sdfsdfsdfasdfsdfasdfasdfsadfasdfsd",
-            "Mark",
-            "Jay",
-            "Vincent",
-            "Johnny",
-            "sdfsdfsdfasdfsdfasdfasdfsadfasdfsd",
-            "Mark",
-            "Jay",
-            "Vincent",
-            "Johnny",
-            "sdfsdfsdfasdfsdfasdfasdfsadfasdfsd",
-            "Mark",
-            "Jay",
-            "Vincent",
-            "Johnny",
-            "sdfsdfsdfasdfsdfasdfasdfsadfasdfsd",
-            "Mark",
-            "Jay",
-            "Vincent",
-            "Johnny",
-            "sdfsdfsdfasdfsdfasdfasdfsadfasdfsd",
-            "Mark",
-            "Jay",
-            "Vincent",
-            "Johnny",
-            "sdfsdfsdfasdfsdfasdfasdfsadfasdfsd",
-            "Mark",
-            "Jay",
-            "Vincent",
-            "Johnny",
-            "sdfsdfsdfasdfsdfasdfasdfsadfasdfsd",
-            "Mark",
-            "Jay",
-            "Vincent",
-            "Johnny",
-            "sdfsdfsdfasdfsdfasdfasdfsadfasdfsd"});
-            this.listBox1.Location = new System.Drawing.Point(27, 54);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(57, 563);
-            this.listBox1.TabIndex = 1;
-            // 
-            // panel8
-            // 
-            this.panel8.AutoScroll = true;
-            this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Controls.Add(this.dgvSearch);
-            this.panel8.Controls.Add(this.listBox2);
-            this.panel8.Controls.Add(this.pictureBox10);
-            this.panel8.Controls.Add(this.pictureBox5);
-            this.panel8.Controls.Add(this.pictureBox4);
-            this.panel8.Controls.Add(this.Headertit);
-            this.panel8.Controls.Add(this.textBox1);
-            this.panel8.Controls.Add(this.pictureBox1);
-            this.panel8.Controls.Add(this.Headerline);
-            this.panel8.Location = new System.Drawing.Point(109, 44);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1018, 606);
-            this.panel8.TabIndex = 0;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(894, 117);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(120, 342);
-            this.listBox2.TabIndex = 2;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(125, 238);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(32, 31);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1035;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Visible = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(125, 181);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 31);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1028;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(125, 127);
+            this.pictureBox4.Location = new System.Drawing.Point(23, 105);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 31);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -3341,22 +4030,11 @@
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Visible = false;
             // 
-            // Headertit
-            // 
-            this.Headertit.AutoSize = true;
-            this.Headertit.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Headertit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Headertit.Location = new System.Drawing.Point(26, 42);
-            this.Headertit.Name = "Headertit";
-            this.Headertit.Size = new System.Drawing.Size(233, 19);
-            this.Headertit.TabIndex = 1019;
-            this.Headertit.Text = "Currently Enrolled Students";
-            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(601, 39);
+            this.textBox1.Location = new System.Drawing.Point(664, 72);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(352, 22);
@@ -3364,26 +4042,26 @@
             this.textBox1.Text = "LRN, Name, Student No...";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::GOCSystem2018.Properties.Resources.Untitled_1;
-            this.pictureBox1.Location = new System.Drawing.Point(536, -16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(478, 84);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1017;
-            this.pictureBox1.TabStop = false;
-            // 
             // Headerline
             // 
             this.Headerline.AutoSize = true;
             this.Headerline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
-            this.Headerline.Location = new System.Drawing.Point(27, 66);
+            this.Headerline.Location = new System.Drawing.Point(90, 99);
             this.Headerline.Name = "Headerline";
             this.Headerline.Size = new System.Drawing.Size(961, 13);
             this.Headerline.TabIndex = 0;
             this.Headerline.Text = "_________________________________________________________________________________" +
     "______________________________________________________________________________";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GOCSystem2018.Properties.Resources.Untitled_1;
+            this.pictureBox1.Location = new System.Drawing.Point(599, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(478, 84);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1017;
+            this.pictureBox1.TabStop = false;
             // 
             // MaintenancePanel
             // 
@@ -3605,25 +4283,25 @@
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label136);
+            this.panel1.Controls.Add(this.lblSem);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label135);
             this.panel1.Controls.Add(this.pictureBox22);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(65, 0);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1215, 54);
+            this.panel1.Size = new System.Drawing.Size(1280, 54);
             this.panel1.TabIndex = 1011;
             // 
             // lblSY
             // 
             this.lblSY.AutoSize = true;
-            this.lblSY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSY.ForeColor = System.Drawing.Color.DimGray;
+            this.lblSY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSY.ForeColor = System.Drawing.Color.White;
             this.lblSY.Location = new System.Drawing.Point(564, 23);
             this.lblSY.Name = "lblSY";
-            this.lblSY.Size = new System.Drawing.Size(45, 16);
+            this.lblSY.Size = new System.Drawing.Size(40, 16);
             this.lblSY.TabIndex = 1023;
             this.lblSY.Text = "lblSY";
             // 
@@ -3684,13 +4362,16 @@
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
             // 
-            // dgvSearch
+            // pictureBox22
             // 
-            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(172, 118);
-            this.dgvSearch.Name = "dgvSearch";
-            this.dgvSearch.Size = new System.Drawing.Size(709, 343);
-            this.dgvSearch.TabIndex = 1036;
+            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
+            this.pictureBox22.Location = new System.Drawing.Point(10, 8);
+            this.pictureBox22.Name = "pictureBox22";
+            this.pictureBox22.Size = new System.Drawing.Size(45, 39);
+            this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox22.TabIndex = 18;
+            this.pictureBox22.TabStop = false;
+            this.pictureBox22.WaitOnLoad = true;
             // 
             // MainWindow
             // 
@@ -3701,8 +4382,8 @@
             this.Controls.Add(this.StudentlistPanel);
             this.Controls.Add(this.studprofpanel);
             this.Controls.Add(this.Dashboardpanel);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.SidebarPanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.MaintenancePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainWindow";
@@ -3719,7 +4400,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             this.Dashboardpanel.ResumeLayout(false);
             this.Dashboardpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
@@ -3739,6 +4419,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.studprofpanel.ResumeLayout(false);
             this.studprofpanel.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
@@ -3750,11 +4436,10 @@
             this.panel9.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.StudentlistPanel.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.StudentlistPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -3777,7 +4462,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3866,7 +4551,7 @@
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Label label136;
+        private System.Windows.Forms.Label lblSem;
         private System.Windows.Forms.Label label135;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label45;
@@ -3883,8 +4568,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label137;
         private System.Windows.Forms.Label label138;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label Headertit;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -3907,132 +4590,131 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label223;
         private System.Windows.Forms.Label label188;
         private System.Windows.Forms.Label label212;
-        private System.Windows.Forms.Label label189;
+        private System.Windows.Forms.Label G12_AS12;
         private System.Windows.Forms.Label label219;
-        private System.Windows.Forms.Label label190;
+        private System.Windows.Forms.Label G12_AS11;
         private System.Windows.Forms.Label label218;
-        private System.Windows.Forms.Label label191;
+        private System.Windows.Forms.Label G12_AS14;
         private System.Windows.Forms.Label label217;
-        private System.Windows.Forms.Label label192;
+        private System.Windows.Forms.Label G12_AS13;
         private System.Windows.Forms.Label label216;
-        private System.Windows.Forms.Label label193;
+        private System.Windows.Forms.Label G12_AS10;
         private System.Windows.Forms.Label label215;
-        private System.Windows.Forms.Label label194;
+        private System.Windows.Forms.Label G12_AS9;
         private System.Windows.Forms.Label label214;
-        private System.Windows.Forms.Label label195;
+        private System.Windows.Forms.Label G12_AS8;
         private System.Windows.Forms.Label label213;
         private System.Windows.Forms.Label label196;
-        private System.Windows.Forms.Label label211;
-        private System.Windows.Forms.Label label197;
-        private System.Windows.Forms.Label label210;
-        private System.Windows.Forms.Label label198;
-        private System.Windows.Forms.Label label209;
-        private System.Windows.Forms.Label label199;
-        private System.Windows.Forms.Label label208;
-        private System.Windows.Forms.Label label200;
-        private System.Windows.Forms.Label label207;
-        private System.Windows.Forms.Label label201;
-        private System.Windows.Forms.Label label206;
-        private System.Windows.Forms.Label label202;
-        private System.Windows.Forms.Label label205;
-        private System.Windows.Forms.Label label203;
+        private System.Windows.Forms.Label G12_1S8;
+        private System.Windows.Forms.Label G12_2S12;
+        private System.Windows.Forms.Label G12_1S9;
+        private System.Windows.Forms.Label G12_2S11;
+        private System.Windows.Forms.Label G12_1S10;
+        private System.Windows.Forms.Label G12_2S14;
+        private System.Windows.Forms.Label G12_1S13;
+        private System.Windows.Forms.Label G12_2S13;
+        private System.Windows.Forms.Label G12_1S14;
+        private System.Windows.Forms.Label G12_2S10;
+        private System.Windows.Forms.Label G12_1S11;
+        private System.Windows.Forms.Label G12_2S9;
+        private System.Windows.Forms.Label G12_1S12;
+        private System.Windows.Forms.Label G12_2S8;
         private System.Windows.Forms.Label label204;
         private System.Windows.Forms.Label label221;
         private System.Windows.Forms.Label label104;
         private System.Windows.Forms.Label label148;
-        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label G11_AS12;
         private System.Windows.Forms.Label label155;
-        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Label G11_AS11;
         private System.Windows.Forms.Label label154;
-        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Label G11_AS14;
         private System.Windows.Forms.Label label153;
-        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Label G11_AS13;
         private System.Windows.Forms.Label label152;
-        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.Label G11_AS10;
         private System.Windows.Forms.Label label151;
-        private System.Windows.Forms.Label label110;
+        private System.Windows.Forms.Label G11_AS9;
         private System.Windows.Forms.Label label150;
-        private System.Windows.Forms.Label label111;
+        private System.Windows.Forms.Label G11_AS8;
         private System.Windows.Forms.Label label149;
         private System.Windows.Forms.Label label112;
-        private System.Windows.Forms.Label label147;
-        private System.Windows.Forms.Label label113;
-        private System.Windows.Forms.Label label146;
-        private System.Windows.Forms.Label label114;
-        private System.Windows.Forms.Label label145;
-        private System.Windows.Forms.Label label116;
-        private System.Windows.Forms.Label label144;
-        private System.Windows.Forms.Label label118;
-        private System.Windows.Forms.Label label143;
-        private System.Windows.Forms.Label label120;
-        private System.Windows.Forms.Label label142;
-        private System.Windows.Forms.Label label121;
-        private System.Windows.Forms.Label label141;
-        private System.Windows.Forms.Label label139;
+        private System.Windows.Forms.Label G11_1S8;
+        private System.Windows.Forms.Label G11_2S12;
+        private System.Windows.Forms.Label G11_1S9;
+        private System.Windows.Forms.Label G11_2S11;
+        private System.Windows.Forms.Label G11_1S10;
+        private System.Windows.Forms.Label G11_2S14;
+        private System.Windows.Forms.Label G11_1S13;
+        private System.Windows.Forms.Label G11_2S13;
+        private System.Windows.Forms.Label G11_1S14;
+        private System.Windows.Forms.Label G11_2S10;
+        private System.Windows.Forms.Label G11_1S11;
+        private System.Windows.Forms.Label G11_2S9;
+        private System.Windows.Forms.Label G11_1S12;
+        private System.Windows.Forms.Label G11_2S8;
         private System.Windows.Forms.Label label140;
         private System.Windows.Forms.Label label222;
         private System.Windows.Forms.Label label156;
         private System.Windows.Forms.Label label180;
-        private System.Windows.Forms.Label label157;
+        private System.Windows.Forms.Label G12_AS5;
         private System.Windows.Forms.Label label187;
-        private System.Windows.Forms.Label label158;
+        private System.Windows.Forms.Label G12_AS4;
         private System.Windows.Forms.Label label186;
-        private System.Windows.Forms.Label label159;
+        private System.Windows.Forms.Label G12_AS7;
         private System.Windows.Forms.Label label185;
-        private System.Windows.Forms.Label label160;
+        private System.Windows.Forms.Label G12_AS6;
         private System.Windows.Forms.Label label184;
-        private System.Windows.Forms.Label label161;
+        private System.Windows.Forms.Label G12_AS3;
         private System.Windows.Forms.Label label183;
-        private System.Windows.Forms.Label label162;
+        private System.Windows.Forms.Label G12_AS2;
         private System.Windows.Forms.Label label182;
-        private System.Windows.Forms.Label label163;
+        private System.Windows.Forms.Label G12_AS1;
         private System.Windows.Forms.Label label181;
         private System.Windows.Forms.Label label164;
-        private System.Windows.Forms.Label label179;
-        private System.Windows.Forms.Label label165;
-        private System.Windows.Forms.Label label178;
-        private System.Windows.Forms.Label label166;
-        private System.Windows.Forms.Label label177;
-        private System.Windows.Forms.Label label167;
-        private System.Windows.Forms.Label label176;
-        private System.Windows.Forms.Label label168;
-        private System.Windows.Forms.Label label175;
-        private System.Windows.Forms.Label label169;
-        private System.Windows.Forms.Label label174;
-        private System.Windows.Forms.Label label170;
-        private System.Windows.Forms.Label label173;
-        private System.Windows.Forms.Label label171;
+        private System.Windows.Forms.Label G12_1S1;
+        private System.Windows.Forms.Label G12_2S5;
+        private System.Windows.Forms.Label G12_1S2;
+        private System.Windows.Forms.Label G12_2S4;
+        private System.Windows.Forms.Label G12_1S3;
+        private System.Windows.Forms.Label G12_2S7;
+        private System.Windows.Forms.Label G12_1S6;
+        private System.Windows.Forms.Label G12_2S6;
+        private System.Windows.Forms.Label G12_1S7;
+        private System.Windows.Forms.Label G12_2S3;
+        private System.Windows.Forms.Label G12_1S4;
+        private System.Windows.Forms.Label G12_2S2;
+        private System.Windows.Forms.Label G12_1S5;
+        private System.Windows.Forms.Label G12_2S1;
         private System.Windows.Forms.Label label172;
         private System.Windows.Forms.Label label220;
         private System.Windows.Forms.Label label92;
-        private System.Windows.Forms.Label label93;
-        private System.Windows.Forms.Label label94;
-        private System.Windows.Forms.Label label96;
-        private System.Windows.Forms.Label label98;
-        private System.Windows.Forms.Label label101;
-        private System.Windows.Forms.Label label102;
-        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label G11_AS5;
+        private System.Windows.Forms.Label G11_AS4;
+        private System.Windows.Forms.Label G11_AS7;
+        private System.Windows.Forms.Label G11_AS6;
+        private System.Windows.Forms.Label G11_AS3;
+        private System.Windows.Forms.Label G11_AS2;
+        private System.Windows.Forms.Label G11_AS1;
         private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Label label85;
-        private System.Windows.Forms.Label label86;
-        private System.Windows.Forms.Label label87;
-        private System.Windows.Forms.Label label88;
-        private System.Windows.Forms.Label label89;
-        private System.Windows.Forms.Label label90;
-        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label G11_2S5;
+        private System.Windows.Forms.Label G11_2S4;
+        private System.Windows.Forms.Label G11_2S7;
+        private System.Windows.Forms.Label G11_2S6;
+        private System.Windows.Forms.Label G11_2S3;
+        private System.Windows.Forms.Label G11_2S2;
+        private System.Windows.Forms.Label G11_2S1;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label G11_1S5;
+        private System.Windows.Forms.Label G11_1S4;
+        private System.Windows.Forms.Label G11_1S7;
+        private System.Windows.Forms.Label G11_1S6;
+        private System.Windows.Forms.Label G11_1S3;
+        private System.Windows.Forms.Label G11_1S2;
+        private System.Windows.Forms.Label G11_1S1;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label75;
@@ -4041,27 +4723,26 @@
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Label label80;
         private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label glvltxt;
+        private System.Windows.Forms.Label strandtxt;
+        private System.Windows.Forms.Label bptxt;
+        private System.Windows.Forms.Label Gendertxt;
+        private System.Windows.Forms.Label addtxt;
+        private System.Windows.Forms.Label bdtxt;
+        private System.Windows.Forms.Label Contactnotxt;
+        private System.Windows.Forms.Label studnotxt;
+        private System.Windows.Forms.Label lrntxt;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label sectiontxt;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
@@ -4069,5 +4750,69 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label lblSY;
         private System.Windows.Forms.DataGridView dgvSearch;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Label religiontxt;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label nationalitytxt;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Label gcontactnotxt;
+        private System.Windows.Forms.Label guardiantxt;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label mcontactnotxt;
+        private System.Windows.Forms.Label mothertxt;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label fcontactnotxt;
+        private System.Windows.Forms.Label fathertxt;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label96;
+        private System.Windows.Forms.Label label98;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label label106;
+        private System.Windows.Forms.Label label107;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Label tp10txt;
+        private System.Windows.Forms.Label tp9txt;
+        private System.Windows.Forms.Label tp8txt;
+        private System.Windows.Forms.Label tp7txt;
+        private System.Windows.Forms.Label tp6txt;
+        private System.Windows.Forms.Label tp5txt;
+        private System.Windows.Forms.Label tp4txt;
+        private System.Windows.Forms.Label tp3txt;
+        private System.Windows.Forms.Label tp2txt;
+        private System.Windows.Forms.Label tp1txt;
+        private System.Windows.Forms.Label M10txt;
+        private System.Windows.Forms.Label M9txt;
+        private System.Windows.Forms.Label M8txt;
+        private System.Windows.Forms.Label M7txt;
+        private System.Windows.Forms.Label M6txt;
+        private System.Windows.Forms.Label M5txt;
+        private System.Windows.Forms.Label M4txt;
+        private System.Windows.Forms.Label M3txt;
+        private System.Windows.Forms.Label M2txt;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label M1txt;
+        private System.Windows.Forms.Label vttxt;
+        private System.Windows.Forms.Label moptxt;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label label35;
     }
 }

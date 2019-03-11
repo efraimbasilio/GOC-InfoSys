@@ -645,11 +645,7 @@ namespace GOCSystem2018
                 cmbMunicipality.Items.Add("Santa Cruz ");
                 cmbMunicipality.Items.Add("Subic  ");
                 cmbMunicipality.Items.Add("Olongapo City");
-
-
             }
-
-
         }
 
         private void label19_Click(object sender, EventArgs e)
@@ -680,7 +676,7 @@ namespace GOCSystem2018
             frmAssesment.Reset();
             frmAssesment.LoadSection();
             frmAssesment.LoadSchoolYear();
-
+            
             this.Hide();
             frmAssesment.Show();
         }
@@ -726,14 +722,12 @@ namespace GOCSystem2018
                 registration.GuardianTelNo = txtGuardianTel.Text;
                 registration.SYEnrolled = School;
                 registration.DateEnrolled = DateTime.Today.ToString("yyyy-mm-dd");
-
-                //registration.ReqPSA = chkBirthCertificate.Text;
-                //registration.ReqForm138 = chk138.Text;
-                //registration.ReqDrugTest = chkDrugtest.Text;
-                //registration.ReqGoodMoral = chckGM.Text;
-                //registration.ReqAdmissionTest = chkEntranceExam.Text;
-                //registration.ReqNCAE = chkNCAEResult.Text;
-
+                //////////////////////////////////////
+                registration.Reservee = "NA";
+                registration.ReserveFor = "NA";
+                registration.PartialPayment = "NA";
+                registration.FullPayment = "NA";
+               
                 //function to load important filtering
                 checkYearLevel();
                 CheckTrack();

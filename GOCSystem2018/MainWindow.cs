@@ -365,6 +365,31 @@ namespace GOCSystem2018
         //dynamic label*************************************************************************************************************************
         //**************************************************************************************************************************************
         #region dynamic label
+        //PictureBox studPicturebox(int i, int start, int end, int start2, int end2)
+        //{
+        //    PictureBox spb = new PictureBox();
+        //    spb.Name = "spb" + i.ToString();
+        //    spb.Image = new Bitmap("E:\\GOC\\Media\\grading system resource\\bgpane.jpg");
+        //    spb.BackgroundImageLayout = ImageLayout.Stretch;
+        //    spb.BorderStyle = BorderStyle.Fixed3D;
+        //    spb.Size = new Size(32,32);
+        //    spb.Location = new Point(start-3, end);
+            
+            
+        //    return spb;
+        //}
+
+        Panel placeHolder(int i, int start, int end, int start2, int end2)
+        {
+            Panel ph = new Panel();
+            ph.Name = "ph" + i.ToString();
+            ph.BackColor = Color.White;
+            ph.Size = new Size(1122, 56);
+            ph.Location = new Point(start2, end2);
+            
+            return ph;
+
+        }
         Label addLabel(int i, int start, int end, String studname)
         {
             Label l = new Label();
@@ -374,19 +399,19 @@ namespace GOCSystem2018
             l.ForeColor = Color.Gray;
             l.BackColor = Color.Transparent;
             l.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-            l.Location = new Point(start, end);
+            l.Location = new Point(start + (2 * 150), end);
 
             return l;
         }
-        Label addLabel2(int i, int start, int end, int start2, int end2)
+        Label addLabel2(int i, int start, int end, int start2, int end2, String studNo)
         {
             Label lsn = new Label();
             lsn.Name = "lsn" + i.ToString();
-            lsn.Text = "label" + i.ToString();
+            lsn.Text = studNo;
             lsn.ForeColor = Color.Gray;
             lsn.BackColor = Color.Transparent;
             lsn.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-            lsn.Location = new Point(start + (3 * 150), end);
+            lsn.Location = new Point(start + (4 * 150), end);
             return lsn;
         }
         Label addLabel3(int i, int start, int end, int start2, int end2)
@@ -397,7 +422,7 @@ namespace GOCSystem2018
             lsection.ForeColor = Color.Gray;
             lsection.BackColor = Color.Transparent;
             lsection.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-            lsection.Location = new Point(start + (4 * 150), end);
+            lsection.Location = new Point(start + (5 * 150), end);
             return lsection;
         }
         Label addLabel4(int i, int start, int end, int start2, int end2)
@@ -408,7 +433,7 @@ namespace GOCSystem2018
             lgrade.ForeColor = Color.Gray;
             lgrade.BackColor = Color.Transparent;
             lgrade.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-            lgrade.Location = new Point(start + (2 * 150), end);
+            lgrade.Location = new Point(start + (3 * 150), end);
             return lgrade;
         }
 
@@ -447,48 +472,54 @@ namespace GOCSystem2018
             MaintenancePanel.Visible = false;
             studprofpanel.Visible = false;
 
-            int startposition = 170;
-            int endposition = 142;
+            int startposition = 45;
+            int endposition = 18;
 
-            int startposition2 = 110;
-            int endposition2 = 155;
+            int startposition2 = 26;
+            int endposition2 = 186;
 
-            for (int ldc = 0; ldc < listBox1.Items.Count; ldc++)
+            for (int ldc = 0; ldc< dgvSearch.Rows.Count ; ldc++)
             {
-                Label l = addLabel(ldc, startposition, endposition, listBox1.Items[ldc].ToString());
-                Label l2 = addLabel2(ldc, startposition, endposition, startposition2, endposition2);
+                //PictureBox spb = studPicturebox(ldc, startposition, endposition, startposition2, endposition2);
+                Panel ph = placeHolder(ldc, startposition, endposition, startposition2, endposition2);
+                String FullName = dgvSearch.Rows[ldc].Cells[9].FormattedValue.ToString() + ", " + dgvSearch.Rows[ldc].Cells[10].FormattedValue.ToString() + " " + dgvSearch.Rows[ldc].Cells[10].FormattedValue.ToString();
+
+                Label l = addLabel(ldc, startposition, endposition, FullName);
+                Label l2 = addLabel2(ldc, startposition, endposition, startposition2, endposition2, dgvSearch.Rows[ldc].Cells[2].FormattedValue.ToString());
                 Label l3 = addLabel3(ldc, startposition, endposition, startposition2, endposition2);
                 Label l4 = addLabel4(ldc, startposition, endposition, startposition2, endposition2);
                 Label l5 = addLabel5(ldc, startposition, endposition, startposition2, endposition2);
-                Label l6 = addLabel6(ldc, startposition, endposition, startposition2, endposition2);
-                panel8.Controls.Add(l);
-                panel8.Controls.Add(l2);
-                panel8.Controls.Add(l3);
-                panel8.Controls.Add(l4);
-                panel8.Controls.Add(l5);
-                panel8.Controls.Add(l6);
-                endposition += 40;
-                endposition2 += 40;
+                //Label l6 = addLabel6(ldc, startposition, endposition, startposition2, endposition2);
+                StudentlistPanel.Controls.Add(ph);
+                ph.Controls.Add(l);
+                ph.Controls.Add(l2);
+                ph.Controls.Add(l3);
+                ph.Controls.Add(l4);
+                ph.Controls.Add(l5);
+               // ph.Controls.Add(spb);
+                //ph.Controls.Add(l6);
+                //endposition += 40;
+                endposition2 += 64;
             }
         }
 
         //search in the student list************************************************************************************************************
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            listBox2.Items.Clear();
+            //listBox2.Items.Clear();
             
-            for(int sfilter = 0; sfilter < listBox1.Items.Count; sfilter++)
+            for(int sfilter = 0; sfilter < dgvSearch.Rows.Count; sfilter++)
             {
-                if (listBox1.Items[sfilter].ToString().Contains(textBox1.Text))
+                if (dgvSearch.SelectedCells[sfilter].Value.ToString().Contains(textBox1.Text))
                 {
-                    listBox2.Items.Add(listBox1.Items[sfilter]);
+                    //listBox2.Items.Add(listBox1.Items[sfilter]);
                 }
             }
         }
         //*************************t************************************************************************************************************
         private void button1_Click_1(object sender, EventArgs e)
         {
-            for(int a = 0; a < listBox1.Items.Count; a++)
+            for(int a = 0; a < dgvSearch.Rows.Count; a++)
             {
                 
                 Label li = this.Controls.Find("li" + a.ToString(), true).FirstOrDefault() as Label;
@@ -502,18 +533,18 @@ namespace GOCSystem2018
                 Label ll = this.Controls.Find("ll" + a.ToString(), true).FirstOrDefault() as Label;
 
                 Label lst = this.Controls.Find("lst" + a.ToString(), true).FirstOrDefault() as Label;
-                panel8.Controls.Remove(li);
-                li.Dispose();
-                panel8.Controls.Remove(lsn);
-                lsn.Dispose();
-                panel8.Controls.Remove(ll);
-                ll.Dispose();
-                panel8.Controls.Remove(lg);
-                lg.Dispose();
-                panel8.Controls.Remove(lst);
-                lst.Dispose();
-                panel8.Controls.Remove(ls);
-                ls.Dispose();
+                //panel8.Controls.Remove(li);
+                //li.Dispose();
+                //panel8.Controls.Remove(lsn);
+                //lsn.Dispose();
+                //panel8.Controls.Remove(ll);
+                //ll.Dispose();
+                //panel8.Controls.Remove(lg);
+                //lg.Dispose();
+                //panel8.Controls.Remove(lst);
+                //lst.Dispose();
+                //panel8.Controls.Remove(ls);
+                //ls.Dispose();
 
             }
             
@@ -529,13 +560,13 @@ namespace GOCSystem2018
             if (e.KeyData == Keys.Enter)
             {
                 StudentlistPanel.Visible = true;
-                listBox2.Items.Clear();
+                //listBox2.Items.Clear();
 
-                for (int sfilter = 0; sfilter < listBox1.Items.Count; sfilter++)
+                for (int sfilter = 0; sfilter < dgvSearch.Rows.Count; sfilter++)
                 {
-                    if (listBox1.Items[sfilter].ToString().Contains(searchtxt.Text))
+                    if (dgvSearch.SelectedCells[sfilter].Value.ToString().Contains(searchtxt.Text))
                     {
-                        listBox2.Items.Add(listBox1.Items[sfilter]);
+                        //listBox2.Items.Add(listBox1.Items[sfilter]);
                     }
                 }
             }
@@ -593,6 +624,16 @@ namespace GOCSystem2018
         {
             frmSetting setting = new frmSetting();
             setting.Show();
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label86_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

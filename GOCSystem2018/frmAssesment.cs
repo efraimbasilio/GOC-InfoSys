@@ -37,6 +37,7 @@ namespace GOCSystem2018
         Voucher voucher = new Voucher();
         Grading grade = new Grading();
         Billing_Partial billingPartial = new Billing_Partial();
+        StudentProfile studProfile = new StudentProfile();
         
 
         List<Models.TuitionFee> tuitionFees = new List<Models.TuitionFee>();
@@ -51,6 +52,7 @@ namespace GOCSystem2018
         List<Voucher> vouchers = new List<Voucher>();
         List<Grading> grades = new List<Grading>();
         List<Billing_Partial> billingPartials = new List<Billing_Partial>();
+        List<StudentProfile> studProfiles = new List<StudentProfile>();
 
         public string StudName, LRN, Track, GradeLevel, RegNo, Strand,Voucher;
 
@@ -70,8 +72,8 @@ namespace GOCSystem2018
             lblStrand.Text = Strand;
             lblVoucher.Text = Voucher;
 
-            LoadTuitionFee();
-            TotalTuition();
+            //LoadTuitionFee();
+            //TotalTuition();
             //GetDownPayment();
         }
         /// <summary>
@@ -132,10 +134,10 @@ namespace GOCSystem2018
             }
         }//End LoadRecords
 
-        private void TotalTuition()
-        {
-            double total = Convert.ToDouble(lblTuition.Text) + Convert.ToDouble(lblOther.Text) + Convert.ToDouble(lblTotalMiscFee.Text);
-            lblTotalFees.Text = total.ToString("n");
+        public void TotalTuition()
+        {          
+                double total = Convert.ToDouble(lblTuition.Text) + Convert.ToDouble(lblTotalOtherFee.Text) + Convert.ToDouble(lblTotalMiscFee.Text);
+                lblTotalFees.Text = total.ToString("n");            
         }
 
         public void LoadAssesMiscFees()
@@ -232,7 +234,7 @@ namespace GOCSystem2018
             {
                 sum += Convert.ToDouble(dgvOtherFee.Rows[i].Cells[1].Value);
             }
-            lblOther.Text = sum.ToString("n");           
+            lblTotalOtherFee.Text = sum.ToString("n");           
         }
 
         
@@ -299,24 +301,16 @@ namespace GOCSystem2018
         public void LoadSubject()
         {
             //clear list
-
             dgvSubject.Rows.Clear();
             //cmbSection.Items.Clear();
             subjects.Clear();
 
             //pass value to list
             subjects = subject.Load();
-
-            //loop through load it to list view
-            //foreach (var item in subjects)
-            //{
-            //    //Load to datagridView
-            //    dgvSubject.Rows.Add(item.Id, item.SubjectCode, item.SubjectDesc);
-            //}
-
+         
             foreach (var item in subjects)
             {
-                if (item.SubjType.Equals(core) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(lblGradeLevel.Text))
+                if (item.SubjType.Equals(core) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(GradeLevel))
                 {
                     //Load to datagridView
                     dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
@@ -325,7 +319,7 @@ namespace GOCSystem2018
 
             foreach (var item in subjects)
             {
-                if (item.SubjType.Equals(applied) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(lblGradeLevel.Text) && item.SubjStrand.Equals(allStrand))
+                if (item.SubjType.Equals(applied) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(GradeLevel) && item.SubjStrand.Equals(allStrand))
                 {
                     //Load to datagridView
                     dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
@@ -334,23 +328,12 @@ namespace GOCSystem2018
 
             foreach (var item in subjects)
             {
-                if (item.SubjType.Equals(specialized) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(lblGradeLevel.Text) && item.SubjStrand.Equals(lblStrand.Text))
+                if (item.SubjType.Equals(specialized) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(GradeLevel) && item.SubjStrand.Equals(Strand))
                 {
                     //Load to datagridView
                     dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
                 }
-            }
-
-            //foreach (var item in subjects)
-            //{
-            //    if (item.SubjType.Equals(core) && item.SubjSemester.Equals(lblSubjSemester.Text) && item.SubjGradeLevel.Equals(lblGradeLevel.Text) && item.SubjStrand.Equals(allStrand))
-            //    {
-            //        //Load to datagridView
-            //        dgvSubject.Rows.Add(item.SubjectCode, item.SubjectDesc);
-            //    }
-            //}
-
-
+            }        
 
         }//End LoadRecords()
 
@@ -534,12 +517,7 @@ namespace GOCSystem2018
             //StudName.Text = lblName.Text;
             //GradeLevel.Text = lblGradeLevel.Text;
             //Section.Text = cmbSection.Text;
-
-
-            
-
-
-
+          
             rpt.studName = lblName.Text;
             rpt.SY = lblSY.Text;
             rpt.GOCNO = lblGOCNo.Text;
@@ -679,7 +657,7 @@ namespace GOCSystem2018
                 sum += Convert.ToDouble(dgvOtherFee.Rows[i].Cells[1].Value);
             }
 
-            lblOther.Text = sum.ToString("n");
+            lblTotalOtherFee.Text = sum.ToString("n");
 
         }
 
@@ -690,7 +668,7 @@ namespace GOCSystem2018
 
         private void button4_Click_3(object sender, EventArgs e)
         {
-            LoadSubject();
+            
         }
 
         private void btnEnroll_Click(object sender, EventArgs e)
@@ -713,6 +691,26 @@ namespace GOCSystem2018
             Schedule_loop();
         }
 
+        private void optRGrade12_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (optRGrade12.Checked == true)
+            {
+                studProfile.ReserveFor = optRGrade12.Text;
+            }
+
+            if (optRGrade11.Checked == true)
+            {
+                studProfile.ReserveFor = optRGrade11.Text;
+            }
+            studProfile.StudRegistrationNo = RegNo;
+            studProfile.ReserveOnly();
+        }
+
         private void button4_Click_2(object sender, EventArgs e)
         {
             int sum = 0;
@@ -729,6 +727,16 @@ namespace GOCSystem2018
             lblLRN.Text = string.Empty;
             lblName.Text = string.Empty;
             lblGradeLevel.Text = string.Empty;
+
+            cmbMOP.Enabled = false;
+            cmbSection.Enabled = false;
+        }
+
+        public void EnableMOP()
+        {
+
+            cmbMOP.Enabled = true;
+            cmbSection.Enabled = true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -743,11 +751,11 @@ namespace GOCSystem2018
         /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            frmStudSearch frmStudSearch = new frmStudSearch();
+            frmAssessmentSearch frmAssessmentSearch = new frmAssessmentSearch();
             //frmStudSearch.LoadRecords();
 
-            frmStudSearch.Show();
-            this.Dispose();           
+            frmAssessmentSearch.Show();
+            //this.Dispose();           
         }
         public void LoadRecordsWithRegno()
         {

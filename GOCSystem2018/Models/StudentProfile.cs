@@ -24,6 +24,36 @@ namespace GOCSystem2018
         protected string studStrand;
         protected string track;
 
+        //Billing
+        protected string reservee;
+        protected string reserveFor;
+        protected string partialPayment;
+        protected string fullPayment;
+
+        public string Reservee
+        {
+            get { return reservee; }
+            set { reservee = value; }
+        }
+
+        public string ReserveFor
+        {
+            get { return reserveFor; }
+            set { reserveFor = value; }
+        }
+        public string PartialPayment
+        {
+            get { return partialPayment; }
+            set { partialPayment = value; }
+        }
+        public string FullPayment
+        {
+            get { return fullPayment; }
+            set { fullPayment = value; }
+        }
+
+        //FOR REGISTRATION
+
         public int Id
         {
             get { return id; }
@@ -129,6 +159,11 @@ namespace GOCSystem2018
                         studentProfile.voucherType = reader["voucher_type"].ToString();
                         studentProfile.studStrand = reader["strand"].ToString();
                         studentProfile.track = reader["track"].ToString();
+
+                        studentProfile.reservee = reader["reservee"].ToString();
+                        studentProfile.reserveFor = reader["reserve_for"].ToString();
+                        studentProfile.partialPayment = reader["partial_payment"].ToString();
+                        studentProfile.fullPayment = reader["full_payment"].ToString();
                         //studentProfile.studCourse = reader["stud_course"].ToString();
 
                         studentProfiles.Add(studentProfile);
@@ -143,5 +178,38 @@ namespace GOCSystem2018
             return studentProfiles;
         }
 
+        public void ReserveOnly()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    string sql = "UPDATE student_profile SET reservee=@reservee, reserve_for=@reserveFor, partial_Payment=@partialPayment, full_Payment=@fullPayment" +
+                                    " WHERE regno=@studRegistrationNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
+                    cmd.Parameters.AddWithValue("reservee", reservee);
+                    cmd.Parameters.AddWithValue("reserveFor", reserveFor);
+                    cmd.Parameters.AddWithValue("partialPayment", partialPayment);
+                    cmd.Parameters.AddWithValue("fullPayment", fullPayment);
+                    
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
 }

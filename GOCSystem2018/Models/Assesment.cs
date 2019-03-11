@@ -255,50 +255,7 @@ namespace GOCSystem2018
             assesments.Add(assesment);
         }
 
-        //public List<Assesment> GetBySubjectId()
-        //{
-        //    try
-        //    {
-        //        //prepare connection string 
-        //        using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
-        //        {
-
-        //            //try to open connection
-        //            con.Open();
-
-        //            //prepare sql query
-        //            string sql = "SELECT * FROM subject WHERE id =@id;";
-
-
-        //            MySqlCommand cmd = new MySqlCommand(sql, con);
-        //            cmd.Parameters.AddWithValue("id", id);
-
-        //            MySqlDataReader reader = cmd.ExecuteReader();
-
-        //            //loop while have record
-        //            while (reader.Read())
-        //            {
-        //                //instantiate model
-        //                Assesment assesment = new Assesment();
-
-        //                //prepare properties
-        //                //assesment.id = Convert.ToInt32(reader["id"].ToString());
-        //                assesment.id = Convert.ToInt32(reader["id"].ToString());
-        //                assesment.studLRN = reader["stud_LRN"].ToString();
-                        
-        //                assesments.Add(assesment);
-        //            }
-        //        }
-        //    }
-        //    catch (MySqlException ex)
-        //    {
-        //        MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-        //    }
-        //    return assesments;
-        //}
-
-
+        
         public List<Assesment> Load()
         {
             try

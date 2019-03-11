@@ -66,6 +66,8 @@
             this.label30 = new System.Windows.Forms.Label();
             this.txtFatherName = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.chckGM = new System.Windows.Forms.CheckBox();
             this.chkNCAEResult = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -146,8 +148,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -238,11 +238,11 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label48.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label48.Location = new System.Drawing.Point(301, 626);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(55, 15);
+            this.label48.Size = new System.Drawing.Size(48, 13);
             this.label48.TabIndex = 168;
             this.label48.Text = "Address:";
             // 
@@ -260,11 +260,11 @@
             // 
             this.label47.AutoSize = true;
             this.label47.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label47.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label47.Location = new System.Drawing.Point(47, 626);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(179, 15);
+            this.label47.Size = new System.Drawing.Size(155, 13);
             this.label47.TabIndex = 166;
             this.label47.Text = "Name of School Last Attended:";
             // 
@@ -319,11 +319,11 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label46.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label46.Location = new System.Drawing.Point(16, 232);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(76, 15);
+            this.label46.Size = new System.Drawing.Size(65, 13);
             this.label46.TabIndex = 160;
             this.label46.Text = "Relationship";
             // 
@@ -349,11 +349,11 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label43.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.Black;
             this.label43.Location = new System.Drawing.Point(280, 253);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(84, 15);
+            this.label43.Size = new System.Drawing.Size(74, 13);
             this.label43.TabIndex = 158;
             this.label43.Text = "Cellphone No.";
             // 
@@ -361,11 +361,11 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label44.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.Black;
             this.label44.Location = new System.Drawing.Point(538, 254);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(85, 15);
+            this.label44.Size = new System.Drawing.Size(78, 13);
             this.label44.TabIndex = 157;
             this.label44.Text = "Telephone No.";
             // 
@@ -381,11 +381,11 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label45.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.Black;
             this.label45.Location = new System.Drawing.Point(281, 231);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(124, 15);
+            this.label45.Size = new System.Drawing.Size(104, 13);
             this.label45.TabIndex = 155;
             this.label45.Text = "Student Contact No.";
             // 
@@ -393,11 +393,11 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label37.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label37.Location = new System.Drawing.Point(690, 175);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(55, 15);
+            this.label37.Size = new System.Drawing.Size(49, 13);
             this.label37.TabIndex = 152;
             this.label37.Text = "Province";
             // 
@@ -423,11 +423,11 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label38.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label38.Location = new System.Drawing.Point(275, 175);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(61, 15);
+            this.label38.Size = new System.Drawing.Size(52, 13);
             this.label38.TabIndex = 150;
             this.label38.Text = "Barangay";
             // 
@@ -444,11 +444,11 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label39.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label39.Location = new System.Drawing.Point(531, 175);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(76, 15);
+            this.label39.Size = new System.Drawing.Size(62, 13);
             this.label39.TabIndex = 148;
             this.label39.Text = "Municipality";
             // 
@@ -466,11 +466,11 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label40.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label40.Location = new System.Drawing.Point(16, 175);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(130, 15);
+            this.label40.Size = new System.Drawing.Size(116, 13);
             this.label40.TabIndex = 145;
             this.label40.Text = "House No./Street/Sitio";
             // 
@@ -511,11 +511,11 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label35.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label35.Location = new System.Drawing.Point(275, 127);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(79, 15);
+            this.label35.Size = new System.Drawing.Size(65, 13);
             this.label35.TabIndex = 143;
             this.label35.Text = "Occupation:";
             // 
@@ -533,11 +533,11 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label36.Location = new System.Drawing.Point(13, 127);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(113, 15);
+            this.label36.Size = new System.Drawing.Size(96, 13);
             this.label36.TabIndex = 141;
             this.label36.Text = "Name of Guardian:";
             // 
@@ -567,11 +567,11 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label32.Location = new System.Drawing.Point(274, 55);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(79, 15);
+            this.label32.Size = new System.Drawing.Size(65, 13);
             this.label32.TabIndex = 8;
             this.label32.Text = "Occupation:";
             // 
@@ -589,11 +589,11 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label33.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label33.Location = new System.Drawing.Point(274, 12);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(79, 15);
+            this.label33.Size = new System.Drawing.Size(65, 13);
             this.label33.TabIndex = 6;
             this.label33.Text = "Occupation:";
             // 
@@ -611,11 +611,11 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label31.Location = new System.Drawing.Point(12, 55);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(99, 15);
+            this.label31.Size = new System.Drawing.Size(86, 13);
             this.label31.TabIndex = 4;
             this.label31.Text = "Name of Mother:";
             // 
@@ -633,11 +633,11 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label30.Location = new System.Drawing.Point(12, 12);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(95, 15);
+            this.label30.Size = new System.Drawing.Size(83, 13);
             this.label30.TabIndex = 2;
             this.label30.Text = "Name of Father:";
             // 
@@ -666,6 +666,26 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(842, 123);
             this.panel3.TabIndex = 151;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(139, 75);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(116, 39);
+            this.button1.TabIndex = 143;
+            this.button1.Text = "&Assessment";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(15, 75);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(116, 39);
+            this.btnSave.TabIndex = 142;
+            this.btnSave.Text = "&Register";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // chckGM
             // 
@@ -760,11 +780,11 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label29.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
             this.label29.Location = new System.Drawing.Point(306, 600);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(84, 15);
+            this.label29.Size = new System.Drawing.Size(74, 13);
             this.label29.TabIndex = 148;
             this.label29.Text = "Cellphone No.";
             // 
@@ -772,11 +792,11 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
             this.label28.Location = new System.Drawing.Point(562, 596);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(85, 15);
+            this.label28.Size = new System.Drawing.Size(78, 13);
             this.label28.TabIndex = 147;
             this.label28.Text = "Telephone No.";
             // 
@@ -792,11 +812,11 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(304, 575);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(124, 15);
+            this.label12.Size = new System.Drawing.Size(104, 13);
             this.label12.TabIndex = 145;
             this.label12.Text = "Student Contact No.";
             // 
@@ -816,11 +836,11 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.Black;
             this.label27.Location = new System.Drawing.Point(709, 527);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(69, 15);
+            this.label27.Size = new System.Drawing.Size(56, 13);
             this.label27.TabIndex = 142;
             this.label27.Text = "Nationality";
             // 
@@ -828,11 +848,11 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.Black;
             this.label26.Location = new System.Drawing.Point(562, 527);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(50, 15);
+            this.label26.Size = new System.Drawing.Size(45, 13);
             this.label26.TabIndex = 140;
             this.label26.Text = "Religion";
             // 
@@ -848,10 +868,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(372, 313);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(83, 15);
+            this.label17.Size = new System.Drawing.Size(74, 13);
             this.label17.TabIndex = 138;
             this.label17.Text = "Voucher Type";
             // 
@@ -868,11 +888,11 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label24.Location = new System.Drawing.Point(721, 471);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(55, 15);
+            this.label24.Size = new System.Drawing.Size(49, 13);
             this.label24.TabIndex = 132;
             this.label24.Text = "Province";
             // 
@@ -899,11 +919,11 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label23.Location = new System.Drawing.Point(305, 471);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(61, 15);
+            this.label23.Size = new System.Drawing.Size(52, 13);
             this.label23.TabIndex = 130;
             this.label23.Text = "Barangay";
             // 
@@ -920,11 +940,11 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label22.Location = new System.Drawing.Point(562, 471);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(76, 15);
+            this.label22.Size = new System.Drawing.Size(62, 13);
             this.label22.TabIndex = 128;
             this.label22.Text = "Municipality";
             // 
@@ -972,10 +992,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(562, 313);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 15);
+            this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 108;
             this.label2.Text = "Student Type";
             // 
@@ -994,22 +1014,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(43, 262);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 105;
             this.label1.Text = "REGNO";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Sultan Nahia", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(73)))), ((int)(((byte)(106)))));
             this.label15.Location = new System.Drawing.Point(41, 212);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(199, 28);
+            this.label15.Size = new System.Drawing.Size(259, 29);
             this.label15.TabIndex = 22;
             this.label15.Text = "R E G I S T R A T I O N";
             // 
@@ -1150,10 +1170,10 @@
             // label114
             // 
             this.label114.AutoSize = true;
-            this.label114.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label114.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label114.Location = new System.Drawing.Point(372, 364);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(143, 15);
+            this.label114.Size = new System.Drawing.Size(128, 13);
             this.label114.TabIndex = 67;
             this.label114.Text = "*Grade Level/Year Level:";
             // 
@@ -1161,11 +1181,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(304, 429);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 15);
+            this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Middle Name";
             // 
@@ -1173,11 +1193,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Location = new System.Drawing.Point(562, 429);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 15);
+            this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Last name";
             // 
@@ -1185,11 +1205,11 @@
             // 
             this.label110.AutoSize = true;
             this.label110.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label110.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label110.ForeColor = System.Drawing.Color.Black;
             this.label110.Location = new System.Drawing.Point(304, 527);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(79, 15);
+            this.label110.Size = new System.Drawing.Size(70, 13);
             this.label110.TabIndex = 56;
             this.label110.Text = "Place of Birth";
             // 
@@ -1197,21 +1217,21 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Location = new System.Drawing.Point(43, 429);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 15);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "First name";
             // 
             // label98
             // 
             this.label98.AutoSize = true;
-            this.label98.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label98.Location = new System.Drawing.Point(562, 364);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(92, 15);
+            this.label98.Size = new System.Drawing.Size(79, 13);
             this.label98.TabIndex = 52;
             this.label98.Text = "Strand/Course:";
             // 
@@ -1228,31 +1248,31 @@
             // 
             this.label64.AutoSize = true;
             this.label64.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label64.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label64.Location = new System.Drawing.Point(47, 471);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(130, 15);
+            this.label64.Size = new System.Drawing.Size(116, 13);
             this.label64.TabIndex = 31;
             this.label64.Text = "House No./Street/Sitio";
             // 
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.Location = new System.Drawing.Point(43, 364);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(46, 15);
+            this.label57.Size = new System.Drawing.Size(42, 13);
             this.label57.TabIndex = 49;
             this.label57.Text = "*Track:";
             // 
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.Location = new System.Drawing.Point(47, 575);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(52, 15);
+            this.label63.Size = new System.Drawing.Size(45, 13);
             this.label63.TabIndex = 28;
             this.label63.Text = "Gender:";
             // 
@@ -1260,11 +1280,11 @@
             // 
             this.label55.AutoSize = true;
             this.label55.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label55.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label55.Location = new System.Drawing.Point(43, 311);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(33, 15);
+            this.label55.Size = new System.Drawing.Size(33, 13);
             this.label55.TabIndex = 38;
             this.label55.Text = "*LRN";
             // 
@@ -1289,10 +1309,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(48, 530);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 15);
+            this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 7;
             this.label6.Text = "Birthdate";
             // 
@@ -1508,22 +1528,22 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(988, 16);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 21);
+            this.label14.Size = new System.Drawing.Size(42, 20);
             this.label14.TabIndex = 1021;
             this.label14.Text = "Help";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(1039, 15);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 21);
+            this.label13.Size = new System.Drawing.Size(68, 20);
             this.label13.TabIndex = 1020;
             this.label13.Text = "Settings";
             // 
@@ -1548,26 +1568,6 @@
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(139, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 39);
-            this.button1.TabIndex = 143;
-            this.button1.Text = "&Assessment";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(15, 75);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(116, 39);
-            this.btnSave.TabIndex = 142;
-            this.btnSave.Text = "&Register";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
-            // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1580,7 +1580,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegistration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmRegistration";
+            this.Text = "                                                                                 " +
+    "                rrrRr";
             this.Load += new System.EventHandler(this.frmRegistration_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();

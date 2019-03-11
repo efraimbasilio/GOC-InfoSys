@@ -146,12 +146,16 @@
             // 
             // dgvSearch
             // 
+            this.dgvSearch.AllowUserToAddRows = false;
+            this.dgvSearch.AllowUserToDeleteRows = false;
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(24, 166);
+            this.dgvSearch.Location = new System.Drawing.Point(24, 178);
             this.dgvSearch.Name = "dgvSearch";
+            this.dgvSearch.ReadOnly = true;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSearch.Size = new System.Drawing.Size(1234, 507);
-            this.dgvSearch.TabIndex = 1025;
+            this.dgvSearch.TabIndex = 1032;
+            this.dgvSearch.DoubleClick += new System.EventHandler(this.dgvSearch_DoubleClick_1);
             // 
             // frmBillingSearch
             // 
