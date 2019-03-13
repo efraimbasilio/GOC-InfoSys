@@ -350,12 +350,12 @@ namespace GOCSystem2018
         private void pictureBox24_Click(object sender, EventArgs e)
         {
             frmRegistration frm = new frmRegistration();
-            
+            frm.TopLevel = false;
+            frm.AutoScroll = true;
+
+            pnlRegistration.Controls.Add(frm);
 
             frm.Show();
-
-
-
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = false;
             studprofpanel.Visible = false;

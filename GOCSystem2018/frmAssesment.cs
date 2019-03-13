@@ -707,6 +707,9 @@ namespace GOCSystem2018
             }
             studProfile.StudRegistrationNo = RegNo;
             studProfile.ReserveOnly();
+
+            frmBilling frmBilling = new frmBilling();
+            frmBilling.Show();
         }
 
         private void button4_Click_2(object sender, EventArgs e)
