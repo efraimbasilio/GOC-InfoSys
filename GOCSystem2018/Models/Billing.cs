@@ -18,6 +18,7 @@ namespace GOCSystem2018
         protected string orNo;
         protected double amountGiven;
         protected string paymentNo;
+        protected string paymentDate;
         protected string mop;
         //protected string paymentDate;
 
@@ -32,6 +33,12 @@ namespace GOCSystem2018
         {
             get { return id; }
             set { id = value; }
+        }
+
+        public string PaymentDate
+        {
+            get { return paymentDate; }
+            set { paymentDate = value; }
         }
         public string StudentId
         {
@@ -87,7 +94,8 @@ namespace GOCSystem2018
                         bill.orNo = reader["OrNo"].ToString();
                         bill.amountGiven =Convert.ToDouble(reader["amount_given"].ToString());
                         bill.paymentNo = reader["payment_no"].ToString();
-                        bill.mop = reader["MOP"].ToString();
+                        bill.paymentDate = reader["payment_date"].ToString();
+                        //bill.mop = reader["MOP"].ToString();
 
                         bills.Add(bill);
 
@@ -160,6 +168,49 @@ namespace GOCSystem2018
                         Billing bill = new Billing();
                         //prepare properties
                         bill.paymentNo = reader["payment_no"].ToString();
+                        bills.Add(bill);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return bills;
+        }
+
+        public List<Billing> GetPaymentHistory()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM billing_or WHERE IDNo=@studentId;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("studentId", studentId);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Billing bill = new Billing();
+                        //prepare properties
+                        bill.id = Convert.ToInt32(reader["id"].ToString());
+                        bill.studentId = reader["IDNo"].ToString();
+                        bill.orNo = reader["OrNo"].ToString();
+                        bill.amountGiven = Convert.ToDouble(reader["amount_given"].ToString());
+                        bill.paymentNo = reader["payment_no"].ToString();
+                        bill.paymentDate = reader["payment_date"].ToString();
                         bills.Add(bill);
                     }
                 }

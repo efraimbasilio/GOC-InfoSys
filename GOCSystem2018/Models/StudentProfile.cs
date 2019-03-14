@@ -299,14 +299,16 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE student_profile SET IdNo=@studGOCNo" +
+                    string sql = "UPDATE student_profile SET IdNo=@studGOCNo, reservee=@reservee" +
                                     " WHERE regno=@studRegistrationNo;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
                     cmd.Parameters.AddWithValue("studGOCNo", studGOCNo);
-                   
+                    cmd.Parameters.AddWithValue("reservee",reservee);
+
+
 
                     cmd.ExecuteNonQuery();
 

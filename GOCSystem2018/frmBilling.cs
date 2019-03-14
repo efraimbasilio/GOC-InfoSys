@@ -88,12 +88,7 @@ namespace GOCSystem2018
                 txtPayNumber.Text = item.PaymentNo;
             }
         }//End LoadRecords
-
-        private void frmBilling_Load(object sender, EventArgs e)
-        {
-            
-        }
-
+       
         public void LoadReservationFee()
         {
             //clear list
@@ -112,6 +107,8 @@ namespace GOCSystem2018
                 }
             }
         }//End LoadRecords
+
+        
 
         public void LoadAssesMiscFees()
         {
@@ -214,6 +211,35 @@ namespace GOCSystem2018
             }
         }//End LoadRecords
 
+        public void LoadBillingHistory()
+        {
+            //clear list
+            billings.Clear();
+            //pass value to list
+            bill.StudentId = StudID;
+            billings = bill.GetPaymentHistory();
+
+            //loop through load it to list view
+            foreach (var item in billings)
+            {
+                dgvFeeHistory.Rows.Add(item.OrNo, item.StudentId, item.AmountGiven, item.PaymentNo, item.PaymentDate);
+            }
+        }
+
+        public void LoadPaymentNo()
+        {
+            //clear list
+            billings.Clear();
+            //pass value to list
+            bill.StudentId = StudID;
+            billings = bill.GetPaymentNo();
+
+            //loop through load it to list view
+            foreach (var item in billings)
+            {
+                MessageBox.Show(item.PaymentNo);
+            }
+        }
         public void Render()
         {
             if (CTRpayment == 1)
@@ -239,9 +265,9 @@ namespace GOCSystem2018
             }
             else
             {
-                cmbPaymentFor.Items.Clear();
-                cmbPaymentFor.Items.Add("Full Payment");
-                cmbPaymentFor.Text = "Full Payment";
+                //cmbPaymentFor.Items.Clear();
+                //cmbPaymentFor.Items.Add("Full Payment");
+                //cmbPaymentFor.Text = "Full Payment";
             }
 
             //pass value from billing search
@@ -262,6 +288,11 @@ namespace GOCSystem2018
             TheTotalTuition();
             GetDownPayment();
             LoadReservationFee();
+
+            LoadBillingHistory(); //get Billing History
+            LoadPaymentNo(); //payment count
+
+
         }
                    
         /***********************************************************************************/
@@ -277,7 +308,35 @@ namespace GOCSystem2018
             InitializeComponent();
         }
         /*************************************************************************************/
-        
+        private void frmBilling_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbMOP_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cmbMOP.SelectedItem.Equals("Partial Payment"))
+            {
+                cmbPaymentFor.Items.Clear();
+                cmbPaymentFor.Items.Add("Downpayment");
+                cmbPaymentFor.Items.Add("1st Payment");
+                cmbPaymentFor.Items.Add("2nd Payment");
+                cmbPaymentFor.Items.Add("3rd Payment");
+                cmbPaymentFor.Items.Add("4th Payment");
+                cmbPaymentFor.Items.Add("5th Payment");
+                cmbPaymentFor.Items.Add("6th Payment");
+                cmbPaymentFor.Items.Add("7th Payment");
+                cmbPaymentFor.Items.Add("8th Payment");
+                cmbPaymentFor.Items.Add("9th Payment");
+                cmbPaymentFor.Items.Add("10th Payment");
+            }
+            else
+            {
+                cmbPaymentFor.Items.Clear();
+                cmbPaymentFor.Text = "Full Payment";
+            }
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             frmBillingSearch billSearch = new frmBillingSearch();

@@ -231,11 +231,13 @@ namespace GOCSystem2018
                     bill.OrNo = txtORNo.Text;
                     bill.StudentId = GOCNo;                   
                     bill.PaymentNo = count.ToString();
+                    //for the payment no.
                     bill.Save();
 
                     //Update GOC Number in Studprofile Table
                     studProfile.StudRegistrationNo = RegNo;
                     studProfile.StudGOCNo = GOCNo;
+                    studProfile.Reservee = "0";
                     studProfile.SaveGOCNumber();
 
                     ///////////////////////////////////////////////////to pull out vouchers from maintenanace voucher
@@ -243,8 +245,8 @@ namespace GOCSystem2018
                     if (paymentFor.Equals("Reservation"))
                     {
                         Reservation();
-                    }                                 
-                    this.Dispose();
+                    }                    
+                    
                 }               
             }
             else
