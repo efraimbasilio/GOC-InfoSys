@@ -16,7 +16,7 @@ namespace GOCSystem2018
         protected int id;
         protected string studentId;
         protected string orNo;
-        protected string amountGiven;
+        protected double amountGiven;
         protected string paymentNo;
         protected string mop;
         //protected string paymentDate;
@@ -43,7 +43,7 @@ namespace GOCSystem2018
             get { return orNo; }
             set { orNo = value; }
         }
-        public string AmountGiven
+        public double AmountGiven
         {
             get { return amountGiven; }
             set { amountGiven = value; }
@@ -83,9 +83,9 @@ namespace GOCSystem2018
 
                         //prepare properties
                         bill.id = Convert.ToInt32(reader["id"].ToString());
-                        bill.studentId = reader["ID_no"].ToString();
+                        bill.studentId = reader["IDNo"].ToString();
                         bill.orNo = reader["OrNo"].ToString();
-                        bill.amountGiven = reader["amount_given"].ToString();
+                        bill.amountGiven =Convert.ToDouble(reader["amount_given"].ToString());
                         bill.paymentNo = reader["payment_no"].ToString();
                         bill.mop = reader["MOP"].ToString();
 
@@ -114,7 +114,7 @@ namespace GOCSystem2018
                     con.Open();
 
                     string sql = "INSERT INTO billing_or(IDNo,OrNo,amount_given,payment_no,MOP) " +
-                                    " VALUES (@studentId,@orNo,@amountGiven,@paymentNo,@paymentNo);";
+                                    " VALUES (@studentId,@orNo,@amountGiven,@paymentNo,@mop);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
@@ -132,6 +132,44 @@ namespace GOCSystem2018
                 MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+      
+        public List<Billing> GetPaymentNo()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM billing_or WHERE IDNo=@studentId;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("studentId", studentId);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Billing bill = new Billing();
+                        //prepare properties
+                        bill.paymentNo = reader["payment_no"].ToString();
+                        bills.Add(bill);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return bills;
         }
     }
 }

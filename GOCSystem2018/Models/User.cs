@@ -17,7 +17,12 @@ namespace GOCSystem2018
         protected string username;
         protected string password;
         protected string userType;
+        protected string lastname;
+        protected string firstname;
+        protected string middlename;
+        protected string empId;
         protected bool status;
+
 
         /******************************
          * Private Properties
@@ -30,6 +35,29 @@ namespace GOCSystem2018
         {
             get { return id; }
             set { id = value; }
+        }
+
+        public string EmpId
+        {
+            get { return empId; }
+            set { empId = value; }
+        }
+        public string LastName
+        {
+            get { return lastname; }
+            set { lastname = value; }
+        }
+
+        public string FirstName
+        {
+            get { return firstname; }
+            set { firstname = value; }
+        }
+
+        public string MidName
+        {
+            get { return middlename; }
+            set { middlename = value; }
         }
         public string Username
         {
@@ -55,41 +83,52 @@ namespace GOCSystem2018
             set { status = value; }
         }
 
+      
         List<User> users = new List<User>();
 
-        //public void AccessGrant()
-        //{
-        //    try
-        //    {
-        //        using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
-        //        {
-        //            con.Open();
+        public List<User> GetUserType()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
 
-        //            string sql = "SELECT * FROM users";
-        //            MySqlCommand cmd = new MySqlCommand(sql, con);
+                    string sql = "SELECT * FROM users WHERE username =@username AND password=@password;";
 
-        //            MySqlDataReader reader = cmd.ExecuteReader();
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
 
-        //            while (reader.Read())
-        //            {
-        //                //instantiate model
-        //                Judges judge = new Judges();
+                    //ito yung parameter para makapag filter ng records 
+                    cmd.Parameters.AddWithValue("username", username);
+                    cmd.Parameters.AddWithValue("password", password);
 
-        //                //set properties
-        //                judge.judgeNumber = Int32.Parse(reader["judge_present"].ToString());
+                    MySqlDataReader reader = cmd.ExecuteReader();
 
-        //                //add object to list
-        //                judgepresent.Add(judge);
+                    while (reader.Read())
+                    {
+                        User user = new User();
 
-        //            }
-        //        }
-        //    }
-        //    catch (MySqlException ex)
-        //    {
-        //        MessageBox.Show("Error : " + ex.Message.ToString(), "Tabulation System", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    return judgepresent;
-        //}
+                        //MessageBox.Show("inside loop");
+                        //ito yung gusto mong palabasing na record from the filtered query
+                        user.userType = reader["user_type"].ToString();
+                        user.username = reader["username"].ToString();
+                        user.password = reader["password"].ToString();
+                        
+                        users.Add(user);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("Error : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+            return users;
+           
+        }
+
 
         public void AccessGrant()
         {

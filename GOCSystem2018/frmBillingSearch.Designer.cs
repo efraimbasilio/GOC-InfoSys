@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
@@ -157,12 +158,24 @@
             this.dgvSearch.TabIndex = 1032;
             this.dgvSearch.DoubleClick += new System.EventHandler(this.dgvSearch_DoubleClick_1);
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.DimGray;
+            this.label19.Location = new System.Drawing.Point(19, 97);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(176, 29);
+            this.label19.TabIndex = 1033;
+            this.label19.Text = "Billing Search";
+            // 
             // frmBillingSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.dgvSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label2);
@@ -196,5 +209,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DataGridView dgvSearch;
+        private System.Windows.Forms.Label label19;
     }
 }

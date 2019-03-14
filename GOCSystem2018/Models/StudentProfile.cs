@@ -211,5 +211,113 @@ namespace GOCSystem2018
 
             }
         }
+
+        public List<StudentProfile> Load()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM student_profile";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        StudentProfile SP = new StudentProfile();
+
+                        //prepare properties
+                        SP.id = Convert.ToInt32(reader["id"].ToString());
+                        SP.studGOCNo = reader["IDNo"].ToString();
+                        SP.StudLRN = reader["LRN"].ToString();
+                        SP.studRegistrationNo = reader["regNo"].ToString();
+                        SP.reservee = reader["Reservee"].ToString();
+                        SP.reserveFor = reader["Reserve_for"].ToString();
+                        SP.fullPayment = reader["Full_payment"].ToString();
+                        SP.partialPayment = reader["Partial_payment"].ToString();
+                        SP.studLastName = reader["last_name"].ToString();
+                        SP.studFirstName = reader["first_name"].ToString();
+                        SP.studMiddleName = reader["middle_name"].ToString();
+                        SP.studGradeLevel = reader["grade_Level"].ToString();
+                        //SP.stud = reader["section"].ToString();
+                        SP.track = reader["track"].ToString();
+                        SP.studStrand = reader["strand"].ToString();
+                        SP.voucherType = reader["voucher_type"].ToString();
+                        //SP.address = reader["address"].ToString();
+                        //SP.dob = reader["date_of_birth"].ToString();
+                        //SP.religion = reader["religion"].ToString();
+                        //SP.nationality = reader["nationality"].ToString();
+                        //SP.gender = reader["gender"].ToString();
+                        //SP.scontactNo = reader["stud_contactNo"].ToString();
+                        //SP.sTelNo = reader["stud_telNo"].ToString();
+                        //SP.prevSchool = reader["prev_school"].ToString();
+                        //SP.prevSchooolAddress = reader["prev_school_address"].ToString();
+                        //SP.fatherName = reader["father_name"].ToString();
+                        //SP.fatherWork = reader["father_work"].ToString();
+                        //SP.studLRN = reader["guardian_name"].ToString();
+                        //SP.studLRN = reader["guardian_work"].ToString();
+                        //SP.studLRN = reader["guardian_address"].ToString();
+                        //SP.studLRN = reader["guardian_relationship"].ToString();
+                        //SP.studLRN = reader["guardian_contactNo"].ToString();
+                        //SP.studLRN = reader["guardian_telNo"].ToString();
+                        //SP.studLRN = reader["bc"].ToString();
+                        //SP.studLRN = reader["form138"].ToString();
+                        //SP.studLRN = reader["drugtest"].ToString();
+                        //SP.studLRN = reader["good_moral"].ToString();
+                        //SP.studLRN = reader["en_exam"].ToString();
+                        //SP.studLRN = reader["ncae"].ToString();
+                        //SP.studLRN = reader["date_enrolled"].ToString();
+                        //SP.studLRN = reader["sy_enrolled"].ToString();
+
+                        //add object to list
+                        studentProfiles.Add(SP);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return studentProfiles;
+        }//End of Load
+
+        public void SaveGOCNumber()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    string sql = "UPDATE student_profile SET IdNo=@studGOCNo" +
+                                    " WHERE regno=@studRegistrationNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
+                    cmd.Parameters.AddWithValue("studGOCNo", studGOCNo);
+                   
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
     }
 }

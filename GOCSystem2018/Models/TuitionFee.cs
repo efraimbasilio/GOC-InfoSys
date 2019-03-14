@@ -20,6 +20,14 @@ namespace GOCSystem2018.Models
         protected string tuitionFeeAmount;
         protected string tuitionFeeDescription;
         protected string status;
+
+        protected string reservationFee;
+        public string ReservationFee
+        {
+            get { return reservationFee; }
+            set { reservationFee = value; }
+        }
+
         //protected int flag;
 
         /******************************
@@ -131,6 +139,7 @@ namespace GOCSystem2018.Models
                         tuitionFee.tuitionFeeAmount = reader["tuition_amount"].ToString();
                         tuitionFee.tuitionFeeDescription = reader["tuition_desc"].ToString();
                         tuitionFee.status = reader["status"].ToString();
+                        tuitionFee.reservationFee = reader["Reservation-Fee"].ToString();
 
 
                         tuitionFees.Add(tuitionFee);

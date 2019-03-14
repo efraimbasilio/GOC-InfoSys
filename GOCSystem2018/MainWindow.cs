@@ -350,10 +350,10 @@ namespace GOCSystem2018
         private void pictureBox24_Click(object sender, EventArgs e)
         {
             frmRegistration frm = new frmRegistration();
-            frm.TopLevel = false;
-            frm.AutoScroll = true;
+            //frm.TopLevel = false;
+            //frm.AutoScroll = true;
 
-            pnlRegistration.Controls.Add(frm);
+            //pnlRegistration.Controls.Add(frm);
 
             frm.Show();
             StudentlistPanel.Visible = false;
@@ -403,10 +403,11 @@ namespace GOCSystem2018
 
             l.Name = "li" + i.ToString();
             l.Text = studname;
+            l.Size = new Size(250, 19);
             l.ForeColor = Color.Gray;
             l.BackColor = Color.Transparent;
             l.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-            l.Location = new Point(start + (2 * 150), end);
+            l.Location = new Point(start + (2 * 200), end);
 
             return l;
         }
@@ -418,41 +419,41 @@ namespace GOCSystem2018
             lsn.ForeColor = Color.Gray;
             lsn.BackColor = Color.Transparent;
             lsn.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-            lsn.Location = new Point(start + (4 * 150), end);
+            lsn.Location = new Point(start + (4 * 200), end);
             return lsn;
         }
-        Label addLabel3(int i, int start, int end, int start2, int end2)
+        Label addLabel3(int i, int start, int end, int start2, int end2, String sec)
         {
             Label lsection = new Label();
             lsection.Name = "ls" + i.ToString();
-            lsection.Text = "label" + i.ToString();
+            lsection.Text = sec;
             lsection.ForeColor = Color.Gray;
             lsection.BackColor = Color.Transparent;
             lsection.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-            lsection.Location = new Point(start + (5 * 150), end);
+            lsection.Location = new Point(start + (5 * 200), end);
             return lsection;
         }
-        Label addLabel4(int i, int start, int end, int start2, int end2)
+        Label addLabel4(int i, int start, int end, int start2, int end2, String grade)
         {
             Label lgrade = new Label();
             lgrade.Name = "lg" + i.ToString();
-            lgrade.Text = "label" + i.ToString();
+            lgrade.Text = grade;
             lgrade.ForeColor = Color.Gray;
             lgrade.BackColor = Color.Transparent;
             lgrade.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-            lgrade.Location = new Point(start + (3 * 150), end);
+            lgrade.Location = new Point(start + (3 * 200), end);
             return lgrade;
         }
 
-        Label addLabel5(int i, int start, int end, int start2, int end2)
+        Label addLabel5(int i, int start, int end, int start2, int end2, String strand)
         {
             Label lstrand = new Label();
             lstrand.Name = "lst" + i.ToString();
-            lstrand.Text = "label" + i.ToString();
+            lstrand.Text = strand;
             lstrand.ForeColor = Color.Gray;
             lstrand.BackColor = Color.Transparent;
             lstrand.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Regular);
-            lstrand.Location = new Point(start + 150, end);
+            lstrand.Location = new Point(start + 200, end);
             return lstrand;
         }
 
@@ -489,13 +490,13 @@ namespace GOCSystem2018
             {
                 //PictureBox spb = studPicturebox(ldc, startposition, endposition, startposition2, endposition2);
                 Panel ph = placeHolder(ldc, startposition, endposition, startposition2, endposition2);
-                String FullName = dgvSearch.Rows[ldc].Cells[9].FormattedValue.ToString() + ", " + dgvSearch.Rows[ldc].Cells[10].FormattedValue.ToString() + " " + dgvSearch.Rows[ldc].Cells[10].FormattedValue.ToString();
+                String FullName = dgvSearch.Rows[ldc].Cells[9].FormattedValue.ToString() + ", " + dgvSearch.Rows[ldc].Cells[10].FormattedValue.ToString() + " " + dgvSearch.Rows[ldc].Cells[11].FormattedValue.ToString();
 
                 Label l = addLabel(ldc, startposition, endposition, FullName);
-                Label l2 = addLabel2(ldc, startposition, endposition, startposition2, endposition2, dgvSearch.Rows[ldc].Cells[2].FormattedValue.ToString());
-                Label l3 = addLabel3(ldc, startposition, endposition, startposition2, endposition2);
-                Label l4 = addLabel4(ldc, startposition, endposition, startposition2, endposition2);
-                Label l5 = addLabel5(ldc, startposition, endposition, startposition2, endposition2);
+                Label l2 = addLabel2(ldc, startposition, endposition, startposition2, endposition2, dgvSearch.Rows[ldc].Cells[15].FormattedValue.ToString());
+                Label l3 = addLabel3(ldc, startposition, endposition, startposition2, endposition2, dgvSearch.Rows[ldc].Cells[13].FormattedValue.ToString());
+                Label l4 = addLabel4(ldc, startposition, endposition, startposition2, endposition2, dgvSearch.Rows[ldc].Cells[12].FormattedValue.ToString());
+                Label l5 = addLabel5(ldc, startposition, endposition, startposition2, endposition2, dgvSearch.Rows[ldc].Cells[2].FormattedValue.ToString());
                 //Label l6 = addLabel6(ldc, startposition, endposition, startposition2, endposition2);
                 StudentlistPanel.Controls.Add(ph);
                 ph.Controls.Add(l);

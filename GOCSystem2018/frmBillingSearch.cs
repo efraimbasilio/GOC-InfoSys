@@ -87,8 +87,9 @@ namespace GOCSystem2018
 
                     if (item.Reservee.Equals("1"))
                     {
-                        frmBilling.lblReservation.ForeColor = Color.Red;
-                        frmBilling.lblReservation.BackColor = Color.Black;
+                        frmBilling.lblReservationTag.ForeColor = Color.Red;
+                        frmBilling.lblReservationTag.BackColor = Color.Black;
+                        frmBilling.CTRpayment = 1;
 
                     }
 
@@ -97,6 +98,7 @@ namespace GOCSystem2018
                         frmBilling.lblPartial.ForeColor = Color.Red;
                         frmBilling.lblPartial.BackColor = Color.Black;
                         frmBilling.cmbMOP.Text = "Partial Payment";
+                        frmBilling.CTRpayment = 2;
                     }
 
                     if (item.FullPayment.Equals("1"))
@@ -104,9 +106,11 @@ namespace GOCSystem2018
                         frmBilling.lblFullPayment.ForeColor = Color.Red;
                         frmBilling.lblFullPayment.BackColor = Color.Black;
                         frmBilling.cmbMOP.Text = "Full Payment";
+                        frmBilling.CTRpayment = 3;
                     }                    
                 }
 
+                frmBilling.CallPaymentNumber();
                 //set up before form load
                 frmBilling.Render();
                 frmBilling.Show();

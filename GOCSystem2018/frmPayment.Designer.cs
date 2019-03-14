@@ -37,13 +37,15 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label135 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtORNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtAmountGiven = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnProcess = new System.Windows.Forms.Button();
+            this.lblAmountDue = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblPaymentFor = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.SuspendLayout();
@@ -142,12 +144,12 @@
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
             // 
-            // textBox1
+            // txtORNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(57, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 20);
-            this.textBox1.TabIndex = 1026;
+            this.txtORNo.Location = new System.Drawing.Point(57, 66);
+            this.txtORNo.Name = "txtORNo";
+            this.txtORNo.Size = new System.Drawing.Size(146, 20);
+            this.txtORNo.TabIndex = 1026;
             // 
             // label2
             // 
@@ -163,69 +165,94 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 219);
+            this.label1.Location = new System.Drawing.Point(146, 240);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 20);
             this.label1.TabIndex = 1037;
             this.label1.Text = "Amount Tendered:";
             // 
-            // textBox2
+            // txtAmountGiven
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(208, 206);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(146, 38);
-            this.textBox2.TabIndex = 1036;
-            this.textBox2.Text = "0.00";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAmountGiven.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmountGiven.Location = new System.Drawing.Point(292, 227);
+            this.txtAmountGiven.Name = "txtAmountGiven";
+            this.txtAmountGiven.Size = new System.Drawing.Size(146, 38);
+            this.txtAmountGiven.TabIndex = 1036;
+            this.txtAmountGiven.Text = "0.00";
+            this.txtAmountGiven.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(88, 160);
+            this.label4.Location = new System.Drawing.Point(172, 181);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 20);
             this.label4.TabIndex = 1039;
             this.label4.Text = "Amount Due:";
             // 
-            // button2
+            // btnProcess
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(208, 266);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 31);
-            this.button2.TabIndex = 1040;
-            this.button2.Text = "&Confirm Amount";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProcess.ForeColor = System.Drawing.Color.White;
+            this.btnProcess.Location = new System.Drawing.Point(292, 287);
+            this.btnProcess.Name = "btnProcess";
+            this.btnProcess.Size = new System.Drawing.Size(146, 31);
+            this.btnProcess.TabIndex = 1040;
+            this.btnProcess.Text = "&Confirm Amount";
+            this.btnProcess.UseVisualStyleBackColor = false;
+            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
+            // 
+            // lblAmountDue
+            // 
+            this.lblAmountDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmountDue.Location = new System.Drawing.Point(288, 181);
+            this.lblAmountDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAmountDue.Name = "lblAmountDue";
+            this.lblAmountDue.Size = new System.Drawing.Size(150, 20);
+            this.lblAmountDue.TabIndex = 1041;
+            this.lblAmountDue.Text = "0.00";
+            this.lblAmountDue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
+            this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(204, 160);
+            this.label5.Location = new System.Drawing.Point(61, 113);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(150, 20);
-            this.label5.TabIndex = 1041;
-            this.label5.Text = "0.00";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Size = new System.Drawing.Size(103, 20);
+            this.label5.TabIndex = 1042;
+            this.label5.Text = "Payment For:";
+            // 
+            // lblPaymentFor
+            // 
+            this.lblPaymentFor.AutoSize = true;
+            this.lblPaymentFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentFor.Location = new System.Drawing.Point(172, 113);
+            this.lblPaymentFor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPaymentFor.Name = "lblPaymentFor";
+            this.lblPaymentFor.Size = new System.Drawing.Size(103, 20);
+            this.lblPaymentFor.TabIndex = 1043;
+            this.lblPaymentFor.Text = "Payment For:";
             // 
             // frmPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 330);
+            this.Controls.Add(this.lblPaymentFor);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lblAmountDue);
+            this.Controls.Add(this.btnProcess);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtAmountGiven);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtORNo);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPayment";
@@ -249,12 +276,14 @@
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtORNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtAmountGiven;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnProcess;
+        private System.Windows.Forms.Label lblAmountDue;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPaymentFor;
     }
 }

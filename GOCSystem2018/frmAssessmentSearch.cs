@@ -108,8 +108,7 @@ namespace GOCSystem2018
                 frmAssesment.Reset();
                 frmAssesment.LoadSection();
                 frmAssesment.LoadSchoolYear();
-                frmAssesment.RenderStudNo();
-
+               
                 frmAssesment.LoadTuitionFee();
                 frmAssesment.LoadAssesMiscFees();
                 frmAssesment.LoadAssesOtherFees();
@@ -121,10 +120,11 @@ namespace GOCSystem2018
 
                 frmAssesment.LoadSubject();
                 frmAssesment.EnableMOP();
+              
 
                 //show assesment                             
                 frmAssesment.Show();
-                //this.Dispose();
+                this.Dispose();
             }
         }
 

@@ -14,7 +14,7 @@ namespace GOCSystem2018
        * Protected Properties
        * ***************************/
         protected int id;
-        protected string regNo;
+        protected string enStatus;
         protected string oRNo;
         protected string idNo;
         protected string full_name;
@@ -43,10 +43,10 @@ namespace GOCSystem2018
             get { return id; }
             set { id = value; }
         }
-        public string RegNo
+        public string EnStatus
         {
-            get { return regNo; }
-            set { regNo = value; }
+            get { return enStatus; }
+            set { enStatus = value; }
         }
 
         public string IdNo
@@ -145,15 +145,15 @@ namespace GOCSystem2018
                 //prepare connection string 
                 using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
                 {
-
                     //try to open connection
                     con.Open();
-
-                    string sql = "INSERT INTO student_profile(RegNo,OR_No,IDNo,full_name,DP,1p,2p,3p,4p,5p,6p,7p,8p,9p,10p,balance) " +
-                    "VALUES (@idNo,@regNo,@oRNo,@full_name,@downPayment,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@balance);";
+                    string sql = "INSERT INTO billing_partial(Enrollment_Status,OR_No,IDNo,full_name,DP,1p,2p,3p,4p,5p,6p,7p,8p,9p,10p,balance) " +
+                    "VALUES (@enStatus,@oRNo,@idNo,@full_name,@downPayment,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@balance);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
-                    cmd.Parameters.AddWithValue("regNo", regNo);
+
+                    //cmd.Parameters.AddWithValue("regNo", regNo);
+                    cmd.Parameters.AddWithValue("enStatus", enStatus);
                     cmd.Parameters.AddWithValue("oRNo", oRNo);
                     cmd.Parameters.AddWithValue("idNo", idNo);                   
                     cmd.Parameters.AddWithValue("full_name", full_name);
@@ -209,7 +209,7 @@ namespace GOCSystem2018
 
                         //prepare properties
                         billingPartial.id = Convert.ToInt32(reader["id"].ToString());
-                        billingPartial.regNo = reader["regno"].ToString();
+                        billingPartial.enStatus = reader["enrollment_status"].ToString();
                         billingPartial.oRNo = reader["or_no"].ToString();
                         billingPartial.idNo = reader["idno"].ToString();
                         billingPartial.full_name = reader["full_name"].ToString();
@@ -237,5 +237,7 @@ namespace GOCSystem2018
             }
             return billingPartials;
         }
+
+       
     }
 }

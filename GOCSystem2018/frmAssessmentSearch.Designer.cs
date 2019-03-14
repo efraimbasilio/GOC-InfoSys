@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
@@ -157,12 +158,24 @@
             this.pictureBox1.TabIndex = 1028;
             this.pictureBox1.TabStop = false;
             // 
-            // frmStudSearch
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.DimGray;
+            this.label19.Location = new System.Drawing.Point(19, 98);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(242, 29);
+            this.label19.TabIndex = 1032;
+            this.label19.Text = "Assessment Search";
+            // 
+            // frmAssessmentSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvSearch);
             this.Controls.Add(this.txtSearch);
@@ -172,7 +185,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmStudSearch";
+            this.Name = "frmAssessmentSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAssesmentSearch";
             this.Load += new System.EventHandler(this.frmStudSearch_Load);
@@ -199,5 +212,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label19;
     }
 }

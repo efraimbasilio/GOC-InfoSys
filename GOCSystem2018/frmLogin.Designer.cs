@@ -42,6 +42,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label117 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
@@ -83,6 +84,7 @@
             this.txtpassword.Size = new System.Drawing.Size(352, 20);
             this.txtpassword.TabIndex = 2;
             this.txtpassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);
             this.txtpassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpassword_KeyPress);
             // 
             // label2
@@ -201,6 +203,16 @@
             this.pictureBox22.TabIndex = 24;
             this.pictureBox22.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(440, 317);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(10, 23);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,6 +220,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(456, 344);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label117);
             this.Controls.Add(this.pictureBox22);
             this.Controls.Add(this.label2);
@@ -248,6 +261,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label117;
         private System.Windows.Forms.PictureBox pictureBox22;
+        private System.Windows.Forms.Button button2;
     }
 }
 

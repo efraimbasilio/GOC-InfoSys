@@ -16,12 +16,15 @@ namespace GOCSystem2018
         SchoolYear schoolYear = new SchoolYear();
         Assesment assesment = new Assesment();
         Voucher voucher = new Voucher();
+        StudentProfile sp = new StudentProfile();
 
         List<Voucher> vouchers = new List<Voucher>();
         List<Assesment> assements = new List<Assesment>();
         frmAssesment frmAssesment = new frmAssesment();
         List<SchoolYear> schoolYears = new List<SchoolYear>();
-        public string School;
+        List<StudentProfile> sps = new List<StudentProfile>();
+
+        public string School, RegistrationNumber;
         public void LoadSchoolYear()
         {
             //clear list
@@ -46,25 +49,27 @@ namespace GOCSystem2018
         }//End LoadRecords()
 
 
+
+
         public void LoadAutoGen()
         {
             //clear list           
-            assements.Clear();
+            sps.Clear();
 
             //pass value to list
             //MessageBox.Show(assements.Count().ToString());
-            if (assements.Count() < 1)
+            if (sps.Count() < 1)
             {
                 txtRegno.Text = "REG-" + DateTime.Today.ToString("yyyy") + "-" + (1).ToString("0000");
             }
 
-            assements = assesment.Load();
-                  
-            foreach (var item in assements)
+            sps = sp.Load();
+
+            foreach (var item in sps)
             {
-                      
-                    txtRegno.Text = "REG-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");
-                                                   
+
+                txtRegno.Text = "REG-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");
+
             }
         }//End LoadRecords() OK
 
@@ -317,6 +322,7 @@ namespace GOCSystem2018
         private void frmRegistration_Load(object sender, EventArgs e)
         {
             LoadAutoGen();
+
             LoadSchoolYear();   
             opt1stYear.Text = "11";
             opt2ndYear.Text = "12";
@@ -324,8 +330,8 @@ namespace GOCSystem2018
             opt4thYear.Visible = false;
             cmbCourseStrand.Text = "";
             LoadCombo();
-            panel4.Visible = false;
-            panel3.Location = new Point(31, 690);
+            //panel4.Visible = false;
+            //panel3.Location = new Point(31, 690);
             LoadVoucher();
 
         }
@@ -664,8 +670,7 @@ namespace GOCSystem2018
         }
 
         private void button2_Click_1(object sender, EventArgs e)
-        {
-            
+        {            
             panel4.Visible = true;
             panel3.Location = new Point(31, 998);
 
@@ -677,8 +682,188 @@ namespace GOCSystem2018
             frmAssesment.LoadSection();
             frmAssesment.LoadSchoolYear();
             
+           
+            frmAssessmentSearch search = new frmAssessmentSearch();
             this.Hide();
-            frmAssesment.Show();
+            //frmAssesment.Show();
+            this.Dispose();
+            search.Show();
+        }
+
+        private void cmbProvince2_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cmbProvince2.SelectedItem.Equals("Aurora"))
+            {
+                cmbMunicipality2.Items.Clear();
+                cmbMunicipality2.Items.Add("Baler");
+                cmbMunicipality2.Items.Add("Casiguran ");
+                cmbMunicipality2.Items.Add("Dilasag ");
+                cmbMunicipality2.Items.Add("Dinalungan ");
+                cmbMunicipality2.Items.Add("Dingalan ");
+                cmbMunicipality2.Items.Add("Dipaculao ");
+                cmbMunicipality2.Items.Add("Maria Aurora ");
+                cmbMunicipality2.Items.Add("San Luis");
+
+
+
+            }
+            if (cmbProvince2.SelectedItem.Equals("Bataan"))
+            {
+                cmbMunicipality2.Items.Clear();
+                cmbMunicipality2.Items.Add("Abucay");
+                cmbMunicipality2.Items.Add("Bagac");
+                cmbMunicipality2.Items.Add("Dinalupihan");
+                cmbMunicipality2.Items.Add("Hermosa");
+                cmbMunicipality2.Items.Add("Limay");
+                cmbMunicipality2.Items.Add("Mariveles");
+                cmbMunicipality2.Items.Add("Morong");
+                cmbMunicipality2.Items.Add("Orani");
+                cmbMunicipality2.Items.Add("Orion");
+                cmbMunicipality2.Items.Add("Pilar");
+                cmbMunicipality2.Items.Add("SamalCity Of Balanga");
+
+            }
+
+            if (cmbProvince2.SelectedItem.Equals("Bulacan"))
+            {
+                cmbMunicipality2.Items.Clear();
+                cmbMunicipality2.Items.Add("Angat ");
+                cmbMunicipality2.Items.Add("Balagtas ");
+                cmbMunicipality2.Items.Add("Baliuag ");
+                cmbMunicipality2.Items.Add("Bocaue ");
+                cmbMunicipality2.Items.Add("Bulacan ");
+                cmbMunicipality2.Items.Add("Bustos ");
+                cmbMunicipality2.Items.Add("Calumpit ");
+                cmbMunicipality2.Items.Add("Doña Remedios ");
+                cmbMunicipality2.Items.Add("Trinidad ");
+                cmbMunicipality2.Items.Add("Guiguinto ");
+                cmbMunicipality2.Items.Add("Hagonoy ");
+                cmbMunicipality2.Items.Add("Marilao ");
+                cmbMunicipality2.Items.Add("Meycauayan City ");
+                cmbMunicipality2.Items.Add("Norzagaray ");
+                cmbMunicipality2.Items.Add("Obando ");
+                cmbMunicipality2.Items.Add("Pandi ");
+                cmbMunicipality2.Items.Add("Paombong ");
+                cmbMunicipality2.Items.Add("Plaridel ");
+                cmbMunicipality2.Items.Add("Pulilan ");
+                cmbMunicipality2.Items.Add("San Ildefonso ");
+                cmbMunicipality2.Items.Add("San Miguel ");
+                cmbMunicipality2.Items.Add("San Rafael ");
+                cmbMunicipality2.Items.Add("Santa Maria Malolos City");
+                cmbMunicipality2.Items.Add("San Jose Del Monte City");
+
+
+            }
+
+            if (cmbProvince2.SelectedItem.Equals("Nueva Ecija"))
+            {
+                cmbMunicipality2.Items.Clear();
+                cmbMunicipality2.Items.Add("Aliaga ");
+                cmbMunicipality2.Items.Add("Bongabon ");
+                cmbMunicipality2.Items.Add("Cabiao ");
+                cmbMunicipality2.Items.Add("Carranglan ");
+                cmbMunicipality2.Items.Add("Cuyapo ");
+                cmbMunicipality2.Items.Add("Gabaldon ");
+                cmbMunicipality2.Items.Add("General Mamerto Natividad ");
+                cmbMunicipality2.Items.Add("General Tinio ");
+                cmbMunicipality2.Items.Add("Guimba ");
+                cmbMunicipality2.Items.Add("Jaen ");
+                cmbMunicipality2.Items.Add("Laur ");
+                cmbMunicipality2.Items.Add("Licab ");
+                cmbMunicipality2.Items.Add("Llanera ");
+                cmbMunicipality2.Items.Add("Lupao ");
+                cmbMunicipality2.Items.Add("Nampicuan ");
+                cmbMunicipality2.Items.Add("Pantabangan ");
+                cmbMunicipality2.Items.Add("Peñaranda ");
+                cmbMunicipality2.Items.Add("Quezon ");
+                cmbMunicipality2.Items.Add("Rizal ");
+                cmbMunicipality2.Items.Add("San Antonio ");
+                cmbMunicipality2.Items.Add("San Isidro ");
+                cmbMunicipality2.Items.Add("San Leonardo ");
+                cmbMunicipality2.Items.Add("Santa Rosa ");
+                cmbMunicipality2.Items.Add("Santo Domingo ");
+                cmbMunicipality2.Items.Add("Talavera ");
+                cmbMunicipality2.Items.Add("Talugtug ");
+                cmbMunicipality2.Items.Add("Zaragoza  ");
+                cmbMunicipality2.Items.Add("Cabanatuan City ");
+                cmbMunicipality2.Items.Add("Gapan City ");
+                cmbMunicipality2.Items.Add("Muñoz Science City ");
+                cmbMunicipality2.Items.Add("Palayan City");
+                cmbMunicipality2.Items.Add("San Jose City");
+
+
+
+            }
+
+            if (cmbProvince2.SelectedItem.Equals("Pampanga"))
+            {
+                cmbMunicipality2.Items.Clear();
+                cmbMunicipality2.Items.Add("Apalit ");
+                cmbMunicipality2.Items.Add("Arayat ");
+                cmbMunicipality2.Items.Add("Bacolor ");
+                cmbMunicipality2.Items.Add("Candaba ");
+                cmbMunicipality2.Items.Add("Floridablanca ");
+                cmbMunicipality2.Items.Add("Guagua ");
+                cmbMunicipality2.Items.Add("Lubao ");
+                cmbMunicipality2.Items.Add("Macabebe ");
+                cmbMunicipality2.Items.Add("Magalang ");
+                cmbMunicipality2.Items.Add("Masantol ");
+                cmbMunicipality2.Items.Add("Mexico ");
+                cmbMunicipality2.Items.Add("Minalin ");
+                cmbMunicipality2.Items.Add("Porac ");
+                cmbMunicipality2.Items.Add("San Luis ");
+                cmbMunicipality2.Items.Add("San Simon ");
+                cmbMunicipality2.Items.Add("Santa Ana ");
+                cmbMunicipality2.Items.Add("Santa Rita ");
+                cmbMunicipality2.Items.Add("Santo Tomas ");
+                cmbMunicipality2.Items.Add("Sasmuan ");
+                cmbMunicipality2.Items.Add("Angeles City ");
+                cmbMunicipality2.Items.Add("Mabalacat ");
+                cmbMunicipality2.Items.Add("San Fernando City");
+            }
+
+            if (cmbProvince2.SelectedItem.Equals("Tarlac"))
+            {
+                cmbMunicipality2.Items.Clear();
+                cmbMunicipality2.Items.Add("Anao");
+                cmbMunicipality2.Items.Add("Bamban ");
+                cmbMunicipality2.Items.Add("Camiling ");
+                cmbMunicipality2.Items.Add("Capas ");
+                cmbMunicipality2.Items.Add("Concepcion ");
+                cmbMunicipality2.Items.Add("Gerona ");
+                cmbMunicipality2.Items.Add("La Paz ");
+                cmbMunicipality2.Items.Add("Mayantoc ");
+                cmbMunicipality2.Items.Add("Moncada ");
+                cmbMunicipality2.Items.Add("Paniqui ");
+                cmbMunicipality2.Items.Add("Pura ");
+                cmbMunicipality2.Items.Add("Ramos ");
+                cmbMunicipality2.Items.Add("San Clemente ");
+                cmbMunicipality2.Items.Add("San Jose ");
+                cmbMunicipality2.Items.Add("San Manuel ");
+                cmbMunicipality2.Items.Add("Santa Ignacia ");
+                cmbMunicipality2.Items.Add("Victoria  ");
+                cmbMunicipality2.Items.Add("Tarlac City");
+
+            }
+
+            if (cmbProvince2.SelectedItem.Equals("Zambales"))
+            {
+                cmbMunicipality2.Items.Clear();
+                cmbMunicipality2.Items.Add("Botolan ");
+                cmbMunicipality2.Items.Add("Cabangan ");
+                cmbMunicipality2.Items.Add("Candelaria ");
+                cmbMunicipality2.Items.Add("Castillejos ");
+                cmbMunicipality2.Items.Add("Iba");
+                cmbMunicipality2.Items.Add("Masinloc ");
+                cmbMunicipality2.Items.Add("Palauig ");
+                cmbMunicipality2.Items.Add("San Antonio ");
+                cmbMunicipality2.Items.Add("San Felipe ");
+                cmbMunicipality2.Items.Add("San Marcelino ");
+                cmbMunicipality2.Items.Add("San Narciso ");
+                cmbMunicipality2.Items.Add("Santa Cruz ");
+                cmbMunicipality2.Items.Add("Subic  ");
+                cmbMunicipality2.Items.Add("Olongapo City");
+            }
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)
@@ -688,13 +873,13 @@ namespace GOCSystem2018
                 registration.StudType = cmbStudType.Text;
 
                 registration.StudLRN = LRNtxt.Text;
-                registration.StudGOCNo = "GOC";
+                registration.StudGOCNo = "";
                 registration.StudRegistrationNo = txtRegno.Text;
-                registration.StudLastName = txtLastName.Text;
-                registration.StudMiddleName = txtMName.Text;
-                registration.StudFirstName = txtFName.Text;
+                registration.StudLastName = txtLastName.Text.ToUpper();
+                registration.StudMiddleName = txtMName.Text.ToUpper(); 
+                registration.StudFirstName = txtFName.Text.ToUpper(); 
 
-                registration.StudStrand = cmbCourseStrand.Text;
+                registration.StudStrand = cmbCourseStrand.Text.ToUpper(); ;
                 registration.StudVoucher = cmbVoucher.Text;
                 registration.StudAddress1 = txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text;
 
@@ -742,16 +927,21 @@ namespace GOCSystem2018
                 assements.Clear();
 
                 frmAssesment.RegNo = txtRegno.Text;
-                frmAssesment.StudName = txtLastName.Text + " , " + txtFName.Text + " " + txtMName.Text;
+                frmAssesment.StudName = txtLastName.Text.ToUpper() + " , " + txtFName.Text.ToUpper() + " " + txtMName.Text.ToUpper();
                 frmAssesment.LRN = LRNtxt.Text;
-                frmAssesment.Strand = cmbCourseStrand.Text;
+                frmAssesment.Strand = cmbCourseStrand.Text.ToUpper();
                 //frmAssesment.tuitionFees2();
 
                 frmAssesment.LoadSection();
                 frmAssesment.LoadSchoolYear();
                 frmAssesment.Voucher = cmbVoucher.Text;
                 frmAssesment.ComputeVoucher();
-                //frmAssesment.LoadStrand();
+
+                frmAssesment.LoadAssesOtherFees();
+                frmAssesment.LoadAssesMiscFees();
+                
+                frmAssesment.LoadTuitionFee();
+                frmAssesment.TotalTuition();
                 //frmAssesment.RenderStudNo();
 
                 this.Hide();

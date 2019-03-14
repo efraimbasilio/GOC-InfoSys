@@ -377,18 +377,7 @@ namespace GOCSystem2018
         }
         public void RenderStudNo()
         {
-            //clear list
-            assesments.Clear();
-
-            //pass value to list
-            assesments = assesment.Load();
-
-            //loop through load it to list view
-            foreach (var item in assesments)
-            {
-                //Load to datagridView               
-                lblGOCNo.Text = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");
-            }
+            
         }
 
         private void frmAssesment_Load_1(object sender, EventArgs e)
@@ -607,7 +596,8 @@ namespace GOCSystem2018
             //Partial Payment
             if (cmbMOP.Text == "Partial Payment")
             {
-                billingPartial.RegNo = lblRegNo.Text;
+                pnlRES.Visible = false;
+               // billingPartial.RegNo = lblRegNo.Text;
                 //billingPartial.ORNo = 
                 billingPartial.IdNo = lblGOCNo.Text;
                 billingPartial.Full_name = lblName.Text;
@@ -629,9 +619,17 @@ namespace GOCSystem2018
                 //billingPartial.P10;
                 //billingPartial.Balance;
             }
-            else
+            else if (cmbMOP.Text == "Full Payment")
             {
+                pnlRES.Visible = false;
 
+            }
+            else if (cmbMOP.Text == "Reservation")
+            {
+                pnlRES.Visible = true;
+              
+
+                
             }
         }
 
@@ -696,20 +694,64 @@ namespace GOCSystem2018
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (optRGrade12.Checked == true)
-            {
-                studProfile.ReserveFor = optRGrade12.Text;
-            }
+            string message = "Do you want to proceed the Reservation?";
+            string title = "GOC_INFO_SYS";
 
-            if (optRGrade11.Checked == true)
-            {
-                studProfile.ReserveFor = optRGrade11.Text;
-            }
-            studProfile.StudRegistrationNo = RegNo;
-            studProfile.ReserveOnly();
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
 
-            frmBilling frmBilling = new frmBilling();
-            frmBilling.Show();
+            if (result == DialogResult.Yes)
+            {
+                this.optYES.Checked = true;
+                if (cmbMOP.SelectedItem.Equals("Reservation"))
+                {
+                    if (optYES.Checked == true && GradeLevel.Equals("11"))
+                    {
+                        studProfile.ReserveFor = lblGradeLevel.Text;
+                        MessageBox.Show(studProfile.ReserveFor);
+                        studProfile.StudRegistrationNo = RegNo;
+                        studProfile.Reservee = "1";
+                        studProfile.ReserveOnly();
+
+                        frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                        this.Hide();
+                        this.Dispose();
+                        frmBillingSearch.Show();
+                    }
+
+                    else if (optYES.Checked == true && GradeLevel.Equals("12"))
+                    {
+                        studProfile.ReserveFor = lblGradeLevel.Text;
+                        MessageBox.Show(studProfile.ReserveFor);
+                        studProfile.StudRegistrationNo = RegNo;
+                        studProfile.Reservee = "1";
+                        studProfile.ReserveOnly();
+
+                        frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                        this.Hide();
+                        this.Dispose();
+                        frmBillingSearch.Show();
+                    }
+                }
+            }
+            else
+            {
+                optNO.Checked = true;
+                pnlRES.Visible = false;
+                cmbMOP.Text = "";
+            }
+                
+            //studProfile.Reservee = "0";
+            //studProfile.PartialPayment = "0";
+            //studProfile.FullPayment = "0";
+
+            //studProfile.StudRegistrationNo = RegNo;
+            //studProfile.ReserveOnly();
+
+            //frmBillingSearch frmBillingSearch = new frmBillingSearch();
+            //this.Hide();
+            //this.Dispose();
+            //frmBillingSearch.Show();
         }
 
         private void button4_Click_2(object sender, EventArgs e)
