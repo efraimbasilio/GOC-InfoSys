@@ -236,6 +236,8 @@ namespace GOCSystem2018
                     
 
                     billingPartial.Save();
+                    this.Hide();
+                    this.Dispose();
             //    }                
             //}//End validation for Amount given
         }
@@ -285,6 +287,8 @@ namespace GOCSystem2018
 
                 //MessageBox.Show("---to update");
                 billingPartial.Update();
+                this.Hide();
+                this.Dispose();
             }
             else if(AmountGiven > Convert.ToDouble(DP))
             {
@@ -356,6 +360,8 @@ namespace GOCSystem2018
                         studProfile.SaveGOCNumber();
                         Reservation();
 
+                        this.Hide();
+                        this.Dispose();
                     }
                     else
                     {
