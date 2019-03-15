@@ -75,6 +75,12 @@
     <Compile Include="frmGrading.Designer.cs">
       <DependentUpon>frmGrading.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistration.designer.cs">
+      <DependentUpon>frmRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,12 +174,6 @@
     </Compile>
     <Compile Include="frmOtherFees.Designer.cs">
       <DependentUpon>frmOtherFees.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmRegistration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmRegistration.Designer.cs">
-      <DependentUpon>frmRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRoom.cs">
       <SubType>Form</SubType>

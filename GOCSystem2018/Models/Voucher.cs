@@ -173,7 +173,7 @@ namespace GOCSystem2018
 
                         //prepare properties to be send out
                         voucher.DpAmount = reader["DP_amount"].ToString();
-
+                       
                         vouchers.Add(voucher);
 
                     }

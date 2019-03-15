@@ -670,9 +670,11 @@ namespace GOCSystem2018
         }
 
         private void button2_Click_1(object sender, EventArgs e)
-        {            
+        {
+
+
             panel4.Visible = true;
-            panel3.Location = new Point(31, 998);
+
 
         }
 
@@ -868,6 +870,91 @@ namespace GOCSystem2018
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+                    // Message box
+               
+            
+
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
+            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
+            {
+
+            }
             if (this.CheckRequiredFields() == true)
             {
                 registration.StudType = cmbStudType.Text;

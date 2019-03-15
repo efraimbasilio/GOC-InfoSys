@@ -50,7 +50,7 @@ namespace GOCSystem2018
         /*PUBLIC VARIABLES*/
         /**********************************************************************************/
        
-        public string LRN, StudID, StudName, GradeLevel, Track,Strand, Semester, MOP, SY, VoucherType, RegNo;
+        public string LRN, StudID, StudName, GradeLevel, Track,Strand, Semester, MOP, SY, VoucherType, RegNo, DP;
         public int CTRpayment;
 
 
@@ -207,7 +207,9 @@ namespace GOCSystem2018
                 double b =
                 b = Convert.ToDouble(item.DpAmount);
                 lblDownpayment.Text = b.ToString("n");
-                // MessageBox.Show(lblDownpayment.Text);           
+                // MessageBox.Show(lblDownpayment.Text); 
+                DP = b.ToString("n");
+
             }
         }//End LoadRecords
 
@@ -222,7 +224,7 @@ namespace GOCSystem2018
             //loop through load it to list view
             foreach (var item in billings)
             {
-                dgvFeeHistory.Rows.Add(item.OrNo, item.StudentId, item.AmountGiven, item.PaymentNo, item.PaymentDate);
+                dgvFeeHistory.Rows.Add(Convert.ToInt32(item.OrNo), item.StudentId, Convert.ToDouble(item.AmountGiven),Convert.ToInt32(item.PaymentNo),item.PaymentDate);
             }
         }
 
@@ -349,16 +351,41 @@ namespace GOCSystem2018
 
             if (cmbPaymentFor.SelectedItem.Equals("Reservation"))
             {
-                toPay.reservation = lblReserve.Text;
+                toPay.amountToPay = lblReserve.Text;
+
                 toPay.paymentFor = cmbPaymentFor.SelectedItem.ToString();
                 toPay.TotalTuition = Convert.ToDouble(lblTotalPayment.Text);
                 toPay.FullName = lblName.Text;
-                toPay.VoucherType = Convert.ToDouble(lblVoucherAmount.Text);
+                toPay.voucherInfo = lblVoucher.Text;
+                toPay.VoucherAmount = Convert.ToDouble(lblVoucherAmount.Text);
                 toPay.RegNo = lblRegNo.Text;
-                
+                toPay.reservationFee = lblReserve.Text;
                 toPay.Render();
                 toPay.ShowDialog();
 
+            }
+            else if (cmbPaymentFor.SelectedItem.Equals("Downpayment"))
+            {
+                toPay.amountToPay = DP;//view of payment
+                //create a maintenance
+                //for late payment of the downpaymnet
+                //June = 10;
+                //July =9;
+                //aug =8
+                //sep=7
+                //oct=6
+                //nov=5
+                //dec=4
+                //jan=3
+                //feb=2
+                //march=1
+
+
+
+
+
+                toPay.Render();
+                toPay.ShowDialog();
             }
         }
 

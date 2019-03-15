@@ -238,6 +238,46 @@ namespace GOCSystem2018
             return billingPartials;
         }
 
-       
+        public List<Billing_Partial> GetPartialBalance()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT balance FROM billing_partial WHERE IDNo =@idNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("idNo", idNo);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Billing_Partial billingPartial = new Billing_Partial();
+
+                        //prepare properties
+                        
+                        billingPartial.balance = reader["balance"].ToString();
+                        billingPartial.downPayment = reader["DP"].ToString();
+
+                        billingPartials.Add(billingPartial);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return billingPartials;
+        }
     }
 }

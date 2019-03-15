@@ -17,11 +17,64 @@ namespace GOCSystem2018
         List<User> users = new List<User>();
 
         public string UserType, Username, Password;
+        public bool Flag;
         public frmLogin()
         {
             InitializeComponent();
         }
+        public void credential()
+        {
+            if (Flag == true)
+            {
+                if (UserType.Equals("Admin"))
+                {
+                    MainWindow main = new MainWindow();
+                    main.Show();
+                    this.Hide();
+                }
 
+                else if (UserType.Equals("Cashier"))
+                {
+                    frmBillingSearch bill = new frmBillingSearch();
+                    bill.Show();
+                    this.Hide();
+                }
+
+                else if (UserType.Equals("Registrar"))
+                {
+                    frmAssessmentSearch assess = new frmAssessmentSearch();
+                    assess.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    string message = "Erorr";
+                    string title = "GOC_INFO_SYS";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+
+                    if (result == DialogResult.OK)
+                    {
+                        Flag = false;
+                        return ;
+                    }
+                }
+            }
+            else
+            {
+                string message = "User not existing";
+                string title = "GOC_INFO_SYS";
+
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+
+                if (result == DialogResult.OK)
+                {
+                    return;
+                }
+            }
+        }
        public void LogMein()
        {
             if (string.IsNullOrEmpty(txtUsername.Text) && string.IsNullOrEmpty(txtpassword.Text))
@@ -47,44 +100,9 @@ namespace GOCSystem2018
                     UserType = item.UserType;
                     Password = item.Password;
                     Username = item.Username;
+                    Flag = true;
                 }
-
-                if (Username.Equals(txtUsername.Text) && Password.Equals(txtpassword.Text))
-                {
-                    if (UserType.Equals("Admin"))
-                    {
-                        MainWindow main = new MainWindow();
-                        main.Show();
-                        this.Hide();
-                    }
-
-                    else if (UserType.Equals("Cashier"))
-                    {
-                        frmBillingSearch bill = new frmBillingSearch();
-                        bill.Show();
-                        this.Hide();
-                    }
-
-                    else if (UserType.Equals("Registrar"))
-                    {
-                        frmAssessmentSearch assess = new frmAssessmentSearch();
-                        assess.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        //string message = "User not existing";
-                        //string title = "GOC_INFO_SYS";
-
-                        //MessageBoxButtons buttons = MessageBoxButtons.OK;
-                        //DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
-
-                        //if (result == DialogResult.OK)
-                        //{
-                        //    return;
-                        //}
-                    }
-                }
+                credential();
             }                                
         }
 

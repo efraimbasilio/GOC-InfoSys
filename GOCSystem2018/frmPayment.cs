@@ -51,8 +51,8 @@ namespace GOCSystem2018
         List<StudentProfile> studProfiles = new List<StudentProfile>();
         List<Billing> bills = new List<Billing>();
 
-        public string reservation, paymentFor, GOCNo, ctrpay, FullName,RegNo, DP;
-        public double TotalTuition, TotalMiscFee, TotalOtherFee, VoucherType, AmountGiven;
+        public string amountToPay, paymentFor, GOCNo, ctrpay, FullName, RegNo, DP, voucherInfo, reservationFee;
+        public double TotalTuition, TotalMiscFee, TotalOtherFee, VoucherAmount, AmountGiven, BalancePartial;
         public int count = 0;
         public string OrNo,PayNum;
         /***********************************************************************************/
@@ -60,7 +60,7 @@ namespace GOCSystem2018
         /**********************************************************************************/
         public void Render()
         {
-            lblAmountDue.Text = reservation;
+            lblAmountDue.Text = amountToPay;
             lblPaymentFor.Text = paymentFor;
         }
 
@@ -87,12 +87,32 @@ namespace GOCSystem2018
             }
         }//End LoadRecords() OK
 
+        public void GetPartialBalance()
+        {
+            //clear list
+            billingPartials.Clear();
+            //pass value to list
+            billingPartial.IdNo = GOCNo;
+            billingPartials = billingPartial.GetPartialBalance();
+
+            //loop through load it to list view
+            foreach (var item in billingPartials)
+            {
+                double balance, dp = 0;
+                balance = Convert.ToDouble(item.Balance);
+                dp = Convert.ToDouble(item.DownPayment);
+
+                BalancePartial = balance + dp;
+                 MessageBox.Show(BalancePartial.ToString("n"));           
+            }
+        }//End LoadRecords
+
         public void GetDownPayment()
         {
             //clear list
             vouchers.Clear();
             //pass value to list
-            voucher.VoucherFrom = VoucherType.ToString();
+            voucher.VoucherFrom = voucherInfo.ToString();
             vouchers = voucher.GetDownpaymnet();
 
             //loop through load it to list view
@@ -101,70 +121,118 @@ namespace GOCSystem2018
                 double b =
                 b = Convert.ToDouble(item.DpAmount);
                 DP = b.ToString("n");
-                // MessageBox.Show(lblDownpayment.Text);           
+                 MessageBox.Show(DP);           
             }
         }//End LoadRecords
 
         public void Reservation()
         {
-            double ans = 0;
-            double perMonth = 0;
-            AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
-            //Total Tuition Fee
-            ans = TotalTuition - AmountGiven;
-            //Compute Voucher
-            VoucherType = ans - VoucherType;
-            perMonth = VoucherType / 10;
+            if (AmountGiven > Convert.ToDouble(lblAmountDue.Text))//validation for Amount given
+            {
+                string message = "The amount given is greaterthan the amount to pay,\nReservation Fee: Php" + reservationFee;
+                string title = "GOC_INFO_SYS";
 
-            //For reservation - Public Voucher            
-            billingPartial.IdNo = GOCNo;
-            billingPartial.ORNo = txtORNo.Text;
-            billingPartial.Full_name = FullName;
-            billingPartial.DownPayment = DP;
-            billingPartial.P1 = perMonth.ToString("n");
-            billingPartial.P2 = perMonth.ToString("n");
-            billingPartial.P3 = perMonth.ToString("n");
-            billingPartial.P4 = perMonth.ToString("n");
-            billingPartial.P5 = perMonth.ToString("n");
-            billingPartial.P6 = perMonth.ToString("n");
-            billingPartial.P7 = perMonth.ToString("n");
-            billingPartial.P8 = perMonth.ToString("n");
-            billingPartial.P9 = perMonth.ToString("n");
-            billingPartial.P10 = perMonth.ToString("n");
-            billingPartial.Balance = VoucherType.ToString("n");
-            billingPartial.EnStatus = "Reservee";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
 
-            billingPartial.Save();
+                if (result == DialogResult.OK)//responce
+                {
+                    txtAmountGiven.Focus();
+                    return;
+                }//ENd responce
+            }
+            else if (AmountGiven < Convert.ToDouble(lblAmountDue.Text))
+            {
+                MessageBox.Show("Please verify the amount given,\nReservation Fee: Php" + reservationFee, "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtAmountGiven.Focus();
+                return;
+            }
+            else
+            {                
+                if (string.IsNullOrWhiteSpace(txtORNo.Text) && string.IsNullOrWhiteSpace(txtAmountGiven.Text))//validate OR
+                {
+                    MessageBox.Show("Please check the missing details", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtORNo.Focus();
+                    return;
+                }
+                else 
+                {
+                    GetDownPayment();
+                    //BalancePartial;
+                    double ans = 0;
+                    double perMonth = 0;
+                    AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+                    //Total Tuition Fee
+                    MessageBox.Show(TotalTuition.ToString("n") + "Total Tuitionfee");
+                    ans = TotalTuition - AmountGiven;
+
+                    MessageBox.Show(ans.ToString("n") + "Less amount given");
+
+                    //Compute Voucher
+                    MessageBox.Show(VoucherAmount.ToString("n") + "Voucher Amount");
+
+                    VoucherAmount = ans - VoucherAmount;
+                    MessageBox.Show(VoucherAmount.ToString("n") + "tuition fee - Less Voucher");
+
+                    MessageBox.Show(DP + "the DP");
+                    VoucherAmount = VoucherAmount - Convert.ToDouble(DP);
+                    MessageBox.Show(VoucherAmount + "less DP");
+                    perMonth = 0;
+
+                    //For reservation - Public Voucher            
+                    billingPartial.IdNo = GOCNo;
+                    billingPartial.ORNo = txtORNo.Text;
+                    billingPartial.Full_name = FullName;
+                    billingPartial.DownPayment = Convert.ToDouble(DP).ToString("n");
+                    billingPartial.P1 = perMonth.ToString("n");
+                    billingPartial.P2 = perMonth.ToString("n");
+                    billingPartial.P3 = perMonth.ToString("n");
+                    billingPartial.P4 = perMonth.ToString("n");
+                    billingPartial.P5 = perMonth.ToString("n");
+                    billingPartial.P6 = perMonth.ToString("n");
+                    billingPartial.P7 = perMonth.ToString("n");
+                    billingPartial.P8 = perMonth.ToString("n");
+                    billingPartial.P9 = perMonth.ToString("n");
+                    billingPartial.P10 = perMonth.ToString("n");
+                    billingPartial.Balance = VoucherAmount.ToString("n");
+                    billingPartial.EnStatus = "Reservee";
+
+                    billingPartial.Save();
+                }                
+            }//End validation for Amount given
         }
 
         public void PartialPayment()
         {
+            GetDownPayment();// to get DP amount from DB
+
+            //string ModePay = "Partial Payment";
+
             double ans = 0;
             double perMonth = 0;
-            AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
-            //Total Tuition Fee
+            AmountGiven = Convert.ToDouble(txtAmountGiven.Text); // convert to double
+
+            //Partial payment computation
+            //Get the balance from billing partial table
+            GetPartialBalance();
+            //ans = Balance - AmountGiven;
             ans = TotalTuition - AmountGiven;
             //Compute Voucher
-            VoucherType = ans - VoucherType;
-            perMonth = VoucherType / 10;
+            VoucherAmount = ans - VoucherAmount;
+            perMonth = 0;
 
 
             if (AmountGiven < Convert.ToDouble(DP) && AmountGiven < Convert.ToDouble(DP))
             {
 
             }
-
-
-
-
-            //For reservation - Public Voucher 
-
-            billingPartial.DownPayment = DP;
-
+            //For reservation - Public Voucher            
             billingPartial.IdNo = GOCNo;
             billingPartial.ORNo = txtORNo.Text;
             billingPartial.Full_name = FullName;
-           
+
+            billingPartial.DownPayment = DP;
+
             billingPartial.P1 = perMonth.ToString("n");
             billingPartial.P2 = perMonth.ToString("n");
             billingPartial.P3 = perMonth.ToString("n");
@@ -175,8 +243,8 @@ namespace GOCSystem2018
             billingPartial.P8 = perMonth.ToString("n");
             billingPartial.P9 = perMonth.ToString("n");
             billingPartial.P10 = perMonth.ToString("n");
-            billingPartial.Balance = VoucherType.ToString("n");
-            billingPartial.EnStatus = "Reservee";
+            billingPartial.Balance = VoucherAmount.ToString("n");
+            billingPartial.EnStatus = "Enrolled";
 
             billingPartial.Save();
         }
@@ -208,18 +276,18 @@ namespace GOCSystem2018
 
         private void btnProcess_Click(object sender, EventArgs e)
         {                     
-            string message = "Payment for: "+ lblPaymentFor.Text +", Do you want to proceed the payment?" ;
-            string title = "GOC_INFO_SYS";
+            //string message = "Payment for: "+ lblPaymentFor.Text +", Do you want to proceed the payment?" ;
+            //string title = "GOC_INFO_SYS";
 
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
+            //MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            //DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
 
-            if (result == DialogResult.Yes)
-            {
+            //if (result == DialogResult.Yes)
+            //{
                 if (txtORNo.Text == "")
                 {
-                    MessageBoxButtons button1 = MessageBoxButtons.OK;
-                    MessageBox.Show("Please input the OR Number.", title, button1, MessageBoxIcon.Warning);
+                    //MessageBoxButtons button1 = MessageBoxButtons.OK;
+                    MessageBox.Show("Please input the OR Number.");
                     return;
                 }
                 else
@@ -245,14 +313,18 @@ namespace GOCSystem2018
                     if (paymentFor.Equals("Reservation"))
                     {
                         Reservation();
-                    }                    
+                    }
+                    else if (paymentFor.Equals("Partial Payment"))
+                    {
+
+                    }                 
                     
                 }               
-            }
-            else
-            {
-                return;
-            }
+            //}
+            //else
+            //{
+            //    return;
+            //}
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
