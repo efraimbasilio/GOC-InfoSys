@@ -49,6 +49,7 @@ namespace GOCSystem2018
 
                     da.Fill(dt);
                     dgvSearch.DataSource = dt;
+
                 }
             }
             catch (MySqlException ex)

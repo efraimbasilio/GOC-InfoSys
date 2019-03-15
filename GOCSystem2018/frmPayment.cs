@@ -51,7 +51,7 @@ namespace GOCSystem2018
         List<StudentProfile> studProfiles = new List<StudentProfile>();
         List<Billing> bills = new List<Billing>();
 
-        public string amountToPay, paymentFor, GOCNo, ctrpay, FullName, RegNo, DP, voucherInfo, reservationFee;
+        public string amountToPay, paymentFor, GOCNo, ctrpay, FullName, RegNo, DP, voucherInfo, reservationFee, paymentNo;
         public double TotalTuition, TotalMiscFee, TotalOtherFee, VoucherAmount, AmountGiven, BalancePartial;
         public int count = 0;
         public string OrNo,PayNum;
@@ -92,6 +92,7 @@ namespace GOCSystem2018
             //clear list
             billingPartials.Clear();
             //pass value to list
+            MessageBox.Show(GOCNo);
             billingPartial.IdNo = GOCNo;
             billingPartials = billingPartial.GetPartialBalance();
 
@@ -103,7 +104,8 @@ namespace GOCSystem2018
                 dp = Convert.ToDouble(item.DownPayment);
 
                 BalancePartial = balance + dp;
-                 MessageBox.Show(BalancePartial.ToString("n"));           
+                 MessageBox.Show(BalancePartial.ToString("n"));    
+                       
             }
         }//End LoadRecords
 
@@ -203,50 +205,78 @@ namespace GOCSystem2018
         }
 
         public void PartialPayment()
-        {
-            GetDownPayment();// to get DP amount from DB
-
-            //string ModePay = "Partial Payment";
-
+        {            
             double ans = 0;
             double perMonth = 0;
             AmountGiven = Convert.ToDouble(txtAmountGiven.Text); // convert to double
+            GetDownPayment();// to get DP amount from DB
 
+            GetPartialBalance();
             //Partial payment computation
             //Get the balance from billing partial table
-            GetPartialBalance();
-            //ans = Balance - AmountGiven;
-            ans = TotalTuition - AmountGiven;
+            //ans = TotalTuition - AmountGiven;
             //Compute Voucher
-            VoucherAmount = ans - VoucherAmount;
-            perMonth = 0;
+           // VoucherAmount = ans - VoucherAmount;
+            //perMonth = 0;
 
+            if (paymentNo.Equals("1"))//to check if this is the first payment
+            {
+                GetDownPayment();
 
-            if (AmountGiven < Convert.ToDouble(DP) && AmountGiven < Convert.ToDouble(DP))
+                if (AmountGiven < Convert.ToDouble(DP))
+                {
+                    double result = 0;
+                    MessageBox.Show(BalancePartial.ToString("n")+ "Balance");
+                    result = BalancePartial - AmountGiven;
+
+                    MessageBox.Show(result.ToString("n"));
+                    
+                    perMonth = result / 10;
+                    MessageBox.Show(perMonth.ToString("n") + "per month");
+                    //BalancePartial = 
+                    //For reservation - Public Voucher            
+                    billingPartial.IdNo = GOCNo;
+
+                    billingPartial.Balance = VoucherAmount.ToString("n");
+                    billingPartial.DownPayment = "0";
+
+                    billingPartial.P1 = perMonth.ToString("n");
+                    billingPartial.P2 = perMonth.ToString("n");
+                    billingPartial.P3 = perMonth.ToString("n");
+                    billingPartial.P4 = perMonth.ToString("n");
+                    billingPartial.P5 = perMonth.ToString("n");
+                    billingPartial.P6 = perMonth.ToString("n");
+                    billingPartial.P7 = perMonth.ToString("n");
+                    billingPartial.P8 = perMonth.ToString("n");
+                    billingPartial.P9 = perMonth.ToString("n");
+                    billingPartial.P10 = perMonth.ToString("n");
+                    
+                    billingPartial.EnStatus = "Enrolled";
+
+                    MessageBox.Show("---to update");
+                    billingPartial.Update();
+                }
+                else if(AmountGiven > Convert.ToDouble(DP))
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
             {
 
-            }
-            //For reservation - Public Voucher            
-            billingPartial.IdNo = GOCNo;
-            billingPartial.ORNo = txtORNo.Text;
-            billingPartial.Full_name = FullName;
+            }//END to check if this is the first payment
 
-            billingPartial.DownPayment = DP;
 
-            billingPartial.P1 = perMonth.ToString("n");
-            billingPartial.P2 = perMonth.ToString("n");
-            billingPartial.P3 = perMonth.ToString("n");
-            billingPartial.P4 = perMonth.ToString("n");
-            billingPartial.P5 = perMonth.ToString("n");
-            billingPartial.P6 = perMonth.ToString("n");
-            billingPartial.P7 = perMonth.ToString("n");
-            billingPartial.P8 = perMonth.ToString("n");
-            billingPartial.P9 = perMonth.ToString("n");
-            billingPartial.P10 = perMonth.ToString("n");
-            billingPartial.Balance = VoucherAmount.ToString("n");
-            billingPartial.EnStatus = "Enrolled";
 
-            billingPartial.Save();
+            
+
+
+           
+           
         }
 
         /***********************************************************************************/
@@ -291,33 +321,52 @@ namespace GOCSystem2018
                     return;
                 }
                 else
-                {                    
-                    StudNoGenerate();
-                    CountPayment();
-                  
-                    bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
-                    bill.OrNo = txtORNo.Text;
-                    bill.StudentId = GOCNo;                   
-                    bill.PaymentNo = count.ToString();
-                    //for the payment no.
-                    bill.Save();
-
-                    //Update GOC Number in Studprofile Table
-                    studProfile.StudRegistrationNo = RegNo;
-                    studProfile.StudGOCNo = GOCNo;
-                    studProfile.Reservee = "0";
-                    studProfile.SaveGOCNumber();
-
-                    ///////////////////////////////////////////////////to pull out vouchers from maintenanace voucher
-                    ///working to filter voucher pri and pub 
+                {
                     if (paymentFor.Equals("Reservation"))
                     {
+                        StudNoGenerate();
+                        CountPayment();
+
+                        bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+                        bill.OrNo = txtORNo.Text;
+                        bill.StudentId = GOCNo;
+                        bill.PaymentNo = count.ToString();
+                        //for the payment no.
+                        bill.Save();
+
+                        
+                        //Update GOC Number in Studprofile Table
+                        studProfile.StudRegistrationNo = RegNo;
+                        studProfile.StudGOCNo = GOCNo;
+                        studProfile.Reservee = "0";
+                        studProfile.SaveGOCNumber();
+
                         Reservation();
                     }
-                    else if (paymentFor.Equals("Partial Payment"))
+                    else if (paymentFor.Equals("Downpayment"))
                     {
+                        if (Convert.ToInt32(paymentNo) >= 1)
+                        {
+                            bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+                            bill.OrNo = txtORNo.Text;
+                            bill.StudentId = GOCNo;
+                            bill.PaymentNo = count.ToString();
+                            //for the payment no.
+                            bill.Save();
+                        }
 
-                    }                 
+                        PartialPayment();
+                    }
+
+                             
+                             
+                        
+
+                       
+
+                        ///////////////////////////////////////////////////to pull out vouchers from maintenanace voucher
+                        ///working to filter voucher pri and pub 
+                                
                     
                 }               
             //}

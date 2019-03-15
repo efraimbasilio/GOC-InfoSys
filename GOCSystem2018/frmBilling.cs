@@ -52,6 +52,7 @@ namespace GOCSystem2018
        
         public string LRN, StudID, StudName, GradeLevel, Track,Strand, Semester, MOP, SY, VoucherType, RegNo, DP;
         public int CTRpayment;
+        public double BalancePartial;
 
 
         /***********************************************************************************/
@@ -242,6 +243,32 @@ namespace GOCSystem2018
                 MessageBox.Show(item.PaymentNo);
             }
         }
+
+        public void GetPartialBalance()
+        {
+            //clear list
+            billingPartials.Clear();
+            //pass value to list
+            MessageBox.Show(lblGOCNo.Text);
+            billingPartial.IdNo = lblGOCNo.Text;
+            billingPartials = billingPartial.GetPartialBalance();
+
+            //loop through load it to list view
+            foreach (var item in billingPartials)
+            {
+                double balance, dp = 0;
+                balance = Convert.ToDouble(item.Balance);
+                dp = Convert.ToDouble(item.DownPayment);
+
+                BalancePartial = balance + dp;
+                MessageBox.Show(BalancePartial.ToString("n"));
+                lblBalance.Text = BalancePartial.ToString("n");
+                lblAmountDue.Text = dp.ToString("n");
+
+
+            }
+        }//End LoadRecords
+
         public void Render()
         {
             if (CTRpayment == 1)
@@ -319,6 +346,7 @@ namespace GOCSystem2018
         {
             if (cmbMOP.SelectedItem.Equals("Partial Payment"))
             {
+                GetPartialBalance();
                 cmbPaymentFor.Items.Clear();
                 cmbPaymentFor.Items.Add("Downpayment");
                 cmbPaymentFor.Items.Add("1st Payment");
@@ -331,6 +359,9 @@ namespace GOCSystem2018
                 cmbPaymentFor.Items.Add("8th Payment");
                 cmbPaymentFor.Items.Add("9th Payment");
                 cmbPaymentFor.Items.Add("10th Payment");
+
+                
+
             }
             else
             {
@@ -345,6 +376,11 @@ namespace GOCSystem2018
             billSearch.Show();
         }
 
+        /// <summary>
+        /// Payment Module
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cmbPaymentFor_SelectedValueChanged(object sender, EventArgs e)
         {
             frmPayment toPay = new frmPayment();
@@ -366,6 +402,10 @@ namespace GOCSystem2018
             }
             else if (cmbPaymentFor.SelectedItem.Equals("Downpayment"))
             {
+                
+
+
+
                 toPay.amountToPay = DP;//view of payment
                 //create a maintenance
                 //for late payment of the downpaymnet
@@ -379,10 +419,16 @@ namespace GOCSystem2018
                 //jan=3
                 //feb=2
                 //march=1
+                toPay.paymentNo = txtPayNumber.Text;
+                toPay.paymentFor = cmbPaymentFor.SelectedItem.ToString();
+                toPay.TotalTuition = Convert.ToDouble(lblTotalPayment.Text);
+                toPay.FullName = lblName.Text;
+                toPay.voucherInfo = lblVoucher.Text;
+                toPay.VoucherAmount = Convert.ToDouble(lblVoucherAmount.Text);
+                toPay.RegNo = lblRegNo.Text;
+                toPay.reservationFee = lblReserve.Text;
 
-
-
-
+                toPay.BalancePartial = BalancePartial;
 
                 toPay.Render();
                 toPay.ShowDialog();

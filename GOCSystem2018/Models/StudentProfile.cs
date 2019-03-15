@@ -178,6 +178,60 @@ namespace GOCSystem2018
             return studentProfiles;
         }
 
+        public List<StudentProfile> CheckGOCNo()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM student_profile WHERE regNo =@studRegistrationNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        StudentProfile studentProfile = new StudentProfile();
+
+                        //prepare properties
+                        
+                        studentProfile.studRegistrationNo = reader["regNo"].ToString();
+                        studentProfile.studLastName = reader["last_name"].ToString();
+                        studentProfile.studFirstName = reader["first_name"].ToString();
+                        studentProfile.studMiddleName = reader["middle_name"].ToString();
+                        studentProfile.studGradeLevel = reader["grade_level"].ToString();
+                        studentProfile.voucherType = reader["voucher_type"].ToString();
+                        studentProfile.studStrand = reader["strand"].ToString();
+                        studentProfile.track = reader["track"].ToString();
+
+                        studentProfile.reservee = reader["reservee"].ToString();
+                        studentProfile.reserveFor = reader["reserve_for"].ToString();
+                        studentProfile.partialPayment = reader["partial_payment"].ToString();
+                        studentProfile.fullPayment = reader["full_payment"].ToString();
+                        //studentProfile.studCourse = reader["stud_course"].ToString();
+
+                        studentProfiles.Add(studentProfile);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return studentProfiles;
+        }
+
         public void ReserveOnly()
         {
             try

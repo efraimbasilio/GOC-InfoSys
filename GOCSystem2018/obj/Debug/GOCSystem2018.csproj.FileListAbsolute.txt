@@ -890,3 +890,5 @@ C:\Users\Instructor\Desktop\C - Copy\GOCSystem2018\bin\Debug\Google.Protobuf.dll
 C:\Users\Instructor\Desktop\C - Copy\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Instructor\Desktop\C - Copy\GOCSystem2018\bin\Debug\stdole.dll
 C:\Users\Instructor\Desktop\C - Copy\GOCSystem2018\bin\Debug\MySql.Data.xml
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\Google.Protobuf.dll
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\MySql.Data.xml

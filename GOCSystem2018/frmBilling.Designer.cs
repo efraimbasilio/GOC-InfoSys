@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBilling));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -55,6 +55,11 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvFeeHistory = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountGiven = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemainingBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvOtherFees = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,11 +105,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountGiven = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RemainingBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblBalance = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.lblAmountDue = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
@@ -239,6 +243,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label26);
+            this.panel1.Controls.Add(this.lblAmountDue);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.lblBalance);
             this.panel1.Controls.Add(this.txtPayNumber);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.cmbPaymentFor);
@@ -270,15 +278,15 @@
             // 
             // txtPayNumber
             // 
-            this.txtPayNumber.Location = new System.Drawing.Point(287, 414);
+            this.txtPayNumber.Location = new System.Drawing.Point(679, 373);
             this.txtPayNumber.Name = "txtPayNumber";
-            this.txtPayNumber.Size = new System.Drawing.Size(69, 20);
+            this.txtPayNumber.Size = new System.Drawing.Size(22, 20);
             this.txtPayNumber.TabIndex = 1042;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(393, 388);
+            this.label6.Location = new System.Drawing.Point(390, 455);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
@@ -289,7 +297,7 @@
             // 
             this.cmbPaymentFor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPaymentFor.FormattingEnabled = true;
-            this.cmbPaymentFor.Location = new System.Drawing.Point(475, 385);
+            this.cmbPaymentFor.Location = new System.Drawing.Point(472, 452);
             this.cmbPaymentFor.Name = "cmbPaymentFor";
             this.cmbPaymentFor.Size = new System.Drawing.Size(171, 21);
             this.cmbPaymentFor.TabIndex = 1038;
@@ -382,6 +390,54 @@
             this.dgvFeeHistory.Size = new System.Drawing.Size(542, 329);
             this.dgvFeeHistory.TabIndex = 1014;
             // 
+            // dataGridViewTextBoxColumn7
+            // 
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle16.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridViewTextBoxColumn7.HeaderText = "OR No.";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 75;
+            // 
+            // IDNo
+            // 
+            this.IDNo.HeaderText = "IDNo";
+            this.IDNo.Name = "IDNo";
+            this.IDNo.ReadOnly = true;
+            // 
+            // AmountGiven
+            // 
+            this.AmountGiven.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle17.Format = "N2";
+            dataGridViewCellStyle17.NullValue = null;
+            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle17;
+            this.AmountGiven.HeaderText = "Amount Given";
+            this.AmountGiven.Name = "AmountGiven";
+            this.AmountGiven.ReadOnly = true;
+            this.AmountGiven.Width = 99;
+            // 
+            // RemainingBalance
+            // 
+            this.RemainingBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle18;
+            this.RemainingBalance.HeaderText = "Payment No.";
+            this.RemainingBalance.Name = "RemainingBalance";
+            this.RemainingBalance.ReadOnly = true;
+            this.RemainingBalance.Width = 93;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle19.NullValue = "0.00";
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Date and Time";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvOtherFees);
@@ -461,11 +517,11 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "n";
-            dataGridViewCellStyle5.NullValue = "0.00";
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle20.Format = "n";
+            dataGridViewCellStyle20.NullValue = "0.00";
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewTextBoxColumn6.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -874,53 +930,45 @@
             this.label19.TabIndex = 1014;
             this.label19.Text = "Accounting";
             // 
-            // dataGridViewTextBoxColumn7
+            // label16
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTextBoxColumn7.HeaderText = "OR No.";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 75;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(393, 387);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(76, 13);
+            this.label16.TabIndex = 1044;
+            this.label16.Text = "Total Balance:";
             // 
-            // IDNo
+            // lblBalance
             // 
-            this.IDNo.HeaderText = "IDNo";
-            this.IDNo.Name = "IDNo";
-            this.IDNo.ReadOnly = true;
+            this.lblBalance.Location = new System.Drawing.Point(469, 387);
+            this.lblBalance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(89, 15);
+            this.lblBalance.TabIndex = 1043;
+            this.lblBalance.Text = "__________________";
+            this.lblBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // AmountGiven
+            // label26
             // 
-            this.AmountGiven.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle2;
-            this.AmountGiven.HeaderText = "Amount Given";
-            this.AmountGiven.Name = "AmountGiven";
-            this.AmountGiven.ReadOnly = true;
-            this.AmountGiven.Width = 99;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(393, 421);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(69, 13);
+            this.label26.TabIndex = 1046;
+            this.label26.Text = "Amount Due:";
             // 
-            // RemainingBalance
+            // lblAmountDue
             // 
-            this.RemainingBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle3;
-            this.RemainingBalance.HeaderText = "Payment No.";
-            this.RemainingBalance.Name = "RemainingBalance";
-            this.RemainingBalance.ReadOnly = true;
-            this.RemainingBalance.Width = 93;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.NullValue = "0.00";
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Date and Time";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.lblAmountDue.Location = new System.Drawing.Point(469, 421);
+            this.lblAmountDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAmountDue.Name = "lblAmountDue";
+            this.lblAmountDue.Size = new System.Drawing.Size(89, 15);
+            this.lblAmountDue.TabIndex = 1045;
+            this.lblAmountDue.Text = "__________________";
+            this.lblAmountDue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmBilling
             // 
@@ -1028,5 +1076,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AmountGiven;
         private System.Windows.Forms.DataGridViewTextBoxColumn RemainingBalance;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.Label label26;
+        public System.Windows.Forms.Label lblAmountDue;
+        private System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Label lblBalance;
     }
 }

@@ -137,6 +137,50 @@ namespace GOCSystem2018
 
         List<Billing_Partial> billingPartials = new List<Billing_Partial>();
 
+        public void Update()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    string sql = "UPDATE billing_partial SET DP=@downPayment,1p=@p1,2p=@p2,3p=@p3,4p=@p4, 5p=@p5, 6p=@p6, 7p=@p7, 8p=@p8, 9p=@p9, 10p=@p10, balance=@balance, enrollment_status=@enStatus" +
+                                    " WHERE IDNo=@idNo;";
+                    //Enrollment_Status,OR_No,IDNo,full_name,DP,1p,2p,3p,4p,5p,6p,7p,8p,9p,10p,balance
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("enStatus", enStatus);
+                    cmd.Parameters.AddWithValue("oRNo", oRNo);
+                    cmd.Parameters.AddWithValue("idNo", idNo);
+                    cmd.Parameters.AddWithValue("full_name", full_name);
+                    cmd.Parameters.AddWithValue("downPayment", downPayment);
+                    cmd.Parameters.AddWithValue("p1", p1);
+                    cmd.Parameters.AddWithValue("p2", p2);
+                    cmd.Parameters.AddWithValue("p3", p3);
+                    cmd.Parameters.AddWithValue("p4", p4);
+                    cmd.Parameters.AddWithValue("p5", p5);
+                    cmd.Parameters.AddWithValue("p6", p6);
+                    cmd.Parameters.AddWithValue("p7", p7);
+                    cmd.Parameters.AddWithValue("p8", p8);
+                    cmd.Parameters.AddWithValue("p9", p9);
+                    cmd.Parameters.AddWithValue("p10", p10);
+                    cmd.Parameters.AddWithValue("balance", balance);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Recorde Updated!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
 
         public void Save()
         {
@@ -250,7 +294,7 @@ namespace GOCSystem2018
                     con.Open();
 
                     //prepare sql query
-                    string sql = "SELECT balance FROM billing_partial WHERE IDNo =@idNo;";
+                    string sql = "SELECT * FROM billing_partial WHERE IDNo =@idNo;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("idNo", idNo);

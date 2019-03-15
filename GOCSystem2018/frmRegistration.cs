@@ -960,7 +960,7 @@ namespace GOCSystem2018
                 registration.StudType = cmbStudType.Text;
 
                 registration.StudLRN = LRNtxt.Text;
-                registration.StudGOCNo = "";
+                registration.StudGOCNo = "N/A";
                 registration.StudRegistrationNo = txtRegno.Text;
                 registration.StudLastName = txtLastName.Text.ToUpper();
                 registration.StudMiddleName = txtMName.Text.ToUpper(); 
@@ -995,10 +995,10 @@ namespace GOCSystem2018
                 registration.SYEnrolled = School;
                 registration.DateEnrolled = DateTime.Today.ToString("yyyy-mm-dd");
                 //////////////////////////////////////
-                registration.Reservee = "NA";
-                registration.ReserveFor = "NA";
-                registration.PartialPayment = "NA";
-                registration.FullPayment = "NA";
+                registration.Reservee = "N/A";
+                registration.ReserveFor = "N/A";
+                registration.PartialPayment = "N/A";
+                registration.FullPayment = "N/A";
                
                 //function to load important filtering
                 checkYearLevel();
