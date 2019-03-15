@@ -202,24 +202,8 @@ namespace GOCSystem2018
                     {
                         //instantiate model
                         StudentProfile studentProfile = new StudentProfile();
-
-                        //prepare properties
-                        
-                        studentProfile.studRegistrationNo = reader["regNo"].ToString();
-                        studentProfile.studLastName = reader["last_name"].ToString();
-                        studentProfile.studFirstName = reader["first_name"].ToString();
-                        studentProfile.studMiddleName = reader["middle_name"].ToString();
-                        studentProfile.studGradeLevel = reader["grade_level"].ToString();
-                        studentProfile.voucherType = reader["voucher_type"].ToString();
-                        studentProfile.studStrand = reader["strand"].ToString();
-                        studentProfile.track = reader["track"].ToString();
-
-                        studentProfile.reservee = reader["reservee"].ToString();
-                        studentProfile.reserveFor = reader["reserve_for"].ToString();
-                        studentProfile.partialPayment = reader["partial_payment"].ToString();
-                        studentProfile.fullPayment = reader["full_payment"].ToString();
-                        //studentProfile.studCourse = reader["stud_course"].ToString();
-
+                        //prepare properties                        
+                        studentProfile.studGOCNo = reader["IDNo"].ToString();                       
                         studentProfiles.Add(studentProfile);
                     }
                 }

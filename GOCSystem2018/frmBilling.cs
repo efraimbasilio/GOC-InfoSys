@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace GOCSystem2018
 {
@@ -218,6 +219,7 @@ namespace GOCSystem2018
         {
             //clear list
             billings.Clear();
+            dgvFeeHistory.Rows.Clear();
             //pass value to list
             bill.StudentId = StudID;
             billings = bill.GetPaymentHistory();
@@ -339,7 +341,31 @@ namespace GOCSystem2018
         /*************************************************************************************/
         private void frmBilling_Load(object sender, EventArgs e)
         {
+            LoadRecords();
+        }
+        private void LoadRecords()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+                    string sql = "SELECT * FROM billing_partial";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
 
+                    da.Fill(dt);
+                    dgvSearch.DataSource = dt;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void cmbMOP_SelectedValueChanged(object sender, EventArgs e)
@@ -402,10 +428,7 @@ namespace GOCSystem2018
             }
             else if (cmbPaymentFor.SelectedItem.Equals("Downpayment"))
             {
-                
-
-
-
+               
                 toPay.amountToPay = DP;//view of payment
                 //create a maintenance
                 //for late payment of the downpaymnet
@@ -419,6 +442,7 @@ namespace GOCSystem2018
                 //jan=3
                 //feb=2
                 //march=1
+                toPay.GOCNo = lblGOCNo.Text;
                 toPay.paymentNo = txtPayNumber.Text;
                 toPay.paymentFor = cmbPaymentFor.SelectedItem.ToString();
                 toPay.TotalTuition = Convert.ToDouble(lblTotalPayment.Text);
