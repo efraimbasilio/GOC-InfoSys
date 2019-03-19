@@ -29,6 +29,20 @@ namespace GOCSystem2018
         private void frmStudSearch_Load(object sender, EventArgs e)
         {
             LoadRecords();
+
+            #region designing DVG
+            dgvSearch.BorderStyle = BorderStyle.None;
+            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvSearch.BackgroundColor = Color.White;
+
+            dgvSearch.EnableHeadersVisualStyles = false;
+            dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            #endregion
         }
         /// <summary>
         /// Methods
@@ -177,6 +191,12 @@ namespace GOCSystem2018
         private void dgvSearch_DoubleClick_1(object sender, EventArgs e)
         {
             SelectData();
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Dispose();
         }
     }
 }

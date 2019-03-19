@@ -20,6 +20,7 @@ namespace GOCSystem2018
         protected string paymentNo;
         protected string paymentDate;
         protected string mop;
+        protected string regNo;
         //protected string paymentDate;
 
         /******************************
@@ -45,6 +46,13 @@ namespace GOCSystem2018
             get { return studentId; }
             set { studentId = value; }
         }
+
+        public string RegNo
+        {
+            get { return regNo; }
+            set { regNo = value; }
+        }
+
         public string OrNo
         {
             get { return orNo; }
@@ -95,6 +103,7 @@ namespace GOCSystem2018
                         bill.amountGiven =Convert.ToDouble(reader["amount_given"].ToString());
                         bill.paymentNo = reader["payment_no"].ToString();
                         bill.paymentDate = reader["payment_date"].ToString();
+                        bill.regNo = reader["regno"].ToString();
                         //bill.mop = reader["MOP"].ToString();
 
                         bills.Add(bill);
@@ -121,8 +130,8 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO billing_or(IDNo,OrNo,amount_given,payment_no,MOP) " +
-                                    " VALUES (@studentId,@orNo,@amountGiven,@paymentNo,@mop);";
+                    string sql = "INSERT INTO billing_or(IDNo,OrNo,amount_given,payment_no,MOP,RegNo) " +
+                                    " VALUES (@studentId,@orNo,@amountGiven,@paymentNo,@mop,@regNo);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
@@ -131,6 +140,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("amountGiven", amountGiven);
                     cmd.Parameters.AddWithValue("paymentNo", paymentNo);
                     cmd.Parameters.AddWithValue("mop", mop);
+                    cmd.Parameters.AddWithValue("regNo", regNo);
 
                     cmd.ExecuteNonQuery();
                 }

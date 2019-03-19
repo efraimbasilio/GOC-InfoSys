@@ -30,6 +30,7 @@ namespace GOCSystem2018
         protected string p9;
         protected string p10;
         protected string balance;
+        protected string regNo;
 
         /******************************
          * Private Properties
@@ -47,6 +48,12 @@ namespace GOCSystem2018
         {
             get { return enStatus; }
             set { enStatus = value; }
+        }
+
+        public string RegNo
+        {
+            get { return regNo; }
+            set { regNo = value; }
         }
 
         public string IdNo
@@ -148,7 +155,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE billing_partial SET DP=@downPayment,1p=@p1,2p=@p2,3p=@p3,4p=@p4, 5p=@p5, 6p=@p6, 7p=@p7, 8p=@p8, 9p=@p9, 10p=@p10, balance=@balance, enrollment_status=@enStatus" +
+                    string sql = "UPDATE billing_partial SET DP=@downPayment,regNo=@regNo,1p=@p1,2p=@p2,3p=@p3,4p=@p4, 5p=@p5, 6p=@p6, 7p=@p7, 8p=@p8, 9p=@p9, 10p=@p10, balance=@balance , Enrollment_Status=@enStatus" +
                                     " WHERE IDNo=@idNo;";
                     //Enrollment_Status,OR_No,IDNo,full_name,DP,1p,2p,3p,4p,5p,6p,7p,8p,9p,10p,balance
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -168,6 +175,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("p8", p8);
                     cmd.Parameters.AddWithValue("p9", p9);
                     cmd.Parameters.AddWithValue("p10", p10);
+                    cmd.Parameters.AddWithValue("regNo", regNo);
                     cmd.Parameters.AddWithValue("balance", balance);
 
                     cmd.ExecuteNonQuery();
@@ -191,8 +199,8 @@ namespace GOCSystem2018
                 {
                     //try to open connection
                     con.Open();
-                    string sql = "INSERT INTO billing_partial(Enrollment_Status,OR_No,IDNo,full_name,DP,1p,2p,3p,4p,5p,6p,7p,8p,9p,10p,balance) " +
-                    "VALUES (@enStatus,@oRNo,@idNo,@full_name,@downPayment,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@balance);";
+                    string sql = "INSERT INTO billing_partial(Enrollment_Status,OR_No,IDNo,full_name,DP,1p,2p,3p,4p,5p,6p,7p,8p,9p,10p,balance,regNo) " +
+                    "VALUES (@enStatus,@oRNo,@idNo,@full_name,@downPayment,@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@balance,@regno);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
@@ -212,6 +220,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("p8", p8);
                     cmd.Parameters.AddWithValue("p9", p9);
                     cmd.Parameters.AddWithValue("p10", p10);
+                    cmd.Parameters.AddWithValue("regNo", regNo);
                     cmd.Parameters.AddWithValue("balance", balance);      
                                  
                     cmd.ExecuteNonQuery();
@@ -268,6 +277,7 @@ namespace GOCSystem2018
                         billingPartial.p8 = reader["8p"].ToString();
                         billingPartial.p9 = reader["9p"].ToString();
                         billingPartial.p10 = reader["10p"].ToString();
+                        billingPartial.regNo = reader["regno"].ToString();
                         billingPartial.balance = reader["balance"].ToString();
                         
                         billingPartials.Add(billingPartial);
@@ -311,6 +321,63 @@ namespace GOCSystem2018
                         
                         billingPartial.balance = reader["balance"].ToString();
                         billingPartial.downPayment = reader["DP"].ToString();
+
+                        billingPartials.Add(billingPartial);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return billingPartials;
+        }
+
+        public List<Billing_Partial> GetMonthlyDue()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM billing_partial WHERE RegNo =@regNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("regNo", regNo);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Billing_Partial billingPartial = new Billing_Partial();
+
+                        //prepare properties
+
+                        //billingPartial.id = Convert.ToInt32(reader["id"].ToString());
+                        //billingPartial.enStatus = reader["enrollment_status"].ToString();
+                        //billingPartial.oRNo = reader["or_no"].ToString();
+                        //billingPartial.idNo = reader["idno"].ToString();
+                        //billingPartial.full_name = reader["full_name"].ToString();
+                        billingPartial.downPayment = reader["dp"].ToString();
+                        billingPartial.p1 = reader["1p"].ToString();
+                        billingPartial.p2 = reader["2p"].ToString();
+                        billingPartial.p3 = reader["3p"].ToString();
+                        billingPartial.p4 = reader["4p"].ToString();
+                        billingPartial.p5 = reader["5p"].ToString();
+                        billingPartial.p6 = reader["6p"].ToString();
+                        billingPartial.p7 = reader["7p"].ToString();
+                        billingPartial.p8 = reader["8p"].ToString();
+                        billingPartial.p9 = reader["9p"].ToString();
+                        billingPartial.p10 = reader["10p"].ToString();
+                        //billingPartial.balance = reader["balance"].ToString();
 
                         billingPartials.Add(billingPartial);
                     }

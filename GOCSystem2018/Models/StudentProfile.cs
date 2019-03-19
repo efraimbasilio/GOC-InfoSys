@@ -227,7 +227,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE student_profile SET reservee=@reservee, reserve_for=@reserveFor, partial_Payment=@partialPayment, full_Payment=@fullPayment" +
+                    string sql = "UPDATE student_profile SET reservee=@reservee, reserve_for=@reserveFor" +
                                     " WHERE regno=@studRegistrationNo;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -235,9 +235,40 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
                     cmd.Parameters.AddWithValue("reservee", reservee);
                     cmd.Parameters.AddWithValue("reserveFor", reserveFor);
+                    
+                    
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        public void UpdateMOP()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    string sql = "UPDATE student_profile SET  partial_Payment=@partialPayment, full_Payment=@fullPayment" +
+                                    " WHERE regno=@studRegistrationNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);                    
                     cmd.Parameters.AddWithValue("partialPayment", partialPayment);
                     cmd.Parameters.AddWithValue("fullPayment", fullPayment);
-                    
+
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -337,7 +368,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE student_profile SET IdNo=@studGOCNo, reservee=@reservee" +
+                    string sql = "UPDATE student_profile SET IdNo=@studGOCNo, reservee=@reservee , partial_Payment=@partialPayment" +
                                     " WHERE regno=@studRegistrationNo;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -345,6 +376,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
                     cmd.Parameters.AddWithValue("studGOCNo", studGOCNo);
                     cmd.Parameters.AddWithValue("reservee",reservee);
+                    cmd.Parameters.AddWithValue("partialPayment", partialPayment);
 
 
 

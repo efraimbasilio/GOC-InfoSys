@@ -311,8 +311,23 @@ namespace GOCSystem2018
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
+
             LoadSchoolYear();
             LoadRecords();
+
+            #region dvg design
+            Logdgv.BorderStyle = BorderStyle.None;
+            Logdgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            Logdgv.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            Logdgv.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            Logdgv.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            Logdgv.BackgroundColor = Color.White;
+
+            Logdgv.EnableHeadersVisualStyles = false;
+            Logdgv.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            Logdgv.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            Logdgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            #endregion
 
             this.chart2.Series["Population"].Points.AddXY("STEM", label134.Text);
             this.chart2.Series["Population"].Points.AddXY("HUMSS", label133.Text);
@@ -332,6 +347,72 @@ namespace GOCSystem2018
             this.chart3.Series["Performance"].Points.AddXY("TOURISM", 90);
             this.chart3.Series["Performance"].Points.AddXY("REAL ESTATE", 0);
             this.chart3.Series["Performance"].Points.AddXY("ACCOUNTANCY", 0);
+
+            #region removal of unneccessary header
+            this.dgvSearch.Columns["id"].Visible = false;
+            this.dgvSearch.Columns["IDNo"].Visible = false;
+            this.dgvSearch.Columns["regNo"].Visible = false;
+            this.dgvSearch.Columns["Reservee"].Visible = false;
+            this.dgvSearch.Columns["Reserve_for"].Visible = false;
+            this.dgvSearch.Columns["Full_payment"].Visible = false;
+            this.dgvSearch.Columns["Partial_payment"].Visible = false;
+            this.dgvSearch.Columns["photo_loc"].Visible = false;
+            this.dgvSearch.Columns["voucher_type"].Visible = false;
+            this.dgvSearch.Columns["address"].Visible = false;
+            this.dgvSearch.Columns["date_of_birth"].Visible = false;
+            this.dgvSearch.Columns["place_of_birth"].Visible = false;
+            this.dgvSearch.Columns["religion"].Visible = false;
+            this.dgvSearch.Columns["nationality"].Visible = false;
+            this.dgvSearch.Columns["gender"].Visible = false;
+            this.dgvSearch.Columns["stud_contactNo"].Visible = false;
+            this.dgvSearch.Columns["stud_telNo"].Visible = false;
+            this.dgvSearch.Columns["prev_school"].Visible = false;
+            this.dgvSearch.Columns["prev_school_address"].Visible = false;
+            this.dgvSearch.Columns["father_name"].Visible = false;
+            this.dgvSearch.Columns["father_work"].Visible = false;
+            this.dgvSearch.Columns["mother_name"].Visible = false;
+            this.dgvSearch.Columns["mother_work"].Visible = false;
+            this.dgvSearch.Columns["guardian_name"].Visible = false;
+            this.dgvSearch.Columns["guardian_work"].Visible = false;
+            this.dgvSearch.Columns["guardian_address"].Visible = false;
+            this.dgvSearch.Columns["guardian_relationship"].Visible = false;
+            this.dgvSearch.Columns["guardian_contactNo"].Visible = false;
+            this.dgvSearch.Columns["guardian_telNo"].Visible = false;
+            this.dgvSearch.Columns["bc"].Visible = false;
+            this.dgvSearch.Columns["form138"].Visible = false;
+            this.dgvSearch.Columns["drugtest"].Visible = false;
+            this.dgvSearch.Columns["good_moral"].Visible = false;
+            this.dgvSearch.Columns["en_exam"].Visible = false;
+            this.dgvSearch.Columns["ncae"].Visible = false;
+            this.dgvSearch.Columns["date_enrolled"].Visible = false;
+            this.dgvSearch.Columns["sy_enrolled"].Visible = false;
+            this.dgvSearch.Columns["1"].Visible = false;
+            this.dgvSearch.Columns["2"].Visible = false;
+#endregion
+            #region header name fix
+            dgvSearch.Columns["LRN"].HeaderText = "LRN";
+            dgvSearch.Columns["last_name"].HeaderText = "Last Name";
+            dgvSearch.Columns["first_name"].HeaderText = "First Name";
+            dgvSearch.Columns["middle_name"].HeaderText = "Middle Name";
+            dgvSearch.Columns["grade_Level"].HeaderText = "Grade Level";
+            dgvSearch.Columns["section"].HeaderText = "Section";
+            dgvSearch.Columns["track"].HeaderText = "Track";
+            dgvSearch.Columns["strand"].HeaderText = "Strand";
+            #endregion
+            #region designing DVG
+            dgvSearch.BorderStyle = BorderStyle.None;
+            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvSearch.BackgroundColor = Color.White;
+
+            dgvSearch.EnableHeadersVisualStyles = false;
+            dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            #endregion
+
         }
 
 
@@ -349,17 +430,21 @@ namespace GOCSystem2018
 
         private void pictureBox24_Click(object sender, EventArgs e)
         {
+            
+            dispanel.Visible = true;
             frmRegistration frm = new frmRegistration();
-            //frm.TopLevel = false;
-            //frm.AutoScroll = true;
+            frm.TopLevel = false;
+            frm.AutoScroll = true;
+            
+           
 
-            //pnlRegistration.Controls.Add(frm);
+            dispanel.Controls.Add(frm);
 
             frm.Show();
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = false;
             studprofpanel.Visible = false;
-            Dashboardpanel.Visible = true;
+            Dashboardpanel.Visible = false;
 
 
 
@@ -479,170 +564,28 @@ namespace GOCSystem2018
             Dashboardpanel.Visible = false;
             MaintenancePanel.Visible = false;
             studprofpanel.Visible = false;
+            dispanel.Refresh();
+            dispanel.Visible = false;
 
-            int startposition = 45;
-            int endposition = 18;
-
-            int startposition2 = 26;
-            int endposition2 = 186;
-
-            for (int ldc = 0; ldc< dgvSearch.Rows.Count ; ldc++)
-            {
-                //PictureBox spb = studPicturebox(ldc, startposition, endposition, startposition2, endposition2);
-                Panel ph = placeHolder(ldc, startposition, endposition, startposition2, endposition2);
-                String FullName = dgvSearch.Rows[ldc].Cells[9].FormattedValue.ToString() + ", " + dgvSearch.Rows[ldc].Cells[10].FormattedValue.ToString() + " " + dgvSearch.Rows[ldc].Cells[11].FormattedValue.ToString();
-
-                Label l = addLabel(ldc, startposition, endposition, FullName);
-                Label l2 = addLabel2(ldc, startposition, endposition, startposition2, endposition2, dgvSearch.Rows[ldc].Cells[15].FormattedValue.ToString());
-                Label l3 = addLabel3(ldc, startposition, endposition, startposition2, endposition2, dgvSearch.Rows[ldc].Cells[13].FormattedValue.ToString());
-                Label l4 = addLabel4(ldc, startposition, endposition, startposition2, endposition2, dgvSearch.Rows[ldc].Cells[12].FormattedValue.ToString());
-                Label l5 = addLabel5(ldc, startposition, endposition, startposition2, endposition2, dgvSearch.Rows[ldc].Cells[2].FormattedValue.ToString());
-                //Label l6 = addLabel6(ldc, startposition, endposition, startposition2, endposition2);
-                StudentlistPanel.Controls.Add(ph);
-                ph.Controls.Add(l);
-                ph.Controls.Add(l2);
-                ph.Controls.Add(l3);
-                ph.Controls.Add(l4);
-                ph.Controls.Add(l5);
-               // ph.Controls.Add(spb);
-                //ph.Controls.Add(l6);
-                //endposition += 40;
-                endposition2 += 64;
-            }
-        }
-
-        //search in the student list************************************************************************************************************
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            //listBox2.Items.Clear();
             
-            for(int sfilter = 0; sfilter < dgvSearch.Rows.Count; sfilter++)
-            {
-                if (dgvSearch.SelectedCells[sfilter].Value.ToString().Contains(textBox1.Text))
-                {
-                    //listBox2.Items.Add(listBox1.Items[sfilter]);
-                }
             }
-        }
-        //*************************t************************************************************************************************************
-        private void button1_Click_1(object sender, EventArgs e)
+
+        private void pictureBox10_Click(object sender, EventArgs e)
         {
-            for(int a = 0; a < dgvSearch.Rows.Count; a++)
-            {
-                
-                Label li = this.Controls.Find("li" + a.ToString(), true).FirstOrDefault() as Label;
-               
-                Label lsn = this.Controls.Find("lsn" + a.ToString(), true).FirstOrDefault() as Label;
-               
-                Label ls = this.Controls.Find("ls" + a.ToString(), true).FirstOrDefault() as Label;
-                
-                Label lg = this.Controls.Find("lg" + a.ToString(), true).FirstOrDefault() as Label;
-            
-                Label ll = this.Controls.Find("ll" + a.ToString(), true).FirstOrDefault() as Label;
-
-                Label lst = this.Controls.Find("lst" + a.ToString(), true).FirstOrDefault() as Label;
-                //panel8.Controls.Remove(li);
-                //li.Dispose();
-                //panel8.Controls.Remove(lsn);
-                //lsn.Dispose();
-                //panel8.Controls.Remove(ll);
-                //ll.Dispose();
-                //panel8.Controls.Remove(lg);
-                //lg.Dispose();
-                //panel8.Controls.Remove(lst);
-                //lst.Dispose();
-                //panel8.Controls.Remove(ls);
-                //ls.Dispose();
-
-            }
-            
+            frmAssessmentSearch frmAssessmentSearch = new frmAssessmentSearch();
+            frmAssessmentSearch.Show();
         }
 
-        private void searchtxt_TextChanged(object sender, EventArgs e)
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void searchtxt_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyData == Keys.Enter)
-            {
-                StudentlistPanel.Visible = true;
-                //listBox2.Items.Clear();
-
-                for (int sfilter = 0; sfilter < dgvSearch.Rows.Count; sfilter++)
-                {
-                    if (dgvSearch.SelectedCells[sfilter].Value.ToString().Contains(searchtxt.Text))
-                    {
-                        //listBox2.Items.Add(listBox1.Items[sfilter]);
-                    }
-                }
-            }
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-            frmSetting setting = new frmSetting();
-            setting.Show();
-        }
-
-        private void pictureBox28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox23_Click(object sender, EventArgs e)
-        {
-            StudentlistPanel.Visible = false;
-            MaintenancePanel.Visible = false;
-            studprofpanel.Visible = false;
-            Dashboardpanel.Visible = true;
-           
-        }
-
-        private void pictureBox27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void pictureBox29_Click(object sender, EventArgs e)
-        {
-            MaintenancePanel.Visible = true;
-            studprofpanel.Visible = false;
-            StudentlistPanel.Visible = false;
-            Dashboardpanel.Visible = false;
-        }
-
-        private void pictureBox30_Click(object sender, EventArgs e)
-        {
-            frmSetting setting = new frmSetting();
-            setting.Show();
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label86_Click(object sender, EventArgs e)
-        {
-
+            frmBillingSearch frmBillingSearch = new frmBillingSearch();
+            frmBillingSearch.Show();
         }
     }
+
+
+        
+      
     }
+    
 

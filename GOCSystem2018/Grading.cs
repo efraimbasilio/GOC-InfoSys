@@ -111,8 +111,6 @@ namespace GOCSystem2018
 
         List<Grading> grades = new List<Grading>();
 
-
-
         public List<Grading> Load()
         {
             try
@@ -135,7 +133,7 @@ namespace GOCSystem2018
 
                         //prepare properties
                         grade.id = Convert.ToInt32(reader["id"].ToString());
-                        grade.studentId = reader["ID_no"].ToString();
+                        grade.studentId = reader["IDNo"].ToString();
                         grade.fullName = reader["full_name"].ToString();
                         grade.subjectCode = reader["subject_code"].ToString();
                         grade.subjectDesc = reader["subject_desc"].ToString();
@@ -158,6 +156,126 @@ namespace GOCSystem2018
             {
 
                 MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return grades;
+        }//End of Load
+
+        public List<Grading> LoadThisGrades()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM grading WHERE subject_Code=@subjectCode and term=@term and grade_level=@gradeLevel and section=@section";
+                    //IDNo = @studentId and
+                     MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    //cmd.Parameters.AddWithValue("studentId", studentId);
+                    cmd.Parameters.AddWithValue("subjectCode", subjectCode);
+                    cmd.Parameters.AddWithValue("term", term);
+                    cmd.Parameters.AddWithValue("gradeLevel", gradeLevel);
+                    cmd.Parameters.AddWithValue("section", section);
+                    cmd.Parameters.AddWithValue("strand", strand);
+
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Grading grade = new Grading();
+
+                        //prepare properties
+                        grade.id = Convert.ToInt32(reader["id"].ToString());
+                        grade.studentId = reader["IDNo"].ToString();
+                        grade.fullName = reader["full_name"].ToString();
+                        grade.subjectCode = reader["subject_code"].ToString();
+                        grade.subjectDesc = reader["subject_desc"].ToString();
+                        grade.units = reader["units"].ToString();
+                        grade.firstQ = Convert.ToDouble(reader["1stQ"].ToString());
+                        grade.secondQ = Convert.ToDouble(reader["2ndQ"].ToString());
+                        grade.average = Convert.ToDouble(reader["average"].ToString());
+                        grade.remarks = reader["remarks"].ToString();
+                        grade.term = reader["term"].ToString();
+                        grade.gradeLevel = reader["grade_level"].ToString();
+                        grade.section = reader["section"].ToString();
+                        grade.strand = reader["strand"].ToString();
+
+                        grades.Add(grade);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return grades;
+        }//End of Load
+
+        public List<Grading> LoadSubjects()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT subject_code FROM grading ";
+                    //IDNo = @studentId and grading WHERE subject_Code=@subjectCode and term=@term and grade_level=@gradeLevel, section=@section
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    //cmd.Parameters.AddWithValue("studentId", studentId);
+                    //cmd.Parameters.AddWithValue("subjectCode", subjectCode);
+                    //cmd.Parameters.AddWithValue("term", term);
+                    //cmd.Parameters.AddWithValue("gradeLevel", gradeLevel);
+                    //cmd.Parameters.AddWithValue("section", section);
+                    //cmd.Parameters.AddWithValue("strand", strand);
+
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Grading grade = new Grading();
+
+                        //prepare properties
+                        grade.id = Convert.ToInt32(reader["id"].ToString());
+                        grade.studentId = reader["IDNo"].ToString();
+                        //grade.fullName = reader["full_name"].ToString();
+                        grade.subjectCode = reader["subject_code"].ToString();
+                        //grade.subjectDesc = reader["subject_desc"].ToString();
+                        //grade.units = reader["units"].ToString();
+                        //grade.firstQ = Convert.ToDouble(reader["1stQ"].ToString());
+                        //grade.secondQ = Convert.ToDouble(reader["2ndQ"].ToString());
+                        //grade.average = Convert.ToDouble(reader["average"].ToString());
+                        //grade.remarks = reader["remarks"].ToString();
+                        //grade.term = reader["term"].ToString();
+                        //grade.gradeLevel = reader["grade_level"].ToString();
+                        //grade.section = reader["section"].ToString();
+                        //grade.strand = reader["strand"].ToString();
+
+                        grades.Add(grade);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
             return grades;
         }//End of Load

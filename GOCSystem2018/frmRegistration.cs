@@ -135,6 +135,22 @@ namespace GOCSystem2018
                 return false;
             }
 
+            if (txtStudCell.Text == "")
+            {
+                return false;
+            }
+
+            if (txtLastSchool.Text == "")
+            {
+                return false;
+            }
+
+            if (txtLastSchAddress.Text == "")
+            {
+                return false;
+            }
+
+
             if (optMale.Checked == false || optFemale.Checked == false)
             {
                 if (optFemale.Checked == true)
@@ -330,8 +346,7 @@ namespace GOCSystem2018
             opt4thYear.Visible = false;
             cmbCourseStrand.Text = "";
             LoadCombo();
-            //panel4.Visible = false;
-            //panel3.Location = new Point(31, 690);
+           
             LoadVoucher();
 
         }
@@ -680,16 +695,7 @@ namespace GOCSystem2018
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            frmAssesment.Reset();
-            frmAssesment.LoadSection();
-            frmAssesment.LoadSchoolYear();
             
-           
-            frmAssessmentSearch search = new frmAssessmentSearch();
-            this.Hide();
-            //frmAssesment.Show();
-            this.Dispose();
-            search.Show();
         }
 
         private void cmbProvince2_SelectedValueChanged(object sender, EventArgs e)
@@ -867,94 +873,31 @@ namespace GOCSystem2018
                 cmbMunicipality2.Items.Add("Olongapo City");
             }
         }
+        #region Rick's
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            frmBilling frmBilling = new frmBilling();
+            frmBilling.Show();
+        }
 
-        private void btnSave_Click_1(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-                    // Message box
-               
-            
+            frmAssessmentSearch frmAssessmentSearch = new frmAssessmentSearch();
+            frmAssessmentSearch.Show();
+        }
+        #endregion
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            //if (string.IsNullOrWhiteSpace(LRNtxt.Text) && string.IsNullOrWhiteSpace(cmbVoucher.Text) && string.IsNullOrWhiteSpace(cmbStudType.Text) && string.IsNullOrWhiteSpace(cmbCourseStrand.Text) && string.IsNullOrWhiteSpace(LRNtxt.Text) &&
+            //    string.IsNullOrWhiteSpace(txtFName.Text) && string.IsNullOrWhiteSpace(txtMName.Text) && string.IsNullOrWhiteSpace(txtLastName.Text) && string.IsNullOrWhiteSpace(txtAddress.Text) && string.IsNullOrWhiteSpace(txtBarangay.Text) &&
+            //    string.IsNullOrWhiteSpace(cmbMunicipality.Text) && string.IsNullOrWhiteSpace(cmbProvince.Text) && string.IsNullOrWhiteSpace(txtage.Text) && string.IsNullOrWhiteSpace(txtReligion.Text) && string.IsNullOrWhiteSpace(txtBirthPlace.Text) &&
+            //    string.IsNullOrWhiteSpace(cmbNationality.Text) && string.IsNullOrWhiteSpace(txtLastSchool.Text) && string.IsNullOrWhiteSpace(txtLastSchAddress.Text) && (optMale.Checked || optFemale.Checked) && (optCollege.Checked || optAcademic.Checked || optTVL.Checked)
+            //    && (opt1stYear.Checked || opt2ndYear.Checked || opt3rdYear.Checked || opt4thYear.Checked)) {
 
+            //}
 
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
-            if (string.IsNullOrWhiteSpace(LRNtxt.Text))
-            {
-
-            }
+          
             if (this.CheckRequiredFields() == true)
             {
                 registration.StudType = cmbStudType.Text;
@@ -1010,29 +953,58 @@ namespace GOCSystem2018
                 registration.Save();
 
                 //clear in assesment
-                frmAssesment.Reset();
-                assements.Clear();
-
-                frmAssesment.RegNo = txtRegno.Text;
-                frmAssesment.StudName = txtLastName.Text.ToUpper() + " , " + txtFName.Text.ToUpper() + " " + txtMName.Text.ToUpper();
-                frmAssesment.LRN = LRNtxt.Text;
-                frmAssesment.Strand = cmbCourseStrand.Text.ToUpper();
-                //frmAssesment.tuitionFees2();
-
-                frmAssesment.LoadSection();
-                frmAssesment.LoadSchoolYear();
-                frmAssesment.Voucher = cmbVoucher.Text;
-                frmAssesment.ComputeVoucher();
-
-                frmAssesment.LoadAssesOtherFees();
-                frmAssesment.LoadAssesMiscFees();
                 
-                frmAssesment.LoadTuitionFee();
-                frmAssesment.TotalTuition();
-                //frmAssesment.RenderStudNo();
 
-                this.Hide();
-                frmAssesment.Show();
+
+                string message = "Do you want to assess this Enrollee?";
+                string title = "Next Step";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+
+                    frmAssesment.Reset();
+                    assements.Clear();
+
+                    frmAssesment.RegNo = txtRegno.Text;
+                    frmAssesment.StudName = txtLastName.Text.ToUpper() + " , " + txtFName.Text.ToUpper() + " " + txtMName.Text.ToUpper();
+                    frmAssesment.LRN = LRNtxt.Text;
+                    frmAssesment.Strand = cmbCourseStrand.Text.ToUpper();
+                    //frmAssesment.tuitionFees2();
+
+                    frmAssesment.LoadSection();
+                    frmAssesment.LoadSchoolYear();
+                    frmAssesment.Voucher = cmbVoucher.Text;
+                    frmAssesment.ComputeVoucher();
+
+                    frmAssesment.LoadAssesOtherFees();
+                    frmAssesment.LoadAssesMiscFees();
+
+                    frmAssesment.LoadTuitionFee();
+                    frmAssesment.TotalTuition();
+                    //frmAssesment.RenderStudNo();
+
+                    this.Hide();
+                    frmAssesment.Show();
+
+                    frmAssesment.Reset();
+                    frmAssesment.LoadSection();
+                    frmAssesment.LoadSchoolYear();
+
+
+                    frmAssessmentSearch search = new frmAssessmentSearch();
+                    this.Hide();
+                    //frmAssesment.Show();
+                    this.Dispose();
+                    search.Show();
+                }
+                else
+                {
+                    this.Hide();
+                    this.Dispose();
+                }
+
+               
 
             }
             else

@@ -64,6 +64,81 @@ namespace GOCSystem2018
 
         private void frmAssesment_Load(object sender, EventArgs e)
         {
+            #region DGV Design
+           
+            dataGridView2.BorderStyle = BorderStyle.None;
+            dataGridView2.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView2.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dataGridView2.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridView2.BackgroundColor = Color.White;
+
+            dataGridView2.EnableHeadersVisualStyles = false;
+            dataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView2.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dataGridView2.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgvSubject.BorderStyle = BorderStyle.None;
+            dgvSubject.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvSubject.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvSubject.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dgvSubject.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvSubject.BackgroundColor = Color.White;
+
+            dgvSubject.EnableHeadersVisualStyles = false;
+            dgvSubject.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvSubject.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvSubject.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgvSchedule.BorderStyle = BorderStyle.None;
+            dgvSchedule.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvSchedule.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvSchedule.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dgvSchedule.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvSchedule.BackgroundColor = Color.White;
+
+            dgvSchedule.EnableHeadersVisualStyles = false;
+            dgvSchedule.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvSchedule.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvSchedule.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgvPerMonth.BorderStyle = BorderStyle.None;
+            dgvPerMonth.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvPerMonth.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvPerMonth.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dgvPerMonth.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvPerMonth.BackgroundColor = Color.White;
+
+            dgvPerMonth.EnableHeadersVisualStyles = false;
+            dgvPerMonth.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvPerMonth.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvPerMonth.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgvSubjectLoad.BorderStyle = BorderStyle.None;
+            dgvSubjectLoad.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvSubjectLoad.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvSubjectLoad.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dgvSubjectLoad.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvSubjectLoad.BackgroundColor = Color.White;
+
+            dgvSubjectLoad.EnableHeadersVisualStyles = false;
+            dgvSubjectLoad.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvSubjectLoad.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvSubjectLoad.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgvOtherFee.BorderStyle = BorderStyle.None;
+            dgvOtherFee.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvOtherFee.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvOtherFee.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dgvOtherFee.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvOtherFee.BackgroundColor = Color.White;
+
+            dgvOtherFee.EnableHeadersVisualStyles = false;
+            dgvOtherFee.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvOtherFee.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvOtherFee.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            #endregion
+
             lblName.Text = StudName;
             lblGradeLevel.Text = GradeLevel;
             lblLRN.Text = LRN;
@@ -582,6 +657,7 @@ namespace GOCSystem2018
 
         private void label12_Click(object sender, EventArgs e)
         {
+            this.Hide();
             this.Dispose();
         }
 

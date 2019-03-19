@@ -46,6 +46,12 @@ namespace GOCSystem2018
                     assess.Show();
                     this.Hide();
                 }
+                else if (UserType.Equals("Teacher"))
+                {
+                    frmGrading grade = new frmGrading();
+                    grade.Show();
+                    this.Hide();
+                }
                 else
                 {
                     string message = "Erorr";

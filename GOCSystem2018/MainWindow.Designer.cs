@@ -30,15 +30,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.SidebarPanel = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
@@ -67,7 +69,7 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Logdgv = new System.Windows.Forms.DataGridView();
             this.label137 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.searchtxt = new System.Windows.Forms.TextBox();
@@ -350,16 +352,14 @@
             this.StudentlistPanel = new System.Windows.Forms.Panel();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.Headertit = new System.Windows.Forms.Label();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Headerline = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MaintenancePanel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox21 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
@@ -381,7 +381,10 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
+            this.dispanel = new System.Windows.Forms.Panel();
             this.SidebarPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
@@ -394,7 +397,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logdgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -414,11 +417,10 @@
             this.panel6.SuspendLayout();
             this.StudentlistPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MaintenancePanel.SuspendLayout();
+            this.panel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -441,6 +443,8 @@
             // SidebarPanel
             // 
             this.SidebarPanel.BackColor = System.Drawing.Color.White;
+            this.SidebarPanel.Controls.Add(this.pictureBox5);
+            this.SidebarPanel.Controls.Add(this.pictureBox10);
             this.SidebarPanel.Controls.Add(this.panel5);
             this.SidebarPanel.Controls.Add(this.pictureBox30);
             this.SidebarPanel.Controls.Add(this.pictureBox29);
@@ -465,6 +469,28 @@
             this.SidebarPanel.Size = new System.Drawing.Size(65, 666);
             this.SidebarPanel.TabIndex = 0;
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(21, 258);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(24, 25);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 47;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(21, 214);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(24, 25);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 46;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -476,62 +502,57 @@
             // pictureBox30
             // 
             this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
-            this.pictureBox30.Location = new System.Drawing.Point(21, 448);
+            this.pictureBox30.Location = new System.Drawing.Point(21, 522);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(24, 25);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox30.TabIndex = 44;
             this.pictureBox30.TabStop = false;
-            this.pictureBox30.Click += new System.EventHandler(this.pictureBox30_Click);
             // 
             // pictureBox29
             // 
             this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.Location = new System.Drawing.Point(21, 402);
+            this.pictureBox29.Location = new System.Drawing.Point(21, 478);
             this.pictureBox29.Name = "pictureBox29";
             this.pictureBox29.Size = new System.Drawing.Size(24, 25);
             this.pictureBox29.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox29.TabIndex = 43;
             this.pictureBox29.TabStop = false;
-            this.pictureBox29.Click += new System.EventHandler(this.pictureBox29_Click);
             // 
             // pictureBox28
             // 
             this.pictureBox28.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox28.Image")));
-            this.pictureBox28.Location = new System.Drawing.Point(21, 356);
+            this.pictureBox28.Location = new System.Drawing.Point(21, 434);
             this.pictureBox28.Name = "pictureBox28";
             this.pictureBox28.Size = new System.Drawing.Size(24, 25);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox28.TabIndex = 42;
             this.pictureBox28.TabStop = false;
-            this.pictureBox28.Click += new System.EventHandler(this.pictureBox28_Click);
             // 
             // pictureBox27
             // 
             this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.Location = new System.Drawing.Point(21, 310);
+            this.pictureBox27.Location = new System.Drawing.Point(21, 390);
             this.pictureBox27.Name = "pictureBox27";
             this.pictureBox27.Size = new System.Drawing.Size(24, 25);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox27.TabIndex = 41;
             this.pictureBox27.TabStop = false;
-            this.pictureBox27.Click += new System.EventHandler(this.pictureBox27_Click);
             // 
             // pictureBox26
             // 
             this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
-            this.pictureBox26.Location = new System.Drawing.Point(21, 264);
+            this.pictureBox26.Location = new System.Drawing.Point(21, 346);
             this.pictureBox26.Name = "pictureBox26";
             this.pictureBox26.Size = new System.Drawing.Size(24, 25);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox26.TabIndex = 40;
             this.pictureBox26.TabStop = false;
-            this.pictureBox26.Click += new System.EventHandler(this.pictureBox26_Click);
             // 
             // pictureBox25
             // 
             this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
-            this.pictureBox25.Location = new System.Drawing.Point(21, 218);
+            this.pictureBox25.Location = new System.Drawing.Point(21, 302);
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.Size = new System.Drawing.Size(24, 25);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -542,7 +563,7 @@
             // pictureBox24
             // 
             this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
-            this.pictureBox24.Location = new System.Drawing.Point(21, 172);
+            this.pictureBox24.Location = new System.Drawing.Point(21, 170);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(24, 25);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -559,7 +580,6 @@
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox23.TabIndex = 37;
             this.pictureBox23.TabStop = false;
-            this.pictureBox23.Click += new System.EventHandler(this.pictureBox23_Click);
             // 
             // label62
             // 
@@ -681,7 +701,7 @@
             this.Dashboardpanel.Controls.Add(this.chart3);
             this.Dashboardpanel.Controls.Add(this.panel14);
             this.Dashboardpanel.Controls.Add(this.panel13);
-            this.Dashboardpanel.Controls.Add(this.dataGridView1);
+            this.Dashboardpanel.Controls.Add(this.Logdgv);
             this.Dashboardpanel.Controls.Add(this.label137);
             this.Dashboardpanel.Controls.Add(this.label10);
             this.Dashboardpanel.Controls.Add(this.searchtxt);
@@ -702,38 +722,38 @@
             // 
             this.chart3.BorderSkin.BackColor = System.Drawing.Color.Transparent;
             this.chart3.BorderSkin.BorderColor = System.Drawing.Color.Transparent;
-            chartArea4.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea4);
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart3.Legends.Add(legend1);
             this.chart3.Location = new System.Drawing.Point(358, 168);
             this.chart3.Name = "chart3";
-            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series4.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
-            series4.BackImageTransparentColor = System.Drawing.Color.Transparent;
-            series4.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
-            series4.BackSecondaryColor = System.Drawing.Color.Transparent;
-            series4.BorderColor = System.Drawing.Color.Transparent;
-            series4.BorderWidth = 5;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
-            series4.Color = System.Drawing.Color.Cyan;
-            series4.IsXValueIndexed = true;
-            series4.LabelForeColor = System.Drawing.Color.DimGray;
-            series4.Legend = "Legend1";
-            series4.MarkerBorderColor = System.Drawing.Color.White;
-            series4.MarkerColor = System.Drawing.Color.Red;
-            series4.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series4.Name = "Performance";
-            series4.ShadowColor = System.Drawing.Color.White;
-            this.chart3.Series.Add(series4);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series1.BackImageAlignment = System.Windows.Forms.DataVisualization.Charting.ChartImageAlignmentStyle.Center;
+            series1.BackImageTransparentColor = System.Drawing.Color.Transparent;
+            series1.BackImageWrapMode = System.Windows.Forms.DataVisualization.Charting.ChartImageWrapMode.Scaled;
+            series1.BackSecondaryColor = System.Drawing.Color.Transparent;
+            series1.BorderColor = System.Drawing.Color.Transparent;
+            series1.BorderWidth = 5;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.SplineArea;
+            series1.Color = System.Drawing.Color.Cyan;
+            series1.IsXValueIndexed = true;
+            series1.LabelForeColor = System.Drawing.Color.DimGray;
+            series1.Legend = "Legend1";
+            series1.MarkerBorderColor = System.Drawing.Color.White;
+            series1.MarkerColor = System.Drawing.Color.Red;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Performance";
+            series1.ShadowColor = System.Drawing.Color.White;
+            this.chart3.Series.Add(series1);
             this.chart3.Size = new System.Drawing.Size(788, 202);
             this.chart3.TabIndex = 1022;
             this.chart3.Text = "chart3";
             // 
             // panel14
             // 
-            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel14.Controls.Add(this.sectiontxt);
             this.panel14.Controls.Add(this.label23);
             this.panel14.Location = new System.Drawing.Point(44, 549);
@@ -819,15 +839,15 @@
             this.label19.TabIndex = 1;
             this.label19.Text = "Top Performer of the year";
             // 
-            // dataGridView1
+            // Logdgv
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dataGridView1.Location = new System.Drawing.Point(44, 712);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1097, 559);
-            this.dataGridView1.TabIndex = 1019;
+            this.Logdgv.BackgroundColor = System.Drawing.Color.White;
+            this.Logdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Logdgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Logdgv.Location = new System.Drawing.Point(44, 712);
+            this.Logdgv.Name = "Logdgv";
+            this.Logdgv.Size = new System.Drawing.Size(1097, 559);
+            this.Logdgv.TabIndex = 1019;
             // 
             // label137
             // 
@@ -862,8 +882,6 @@
             this.searchtxt.Size = new System.Drawing.Size(352, 22);
             this.searchtxt.TabIndex = 1016;
             this.searchtxt.Text = "LRN, Name, Student No...";
-            this.searchtxt.TextChanged += new System.EventHandler(this.searchtxt_TextChanged);
-            this.searchtxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.searchtxt_KeyDown);
             // 
             // pictureBox2
             // 
@@ -1236,8 +1254,8 @@
             // chart2
             // 
             this.chart2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.Cross;
-            chartArea5.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea5);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
             this.chart2.Location = new System.Drawing.Point(344, 15);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
@@ -1248,18 +1266,18 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192))))),
         System.Drawing.Color.Teal,
         System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))))};
-            series5.BackSecondaryColor = System.Drawing.Color.White;
-            series5.BorderColor = System.Drawing.Color.White;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            series5.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series5.LabelBackColor = System.Drawing.Color.Transparent;
-            series5.LabelForeColor = System.Drawing.Color.White;
-            series5.Name = "Population";
-            series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
-            series5.ShadowColor = System.Drawing.Color.Transparent;
-            this.chart2.Series.Add(series5);
+            series2.BackSecondaryColor = System.Drawing.Color.White;
+            series2.BorderColor = System.Drawing.Color.White;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            series2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.LabelBackColor = System.Drawing.Color.Transparent;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Name = "Population";
+            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
+            series2.ShadowColor = System.Drawing.Color.Transparent;
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(360, 263);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
@@ -1277,7 +1295,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel4.Controls.Add(this.label46);
             this.panel4.Controls.Add(this.label45);
             this.panel4.Controls.Add(this.label16);
@@ -1287,6 +1305,7 @@
             this.panel4.Controls.Add(this.label53);
             this.panel4.Controls.Add(this.label12);
             this.panel4.Controls.Add(this.label138);
+            this.panel4.ForeColor = System.Drawing.Color.White;
             this.panel4.Location = new System.Drawing.Point(44, 173);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(283, 197);
@@ -1296,7 +1315,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.Black;
+            this.label46.ForeColor = System.Drawing.Color.White;
             this.label46.Location = new System.Drawing.Point(64, 175);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(48, 16);
@@ -1307,7 +1326,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.DimGray;
+            this.label45.ForeColor = System.Drawing.Color.White;
             this.label45.Location = new System.Drawing.Point(67, 148);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(43, 16);
@@ -1318,7 +1337,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DimGray;
+            this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(51, 127);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(62, 16);
@@ -1329,7 +1348,7 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.ForeColor = System.Drawing.Color.DimGray;
+            this.label68.ForeColor = System.Drawing.Color.White;
             this.label68.Location = new System.Drawing.Point(56, 106);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(63, 16);
@@ -1340,7 +1359,7 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.ForeColor = System.Drawing.Color.DimGray;
+            this.label59.ForeColor = System.Drawing.Color.White;
             this.label59.Location = new System.Drawing.Point(51, 85);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(66, 16);
@@ -1351,7 +1370,7 @@
             // 
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.ForeColor = System.Drawing.Color.DimGray;
+            this.label58.ForeColor = System.Drawing.Color.White;
             this.label58.Location = new System.Drawing.Point(42, 64);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(75, 16);
@@ -1362,7 +1381,7 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.ForeColor = System.Drawing.Color.DimGray;
+            this.label53.ForeColor = System.Drawing.Color.White;
             this.label53.Location = new System.Drawing.Point(42, 43);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(75, 16);
@@ -1373,7 +1392,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(17, 13);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(159, 20);
@@ -1383,7 +1402,7 @@
             // label138
             // 
             this.label138.AutoSize = true;
-            this.label138.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
+            this.label138.ForeColor = System.Drawing.Color.White;
             this.label138.Location = new System.Drawing.Point(42, 139);
             this.label138.Name = "label138";
             this.label138.Size = new System.Drawing.Size(193, 30);
@@ -1449,7 +1468,7 @@
             this.lblSem.AutoSize = true;
             this.lblSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSem.ForeColor = System.Drawing.Color.White;
-            this.lblSem.Location = new System.Drawing.Point(693, 22);
+            this.lblSem.Location = new System.Drawing.Point(643, 22);
             this.lblSem.Name = "lblSem";
             this.lblSem.Size = new System.Drawing.Size(48, 16);
             this.lblSem.TabIndex = 10;
@@ -1470,16 +1489,16 @@
             // 
             this.chart1.BackColor = System.Drawing.Color.Transparent;
             this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dash;
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(16, 17);
             this.chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(881, 283);
             this.chart1.TabIndex = 10;
             this.chart1.Text = "chart1";
@@ -1507,13 +1526,14 @@
             this.studprofpanel.Name = "studprofpanel";
             this.studprofpanel.Size = new System.Drawing.Size(1215, 666);
             this.studprofpanel.TabIndex = 19;
+            this.studprofpanel.Visible = false;
             // 
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel19.Location = new System.Drawing.Point(141, 1560);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(936, 26);
+            this.panel19.Size = new System.Drawing.Size(936, 13);
             this.panel19.TabIndex = 47;
             // 
             // label24
@@ -1991,7 +2011,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sultan Nahia", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(138, 857);
+            this.label4.Location = new System.Drawing.Point(149, 856);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(210, 31);
             this.label4.TabIndex = 1019;
@@ -2002,7 +2022,7 @@
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel15.Location = new System.Drawing.Point(646, 902);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(442, 26);
+            this.panel15.Size = new System.Drawing.Size(442, 11);
             this.panel15.TabIndex = 47;
             // 
             // pictureBox7
@@ -2135,7 +2155,7 @@
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(442, 26);
+            this.panel17.Size = new System.Drawing.Size(442, 10);
             this.panel17.TabIndex = 47;
             // 
             // label219
@@ -2847,7 +2867,7 @@
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel16.Location = new System.Drawing.Point(0, 1);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(442, 26);
+            this.panel16.Size = new System.Drawing.Size(442, 10);
             this.panel16.TabIndex = 1019;
             // 
             // label222
@@ -3279,7 +3299,7 @@
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.panel8.Location = new System.Drawing.Point(0, 1);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(442, 26);
+            this.panel8.Size = new System.Drawing.Size(442, 10);
             this.panel8.TabIndex = 46;
             // 
             // G11_AS6
@@ -3351,7 +3371,6 @@
             this.G11_2S4.Size = new System.Drawing.Size(19, 13);
             this.G11_2S4.TabIndex = 42;
             this.G11_2S4.Text = "80";
-            this.G11_2S4.Click += new System.EventHandler(this.label86_Click);
             // 
             // G11_2S7
             // 
@@ -3604,7 +3623,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(957, 370);
             this.panel6.TabIndex = 0;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // gcontactnotxt
             // 
@@ -3953,10 +3971,6 @@
             this.StudentlistPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
             this.StudentlistPanel.Controls.Add(this.dgvSearch);
             this.StudentlistPanel.Controls.Add(this.Headertit);
-            this.StudentlistPanel.Controls.Add(this.pictureBox10);
-            this.StudentlistPanel.Controls.Add(this.pictureBox5);
-            this.StudentlistPanel.Controls.Add(this.button1);
-            this.StudentlistPanel.Controls.Add(this.pictureBox4);
             this.StudentlistPanel.Controls.Add(this.textBox1);
             this.StudentlistPanel.Controls.Add(this.Headerline);
             this.StudentlistPanel.Controls.Add(this.pictureBox1);
@@ -3971,99 +3985,51 @@
             this.dgvSearch.AllowUserToAddRows = false;
             this.dgvSearch.AllowUserToDeleteRows = false;
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(10, 6);
+            this.dgvSearch.Location = new System.Drawing.Point(55, 168);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(583, 73);
+            this.dgvSearch.Size = new System.Drawing.Size(1086, 443);
             this.dgvSearch.TabIndex = 1036;
-            this.dgvSearch.Visible = false;
             // 
             // Headertit
             // 
             this.Headertit.AutoSize = true;
             this.Headertit.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Headertit.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Headertit.Location = new System.Drawing.Point(94, 80);
+            this.Headertit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Headertit.Location = new System.Drawing.Point(52, 93);
             this.Headertit.Name = "Headertit";
             this.Headertit.Size = new System.Drawing.Size(233, 19);
             this.Headertit.TabIndex = 1019;
             this.Headertit.Text = "Currently Enrolled Students";
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(23, 216);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(32, 31);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1035;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Visible = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(23, 159);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 31);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1028;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1133, 602);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(23, 105);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 31);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 1022;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
-            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(664, 72);
+            this.textBox1.Location = new System.Drawing.Point(774, 69);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(352, 22);
             this.textBox1.TabIndex = 1018;
             this.textBox1.Text = "LRN, Name, Student No...";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Headerline
             // 
             this.Headerline.AutoSize = true;
             this.Headerline.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(187)))), ((int)(((byte)(187)))));
-            this.Headerline.Location = new System.Drawing.Point(90, 99);
+            this.Headerline.Location = new System.Drawing.Point(53, 105);
             this.Headerline.Name = "Headerline";
-            this.Headerline.Size = new System.Drawing.Size(961, 13);
+            this.Headerline.Size = new System.Drawing.Size(1093, 13);
             this.Headerline.TabIndex = 0;
             this.Headerline.Text = "_________________________________________________________________________________" +
-    "______________________________________________________________________________";
+    "________________________________________________________________________________" +
+    "____________________";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GOCSystem2018.Properties.Resources.Untitled_1;
-            this.pictureBox1.Location = new System.Drawing.Point(599, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(709, 14);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(478, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4072,7 +4038,9 @@
             // 
             // MaintenancePanel
             // 
+            this.MaintenancePanel.AutoScroll = true;
             this.MaintenancePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
+            this.MaintenancePanel.Controls.Add(this.panel20);
             this.MaintenancePanel.Controls.Add(this.panel3);
             this.MaintenancePanel.Location = new System.Drawing.Point(65, 54);
             this.MaintenancePanel.Name = "MaintenancePanel";
@@ -4080,11 +4048,41 @@
             this.MaintenancePanel.TabIndex = 10;
             this.MaintenancePanel.Visible = false;
             // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(103)))), ((int)(((byte)(178)))));
+            this.panel20.Controls.Add(this.pictureBox4);
+            this.panel20.Controls.Add(this.label18);
+            this.panel20.Location = new System.Drawing.Point(103, 26);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(995, 60);
+            this.panel20.TabIndex = 1014;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(33, 15);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(31, 26);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 1014;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(73, 22);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(103, 19);
+            this.label18.TabIndex = 1013;
+            this.label18.Text = "Maintenance";
+            // 
             // panel3
             // 
             this.panel3.AutoScroll = true;
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.label18);
             this.panel3.Controls.Add(this.pictureBox21);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.pictureBox15);
@@ -4098,26 +4096,15 @@
             this.panel3.Controls.Add(this.pictureBox19);
             this.panel3.Controls.Add(this.pictureBox14);
             this.panel3.Controls.Add(this.pictureBox20);
-            this.panel3.Location = new System.Drawing.Point(56, 47);
+            this.panel3.Location = new System.Drawing.Point(103, 25);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1071, 600);
+            this.panel3.Size = new System.Drawing.Size(994, 1495);
             this.panel3.TabIndex = 12;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.DimGray;
-            this.label18.Location = new System.Drawing.Point(128, 58);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(161, 29);
-            this.label18.TabIndex = 1013;
-            this.label18.Text = "Maintenance";
             // 
             // pictureBox21
             // 
             this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.Location = new System.Drawing.Point(133, 1030);
+            this.pictureBox21.Location = new System.Drawing.Point(111, 1030);
             this.pictureBox21.Name = "pictureBox21";
             this.pictureBox21.Size = new System.Drawing.Size(219, 191);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4130,7 +4117,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(133, 115);
+            this.pictureBox6.Location = new System.Drawing.Point(111, 113);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(219, 298);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4143,7 +4130,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(412, 746);
+            this.pictureBox15.Location = new System.Drawing.Point(390, 746);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(219, 298);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4156,7 +4143,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(413, 116);
+            this.pictureBox9.Location = new System.Drawing.Point(391, 114);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(219, 298);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4169,7 +4156,7 @@
             // pictureBox16
             // 
             this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.Location = new System.Drawing.Point(693, 746);
+            this.pictureBox16.Location = new System.Drawing.Point(671, 746);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(219, 298);
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4182,7 +4169,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(693, 116);
+            this.pictureBox11.Location = new System.Drawing.Point(671, 114);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(219, 298);
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4195,7 +4182,7 @@
             // pictureBox17
             // 
             this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.Location = new System.Drawing.Point(693, 1070);
+            this.pictureBox17.Location = new System.Drawing.Point(671, 1070);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(219, 298);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4208,7 +4195,7 @@
             // pictureBox12
             // 
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(412, 1070);
+            this.pictureBox12.Location = new System.Drawing.Point(390, 1070);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(219, 298);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4221,7 +4208,7 @@
             // pictureBox18
             // 
             this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.Location = new System.Drawing.Point(693, 431);
+            this.pictureBox18.Location = new System.Drawing.Point(671, 429);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(219, 298);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4234,7 +4221,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(133, 432);
+            this.pictureBox13.Location = new System.Drawing.Point(111, 430);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(219, 298);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4247,7 +4234,7 @@
             // pictureBox19
             // 
             this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.Location = new System.Drawing.Point(133, 1189);
+            this.pictureBox19.Location = new System.Drawing.Point(111, 1189);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(219, 203);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4260,7 +4247,7 @@
             // pictureBox14
             // 
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(412, 431);
+            this.pictureBox14.Location = new System.Drawing.Point(390, 429);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(219, 298);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4273,7 +4260,7 @@
             // pictureBox20
             // 
             this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.Location = new System.Drawing.Point(133, 746);
+            this.pictureBox20.Location = new System.Drawing.Point(111, 746);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(219, 298);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4285,7 +4272,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblSY);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label1);
@@ -4306,7 +4293,7 @@
             this.lblSY.AutoSize = true;
             this.lblSY.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSY.ForeColor = System.Drawing.Color.White;
-            this.lblSY.Location = new System.Drawing.Point(564, 23);
+            this.lblSY.Location = new System.Drawing.Point(550, 22);
             this.lblSY.Name = "lblSY";
             this.lblSY.Size = new System.Drawing.Size(40, 16);
             this.lblSY.TabIndex = 1023;
@@ -4322,7 +4309,6 @@
             this.label17.Size = new System.Drawing.Size(18, 17);
             this.label17.TabIndex = 1022;
             this.label17.Text = "__";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label1
             // 
@@ -4334,7 +4320,6 @@
             this.label1.Size = new System.Drawing.Size(17, 17);
             this.label1.TabIndex = 1020;
             this.label1.Text = "X";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label14
             // 
@@ -4357,7 +4342,6 @@
             this.label13.Size = new System.Drawing.Size(72, 21);
             this.label13.TabIndex = 1020;
             this.label13.Text = "Settings";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // pictureBox3
             // 
@@ -4380,18 +4364,28 @@
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
             // 
+            // dispanel
+            // 
+            this.dispanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
+            this.dispanel.Location = new System.Drawing.Point(65, 53);
+            this.dispanel.Name = "dispanel";
+            this.dispanel.Size = new System.Drawing.Size(1215, 666);
+            this.dispanel.TabIndex = 1037;
+            this.dispanel.Visible = false;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.studprofpanel);
             this.Controls.Add(this.StudentlistPanel);
             this.Controls.Add(this.Dashboardpanel);
-            this.Controls.Add(this.studprofpanel);
+            this.Controls.Add(this.MaintenancePanel);
+            this.Controls.Add(this.dispanel);
             this.Controls.Add(this.SidebarPanel);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.MaintenancePanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -4399,6 +4393,8 @@
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.SidebarPanel.ResumeLayout(false);
             this.SidebarPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
@@ -4414,7 +4410,7 @@
             this.panel14.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logdgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -4446,13 +4442,12 @@
             this.StudentlistPanel.ResumeLayout(false);
             this.StudentlistPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MaintenancePanel.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
@@ -4572,7 +4567,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Logdgv;
         private System.Windows.Forms.Label label137;
         private System.Windows.Forms.Label label138;
         private System.Windows.Forms.Label Headertit;
@@ -4580,9 +4575,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label Headerline;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label3;
@@ -4743,7 +4735,6 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
@@ -4821,5 +4812,10 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.DataGridView dgvSearch;
+        private System.Windows.Forms.Panel dispanel;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

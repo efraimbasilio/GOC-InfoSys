@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBilling));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -45,15 +45,17 @@
             this.label135 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.lblAmountDue = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lblBalance = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
             this.txtPayNumber = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbPaymentFor = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.lblPerMonthAdv = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dgvPerMonth = new System.Windows.Forms.DataGridView();
+            this.PaymentMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvFeeHistory = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,14 +71,21 @@
             this.dgvSubjectLoad = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label26 = new System.Windows.Forms.Label();
+            this.lblAmountDue = new System.Windows.Forms.Label();
+            this.lblFullPayment = new System.Windows.Forms.Label();
+            this.lblPartial = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblReservationTag = new System.Windows.Forms.Label();
+            this.lblBalance = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbPaymentFor = new System.Windows.Forms.ComboBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblReserve = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblDownpayment = new System.Windows.Forms.Label();
-            this.lblFullPayment = new System.Windows.Forms.Label();
-            this.lblPartial = new System.Windows.Forms.Label();
-            this.lblReservationTag = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.lblTotalPayment = new System.Windows.Forms.Label();
             this.lblVoucher = new System.Windows.Forms.Label();
@@ -105,13 +114,20 @@
             this.cmbMOP = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerMonth)).BeginInit();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFeeHistory)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -119,7 +135,10 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectLoad)).BeginInit();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -240,138 +259,132 @@
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.lblAmountDue);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.lblBalance);
-            this.panel1.Controls.Add(this.txtPayNumber);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.cmbPaymentFor);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.groupBox6);
-            this.panel1.Controls.Add(this.groupBox5);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.lblStrand);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lblLRN);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.lblName);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.lblGradeLevel);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.lblRegNo);
-            this.panel1.Controls.Add(this.lblTrack);
-            this.panel1.Controls.Add(this.lblGOCNo);
-            this.panel1.Controls.Add(this.cmbMOP);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Location = new System.Drawing.Point(12, 53);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Location = new System.Drawing.Point(7, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1263, 616);
+            this.panel1.Size = new System.Drawing.Size(1273, 660);
             this.panel1.TabIndex = 1014;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // label26
+            // panel3
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(21, 330);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(69, 13);
-            this.label26.TabIndex = 1046;
-            this.label26.Text = "Amount Due:";
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Location = new System.Drawing.Point(549, 110);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(307, 36);
+            this.panel3.TabIndex = 1050;
             // 
-            // lblAmountDue
+            // label17
             // 
-            this.lblAmountDue.Location = new System.Drawing.Point(97, 330);
-            this.lblAmountDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAmountDue.Name = "lblAmountDue";
-            this.lblAmountDue.Size = new System.Drawing.Size(89, 15);
-            this.lblAmountDue.TabIndex = 1045;
-            this.lblAmountDue.Text = "__________________";
-            this.lblAmountDue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(8, 10);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(152, 13);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Breakdown for Partial Payment";
             // 
-            // label16
+            // panel6
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(21, 296);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(76, 13);
-            this.label16.TabIndex = 1044;
-            this.label16.Text = "Total Balance:";
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(224)))));
+            this.panel6.Controls.Add(this.label28);
+            this.panel6.Controls.Add(this.txtPayNumber);
+            this.panel6.Location = new System.Drawing.Point(353, 509);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(504, 36);
+            this.panel6.TabIndex = 1049;
             // 
-            // lblBalance
+            // label28
             // 
-            this.lblBalance.Location = new System.Drawing.Point(97, 296);
-            this.lblBalance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblBalance.Name = "lblBalance";
-            this.lblBalance.Size = new System.Drawing.Size(89, 15);
-            this.lblBalance.TabIndex = 1043;
-            this.lblBalance.Text = "__________________";
-            this.lblBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.Color.White;
+            this.label28.Location = new System.Drawing.Point(8, 10);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(180, 13);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "Student Payment History Breakdown";
             // 
             // txtPayNumber
             // 
-            this.txtPayNumber.Location = new System.Drawing.Point(304, 289);
+            this.txtPayNumber.Location = new System.Drawing.Point(475, 3);
             this.txtPayNumber.Name = "txtPayNumber";
             this.txtPayNumber.Size = new System.Drawing.Size(22, 20);
             this.txtPayNumber.TabIndex = 1042;
+            this.txtPayNumber.Visible = false;
             // 
-            // label6
+            // lblPerMonthAdv
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 364);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 1039;
-            this.label6.Text = "Payment For:";
+            this.lblPerMonthAdv.Location = new System.Drawing.Point(103, 51);
+            this.lblPerMonthAdv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPerMonthAdv.Name = "lblPerMonthAdv";
+            this.lblPerMonthAdv.Size = new System.Drawing.Size(139, 20);
+            this.lblPerMonthAdv.TabIndex = 1048;
+            this.lblPerMonthAdv.Text = "__________________";
+            this.lblPerMonthAdv.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cmbPaymentFor
+            // groupBox4
             // 
-            this.cmbPaymentFor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPaymentFor.FormattingEnabled = true;
-            this.cmbPaymentFor.Location = new System.Drawing.Point(100, 361);
-            this.cmbPaymentFor.Name = "cmbPaymentFor";
-            this.cmbPaymentFor.Size = new System.Drawing.Size(171, 21);
-            this.cmbPaymentFor.TabIndex = 1038;
-            this.cmbPaymentFor.SelectedValueChanged += new System.EventHandler(this.cmbPaymentFor_SelectedValueChanged);
+            this.groupBox4.Controls.Add(this.dgvPerMonth);
+            this.groupBox4.Location = new System.Drawing.Point(549, 131);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(307, 337);
+            this.groupBox4.TabIndex = 1047;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Breakdown for Partial Payment";
             // 
-            // groupBox2
+            // dgvPerMonth
             // 
-            this.groupBox2.Controls.Add(this.dgvSearch);
-            this.groupBox2.Location = new System.Drawing.Point(11, 409);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1210, 186);
-            this.groupBox2.TabIndex = 1037;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Payment Per Month";
+            this.dgvPerMonth.AllowUserToAddRows = false;
+            this.dgvPerMonth.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvPerMonth.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPerMonth.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPerMonth.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PaymentMonth,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dgvPerMonth.GridColor = System.Drawing.Color.White;
+            this.dgvPerMonth.Location = new System.Drawing.Point(-39, 15);
+            this.dgvPerMonth.Name = "dgvPerMonth";
+            this.dgvPerMonth.ReadOnly = true;
+            this.dgvPerMonth.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPerMonth.Size = new System.Drawing.Size(342, 321);
+            this.dgvPerMonth.TabIndex = 1014;
             // 
-            // btnSearch
+            // PaymentMonth
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(185, 17);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(96, 31);
-            this.btnSearch.TabIndex = 1024;
-            this.btnSearch.Text = "&Search";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.PaymentMonth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.PaymentMonth.HeaderText = "Payment Month";
+            this.PaymentMonth.Name = "PaymentMonth";
+            this.PaymentMonth.ReadOnly = true;
+            this.PaymentMonth.Width = 97;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Payment  No.";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 68;
             // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.dgvFeeHistory);
             this.groupBox6.Controls.Add(this.groupBox1);
             this.groupBox6.Controls.Add(this.groupBox3);
-            this.groupBox6.Location = new System.Drawing.Point(676, 19);
+            this.groupBox6.Location = new System.Drawing.Point(353, 525);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(548, 348);
+            this.groupBox6.Size = new System.Drawing.Size(504, 342);
             this.groupBox6.TabIndex = 1036;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Student Payment History - Break Down";
@@ -388,21 +401,20 @@
             this.AmountGiven,
             this.RemainingBalance,
             this.dataGridViewTextBoxColumn8});
-            this.dgvFeeHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvFeeHistory.GridColor = System.Drawing.Color.White;
-            this.dgvFeeHistory.Location = new System.Drawing.Point(3, 16);
+            this.dgvFeeHistory.Location = new System.Drawing.Point(-40, 16);
             this.dgvFeeHistory.Name = "dgvFeeHistory";
             this.dgvFeeHistory.ReadOnly = true;
             this.dgvFeeHistory.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvFeeHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFeeHistory.Size = new System.Drawing.Size(542, 329);
+            this.dgvFeeHistory.Size = new System.Drawing.Size(544, 325);
             this.dgvFeeHistory.TabIndex = 1014;
             // 
             // dataGridViewTextBoxColumn7
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle11.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn7.HeaderText = "OR No.";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -417,10 +429,10 @@
             // AmountGiven
             // 
             this.AmountGiven.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "N2";
-            dataGridViewCellStyle12.NullValue = null;
-            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle7;
             this.AmountGiven.HeaderText = "Amount Given";
             this.AmountGiven.Name = "AmountGiven";
             this.AmountGiven.ReadOnly = true;
@@ -429,8 +441,8 @@
             // RemainingBalance
             // 
             this.RemainingBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle8;
             this.RemainingBalance.HeaderText = "Payment No.";
             this.RemainingBalance.Name = "RemainingBalance";
             this.RemainingBalance.ReadOnly = true;
@@ -439,9 +451,9 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle14.NullValue = "0.00";
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle9.NullValue = "0.00";
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewTextBoxColumn8.HeaderText = "Date and Time";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -525,82 +537,34 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Format = "n";
-            dataGridViewCellStyle15.NullValue = "0.00";
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "n";
+            dataGridViewCellStyle10.NullValue = "0.00";
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewTextBoxColumn6.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
-            // groupBox5
+            // label26
             // 
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Controls.Add(this.lblReserve);
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.lblDownpayment);
-            this.groupBox5.Controls.Add(this.lblFullPayment);
-            this.groupBox5.Controls.Add(this.lblPartial);
-            this.groupBox5.Controls.Add(this.lblReservationTag);
-            this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Controls.Add(this.lblTotalPayment);
-            this.groupBox5.Controls.Add(this.lblVoucher);
-            this.groupBox5.Controls.Add(this.label24);
-            this.groupBox5.Controls.Add(this.label25);
-            this.groupBox5.Controls.Add(this.lblVoucherAmount);
-            this.groupBox5.Controls.Add(this.label23);
-            this.groupBox5.Controls.Add(this.lblOther);
-            this.groupBox5.Controls.Add(this.label20);
-            this.groupBox5.Controls.Add(this.lblTotalMiscFee);
-            this.groupBox5.Controls.Add(this.label21);
-            this.groupBox5.Controls.Add(this.lblTuition);
-            this.groupBox5.Location = new System.Drawing.Point(396, 19);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(250, 348);
-            this.groupBox5.TabIndex = 1035;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Student Fees";
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(26, 58);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(69, 13);
+            this.label26.TabIndex = 1046;
+            this.label26.Text = "Amount Due:";
             // 
-            // label9
+            // lblAmountDue
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 184);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 13);
-            this.label9.TabIndex = 1040;
-            this.label9.Text = "Reservation Fee:";
-            // 
-            // lblReserve
-            // 
-            this.lblReserve.Location = new System.Drawing.Point(137, 184);
-            this.lblReserve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblReserve.Name = "lblReserve";
-            this.lblReserve.Size = new System.Drawing.Size(89, 15);
-            this.lblReserve.TabIndex = 1039;
-            this.lblReserve.Text = "__________________";
-            this.lblReserve.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 163);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
-            this.label5.TabIndex = 1038;
-            this.label5.Text = "Downpayment:";
-            // 
-            // lblDownpayment
-            // 
-            this.lblDownpayment.Location = new System.Drawing.Point(137, 163);
-            this.lblDownpayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDownpayment.Name = "lblDownpayment";
-            this.lblDownpayment.Size = new System.Drawing.Size(89, 15);
-            this.lblDownpayment.TabIndex = 1037;
-            this.lblDownpayment.Text = "__________________";
-            this.lblDownpayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAmountDue.Location = new System.Drawing.Point(174, 159);
+            this.lblAmountDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAmountDue.Name = "lblAmountDue";
+            this.lblAmountDue.Size = new System.Drawing.Size(89, 15);
+            this.lblAmountDue.TabIndex = 1045;
+            this.lblAmountDue.Text = "__________________";
+            this.lblAmountDue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblFullPayment
             // 
@@ -608,7 +572,7 @@
             this.lblFullPayment.BackColor = System.Drawing.Color.White;
             this.lblFullPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullPayment.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblFullPayment.Location = new System.Drawing.Point(46, 78);
+            this.lblFullPayment.Location = new System.Drawing.Point(742, 76);
             this.lblFullPayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFullPayment.Name = "lblFullPayment";
             this.lblFullPayment.Size = new System.Drawing.Size(129, 20);
@@ -621,12 +585,22 @@
             this.lblPartial.BackColor = System.Drawing.Color.White;
             this.lblPartial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPartial.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPartial.Location = new System.Drawing.Point(32, 50);
+            this.lblPartial.Location = new System.Drawing.Point(742, 51);
             this.lblPartial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPartial.Name = "lblPartial";
             this.lblPartial.Size = new System.Drawing.Size(156, 20);
             this.lblPartial.TabIndex = 1035;
             this.lblPartial.Text = "PARTIAL PAYMENT";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(26, 24);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(76, 13);
+            this.label16.TabIndex = 1044;
+            this.label16.Text = "Total Balance:";
             // 
             // lblReservationTag
             // 
@@ -634,18 +608,126 @@
             this.lblReservationTag.BackColor = System.Drawing.Color.White;
             this.lblReservationTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReservationTag.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblReservationTag.Location = new System.Drawing.Point(28, 23);
+            this.lblReservationTag.Location = new System.Drawing.Point(742, 26);
             this.lblReservationTag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblReservationTag.Name = "lblReservationTag";
             this.lblReservationTag.Size = new System.Drawing.Size(172, 20);
             this.lblReservationTag.TabIndex = 1034;
             this.lblReservationTag.Text = "RESERVATION ONLY";
             // 
+            // lblBalance
+            // 
+            this.lblBalance.Location = new System.Drawing.Point(123, 20);
+            this.lblBalance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(89, 15);
+            this.lblBalance.TabIndex = 1043;
+            this.lblBalance.Text = "__________________";
+            this.lblBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(27, 126);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.TabIndex = 1039;
+            this.label6.Text = "Payment For:";
+            // 
+            // cmbPaymentFor
+            // 
+            this.cmbPaymentFor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPaymentFor.FormattingEnabled = true;
+            this.cmbPaymentFor.Location = new System.Drawing.Point(119, 124);
+            this.cmbPaymentFor.Name = "cmbPaymentFor";
+            this.cmbPaymentFor.Size = new System.Drawing.Size(144, 21);
+            this.cmbPaymentFor.TabIndex = 1038;
+            this.cmbPaymentFor.SelectedValueChanged += new System.EventHandler(this.cmbPaymentFor_SelectedValueChanged);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(632, 26);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(96, 31);
+            this.btnSearch.TabIndex = 1024;
+            this.btnSearch.Text = "&Search";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.lblReserve);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Controls.Add(this.lblDownpayment);
+            this.groupBox5.Controls.Add(this.label22);
+            this.groupBox5.Controls.Add(this.lblTotalPayment);
+            this.groupBox5.Controls.Add(this.lblVoucher);
+            this.groupBox5.Controls.Add(this.label24);
+            this.groupBox5.Controls.Add(this.label25);
+            this.groupBox5.Controls.Add(this.lblVoucherAmount);
+            this.groupBox5.Controls.Add(this.label23);
+            this.groupBox5.Controls.Add(this.lblOther);
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this.lblTotalMiscFee);
+            this.groupBox5.Controls.Add(this.label21);
+            this.groupBox5.Controls.Add(this.lblTuition);
+            this.groupBox5.Location = new System.Drawing.Point(293, 110);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(250, 265);
+            this.groupBox5.TabIndex = 1035;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Student Fees";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(19, 101);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 13);
+            this.label9.TabIndex = 1040;
+            this.label9.Text = "Reservation Fee:";
+            // 
+            // lblReserve
+            // 
+            this.lblReserve.Location = new System.Drawing.Point(143, 101);
+            this.lblReserve.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReserve.Name = "lblReserve";
+            this.lblReserve.Size = new System.Drawing.Size(89, 15);
+            this.lblReserve.TabIndex = 1039;
+            this.lblReserve.Text = "__________________";
+            this.lblReserve.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 80);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.TabIndex = 1038;
+            this.label5.Text = "Downpayment:";
+            // 
+            // lblDownpayment
+            // 
+            this.lblDownpayment.Location = new System.Drawing.Point(143, 80);
+            this.lblDownpayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDownpayment.Name = "lblDownpayment";
+            this.lblDownpayment.Size = new System.Drawing.Size(89, 15);
+            this.lblDownpayment.TabIndex = 1037;
+            this.lblDownpayment.Text = "__________________";
+            this.lblDownpayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(7, 297);
+            this.label22.Location = new System.Drawing.Point(13, 214);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(234, 15);
@@ -654,7 +736,7 @@
             // 
             // lblTotalPayment
             // 
-            this.lblTotalPayment.Location = new System.Drawing.Point(133, 322);
+            this.lblTotalPayment.Location = new System.Drawing.Point(139, 239);
             this.lblTotalPayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalPayment.Name = "lblTotalPayment";
             this.lblTotalPayment.Size = new System.Drawing.Size(89, 15);
@@ -666,7 +748,7 @@
             // 
             this.lblVoucher.AutoSize = true;
             this.lblVoucher.BackColor = System.Drawing.Color.White;
-            this.lblVoucher.Location = new System.Drawing.Point(137, 117);
+            this.lblVoucher.Location = new System.Drawing.Point(143, 34);
             this.lblVoucher.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVoucher.Name = "lblVoucher";
             this.lblVoucher.Size = new System.Drawing.Size(79, 13);
@@ -676,7 +758,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(10, 117);
+            this.label24.Location = new System.Drawing.Point(16, 34);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(77, 13);
@@ -686,7 +768,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(10, 142);
+            this.label25.Location = new System.Drawing.Point(16, 59);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(89, 13);
@@ -695,7 +777,7 @@
             // 
             // lblVoucherAmount
             // 
-            this.lblVoucherAmount.Location = new System.Drawing.Point(137, 142);
+            this.lblVoucherAmount.Location = new System.Drawing.Point(143, 59);
             this.lblVoucherAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVoucherAmount.Name = "lblVoucherAmount";
             this.lblVoucherAmount.Size = new System.Drawing.Size(89, 15);
@@ -706,7 +788,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(6, 271);
+            this.label23.Location = new System.Drawing.Point(12, 188);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(120, 13);
@@ -715,7 +797,7 @@
             // 
             // lblOther
             // 
-            this.lblOther.Location = new System.Drawing.Point(135, 268);
+            this.lblOther.Location = new System.Drawing.Point(141, 185);
             this.lblOther.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOther.Name = "lblOther";
             this.lblOther.Size = new System.Drawing.Size(89, 15);
@@ -726,7 +808,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 243);
+            this.label20.Location = new System.Drawing.Point(12, 160);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(125, 13);
@@ -735,7 +817,7 @@
             // 
             // lblTotalMiscFee
             // 
-            this.lblTotalMiscFee.Location = new System.Drawing.Point(136, 243);
+            this.lblTotalMiscFee.Location = new System.Drawing.Point(142, 160);
             this.lblTotalMiscFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalMiscFee.Name = "lblTotalMiscFee";
             this.lblTotalMiscFee.Size = new System.Drawing.Size(89, 15);
@@ -746,7 +828,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(7, 222);
+            this.label21.Location = new System.Drawing.Point(13, 139);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(90, 13);
@@ -755,7 +837,7 @@
             // 
             // lblTuition
             // 
-            this.lblTuition.Location = new System.Drawing.Point(137, 222);
+            this.lblTuition.Location = new System.Drawing.Point(143, 139);
             this.lblTuition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTuition.Name = "lblTuition";
             this.lblTuition.Size = new System.Drawing.Size(89, 15);
@@ -766,7 +848,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 95);
+            this.label2.Location = new System.Drawing.Point(26, 134);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
@@ -777,7 +859,7 @@
             // 
             this.lblStrand.AutoSize = true;
             this.lblStrand.BackColor = System.Drawing.Color.White;
-            this.lblStrand.Location = new System.Drawing.Point(115, 222);
+            this.lblStrand.Location = new System.Drawing.Point(133, 261);
             this.lblStrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStrand.Name = "lblStrand";
             this.lblStrand.Size = new System.Drawing.Size(157, 13);
@@ -787,7 +869,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 146);
+            this.label1.Location = new System.Drawing.Point(26, 185);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 13);
@@ -797,7 +879,7 @@
             // lblLRN
             // 
             this.lblLRN.AutoSize = true;
-            this.lblLRN.Location = new System.Drawing.Point(109, 71);
+            this.lblLRN.Location = new System.Drawing.Point(127, 110);
             this.lblLRN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLRN.Name = "lblLRN";
             this.lblLRN.Size = new System.Drawing.Size(47, 13);
@@ -807,7 +889,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(8, 71);
+            this.label15.Location = new System.Drawing.Point(26, 110);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(32, 13);
@@ -817,7 +899,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(114, 146);
+            this.lblName.Location = new System.Drawing.Point(132, 185);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(157, 13);
@@ -827,7 +909,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 170);
+            this.label4.Location = new System.Drawing.Point(26, 209);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
@@ -837,7 +919,7 @@
             // lblGradeLevel
             // 
             this.lblGradeLevel.AutoSize = true;
-            this.lblGradeLevel.Location = new System.Drawing.Point(114, 170);
+            this.lblGradeLevel.Location = new System.Drawing.Point(132, 209);
             this.lblGradeLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGradeLevel.Name = "lblGradeLevel";
             this.lblGradeLevel.Size = new System.Drawing.Size(157, 13);
@@ -847,7 +929,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(8, 197);
+            this.label11.Location = new System.Drawing.Point(26, 236);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 13);
@@ -857,7 +939,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(8, 119);
+            this.label13.Location = new System.Drawing.Point(26, 158);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(83, 13);
@@ -867,7 +949,7 @@
             // lblRegNo
             // 
             this.lblRegNo.AutoSize = true;
-            this.lblRegNo.Location = new System.Drawing.Point(114, 119);
+            this.lblRegNo.Location = new System.Drawing.Point(132, 158);
             this.lblRegNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegNo.Name = "lblRegNo";
             this.lblRegNo.Size = new System.Drawing.Size(157, 13);
@@ -877,7 +959,7 @@
             // lblTrack
             // 
             this.lblTrack.AutoSize = true;
-            this.lblTrack.Location = new System.Drawing.Point(114, 197);
+            this.lblTrack.Location = new System.Drawing.Point(132, 236);
             this.lblTrack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTrack.Name = "lblTrack";
             this.lblTrack.Size = new System.Drawing.Size(157, 13);
@@ -887,7 +969,7 @@
             // lblGOCNo
             // 
             this.lblGOCNo.AutoSize = true;
-            this.lblGOCNo.Location = new System.Drawing.Point(114, 95);
+            this.lblGOCNo.Location = new System.Drawing.Point(132, 134);
             this.lblGOCNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGOCNo.Name = "lblGOCNo";
             this.lblGOCNo.Size = new System.Drawing.Size(115, 13);
@@ -901,16 +983,16 @@
             this.cmbMOP.Items.AddRange(new object[] {
             "Full Payment",
             "Partial Payment"});
-            this.cmbMOP.Location = new System.Drawing.Point(117, 247);
+            this.cmbMOP.Location = new System.Drawing.Point(135, 90);
             this.cmbMOP.Name = "cmbMOP";
-            this.cmbMOP.Size = new System.Drawing.Size(155, 21);
+            this.cmbMOP.Size = new System.Drawing.Size(128, 21);
             this.cmbMOP.TabIndex = 1028;
             this.cmbMOP.SelectedValueChanged += new System.EventHandler(this.cmbMOP_SelectedValueChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 250);
+            this.label8.Location = new System.Drawing.Point(26, 93);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 13);
@@ -920,40 +1002,105 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 222);
+            this.label7.Location = new System.Drawing.Point(27, 261);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 13);
             this.label7.TabIndex = 1019;
             this.label7.Text = "Strand:";
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel8);
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel3);
+            this.panel4.Controls.Add(this.groupBox6);
+            this.panel4.Controls.Add(this.groupBox4);
+            this.panel4.Controls.Add(this.lblFullPayment);
+            this.panel4.Controls.Add(this.label15);
+            this.panel4.Controls.Add(this.lblPartial);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.lblReservationTag);
+            this.panel4.Controls.Add(this.lblGOCNo);
+            this.panel4.Controls.Add(this.lblTrack);
+            this.panel4.Controls.Add(this.lblRegNo);
+            this.panel4.Controls.Add(this.btnSearch);
+            this.panel4.Controls.Add(this.label13);
+            this.panel4.Controls.Add(this.groupBox5);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.lblGradeLevel);
+            this.panel4.Controls.Add(this.lblStrand);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.lblName);
+            this.panel4.Controls.Add(this.lblLRN);
+            this.panel4.Location = new System.Drawing.Point(189, 82);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(935, 892);
+            this.panel4.TabIndex = 1051;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(224)))));
+            this.panel5.Controls.Add(this.label27);
+            this.panel5.Location = new System.Drawing.Point(189, 41);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(935, 50);
+            this.panel5.TabIndex = 1052;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Roboto Medium", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(16, 10);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(146, 29);
+            this.label27.TabIndex = 1032;
+            this.label27.Text = "Accounting";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label16);
+            this.panel7.Controls.Add(this.lblBalance);
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.lblAmountDue);
+            this.panel7.Controls.Add(this.cmbPaymentFor);
+            this.panel7.Controls.Add(this.label26);
+            this.panel7.Controls.Add(this.cmbMOP);
+            this.panel7.Controls.Add(this.lblPerMonthAdv);
+            this.panel7.Controls.Add(this.label8);
+            this.panel7.Location = new System.Drawing.Point(58, 545);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(289, 185);
+            this.panel7.TabIndex = 1052;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(224)))));
+            this.panel8.Controls.Add(this.label19);
+            this.panel8.Location = new System.Drawing.Point(58, 509);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(289, 36);
+            this.panel8.TabIndex = 1051;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.DimGray;
-            this.label19.Location = new System.Drawing.Point(22, 19);
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(8, 10);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(141, 29);
-            this.label19.TabIndex = 1014;
-            this.label19.Text = "Accounting";
-            // 
-            // dgvSearch
-            // 
-            this.dgvSearch.AllowUserToAddRows = false;
-            this.dgvSearch.AllowUserToDeleteRows = false;
-            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(15, 19);
-            this.dgvSearch.Name = "dgvSearch";
-            this.dgvSearch.ReadOnly = true;
-            this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(1189, 167);
-            this.dgvSearch.TabIndex = 1032;
+            this.label19.Size = new System.Drawing.Size(48, 13);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Payment";
             // 
             // frmBilling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel1);
@@ -968,8 +1115,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPerMonth)).EndInit();
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFeeHistory)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -978,7 +1129,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectLoad)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -996,7 +1154,6 @@
         private System.Windows.Forms.Label label135;
         private System.Windows.Forms.PictureBox pictureBox22;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblStrand;
         private System.Windows.Forms.Label label1;
@@ -1027,7 +1184,6 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dgvFeeHistory;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label21;
         public System.Windows.Forms.Label lblReservationTag;
         public System.Windows.Forms.Label lblPartial;
@@ -1057,6 +1213,21 @@
         public System.Windows.Forms.Label lblAmountDue;
         private System.Windows.Forms.Label label16;
         public System.Windows.Forms.Label lblBalance;
-        private System.Windows.Forms.DataGridView dgvSearch;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataGridView dgvPerMonth;
+        public System.Windows.Forms.Label lblPerMonthAdv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PaymentMonth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panel7;
     }
 }

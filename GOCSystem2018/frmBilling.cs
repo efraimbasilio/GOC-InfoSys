@@ -52,9 +52,12 @@ namespace GOCSystem2018
         /**********************************************************************************/
        
         public string LRN, StudID, StudName, GradeLevel, Track,Strand, Semester, MOP, SY, VoucherType, RegNo, DP;
-        public int CTRpayment;
+        public int CTRpayment,perMonthRange;
         public double BalancePartial;
-
+       
+       
+        public string sMonth2 = DateTime.Now.ToString("MM");
+       
 
         /***********************************************************************************/
         /*PUBLIC METHOD*/
@@ -109,9 +112,7 @@ namespace GOCSystem2018
                 }
             }
         }//End LoadRecords
-
-        
-
+       
         public void LoadAssesMiscFees()
         {
             
@@ -215,13 +216,47 @@ namespace GOCSystem2018
             }
         }//End LoadRecords
 
+        public void ComputePerMonth(int range)
+        {
+            
+           // MessageBox.Show(sMonth2);
+            double sum1 = 0;
+            for (int i = 0; i < range; i++)
+            {
+                sum1 += Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value);
+            }
+            lblPerMonthAdv.Text = sum1.ToString("n");
+        }
+
+        public void AutoComputePerMonth(int range)
+        {
+            if (dgvPerMonth.Rows.Count > 1)
+            {
+                double sum1 = 0;
+                for (int i = 0; i < range; i++)
+                {
+                    sum1 += Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value);
+                }
+                lblPerMonthAdv.Text = sum1.ToString("n");
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         public void LoadBillingHistory()
         {
             //clear list
             billings.Clear();
             dgvFeeHistory.Rows.Clear();
             //pass value to list
-            bill.StudentId = StudID;
+            bill.StudentId = lblGOCNo.Text;
             billings = bill.GetPaymentHistory();
 
             //loop through load it to list view
@@ -229,6 +264,122 @@ namespace GOCSystem2018
             {
                 dgvFeeHistory.Rows.Add(Convert.ToInt32(item.OrNo), item.StudentId, Convert.ToDouble(item.AmountGiven),Convert.ToInt32(item.PaymentNo),item.PaymentDate);
             }
+        }
+
+        //private void SelectData()
+        //{
+        //    if (dgvSearch.SelectedRows.Count > 0)
+        //    {
+        //        //clear list
+        //        studProfiles.Clear();
+        //        //pass value
+        //        studProfile.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
+        //        studProfiles = studProfile.GetById();
+
+        //        foreach (var item in studProfiles)
+        //        {
+        //            //pass variable to form Assesment
+        //            StudName = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
+        //            StudID = item.StudGOCNo;
+        //            LRN = item.StudLRN;
+        //            GradeLevel = item.StudGradeLevel;
+        //            Track = item.Track;
+        //            Strand = item.StudStrand;
+        //            VoucherType = item.VoucherType;
+        //            RegNo = item.StudRegistrationNo;
+
+        //            if (item.Reservee.Equals("1"))
+        //            {
+        //                lblReservationTag.ForeColor = Color.Red;
+        //                lblReservationTag.BackColor = Color.Black;
+        //                CTRpayment = 1;
+        //                cmbMOP.Enabled = false;
+
+        //                //frmBilling.cmbPaymentFor.Items.Clear();
+        //                //frmBilling.cmbPaymentFor.Items.Add("Reservation");
+        //                //frmBilling.cmbPaymentFor.Text = "Reservation";
+        //            }
+
+        //            if (item.PartialPayment.Equals("1"))
+        //            {
+        //                lblPartial.ForeColor = Color.Red;
+        //                lblPartial.BackColor = Color.Black;
+        //                //frmBilling.cmbMOP.Text = "Partial Payment";
+        //                cmbMOP.Enabled = false;
+        //                CTRpayment = 2;
+        //            }
+
+        //            //if (item.FullPayment.Equals("1"))
+        //            //{
+        //            //    frmBilling.lblFullPayment.ForeColor = Color.Red;
+        //            //    frmBilling.lblFullPayment.BackColor = Color.Black;
+        //            //    frmBilling.cmbMOP.Text = "Full Payment";
+        //            //    frmBilling.CTRpayment = 3;
+        //            //}                    
+        //        }
+
+        //        frmBilling.CallPaymentNumber();
+
+        //        //set up before form load
+        //        frmBilling.Render();
+        //        frmBilling.Show();
+        //        //this.Dispose();
+        //    }
+        //}
+
+        public void GetPerMonth()
+        {
+           
+
+                //clear list
+            billingPartials.Clear();
+                dgvPerMonth.Rows.Clear();
+                //pass value to list                    
+                billingPartial.RegNo = RegNo;
+                billingPartials = billingPartial.GetMonthlyDue();
+
+                //loop through load it to list view
+                foreach (var item in billingPartials)
+                {
+
+
+                    //Months will be concat as variables
+                    string Month_1 = "June      ";
+                    string Month_2 = "July      ";
+                    string Month_3 = "August    ";
+                    string Month_4 = "September ";
+                    string Month_5 = "October   ";
+                    string Month_6 = "November  ";
+                    string Month_7 = "December  ";
+                    string Month_8 = "January   ";
+                    string Month_9 = "February  ";
+                    string Month_10 = "March   ";
+
+                    dgvPerMonth.Rows.Add("", " Down Payment", item.DownPayment);
+
+                    dgvPerMonth.Rows.Add(Month_1, "1st Payment", item.P1);
+
+                    dgvPerMonth.Rows.Add(Month_2, "2nd Payment", item.P2);
+
+                    dgvPerMonth.Rows.Add(Month_3, "3rd Payment", item.P3);
+
+                    dgvPerMonth.Rows.Add(Month_4, "4th Payment", item.P4);
+
+                    dgvPerMonth.Rows.Add(Month_5, "5th Payment", item.P5);
+
+                    dgvPerMonth.Rows.Add(Month_6, "6th Payment", item.P6);
+
+                    dgvPerMonth.Rows.Add(Month_7, "7th Payment", item.P7);
+
+                    dgvPerMonth.Rows.Add(Month_8, "8th Payment", item.P8);
+
+                    dgvPerMonth.Rows.Add(Month_9, "9th Payment", item.P9);
+
+                    dgvPerMonth.Rows.Add(Month_10, "10th Payment", item.P10);
+
+                }
+           
+            
         }
 
         public void LoadPaymentNo()
@@ -242,7 +393,7 @@ namespace GOCSystem2018
             //loop through load it to list view
             foreach (var item in billings)
             {
-                MessageBox.Show(item.PaymentNo);
+                CTRpayment = Convert.ToInt32(item.PaymentNo);
             }
         }
 
@@ -273,6 +424,23 @@ namespace GOCSystem2018
 
         public void Render()
         {
+            
+            //June to March SY 
+            if (Convert.ToInt32(sMonth2) < 6)
+            {
+                int result = 0;
+                result = Convert.ToInt32(sMonth2) + 8;
+                AutoComputePerMonth(result);
+            }
+
+            if (Convert.ToInt32(sMonth2) >= 6)
+            {
+                int result = 0;
+                result = Convert.ToInt32(sMonth2) - 4;
+                AutoComputePerMonth(result);
+            }
+
+
             if (CTRpayment == 1)
             {
                 cmbPaymentFor.Items.Clear();
@@ -341,38 +509,42 @@ namespace GOCSystem2018
         /*************************************************************************************/
         private void frmBilling_Load(object sender, EventArgs e)
         {
-            LoadRecords();
-        }
-        private void LoadRecords()
-        {
-            try
-            {
-                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
-                {
-                    con.Open();
-                    string sql = "SELECT * FROM billing_partial";
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
-                    MySqlDataAdapter da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    //initialize new datatable
-                    DataTable dt = new DataTable();
+           
+            LoadBillingHistory();
 
-                    da.Fill(dt);
-                    dgvSearch.DataSource = dt;
+            #region designing DVG
+            dgvFeeHistory.BorderStyle = BorderStyle.None;
+            dgvFeeHistory.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvFeeHistory.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvFeeHistory.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dgvFeeHistory.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvFeeHistory.BackgroundColor = Color.White;
 
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            dgvFeeHistory.EnableHeadersVisualStyles = false;
+            dgvFeeHistory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvFeeHistory.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvFeeHistory.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            dgvPerMonth.BorderStyle = BorderStyle.None;
+            dgvPerMonth.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvPerMonth.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvPerMonth.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dgvPerMonth.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvPerMonth.BackgroundColor = Color.White;
+
+            dgvPerMonth.EnableHeadersVisualStyles = false;
+            dgvPerMonth.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvPerMonth.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvPerMonth.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            #endregion
         }
+
 
         private void cmbMOP_SelectedValueChanged(object sender, EventArgs e)
         {
             if (cmbMOP.SelectedItem.Equals("Partial Payment"))
             {
-                GetPartialBalance();
+                //GetPartialBalance();
                 cmbPaymentFor.Items.Clear();
                 cmbPaymentFor.Items.Add("Downpayment");
                 cmbPaymentFor.Items.Add("1st Payment");
@@ -414,7 +586,6 @@ namespace GOCSystem2018
             if (cmbPaymentFor.SelectedItem.Equals("Reservation"))
             {
                 toPay.amountToPay = lblReserve.Text;
-
                 toPay.paymentFor = cmbPaymentFor.SelectedItem.ToString();
                 toPay.TotalTuition = Convert.ToDouble(lblTotalPayment.Text);
                 toPay.FullName = lblName.Text;
@@ -428,7 +599,8 @@ namespace GOCSystem2018
             }
             else if (cmbPaymentFor.SelectedItem.Equals("Downpayment"))
             {
-               
+                
+
                 toPay.amountToPay = DP;//view of payment
                 //create a maintenance
                 //for late payment of the downpaymnet
@@ -454,6 +626,123 @@ namespace GOCSystem2018
 
                 toPay.BalancePartial = BalancePartial;
 
+                toPay.Render();
+                toPay.ShowDialog();
+                toPay.amountToPay = lblAmountDue.Text;
+            }
+
+            else if (cmbPaymentFor.SelectedItem.Equals("1st Payment"))
+            {
+                perMonthRange = 2;
+                ComputePerMonth(perMonthRange);
+                toPay.GOCNo = lblGOCNo.Text;
+                toPay.amountToPay = lblPerMonthAdv.Text;
+                toPay.RegNo = lblRegNo.Text;
+
+                toPay.Render();
+                toPay.lblpayNumber.Text = perMonthRange.ToString();
+                toPay.ShowDialog();
+                
+
+            }
+            else if (cmbPaymentFor.SelectedItem.Equals("2nd Payment"))
+            {
+                perMonthRange = 3;
+                ComputePerMonth(perMonthRange);
+                toPay.GOCNo = lblGOCNo.Text;
+                toPay.RegNo = lblRegNo.Text;
+                toPay.amountToPay = lblPerMonthAdv.Text;
+                toPay.lblpayNumber.Text = perMonthRange.ToString();
+                toPay.Render();
+
+                toPay.ShowDialog();
+            }
+            else if (cmbPaymentFor.SelectedItem.Equals("3rd Payment"))
+            {
+                perMonthRange = 4;
+                ComputePerMonth(perMonthRange);
+                toPay.GOCNo = lblGOCNo.Text;
+                toPay.RegNo = lblRegNo.Text;
+                toPay.amountToPay = lblPerMonthAdv.Text;
+                toPay.lblpayNumber.Text = perMonthRange.ToString();
+                toPay.Render();
+                toPay.ShowDialog();
+            }
+            else if (cmbPaymentFor.SelectedItem.Equals("4th Payment"))
+            {
+                perMonthRange = 5;
+                ComputePerMonth(perMonthRange);
+                toPay.GOCNo = lblGOCNo.Text;
+                toPay.RegNo = lblRegNo.Text;
+                toPay.amountToPay = lblPerMonthAdv.Text;
+                toPay.lblpayNumber.Text = perMonthRange.ToString();
+                toPay.Render();
+                toPay.ShowDialog();
+            
+            }
+            else if (cmbPaymentFor.SelectedItem.Equals("5th Payment"))
+            {
+                perMonthRange = 6;
+                ComputePerMonth(perMonthRange);
+                toPay.GOCNo = lblGOCNo.Text;
+                toPay.RegNo = lblRegNo.Text;
+                toPay.amountToPay = lblPerMonthAdv.Text;
+                toPay.lblpayNumber.Text = perMonthRange.ToString();
+                toPay.Render();
+                toPay.ShowDialog();
+            }
+            else if (cmbPaymentFor.SelectedItem.Equals("6th Payment"))
+            {
+                perMonthRange = 7;
+                ComputePerMonth(perMonthRange);
+                toPay.GOCNo = lblGOCNo.Text;
+                toPay.RegNo = lblRegNo.Text;
+                toPay.amountToPay = lblPerMonthAdv.Text;
+                toPay.lblpayNumber.Text = perMonthRange.ToString();
+                toPay.Render();
+                toPay.ShowDialog();
+            }
+            else if (cmbPaymentFor.SelectedItem.Equals("7th Payment"))
+            {
+                perMonthRange = 8;
+                ComputePerMonth(perMonthRange);
+                toPay.GOCNo = lblGOCNo.Text;
+                toPay.RegNo = lblRegNo.Text;
+                toPay.amountToPay = lblPerMonthAdv.Text;
+                toPay.lblpayNumber.Text = perMonthRange.ToString();
+                toPay.Render();
+                toPay.ShowDialog();
+            }
+            else if (cmbPaymentFor.SelectedItem.Equals("8th Payment"))
+            {
+                perMonthRange = 9;
+                ComputePerMonth(perMonthRange);
+                toPay.GOCNo = lblGOCNo.Text;
+                toPay.RegNo = lblRegNo.Text;
+                toPay.amountToPay = lblPerMonthAdv.Text;
+                toPay.lblpayNumber.Text = perMonthRange.ToString();
+                toPay.Render();
+                toPay.ShowDialog();
+            }
+            else if (cmbPaymentFor.SelectedItem.Equals("9th Payment"))
+            {
+                perMonthRange = 10;
+                ComputePerMonth(perMonthRange);
+                toPay.GOCNo = lblGOCNo.Text;
+                toPay.RegNo = lblRegNo.Text;
+                toPay.amountToPay = lblPerMonthAdv.Text;
+                toPay.lblpayNumber.Text = perMonthRange.ToString();
+                toPay.Render();
+                toPay.ShowDialog();
+            }
+            else if (cmbPaymentFor.SelectedItem.Equals("10th Payment"))
+            {
+                perMonthRange = 11;
+                ComputePerMonth(perMonthRange);
+                toPay.GOCNo = lblGOCNo.Text;
+                toPay.RegNo = lblRegNo.Text;
+                toPay.amountToPay = lblPerMonthAdv.Text;
+                toPay.lblpayNumber.Text = perMonthRange.ToString();
                 toPay.Render();
                 toPay.ShowDialog();
             }

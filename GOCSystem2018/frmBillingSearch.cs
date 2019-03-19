@@ -72,6 +72,7 @@ namespace GOCSystem2018
                 //pass value
                 studentProfile.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
                 studentProfiles = studentProfile.GetById();
+                                          
 
                 foreach (var item in studentProfiles)
                 {
@@ -90,15 +91,21 @@ namespace GOCSystem2018
                         frmBilling.lblReservationTag.ForeColor = Color.Red;
                         frmBilling.lblReservationTag.BackColor = Color.Black;
                         frmBilling.CTRpayment = 1;
+                        frmBilling.cmbMOP.Enabled = false;
+                        
+                        //frmBilling.cmbPaymentFor.Items.Clear();
+                        //frmBilling.cmbPaymentFor.Items.Add("Reservation");
+                        //frmBilling.cmbPaymentFor.Text = "Reservation";
                     }
 
-                    //if (item.PartialPayment.Equals("1"))
-                    //{
-                    //    frmBilling.lblPartial.ForeColor = Color.Red;
-                    //    frmBilling.lblPartial.BackColor = Color.Black;
-                    //    frmBilling.cmbMOP.Text = "Partial Payment";
-                    //    frmBilling.CTRpayment = 2;
-                    //}
+                    if (item.PartialPayment.Equals("1"))
+                    {
+                        frmBilling.lblPartial.ForeColor = Color.Red;
+                        frmBilling.lblPartial.BackColor = Color.Black;
+                        //frmBilling.cmbMOP.Text = "Partial Payment";
+                        frmBilling.cmbMOP.Enabled = false;
+                        frmBilling.CTRpayment = 2;
+                    }
 
                     //if (item.FullPayment.Equals("1"))
                     //{
@@ -110,6 +117,9 @@ namespace GOCSystem2018
                 }
 
                 frmBilling.CallPaymentNumber();
+                frmBilling.GetPerMonth();
+               
+                
                 //set up before form load
                 frmBilling.Render();
                 frmBilling.Show();
@@ -158,6 +168,19 @@ namespace GOCSystem2018
         private void frmBillingSearch_Load(object sender, EventArgs e)
         {
             LoadRecords();
+            #region designing dgv
+            dgvSearch.BorderStyle = BorderStyle.None;
+            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
+            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvSearch.BackgroundColor = Color.White;
+
+            dgvSearch.EnableHeadersVisualStyles = false;
+            dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            #endregion
         }
 
         private void button1_Click(object sender, EventArgs e)
