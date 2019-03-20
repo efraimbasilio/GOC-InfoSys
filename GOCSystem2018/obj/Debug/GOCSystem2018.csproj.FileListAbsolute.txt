@@ -540,7 +540,6 @@ C:\Users\Instructor\Desktop\GOC-InfoSys - Im Working\GOCSystem2018\obj\Debug\GOC
 C:\Users\Instructor\Desktop\GOC-InfoSys - Im Working\GOCSystem2018\obj\Debug\GOCSystem2018.frmReports.resources
 C:\Users\Instructor\Desktop\GOC-InfoSys - Im Working\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmBillingSearch.resources
-C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
 C:\Users\EF\Desktop\OK\GOC-InfoSys\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
 C:\Users\EF\Desktop\OK\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.exe
 C:\Users\EF\Desktop\OK\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
@@ -890,8 +889,6 @@ C:\Users\Instructor\Desktop\C - Copy\GOCSystem2018\bin\Debug\Google.Protobuf.dll
 C:\Users\Instructor\Desktop\C - Copy\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Instructor\Desktop\C - Copy\GOCSystem2018\bin\Debug\stdole.dll
 C:\Users\Instructor\Desktop\C - Copy\GOCSystem2018\bin\Debug\MySql.Data.xml
-C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\Google.Protobuf.dll
-C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\MySql.Data.xml
 C:\Users\EF\Desktop\GOC-InfoSys-master\GOC-InfoSys-master\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
 C:\Users\EF\Desktop\GOC-InfoSys-master\GOC-InfoSys-master\GOCSystem2018\obj\Debug\GOCSystem2018.exe
 C:\Users\EF\Desktop\GOC-InfoSys-master\GOC-InfoSys-master\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
@@ -1065,3 +1062,4 @@ C:\Users\Instructor\Desktop\GOC-InfoSys-master - Copy - Copy\GOC-InfoSys-master\
 C:\Users\Instructor\Desktop\GOC-InfoSys-master - Copy - Copy\GOC-InfoSys-master\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Instructor\Desktop\GOC-InfoSys-master - Copy - Copy\GOC-InfoSys-master\GOCSystem2018\bin\Debug\stdole.dll
 C:\Users\Instructor\Desktop\GOC-InfoSys-master - Copy - Copy\GOC-InfoSys-master\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache

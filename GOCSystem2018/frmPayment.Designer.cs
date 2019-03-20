@@ -53,7 +53,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPerMonthAdv = new System.Windows.Forms.Label();
             this.lblCalc = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.lblpayNumber = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -210,7 +210,7 @@
             this.btnProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcess.ForeColor = System.Drawing.Color.White;
-            this.btnProcess.Location = new System.Drawing.Point(292, 287);
+            this.btnProcess.Location = new System.Drawing.Point(18, 324);
             this.btnProcess.Name = "btnProcess";
             this.btnProcess.Size = new System.Drawing.Size(146, 31);
             this.btnProcess.TabIndex = 1040;
@@ -324,18 +324,18 @@
             this.lblCalc.TabIndex = 1050;
             this.lblCalc.Text = "Payment For:";
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(491, 287);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 31);
-            this.button1.TabIndex = 1051;
-            this.button1.Text = "&Confirm Amount";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(345, 290);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(58, 31);
+            this.btnSave.TabIndex = 1051;
+            this.btnSave.Text = "&Confirm Amount";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblpayNumber
             // 
@@ -366,7 +366,7 @@
             this.ClientSize = new System.Drawing.Size(1102, 411);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblpayNumber);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblCalc);
             this.Controls.Add(this.lblPerMonthAdv);
             this.Controls.Add(this.groupBox4);
@@ -420,7 +420,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Label lblPerMonthAdv;
         private System.Windows.Forms.Label lblCalc;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Label lblpayNumber;
         private System.Windows.Forms.Label label6;
     }

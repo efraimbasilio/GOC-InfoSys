@@ -68,24 +68,140 @@ namespace GOCSystem2018
 
         private void button1_Click(object sender, EventArgs e)
         {
-                    ComputePerMonth();
-                    ComputeBalancePayment();
-                    SavePayments();
 
-            //studProfile.StudRegistrationNo = RegNo;                            
-            bill.StudentId = GOCNo;
-            bill.RegNo = RegNo;
-            bill.OrNo = txtORNo.Text;
-            bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+            if (Convert.ToDouble(lblAmountDue.Text) == Convert.ToDouble(txtAmountGiven.Text))
+            {
+                #region EXACT PAYMENT
 
-            CountPayment();
-            bill.PaymentNo = count.ToString();
+                double sum2 = 0;
+                double result1 = (Convert.ToDouble(lblAmountDue.Text) - Convert.ToDouble(txtAmountGiven.Text));
 
-            bill.Save();
+                for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
+                {
+                    sum2 += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
+
+                    if (i < (Convert.ToInt32(lblpayNumber.Text)))
+                    {
+                        if (result1 < perMonthFee)
+                        {
+                            dgvPerMonth.Rows[i].Cells[2].Value = 0.00;
+                        }
+                    }
+                }
+                #endregion
+            }
+            else if (Convert.ToDouble(lblAmountDue.Text) > Convert.ToDouble(txtAmountGiven.Text))
+            {
+                #region LESS PAYMENT 
+
+                double TotalFee = 0;
+                double Payments;
+                double result = (Convert.ToDouble(lblAmountDue.Text) - Convert.ToDouble(txtAmountGiven.Text));
+
+                //get the sum of all amount in dgv
+                for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
+                {
+                    TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
+                }
+
+                Payments = TotalFee - Convert.ToDouble(txtAmountGiven.Text);
+
+                double toLoop = 0;
+                toLoop = Payments / perMonthFee;
+
+                double remainingAfter = 0;
+                remainingAfter = Payments % perMonthFee;
+
+                if (remainingAfter < perMonthFee)
+                {
+                    int loop;
+                    loop = Convert.ToInt32(Math.Floor(toLoop) + 1);
+                    loop = dgvPerMonth.Rows.Count - loop;
+
+                    //lagyan lahat ng default
+                    for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
+                    {
+                        dgvPerMonth.Rows[i].Cells[2].Value = 0.00;
+                    }
+
+                    for (int i = dgvPerMonth.Rows.Count - 1; i > loop - 1; i--)
+                    {
+                        //TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
+                        //MessageBox.Show(i.ToString());
+                        dgvPerMonth.Rows[i].Cells[2].Value = perMonthFee;
+                    }
+                    dgvPerMonth.Rows[loop].Cells[2].Value = remainingAfter;
+                }
+
+                #endregion
+            }
+            else if (Convert.ToDouble(txtAmountGiven.Text) > Convert.ToDouble(lblAmountDue.Text))
+            {
+                #region ADVANCE PAYMENT 
+
+                double TotalFee = 0;
+                double Payments;
+                double result = (Convert.ToDouble(lblAmountDue.Text) - Convert.ToDouble(txtAmountGiven.Text));
+
+                //get the sum of all amount in dgv
+                for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
+                {
+                    TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));                               
+                }
+
+                Payments = TotalFee - Convert.ToDouble(txtAmountGiven.Text);
+
+                double toLoop = 0;
+                toLoop = Payments / perMonthFee;
+
+                double remainingAfter = 0;
+                remainingAfter = Payments % perMonthFee;
+                             
+                if (remainingAfter < perMonthFee)
+                {
+                    int loop;
+                    loop = Convert.ToInt32(Math.Floor(toLoop) + 1);
+                    loop = dgvPerMonth.Rows.Count - loop;
+                   
+                    //lagyan lahat ng default
+                    for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
+                    {
+                        dgvPerMonth.Rows[i].Cells[2].Value = 0.00;                        
+                    }
+                                                          
+                    for (int i = dgvPerMonth.Rows.Count -1 ; i > loop - 1; i--)
+                    {
+                        //TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
+                        //MessageBox.Show(i.ToString());
+                        dgvPerMonth.Rows[i].Cells[2].Value = perMonthFee;                                                        
+                    }
+                    dgvPerMonth.Rows[loop].Cells[2].Value = remainingAfter;                                                                   
+                }              
+                #endregion
+            }
         }
 
-       
+        public void advancePAy()
+        {
+            double ans = 0;
 
+            double una = Convert.ToDouble(dgvPerMonth.Rows[0].Cells[2].Value) + Convert.ToDouble(dgvPerMonth.Rows[1].Cells[2].Value);
+            double una1 = Convert.ToDouble(dgvPerMonth.Rows[1].Cells[2].Value) + Convert.ToDouble(dgvPerMonth.Rows[2].Cells[2].Value);
+            double una2 = Convert.ToDouble(dgvPerMonth.Rows[2].Cells[2].Value) + Convert.ToDouble(dgvPerMonth.Rows[3].Cells[2].Value);
+            double una3 = Convert.ToDouble(dgvPerMonth.Rows[3].Cells[2].Value) + Convert.ToDouble(dgvPerMonth.Rows[4].Cells[2].Value);
+            double una4 = Convert.ToDouble(dgvPerMonth.Rows[4].Cells[2].Value) + Convert.ToDouble(dgvPerMonth.Rows[5].Cells[2].Value);
+            double una5 = Convert.ToDouble(dgvPerMonth.Rows[5].Cells[2].Value) + Convert.ToDouble(dgvPerMonth.Rows[6].Cells[2].Value);
+            double una6 = Convert.ToDouble(dgvPerMonth.Rows[6].Cells[2].Value) + Convert.ToDouble(dgvPerMonth.Rows[7].Cells[2].Value);
+            double una7 = Convert.ToDouble(dgvPerMonth.Rows[7].Cells[2].Value) + Convert.ToDouble(dgvPerMonth.Rows[8].Cells[2].Value);
+            double una8 = Convert.ToDouble(dgvPerMonth.Rows[8].Cells[2].Value) + Convert.ToDouble(dgvPerMonth.Rows[9].Cells[2].Value);
+            double una9 = Convert.ToDouble(dgvPerMonth.Rows[9].Cells[2].Value) + Convert.ToDouble(dgvPerMonth.Rows[10].Cells[2].Value);
+            double una10 = Convert.ToDouble(dgvPerMonth.Rows[10].Cells[2].Value);
+
+            
+
+
+        }
+      
         public string OrNo,PayNum;
 
         public string sMonth2 = DateTime.Now.ToString("MM");
@@ -569,8 +685,7 @@ namespace GOCSystem2018
                     else
                     {
                         return;
-                    }   
-                                                      
+                    }                                                         
                    
                 }
                 else if (paymentFor.Equals("Downpayment"))
@@ -595,40 +710,12 @@ namespace GOCSystem2018
                     PartialPayment();
 
                 }
+
                 else if (paymentFor.Equals("1st Payment"))
                 {
-                    if (Convert.ToInt32(paymentNo) > 1)
-                    {
-                        bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
-                        bill.OrNo = txtORNo.Text;
-                        bill.StudentId = GOCNo;
-                        studProfile.StudRegistrationNo = RegNo;
-                        CountPayment();
-                        bill.PaymentNo = count.ToString();
-                        bill.Save();
-
-
-                    }
-
-                    PartialPayment();
+                    btnSave.PerformClick();
                 }
 
-                else if (paymentFor.Equals("2nd Payment"))
-                {
-                    if (Convert.ToInt32(paymentNo) > 1)
-                    {
-                        bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
-                        bill.OrNo = txtORNo.Text;
-                        bill.StudentId = GOCNo;
-                        studProfile.StudRegistrationNo = RegNo;
-                        bill.RegNo = RegNo;
-                        CountPayment();
-                        bill.PaymentNo = count.ToString();
-                        bill.Save();
-                    }
-
-                    PartialPayment();
-                }
 
                 this.Hide();
                 frmBilling frm = new frmBilling();

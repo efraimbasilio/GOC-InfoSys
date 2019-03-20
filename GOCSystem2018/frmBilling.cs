@@ -328,58 +328,42 @@ namespace GOCSystem2018
         //}
 
         public void GetPerMonth()
-        {
-           
-
-                //clear list
+        {          
+            //clear list
             billingPartials.Clear();
-                dgvPerMonth.Rows.Clear();
-                //pass value to list                    
-                billingPartial.RegNo = RegNo;
-                billingPartials = billingPartial.GetMonthlyDue();
+            dgvPerMonth.Rows.Clear();
+            //pass value to list                    
+            billingPartial.RegNo = RegNo;
+            billingPartials = billingPartial.GetMonthlyDue();
 
-                //loop through load it to list view
-                foreach (var item in billingPartials)
-                {
+            //loop through load it to list view
+            foreach (var item in billingPartials)
+            {
+                //Months will be concat as variables
+                string Month_1 = "June      ";
+                string Month_2 = "July      ";
+                string Month_3 = "August    ";
+                string Month_4 = "September ";
+                string Month_5 = "October   ";
+                string Month_6 = "November  ";
+                string Month_7 = "December  ";
+                string Month_8 = "January   ";
+                string Month_9 = "February  ";
+                string Month_10 = "March   ";
 
+                dgvPerMonth.Rows.Add("", " Down Payment", item.DownPayment);
+                dgvPerMonth.Rows.Add(Month_1, "1st Payment", item.P1);
+                dgvPerMonth.Rows.Add(Month_2, "2nd Payment", item.P2);
+                dgvPerMonth.Rows.Add(Month_3, "3rd Payment", item.P3);
+                dgvPerMonth.Rows.Add(Month_4, "4th Payment", item.P4);
+                dgvPerMonth.Rows.Add(Month_5, "5th Payment", item.P5);
+                dgvPerMonth.Rows.Add(Month_6, "6th Payment", item.P6);
+                dgvPerMonth.Rows.Add(Month_7, "7th Payment", item.P7);
+                dgvPerMonth.Rows.Add(Month_8, "8th Payment", item.P8);
+                dgvPerMonth.Rows.Add(Month_9, "9th Payment", item.P9);
+                dgvPerMonth.Rows.Add(Month_10, "10th Payment", item.P10);
 
-                    //Months will be concat as variables
-                    string Month_1 = "June      ";
-                    string Month_2 = "July      ";
-                    string Month_3 = "August    ";
-                    string Month_4 = "September ";
-                    string Month_5 = "October   ";
-                    string Month_6 = "November  ";
-                    string Month_7 = "December  ";
-                    string Month_8 = "January   ";
-                    string Month_9 = "February  ";
-                    string Month_10 = "March   ";
-
-                    dgvPerMonth.Rows.Add("", " Down Payment", item.DownPayment);
-
-                    dgvPerMonth.Rows.Add(Month_1, "1st Payment", item.P1);
-
-                    dgvPerMonth.Rows.Add(Month_2, "2nd Payment", item.P2);
-
-                    dgvPerMonth.Rows.Add(Month_3, "3rd Payment", item.P3);
-
-                    dgvPerMonth.Rows.Add(Month_4, "4th Payment", item.P4);
-
-                    dgvPerMonth.Rows.Add(Month_5, "5th Payment", item.P5);
-
-                    dgvPerMonth.Rows.Add(Month_6, "6th Payment", item.P6);
-
-                    dgvPerMonth.Rows.Add(Month_7, "7th Payment", item.P7);
-
-                    dgvPerMonth.Rows.Add(Month_8, "8th Payment", item.P8);
-
-                    dgvPerMonth.Rows.Add(Month_9, "9th Payment", item.P9);
-
-                    dgvPerMonth.Rows.Add(Month_10, "10th Payment", item.P10);
-
-                }
-           
-            
+            }                       
         }
 
         public void LoadPaymentNo()
