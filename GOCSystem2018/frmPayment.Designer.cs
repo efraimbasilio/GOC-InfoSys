@@ -56,6 +56,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.lblpayNumber = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblTheAmount = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -210,7 +211,7 @@
             this.btnProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcess.ForeColor = System.Drawing.Color.White;
-            this.btnProcess.Location = new System.Drawing.Point(18, 324);
+            this.btnProcess.Location = new System.Drawing.Point(10, 365);
             this.btnProcess.Name = "btnProcess";
             this.btnProcess.Size = new System.Drawing.Size(146, 31);
             this.btnProcess.TabIndex = 1040;
@@ -221,7 +222,7 @@
             // lblAmountDue
             // 
             this.lblAmountDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmountDue.Location = new System.Drawing.Point(288, 181);
+            this.lblAmountDue.Location = new System.Drawing.Point(613, 216);
             this.lblAmountDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAmountDue.Name = "lblAmountDue";
             this.lblAmountDue.Size = new System.Drawing.Size(150, 20);
@@ -233,7 +234,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(61, 113);
+            this.label5.Location = new System.Drawing.Point(549, 181);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 20);
@@ -244,7 +245,7 @@
             // 
             this.lblPaymentFor.AutoSize = true;
             this.lblPaymentFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentFor.Location = new System.Drawing.Point(172, 113);
+            this.lblPaymentFor.Location = new System.Drawing.Point(660, 181);
             this.lblPaymentFor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaymentFor.Name = "lblPaymentFor";
             this.lblPaymentFor.Size = new System.Drawing.Size(103, 20);
@@ -329,9 +330,9 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(345, 290);
+            this.btnSave.Location = new System.Drawing.Point(292, 280);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(58, 31);
+            this.btnSave.Size = new System.Drawing.Size(148, 31);
             this.btnSave.TabIndex = 1051;
             this.btnSave.Text = "&Confirm Amount";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -359,11 +360,24 @@
             this.label6.TabIndex = 1053;
             this.label6.Text = "Remaining Balance";
             // 
+            // lblTheAmount
+            // 
+            this.lblTheAmount.AutoSize = true;
+            this.lblTheAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTheAmount.Location = new System.Drawing.Point(318, 181);
+            this.lblTheAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTheAmount.Name = "lblTheAmount";
+            this.lblTheAmount.Size = new System.Drawing.Size(122, 24);
+            this.lblTheAmount.TabIndex = 1054;
+            this.lblTheAmount.Text = "Payment For:";
+            this.lblTheAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 411);
+            this.Controls.Add(this.lblTheAmount);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblpayNumber);
             this.Controls.Add(this.btnSave);
@@ -384,6 +398,7 @@
             this.Name = "frmPayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmPayment";
+            this.Load += new System.EventHandler(this.frmPayment_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
@@ -410,7 +425,6 @@
         private System.Windows.Forms.TextBox txtAmountGiven;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnProcess;
-        private System.Windows.Forms.Label lblAmountDue;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblPaymentFor;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -423,5 +437,7 @@
         private System.Windows.Forms.Button btnSave;
         public System.Windows.Forms.Label lblpayNumber;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label lblAmountDue;
+        public System.Windows.Forms.Label lblTheAmount;
     }
 }

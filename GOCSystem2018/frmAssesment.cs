@@ -672,40 +672,103 @@ namespace GOCSystem2018
             //Partial Payment
             if (cmbMOP.Text == "Partial Payment")
             {
-                pnlRES.Visible = false;
-               // billingPartial.RegNo = lblRegNo.Text;
-                //billingPartial.ORNo = 
-                billingPartial.IdNo = lblGOCNo.Text;
-                billingPartial.Full_name = lblName.Text;
-                billingPartial.DownPayment = lblDownpayment.Text;
+                //pnlRES.Visible = false;
+                string message = "Do you want to proceed to payment ?";
+                string title = "GOC_INFO_SYS";
 
-                //lblTotalFees.Text;
-                double ans = Convert.ToDouble(lblTotalFees.Text) - Convert.ToDouble(lblVoucherAmount.Text);
-                MessageBox.Show(ans.ToString("n"));
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
 
-                //billingPartial.P1;
-                //billingPartial.P2;
-                //billingPartial.P3;
-                //billingPartial.P4;
-                //billingPartial.P5;
-                //billingPartial.P6;
-                //billingPartial.P7;
-                //billingPartial.P8;
-                //billingPartial.P9;
-                //billingPartial.P10;
-                //billingPartial.Balance;
+                if (result == DialogResult.Yes)
+                {
+                    billingPartial.IdNo = lblGOCNo.Text;
+                    billingPartial.Full_name = lblName.Text;
+                    billingPartial.DownPayment = lblDownpayment.Text;
+
+                    //lblTotalFees.Text;
+                    double ans = Convert.ToDouble(lblTotalFees.Text) - Convert.ToDouble(lblVoucherAmount.Text);
+                    MessageBox.Show(ans.ToString("n"));
+
+                    studProfile.StudRegistrationNo = RegNo;
+                    studProfile.PartialPayment = "1";
+                    studProfile.PartialOnly();
+
+
+                    
+
+                }                               
             }
+
             else if (cmbMOP.Text == "Full Payment")
             {
                 pnlRES.Visible = false;
 
             }
+
             else if (cmbMOP.Text == "Reservation")
             {
-                pnlRES.Visible = true;
-              
+                //pnlRES.Visible = true;
 
-                
+                string message = "Do you want to proceed the Reservation?";
+                string title = "GOC_INFO_SYS";
+
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+
+                if (result == DialogResult.Yes)
+                {
+                    // this.optYES.Checked = true;
+                    if (cmbMOP.SelectedItem.Equals("Reservation"))
+                    {
+                        //if (optYES.Checked == true && GradeLevel.Equals("11"))
+                        //{
+                        studProfile.ReserveFor = lblGradeLevel.Text;
+                        MessageBox.Show(studProfile.ReserveFor);
+                        studProfile.StudRegistrationNo = RegNo;
+                        studProfile.Reservee = "1";
+                        studProfile.ReserveOnly();
+
+                        frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                        this.Hide();
+                        this.Dispose();
+                        frmBillingSearch.Show();
+
+                        //}
+
+                        //else if (optYES.Checked == true && GradeLevel.Equals("12"))
+                        //{
+                        //    studProfile.ReserveFor = lblGradeLevel.Text;
+                        //    MessageBox.Show(studProfile.ReserveFor);
+                        //    studProfile.StudRegistrationNo = RegNo;
+                        //    studProfile.Reservee = "1";
+                        //    studProfile.ReserveOnly();
+
+                        //    frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                        //    this.Hide();
+                        //    this.Dispose();
+                        //    frmBillingSearch.Show();
+                        //}
+                    }
+                }
+                else
+                {
+                    optNO.Checked = true;
+                    pnlRES.Visible = false;
+                    cmbMOP.Text = "";
+                }
+
+                //studProfile.Reservee = "0";
+                //studProfile.PartialPayment = "0";
+                //studProfile.FullPayment = "0";
+
+                //studProfile.StudRegistrationNo = RegNo;
+                //studProfile.ReserveOnly();
+
+                //frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                //this.Hide();
+                //this.Dispose();
+                //frmBillingSearch.Show();
+
             }
         }
 
@@ -778,11 +841,11 @@ namespace GOCSystem2018
 
             if (result == DialogResult.Yes)
             {
-                this.optYES.Checked = true;
+               // this.optYES.Checked = true;
                 if (cmbMOP.SelectedItem.Equals("Reservation"))
                 {
-                    if (optYES.Checked == true && GradeLevel.Equals("11"))
-                    {
+                    //if (optYES.Checked == true && GradeLevel.Equals("11"))
+                    //{
                         studProfile.ReserveFor = lblGradeLevel.Text;
                         MessageBox.Show(studProfile.ReserveFor);
                         studProfile.StudRegistrationNo = RegNo;
@@ -793,21 +856,21 @@ namespace GOCSystem2018
                         this.Hide();
                         this.Dispose();
                         frmBillingSearch.Show();
-                    }
+                    //}
 
-                    else if (optYES.Checked == true && GradeLevel.Equals("12"))
-                    {
-                        studProfile.ReserveFor = lblGradeLevel.Text;
-                        MessageBox.Show(studProfile.ReserveFor);
-                        studProfile.StudRegistrationNo = RegNo;
-                        studProfile.Reservee = "1";
-                        studProfile.ReserveOnly();
+                    //else if (optYES.Checked == true && GradeLevel.Equals("12"))
+                    //{
+                    //    studProfile.ReserveFor = lblGradeLevel.Text;
+                    //    MessageBox.Show(studProfile.ReserveFor);
+                    //    studProfile.StudRegistrationNo = RegNo;
+                    //    studProfile.Reservee = "1";
+                    //    studProfile.ReserveOnly();
 
-                        frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                        this.Hide();
-                        this.Dispose();
-                        frmBillingSearch.Show();
-                    }
+                    //    frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                    //    this.Hide();
+                    //    this.Dispose();
+                    //    frmBillingSearch.Show();
+                    //}
                 }
             }
             else
@@ -828,6 +891,11 @@ namespace GOCSystem2018
             //this.Hide();
             //this.Dispose();
             //frmBillingSearch.Show();
+        }
+
+        private void optYES_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void button4_Click_2(object sender, EventArgs e)

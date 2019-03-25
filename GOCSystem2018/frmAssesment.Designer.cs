@@ -607,7 +607,7 @@
             this.pnlRES.Controls.Add(this.optNO);
             this.pnlRES.Controls.Add(this.optYES);
             this.pnlRES.Controls.Add(this.label9);
-            this.pnlRES.Location = new System.Drawing.Point(252, 374);
+            this.pnlRES.Location = new System.Drawing.Point(577, 413);
             this.pnlRES.Name = "pnlRES";
             this.pnlRES.Size = new System.Drawing.Size(289, 33);
             this.pnlRES.TabIndex = 1024;
@@ -636,6 +636,7 @@
             this.optYES.TabIndex = 1022;
             this.optYES.Text = "YES";
             this.optYES.UseVisualStyleBackColor = true;
+            this.optYES.CheckedChanged += new System.EventHandler(this.optYES_CheckedChanged);
             // 
             // label9
             // 

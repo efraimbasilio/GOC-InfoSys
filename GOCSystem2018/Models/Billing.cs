@@ -190,6 +190,44 @@ namespace GOCSystem2018
             return bills;
         }
 
+        public List<Billing> GetPaymentNo2()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM billing_or WHERE regNo=@regNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("regNo", regNo);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Billing bill = new Billing();
+                        //prepare properties
+                        bill.paymentNo = reader["payment_no"].ToString();
+                        bills.Add(bill);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return bills;
+        }
+
         public List<Billing> GetReserveFee()
         {
             try
@@ -245,6 +283,50 @@ namespace GOCSystem2018
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("studentId", studentId);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Billing bill = new Billing();
+                        //prepare properties
+                        bill.id = Convert.ToInt32(reader["id"].ToString());
+                        bill.studentId = reader["IDNo"].ToString();
+                        bill.orNo = reader["OrNo"].ToString();
+                        bill.amountGiven = Convert.ToDouble(reader["amount_given"].ToString());
+                        bill.paymentNo = reader["payment_no"].ToString();
+                        bill.paymentDate = reader["payment_date"].ToString();
+
+                        bills.Add(bill);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return bills;
+        }
+
+        public List<Billing> GetPaymentPatrial()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM billing_or WHERE regno=@regNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("regNo", regNo);
 
                     MySqlDataReader reader = cmd.ExecuteReader();
 
