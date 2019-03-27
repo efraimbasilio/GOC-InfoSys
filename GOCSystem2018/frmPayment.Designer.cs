@@ -57,6 +57,7 @@
             this.lblpayNumber = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTheAmount = new System.Windows.Forms.Label();
+            this.lblEnStatus = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -372,11 +373,23 @@
             this.lblTheAmount.Text = "Payment For:";
             this.lblTheAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // lblEnStatus
+            // 
+            this.lblEnStatus.AutoSize = true;
+            this.lblEnStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnStatus.Location = new System.Drawing.Point(314, 314);
+            this.lblEnStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEnStatus.Name = "lblEnStatus";
+            this.lblEnStatus.Size = new System.Drawing.Size(91, 20);
+            this.lblEnStatus.TabIndex = 1055;
+            this.lblEnStatus.Text = "lblEnStatus";
+            // 
             // frmPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 411);
+            this.Controls.Add(this.lblEnStatus);
             this.Controls.Add(this.lblTheAmount);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblpayNumber);
@@ -439,5 +452,6 @@
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.Label lblAmountDue;
         public System.Windows.Forms.Label lblTheAmount;
+        private System.Windows.Forms.Label lblEnStatus;
     }
 }

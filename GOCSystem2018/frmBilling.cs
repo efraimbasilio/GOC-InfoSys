@@ -234,9 +234,9 @@ namespace GOCSystem2018
         {
             frmPayment pay = new frmPayment();
             //MessageBox.Show(lblPerMonthAdv.Text);
-            
-           
-           // ComputePerMonth(MonthNumber);
+
+
+            // ComputePerMonth(MonthNumber);
             ////pay.GOCNo = lblGOCNo.Text;          
 
             ////pay.lblpayNumber.Text = perMonthRange.ToString();
@@ -244,7 +244,7 @@ namespace GOCSystem2018
             //pay.Render();
             //pay.ShowDialog();
 
-
+            
             if (lblMOPInfo.Text == "RESERVATION")
             {
                 pay.lblTheAmount.Text = lblPerMonthAdv.Text;
@@ -256,7 +256,7 @@ namespace GOCSystem2018
                 pay.voucherInfo = lblVoucher.Text;
                 pay.VoucherAmount = Convert.ToDouble(lblVoucherAmount.Text);
                 pay.RegNo = lblRegNo.Text;
-                pay.reservationFee = lblReserve.Text;
+               
 
                 pay.MOPInfo = lblMOPInfo.Text;
 
@@ -275,7 +275,7 @@ namespace GOCSystem2018
                 //pay.paymentFor = cmbPaymentFor.SelectedItem.ToString();
                 //pay.reservationFee = lblReserve.Text;
 
-
+                pay.reservationFee = lblReserve.Text;
                 pay.TotalTuition = Convert.ToDouble(lblTotalPayment.Text);
                 pay.FullName = lblName.Text;
                 pay.voucherInfo = lblVoucher.Text;
@@ -612,17 +612,14 @@ namespace GOCSystem2018
 
                     LoadGetPaymentNo();
 
-                    if (Convert.ToInt32(lblPaymentNoCheck) > 0)
+                    if (Convert.ToInt32(lblPaymentNoCheck.Text) > 0)
+                    {
+                        toPay.DPCheck = Convert.ToInt32(lblPaymentNoCheck.Text);                        
+                    }
+                    else if(Convert.ToInt32(lblPaymentNoCheck.Text) == 0)//first time to pay
                     {
                         toPay.DPCheck = Convert.ToInt32(lblPaymentNoCheck.Text);
-                        
-                    }
-                    else
-                    {
-                        return;
-                    }
-                    
-
+                    }                   
                 }
                 else
                 {

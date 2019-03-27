@@ -64,6 +64,24 @@ namespace GOCSystem2018
 
         }
 
+        public void LoadGetPaymentNoPartial()
+        {
+            //clear list
+            billingPartials.Clear();
+            //pass value to list
+
+            billingPartial.RegNo = RegNo;
+            billingPartials = billingPartial.GetPaymentPartial();
+
+            //loop through load it to list view
+            foreach (var item in billingPartials)
+            {
+
+                lblEnStatus.Text = item.EnStatus;
+                //MessageBox.Show("sadas");
+            }
+        }
+
         public string sMonth2 = DateTime.Now.ToString("MM");
 
         private bool CheckRequired()
@@ -74,6 +92,100 @@ namespace GOCSystem2018
             }
 
             return true;
+        }
+
+
+        public void PartialNoReserver()
+        {
+            if (MOPInfo.Equals("PARTIAL PAYMENT") && DPCheck == 0)// magbabayad palang for FIRST payment - no reservation
+            {
+                AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+                MessageBox.Show(AmountGiven.ToString("n"));
+
+                MessageBox.Show(reservationFee);
+                if (AmountGiven > Convert.ToDouble(reservationFee))//kapag mas malaki ang binigay na amount kaysa initial reservation fee this will be tag as DP , and then divide to 10
+                {
+                    MessageBox.Show("as");
+                    //LoadGetPaymentNoPartial();
+
+                    //madidivide ang tutiton sa 10
+                    TotalTuition = TotalTuition - AmountGiven;
+                    TotalTuition = TotalTuition - VoucherAmount;
+                    TotalTuition = TotalTuition / 10;
+
+                    StudNoGenerate(); // Generate StudNo
+                    CountPayment(); // Count the payment
+                    bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+                    bill.OrNo = txtORNo.Text;
+                    bill.StudentId = GOCNo;
+                    bill.RegNo = RegNo;
+                    bill.PaymentNo = count.ToString();
+                    bill.MOP = "1st Partial Payment";
+                    bill.Save();
+
+                    //Update the GOC Number in Studprofile Table
+                    studProfile.StudRegistrationNo = RegNo;
+                    studProfile.StudGOCNo = GOCNo;
+                    studProfile.Reservee = "0";
+                    studProfile.SaveGOCNumber(); //update GOC number in the student profile table
+
+                    //For reservation - Public Voucher            
+                    billingPartial.IdNo = GOCNo;
+                    billingPartial.ORNo = txtORNo.Text;
+                    billingPartial.Full_name = FullName;
+                    billingPartial.DownPayment = Convert.ToDouble(DP).ToString("n");
+                    billingPartial.P1 = TotalTuition.ToString("n");
+                    billingPartial.P2 = TotalTuition.ToString("n");
+                    billingPartial.P3 = TotalTuition.ToString("n");
+                    billingPartial.P4 = TotalTuition.ToString("n");
+                    billingPartial.P5 = TotalTuition.ToString("n");
+                    billingPartial.P6 = TotalTuition.ToString("n");
+                    billingPartial.P7 = TotalTuition.ToString("n");
+                    billingPartial.P8 = TotalTuition.ToString("n");
+                    billingPartial.P9 = TotalTuition.ToString("n");
+                    billingPartial.P10 = TotalTuition.ToString("n");
+
+                    Double sum = 0;
+                    sum = Convert.ToDouble(billingPartial.P1) + Convert.ToDouble(billingPartial.P2) + Convert.ToDouble(billingPartial.P3) + Convert.ToDouble(billingPartial.P4) + Convert.ToDouble(billingPartial.P5) + Convert.ToDouble(billingPartial.P6) + Convert.ToDouble(billingPartial.P7) + Convert.ToDouble(billingPartial.P8) + Convert.ToDouble(billingPartial.P9) + Convert.ToDouble(billingPartial.P10);
+                    billingPartial.Balance = sum.ToString("n");
+                    billingPartial.EnStatus = "Enrolled";
+                    billingPartial.RegNo = RegNo;
+
+                    billingPartial.Save();
+
+                    this.Hide();
+                    this.Dispose();
+                }
+                else if(AmountGiven < Convert.ToDouble(reservationFee))//mas maliit  sa initial reservation fee this will be tag as reservation fee
+                {
+                    MessageBox.Show("Check this!");
+                }
+                else if (AmountGiven == Convert.ToDouble(reservationFee))// this will be tag as reservation fee
+                {
+                    StudNoGenerate(); // Generate StudNo
+                    CountPayment(); // Count the payment
+                    bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+                    bill.OrNo = txtORNo.Text;
+                    bill.StudentId = GOCNo;
+                    bill.RegNo = RegNo;
+                    bill.PaymentNo = count.ToString();
+                    bill.MOP = "Reservation Fee";
+                    bill.Save();
+
+                    //Update the GOC Number in Studprofile Table
+                    studProfile.StudRegistrationNo = RegNo;
+                    studProfile.StudGOCNo = GOCNo;
+                    studProfile.Reservee = "0";
+                    studProfile.SaveGOCNumber(); //update GOC number in the student profile table
+
+                    Reservation();
+                }
+
+            }
+            else if(MOPInfo.Equals("PARTIAL PAYMENT") && DPCheck > 0)// magbabayad for FIRST payment - with reservation
+            {
+
+            }                     
         }
 
         //for billing
@@ -109,168 +221,158 @@ namespace GOCSystem2018
                 }
 
 
-                //TAGS of Payment
-                if (MOPInfo.Equals("PARTIAL PAYMENT") && DPCheck > 0 )
+                if (DPCheck > 0)// meaning nagbayad na before pero registration 
                 {
-                        StudNoGenerate(); // Generate StudNo
-                        CountPayment(); // Count the payment
-                        bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
-                        bill.OrNo = txtORNo.Text;
-                        bill.StudentId = GOCNo;
-                        bill.RegNo = RegNo;
-                        bill.PaymentNo = count.ToString();
-                        bill.MOP = "Reservation Fee";
-                        bill.Save();
 
-                        //Update the GOC Number in Studprofile Table
-                        studProfile.StudRegistrationNo = RegNo;
-                        studProfile.StudGOCNo = GOCNo;
-                        studProfile.Reservee = "0";
-                        studProfile.SaveGOCNumber(); //update GOC number in the student profile table
+                }
+                else// magbabayad palang for FIRST payment
+                {
 
-                        Reservation();
-                   
                 }
 
-
-                //if (paymentFor.Equals("Downpayment"))
-                //{
-                //    if (Convert.ToInt32(paymentNo) >= 1)
-                //    {
-                //        bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
-                //        bill.OrNo = txtORNo.Text;
-                //        bill.StudentId = GOCNo;
-                //        bill.RegNo = RegNo;
-                //        bill.MOP = "Enrolled";
-                //        CountPayment();
-                //        bill.PaymentNo = count.ToString();
-                //        bill.Save();
-
-                //        //update MOP partial triggered to 1
-                //        studProfile.StudRegistrationNo = RegNo;
-                //        studentProfile.PartialPayment = "1";
-
-                //        studProfile.UpdateMOP();
-                //        PartialPayment();
-                //    }                   
-                //}
-
-
-                //if (Convert.ToDouble(lblAmountDue.Text) == Convert.ToDouble(txtAmountGiven.Text))
-                //{
-                //    #region EXACT PAYMENT
-
-                //    double sum2 = 0;
-                //    double result1 = (Convert.ToDouble(lblAmountDue.Text) - Convert.ToDouble(txtAmountGiven.Text));
-
-                //    for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
-                //    {
-                //        sum2 += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
-
-                //        if (i < (Convert.ToInt32(lblpayNumber.Text)))
-                //        {
-                //            if (result1 < perMonthFee)
-                //            {
-                //                dgvPerMonth.Rows[i].Cells[2].Value = 0.00;
-                //            }
-                //        }
-                //    }
-                //    #endregion
-                //}
-                //else if (Convert.ToDouble(lblAmountDue.Text) > Convert.ToDouble(txtAmountGiven.Text))
-                //{
-                //    #region LESS PAYMENT 
-
-                //    double TotalFee = 0;
-                //    double Payments;
-                //    double result = (Convert.ToDouble(lblAmountDue.Text) - Convert.ToDouble(txtAmountGiven.Text));
-
-                //    //get the sum of all amount in dgv
-                //    for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
-                //    {
-                //        TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
-                //    }
-
-                //    Payments = TotalFee - Convert.ToDouble(txtAmountGiven.Text);
-
-                //    double toLoop = 0;
-                //    toLoop = Payments / perMonthFee;
-
-                //    double remainingAfter = 0;
-                //    remainingAfter = Payments % perMonthFee;
-
-                //    if (remainingAfter < perMonthFee)
-                //    {
-                //        int loop;
-                //        loop = Convert.ToInt32(Math.Floor(toLoop) + 1);
-                //        loop = dgvPerMonth.Rows.Count - loop;
-
-                //        //lagyan lahat ng default
-                //        for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
-                //        {
-                //            dgvPerMonth.Rows[i].Cells[2].Value = 0.00;
-                //        }
-
-                //        for (int i = dgvPerMonth.Rows.Count - 1; i > loop - 1; i--)
-                //        {
-                //            //TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
-                //            //MessageBox.Show(i.ToString());
-                //            dgvPerMonth.Rows[i].Cells[2].Value = perMonthFee;
-                //        }
-                //        dgvPerMonth.Rows[loop].Cells[2].Value = remainingAfter;
-                //    }
-
-                //    #endregion
-                //}
-                //else if (Convert.ToDouble(txtAmountGiven.Text) > Convert.ToDouble(lblAmountDue.Text))
-                //{
-                //    #region ADVANCE PAYMENT 
-
-                //    double TotalFee = 0;
-                //    double Payments;
-                //    double result = (Convert.ToDouble(lblAmountDue.Text) - Convert.ToDouble(txtAmountGiven.Text));
-
-                //    //get the sum of all amount in dgv
-                //    for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
-                //    {
-                //        TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));                               
-                //    }
-
-                //    Payments = TotalFee - Convert.ToDouble(txtAmountGiven.Text);
-
-                //    double toLoop = 0;
-                //    toLoop = Payments / perMonthFee;
-
-                //    double remainingAfter = 0;
-                //    remainingAfter = Payments % perMonthFee;
-
-                //    if (remainingAfter < perMonthFee)
-                //    {
-                //        int loop;
-                //        loop = Convert.ToInt32(Math.Floor(toLoop) + 1);
-                //        loop = dgvPerMonth.Rows.Count - loop;
-
-                //        //lagyan lahat ng default
-                //        for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
-                //        {
-                //            dgvPerMonth.Rows[i].Cells[2].Value = 0.00;                        
-                //        }
-
-                //        for (int i = dgvPerMonth.Rows.Count -1 ; i > loop - 1; i--)
-                //        {
-                //            //TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
-                //            //MessageBox.Show(i.ToString());
-                //            dgvPerMonth.Rows[i].Cells[2].Value = perMonthFee;                                                        
-                //        }
-                //        dgvPerMonth.Rows[loop].Cells[2].Value = remainingAfter;                                                                   
-                //    }              
-                //    #endregion
-                //}
             }
+            else
+            {
+                PartialNoReserver();
+            }
+
+            //if (paymentFor.Equals("Downpayment"))
+            //{
+            //    if (Convert.ToInt32(paymentNo) >= 1)
+            //    {
+            //        bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+            //        bill.OrNo = txtORNo.Text;
+            //        bill.StudentId = GOCNo;
+            //        bill.RegNo = RegNo;
+            //        bill.MOP = "Enrolled";
+            //        CountPayment();
+            //        bill.PaymentNo = count.ToString();
+            //        bill.Save();
+
+            //        //update MOP partial triggered to 1
+            //        studProfile.StudRegistrationNo = RegNo;
+            //        studentProfile.PartialPayment = "1";
+
+            //        studProfile.UpdateMOP();
+            //        PartialPayment();
+            //    }                   
+            //}
+
+
+            //if (Convert.ToDouble(lblAmountDue.Text) == Convert.ToDouble(txtAmountGiven.Text))
+            //{
+            //    #region EXACT PAYMENT
+
+            //    double sum2 = 0;
+            //    double result1 = (Convert.ToDouble(lblAmountDue.Text) - Convert.ToDouble(txtAmountGiven.Text));
+
+            //    for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
+            //    {
+            //        sum2 += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
+
+            //        if (i < (Convert.ToInt32(lblpayNumber.Text)))
+            //        {
+            //            if (result1 < perMonthFee)
+            //            {
+            //                dgvPerMonth.Rows[i].Cells[2].Value = 0.00;
+            //            }
+            //        }
+            //    }
+            //    #endregion
+            //}
+            //else if (Convert.ToDouble(lblAmountDue.Text) > Convert.ToDouble(txtAmountGiven.Text))
+            //{
+            //    #region LESS PAYMENT 
+
+            //    double TotalFee = 0;
+            //    double Payments;
+            //    double result = (Convert.ToDouble(lblAmountDue.Text) - Convert.ToDouble(txtAmountGiven.Text));
+
+            //    //get the sum of all amount in dgv
+            //    for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
+            //    {
+            //        TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
+            //    }
+
+            //    Payments = TotalFee - Convert.ToDouble(txtAmountGiven.Text);
+
+            //    double toLoop = 0;
+            //    toLoop = Payments / perMonthFee;
+
+            //    double remainingAfter = 0;
+            //    remainingAfter = Payments % perMonthFee;
+
+            //    if (remainingAfter < perMonthFee)
+            //    {
+            //        int loop;
+            //        loop = Convert.ToInt32(Math.Floor(toLoop) + 1);
+            //        loop = dgvPerMonth.Rows.Count - loop;
+
+            //        //lagyan lahat ng default
+            //        for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
+            //        {
+            //            dgvPerMonth.Rows[i].Cells[2].Value = 0.00;
+            //        }
+
+            //        for (int i = dgvPerMonth.Rows.Count - 1; i > loop - 1; i--)
+            //        {
+            //            //TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
+            //            //MessageBox.Show(i.ToString());
+            //            dgvPerMonth.Rows[i].Cells[2].Value = perMonthFee;
+            //        }
+            //        dgvPerMonth.Rows[loop].Cells[2].Value = remainingAfter;
+            //    }
+
+            //    #endregion
+            //}
+            //else if (Convert.ToDouble(txtAmountGiven.Text) > Convert.ToDouble(lblAmountDue.Text))
+            //{
+            //    #region ADVANCE PAYMENT 
+
+            //    double TotalFee = 0;
+            //    double Payments;
+            //    double result = (Convert.ToDouble(lblAmountDue.Text) - Convert.ToDouble(txtAmountGiven.Text));
+
+            //    //get the sum of all amount in dgv
+            //    for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
+            //    {
+            //        TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));                               
+            //    }
+
+            //    Payments = TotalFee - Convert.ToDouble(txtAmountGiven.Text);
+
+            //    double toLoop = 0;
+            //    toLoop = Payments / perMonthFee;
+
+            //    double remainingAfter = 0;
+            //    remainingAfter = Payments % perMonthFee;
+
+            //    if (remainingAfter < perMonthFee)
+            //    {
+            //        int loop;
+            //        loop = Convert.ToInt32(Math.Floor(toLoop) + 1);
+            //        loop = dgvPerMonth.Rows.Count - loop;
+
+            //        //lagyan lahat ng default
+            //        for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
+            //        {
+            //            dgvPerMonth.Rows[i].Cells[2].Value = 0.00;                        
+            //        }
+
+            //        for (int i = dgvPerMonth.Rows.Count -1 ; i > loop - 1; i--)
+            //        {
+            //            //TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
+            //            //MessageBox.Show(i.ToString());
+            //            dgvPerMonth.Rows[i].Cells[2].Value = perMonthFee;                                                        
+            //        }
+            //        dgvPerMonth.Rows[loop].Cells[2].Value = remainingAfter;                                                                   
+            //    }              
+            //    #endregion
+            //}
         }
 
-       
-        
+
+
         /***********************************************************************************/
         /*Public Methods*/
         /**********************************************************************************/

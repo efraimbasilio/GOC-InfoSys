@@ -45,6 +45,9 @@
             this.label135 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblPaymentNoCheck = new System.Windows.Forms.Label();
+            this.lblDPCheck = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -55,9 +58,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.lblAmountDue = new System.Windows.Forms.Label();
-            this.cmbPaymentFor = new System.Windows.Forms.ComboBox();
             this.cmbMOP = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -122,8 +123,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblLRN = new System.Windows.Forms.Label();
-            this.lblDPCheck = new System.Windows.Forms.Label();
-            this.lblPaymentNoCheck = new System.Windows.Forms.Label();
+            this.cmbPaymentFor = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
@@ -277,6 +277,36 @@
             this.panel1.TabIndex = 1014;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // lblPaymentNoCheck
+            // 
+            this.lblPaymentNoCheck.AutoSize = true;
+            this.lblPaymentNoCheck.Location = new System.Drawing.Point(113, 499);
+            this.lblPaymentNoCheck.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPaymentNoCheck.Name = "lblPaymentNoCheck";
+            this.lblPaymentNoCheck.Size = new System.Drawing.Size(13, 13);
+            this.lblPaymentNoCheck.TabIndex = 1054;
+            this.lblPaymentNoCheck.Text = "0";
+            // 
+            // lblDPCheck
+            // 
+            this.lblDPCheck.AutoSize = true;
+            this.lblDPCheck.Location = new System.Drawing.Point(113, 481);
+            this.lblDPCheck.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDPCheck.Name = "lblDPCheck";
+            this.lblDPCheck.Size = new System.Drawing.Size(61, 13);
+            this.lblDPCheck.TabIndex = 1053;
+            this.lblDPCheck.Text = "DP CHECK";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(1, 574);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 13);
+            this.label6.TabIndex = 1039;
+            this.label6.Text = "Payment For:";
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(224)))));
@@ -411,16 +441,6 @@
             this.panel7.Size = new System.Drawing.Size(289, 185);
             this.panel7.TabIndex = 1052;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(1, 574);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 1039;
-            this.label6.Text = "Payment For:";
-            // 
             // lblAmountDue
             // 
             this.lblAmountDue.Location = new System.Drawing.Point(174, 95);
@@ -430,16 +450,6 @@
             this.lblAmountDue.TabIndex = 1045;
             this.lblAmountDue.Text = "__________________";
             this.lblAmountDue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cmbPaymentFor
-            // 
-            this.cmbPaymentFor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPaymentFor.FormattingEnabled = true;
-            this.cmbPaymentFor.Location = new System.Drawing.Point(5, 598);
-            this.cmbPaymentFor.Name = "cmbPaymentFor";
-            this.cmbPaymentFor.Size = new System.Drawing.Size(128, 21);
-            this.cmbPaymentFor.TabIndex = 1038;
-            this.cmbPaymentFor.SelectedValueChanged += new System.EventHandler(this.cmbPaymentFor_SelectedValueChanged);
             // 
             // cmbMOP
             // 
@@ -1131,25 +1141,15 @@
             this.lblLRN.TabIndex = 1025;
             this.lblLRN.Text = "LRN_no";
             // 
-            // lblDPCheck
+            // cmbPaymentFor
             // 
-            this.lblDPCheck.AutoSize = true;
-            this.lblDPCheck.Location = new System.Drawing.Point(113, 481);
-            this.lblDPCheck.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDPCheck.Name = "lblDPCheck";
-            this.lblDPCheck.Size = new System.Drawing.Size(61, 13);
-            this.lblDPCheck.TabIndex = 1053;
-            this.lblDPCheck.Text = "DP CHECK";
-            // 
-            // lblPaymentNoCheck
-            // 
-            this.lblPaymentNoCheck.AutoSize = true;
-            this.lblPaymentNoCheck.Location = new System.Drawing.Point(113, 499);
-            this.lblPaymentNoCheck.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPaymentNoCheck.Name = "lblPaymentNoCheck";
-            this.lblPaymentNoCheck.Size = new System.Drawing.Size(61, 13);
-            this.lblPaymentNoCheck.TabIndex = 1054;
-            this.lblPaymentNoCheck.Text = "DP CHECK";
+            this.cmbPaymentFor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPaymentFor.FormattingEnabled = true;
+            this.cmbPaymentFor.Location = new System.Drawing.Point(5, 598);
+            this.cmbPaymentFor.Name = "cmbPaymentFor";
+            this.cmbPaymentFor.Size = new System.Drawing.Size(128, 21);
+            this.cmbPaymentFor.TabIndex = 1038;
+            this.cmbPaymentFor.SelectedValueChanged += new System.EventHandler(this.cmbPaymentFor_SelectedValueChanged);
             // 
             // frmBilling
             // 

@@ -190,6 +190,44 @@ namespace GOCSystem2018
             }
         }
 
+        public List<Billing_Partial> GetPaymentPartial()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM billing_partial WHERE regNo=@regNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("regNo", regNo);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Billing_Partial bill = new Billing_Partial();
+                        //prepare properties
+                        bill.enStatus = reader["Enrollment_status"].ToString();
+                        billingPartials.Add(bill);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return billingPartials;
+        }
+
         public void Save()
         {
             try
