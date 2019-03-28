@@ -400,7 +400,7 @@ namespace GOCSystem2018
                         //prepare properties
 
                         //billingPartial.id = Convert.ToInt32(reader["id"].ToString());
-                        //billingPartial.enStatus = reader["enrollment_status"].ToString();
+                        billingPartial.enStatus = reader["enrollment_status"].ToString();
                         //billingPartial.oRNo = reader["or_no"].ToString();
                         //billingPartial.idNo = reader["idno"].ToString();
                         //billingPartial.full_name = reader["full_name"].ToString();
@@ -415,7 +415,7 @@ namespace GOCSystem2018
                         billingPartial.p8 = reader["8p"].ToString();
                         billingPartial.p9 = reader["9p"].ToString();
                         billingPartial.p10 = reader["10p"].ToString();
-                        //billingPartial.balance = reader["balance"].ToString();
+                        billingPartial.balance = reader["balance"].ToString();
 
                         billingPartials.Add(billingPartial);
                     }

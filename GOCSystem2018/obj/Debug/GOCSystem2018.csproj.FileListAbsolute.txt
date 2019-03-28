@@ -1062,4 +1062,3 @@ C:\Users\Instructor\Desktop\GOC-InfoSys-master - Copy - Copy\GOC-InfoSys-master\
 C:\Users\Instructor\Desktop\GOC-InfoSys-master - Copy - Copy\GOC-InfoSys-master\GOCSystem2018\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Instructor\Desktop\GOC-InfoSys-master - Copy - Copy\GOC-InfoSys-master\GOCSystem2018\bin\Debug\stdole.dll
 C:\Users\Instructor\Desktop\GOC-InfoSys-master - Copy - Copy\GOC-InfoSys-master\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
-C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache

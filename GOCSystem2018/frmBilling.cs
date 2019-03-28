@@ -53,9 +53,9 @@ namespace GOCSystem2018
        
         public string LRN, StudID, StudName, GradeLevel, Track,Strand, Semester, MOP, SY, VoucherType, RegNo, DP;
         public int CTRpayment,perMonthRange;
-        public double BalancePartial;
+        public double BalancePartial, Balance_Amount;
         int MonthNumber = 0;
-        public string partialCTR;
+        public string partialCTR, EnStatus;
 
         public string sMonth2 = DateTime.Now.ToString("MM");
        
@@ -95,7 +95,155 @@ namespace GOCSystem2018
                 txtPayNumber.Text = item.PaymentNo;
             }
         }//End LoadRecords
-       
+
+        public void LoadBillingHistory()
+        {
+            //clear list
+            billings.Clear();
+            dgvFeeHistory.Rows.Clear();
+            //pass value to list
+            bill.StudentId = lblGOCNo.Text;
+            billings = bill.GetPaymentHistory();
+
+            //loop through load it to list view
+            foreach (var item in billings)
+            {
+                dgvFeeHistory.Rows.Add(Convert.ToInt32(item.OrNo), item.StudentId, Convert.ToDouble(item.AmountGiven), Convert.ToInt32(item.PaymentNo), item.PaymentDate);
+
+            }
+        }
+
+
+
+        /// <summary>
+        /// Load Payments
+        /// </summary>
+        public void GetPerMonth()
+        {
+            //clear list
+            billingPartials.Clear();
+            dgvPerMonth.Rows.Clear();
+            //pass value to list                    
+            billingPartial.RegNo = RegNo;
+            billingPartials = billingPartial.GetMonthlyDue();
+
+            //loop through load it to list view
+            foreach (var item in billingPartials)
+            {
+                //Months will be concat as variables
+                string Month_1 = "June      ";
+                string Month_2 = "July      ";
+                string Month_3 = "August    ";
+                string Month_4 = "September ";
+                string Month_5 = "October   ";
+                string Month_6 = "November  ";
+                string Month_7 = "December  ";
+                string Month_8 = "January   ";
+                string Month_9 = "February  ";
+                string Month_10 = "March   ";
+
+                lblDPCheck.Text = item.DownPayment;
+
+                EnStatus = item.EnStatus;
+                if (item.EnStatus.Equals("Reservee"))
+                {
+                    dgvPerMonth.Rows.Clear();
+                    dgvPerMonth.Rows.Add("", " Down Payment", item.DownPayment);
+                    dgvPerMonth.Rows.Add(Month_1, "1st Payment", item.P1);
+                    dgvPerMonth.Rows.Add(Month_2, "2nd Payment", item.P2);
+                    dgvPerMonth.Rows.Add(Month_3, "3rd Payment", item.P3);
+                    dgvPerMonth.Rows.Add(Month_4, "4th Payment", item.P4);
+                    dgvPerMonth.Rows.Add(Month_5, "5th Payment", item.P5);
+                    dgvPerMonth.Rows.Add(Month_6, "6th Payment", item.P6);
+                    dgvPerMonth.Rows.Add(Month_7, "7th Payment", item.P7);
+                    dgvPerMonth.Rows.Add(Month_8, "8th Payment", item.P8);
+                    dgvPerMonth.Rows.Add(Month_9, "9th Payment", item.P9);
+                    dgvPerMonth.Rows.Add(Month_10, "10th Payment", item.P10);
+                    dgvPerMonth.Rows.Add("Balance", "Balance", item.Balance);
+
+                    lblAmountDues.Visible = true;
+                    lblPerMonthAdv.Visible = false;
+                    lblAmountDues.Text = item.Balance;
+                }
+                else
+                {
+                    dgvPerMonth.Rows.Clear();
+                    dgvPerMonth.Rows.Add("", " Down Payment", item.DownPayment);
+                    dgvPerMonth.Rows.Add(Month_1, "1st Payment", item.P1);
+                    dgvPerMonth.Rows.Add(Month_2, "2nd Payment", item.P2);
+                    dgvPerMonth.Rows.Add(Month_3, "3rd Payment", item.P3);
+                    dgvPerMonth.Rows.Add(Month_4, "4th Payment", item.P4);
+                    dgvPerMonth.Rows.Add(Month_5, "5th Payment", item.P5);
+                    dgvPerMonth.Rows.Add(Month_6, "6th Payment", item.P6);
+                    dgvPerMonth.Rows.Add(Month_7, "7th Payment", item.P7);
+                    dgvPerMonth.Rows.Add(Month_8, "8th Payment", item.P8);
+                    dgvPerMonth.Rows.Add(Month_9, "9th Payment", item.P9);
+                    dgvPerMonth.Rows.Add(Month_10, "10th Payment", item.P10);
+
+                    lblPerMonthAdv.Visible = true;
+                    MessageBox.Show(lblPerMonthAdv.Text);
+                    lblAmountDues.Visible = false;
+                }              
+            }
+        }
+
+        public void LoadPaymentNo()
+        {
+            //clear list
+            billings.Clear();
+            //pass value to list
+            bill.StudentId = StudID;
+            billings = bill.GetPaymentNo();
+
+            //loop through load it to list view
+            foreach (var item in billings)
+            {
+                CTRpayment = Convert.ToInt32(item.PaymentNo);
+            }
+        }
+
+        public void LoadGetPaymentNo()
+        {
+            //clear list
+            billings.Clear();
+            //pass value to list
+
+            bill.RegNo = RegNo;
+            billings = bill.GetPaymentNo2();
+
+            //loop through load it to list view
+            foreach (var item in billings)
+            {
+                CTRpayment = Convert.ToInt32(item.PaymentNo);
+                lblPaymentNoCheck.Text = item.PaymentNo;
+                //MessageBox.Show("sadas");
+            }
+        }
+
+        public void GetPartialBalance()
+        {
+            //clear list
+            billingPartials.Clear();
+            //pass value to list
+            MessageBox.Show(lblGOCNo.Text);
+            billingPartial.IdNo = lblGOCNo.Text;
+            billingPartials = billingPartial.GetPartialBalance();
+
+            //loop through load it to list view
+            foreach (var item in billingPartials)
+            {
+                double balance, dp = 0;
+                balance = Convert.ToDouble(item.Balance);
+                dp = Convert.ToDouble(item.DownPayment);
+
+                BalancePartial = balance;
+                //+dp;
+                //MessageBox.Show(BalancePartial.ToString("n"));
+                //lblBalance.Text = BalancePartial.ToString("n");
+                //lblAmountDue.Text = dp.ToString("n");
+            }
+        }//End LoadRecords
+
         public void LoadReservationFee()
         {
             //clear list
@@ -219,13 +367,7 @@ namespace GOCSystem2018
         }//End LoadRecords
 
         public void ComputePerMonth(int range)
-        {
-
-            if (CTRpayment == 1)
-            {
-
-            }
-
+        {         
            // MessageBox.Show(sMonth2);
             double sum1 = 0;
             for (int i = 0; i < range; i++)
@@ -272,13 +414,21 @@ namespace GOCSystem2018
             {
 
                 //PAYMENT INFOS                               
-                if (Convert.ToInt32(lblPaymentNoCheck.Text) > 1)
+                if (Convert.ToInt32(lblPaymentNoCheck.Text) == 0)
                 {
                     pay.fee_for_reservation = Convert.ToDouble(lblReserve.Text);
                 }
                 else
                 {
-                    pay.fee_for_reservation = Convert.ToDouble(lblPerMonthAdv.Text);
+                    if (EnStatus.Equals("Reservee"))
+                    {
+                        pay.amount_due = Convert.ToDouble(lblAmountDues.Text);
+                    }
+                    else
+                    {
+                        pay.amount_due = Convert.ToDouble(lblPerMonthAdv.Text);
+                    }
+                    
                 }
 
                 pay.amount_per_month = lblPerMonthAdv.Text;
@@ -289,7 +439,7 @@ namespace GOCSystem2018
                 //STUDENT INFORMATION
                 pay.full_name = lblName.Text;
                 pay.reg_no = lblRegNo.Text;
-
+                pay.GOCNo = lblGOCNo.Text;
                 //if Reservation or Partial
                 pay.payment_status = lblMOPInfo.Text;
                 pay.payment_no = Convert.ToInt32(lblPaymentNoCheck.Text);
@@ -367,124 +517,7 @@ namespace GOCSystem2018
 
         }
 
-        public void LoadBillingHistory()
-        {
-            //clear list
-            billings.Clear();
-            dgvFeeHistory.Rows.Clear();
-            //pass value to list
-            bill.StudentId = lblGOCNo.Text;
-            billings = bill.GetPaymentHistory();
-
-            //loop through load it to list view
-            foreach (var item in billings)
-            {
-                dgvFeeHistory.Rows.Add(Convert.ToInt32(item.OrNo), item.StudentId, Convert.ToDouble(item.AmountGiven),Convert.ToInt32(item.PaymentNo),item.PaymentDate);
-                
-            }
-        }
-
-       
-
-        /// <summary>
-        /// Load Payments
-        /// </summary>
-        public void GetPerMonth()
-        {          
-            //clear list
-            billingPartials.Clear();
-            dgvPerMonth.Rows.Clear();
-            //pass value to list                    
-            billingPartial.RegNo = RegNo;
-            billingPartials = billingPartial.GetMonthlyDue();
-
-            //loop through load it to list view
-            foreach (var item in billingPartials)
-            {
-                //Months will be concat as variables
-                string Month_1 = "June      ";
-                string Month_2 = "July      ";
-                string Month_3 = "August    ";
-                string Month_4 = "September ";
-                string Month_5 = "October   ";
-                string Month_6 = "November  ";
-                string Month_7 = "December  ";
-                string Month_8 = "January   ";
-                string Month_9 = "February  ";
-                string Month_10 = "March   ";
-
-                lblDPCheck.Text = item.DownPayment;
-
-                dgvPerMonth.Rows.Add("", " Down Payment", item.DownPayment);
-                dgvPerMonth.Rows.Add(Month_1, "1st Payment", item.P1);
-                dgvPerMonth.Rows.Add(Month_2, "2nd Payment", item.P2);
-                dgvPerMonth.Rows.Add(Month_3, "3rd Payment", item.P3);
-                dgvPerMonth.Rows.Add(Month_4, "4th Payment", item.P4);
-                dgvPerMonth.Rows.Add(Month_5, "5th Payment", item.P5);
-                dgvPerMonth.Rows.Add(Month_6, "6th Payment", item.P6);
-                dgvPerMonth.Rows.Add(Month_7, "7th Payment", item.P7);
-                dgvPerMonth.Rows.Add(Month_8, "8th Payment", item.P8);
-                dgvPerMonth.Rows.Add(Month_9, "9th Payment", item.P9);
-                dgvPerMonth.Rows.Add(Month_10, "10th Payment", item.P10);
-
-            }                       
-        }
-
-        public void LoadPaymentNo()
-        {
-            //clear list
-            billings.Clear();
-            //pass value to list
-            bill.StudentId = StudID;
-            billings = bill.GetPaymentNo();
-
-            //loop through load it to list view
-            foreach (var item in billings)
-            {
-                CTRpayment = Convert.ToInt32(item.PaymentNo);
-            }
-        }
-
-        public void LoadGetPaymentNo()
-        {
-            //clear list
-            billings.Clear();
-            //pass value to list
-            
-            bill.RegNo = RegNo;
-            billings = bill.GetPaymentNo2();
-
-            //loop through load it to list view
-            foreach (var item in billings)
-            {
-                CTRpayment = Convert.ToInt32(item.PaymentNo);
-                lblPaymentNoCheck.Text = item.PaymentNo;
-                //MessageBox.Show("sadas");
-            }
-        }
-
-        public void GetPartialBalance()
-        {
-            //clear list
-            billingPartials.Clear();
-            //pass value to list
-            MessageBox.Show(lblGOCNo.Text);
-            billingPartial.IdNo = lblGOCNo.Text;
-            billingPartials = billingPartial.GetPartialBalance();
-
-            //loop through load it to list view
-            foreach (var item in billingPartials)
-            {
-                double balance, dp = 0;
-                balance = Convert.ToDouble(item.Balance);
-                dp = Convert.ToDouble(item.DownPayment);
-
-                BalancePartial = balance + dp;
-                MessageBox.Show(BalancePartial.ToString("n"));
-                lblBalance.Text = BalancePartial.ToString("n");
-                lblAmountDue.Text = dp.ToString("n");
-            }
-        }//End LoadRecords
+  
 
         public void Render()
         {
@@ -509,7 +542,7 @@ namespace GOCSystem2018
 
             #endregion
 
-
+            
 
             if (CTRpayment == 1)
             {
@@ -560,6 +593,7 @@ namespace GOCSystem2018
 
             LoadBillingHistory(); //get Billing History
             LoadPaymentNo(); //payment count
+            GetPartialBalance();
         }
                    
         /***********************************************************************************/
