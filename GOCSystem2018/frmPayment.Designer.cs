@@ -58,6 +58,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblTheAmount = new System.Windows.Forms.Label();
             this.lblEnStatus = new System.Windows.Forms.Label();
+            this.lblAmount_Due = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -365,7 +366,7 @@
             // 
             this.lblTheAmount.AutoSize = true;
             this.lblTheAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTheAmount.Location = new System.Drawing.Point(318, 181);
+            this.lblTheAmount.Location = new System.Drawing.Point(641, 336);
             this.lblTheAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTheAmount.Name = "lblTheAmount";
             this.lblTheAmount.Size = new System.Drawing.Size(122, 24);
@@ -384,11 +385,23 @@
             this.lblEnStatus.TabIndex = 1055;
             this.lblEnStatus.Text = "lblEnStatus";
             // 
+            // lblAmount_Due
+            // 
+            this.lblAmount_Due.AutoSize = true;
+            this.lblAmount_Due.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount_Due.Location = new System.Drawing.Point(337, 181);
+            this.lblAmount_Due.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAmount_Due.Name = "lblAmount_Due";
+            this.lblAmount_Due.Size = new System.Drawing.Size(103, 20);
+            this.lblAmount_Due.TabIndex = 1056;
+            this.lblAmount_Due.Text = "Payment For:";
+            // 
             // frmPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1102, 411);
+            this.Controls.Add(this.lblAmount_Due);
             this.Controls.Add(this.lblEnStatus);
             this.Controls.Add(this.lblTheAmount);
             this.Controls.Add(this.label6);
@@ -453,5 +466,6 @@
         public System.Windows.Forms.Label lblAmountDue;
         public System.Windows.Forms.Label lblTheAmount;
         private System.Windows.Forms.Label lblEnStatus;
+        private System.Windows.Forms.Label lblAmount_Due;
     }
 }

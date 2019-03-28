@@ -220,7 +220,12 @@ namespace GOCSystem2018
 
         public void ComputePerMonth(int range)
         {
-            
+
+            if (CTRpayment == 1)
+            {
+
+            }
+
            // MessageBox.Show(sMonth2);
             double sum1 = 0;
             for (int i = 0; i < range; i++)
@@ -230,61 +235,69 @@ namespace GOCSystem2018
             lblPerMonthAdv.Text = sum1.ToString("n");
         }
 
+        public void Criterias()
+        {
+
+        }
+
+
         private void btnPayment_Click(object sender, EventArgs e)
         {
             frmPayment pay = new frmPayment();
-            //MessageBox.Show(lblPerMonthAdv.Text);
-
-
-            // ComputePerMonth(MonthNumber);
-            ////pay.GOCNo = lblGOCNo.Text;          
-
-            ////pay.lblpayNumber.Text = perMonthRange.ToString();
-            //pay.RegNo = lblRegNo.Text;
-            //pay.Render();
-            //pay.ShowDialog();
-
-            
+                  
             if (lblMOPInfo.Text == "RESERVATION")
             {
-                pay.lblTheAmount.Text = lblPerMonthAdv.Text;
-                pay.amountToPay = lblReserve.Text;
-                pay.FeeReserve = Convert.ToDouble(lblReserve.Text);
-               //pay.paymentFor = cmbPaymentFor.SelectedItem.ToString();
-                pay.TotalTuition = Convert.ToDouble(lblTotalPayment.Text);
-                pay.FullName = lblName.Text;
-                pay.voucherInfo = lblVoucher.Text;
-                pay.VoucherAmount = Convert.ToDouble(lblVoucherAmount.Text);
-                pay.RegNo = lblRegNo.Text;
-               
+                //PAYMENT INFOS
+                pay.fee_for_reservation = Convert.ToDouble(lblReserve.Text);
+                
+                pay.amount_per_month = lblPerMonthAdv.Text;                                            
+                pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
+                pay.voucher_info = lblVoucher.Text;
+                pay.voucher_amount = Convert.ToDouble(lblVoucherAmount.Text);
 
-                pay.MOPInfo = lblMOPInfo.Text;
+                //STUDENT INFORMATION
+                pay.full_name = lblName.Text;
+                pay.reg_no = lblRegNo.Text;
 
+               //if Reservation or Partial
+                pay.payment_status = lblMOPInfo.Text;
+
+                //Call Method to load info before transaction
                 pay.Render();
-
+                //to show the form
                 pay.ShowDialog();
-
             }
 
             else if (lblMOPInfo.Text == "PARTIAL PAYMENT")
             {
-                pay.lblTheAmount.Text = lblPerMonthAdv.Text;
-                pay.amountToPay = lblReserve.Text;
 
-                // pay.FeeReserve = Convert.ToDouble(lblReserve.Text);
-                //pay.paymentFor = cmbPaymentFor.SelectedItem.ToString();
-                //pay.reservationFee = lblReserve.Text;
+                //PAYMENT INFOS                               
+                if (Convert.ToInt32(lblPaymentNoCheck.Text) > 1)
+                {
+                    pay.fee_for_reservation = Convert.ToDouble(lblReserve.Text);
+                }
+                else
+                {
+                    pay.fee_for_reservation = Convert.ToDouble(lblPerMonthAdv.Text);
+                }
 
-                pay.reservationFee = lblReserve.Text;
-                pay.TotalTuition = Convert.ToDouble(lblTotalPayment.Text);
-                pay.FullName = lblName.Text;
-                pay.voucherInfo = lblVoucher.Text;
-                pay.VoucherAmount = Convert.ToDouble(lblVoucherAmount.Text);
-                pay.RegNo = lblRegNo.Text;
-                
+                pay.amount_per_month = lblPerMonthAdv.Text;
+                pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
+                pay.voucher_info = lblVoucher.Text;
+                pay.voucher_amount = Convert.ToDouble(lblVoucherAmount.Text);
 
-                pay.MOPInfo = lblMOPInfo.Text;
+                //STUDENT INFORMATION
+                pay.full_name = lblName.Text;
+                pay.reg_no = lblRegNo.Text;
+
+                //if Reservation or Partial
+                pay.payment_status = lblMOPInfo.Text;
+                pay.payment_no = Convert.ToInt32(lblPaymentNoCheck.Text);
+
+                //Call Method to load info before transaction
+                pay.EnrollmentStatus(); //to check the payment if this is the second payment, check by the Enrollment Status tag
                 pay.Render();
+                //to show the form
                 pay.ShowDialog();
 
             }
