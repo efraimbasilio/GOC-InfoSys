@@ -404,6 +404,7 @@ namespace GOCSystem2018
                                 studProfile.SaveGOCNumber();
 
                                 Reservation();//Computation per month and Balance
+                    return;
                             }
                             else
                             {
@@ -532,7 +533,6 @@ namespace GOCSystem2018
                         Total_Amount += Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value);
                     }
                    
-
                     if (Total_Amount > Convert.ToDouble(txtAmountGiven.Text))
                     {
                         //get the sum of all amount in dgv

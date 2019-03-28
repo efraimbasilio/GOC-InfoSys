@@ -391,7 +391,7 @@ namespace GOCSystem2018
             {
                 //PAYMENT INFOS
                 pay.fee_for_reservation = Convert.ToDouble(lblReserve.Text);
-                
+                pay.amount_due = Convert.ToDouble(lblReserve.Text);
                 pay.amount_per_month = lblPerMonthAdv.Text;                                            
                 pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
                 pay.voucher_info = lblVoucher.Text;
