@@ -51,14 +51,40 @@ namespace GOCSystem2018
         /*PUBLIC VARIABLES*/
         /**********************************************************************************/
        
-        public string LRN, StudID, StudName, GradeLevel, Track,Strand, Semester, MOP, SY, VoucherType, RegNo, DP;
+        public string LRN, StudID, StudName, GradeLevel, Track,Strand, Semester, SY, VoucherType, RegNo, DP;
         public int CTRpayment,perMonthRange;
         public double BalancePartial, Balance_Amount;
         int MonthNumber = 0;
-        public string partialCTR, EnStatus;
+        public string partialCTR, EnStatus, MOP, MOP_stat;
 
         public string sMonth2 = DateTime.Now.ToString("MM");
-       
+        public int payNo;
+        public void CallPaymentNumber2()
+        {
+            //clear list
+            billings.Clear();
+            //pass value to list
+            billings = bill.Load();
+
+            //loop through load it to list view
+            foreach (var item in billings)
+            {
+                payNo = Convert.ToInt32(item.PaymentNo);
+            }
+        }//End LoadRecords
+
+        public void RenderMOP()
+        {
+            CallPaymentNumber2();
+            lblMOPInfo.Text = "PARTIAL PAYMENT";
+            cmbMOP.Text = "Partial Payment";
+
+            cmbMOP.Enabled = true;
+            if (payNo >= 2)
+            {   
+               cmbMOP.Enabled = false;
+            }
+        }
 
         /***********************************************************************************/
         /*PUBLIC METHOD*/
@@ -181,7 +207,7 @@ namespace GOCSystem2018
                     dgvPerMonth.Rows.Add(Month_10, "10th Payment", item.P10);
 
                     lblPerMonthAdv.Visible = true;
-                    MessageBox.Show(lblPerMonthAdv.Text);
+                   // MessageBox.Show(lblPerMonthAdv.Text);
                     lblAmountDues.Visible = false;
                 }              
             }
@@ -225,7 +251,7 @@ namespace GOCSystem2018
             //clear list
             billingPartials.Clear();
             //pass value to list
-            MessageBox.Show(lblGOCNo.Text);
+           // MessageBox.Show(lblGOCNo.Text);
             billingPartial.IdNo = lblGOCNo.Text;
             billingPartials = billingPartial.GetPartialBalance();
 
@@ -644,6 +670,10 @@ namespace GOCSystem2018
         {
             if (cmbMOP.SelectedItem.Equals("Partial Payment"))
             {
+                studProfile.StudRegistrationNo = RegNo;
+                studProfile.PartialPayment = "1";
+                studProfile.PartialOnly();
+
                 string message = "Do you want to proceed to Partial Payment";
                 string title = "GOC_INFO_SYS";
 

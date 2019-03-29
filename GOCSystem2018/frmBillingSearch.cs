@@ -13,6 +13,8 @@ namespace GOCSystem2018
 {
     public partial class frmBillingSearch : Form
     {
+        public int payNo;
+
         /*Models*/
         StudentProfile studentProfile = new StudentProfile();
         /***************************************************************/
@@ -20,11 +22,11 @@ namespace GOCSystem2018
         /*Array List*/
         List<StudentProfile> studentProfiles = new List<StudentProfile>();
         /***************************************************************/
-
+        Billing bill = new Billing();
         /*Forms*/
         frmBilling frmBilling = new frmBilling();
         /***************************************************************/
-
+        List<Billing> billings = new List<Billing>();
         /***********************************************************************************/
         /*PUBLIC VARIABLES*/
         /**********************************************************************************/
@@ -60,6 +62,20 @@ namespace GOCSystem2018
                 MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public void CallPaymentNumber()
+        {
+            //clear list
+            billings.Clear();
+            //pass value to list
+            billings = bill.Load();
+
+            //loop through load it to list view
+            foreach (var item in billings)
+            {
+                payNo = Convert.ToInt32(item.PaymentNo);
+            }
+        }//End LoadRecords
         /***********************************************************************************/
         /*PRIVATE METHOD*/
         /**********************************************************************************/
@@ -100,12 +116,9 @@ namespace GOCSystem2018
                         //frmBilling.cmbPaymentFor.Text = "Reservation";
                     }
 
-                    if (item.PartialPayment.Equals("1"))
+                    else if (item.PartialPayment.Equals("1"))
                     {
-                        frmBilling.lblMOPInfo.Text = "PARTIAL PAYMENT";
-                        
-
-
+                        frmBilling.RenderMOP();
                     }
 
                     //if (item.FullPayment.Equals("1"))

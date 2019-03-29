@@ -665,7 +665,6 @@ namespace GOCSystem2018
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
         private void cmbMOP_SelectedValueChanged(object sender, EventArgs e)
         {
             //Full Payment
@@ -691,11 +690,7 @@ namespace GOCSystem2018
 
                     studProfile.StudRegistrationNo = RegNo;
                     studProfile.PartialPayment = "1";
-                    studProfile.PartialOnly();
-
-
-                    
-
+                    studProfile.PartialOnly();                    
                 }                               
             }
 

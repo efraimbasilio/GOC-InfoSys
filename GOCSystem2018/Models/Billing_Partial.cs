@@ -180,7 +180,7 @@ namespace GOCSystem2018
 
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Recorde Updated!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   // MessageBox.Show("Recorde Updated!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (MySqlException ex)

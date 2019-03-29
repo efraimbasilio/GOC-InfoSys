@@ -222,8 +222,25 @@ namespace GOCSystem2018
             this.Dispose();         
         } //Computation and Saving the record to Billing Partial
 
+        public void SavePaymentHistory()
+        {
+            CountPayment(); // Count the payment
+            bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+            bill.OrNo = txtORNo.Text;
+            bill.StudentId = GOCNo;
+            bill.RegNo = reg_no;
+            bill.PaymentNo = count.ToString();
+            bill.MOP = "Partial Payment " + count;
+            bill.Save();
+        }
+
         public void PartialSecondPay()
         {
+            if (enroll_status == null)
+            {
+                return;
+            }
+
             if (enroll_status.Equals("Reservee"))//MAGBABAYAD NG 2nd Payment - For Reservee
             {
                 MessageBox.Show(enroll_status + " " + payment_status + " " + payment_no);
@@ -276,7 +293,7 @@ namespace GOCSystem2018
                 this.Hide();
             }
 
-            else
+            else if (enroll_status.Equals("Enrolled"))
             {
                 if (Convert.ToDouble(lblAmount_Due.Text) >= Convert.ToDouble(txtAmountGiven.Text))
                 {
@@ -321,6 +338,8 @@ namespace GOCSystem2018
                         dgvPerMonth.Rows[loop].Cells[2].Value = remainingAfter;
                     }
 
+                    UpdateMonthlyPayment();
+                    SavePaymentHistory();
                     #endregion
                 }
                 else if (Convert.ToDouble(txtAmountGiven.Text) > Convert.ToDouble(lblAmountDue.Text))
@@ -380,6 +399,8 @@ namespace GOCSystem2018
                         {
                             return;
                         }
+                        UpdateMonthlyPayment();
+                        SavePaymentHistory();
                     }
                     else
                     {
@@ -390,6 +411,10 @@ namespace GOCSystem2018
                 }
 
             }
+            //else if(enroll_status == null)
+            //{
+            //    return;
+            //}
         }
 
         public void PartialNoReserve()
@@ -565,6 +590,44 @@ namespace GOCSystem2018
                 #endregion
             }
         }
+
+
+        public void UpdateMonthlyPayment()
+        {
+            //string a,b;
+
+            billingPartial.ORNo = txtORNo.Text;
+            billingPartial.RegNo = reg_no;
+            billingPartial.IdNo = GOCNo;
+            billingPartial.Full_name = full_name;
+            billingPartial.DownPayment = dgvPerMonth.Rows[0].Cells[2].FormattedValue.ToString();          
+                billingPartial.P1 = dgvPerMonth.Rows[1].Cells[2].FormattedValue.ToString();
+                billingPartial.P2 = dgvPerMonth.Rows[2].Cells[2].FormattedValue.ToString();
+                billingPartial.P3 = dgvPerMonth.Rows[3].Cells[2].FormattedValue.ToString();
+                billingPartial.P4 = dgvPerMonth.Rows[4].Cells[2].FormattedValue.ToString();
+                billingPartial.P5 = dgvPerMonth.Rows[5].Cells[2].FormattedValue.ToString();
+                billingPartial.P6 = dgvPerMonth.Rows[6].Cells[2].FormattedValue.ToString();
+                billingPartial.P7 = dgvPerMonth.Rows[7].Cells[2].FormattedValue.ToString();
+                billingPartial.P8 = dgvPerMonth.Rows[8].Cells[2].FormattedValue.ToString();
+                billingPartial.P9 = dgvPerMonth.Rows[9].Cells[2].FormattedValue.ToString();
+                billingPartial.P10 = dgvPerMonth.Rows[10].Cells[2].FormattedValue.ToString();
+
+               
+                double TotalFee = 0;                //get the sum of all amount in dgv
+                for (int x = 0; x < dgvPerMonth.Rows.Count; x++)
+                {
+                    TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[x].Cells[2].Value));
+                }
+
+                billingPartial.Balance = TotalFee.ToString("n");
+                billingPartial.EnStatus ="Enrolled";
+
+                billingPartial.Update();
+            
+           
+            MessageBox.Show("Bill Updated!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         /***********************************************************************************/
         /*Private Methods*/
         /**********************************************************************************/
@@ -578,9 +641,11 @@ namespace GOCSystem2018
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show(enroll_status +" " + payment_status +" "+ payment_no);
-            Reservations();
-            PartialNoReserve();
-            PartialSecondPay();
+           
+                Reservations();
+                PartialNoReserve();
+                PartialSecondPay();
+                      
         }
         
                       
