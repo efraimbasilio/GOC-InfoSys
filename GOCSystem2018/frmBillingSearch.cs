@@ -132,9 +132,10 @@ namespace GOCSystem2018
 
                 frmBilling.CallPaymentNumber();
                 frmBilling.GetPerMonth();
-               
-                
+
+
                 //set up before form load
+                this.Hide();
                 frmBilling.Render();
                 frmBilling.Show();
                 //this.Dispose();

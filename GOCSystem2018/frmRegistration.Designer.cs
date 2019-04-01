@@ -240,12 +240,12 @@
             // 
             this.txtRegno.BackColor = System.Drawing.Color.White;
             this.txtRegno.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRegno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRegno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRegno.Location = new System.Drawing.Point(395, 100);
             this.txtRegno.Margin = new System.Windows.Forms.Padding(4);
             this.txtRegno.Name = "txtRegno";
             this.txtRegno.ReadOnly = true;
-            this.txtRegno.Size = new System.Drawing.Size(176, 16);
+            this.txtRegno.Size = new System.Drawing.Size(176, 15);
             this.txtRegno.TabIndex = 1;
             this.txtRegno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -652,12 +652,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(462, 119);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 15);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 105;
             this.label1.Text = "REGNO";
             // 
@@ -1414,9 +1414,9 @@
             this.label47.Location = new System.Drawing.Point(129, 934);
             this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(155, 13);
+            this.label47.Size = new System.Drawing.Size(162, 13);
             this.label47.TabIndex = 166;
-            this.label47.Text = "Name of School Last Attended:";
+            this.label47.Text = "* Name of School Last Attended:";
             // 
             // txtLastSchAddress
             // 
@@ -1438,9 +1438,9 @@
             this.label48.Location = new System.Drawing.Point(470, 934);
             this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(48, 13);
+            this.label48.Size = new System.Drawing.Size(55, 13);
             this.label48.TabIndex = 168;
-            this.label48.Text = "Address:";
+            this.label48.Text = "* Address:";
             // 
             // label9
             // 
@@ -1797,10 +1797,10 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Location = new System.Drawing.Point(893, 111);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(44, 17);
+            this.label45.Size = new System.Drawing.Size(44, 16);
             this.label45.TabIndex = 196;
             this.label45.Text = "Billing";
             // 
@@ -1818,10 +1818,10 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(798, 111);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(74, 17);
+            this.label42.Size = new System.Drawing.Size(75, 16);
             this.label42.TabIndex = 194;
             this.label42.Text = "Assesment";
             // 
@@ -1859,11 +1859,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Roboto Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(71, 22);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 19);
+            this.label8.Size = new System.Drawing.Size(142, 20);
             this.label8.TabIndex = 0;
             this.label8.Text = "REGISTRATION";
             // 
@@ -1873,7 +1873,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1304, 788);
+            this.ClientSize = new System.Drawing.Size(1304, 749);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;

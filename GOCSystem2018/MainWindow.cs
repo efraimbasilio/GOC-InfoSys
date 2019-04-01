@@ -578,6 +578,7 @@ namespace GOCSystem2018
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmBillingSearch frmBillingSearch = new frmBillingSearch();
             frmBillingSearch.Show();
         }

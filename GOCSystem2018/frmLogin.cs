@@ -213,6 +213,9 @@ namespace GOCSystem2018
         private void btnLogin_Click(object sender, EventArgs e)
         {
             LogMein();
+            this.Hide();
+            this.Dispose();
+
         }
 
         private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
@@ -234,8 +237,11 @@ namespace GOCSystem2018
 
         private void label4_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            
             MainWindow mainWindow = new MainWindow();
             mainWindow.ShowDialog();
+            
         }
 
         private void txtpassword_KeyDown(object sender, KeyEventArgs e)

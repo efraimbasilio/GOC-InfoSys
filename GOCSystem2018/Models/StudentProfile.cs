@@ -23,12 +23,19 @@ namespace GOCSystem2018
         protected string studCourse;
         protected string studStrand;
         protected string track;
+        protected string section;
 
         //Billing
         protected string reservee;
         protected string reserveFor;
         protected string partialPayment;
         protected string fullPayment;
+
+        public string Section
+        {
+            get { return section; }
+            set { section = value; }
+        }
 
         public string Reservee
         {
@@ -164,7 +171,7 @@ namespace GOCSystem2018
                         studentProfile.reserveFor = reader["reserve_for"].ToString();
                         studentProfile.partialPayment = reader["partial_payment"].ToString();
                         studentProfile.fullPayment = reader["full_payment"].ToString();
-                        //studentProfile.studCourse = reader["stud_course"].ToString();
+                        studentProfile.section = reader["section"].ToString();
 
                         studentProfiles.Add(studentProfile);
                     }
@@ -272,7 +279,7 @@ namespace GOCSystem2018
 
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (MySqlException ex)
@@ -305,6 +312,39 @@ namespace GOCSystem2018
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        public void UpdateSection()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    string sql = "UPDATE student_profile SET section=@section" +
+                                    " WHERE regno=@studRegistrationNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
+                    cmd.Parameters.AddWithValue("section", section);
+                    //cmd.Parameters.AddWithValue("reserveFor", reserveFor);
+
+
+                    cmd.ExecuteNonQuery();
+
+                    //    MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (MySqlException ex)

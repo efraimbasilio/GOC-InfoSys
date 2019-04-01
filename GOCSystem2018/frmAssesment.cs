@@ -38,7 +38,8 @@ namespace GOCSystem2018
         Grading grade = new Grading();
         Billing_Partial billingPartial = new Billing_Partial();
         StudentProfile studProfile = new StudentProfile();
-        
+        Billing bill = new Billing();
+        EnrolledStudents enrollee = new EnrolledStudents();
 
         List<Models.TuitionFee> tuitionFees = new List<Models.TuitionFee>();
         List<Section> sections = new List<Section>();
@@ -53,9 +54,12 @@ namespace GOCSystem2018
         List<Grading> grades = new List<Grading>();
         List<Billing_Partial> billingPartials = new List<Billing_Partial>();
         List<StudentProfile> studProfiles = new List<StudentProfile>();
+        List<Billing> billings = new List<Billing>();
 
-        public string StudName, LRN, Track, GradeLevel, RegNo, Strand,Voucher;
+        List<EnrolledStudents> enrollees = new List<EnrolledStudents>();
 
+        public string StudName,GOCNo, LRN, Track, GradeLevel, RegNo, Strand,Voucher,theSection;
+        public string partialPay;
 
         public frmAssesment()
         {
@@ -64,6 +68,7 @@ namespace GOCSystem2018
 
         private void frmAssesment_Load(object sender, EventArgs e)
         {
+            
             #region DGV Design
            
             dataGridView2.BorderStyle = BorderStyle.None;
@@ -143,14 +148,70 @@ namespace GOCSystem2018
             lblGradeLevel.Text = GradeLevel;
             lblLRN.Text = LRN;
             lblTrack.Text = Track;
+            lblGOCNo.Text = GOCNo;
             lblRegNo.Text = RegNo;
             lblStrand.Text = Strand;
             lblVoucher.Text = Voucher;
 
-            //LoadTuitionFee();
-            //TotalTuition();
-            //GetDownPayment();
+
+            //if (partialPay == null)
+            //{
+            //    return;
+            //}
+
+
+            //if (Convert.ToInt32(partialPay) > 0)
+            //{
+            //    cmbMOP.Text = "Partial Payment";
+            //    cmbMOP.Enabled = false;
+            //}
+            //else
+            //{
+            //    //cmbMOP.Text = "Partial Payment";
+            //    cmbMOP.Enabled = true;
+            //}
+
+
+            LoadSection();
+            EnrollmentStatus();
+            LoadBillingHistory();
+
+            if (Convert.ToInt32(partialPay) > 0)
+            {
+                cmbMOP.Text = "Partial Payment";
+                cmbMOP.Enabled = false;
+            }
+
+            if (theSection == null)
+            {
+                cmbSection.Text = "";
+            }
+            else
+            {
+                MessageBox.Show(theSection);
+                cmbSection.Text = theSection;
+            }
+
+            
         }
+
+        public void LoadBillingHistory()
+        {
+            //clear list
+            billings.Clear();
+            dgvFeeHistory.Rows.Clear();
+            //pass value to list
+            bill.StudentId = lblGOCNo.Text;
+            billings = bill.GetPaymentHistory();
+
+            //loop through load it to list view
+            foreach (var item in billings)
+            {
+                dgvFeeHistory.Rows.Add(Convert.ToInt32(item.OrNo), item.StudentId, Convert.ToDouble(item.AmountGiven), Convert.ToInt32(item.PaymentNo), item.PaymentDate);
+
+            }
+        }
+
         /// <summary>
         /// Working to filter the Downpayment per department
         /// </summary>
@@ -171,6 +232,7 @@ namespace GOCSystem2018
                // MessageBox.Show(lblDownpayment.Text);           
             }
         }//End LoadRecords
+
         public void ComputeVoucher()
         {
             //clear list
@@ -248,7 +310,7 @@ namespace GOCSystem2018
 
             for (int i = 0; i < dgvSubject.Rows.Count; i++)
             {
-                grade.StudentId = "";
+                grade.StudentId = lblGOCNo.Text;
                 grade.Fullname = lblName.Text;
                 grade.SubjectCode = dgvSubject.Rows[i].Cells[0].FormattedValue.ToString();
                 grade.SubjectDesc = dgvSubject.Rows[i].Cells[1].FormattedValue.ToString();
@@ -311,20 +373,7 @@ namespace GOCSystem2018
             }
             lblTotalOtherFee.Text = sum.ToString("n");           
         }
-
-        
-        public void Downpayment()
-        {
-            //50000 pub
-            //30000 pri
-            //10000 non
-            //Public Voucher
-            //Private Voucher
-            //Non Voucher
-
-            
-        }
-               
+                             
         private void Render()
         {
             lblLRN.Text = assesment.StudLRN;
@@ -352,6 +401,24 @@ namespace GOCSystem2018
             }
         }//End LoadRecords()
 
+        public void EnrollmentStatus()
+        {
+            //clear list
+            billingPartials.Clear();
+            //pass value to list
+
+            billingPartial.RegNo = lblRegNo.Text;
+            billingPartials = billingPartial.GetPaymentPartial();
+
+            //loop through load it to list view
+            foreach (var item in billingPartials)
+            {
+                lblEnStatus.Text = item.EnStatus;
+                //MessageBox.Show("sadas");
+            }
+        }
+
+
         public void LoadSection()
         {
             //clear list
@@ -360,8 +427,9 @@ namespace GOCSystem2018
             cmbSection.Items.Clear();
             sections.Clear();
 
+            section.Strand = lblStrand.Text;
             //pass value to list
-            sections = section.Load();
+            sections = section.GetPerStrand();
 
             //loop through load it to list view
             foreach (var item in sections)
@@ -450,11 +518,7 @@ namespace GOCSystem2018
                 dgvSchedule.Rows.Add(item.TimeStart, item.TimeEnd, item.Day1, item.Day2, item.Day3, item.Day4, item.Day5);
             }//End LoadSchedule()
         }
-        public void RenderStudNo()
-        {
-            
-        }
-
+        
         private void frmAssesment_Load_1(object sender, EventArgs e)
         {
 
@@ -471,9 +535,10 @@ namespace GOCSystem2018
 
         private void cmbStrand_SelectedValueChanged(object sender, EventArgs e)
         {
-           // loop();
+          
         }
 
+        ////////////////////////////FOR REPORTS ///////////////////
         /// <summary>
         /// Working - Ready to filer by Section // for Printing Code
         /// </summary>
@@ -541,6 +606,7 @@ namespace GOCSystem2018
             GradeLevel.Text = lblGradeLevel.Text;
             Section.Text = cmbSection.Text;            
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             Schedule_loop();
@@ -598,6 +664,9 @@ namespace GOCSystem2018
 
         }
 
+        ////////////////////////////FOR REPORTS ///////////////////
+
+
         private void button3_Click(object sender, EventArgs e)
         {
             frmReports frmReports = new frmReports();
@@ -611,8 +680,7 @@ namespace GOCSystem2018
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Schedule_loop();
-            //tuitionFees2();           
+            Schedule_loop();                  
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -634,6 +702,29 @@ namespace GOCSystem2018
                 }
                
             }
+
+            enrollees.Clear();
+            dgvEnrolledList.Rows.Clear();
+
+            enrollee.Section = cmbSection.Text;
+            enrollees = enrollee.CountStudInSection();
+
+            foreach (var item in enrollees)
+            {
+             
+                    dgvEnrolledList.Rows.Add(item.TheGOCNo, item.GradeLevel,item.Strand, item.Section , item.Semester);
+                
+
+            }
+
+
+            btnEnroll.Enabled = true;
+            if (btnEnroll.Text != "")
+            {
+                btnEnroll.Text = "&Enroll";
+            }
+            
+           
         }
         private void Schedule_loop()
         {
@@ -667,104 +758,7 @@ namespace GOCSystem2018
         }
         private void cmbMOP_SelectedValueChanged(object sender, EventArgs e)
         {
-            //Full Payment
-            //Partial Payment
-            if (cmbMOP.Text == "Partial Payment")
-            {
-                //pnlRES.Visible = false;
-                string message = "Do you want to proceed to payment ?";
-                string title = "GOC_INFO_SYS";
-
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.Yes)
-                {
-                    billingPartial.IdNo = lblGOCNo.Text;
-                    billingPartial.Full_name = lblName.Text;
-                    billingPartial.DownPayment = lblDownpayment.Text;
-
-                    //lblTotalFees.Text;
-                    double ans = Convert.ToDouble(lblTotalFees.Text) - Convert.ToDouble(lblVoucherAmount.Text);
-                    MessageBox.Show(ans.ToString("n"));
-
-                    studProfile.StudRegistrationNo = RegNo;
-                    studProfile.PartialPayment = "1";
-                    studProfile.PartialOnly();                    
-                }                               
-            }
-
-            else if (cmbMOP.Text == "Full Payment")
-            {
-                pnlRES.Visible = false;
-
-            }
-
-            else if (cmbMOP.Text == "Reservation")
-            {
-                //pnlRES.Visible = true;
-
-                string message = "Do you want to proceed the Reservation?";
-                string title = "GOC_INFO_SYS";
-
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
-
-                if (result == DialogResult.Yes)
-                {
-                    // this.optYES.Checked = true;
-                    if (cmbMOP.SelectedItem.Equals("Reservation"))
-                    {
-                        //if (optYES.Checked == true && GradeLevel.Equals("11"))
-                        //{
-                        studProfile.ReserveFor = lblGradeLevel.Text;
-                        MessageBox.Show(studProfile.ReserveFor);
-                        studProfile.StudRegistrationNo = RegNo;
-                        studProfile.Reservee = "1";
-                        studProfile.ReserveOnly();
-
-                        frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                        this.Hide();
-                        this.Dispose();
-                        frmBillingSearch.Show();
-
-                        //}
-
-                        //else if (optYES.Checked == true && GradeLevel.Equals("12"))
-                        //{
-                        //    studProfile.ReserveFor = lblGradeLevel.Text;
-                        //    MessageBox.Show(studProfile.ReserveFor);
-                        //    studProfile.StudRegistrationNo = RegNo;
-                        //    studProfile.Reservee = "1";
-                        //    studProfile.ReserveOnly();
-
-                        //    frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                        //    this.Hide();
-                        //    this.Dispose();
-                        //    frmBillingSearch.Show();
-                        //}
-                    }
-                }
-                else
-                {
-                    optNO.Checked = true;
-                    pnlRES.Visible = false;
-                    cmbMOP.Text = "";
-                }
-
-                //studProfile.Reservee = "0";
-                //studProfile.PartialPayment = "0";
-                //studProfile.FullPayment = "0";
-
-                //studProfile.StudRegistrationNo = RegNo;
-                //studProfile.ReserveOnly();
-
-                //frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                //this.Hide();
-                //this.Dispose();
-                //frmBillingSearch.Show();
-
-            }
+            
         }
 
         public void LoadPerMonth()
@@ -803,7 +797,117 @@ namespace GOCSystem2018
 
         private void btnEnroll_Click(object sender, EventArgs e)
         {
-            SaveForGrading();
+            if (btnEnroll.Text == "&Next" && cmbSection.Text == "")
+            {
+                
+                //Full Payment
+                //Partial Payment
+                if (cmbMOP.Text == "Partial Payment")
+                {
+                    //pnlRES.Visible = false;
+                    string message = "Do you want to proceed to payment ?";
+                    string title = "GOC_INFO_SYS";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        billingPartial.IdNo = lblGOCNo.Text;
+                        billingPartial.Full_name = lblName.Text;
+                        billingPartial.DownPayment = lblDownpayment.Text;
+
+                        //lblTotalFees.Text;
+                        double ans = Convert.ToDouble(lblTotalFees.Text) - Convert.ToDouble(lblVoucherAmount.Text);
+                        MessageBox.Show(ans.ToString("n"));
+
+                        studProfile.StudRegistrationNo = RegNo;
+                        studProfile.PartialPayment = "1";
+                        studProfile.PartialOnly();
+                    }
+                }
+
+                else if (cmbMOP.Text == "Full Payment")
+                {
+                    pnlRES.Visible = false;
+
+                }
+
+                else if (cmbMOP.Text == "Reservation")
+                {
+                    //pnlRES.Visible = true;
+
+                    string message = "Do you want to proceed the Reservation?";
+                    string title = "GOC_INFO_SYS";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        // this.optYES.Checked = true;
+                        if (cmbMOP.SelectedItem.Equals("Reservation"))
+                        {
+                            //if (optYES.Checked == true && GradeLevel.Equals("11"))
+                            //{
+                            studProfile.ReserveFor = lblGradeLevel.Text;
+                            MessageBox.Show(studProfile.ReserveFor);
+                            studProfile.StudRegistrationNo = RegNo;
+                            studProfile.Reservee = "1";
+                            studProfile.ReserveOnly();
+
+                            frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                            this.Hide();
+                            this.Dispose();
+                            frmBillingSearch.Show();                            
+                        }
+                    }
+                    else
+                    {
+                        optNO.Checked = true;
+                        pnlRES.Visible = false;
+                        cmbMOP.Text = "";
+                    }
+                }
+            }
+            else
+            {
+                if (lblEnStatus.Text.Equals("Enrolled") && Convert.ToInt32(lblGradeLevel.Text) > 11)
+                {
+                    EnrolledStudents enroll = new EnrolledStudents();
+                    enroll.RegNo = lblRegNo.Text;
+                    enroll.TheGOCNo = lblGOCNo.Text;
+                    enroll.FullName = lblName.Text;
+                    enroll.GradeLevel = lblGradeLevel.Text;
+                    enroll.Strand = lblStrand.Text;
+                    enroll.Section = cmbSection.Text;
+                    enroll.Semester = lblSem.Text;
+                    enroll.SyEnroll = lblSY.Text;                    
+                    enroll.SaveGrade12();
+
+                    studProfile.UpdateSection();
+
+                    SaveForGrading();
+                }
+                else
+                {
+                    EnrolledStudents enroll = new EnrolledStudents();
+                    enroll.RegNo = lblRegNo.Text;
+                    enroll.TheGOCNo = lblGOCNo.Text;
+                    enroll.FullName = lblName.Text;
+                    enroll.GradeLevel = lblGradeLevel.Text;
+                    enroll.Strand = lblStrand.Text;
+                    enroll.Section = cmbSection.Text;
+                    enroll.Semester = lblSem.Text;
+                    enroll.SyEnroll = lblSY.Text;
+                    enroll.Save();
+                    studProfile.UpdateSection();
+
+                    SaveForGrading();
+                }
+            }
+
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -850,22 +954,7 @@ namespace GOCSystem2018
                         frmBillingSearch frmBillingSearch = new frmBillingSearch();
                         this.Hide();
                         this.Dispose();
-                        frmBillingSearch.Show();
-                    //}
-
-                    //else if (optYES.Checked == true && GradeLevel.Equals("12"))
-                    //{
-                    //    studProfile.ReserveFor = lblGradeLevel.Text;
-                    //    MessageBox.Show(studProfile.ReserveFor);
-                    //    studProfile.StudRegistrationNo = RegNo;
-                    //    studProfile.Reservee = "1";
-                    //    studProfile.ReserveOnly();
-
-                    //    frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                    //    this.Hide();
-                    //    this.Dispose();
-                    //    frmBillingSearch.Show();
-                    //}
+                        frmBillingSearch.Show();                  
                 }
             }
             else
@@ -873,19 +962,18 @@ namespace GOCSystem2018
                 optNO.Checked = true;
                 pnlRES.Visible = false;
                 cmbMOP.Text = "";
-            }
-                
-            //studProfile.Reservee = "0";
-            //studProfile.PartialPayment = "0";
-            //studProfile.FullPayment = "0";
+            }                         
+        }
 
-            //studProfile.StudRegistrationNo = RegNo;
-            //studProfile.ReserveOnly();
+        private void button4_Click_4(object sender, EventArgs e)
+        {
+            frmSection frmSection = new frmSection();
+            frmSection.ShowDialog();
+        }
 
-            //frmBillingSearch frmBillingSearch = new frmBillingSearch();
-            //this.Hide();
-            //this.Dispose();
-            //frmBillingSearch.Show();
+        private void cmbMOP_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+            
         }
 
         private void optYES_CheckedChanged(object sender, EventArgs e)
@@ -912,13 +1000,26 @@ namespace GOCSystem2018
 
             cmbMOP.Enabled = false;
             cmbSection.Enabled = false;
+
+            if (lblEnStatus.Text == "Enrolled")
+            {
+                btnEnroll.Text = "&Enroll";
+            }
+            else
+            {
+                btnEnroll.Text = "&Next";
+            }
+            
+            
         }
 
         public void EnableMOP()
         {
-
+          
             cmbMOP.Enabled = true;
             cmbSection.Enabled = true;
+           
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -926,11 +1027,7 @@ namespace GOCSystem2018
 
         }
 
-        /// <summary>
-        /// This is Working
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+    
         private void button1_Click(object sender, EventArgs e)
         {
             frmAssessmentSearch frmAssessmentSearch = new frmAssessmentSearch();
@@ -957,10 +1054,6 @@ namespace GOCSystem2018
 
             }
         }
-
-
-
-
     }
 }
 

@@ -57,9 +57,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvSection = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbStrand = new System.Windows.Forms.ComboBox();
+            this.cmbDept = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbEditDept = new System.Windows.Forms.ComboBox();
+            this.cmbEditStrand = new System.Windows.Forms.ComboBox();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
@@ -72,7 +82,7 @@
             // btnDelete
             // 
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(709, 614);
+            this.btnDelete.Location = new System.Drawing.Point(642, 504);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(104, 28);
             this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -83,7 +93,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(603, 614);
+            this.btnEdit.Location = new System.Drawing.Point(752, 504);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(104, 28);
             this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -94,9 +104,9 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(603, 580);
+            this.btnAdd.Location = new System.Drawing.Point(363, 504);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(210, 28);
+            this.btnAdd.Size = new System.Drawing.Size(196, 28);
             this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnAdd.TabIndex = 45;
             this.btnAdd.TabStop = false;
@@ -106,6 +116,10 @@
             // 
             this.pnlEdit.BackColor = System.Drawing.Color.White;
             this.pnlEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEdit.Controls.Add(this.label12);
+            this.pnlEdit.Controls.Add(this.label13);
+            this.pnlEdit.Controls.Add(this.cmbEditDept);
+            this.pnlEdit.Controls.Add(this.cmbEditStrand);
             this.pnlEdit.Controls.Add(this.label1);
             this.pnlEdit.Controls.Add(this.label3);
             this.pnlEdit.Controls.Add(this.label4);
@@ -115,7 +129,7 @@
             this.pnlEdit.Controls.Add(this.btnCommit);
             this.pnlEdit.Controls.Add(this.txtEditDesc);
             this.pnlEdit.Controls.Add(this.txtEditSection);
-            this.pnlEdit.Location = new System.Drawing.Point(449, 197);
+            this.pnlEdit.Location = new System.Drawing.Point(12, 353);
             this.pnlEdit.Name = "pnlEdit";
             this.pnlEdit.Size = new System.Drawing.Size(325, 249);
             this.pnlEdit.TabIndex = 42;
@@ -153,11 +167,11 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(304, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(16, 17);
+            this.label19.Size = new System.Drawing.Size(16, 16);
             this.label19.TabIndex = 21;
             this.label19.Text = "X";
             this.label19.Click += new System.EventHandler(this.label19_Click);
@@ -186,7 +200,7 @@
             this.btnCommit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
             this.btnCommit.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCommit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCommit.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCommit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCommit.ForeColor = System.Drawing.Color.White;
             this.btnCommit.Location = new System.Drawing.Point(-1, 221);
             this.btnCommit.Name = "btnCommit";
@@ -215,10 +229,11 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(57)))), ((int)(((byte)(85)))));
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label16);
+            this.panel3.Controls.Add(this.label8);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(868, 117);
+            this.panel3.Size = new System.Drawing.Size(875, 68);
             this.panel3.TabIndex = 40;
             // 
             // label17
@@ -226,7 +241,7 @@
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(837, 9);
             this.label17.Name = "label17";
@@ -240,7 +255,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(17, 46);
+            this.label16.Location = new System.Drawing.Point(16, 15);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(151, 33);
             this.label16.TabIndex = 17;
@@ -250,6 +265,10 @@
             // 
             this.pnlAdd.BackColor = System.Drawing.Color.White;
             this.pnlAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlAdd.Controls.Add(this.label11);
+            this.pnlAdd.Controls.Add(this.label9);
+            this.pnlAdd.Controls.Add(this.cmbDept);
+            this.pnlAdd.Controls.Add(this.cmbStrand);
             this.pnlAdd.Controls.Add(this.label18);
             this.pnlAdd.Controls.Add(this.SectionLbl);
             this.pnlAdd.Controls.Add(this.label2);
@@ -259,21 +278,20 @@
             this.pnlAdd.Controls.Add(this.txtDesc);
             this.pnlAdd.Controls.Add(this.txtSection);
             this.pnlAdd.Controls.Add(this.label7);
-            this.pnlAdd.Location = new System.Drawing.Point(93, 197);
+            this.pnlAdd.Location = new System.Drawing.Point(12, 90);
             this.pnlAdd.Name = "pnlAdd";
             this.pnlAdd.Size = new System.Drawing.Size(325, 249);
             this.pnlAdd.TabIndex = 41;
-            this.pnlAdd.Visible = false;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(304, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(16, 17);
+            this.label18.Size = new System.Drawing.Size(16, 16);
             this.label18.TabIndex = 21;
             this.label18.Text = "X";
             this.label18.Click += new System.EventHandler(this.label18_Click);
@@ -302,7 +320,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(-1, 221);
             this.btnSave.Name = "btnSave";
@@ -357,7 +375,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 585);
+            this.label8.Location = new System.Drawing.Point(261, 15);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(559, 39);
             this.label8.TabIndex = 44;
@@ -370,8 +388,10 @@
             this.dgvSection.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
-            this.dgvSection.Location = new System.Drawing.Point(320, 167);
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dgvSection.Location = new System.Drawing.Point(363, 91);
             this.dgvSection.Name = "dgvSection";
             this.dgvSection.ReadOnly = true;
             this.dgvSection.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -379,12 +399,99 @@
             this.dgvSection.TabIndex = 43;
             this.dgvSection.Click += new System.EventHandler(this.dgvSection_Click);
             // 
-            // Column1
+            // cmbStrand
             // 
-            this.Column1.HeaderText = "id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
+            this.cmbStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStrand.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbStrand.FormattingEnabled = true;
+            this.cmbStrand.Location = new System.Drawing.Point(111, 163);
+            this.cmbStrand.Name = "cmbStrand";
+            this.cmbStrand.Size = new System.Drawing.Size(121, 21);
+            this.cmbStrand.TabIndex = 22;
+            // 
+            // cmbDept
+            // 
+            this.cmbDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDept.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbDept.FormattingEnabled = true;
+            this.cmbDept.Location = new System.Drawing.Point(111, 190);
+            this.cmbDept.Name = "cmbDept";
+            this.cmbDept.Size = new System.Drawing.Size(121, 21);
+            this.cmbDept.TabIndex = 23;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(63, 166);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Strand:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(36, 193);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 13);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Department:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(33, 193);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 13);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Department:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(60, 166);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Strand:";
+            // 
+            // cmbEditDept
+            // 
+            this.cmbEditDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditDept.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbEditDept.FormattingEnabled = true;
+            this.cmbEditDept.Location = new System.Drawing.Point(108, 190);
+            this.cmbEditDept.Name = "cmbEditDept";
+            this.cmbEditDept.Size = new System.Drawing.Size(121, 21);
+            this.cmbEditDept.TabIndex = 27;
+            // 
+            // cmbEditStrand
+            // 
+            this.cmbEditStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditStrand.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbEditStrand.FormattingEnabled = true;
+            this.cmbEditStrand.Location = new System.Drawing.Point(108, 163);
+            this.cmbEditStrand.Name = "cmbEditStrand";
+            this.cmbEditStrand.Size = new System.Drawing.Size(121, 21);
+            this.cmbEditStrand.TabIndex = 26;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Department";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Strand";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Description";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column2
             // 
@@ -393,26 +500,25 @@
             this.Column2.ReadOnly = true;
             this.Column2.Width = 150;
             // 
-            // Column3
+            // Column1
             // 
-            this.Column3.HeaderText = "Description";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 300;
+            this.Column1.HeaderText = "id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
             // 
             // frmSection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(868, 647);
+            this.ClientSize = new System.Drawing.Size(875, 647);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.pnlEdit);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlAdd);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvSection);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSection";
@@ -430,7 +536,6 @@
             this.pnlAdd.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSection)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -464,8 +569,18 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgvSection;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbEditDept;
+        private System.Windows.Forms.ComboBox cmbEditStrand;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbDept;
+        private System.Windows.Forms.ComboBox cmbStrand;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

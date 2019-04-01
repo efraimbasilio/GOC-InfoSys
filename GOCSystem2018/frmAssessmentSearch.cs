@@ -118,10 +118,15 @@ namespace GOCSystem2018
                     frmAssesment.RegNo = item.StudRegistrationNo;
                     frmAssesment.Strand = item.StudStrand;
                     frmAssesment.Voucher = item.VoucherType;
+                    frmAssesment.GOCNo = item.StudGOCNo;
+                    frmAssesment.partialPay = item.PartialPayment;
+                    frmAssesment.theSection = item.Section;
+                    
                 }
+
                 //set up before form load
                 frmAssesment.Reset();
-                frmAssesment.LoadSection();
+               
                 frmAssesment.LoadSchoolYear();
                
                 frmAssesment.LoadTuitionFee();
@@ -129,14 +134,14 @@ namespace GOCSystem2018
                 frmAssesment.LoadAssesOtherFees();
                 frmAssesment.TotalTuition();
 
-                frmAssesment.Downpayment();
+                
                 frmAssesment.ComputeVoucher();
                 frmAssesment.GetDownPayment();
 
                 frmAssesment.LoadSubject();
                 frmAssesment.EnableMOP();
-              
 
+              
                 //show assesment                             
                 frmAssesment.Show();
                 this.Dispose();

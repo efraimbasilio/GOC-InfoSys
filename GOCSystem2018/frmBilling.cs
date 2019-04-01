@@ -477,39 +477,7 @@ namespace GOCSystem2018
                 pay.ShowDialog();
 
             }
-
-            //else if (cmbPaymentFor.SelectedItem.Equals("Downpayment"))
-            //{
-            //    pay.amountToPay = DP;//view of payment
-            //    //create a maintenance
-            //    //for late payment of the downpaymnet
-            //    //June = 10;
-            //    //July =9;
-            //    //aug =8
-            //    //sep=7
-            //    //oct=6
-            //    //nov=5
-            //    //dec=4
-            //    //jan=3
-            //    //feb=2
-            //    //march=1
-
-            //    pay.GOCNo = lblGOCNo.Text;
-            //    pay.paymentNo = txtPayNumber.Text;
-            //    pay.paymentFor = cmbPaymentFor.SelectedItem.ToString();
-            //    pay.TotalTuition = Convert.ToDouble(lblTotalPayment.Text);
-            //    pay.FullName = lblName.Text;
-            //    pay.voucherInfo = lblVoucher.Text;
-            //    pay.VoucherAmount = Convert.ToDouble(lblVoucherAmount.Text);
-            //    pay.RegNo = lblRegNo.Text;
-            //    pay.reservationFee = lblReserve.Text;
-            //    pay.BalancePartial = BalancePartial;
-            //    pay.Render();
-            //    pay.ShowDialog();
-            //    pay.amountToPay = lblAmountDue.Text;
-            //}
-
-
+            this.Hide();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -668,58 +636,26 @@ namespace GOCSystem2018
 
         private void cmbMOP_SelectedValueChanged(object sender, EventArgs e)
         {
+            frmPayment toPay = new frmPayment();
+
             if (cmbMOP.SelectedItem.Equals("Partial Payment"))
             {
                 studProfile.StudRegistrationNo = RegNo;
                 studProfile.PartialPayment = "1";
                 studProfile.PartialOnly();
+                                               
+                lblMOPInfo.Text = "PARTIAL PAYMENT";
+                //LoadBillingHistory();
+                LoadGetPaymentNo();
 
-                string message = "Do you want to proceed to Partial Payment";
-                string title = "GOC_INFO_SYS";
-
-                MessageBoxButtons buttons = MessageBoxButtons.OK;
-                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
-
-                if (result == DialogResult.OK)//responce
+                if (Convert.ToInt32(lblPaymentNoCheck.Text) > 0)
                 {
-                    frmPayment toPay = new frmPayment();
-
-                    lblMOPInfo.Text = "PARTIAL PAYMENT";
-                    //LoadBillingHistory();
-
-                    LoadGetPaymentNo();
-
-                    if (Convert.ToInt32(lblPaymentNoCheck.Text) > 0)
-                    {
-                        toPay.DPCheck = Convert.ToInt32(lblPaymentNoCheck.Text);                        
-                    }
-                    else if(Convert.ToInt32(lblPaymentNoCheck.Text) == 0)//first time to pay
-                    {
-                        toPay.DPCheck = Convert.ToInt32(lblPaymentNoCheck.Text);
-                    }                   
+                    toPay.DPCheck = Convert.ToInt32(lblPaymentNoCheck.Text);                        
                 }
-                else
+                else if(Convert.ToInt32(lblPaymentNoCheck.Text) == 0)//first time to pay
                 {
-                    return;
-                }//ENd responce
-                
-
-
-
-                //GetPartialBalance();
-                //cmbPaymentFor.Items.Clear();
-                //cmbPaymentFor.Items.Add("Downpayment");
-                //cmbPaymentFor.Items.Add("1st Payment");
-                //cmbPaymentFor.Items.Add("2nd Payment");
-                //cmbPaymentFor.Items.Add("3rd Payment");
-                //cmbPaymentFor.Items.Add("4th Payment");
-                //cmbPaymentFor.Items.Add("5th Payment");
-                //cmbPaymentFor.Items.Add("6th Payment");
-                //cmbPaymentFor.Items.Add("7th Payment");
-                //cmbPaymentFor.Items.Add("8th Payment");
-                //cmbPaymentFor.Items.Add("9th Payment");
-                //cmbPaymentFor.Items.Add("10th Payment");                
-
+                    toPay.DPCheck = Convert.ToInt32(lblPaymentNoCheck.Text);
+                }                                                                              
             }
             else
             {

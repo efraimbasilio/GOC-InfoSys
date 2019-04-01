@@ -13,7 +13,56 @@ namespace GOCSystem2018
     public partial class frmSection : Form
     {
         Section section = new Section();
+        Strand strand = new Strand();
+        Department dept = new Department();
+
+
         List<Section> sections = new List<Section>();
+        List<Strand> strands = new List<Strand>();
+        List<Department> depts = new List<Department>();
+
+        public void LoadStrand()
+        {
+            //clear list
+
+            //dgvDiscount.Rows.Clear();
+            cmbStrand.Items.Clear();
+            strands.Clear();
+
+            //pass value to list
+            strands = strand.Load();
+
+            //loop through load it to list view
+            foreach (var item in strands)
+            {
+                //Load to datagridView
+                //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
+                cmbStrand.Items.Add(item.StrandName);
+            }
+
+        }//End LoadRecords()
+
+        public void LoadDept()
+        {
+            //clear list
+
+            //dgvDiscount.Rows.Clear();
+            cmbDept.Items.Clear();
+            depts.Clear();
+
+            //pass value to list
+            depts = dept.Load();
+
+            //loop through load it to list view
+            foreach (var item in depts)
+            {
+                //Load to datagridView
+                //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
+                cmbDept.Items.Add(item.DeptName);
+            }
+
+        }//End LoadRecords()
+
         public frmSection()
         {
             InitializeComponent();
@@ -100,7 +149,7 @@ namespace GOCSystem2018
             foreach (var item in sections)
             {
                 //Load to datagridView
-                dgvSection.Rows.Add(item.Id, item.SectionName, item.SectionDesc);
+                dgvSection.Rows.Add(item.Id, item.SectionName, item.SectionDesc,item.Strand, item.Dept);
 
             }
         }//End LoadRecords()
@@ -119,6 +168,8 @@ namespace GOCSystem2018
         {
             //Load Records
             this.LoadRecords();
+            this.LoadStrand();
+            this.LoadDept();
 
             //reset
             this.Reset();
@@ -134,8 +185,10 @@ namespace GOCSystem2018
             else //Save Method
             {
                 //pass values
-                section.SectionName = txtSection.Text;
-                section.SectionDesc = txtDesc.Text;
+                section.SectionName = txtSection.Text.ToUpper();
+                section.SectionDesc = txtDesc.Text.ToUpper();
+                section.Dept = cmbDept.Text;
+                section.Strand = cmbStrand.Text;
 
                 // call save method
                 section.Save();
@@ -157,8 +210,10 @@ namespace GOCSystem2018
             }
             else //Save Method
             {
-                section.SectionName = txtEditSection.Text;
-                section.SectionDesc = txtEditDesc.Text;
+                section.SectionName = txtEditSection.Text.ToUpper();
+                section.SectionDesc = txtEditDesc.Text.ToUpper();
+                section.Dept = cmbEditDept.Text;
+                section.Strand = cmbStrand.Text;
 
                 section.Id = Int32.Parse(dgvSection.CurrentRow.Cells[0].FormattedValue.ToString());
                 section.Update();

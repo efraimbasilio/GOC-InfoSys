@@ -474,8 +474,7 @@ namespace GOCSystem2018
 
                     billingPartial.Save();
 
-                    this.Hide();
-                    this.Dispose();
+                    
                     #endregion
                 }
 
@@ -635,7 +634,10 @@ namespace GOCSystem2018
         private void frmPayment_Load(object sender, EventArgs e)
         {
             lblAmount_Due.Text = amount_due.ToString("n");
-        }
+
+          
+        
+    }
 
         //For billing
         private void button1_Click(object sender, EventArgs e)
@@ -645,7 +647,15 @@ namespace GOCSystem2018
                 Reservations();
                 PartialNoReserve();
                 PartialSecondPay();
-                      
+
+               
+
+            this.Hide();
+            
+
+            frmBillingSearch search = new frmBillingSearch();
+            search.Show();
+            
         }
         
                       

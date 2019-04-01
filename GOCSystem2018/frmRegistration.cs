@@ -938,11 +938,13 @@ namespace GOCSystem2018
                 registration.SYEnrolled = School;
                 registration.DateEnrolled = DateTime.Today.ToString("yyyy-mm-dd");
                 //////////////////////////////////////
-                registration.Reservee = "N/A";
-                registration.ReserveFor = "N/A";
-                registration.PartialPayment = "N/A";
-                registration.FullPayment = "N/A";
-               
+                registration.Reservee = "0";
+                registration.ReserveFor = "0";
+                registration.PartialPayment = "0";
+                registration.FullPayment = "0";
+
+                registration.Section = "0";
+
                 //function to load important filtering
                 checkYearLevel();
                 CheckTrack();
