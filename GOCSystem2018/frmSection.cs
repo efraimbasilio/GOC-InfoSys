@@ -15,11 +15,12 @@ namespace GOCSystem2018
         Section section = new Section();
         Strand strand = new Strand();
         Department dept = new Department();
-
+        Room room = new Room();
 
         List<Section> sections = new List<Section>();
         List<Strand> strands = new List<Strand>();
         List<Department> depts = new List<Department>();
+        List<Room> rooms = new List<Room>();
 
         public void LoadStrand()
         {
@@ -63,6 +64,29 @@ namespace GOCSystem2018
 
         }//End LoadRecords()
 
+        
+
+        public void LoadRoomName()
+        {
+            //clear list
+
+            //dgvDiscount.Rows.Clear();
+            cmbRoom.Items.Clear();
+            rooms.Clear();
+
+            //pass value to list
+            rooms = room.GetRoomSectionCapacity();
+
+            //loop through load it to list view
+            foreach (var item in rooms)
+            {
+                //Load to datagridView
+                //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
+                cmbRoom.Items.Add(item.RoomName);
+            }
+
+        }//End LoadRecords()
+
         public frmSection()
         {
             InitializeComponent();
@@ -91,12 +115,19 @@ namespace GOCSystem2018
             SectionLbl.Text = "";
             txtSection.Text = "";
             txtDesc.Text = "";
+            cmbRoom.Text = "";
+            cmbStrand.Text = "";
+            cmbDept.Text = "";
 
             //clear edit section window
             pnlEdit.Visible = true;
             EditSectionLbl.Text = "";
             txtEditSection.Text = "";
             txtEditDesc.Text = "";
+            cmbEditRoom.Text = "";
+            cmbEditStrand.Text = "";
+            cmbEditDept.Text = "";
+                
         }//section form close button
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -149,7 +180,7 @@ namespace GOCSystem2018
             foreach (var item in sections)
             {
                 //Load to datagridView
-                dgvSection.Rows.Add(item.Id, item.SectionName, item.SectionDesc,item.Strand, item.Dept);
+                dgvSection.Rows.Add(item.Id, item.SectionName, item.SectionDesc,item.Strand, item.Dept,item.Room);
 
             }
         }//End LoadRecords()
@@ -158,9 +189,16 @@ namespace GOCSystem2018
         {
             txtSection.Text = string.Empty;
             txtDesc.Text = string.Empty;
+            cmbRoom.Text = "";
+            cmbStrand.Text = "";
+            cmbDept.Text = "";
 
             txtEditSection.Text = string.Empty;
-            txtEditDesc.Text = string.Empty;
+            txtEditDesc.Text = string.Empty;           
+            cmbEditRoom.Text = "";
+            cmbEditStrand.Text = "";
+            cmbEditDept.Text = "";
+
         }
 
 
@@ -189,6 +227,7 @@ namespace GOCSystem2018
                 section.SectionDesc = txtDesc.Text.ToUpper();
                 section.Dept = cmbDept.Text;
                 section.Strand = cmbStrand.Text;
+                section.Room = cmbRoom.Text;
 
                 // call save method
                 section.Save();
@@ -214,6 +253,7 @@ namespace GOCSystem2018
                 section.SectionDesc = txtEditDesc.Text.ToUpper();
                 section.Dept = cmbEditDept.Text;
                 section.Strand = cmbStrand.Text;
+                section.Room = cmbRoom.Text;
 
                 section.Id = Int32.Parse(dgvSection.CurrentRow.Cells[0].FormattedValue.ToString());
                 section.Update();
@@ -273,6 +313,9 @@ namespace GOCSystem2018
                     txtEditSection.Text = item.SectionName;
                     txtEditDesc.Text = item.SectionDesc;
                     //txtEditMiscComment.Text = item.TuitionFeeDescription;
+                    cmbEditRoom.Text = item.Room;
+                    cmbEditStrand.Text = item.Strand;
+                    cmbEditDept.Text = item.Dept;
                 }
             }
         }

@@ -49,6 +49,18 @@
             this.lblSY = new System.Windows.Forms.Label();
             this.lblSem = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbltest = new System.Windows.Forms.Label();
+            this.lblRoomName = new System.Windows.Forms.Label();
+            this.lblRoomCapacity = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.dgvEnrolledList = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -160,16 +172,20 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label135 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.dgvEnrolledList = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.dgvStudents2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolledList)).BeginInit();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel9.SuspendLayout();
@@ -203,9 +219,8 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            this.panel10.SuspendLayout();
-            this.groupBox13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolledList)).BeginInit();
+            this.groupBox14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents2)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -344,6 +359,11 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dgvEnrolledList);
+            this.panel1.Controls.Add(this.groupBox14);
+            this.panel1.Controls.Add(this.lbltest);
+            this.panel1.Controls.Add(this.lblRoomName);
+            this.panel1.Controls.Add(this.lblRoomCapacity);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.groupBox13);
             this.panel1.Controls.Add(this.groupBox12);
@@ -381,6 +401,117 @@
             this.panel1.Size = new System.Drawing.Size(1314, 720);
             this.panel1.TabIndex = 43;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lbltest
+            // 
+            this.lbltest.Location = new System.Drawing.Point(656, 421);
+            this.lbltest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbltest.Name = "lbltest";
+            this.lbltest.Size = new System.Drawing.Size(89, 15);
+            this.lbltest.TabIndex = 1057;
+            this.lbltest.Text = "__________________";
+            this.lbltest.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblRoomName
+            // 
+            this.lblRoomName.Location = new System.Drawing.Point(647, 68);
+            this.lblRoomName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRoomName.Name = "lblRoomName";
+            this.lblRoomName.Size = new System.Drawing.Size(185, 29);
+            this.lblRoomName.TabIndex = 1056;
+            this.lblRoomName.Text = "__________________";
+            this.lblRoomName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblRoomName.TextChanged += new System.EventHandler(this.lblRoomName_TextChanged);
+            // 
+            // lblRoomCapacity
+            // 
+            this.lblRoomCapacity.Location = new System.Drawing.Point(836, 75);
+            this.lblRoomCapacity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRoomCapacity.Name = "lblRoomCapacity";
+            this.lblRoomCapacity.Size = new System.Drawing.Size(89, 15);
+            this.lblRoomCapacity.TabIndex = 1055;
+            this.lblRoomCapacity.Text = "__________________";
+            this.lblRoomCapacity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(224)))));
+            this.panel10.Controls.Add(this.label31);
+            this.panel10.Location = new System.Drawing.Point(144, 767);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(66, 36);
+            this.panel10.TabIndex = 1054;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.Color.White;
+            this.label31.Location = new System.Drawing.Point(8, 10);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(48, 15);
+            this.label31.TabIndex = 0;
+            this.label31.Text = "Subject";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Location = new System.Drawing.Point(144, 783);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(66, 284);
+            this.groupBox13.TabIndex = 1053;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Subjects";
+            // 
+            // dgvEnrolledList
+            // 
+            this.dgvEnrolledList.AllowUserToAddRows = false;
+            this.dgvEnrolledList.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvEnrolledList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvEnrolledList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEnrolledList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.Column9,
+            this.Column10,
+            this.Column11});
+            this.dgvEnrolledList.Location = new System.Drawing.Point(157, 803);
+            this.dgvEnrolledList.Name = "dgvEnrolledList";
+            this.dgvEnrolledList.ReadOnly = true;
+            this.dgvEnrolledList.Size = new System.Drawing.Size(125, 258);
+            this.dgvEnrolledList.TabIndex = 1019;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn16.HeaderText = "GOC NO";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Width = 79;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn17.HeaderText = "Level";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Width = 61;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "Strand";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Section";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Semester";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
             // groupBox12
             // 
@@ -1577,86 +1708,95 @@
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
             // 
-            // panel10
+            // groupBox14
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(224)))));
-            this.panel10.Controls.Add(this.label31);
-            this.panel10.Location = new System.Drawing.Point(418, 767);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(524, 36);
-            this.panel10.TabIndex = 1054;
+            this.groupBox14.Controls.Add(this.dgvStudents2);
+            this.groupBox14.Location = new System.Drawing.Point(389, 799);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(586, 284);
+            this.groupBox14.TabIndex = 1055;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Students";
             // 
-            // label31
+            // dgvStudents2
             // 
-            this.label31.AutoSize = true;
-            this.label31.ForeColor = System.Drawing.Color.White;
-            this.label31.Location = new System.Drawing.Point(8, 10);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(48, 15);
-            this.label31.TabIndex = 0;
-            this.label31.Text = "Subject";
+            this.dgvStudents2.AllowUserToAddRows = false;
+            this.dgvStudents2.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvStudents2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvStudents2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudents2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15});
+            this.dgvStudents2.Location = new System.Drawing.Point(-39, 20);
+            this.dgvStudents2.Name = "dgvStudents2";
+            this.dgvStudents2.ReadOnly = true;
+            this.dgvStudents2.Size = new System.Drawing.Size(619, 258);
+            this.dgvStudents2.TabIndex = 1019;
             // 
-            // groupBox13
+            // dataGridViewTextBoxColumn18
             // 
-            this.groupBox13.Controls.Add(this.dgvEnrolledList);
-            this.groupBox13.Location = new System.Drawing.Point(418, 783);
-            this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(524, 284);
-            this.groupBox13.TabIndex = 1053;
-            this.groupBox13.TabStop = false;
-            this.groupBox13.Text = "Subjects";
+            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn18.HeaderText = "Reg No";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Width = 74;
             // 
-            // dgvEnrolledList
+            // dataGridViewTextBoxColumn19
             // 
-            this.dgvEnrolledList.AllowUserToAddRows = false;
-            this.dgvEnrolledList.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgvEnrolledList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvEnrolledList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEnrolledList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.Column9,
-            this.Column10,
-            this.Column11});
-            this.dgvEnrolledList.Location = new System.Drawing.Point(-39, 20);
-            this.dgvEnrolledList.Name = "dgvEnrolledList";
-            this.dgvEnrolledList.ReadOnly = true;
-            this.dgvEnrolledList.Size = new System.Drawing.Size(557, 258);
-            this.dgvEnrolledList.TabIndex = 1019;
+            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn19.HeaderText = "GOC No";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Width = 77;
             // 
-            // dataGridViewTextBoxColumn16
+            // dataGridViewTextBoxColumn20
             // 
-            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn16.HeaderText = "GOC NO";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Width = 79;
+            this.dataGridViewTextBoxColumn20.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn17
+            // dataGridViewTextBoxColumn21
             // 
-            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn17.HeaderText = "Level";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            this.dataGridViewTextBoxColumn17.Width = 61;
+            this.dataGridViewTextBoxColumn21.HeaderText = "Level";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
             // 
-            // Column9
+            // dataGridViewTextBoxColumn22
             // 
-            this.Column9.HeaderText = "Strand";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.HeaderText = "Strand";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
             // 
-            // Column10
+            // Column12
             // 
-            this.Column10.HeaderText = "Section";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
+            this.Column12.HeaderText = "Section";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
             // 
-            // Column11
+            // Column13
             // 
-            this.Column11.HeaderText = "Semester";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
+            this.Column13.HeaderText = "Semester";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "SY Enrolled";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Date Enrolled";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
             // 
             // frmAssesment
             // 
@@ -1676,6 +1816,9 @@
             this.Load += new System.EventHandler(this.frmAssesment_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolledList)).EndInit();
             this.groupBox12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel9.ResumeLayout(false);
@@ -1720,10 +1863,8 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.groupBox13.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolledList)).EndInit();
+            this.groupBox14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudents2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1862,5 +2003,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.Label lblRoomCapacity;
+        private System.Windows.Forms.Label lblRoomName;
+        private System.Windows.Forms.Label lbltest;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.DataGridView dgvStudents2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
     }
 }
