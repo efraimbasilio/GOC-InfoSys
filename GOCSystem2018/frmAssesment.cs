@@ -970,12 +970,25 @@ namespace GOCSystem2018
                     enroll.SyEnroll = lblSY.Text;                    
                     enroll.SaveGrade12();
 
-                    studProfile.UpdateSection();
+                    studProfile.StudRegistrationNo = lblRegNo.Text;
+                    studProfile.Section = cmbSection.Text;
+                    studProfile.UpdateTheSection();
 
                     SaveForGrading();
+
+                    frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                    this.Hide();
+                    this.Dispose();
+                    frmBillingSearch.Show();
                 }
                 else
                 {
+                    MessageBox.Show("section ----------- sectioning module 1");
+                    studProfile.StudRegistrationNo = lblRegNo.Text;
+                    studProfile.Section = cmbSection.Text;
+                    MessageBox.Show("section ----------- sectioning module 1 - pass" + studProfile.Section);
+                    studProfile.UpdateTheSection();
+
                     EnrolledStudents enroll = new EnrolledStudents();
                     enroll.RegNo = lblRegNo.Text;
                     enroll.TheGOCNo = lblGOCNo.Text;
@@ -985,10 +998,17 @@ namespace GOCSystem2018
                     enroll.Section = cmbSection.Text;
                     enroll.Semester = lblSem.Text;
                     enroll.SyEnroll = lblSY.Text;
-                    enroll.Save();
-                    studProfile.UpdateSection();
+
+                    enroll.Save();//grade 11
+
+                    
 
                     SaveForGrading();
+
+                    frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                    this.Hide();
+                    this.Dispose();
+                    frmBillingSearch.Show();
                 }
             }
 

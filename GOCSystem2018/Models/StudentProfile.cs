@@ -289,6 +289,39 @@ namespace GOCSystem2018
             }
         }
 
+        public void UpdateTheSection()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    string sql = "UPDATE student_profile SET  section=@section" +
+                                    " WHERE regno=@studRegistrationNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
+                    cmd.Parameters.AddWithValue("section", section);
+
+
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
         public void UpdateMOP()
         {
             try
@@ -321,38 +354,39 @@ namespace GOCSystem2018
             }
         }
 
-        public void UpdateSection()
-        {
-            try
-            {
-                //prepare connection string 
-                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
-                {
+        //public void UpdateSection()
+        //{
+        //    try
+        //    {
+        //        //prepare connection string 
+        //        using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+        //        {
 
-                    //try to open connection
-                    con.Open();
+        //            //try to open connection
+        //            con.Open();
 
-                    string sql = "UPDATE student_profile SET section=@section" +
-                                    " WHERE regno=@studRegistrationNo;";
+        //            string sql = "UPDATE student_profile SET section=@section" +
+        //                            "WHERE regno=@studRegistrationNo;";
 
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
+        //            MySqlCommand cmd = new MySqlCommand(sql, con);
+        //            MessageBox.Show("section ----------- sectioning module2" );
+        //            cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
+        //            //MessageBox.Show(section);
+        //            cmd.Parameters.AddWithValue("section", section);
+        //            //cmd.Parameters.AddWithValue("reserveFor", reserveFor);
 
-                    cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
-                    cmd.Parameters.AddWithValue("section", section);
-                    //cmd.Parameters.AddWithValue("reserveFor", reserveFor);
 
+        //            cmd.ExecuteNonQuery();
 
-                    cmd.ExecuteNonQuery();
+        //            MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        }
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                    //    MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-        }
+        //    }
+        //}
 
         public List<StudentProfile> Load()
         {

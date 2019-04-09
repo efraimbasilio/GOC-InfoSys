@@ -575,7 +575,7 @@ namespace GOCSystem2018
                     studProfile.StudGOCNo = GOCNo;
 
                     studProfile.Reservee = "0";//update the status
-
+                    studProfile.PartialPayment = "1";//update the status
                     //update GOC number in the student profile table
                     studProfile.SaveGOCNumber();
 

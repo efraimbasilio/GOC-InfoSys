@@ -101,7 +101,7 @@ namespace GOCSystem2018
                         section.sectionDesc = reader["section_desc"].ToString();
                         section.strand = reader["strand"].ToString();
                         section.dept = reader["dept"].ToString();
-                        section.room = reader["room"].ToString();
+                        section.room = reader["rooms"].ToString();
                         sections.Add(section);
 
                     }
