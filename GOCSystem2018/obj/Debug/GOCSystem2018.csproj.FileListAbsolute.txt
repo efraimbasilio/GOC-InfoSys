@@ -1180,3 +1180,5 @@ C:\Users\Instructor\Desktop\NEW_SYSTEM 4.1.2019\GOC-InfoSys\GOCSystem2018\obj\De
 C:\Users\Instructor\Desktop\NEW_SYSTEM 4.1.2019\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
 C:\Users\Instructor\Desktop\NEW_SYSTEM 4.1.2019\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmReports.resources
 C:\Users\Instructor\Desktop\NEW_SYSTEM 4.1.2019\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\Google.Protobuf.dll
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\MySql.Data.xml
