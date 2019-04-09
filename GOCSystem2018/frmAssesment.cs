@@ -197,7 +197,16 @@ namespace GOCSystem2018
                 cmbSection.Text = theSection;
             }
 
-            
+            if (lblEnStatus.Text == "Pending")
+            {
+                cmbSection.Enabled = false;
+                button4.Enabled = false;
+            }
+            else
+            {
+                cmbSection.Enabled = true;
+                button4.Enabled = true;
+            }
         }
 
         public void LoadBillingHistory()
@@ -1054,7 +1063,7 @@ namespace GOCSystem2018
 
         private void cmbMOP_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            
+            btnEnroll.Enabled = true;
         }
 
         private void optYES_CheckedChanged(object sender, EventArgs e)
