@@ -1108,8 +1108,6 @@ C:\Users\EF\Desktop\NEW_SYSTEM\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018
 C:\Users\EF\Desktop\NEW_SYSTEM\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
 C:\Users\EF\Desktop\NEW_SYSTEM\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmReports.resources
 C:\Users\EF\Desktop\NEW_SYSTEM\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
-C:\Users\GloomyFish\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\Google.Protobuf.dll
-C:\Users\GloomyFish\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\MySql.Data.xml
 C:\Users\GloomyFish\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmAssessmentSearch.resources
 C:\Users\GloomyFish\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmBilling.resources
 C:\Users\GloomyFish\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmBillingSearch.resources

@@ -688,7 +688,7 @@ namespace GOCSystem2018
         {
 
 
-            panel4.Visible = true;
+            //panel4.Visible = true;
 
 
         }
@@ -887,6 +887,16 @@ namespace GOCSystem2018
             frmAssessmentSearch.Show();
         }
         #endregion
+        private void optFemale_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void optMale_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnSave_Click_1(object sender, EventArgs e)
         {
             //if (string.IsNullOrWhiteSpace(LRNtxt.Text) && string.IsNullOrWhiteSpace(cmbVoucher.Text) && string.IsNullOrWhiteSpace(cmbStudType.Text) && string.IsNullOrWhiteSpace(cmbCourseStrand.Text) && string.IsNullOrWhiteSpace(LRNtxt.Text) &&
