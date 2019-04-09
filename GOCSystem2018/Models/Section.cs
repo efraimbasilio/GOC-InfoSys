@@ -19,6 +19,7 @@ namespace GOCSystem2018
         protected string sectionDesc;
         protected string strand;
         protected string dept;
+        protected string room;
 
         //protected int flag;
 
@@ -55,6 +56,12 @@ namespace GOCSystem2018
         {
             get { return dept; }
             set { dept = value; }
+        }
+
+        public string Room
+        {
+            get { return room; }
+            set { room = value; }
         }
         //variable name should always to be plural for every list
         //Camel casing
@@ -94,6 +101,7 @@ namespace GOCSystem2018
                         section.sectionDesc = reader["section_desc"].ToString();
                         section.strand = reader["strand"].ToString();
                         section.dept = reader["dept"].ToString();
+                        section.room = reader["rooms"].ToString();
                         sections.Add(section);
 
                     }
@@ -139,6 +147,7 @@ namespace GOCSystem2018
                         section.sectionDesc = reader["section_desc"].ToString();
                         section.strand = reader["strand"].ToString();
                         section.dept = reader["dept"].ToString();
+                        section.room = reader["room"].ToString();
 
                         sections.Add(section);
 
@@ -203,6 +212,56 @@ namespace GOCSystem2018
             return sections;
         }
 
+        public List<Section> GetRoomBySectionRoom()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT rooms FROM section WHERE section_name =@sectionName;";
+
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("sectionName", sectionName);
+
+                    //MessageBox.Show(strand);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Section section = new Section();
+
+                        //prepare properties
+                        //section.id = Convert.ToInt32(reader["id"].ToString());
+                        section.room = reader["rooms"].ToString();
+                        //section.sectionDesc = reader["section_desc"].ToString();
+                        //section.strand = reader["strand"].ToString();
+                        //section.dept = reader["dept"].ToString();
+
+                       MessageBox.Show(section.room);
+
+                        sections.Add(section);
+
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return sections;
+        }
+
         public void Save()
         {
             try
@@ -214,8 +273,8 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO section(section_name,section_desc,strand,dept) " +
-                                    " VALUES (@sectionName,@sectionDesc,@strand,@dept);";
+                    string sql = "INSERT INTO section(section_name,section_desc,strand,dept,room) " +
+                                    " VALUES (@sectionName,@sectionDesc,@strand,@dept,@room);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
@@ -223,6 +282,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("sectionDesc", sectionDesc);
                     cmd.Parameters.AddWithValue("strand", strand);
                     cmd.Parameters.AddWithValue("dept", dept);
+                    cmd.Parameters.AddWithValue("room", room);
 
 
                     cmd.ExecuteNonQuery();
@@ -258,7 +318,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("sectionDesc", sectionDesc);
                     cmd.Parameters.AddWithValue("strand", strand);
                     cmd.Parameters.AddWithValue("dept", dept);
-
+                    cmd.Parameters.AddWithValue("room", room);
 
                     cmd.ExecuteNonQuery();
 

@@ -33,6 +33,10 @@
             this.btnEdit = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
             this.pnlEdit = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbEditDept = new System.Windows.Forms.ComboBox();
+            this.cmbEditStrand = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,7 +49,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pnlAdd = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbDept = new System.Windows.Forms.ComboBox();
+            this.cmbStrand = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.SectionLbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,21 +64,17 @@
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.txtSection = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.dgvSection = new System.Windows.Forms.DataGridView();
-            this.cmbStrand = new System.Windows.Forms.ComboBox();
-            this.cmbDept = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cmbEditDept = new System.Windows.Forms.ComboBox();
-            this.cmbEditStrand = new System.Windows.Forms.ComboBox();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbEditRoom = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cmbRoom = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
@@ -116,6 +121,8 @@
             // 
             this.pnlEdit.BackColor = System.Drawing.Color.White;
             this.pnlEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEdit.Controls.Add(this.label14);
+            this.pnlEdit.Controls.Add(this.cmbEditRoom);
             this.pnlEdit.Controls.Add(this.label12);
             this.pnlEdit.Controls.Add(this.label13);
             this.pnlEdit.Controls.Add(this.cmbEditDept);
@@ -135,10 +142,48 @@
             this.pnlEdit.TabIndex = 42;
             this.pnlEdit.Visible = false;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(31, 149);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(65, 13);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Department:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(58, 122);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Strand:";
+            // 
+            // cmbEditDept
+            // 
+            this.cmbEditDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditDept.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbEditDept.FormattingEnabled = true;
+            this.cmbEditDept.Location = new System.Drawing.Point(106, 146);
+            this.cmbEditDept.Name = "cmbEditDept";
+            this.cmbEditDept.Size = new System.Drawing.Size(121, 21);
+            this.cmbEditDept.TabIndex = 27;
+            // 
+            // cmbEditStrand
+            // 
+            this.cmbEditStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditStrand.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbEditStrand.FormattingEnabled = true;
+            this.cmbEditStrand.Location = new System.Drawing.Point(106, 119);
+            this.cmbEditStrand.Name = "cmbEditStrand";
+            this.cmbEditStrand.Size = new System.Drawing.Size(121, 21);
+            this.cmbEditStrand.TabIndex = 26;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 140);
+            this.label1.Location = new System.Drawing.Point(64, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 24;
@@ -147,7 +192,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 88);
+            this.label3.Location = new System.Drawing.Point(39, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 22;
@@ -157,7 +202,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 114);
+            this.label4.Location = new System.Drawing.Point(22, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 23;
@@ -179,7 +224,7 @@
             // EditSectionLbl
             // 
             this.EditSectionLbl.AutoSize = true;
-            this.EditSectionLbl.Location = new System.Drawing.Point(107, 88);
+            this.EditSectionLbl.Location = new System.Drawing.Point(105, 44);
             this.EditSectionLbl.Name = "EditSectionLbl";
             this.EditSectionLbl.Size = new System.Drawing.Size(42, 13);
             this.EditSectionLbl.TabIndex = 11;
@@ -212,14 +257,14 @@
             // 
             // txtEditDesc
             // 
-            this.txtEditDesc.Location = new System.Drawing.Point(108, 137);
+            this.txtEditDesc.Location = new System.Drawing.Point(106, 93);
             this.txtEditDesc.Name = "txtEditDesc";
             this.txtEditDesc.Size = new System.Drawing.Size(191, 20);
             this.txtEditDesc.TabIndex = 4;
             // 
             // txtEditSection
             // 
-            this.txtEditSection.Location = new System.Drawing.Point(108, 111);
+            this.txtEditSection.Location = new System.Drawing.Point(106, 67);
             this.txtEditSection.Name = "txtEditSection";
             this.txtEditSection.Size = new System.Drawing.Size(191, 20);
             this.txtEditSection.TabIndex = 2;
@@ -261,10 +306,21 @@
             this.label16.TabIndex = 17;
             this.label16.Text = "SECTION";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(261, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(559, 39);
+            this.label8.TabIndex = 44;
+            this.label8.Text = resources.GetString("label8.Text");
+            // 
             // pnlAdd
             // 
             this.pnlAdd.BackColor = System.Drawing.Color.White;
             this.pnlAdd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlAdd.Controls.Add(this.label15);
+            this.pnlAdd.Controls.Add(this.cmbRoom);
             this.pnlAdd.Controls.Add(this.label11);
             this.pnlAdd.Controls.Add(this.label9);
             this.pnlAdd.Controls.Add(this.cmbDept);
@@ -283,6 +339,44 @@
             this.pnlAdd.Size = new System.Drawing.Size(325, 249);
             this.pnlAdd.TabIndex = 41;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(33, 142);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 13);
+            this.label11.TabIndex = 25;
+            this.label11.Text = "Department:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(60, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 13);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Strand:";
+            // 
+            // cmbDept
+            // 
+            this.cmbDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDept.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbDept.FormattingEnabled = true;
+            this.cmbDept.Location = new System.Drawing.Point(108, 139);
+            this.cmbDept.Name = "cmbDept";
+            this.cmbDept.Size = new System.Drawing.Size(121, 21);
+            this.cmbDept.TabIndex = 23;
+            // 
+            // cmbStrand
+            // 
+            this.cmbStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStrand.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbStrand.FormattingEnabled = true;
+            this.cmbStrand.Location = new System.Drawing.Point(108, 112);
+            this.cmbStrand.Name = "cmbStrand";
+            this.cmbStrand.Size = new System.Drawing.Size(121, 21);
+            this.cmbStrand.TabIndex = 22;
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -299,7 +393,7 @@
             // SectionLbl
             // 
             this.SectionLbl.AutoSize = true;
-            this.SectionLbl.Location = new System.Drawing.Point(110, 88);
+            this.SectionLbl.Location = new System.Drawing.Point(107, 37);
             this.SectionLbl.Name = "SectionLbl";
             this.SectionLbl.Size = new System.Drawing.Size(44, 13);
             this.SectionLbl.TabIndex = 11;
@@ -333,7 +427,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 140);
+            this.label5.Location = new System.Drawing.Point(60, 89);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 5;
@@ -342,7 +436,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 88);
+            this.label6.Location = new System.Drawing.Point(35, 37);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 1;
@@ -351,14 +445,14 @@
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(111, 137);
+            this.txtDesc.Location = new System.Drawing.Point(108, 86);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(191, 20);
             this.txtDesc.TabIndex = 4;
             // 
             // txtSection
             // 
-            this.txtSection.Location = new System.Drawing.Point(111, 111);
+            this.txtSection.Location = new System.Drawing.Point(108, 60);
             this.txtSection.Name = "txtSection";
             this.txtSection.Size = new System.Drawing.Size(191, 20);
             this.txtSection.TabIndex = 2;
@@ -366,20 +460,11 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 114);
+            this.label7.Location = new System.Drawing.Point(18, 63);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 13);
             this.label7.TabIndex = 3;
             this.label7.Text = "Section Name:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(261, 15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(559, 39);
-            this.label8.TabIndex = 44;
-            this.label8.Text = resources.GetString("label8.Text");
             // 
             // dgvSection
             // 
@@ -387,6 +472,7 @@
             this.dgvSection.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSection.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column6,
             this.Column2,
             this.Column3,
             this.Column4,
@@ -399,106 +485,43 @@
             this.dgvSection.TabIndex = 43;
             this.dgvSection.Click += new System.EventHandler(this.dgvSection_Click);
             // 
-            // cmbStrand
+            // label14
             // 
-            this.cmbStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStrand.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cmbStrand.FormattingEnabled = true;
-            this.cmbStrand.Location = new System.Drawing.Point(111, 163);
-            this.cmbStrand.Name = "cmbStrand";
-            this.cmbStrand.Size = new System.Drawing.Size(121, 21);
-            this.cmbStrand.TabIndex = 22;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(57, 176);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(38, 13);
+            this.label14.TabIndex = 31;
+            this.label14.Text = "Room:";
             // 
-            // cmbDept
+            // cmbEditRoom
             // 
-            this.cmbDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbDept.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cmbDept.FormattingEnabled = true;
-            this.cmbDept.Location = new System.Drawing.Point(111, 190);
-            this.cmbDept.Name = "cmbDept";
-            this.cmbDept.Size = new System.Drawing.Size(121, 21);
-            this.cmbDept.TabIndex = 23;
+            this.cmbEditRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEditRoom.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbEditRoom.FormattingEnabled = true;
+            this.cmbEditRoom.Location = new System.Drawing.Point(106, 173);
+            this.cmbEditRoom.Name = "cmbEditRoom";
+            this.cmbEditRoom.Size = new System.Drawing.Size(121, 21);
+            this.cmbEditRoom.TabIndex = 30;
             // 
-            // label9
+            // label15
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(63, 166);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 13);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "Strand:";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(57, 169);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(38, 13);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Room:";
             // 
-            // label11
+            // cmbRoom
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(36, 193);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 13);
-            this.label11.TabIndex = 25;
-            this.label11.Text = "Department:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(33, 193);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 13);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "Department:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(60, 166);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Strand:";
-            // 
-            // cmbEditDept
-            // 
-            this.cmbEditDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEditDept.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cmbEditDept.FormattingEnabled = true;
-            this.cmbEditDept.Location = new System.Drawing.Point(108, 190);
-            this.cmbEditDept.Name = "cmbEditDept";
-            this.cmbEditDept.Size = new System.Drawing.Size(121, 21);
-            this.cmbEditDept.TabIndex = 27;
-            // 
-            // cmbEditStrand
-            // 
-            this.cmbEditStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbEditStrand.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cmbEditStrand.FormattingEnabled = true;
-            this.cmbEditStrand.Location = new System.Drawing.Point(108, 163);
-            this.cmbEditStrand.Name = "cmbEditStrand";
-            this.cmbEditStrand.Size = new System.Drawing.Size(121, 21);
-            this.cmbEditStrand.TabIndex = 26;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Department";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Strand";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Description";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Section Name";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
+            this.cmbRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRoom.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbRoom.FormattingEnabled = true;
+            this.cmbRoom.Location = new System.Drawing.Point(110, 166);
+            this.cmbRoom.Name = "cmbRoom";
+            this.cmbRoom.Size = new System.Drawing.Size(121, 21);
+            this.cmbRoom.TabIndex = 30;
             // 
             // Column1
             // 
@@ -506,6 +529,38 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Room";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 80;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Section Name";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Description";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Strand";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 80;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Department";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // frmSection
             // 
@@ -577,7 +632,12 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbDept;
         private System.Windows.Forms.ComboBox cmbStrand;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cmbEditRoom;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cmbRoom;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;

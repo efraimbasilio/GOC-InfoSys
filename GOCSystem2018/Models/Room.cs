@@ -232,5 +232,48 @@ namespace GOCSystem2018
                 MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public List<Room> GetRoomSectionCapacity()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT capacity FROM room WHERE room_Name =@roomName;";
+
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("roomName", roomName);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Room room = new Room();
+
+                        //prepare properties
+                        //room.id = Convert.ToInt32(reader["id"].ToString());
+                        //room.roomName = reader["room_name"].ToString();
+                        //room.roomLocation = reader["location"].ToString();
+                        room.roomCapacity = reader["capacity"].ToString();
+                        MessageBox.Show(room.roomCapacity);
+                        rooms.Add(room);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return rooms;
+        }
     }
 }

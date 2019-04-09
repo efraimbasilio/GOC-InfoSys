@@ -40,6 +40,7 @@ namespace GOCSystem2018
         StudentProfile studProfile = new StudentProfile();
         Billing bill = new Billing();
         EnrolledStudents enrollee = new EnrolledStudents();
+        Room room = new Room();
 
         List<Models.TuitionFee> tuitionFees = new List<Models.TuitionFee>();
         List<Section> sections = new List<Section>();
@@ -55,11 +56,12 @@ namespace GOCSystem2018
         List<Billing_Partial> billingPartials = new List<Billing_Partial>();
         List<StudentProfile> studProfiles = new List<StudentProfile>();
         List<Billing> billings = new List<Billing>();
-
         List<EnrolledStudents> enrollees = new List<EnrolledStudents>();
+        List<Room> rooms = new List<Room>();
+       
 
         public string StudName,GOCNo, LRN, Track, GradeLevel, RegNo, Strand,Voucher,theSection;
-        public string partialPay;
+        public string partialPay, roomName;
 
         public frmAssesment()
         {
@@ -153,6 +155,7 @@ namespace GOCSystem2018
             lblStrand.Text = Strand;
             lblVoucher.Text = Voucher;
 
+            LoadEnrolledStudents();
 
             //if (partialPay == null)
             //{
@@ -176,6 +179,8 @@ namespace GOCSystem2018
             EnrollmentStatus();
             LoadBillingHistory();
 
+            LoadEnrolledStudents();
+
             if (Convert.ToInt32(partialPay) > 0)
             {
                 cmbMOP.Text = "Partial Payment";
@@ -192,7 +197,16 @@ namespace GOCSystem2018
                 cmbSection.Text = theSection;
             }
 
-            
+            if (lblEnStatus.Text == "Pending")
+            {
+                cmbSection.Enabled = false;
+                button4.Enabled = false;
+            }
+            else
+            {
+                cmbSection.Enabled = true;
+                button4.Enabled = true;
+            }
         }
 
         public void LoadBillingHistory()
@@ -211,6 +225,28 @@ namespace GOCSystem2018
 
             }
         }
+
+        public void LoadSectionCapacity()
+        {
+            //clear list
+
+            //dgvDiscount.Rows.Clear();
+            //bRoom.Items.Clear();
+            rooms.Clear();
+
+            room.RoomName = roomName;
+            //pass value to list
+            rooms = room.GetRoomSectionCapacity();
+
+            //loop through load it to list view
+            foreach (var item in rooms)
+            {
+                //Load to datagridView
+                //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
+                lblRoomCapacity.Text= item.RoomCapacity;
+            }
+
+        }//End LoadRecords()
 
         /// <summary>
         /// Working to filter the Downpayment per department
@@ -518,7 +554,25 @@ namespace GOCSystem2018
                 dgvSchedule.Rows.Add(item.TimeStart, item.TimeEnd, item.Day1, item.Day2, item.Day3, item.Day4, item.Day5);
             }//End LoadSchedule()
         }
-        
+
+        public void LoadEnrolledStudents()
+        {
+            //clear list
+            enrollees.Clear();
+            
+
+            enrollee.Section = cmbSection.Text;
+            //pass value to list
+            enrollees = enrollee.CountStudInSection();
+            MessageBox.Show("sasa");
+            //loop through load it to list view
+            foreach (var item in enrollees)
+            {
+                //Load to datagridView
+                dgvStudents2.Rows.Add(item.RegNo, item.TheGOCNo, item.FullName, item.GradeLevel, item.Strand, item.Section, item.Section, item.Semester, item.SyEnroll);
+            }//End LoadSchedule()
+        }
+
         private void frmAssesment_Load_1(object sender, EventArgs e)
         {
 
@@ -690,6 +744,8 @@ namespace GOCSystem2018
 
         private void cmbSection_SelectedValueChanged(object sender, EventArgs e)
         {
+
+            LoadRoomCapacity();
             schedules.Clear();
             dgvSchedule.Rows.Clear();
             schedules = schedule.GetScheduleById();
@@ -710,12 +766,10 @@ namespace GOCSystem2018
             enrollees = enrollee.CountStudInSection();
 
             foreach (var item in enrollees)
-            {
-             
-                    dgvEnrolledList.Rows.Add(item.TheGOCNo, item.GradeLevel,item.Strand, item.Section , item.Semester);
-                
-
+            {             
+                dgvEnrolledList.Rows.Add(item.TheGOCNo, item.GradeLevel,item.Strand, item.Section , item.Semester);               
             }
+
 
 
             btnEnroll.Enabled = true;
@@ -726,6 +780,37 @@ namespace GOCSystem2018
             
            
         }
+
+        public  void LoadRoomCapacity()
+        {
+
+            sections.Clear();
+            lblRoomName.Text = "";
+
+            section.SectionName = cmbSection.Text;
+
+            // MessageBox.Show(theSection);
+
+           
+            sections = section.GetRoomBySectionRoom();
+            foreach (var item in sections)
+            {
+                lblRoomName.Text = item.Room;
+                MessageBox.Show(lbltest.Text);   
+            }
+
+
+            rooms.Clear();
+            //lblRoomName.Text = "";
+
+            room.RoomName = lblRoomName.Text;
+            rooms = room.GetRoomSectionCapacity();
+            foreach (var item in rooms)
+            {
+                lblRoomCapacity.Text = item.RoomCapacity;
+            }
+        }
+
         private void Schedule_loop()
         {
             schedules.Clear();
@@ -885,12 +970,25 @@ namespace GOCSystem2018
                     enroll.SyEnroll = lblSY.Text;                    
                     enroll.SaveGrade12();
 
-                    studProfile.UpdateSection();
+                    studProfile.StudRegistrationNo = lblRegNo.Text;
+                    studProfile.Section = cmbSection.Text;
+                    studProfile.UpdateTheSection();
 
                     SaveForGrading();
+
+                    frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                    this.Hide();
+                    this.Dispose();
+                    frmBillingSearch.Show();
                 }
                 else
                 {
+                    MessageBox.Show("section ----------- sectioning module 1");
+                    studProfile.StudRegistrationNo = lblRegNo.Text;
+                    studProfile.Section = cmbSection.Text;
+                    MessageBox.Show("section ----------- sectioning module 1 - pass" + studProfile.Section);
+                    studProfile.UpdateTheSection();
+
                     EnrolledStudents enroll = new EnrolledStudents();
                     enroll.RegNo = lblRegNo.Text;
                     enroll.TheGOCNo = lblGOCNo.Text;
@@ -900,10 +998,17 @@ namespace GOCSystem2018
                     enroll.Section = cmbSection.Text;
                     enroll.Semester = lblSem.Text;
                     enroll.SyEnroll = lblSY.Text;
-                    enroll.Save();
-                    studProfile.UpdateSection();
+
+                    enroll.Save();//grade 11
+
+                    
 
                     SaveForGrading();
+
+                    frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                    this.Hide();
+                    this.Dispose();
+                    frmBillingSearch.Show();
                 }
             }
 
@@ -965,6 +1070,11 @@ namespace GOCSystem2018
             }                         
         }
 
+        private void lblRoomName_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
         private void button4_Click_4(object sender, EventArgs e)
         {
             frmSection frmSection = new frmSection();
@@ -973,7 +1083,7 @@ namespace GOCSystem2018
 
         private void cmbMOP_SelectedValueChanged_1(object sender, EventArgs e)
         {
-            
+            btnEnroll.Enabled = true;
         }
 
         private void optYES_CheckedChanged(object sender, EventArgs e)
