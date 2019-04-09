@@ -659,17 +659,22 @@ namespace GOCSystem2018
             if (txtORNo.Text == "")
             {
                 MessageBox.Show("Please Add OR Number");
+                return;
             }
+            else
+            {
+                MessageBox.Show(enroll_status + " " + payment_status + " " + payment_no);
 
-            MessageBox.Show(enroll_status +" " + payment_status +" "+ payment_no);
-           
                 Reservations();
                 PartialNoReserve();
-                PartialSecondPay();               
-            this.Hide();
-            
-            frmBillingSearch search = new frmBillingSearch();
-            search.Show();
+                PartialSecondPay();
+                this.Hide();
+
+                frmBillingSearch search = new frmBillingSearch();
+                search.Show();
+            }
+
+           
             
         }
         
