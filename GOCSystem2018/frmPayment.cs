@@ -59,6 +59,20 @@ namespace GOCSystem2018
 
         public string amountToPay, paymentFor, GOCNo, ctrpay,  DP, voucherInfo, reservationFee, paymentNo, toCheckGOCNo;
         public double  TotalMiscFee, TotalOtherFee, AmountGiven, BalancePartial , perMonthFee;
+
+        private void txtORNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
         public int count = 1;
         public int  DPCheck;
         public string OrNo, PayNum;
@@ -642,17 +656,18 @@ namespace GOCSystem2018
         //For billing
         private void button1_Click(object sender, EventArgs e)
         {
+            if (txtORNo.Text == "")
+            {
+                MessageBox.Show("Please Add OR Number");
+            }
+
             MessageBox.Show(enroll_status +" " + payment_status +" "+ payment_no);
            
                 Reservations();
                 PartialNoReserve();
-                PartialSecondPay();
-
-               
-
+                PartialSecondPay();               
             this.Hide();
             
-
             frmBillingSearch search = new frmBillingSearch();
             search.Show();
             
