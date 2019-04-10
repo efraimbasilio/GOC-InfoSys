@@ -173,7 +173,7 @@ namespace GOCSystem2018
                         enroll.id = Convert.ToInt32(reader["id"].ToString());
                         enroll.regNo = reader["regno"].ToString();
                         enroll.theGOCNo = reader["gocno"].ToString();
-                        enroll.fullName = reader["fullname"].ToString();
+                        enroll.fullName = reader["full_name"].ToString();
                         enroll.gradeLevel = reader["grade_level"].ToString();
                         enroll.strand = reader["strand"].ToString();
                         enroll.section = reader["section"].ToString();

@@ -33,7 +33,7 @@ namespace GOCSystem2018
             foreach (var item in rooms)
             {
                 //Load to datagridView
-                dgvRoom.Rows.Add(item.Id, item.RoomName, item.RoomCapacity, item.RoomLocation);
+                dgvRoom.Rows.Add(item.Id, item.RoomName, item.RoomCapacity, item.RoomLocation, item.RoomCeiling);
 
             }
         }//End LoadRecords()
@@ -43,10 +43,13 @@ namespace GOCSystem2018
             txtRoomName.Text = string.Empty;
             txtCapacity.Text = string.Empty;
             cmbLocation.Text = string.Empty;
+            txtRoomCeiling.Text = string.Empty;
+
 
             txtEditRoom.Text = string.Empty;
             txtEditCapacity.Text = string.Empty;
             cmbEditLocation.Text = string.Empty;
+            txtEditRoomCeiling.Text = string.Empty;
         }
 
 
@@ -59,6 +62,8 @@ namespace GOCSystem2018
             txtRoomName.Text = "";
             txtCapacity.Text = "";
             cmbLocation.Text = "";
+            txtRoomCeiling.Text = string.Empty;
+
         }//add room close button
         private void label19_Click(object sender, EventArgs e)
         {
@@ -67,6 +72,8 @@ namespace GOCSystem2018
             txtEditRoom.Text = "";
             txtEditCapacity.Text = "";
             cmbEditLocation.Text = "";
+            txtEditRoomCeiling.Text = string.Empty;
+
         }//edit room close button
         private void label17_Click(object sender, EventArgs e)
         {
@@ -79,6 +86,7 @@ namespace GOCSystem2018
             txtRoomName.Text = "";
             txtCapacity.Text = "";
             cmbLocation.Text = "";
+            txtRoomCeiling.Text = string.Empty;
 
             //clear edit room window
             pnlEdit.Visible = false;
@@ -86,6 +94,8 @@ namespace GOCSystem2018
             txtEditRoom.Text = "";
             txtEditCapacity.Text = "";
             cmbEditLocation.Text = "";
+            txtEditRoomCeiling.Text = string.Empty;
+
         }//room form close button
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -120,6 +130,7 @@ namespace GOCSystem2018
                     txtEditRoom.Text = item.RoomName;
                     txtEditCapacity.Text = item.RoomCapacity;
                     cmbEditLocation.Text = item.RoomLocation;
+                    txtEditRoomCeiling.Text = item.RoomCeiling;
                 }
             }
         }
@@ -137,6 +148,7 @@ namespace GOCSystem2018
                 room.RoomName = txtRoomName.Text;
                 room.RoomCapacity = txtCapacity.Text;
                 room.RoomLocation = cmbLocation.Text;
+                room.RoomCeiling = txtRoomCeiling.Text;
                 // call save method
                 room.Save();
 
@@ -160,6 +172,7 @@ namespace GOCSystem2018
                 room.RoomName = txtEditRoom.Text;
                 room.RoomCapacity = txtEditCapacity.Text;
                 room.RoomLocation = cmbEditLocation.Text;
+                room.RoomCeiling = txtRoomCeiling.Text;
 
                 room.Id = Int32.Parse(dgvRoom.CurrentRow.Cells[0].FormattedValue.ToString());
                 room.Update();
@@ -218,6 +231,7 @@ namespace GOCSystem2018
                     txtEditRoom.Text = item.RoomName;
                     txtEditCapacity.Text = item.RoomCapacity;
                     cmbEditLocation.Text = item.RoomLocation;
+                    txtEditRoomCeiling.Text = item.RoomCeiling;
                 }
             }
         }

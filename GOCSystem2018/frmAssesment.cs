@@ -62,6 +62,7 @@ namespace GOCSystem2018
 
         public string StudName,GOCNo, LRN, Track, GradeLevel, RegNo, Strand,Voucher,theSection;
         public string partialPay, roomName;
+        public bool toSave = true;
 
         public frmAssesment()
         {
@@ -571,7 +572,7 @@ namespace GOCSystem2018
             foreach (var item in enrollees)
             {
                 //Load to datagridView
-                dgvStudents2.Rows.Add(item.RegNo, item.TheGOCNo, item.FullName, item.GradeLevel, item.Strand, item.Section, item.Section, item.Semester, item.SyEnroll);
+                dgvStudents.Rows.Add(item.RegNo, item.TheGOCNo, item.FullName, item.GradeLevel, item.Strand, item.Section, item.Section, item.Semester, item.SyEnroll);
             }//End LoadSchedule()
         }
 
@@ -773,6 +774,16 @@ namespace GOCSystem2018
             }
 
 
+            enrollees.Clear();
+            dgvStudents.Rows.Clear();            
+            enrollees = enrollee.Load();
+
+            foreach (var item in enrollees)
+            {
+                dgvStudents.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
+            }
+
+
 
             btnEnroll.Enabled = true;
             if (btnEnroll.Text != "")
@@ -796,7 +807,7 @@ namespace GOCSystem2018
             foreach (var item in sections)
             {
                 lblRoomName.Text = item.Room;
-                MessageBox.Show(lbltest.Text);   
+               // MessageBox.Show(lbltest.Text);   
             }
 
             rooms.Clear();
@@ -807,6 +818,7 @@ namespace GOCSystem2018
             foreach (var item in rooms)
             {
                 lblRoomCapacity.Text = item.RoomCapacity;
+                lblCeiling.Text = item.RoomCeiling;
             }            
         }
 
@@ -819,9 +831,22 @@ namespace GOCSystem2018
                  students = students + 1;
             }
 
-            if (Convert.ToInt32(lblRoomCapacity.Text) == students)
+            if (Convert.ToInt32(lblCeiling.Text) == students)
             {
-                MessageBox.Show("No more slot, Please Check or add new Section");//option to add or create new section
+                MessageBox.Show("No more slot, Please Check or add new Section, Enrolled Students are:" + students);//option to add or create new section
+            }
+        }
+
+        private void CheckDuplicateRecords()
+        {
+            for (int i = 0; i < dgvStudents.Rows.Count; i++)
+            {
+                if (dgvStudents.Rows[i].Cells[0].FormattedValue.ToString() == lblGOCNo.Text && dgvStudents.Rows[i].Cells[4].FormattedValue.ToString() == lblSem.Text)  //GOC NO
+                {
+                    MessageBox.Show("Duplicate Detected");
+                    toSave = false;
+                    return;
+                }
             }
         }
 
@@ -997,19 +1022,11 @@ namespace GOCSystem2018
                 }
                 else
                 {
-                    bool toSave = true;
+                    
 
                     checkEnroleeCapacity();
 
-                    for (int i = 0; i < dgvEnrolledList.Rows.Count; i++)
-                    {
-                       if (dgvEnrolledList.Rows[i].Cells[0].FormattedValue.ToString() == lblGOCNo.Text && dgvEnrolledList.Rows[i].Cells[4].FormattedValue.ToString() == lblSem.Text)  //GOC NO
-                        {
-                            MessageBox.Show("Duplicate Detected");
-                            toSave = false;
-                            return;
-                        }                                                             
-                    }
+                    CheckDuplicateRecords();
 
                     if (toSave == true)
                     {                     

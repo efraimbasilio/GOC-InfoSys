@@ -61,14 +61,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvRoom = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
             this.txtRoomCeiling = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.txtEditRoomCeiling = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ceiling = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
@@ -439,7 +440,8 @@
             this.id,
             this.RoomName,
             this.Capacity,
-            this.loc});
+            this.loc,
+            this.Ceiling});
             this.dgvRoom.Location = new System.Drawing.Point(385, 124);
             this.dgvRoom.Name = "dgvRoom";
             this.dgvRoom.ReadOnly = true;
@@ -447,32 +449,6 @@
             this.dgvRoom.Size = new System.Drawing.Size(445, 407);
             this.dgvRoom.TabIndex = 51;
             this.dgvRoom.Click += new System.EventHandler(this.dgvRoom_Click);
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            // 
-            // RoomName
-            // 
-            this.RoomName.HeaderText = "Room Name";
-            this.RoomName.Name = "RoomName";
-            this.RoomName.ReadOnly = true;
-            this.RoomName.Width = 200;
-            // 
-            // Capacity
-            // 
-            this.Capacity.HeaderText = "Capacity";
-            this.Capacity.Name = "Capacity";
-            this.Capacity.ReadOnly = true;
-            // 
-            // loc
-            // 
-            this.loc.HeaderText = "Location";
-            this.loc.Name = "loc";
-            this.loc.ReadOnly = true;
             // 
             // label12
             // 
@@ -509,6 +485,38 @@
             this.txtEditRoomCeiling.Size = new System.Drawing.Size(121, 20);
             this.txtEditRoomCeiling.TabIndex = 29;
             this.txtEditRoomCeiling.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // RoomName
+            // 
+            this.RoomName.HeaderText = "Room Name";
+            this.RoomName.Name = "RoomName";
+            this.RoomName.ReadOnly = true;
+            this.RoomName.Width = 80;
+            // 
+            // Capacity
+            // 
+            this.Capacity.HeaderText = "Capacity";
+            this.Capacity.Name = "Capacity";
+            this.Capacity.ReadOnly = true;
+            // 
+            // loc
+            // 
+            this.loc.HeaderText = "Location";
+            this.loc.Name = "loc";
+            this.loc.ReadOnly = true;
+            // 
+            // Ceiling
+            // 
+            this.Ceiling.HeaderText = "Ceiling";
+            this.Ceiling.Name = "Ceiling";
+            this.Ceiling.ReadOnly = true;
             // 
             // frmRoom
             // 
@@ -578,13 +586,14 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbLocation;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Capacity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loc;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtEditRoomCeiling;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtRoomCeiling;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RoomName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Capacity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ceiling;
     }
 }

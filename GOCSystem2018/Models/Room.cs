@@ -256,7 +256,7 @@ namespace GOCSystem2018
                     con.Open();
 
                     //prepare sql query
-                    string sql = "SELECT capacity FROM room WHERE room_Name =@roomName;";
+                    string sql = "SELECT * FROM room WHERE room_Name =@roomName;";
 
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
