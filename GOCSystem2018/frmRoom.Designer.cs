@@ -65,6 +65,10 @@
             this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Capacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtRoomCeiling = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtEditRoomCeiling = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
@@ -77,7 +81,7 @@
             // btnDelete
             // 
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(709, 616);
+            this.btnDelete.Location = new System.Drawing.Point(726, 571);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(104, 28);
             this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -89,7 +93,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(603, 616);
+            this.btnEdit.Location = new System.Drawing.Point(620, 571);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(104, 28);
             this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -101,7 +105,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(603, 582);
+            this.btnAdd.Location = new System.Drawing.Point(620, 537);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(210, 28);
             this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,6 +118,8 @@
             // 
             this.pnlEdit.BackColor = System.Drawing.Color.White;
             this.pnlEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEdit.Controls.Add(this.label13);
+            this.pnlEdit.Controls.Add(this.txtEditRoomCeiling);
             this.pnlEdit.Controls.Add(this.cmbEditLocation);
             this.pnlEdit.Controls.Add(this.label1);
             this.pnlEdit.Controls.Add(this.label3);
@@ -139,7 +145,7 @@
             "Upper Ground (1st Floor)",
             "2nd Floor",
             "3rd Floor"});
-            this.cmbEditLocation.Location = new System.Drawing.Point(108, 163);
+            this.cmbEditLocation.Location = new System.Drawing.Point(109, 131);
             this.cmbEditLocation.Name = "cmbEditLocation";
             this.cmbEditLocation.Size = new System.Drawing.Size(121, 21);
             this.cmbEditLocation.TabIndex = 28;
@@ -147,7 +153,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 166);
+            this.label1.Location = new System.Drawing.Point(51, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 27;
@@ -156,7 +162,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 140);
+            this.label3.Location = new System.Drawing.Point(51, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 26;
@@ -165,7 +171,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 88);
+            this.label4.Location = new System.Drawing.Point(50, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 24;
@@ -175,7 +181,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(32, 114);
+            this.label11.Location = new System.Drawing.Point(33, 82);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(69, 13);
             this.label11.TabIndex = 25;
@@ -197,7 +203,7 @@
             // EditRoomLbl
             // 
             this.EditRoomLbl.AutoSize = true;
-            this.EditRoomLbl.Location = new System.Drawing.Point(107, 88);
+            this.EditRoomLbl.Location = new System.Drawing.Point(108, 56);
             this.EditRoomLbl.Name = "EditRoomLbl";
             this.EditRoomLbl.Size = new System.Drawing.Size(42, 13);
             this.EditRoomLbl.TabIndex = 11;
@@ -230,7 +236,7 @@
             // 
             // txtEditCapacity
             // 
-            this.txtEditCapacity.Location = new System.Drawing.Point(108, 137);
+            this.txtEditCapacity.Location = new System.Drawing.Point(109, 105);
             this.txtEditCapacity.Multiline = true;
             this.txtEditCapacity.Name = "txtEditCapacity";
             this.txtEditCapacity.Size = new System.Drawing.Size(121, 20);
@@ -239,7 +245,7 @@
             // 
             // txtEditRoom
             // 
-            this.txtEditRoom.Location = new System.Drawing.Point(108, 111);
+            this.txtEditRoom.Location = new System.Drawing.Point(109, 79);
             this.txtEditRoom.Name = "txtEditRoom";
             this.txtEditRoom.Size = new System.Drawing.Size(191, 20);
             this.txtEditRoom.TabIndex = 2;
@@ -284,6 +290,8 @@
             // 
             this.pnlNew.BackColor = System.Drawing.Color.White;
             this.pnlNew.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlNew.Controls.Add(this.label12);
+            this.pnlNew.Controls.Add(this.txtRoomCeiling);
             this.pnlNew.Controls.Add(this.label9);
             this.pnlNew.Controls.Add(this.cmbLocation);
             this.pnlNew.Controls.Add(this.label18);
@@ -304,7 +312,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(47, 166);
+            this.label9.Location = new System.Drawing.Point(47, 133);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 13);
             this.label9.TabIndex = 23;
@@ -318,7 +326,7 @@
             "Upper Ground (1st Floor)",
             "2nd Floor",
             "3rd Floor"});
-            this.cmbLocation.Location = new System.Drawing.Point(111, 163);
+            this.cmbLocation.Location = new System.Drawing.Point(111, 130);
             this.cmbLocation.Name = "cmbLocation";
             this.cmbLocation.Size = new System.Drawing.Size(121, 21);
             this.cmbLocation.TabIndex = 22;
@@ -339,7 +347,7 @@
             // RoomLbl
             // 
             this.RoomLbl.AutoSize = true;
-            this.RoomLbl.Location = new System.Drawing.Point(110, 88);
+            this.RoomLbl.Location = new System.Drawing.Point(110, 55);
             this.RoomLbl.Name = "RoomLbl";
             this.RoomLbl.Size = new System.Drawing.Size(44, 13);
             this.RoomLbl.TabIndex = 11;
@@ -373,7 +381,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 140);
+            this.label5.Location = new System.Drawing.Point(47, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 5;
@@ -382,7 +390,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 88);
+            this.label6.Location = new System.Drawing.Point(46, 55);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 1;
@@ -391,7 +399,7 @@
             // 
             // txtCapacity
             // 
-            this.txtCapacity.Location = new System.Drawing.Point(111, 137);
+            this.txtCapacity.Location = new System.Drawing.Point(111, 104);
             this.txtCapacity.Multiline = true;
             this.txtCapacity.Name = "txtCapacity";
             this.txtCapacity.Size = new System.Drawing.Size(121, 20);
@@ -400,7 +408,7 @@
             // 
             // txtRoomName
             // 
-            this.txtRoomName.Location = new System.Drawing.Point(111, 111);
+            this.txtRoomName.Location = new System.Drawing.Point(111, 78);
             this.txtRoomName.Name = "txtRoomName";
             this.txtRoomName.Size = new System.Drawing.Size(191, 20);
             this.txtRoomName.TabIndex = 2;
@@ -408,7 +416,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 114);
+            this.label7.Location = new System.Drawing.Point(29, 81);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 3;
@@ -417,7 +425,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(38, 587);
+            this.label8.Location = new System.Drawing.Point(55, 542);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(559, 39);
             this.label8.TabIndex = 52;
@@ -432,7 +440,7 @@
             this.RoomName,
             this.Capacity,
             this.loc});
-            this.dgvRoom.Location = new System.Drawing.Point(368, 169);
+            this.dgvRoom.Location = new System.Drawing.Point(385, 124);
             this.dgvRoom.Name = "dgvRoom";
             this.dgvRoom.ReadOnly = true;
             this.dgvRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -465,6 +473,42 @@
             this.loc.HeaderText = "Location";
             this.loc.Name = "loc";
             this.loc.ReadOnly = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(44, 160);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Ceiling:";
+            // 
+            // txtRoomCeiling
+            // 
+            this.txtRoomCeiling.Location = new System.Drawing.Point(108, 157);
+            this.txtRoomCeiling.Multiline = true;
+            this.txtRoomCeiling.Name = "txtRoomCeiling";
+            this.txtRoomCeiling.Size = new System.Drawing.Size(121, 20);
+            this.txtRoomCeiling.TabIndex = 24;
+            this.txtRoomCeiling.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(45, 161);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Ceiling:";
+            // 
+            // txtEditRoomCeiling
+            // 
+            this.txtEditRoomCeiling.Location = new System.Drawing.Point(109, 158);
+            this.txtEditRoomCeiling.Multiline = true;
+            this.txtEditRoomCeiling.Name = "txtEditRoomCeiling";
+            this.txtEditRoomCeiling.Size = new System.Drawing.Size(121, 20);
+            this.txtEditRoomCeiling.TabIndex = 29;
+            this.txtEditRoomCeiling.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmRoom
             // 
@@ -538,5 +582,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RoomName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Capacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn loc;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtEditRoomCeiling;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtRoomCeiling;
     }
 }

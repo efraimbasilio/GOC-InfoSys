@@ -207,6 +207,8 @@ namespace GOCSystem2018
                 cmbSection.Enabled = true;
                 button4.Enabled = true;
             }
+
+            
         }
 
         public void LoadBillingHistory()
@@ -789,16 +791,13 @@ namespace GOCSystem2018
 
             section.SectionName = cmbSection.Text;
 
-            // MessageBox.Show(theSection);
-
-           
+            // MessageBox.Show(theSection);           
             sections = section.GetRoomBySectionRoom();
             foreach (var item in sections)
             {
                 lblRoomName.Text = item.Room;
                 MessageBox.Show(lbltest.Text);   
             }
-
 
             rooms.Clear();
             //lblRoomName.Text = "";
@@ -808,6 +807,21 @@ namespace GOCSystem2018
             foreach (var item in rooms)
             {
                 lblRoomCapacity.Text = item.RoomCapacity;
+            }            
+        }
+
+        private void checkEnroleeCapacity()
+        {
+            int students =0;
+
+            for (int i = 0; i < dgvEnrolledList.Rows.Count; i++)
+            {
+                 students = students + 1;
+            }
+
+            if (Convert.ToInt32(lblRoomCapacity.Text) == students)
+            {
+                MessageBox.Show("No more slot, Please Check or add new Section");//option to add or create new section
             }
         }
 
@@ -983,32 +997,51 @@ namespace GOCSystem2018
                 }
                 else
                 {
-                    MessageBox.Show("section ----------- sectioning module 1");
-                    studProfile.StudRegistrationNo = lblRegNo.Text;
-                    studProfile.Section = cmbSection.Text;
-                    MessageBox.Show("section ----------- sectioning module 1 - pass" + studProfile.Section);
-                    studProfile.UpdateTheSection();
+                    bool toSave = true;
 
-                    EnrolledStudents enroll = new EnrolledStudents();
-                    enroll.RegNo = lblRegNo.Text;
-                    enroll.TheGOCNo = lblGOCNo.Text;
-                    enroll.FullName = lblName.Text;
-                    enroll.GradeLevel = lblGradeLevel.Text;
-                    enroll.Strand = lblStrand.Text;
-                    enroll.Section = cmbSection.Text;
-                    enroll.Semester = lblSem.Text;
-                    enroll.SyEnroll = lblSY.Text;
+                    checkEnroleeCapacity();
 
-                    enroll.Save();//grade 11
+                    for (int i = 0; i < dgvEnrolledList.Rows.Count; i++)
+                    {
+                       if (dgvEnrolledList.Rows[i].Cells[0].FormattedValue.ToString() == lblGOCNo.Text && dgvEnrolledList.Rows[i].Cells[4].FormattedValue.ToString() == lblSem.Text)  //GOC NO
+                        {
+                            MessageBox.Show("Duplicate Detected");
+                            toSave = false;
+                            return;
+                        }                                                             
+                    }
 
-                    
+                    if (toSave == true)
+                    {                     
+                        MessageBox.Show("To save records");
+                        //for grade 11 Student Enrollment Module
 
-                    SaveForGrading();
+                        MessageBox.Show("section ----------- sectioning module 1");
+                        studProfile.StudRegistrationNo = lblRegNo.Text;
+                        studProfile.Section = cmbSection.Text;
+                        MessageBox.Show("section ----------- sectioning module 1 - pass" + studProfile.Section);
+                        studProfile.UpdateTheSection();
 
-                    frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                    this.Hide();
-                    this.Dispose();
-                    frmBillingSearch.Show();
+                        EnrolledStudents enroll = new EnrolledStudents();
+                        enroll.RegNo = lblRegNo.Text;
+                        enroll.TheGOCNo = lblGOCNo.Text;
+                        enroll.FullName = lblName.Text;
+                        enroll.GradeLevel = lblGradeLevel.Text;
+                        enroll.Strand = lblStrand.Text;
+                        enroll.Section = cmbSection.Text;
+                        enroll.Semester = lblSem.Text;//semester
+                        enroll.SyEnroll = lblSY.Text;
+
+                        enroll.Save();//grade 11
+
+                        SaveForGrading();
+
+                        frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                        this.Hide();
+                        this.Dispose();
+                        frmBillingSearch.Show();
+                    }
+
                 }
             }
 

@@ -17,6 +17,7 @@ namespace GOCSystem2018
         protected string roomName;
         protected string roomLocation;
         protected string roomCapacity;
+        private string roomCeiling;
 
         //protected int flag;
 
@@ -49,6 +50,12 @@ namespace GOCSystem2018
             get { return roomCapacity; }
             set { roomCapacity = value; }
         }
+
+        public string RoomCeiling
+        {
+            get { return roomCeiling; }
+            set { roomCeiling = value; }
+        }
         //variable name should always to be plural for every list
         //Camel casing
         List<Room> rooms = new List<Room>();
@@ -80,6 +87,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("roomName", roomName);
                     cmd.Parameters.AddWithValue("roomLocation", roomLocation);
                     cmd.Parameters.AddWithValue("roomCapacity", roomCapacity);
+                    cmd.Parameters.AddWithValue("roomCeiling", roomCeiling);
 
                     cmd.ExecuteNonQuery();
 
@@ -118,6 +126,7 @@ namespace GOCSystem2018
                         room.roomName = reader["room_name"].ToString();
                         room.roomLocation = reader["location"].ToString();
                         room.roomCapacity = reader["capacity"].ToString();
+                        room.roomCeiling = reader["room_ceiling"].ToString();
 
                         rooms.Add(room);
                     }
@@ -150,6 +159,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("roomName", roomName);
                     cmd.Parameters.AddWithValue("roomLocation", roomLocation);
                     cmd.Parameters.AddWithValue("roomCapacity", roomCapacity);
+                    cmd.Parameters.AddWithValue("roomCeiling", roomCeiling);
 
                     cmd.ExecuteNonQuery();
 
@@ -193,6 +203,7 @@ namespace GOCSystem2018
                         room.roomName = reader["room_name"].ToString();
                         room.roomLocation = reader["location"].ToString();
                         room.roomCapacity = reader["capacity"].ToString();
+                        room.roomCeiling = reader["room_ceiling"].ToString();
 
                         rooms.Add(room);
                     }
@@ -264,7 +275,9 @@ namespace GOCSystem2018
                         //room.roomName = reader["room_name"].ToString();
                         //room.roomLocation = reader["location"].ToString();
                         room.roomCapacity = reader["capacity"].ToString();
-                        MessageBox.Show(room.roomCapacity);
+                        room.roomCeiling = reader["room_ceiling"].ToString();
+
+                        //MessageBox.Show(room.roomCapacity);
                         rooms.Add(room);
                     }
                 }
