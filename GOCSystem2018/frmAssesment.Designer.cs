@@ -49,6 +49,8 @@
             this.lblSY = new System.Windows.Forms.Label();
             this.lblSem = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.lblCeiling = new System.Windows.Forms.Label();
             this.dgvEnrolledList = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,6 +59,11 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbltest = new System.Windows.Forms.Label();
             this.lblRoomName = new System.Windows.Forms.Label();
             this.lblRoomCapacity = new System.Windows.Forms.Label();
@@ -174,13 +181,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label135 = new System.Windows.Forms.Label();
             this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.lblCeiling = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolledList)).BeginInit();
             this.groupBox14.SuspendLayout();
@@ -294,13 +294,12 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(224)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1086, 60);
+            this.button2.Location = new System.Drawing.Point(752, 407);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(17, 29);
+            this.button2.Size = new System.Drawing.Size(60, 29);
             this.button2.TabIndex = 33;
             this.button2.Text = "&Print";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Visible = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
@@ -403,6 +402,26 @@
             this.panel1.TabIndex = 43;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(954, 60);
+            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(45, 15);
+            this.label33.TabIndex = 1059;
+            this.label33.Text = "Ceiling";
+            // 
+            // lblCeiling
+            // 
+            this.lblCeiling.Location = new System.Drawing.Point(947, 82);
+            this.lblCeiling.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCeiling.Name = "lblCeiling";
+            this.lblCeiling.Size = new System.Drawing.Size(89, 15);
+            this.lblCeiling.TabIndex = 1058;
+            this.lblCeiling.Text = "__________________";
+            this.lblCeiling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // dgvEnrolledList
             // 
             this.dgvEnrolledList.AllowUserToAddRows = false;
@@ -420,6 +439,7 @@
             this.dgvEnrolledList.ReadOnly = true;
             this.dgvEnrolledList.Size = new System.Drawing.Size(494, 258);
             this.dgvEnrolledList.TabIndex = 1019;
+            this.dgvEnrolledList.Visible = false;
             // 
             // dataGridViewTextBoxColumn16
             // 
@@ -464,6 +484,7 @@
             this.groupBox14.TabIndex = 1055;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Students";
+            this.groupBox14.Visible = false;
             // 
             // dgvStudents
             // 
@@ -482,6 +503,38 @@
             this.dgvStudents.ReadOnly = true;
             this.dgvStudents.Size = new System.Drawing.Size(522, 258);
             this.dgvStudents.TabIndex = 1019;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dataGridViewTextBoxColumn19.HeaderText = "GOC No";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Width = 77;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.HeaderText = "Level";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.HeaderText = "Strand";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Section";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Semester";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
             // 
             // lbltest
             // 
@@ -522,6 +575,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(66, 36);
             this.panel10.TabIndex = 1054;
+            this.panel10.Visible = false;
             // 
             // label31
             // 
@@ -541,6 +595,7 @@
             this.groupBox13.TabIndex = 1053;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Subjects";
+            this.groupBox13.Visible = false;
             // 
             // groupBox12
             // 
@@ -798,6 +853,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(116, 10);
             this.panel8.TabIndex = 1036;
+            this.panel8.Visible = false;
             // 
             // label30
             // 
@@ -817,6 +873,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(113, 36);
             this.panel3.TabIndex = 1035;
+            this.panel3.Visible = false;
             // 
             // label14
             // 
@@ -837,6 +894,7 @@
             this.groupBox2.TabIndex = 1033;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Breakdown for Partial Payment";
+            this.groupBox2.Visible = false;
             // 
             // dgvPerMonth
             // 
@@ -877,6 +935,7 @@
             this.groupBox3.TabIndex = 1034;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Available Sections";
+            this.groupBox3.Visible = false;
             // 
             // dataGridView2
             // 
@@ -1177,6 +1236,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(124, 36);
             this.panel6.TabIndex = 1029;
+            this.panel6.Visible = false;
             // 
             // label28
             // 
@@ -1249,6 +1309,7 @@
             this.groupBox7.TabIndex = 1016;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Subjects";
+            this.groupBox7.Visible = false;
             // 
             // dgvSubject
             // 
@@ -1737,58 +1798,6 @@
             this.pictureBox22.TabIndex = 18;
             this.pictureBox22.TabStop = false;
             this.pictureBox22.WaitOnLoad = true;
-            // 
-            // lblCeiling
-            // 
-            this.lblCeiling.Location = new System.Drawing.Point(947, 82);
-            this.lblCeiling.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCeiling.Name = "lblCeiling";
-            this.lblCeiling.Size = new System.Drawing.Size(89, 15);
-            this.lblCeiling.TabIndex = 1058;
-            this.lblCeiling.Text = "__________________";
-            this.lblCeiling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(954, 60);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(45, 15);
-            this.label33.TabIndex = 1059;
-            this.label33.Text = "Ceiling";
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.dataGridViewTextBoxColumn19.HeaderText = "GOC No";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            this.dataGridViewTextBoxColumn19.Width = 77;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.HeaderText = "Level";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.HeaderText = "Strand";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Section";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Semester";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
             // 
             // frmAssesment
             // 

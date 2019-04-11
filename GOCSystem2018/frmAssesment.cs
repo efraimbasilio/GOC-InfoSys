@@ -666,9 +666,11 @@ namespace GOCSystem2018
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Schedule_loop();
-            //tuitionFees2();
+            frmAssesment frm = new frmAssesment();
+            frm.Hide();
 
+            Schedule_loop();
+           
             schedules.Clear();
             dgvSchedule.Rows.Clear();
             schedules = schedule.GetScheduleById();
@@ -687,23 +689,6 @@ namespace GOCSystem2018
                     rpt.Fri = rpt.Fri + "\n\n" + item.Day5;
                 }
             }
-
-
-            //TextObject SY = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtSchoolYear"];
-            //TextObject GOCNo = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtGOCNo"];
-            //TextObject Strand = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtStrand"];
-            //TextObject Semester = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtSemester"];
-            //TextObject StudName = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtStudName"];
-            //TextObject GradeLevel = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtGradeLevel"];
-            //TextObject Section = (TextObject)cr.ReportDefinition.Sections["Section2"].ReportObjects["txtSection"];
-
-            //SY.Text = lblSY.Text;
-            //GOCNo.Text = lblGOCNo.Text;
-            //Strand.Text = lblTrack.Text;
-            //Semester.Text = lblSem.Text;
-            //StudName.Text = lblName.Text;
-            //GradeLevel.Text = lblGradeLevel.Text;
-            //Section.Text = cmbSection.Text;
           
             rpt.studName = lblName.Text;
             rpt.SY = lblSY.Text;
@@ -716,9 +701,11 @@ namespace GOCSystem2018
             rpt.Semester = lblSem.Text;
             rpt.Strand2 = lblStrand.Text;
             rpt.Tuition = Convert.ToDouble(lblTuition.Text);
-            rpt.Show();
 
+            frmAssesment frm1 = new frmAssesment();
+            frm1.Hide();
 
+            rpt.ShowDialog();                     
         }
 
         ////////////////////////////FOR REPORTS ///////////////////
