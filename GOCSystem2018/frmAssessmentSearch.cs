@@ -34,13 +34,13 @@ namespace GOCSystem2018
             dgvSearch.BorderStyle = BorderStyle.None;
             dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
-            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.Gray;
+            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.White;
             dgvSearch.BackgroundColor = Color.White;
 
             dgvSearch.EnableHeadersVisualStyles = false;
             dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
+            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(29, 150, 179);
             dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             #endregion
         }

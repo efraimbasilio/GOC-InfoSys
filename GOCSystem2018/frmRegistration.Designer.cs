@@ -86,7 +86,6 @@
             this.chkDrugtest = new System.Windows.Forms.CheckBox();
             this.chk138 = new System.Windows.Forms.CheckBox();
             this.chkBirthCertificate = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label46 = new System.Windows.Forms.Label();
             this.txtRelation = new System.Windows.Forms.TextBox();
@@ -138,8 +137,6 @@
             this.label60 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -163,8 +160,6 @@
             this.label45 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -180,10 +175,10 @@
             // 
             // txtRegno
             // 
-            this.txtRegno.BackColor = System.Drawing.Color.White;
+            this.txtRegno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
             this.txtRegno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRegno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegno.Location = new System.Drawing.Point(810, 82);
+            this.txtRegno.Location = new System.Drawing.Point(63, 205);
             this.txtRegno.Margin = new System.Windows.Forms.Padding(4);
             this.txtRegno.Name = "txtRegno";
             this.txtRegno.ReadOnly = true;
@@ -207,12 +202,12 @@
             // 
             this.LRNtxt.BackColor = System.Drawing.Color.White;
             this.LRNtxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LRNtxt.Location = new System.Drawing.Point(64, 203);
+            this.LRNtxt.Location = new System.Drawing.Point(258, 203);
             this.LRNtxt.Margin = new System.Windows.Forms.Padding(4);
             this.LRNtxt.MaxLength = 12;
             this.LRNtxt.Multiline = true;
             this.LRNtxt.Name = "LRNtxt";
-            this.LRNtxt.Size = new System.Drawing.Size(427, 23);
+            this.LRNtxt.Size = new System.Drawing.Size(233, 23);
             this.LRNtxt.TabIndex = 2;
             this.LRNtxt.TextChanged += new System.EventHandler(this.LRNtxt_TextChanged);
             this.LRNtxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LRNtxt_KeyPress);
@@ -312,7 +307,7 @@
             this.label55.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label55.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label55.Location = new System.Drawing.Point(60, 180);
+            this.label55.Location = new System.Drawing.Point(255, 178);
             this.label55.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(35, 15);
@@ -357,6 +352,7 @@
             // cmbCourseStrand
             // 
             this.cmbCourseStrand.BackColor = System.Drawing.Color.White;
+            this.cmbCourseStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCourseStrand.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbCourseStrand.FormattingEnabled = true;
             this.cmbCourseStrand.Location = new System.Drawing.Point(598, 276);
@@ -569,18 +565,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(877, 101);
+            this.label1.Location = new System.Drawing.Point(60, 180);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 105;
             this.label1.Text = "REGNO";
             // 
             // cmbStudType
             // 
             this.cmbStudType.BackColor = System.Drawing.Color.White;
+            this.cmbStudType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStudType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbStudType.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbStudType.FormattingEnabled = true;
@@ -606,6 +603,7 @@
             // cmbMunicipality
             // 
             this.cmbMunicipality.BackColor = System.Drawing.Color.White;
+            this.cmbMunicipality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMunicipality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMunicipality.FormattingEnabled = true;
             this.cmbMunicipality.Location = new System.Drawing.Point(64, 707);
@@ -655,6 +653,7 @@
             // cmbProvince
             // 
             this.cmbProvince.BackColor = System.Drawing.Color.White;
+            this.cmbProvince.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProvince.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbProvince.FormattingEnabled = true;
             this.cmbProvince.Items.AddRange(new object[] {
@@ -688,6 +687,7 @@
             // cmbVoucher
             // 
             this.cmbVoucher.BackColor = System.Drawing.Color.White;
+            this.cmbVoucher.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbVoucher.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbVoucher.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cmbVoucher.FormattingEnabled = true;
@@ -749,6 +749,7 @@
             // cmbNationality
             // 
             this.cmbNationality.BackColor = System.Drawing.Color.White;
+            this.cmbNationality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNationality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbNationality.FormattingEnabled = true;
             this.cmbNationality.Items.AddRange(new object[] {
@@ -900,28 +901,16 @@
             this.chkBirthCertificate.Text = "Birth Certificate";
             this.chkBirthCertificate.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(194, 1708);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 31);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "&Assessment";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(63, 1708);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(123, 31);
+            this.btnSave.Size = new System.Drawing.Size(123, 42);
             this.btnSave.TabIndex = 47;
             this.btnSave.Text = "&Register";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -1013,6 +1002,7 @@
             // cmbProvince2
             // 
             this.cmbProvince2.BackColor = System.Drawing.Color.White;
+            this.cmbProvince2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProvince2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbProvince2.FormattingEnabled = true;
             this.cmbProvince2.Items.AddRange(new object[] {
@@ -1071,6 +1061,7 @@
             // cmbMunicipality2
             // 
             this.cmbMunicipality2.BackColor = System.Drawing.Color.White;
+            this.cmbMunicipality2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMunicipality2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMunicipality2.FormattingEnabled = true;
             this.cmbMunicipality2.Location = new System.Drawing.Point(64, 1345);
@@ -1330,7 +1321,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(101, 180);
+            this.label9.Location = new System.Drawing.Point(296, 178);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 13);
@@ -1572,34 +1563,12 @@
             this.label62.Text = "*Required";
             this.label62.Visible = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(66, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 36);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 195;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(98, 7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(35, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 193;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Location = new System.Drawing.Point(63, 126);
+            this.panel1.Location = new System.Drawing.Point(62, 126);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(794, 33);
             this.panel1.TabIndex = 191;
@@ -1607,7 +1576,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(28, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1619,7 +1588,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Lato Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(53, 1);
+            this.label8.Location = new System.Drawing.Point(53, 6);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(155, 19);
             this.label8.TabIndex = 0;
@@ -1702,7 +1671,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(16, -1);
+            this.pictureBox4.Location = new System.Drawing.Point(16, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 23);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1714,7 +1683,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Lato Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(53, 1);
+            this.label15.Location = new System.Drawing.Point(53, 6);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(121, 19);
             this.label15.TabIndex = 0;
@@ -1745,7 +1714,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(16, -1);
+            this.pictureBox5.Location = new System.Drawing.Point(16, 4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(28, 23);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1757,7 +1726,7 @@
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Lato Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(53, 1);
+            this.label41.Location = new System.Drawing.Point(53, 6);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(106, 19);
             this.label41.TabIndex = 0;
@@ -1776,7 +1745,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(16, -1);
+            this.pictureBox6.Location = new System.Drawing.Point(16, 4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(28, 23);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -1788,7 +1757,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Lato Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(53, 1);
+            this.label12.Location = new System.Drawing.Point(53, 6);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(120, 19);
             this.label12.TabIndex = 0;
@@ -1843,7 +1812,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1304, 795);
+            this.ClientSize = new System.Drawing.Size(1215, 666);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label61);
             this.Controls.Add(this.label45);
@@ -1881,10 +1850,8 @@
             this.Controls.Add(this.label40);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtAddress2);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label35);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.txtGuardianWork);
             this.Controls.Add(this.label34);
@@ -1894,7 +1861,6 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label32);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtMotherWork);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label31);
@@ -1970,8 +1936,6 @@
             this.Text = "                                                                                 " +
     "                rrrRr";
             this.Load += new System.EventHandler(this.frmRegistration_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -2046,7 +2010,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.MaskedTextBox txtTelNo;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.CheckBox chckGM;
         private System.Windows.Forms.CheckBox chkNCAEResult;
@@ -2108,8 +2071,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
