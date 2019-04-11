@@ -230,7 +230,7 @@ namespace GOCSystem2018
                         enroll.semester = reader["semester"].ToString();
                         enroll.syEnroll = reader["sy_enrolled"].ToString();
 
-                        MessageBox.Show("sasa");
+                      //  MessageBox.Show("sasa");
 
                         enrollees.Add(enroll);
                     }

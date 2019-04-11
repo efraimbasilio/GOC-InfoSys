@@ -257,7 +257,7 @@ namespace GOCSystem2018
 
             if (enroll_status.Equals("Reservee"))//MAGBABAYAD NG 2nd Payment - For Reservee
             {
-                MessageBox.Show(enroll_status + " " + payment_status + " " + payment_no);
+              //  MessageBox.Show(enroll_status + " " + payment_status + " " + payment_no);
 
                 double Tuition_Monthly = 0;
 
@@ -663,7 +663,7 @@ namespace GOCSystem2018
             }
             else
             {
-                MessageBox.Show(enroll_status + " " + payment_status + " " + payment_no);
+              //  MessageBox.Show(enroll_status + " " + payment_status + " " + payment_no);
 
                 Reservations();
                 PartialNoReserve();
@@ -701,7 +701,6 @@ namespace GOCSystem2018
 
              //   Reservation();
             }
-
 
             //GetDownPayment();
             //BalancePartial;

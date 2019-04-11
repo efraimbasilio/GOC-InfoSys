@@ -180,7 +180,7 @@ namespace GOCSystem2018
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("strand", strand);
 
-                    MessageBox.Show(strand);
+                    //MessageBox.Show(strand);
 
                     MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -197,7 +197,7 @@ namespace GOCSystem2018
                         //section.strand = reader["strand"].ToString();
                         //section.dept = reader["dept"].ToString();
 
-                        MessageBox.Show(section.sectionName);
+                       // MessageBox.Show(section.sectionName);
 
                         sections.Add(section);
 
@@ -247,7 +247,7 @@ namespace GOCSystem2018
                         //section.strand = reader["strand"].ToString();
                         //section.dept = reader["dept"].ToString();
 
-                       MessageBox.Show(section.room);
+                     //  MessageBox.Show(section.room);
 
                         sections.Add(section);
 

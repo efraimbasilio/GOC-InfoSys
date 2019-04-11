@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssesment));
             this.label6 = new System.Windows.Forms.Label();
             this.cmbSection = new System.Windows.Forms.ComboBox();
@@ -50,6 +50,7 @@
             this.lblSem = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label33 = new System.Windows.Forms.Label();
+            this.txtPayNumber = new System.Windows.Forms.TextBox();
             this.lblCeiling = new System.Windows.Forms.Label();
             this.dgvEnrolledList = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,7 +78,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtPayNumber = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.dgvFeeHistory = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -245,11 +245,11 @@
             // lblEnStatus
             // 
             this.lblEnStatus.AutoSize = true;
-            this.lblEnStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnStatus.Font = new System.Drawing.Font("Lato Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnStatus.Location = new System.Drawing.Point(123, 96);
             this.lblEnStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnStatus.Name = "lblEnStatus";
-            this.lblEnStatus.Size = new System.Drawing.Size(68, 18);
+            this.lblEnStatus.Size = new System.Drawing.Size(50, 15);
             this.lblEnStatus.TabIndex = 18;
             this.lblEnStatus.Text = "Pending";
             // 
@@ -259,7 +259,7 @@
             this.label17.Location = new System.Drawing.Point(8, 96);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(107, 15);
+            this.label17.Size = new System.Drawing.Size(104, 15);
             this.label17.TabIndex = 17;
             this.label17.Text = "Enrollment Status:";
             // 
@@ -271,7 +271,7 @@
             this.label5.Location = new System.Drawing.Point(682, 22);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 15);
+            this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 22;
             this.label5.Text = "Semester:";
             // 
@@ -294,7 +294,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(224)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(752, 407);
+            this.button2.Location = new System.Drawing.Point(569, 61);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(60, 29);
             this.button2.TabIndex = 33;
@@ -306,7 +306,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(1178, 60);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(63, 21);
+            this.textBox1.Size = new System.Drawing.Size(63, 22);
             this.textBox1.TabIndex = 34;
             this.textBox1.Visible = false;
             // 
@@ -325,7 +325,7 @@
             // 
             this.txtTuitionFee.Location = new System.Drawing.Point(1109, 60);
             this.txtTuitionFee.Name = "txtTuitionFee";
-            this.txtTuitionFee.Size = new System.Drawing.Size(63, 21);
+            this.txtTuitionFee.Size = new System.Drawing.Size(63, 22);
             this.txtTuitionFee.TabIndex = 38;
             this.txtTuitionFee.Visible = false;
             // 
@@ -337,7 +337,7 @@
             this.lblSY.Location = new System.Drawing.Point(469, 22);
             this.lblSY.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSY.Name = "lblSY";
-            this.lblSY.Size = new System.Drawing.Size(182, 15);
+            this.lblSY.Size = new System.Drawing.Size(157, 15);
             this.lblSY.TabIndex = 39;
             this.lblSY.Text = "_________________________";
             // 
@@ -349,7 +349,7 @@
             this.lblSem.Location = new System.Drawing.Point(753, 22);
             this.lblSem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSem.Name = "lblSem";
-            this.lblSem.Size = new System.Drawing.Size(79, 15);
+            this.lblSem.Size = new System.Drawing.Size(74, 15);
             this.lblSem.TabIndex = 40;
             this.lblSem.Text = "1st Semester";
             // 
@@ -358,6 +358,7 @@
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label33);
+            this.panel1.Controls.Add(this.txtPayNumber);
             this.panel1.Controls.Add(this.lblCeiling);
             this.panel1.Controls.Add(this.dgvEnrolledList);
             this.panel1.Controls.Add(this.groupBox14);
@@ -405,16 +406,24 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(954, 60);
+            this.label33.Location = new System.Drawing.Point(954, 70);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(45, 15);
+            this.label33.Size = new System.Drawing.Size(43, 15);
             this.label33.TabIndex = 1059;
             this.label33.Text = "Ceiling";
             // 
+            // txtPayNumber
+            // 
+            this.txtPayNumber.Location = new System.Drawing.Point(1250, 92);
+            this.txtPayNumber.Name = "txtPayNumber";
+            this.txtPayNumber.Size = new System.Drawing.Size(22, 22);
+            this.txtPayNumber.TabIndex = 1042;
+            this.txtPayNumber.Visible = false;
+            // 
             // lblCeiling
             // 
-            this.lblCeiling.Location = new System.Drawing.Point(947, 82);
+            this.lblCeiling.Location = new System.Drawing.Point(951, 100);
             this.lblCeiling.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCeiling.Name = "lblCeiling";
             this.lblCeiling.Size = new System.Drawing.Size(89, 15);
@@ -538,7 +547,7 @@
             // 
             // lbltest
             // 
-            this.lbltest.Location = new System.Drawing.Point(656, 421);
+            this.lbltest.Location = new System.Drawing.Point(1117, 95);
             this.lbltest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbltest.Name = "lbltest";
             this.lbltest.Size = new System.Drawing.Size(89, 15);
@@ -548,7 +557,7 @@
             // 
             // lblRoomName
             // 
-            this.lblRoomName.Location = new System.Drawing.Point(647, 68);
+            this.lblRoomName.Location = new System.Drawing.Point(651, 92);
             this.lblRoomName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomName.Name = "lblRoomName";
             this.lblRoomName.Size = new System.Drawing.Size(185, 29);
@@ -559,7 +568,7 @@
             // 
             // lblRoomCapacity
             // 
-            this.lblRoomCapacity.Location = new System.Drawing.Point(836, 75);
+            this.lblRoomCapacity.Location = new System.Drawing.Point(816, 98);
             this.lblRoomCapacity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRoomCapacity.Name = "lblRoomCapacity";
             this.lblRoomCapacity.Size = new System.Drawing.Size(89, 15);
@@ -583,7 +592,7 @@
             this.label31.ForeColor = System.Drawing.Color.White;
             this.label31.Location = new System.Drawing.Point(8, 10);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(48, 15);
+            this.label31.Size = new System.Drawing.Size(47, 15);
             this.label31.TabIndex = 0;
             this.label31.Text = "Subject";
             // 
@@ -600,7 +609,7 @@
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.dataGridView3);
-            this.groupBox12.Location = new System.Drawing.Point(646, 100);
+            this.groupBox12.Location = new System.Drawing.Point(1271, 454);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(282, 301);
             this.groupBox12.TabIndex = 1052;
@@ -651,10 +660,9 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(124)))), ((int)(((byte)(224)))));
             this.panel9.Controls.Add(this.label16);
-            this.panel9.Controls.Add(this.txtPayNumber);
-            this.panel9.Location = new System.Drawing.Point(957, 130);
+            this.panel9.Location = new System.Drawing.Point(650, 125);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(323, 36);
+            this.panel9.Size = new System.Drawing.Size(580, 36);
             this.panel9.TabIndex = 1051;
             // 
             // label16
@@ -663,17 +671,9 @@
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(8, 10);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(205, 15);
+            this.label16.Size = new System.Drawing.Size(203, 15);
             this.label16.TabIndex = 0;
             this.label16.Text = "Student Payment History Breakdown";
-            // 
-            // txtPayNumber
-            // 
-            this.txtPayNumber.Location = new System.Drawing.Point(475, 3);
-            this.txtPayNumber.Name = "txtPayNumber";
-            this.txtPayNumber.Size = new System.Drawing.Size(22, 21);
-            this.txtPayNumber.TabIndex = 1042;
-            this.txtPayNumber.Visible = false;
             // 
             // groupBox9
             // 
@@ -681,9 +681,9 @@
             this.groupBox9.Controls.Add(this.groupBox10);
             this.groupBox9.Controls.Add(this.groupBox11);
             this.groupBox9.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox9.Location = new System.Drawing.Point(957, 146);
+            this.groupBox9.Location = new System.Drawing.Point(650, 146);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(323, 296);
+            this.groupBox9.Size = new System.Drawing.Size(580, 296);
             this.groupBox9.TabIndex = 1050;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Student Payment History - Break Down";
@@ -701,19 +701,19 @@
             this.RemainingBalance,
             this.dataGridViewTextBoxColumn9});
             this.dgvFeeHistory.GridColor = System.Drawing.Color.White;
-            this.dgvFeeHistory.Location = new System.Drawing.Point(-40, 20);
+            this.dgvFeeHistory.Location = new System.Drawing.Point(-41, 14);
             this.dgvFeeHistory.Name = "dgvFeeHistory";
             this.dgvFeeHistory.ReadOnly = true;
             this.dgvFeeHistory.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvFeeHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFeeHistory.Size = new System.Drawing.Size(544, 270);
+            this.dgvFeeHistory.Size = new System.Drawing.Size(618, 276);
             this.dgvFeeHistory.TabIndex = 1014;
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.NullValue = null;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle36.NullValue = null;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle36;
             this.dataGridViewTextBoxColumn6.HeaderText = "OR No.";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -728,31 +728,30 @@
             // AmountGiven
             // 
             this.AmountGiven.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle37.Format = "N2";
+            dataGridViewCellStyle37.NullValue = null;
+            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle37;
             this.AmountGiven.HeaderText = "Amount Given";
             this.AmountGiven.Name = "AmountGiven";
             this.AmountGiven.ReadOnly = true;
-            this.AmountGiven.Width = 108;
+            this.AmountGiven.Width = 109;
             // 
             // RemainingBalance
             // 
             this.RemainingBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle38;
             this.RemainingBalance.HeaderText = "Payment No.";
             this.RemainingBalance.Name = "RemainingBalance";
             this.RemainingBalance.ReadOnly = true;
-            this.RemainingBalance.Width = 102;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.NullValue = "0.00";
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle39.NullValue = "0.00";
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle39;
             this.dataGridViewTextBoxColumn9.HeaderText = "Date and Time";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
@@ -836,11 +835,11 @@
             // 
             // dataGridViewTextBoxColumn13
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "n";
-            dataGridViewCellStyle12.NullValue = "0.00";
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle40.Format = "n";
+            dataGridViewCellStyle40.NullValue = "0.00";
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle40;
             this.dataGridViewTextBoxColumn13.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
@@ -861,7 +860,7 @@
             this.label30.ForeColor = System.Drawing.Color.White;
             this.label30.Location = new System.Drawing.Point(8, 10);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(158, 15);
+            this.label30.Size = new System.Drawing.Size(154, 15);
             this.label30.TabIndex = 0;
             this.label30.Text = "Partial Payment Breakdown";
             // 
@@ -881,7 +880,7 @@
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(8, 10);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(158, 15);
+            this.label14.Size = new System.Drawing.Size(154, 15);
             this.label14.TabIndex = 0;
             this.label14.Text = "Partial Payment Breakdown";
             // 
@@ -948,11 +947,11 @@
             this.dataGridViewTextBoxColumn5});
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.GridColor = System.Drawing.Color.White;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 17);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 18);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(110, 74);
+            this.dataGridView2.Size = new System.Drawing.Size(110, 73);
             this.dataGridView2.TabIndex = 1014;
             // 
             // dataGridViewTextBoxColumn5
@@ -1018,7 +1017,7 @@
             this.optNO.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.optNO.Location = new System.Drawing.Point(213, 7);
             this.optNO.Name = "optNO";
-            this.optNO.Size = new System.Drawing.Size(49, 20);
+            this.optNO.Size = new System.Drawing.Size(50, 20);
             this.optNO.TabIndex = 1023;
             this.optNO.TabStop = true;
             this.optNO.Text = "NO";
@@ -1029,7 +1028,7 @@
             this.optYES.AutoSize = true;
             this.optYES.Location = new System.Drawing.Point(137, 7);
             this.optYES.Name = "optYES";
-            this.optYES.Size = new System.Drawing.Size(48, 19);
+            this.optYES.Size = new System.Drawing.Size(47, 19);
             this.optYES.TabIndex = 1022;
             this.optYES.Text = "YES";
             this.optYES.UseVisualStyleBackColor = true;
@@ -1061,7 +1060,7 @@
             this.lblStrand.Location = new System.Drawing.Point(100, 192);
             this.lblStrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStrand.Name = "lblStrand";
-            this.lblStrand.Size = new System.Drawing.Size(182, 15);
+            this.lblStrand.Size = new System.Drawing.Size(157, 15);
             this.lblStrand.TabIndex = 1039;
             this.lblStrand.Text = "_________________________";
             // 
@@ -1071,7 +1070,7 @@
             this.label1.Location = new System.Drawing.Point(7, 114);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 15);
+            this.label1.Size = new System.Drawing.Size(41, 15);
             this.label1.TabIndex = 1025;
             this.label1.Text = "Name:";
             // 
@@ -1081,7 +1080,7 @@
             this.lblLRN.Location = new System.Drawing.Point(100, 39);
             this.lblLRN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLRN.Name = "lblLRN";
-            this.lblLRN.Size = new System.Drawing.Size(53, 15);
+            this.lblLRN.Size = new System.Drawing.Size(50, 15);
             this.lblLRN.TabIndex = 1034;
             this.lblLRN.Text = "LRN_no";
             // 
@@ -1091,7 +1090,7 @@
             this.label15.Location = new System.Drawing.Point(7, 39);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 15);
+            this.label15.Size = new System.Drawing.Size(33, 15);
             this.label15.TabIndex = 1033;
             this.label15.Text = "LRN:";
             // 
@@ -1101,7 +1100,7 @@
             this.lblName.Location = new System.Drawing.Point(100, 114);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(182, 15);
+            this.lblName.Size = new System.Drawing.Size(157, 15);
             this.lblName.TabIndex = 1026;
             this.lblName.Text = "_________________________";
             // 
@@ -1111,7 +1110,7 @@
             this.label4.Location = new System.Drawing.Point(7, 138);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 15);
+            this.label4.Size = new System.Drawing.Size(72, 15);
             this.label4.TabIndex = 1027;
             this.label4.Text = "Grade Level:";
             // 
@@ -1121,7 +1120,7 @@
             this.lblGradeLevel.Location = new System.Drawing.Point(100, 138);
             this.lblGradeLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGradeLevel.Name = "lblGradeLevel";
-            this.lblGradeLevel.Size = new System.Drawing.Size(182, 15);
+            this.lblGradeLevel.Size = new System.Drawing.Size(157, 15);
             this.lblGradeLevel.TabIndex = 1028;
             this.lblGradeLevel.Text = "_________________________";
             // 
@@ -1131,13 +1130,14 @@
             this.label11.Location = new System.Drawing.Point(7, 165);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 15);
+            this.label11.Size = new System.Drawing.Size(87, 15);
             this.label11.TabIndex = 1030;
             this.label11.Text = "Course / Track:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(7, 87);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
@@ -1151,7 +1151,7 @@
             this.lblRegNo.Location = new System.Drawing.Point(100, 87);
             this.lblRegNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRegNo.Name = "lblRegNo";
-            this.lblRegNo.Size = new System.Drawing.Size(182, 15);
+            this.lblRegNo.Size = new System.Drawing.Size(157, 15);
             this.lblRegNo.TabIndex = 1032;
             this.lblRegNo.Text = "_________________________";
             // 
@@ -1161,7 +1161,7 @@
             this.lblTrack.Location = new System.Drawing.Point(100, 165);
             this.lblTrack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTrack.Name = "lblTrack";
-            this.lblTrack.Size = new System.Drawing.Size(182, 15);
+            this.lblTrack.Size = new System.Drawing.Size(157, 15);
             this.lblTrack.TabIndex = 1037;
             this.lblTrack.Text = "_________________________";
             // 
@@ -1171,7 +1171,7 @@
             this.lblGOCNo.Location = new System.Drawing.Point(100, 63);
             this.lblGOCNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGOCNo.Name = "lblGOCNo";
-            this.lblGOCNo.Size = new System.Drawing.Size(133, 15);
+            this.lblGOCNo.Size = new System.Drawing.Size(115, 15);
             this.lblGOCNo.TabIndex = 1038;
             this.lblGOCNo.Text = "__________________";
             // 
@@ -1195,7 +1195,7 @@
             this.label8.Location = new System.Drawing.Point(7, 224);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 15);
+            this.label8.Size = new System.Drawing.Size(104, 15);
             this.label8.TabIndex = 1035;
             this.label8.Text = "Mode of Payment:";
             // 
@@ -1205,7 +1205,7 @@
             this.label7.Location = new System.Drawing.Point(7, 192);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 15);
+            this.label7.Size = new System.Drawing.Size(45, 15);
             this.label7.TabIndex = 1029;
             this.label7.Text = "Strand:";
             // 
@@ -1224,7 +1224,7 @@
             this.label29.ForeColor = System.Drawing.Color.White;
             this.label29.Location = new System.Drawing.Point(8, 10);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(59, 15);
+            this.label29.Size = new System.Drawing.Size(56, 15);
             this.label29.TabIndex = 0;
             this.label29.Text = "Schedule";
             // 
@@ -1244,7 +1244,7 @@
             this.label28.ForeColor = System.Drawing.Color.White;
             this.label28.Location = new System.Drawing.Point(8, 10);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(48, 15);
+            this.label28.Size = new System.Drawing.Size(47, 15);
             this.label28.TabIndex = 0;
             this.label28.Text = "Subject";
             // 
@@ -1263,7 +1263,7 @@
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(8, 10);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(126, 15);
+            this.label27.Size = new System.Drawing.Size(123, 15);
             this.label27.TabIndex = 0;
             this.label27.Text = "Other Fee Breakdown";
             // 
@@ -1282,7 +1282,7 @@
             this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(8, 10);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(122, 15);
+            this.label19.Size = new System.Drawing.Size(117, 15);
             this.label19.TabIndex = 0;
             this.label19.Text = "Misc Fee Breakdown";
             // 
@@ -1347,7 +1347,7 @@
             this.btnEnroll.Enabled = false;
             this.btnEnroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnroll.ForeColor = System.Drawing.Color.White;
-            this.btnEnroll.Location = new System.Drawing.Point(225, 88);
+            this.btnEnroll.Location = new System.Drawing.Point(225, 84);
             this.btnEnroll.Name = "btnEnroll";
             this.btnEnroll.Size = new System.Drawing.Size(89, 37);
             this.btnEnroll.TabIndex = 1020;
@@ -1393,11 +1393,11 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "n";
-            dataGridViewCellStyle13.NullValue = "0.00";
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle41.Format = "n";
+            dataGridViewCellStyle41.NullValue = "0.00";
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle41;
             this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -1461,11 +1461,11 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(12, 224);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(234, 15);
+            this.label22.Size = new System.Drawing.Size(195, 15);
             this.label22.TabIndex = 1023;
             this.label22.Text = "Total Tuition and Other School Fee:";
             // 
@@ -1486,7 +1486,7 @@
             this.lblVoucher.Location = new System.Drawing.Point(164, 30);
             this.lblVoucher.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblVoucher.Name = "lblVoucher";
-            this.lblVoucher.Size = new System.Drawing.Size(89, 15);
+            this.lblVoucher.Size = new System.Drawing.Size(87, 15);
             this.lblVoucher.TabIndex = 1021;
             this.lblVoucher.Text = "Public Voucher";
             // 
@@ -1496,7 +1496,7 @@
             this.label24.Location = new System.Drawing.Point(14, 30);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(84, 15);
+            this.label24.Size = new System.Drawing.Size(82, 15);
             this.label24.TabIndex = 1020;
             this.label24.Text = "Voucher Type:";
             // 
@@ -1526,7 +1526,7 @@
             this.label23.Location = new System.Drawing.Point(12, 198);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(135, 15);
+            this.label23.Size = new System.Drawing.Size(131, 15);
             this.label23.TabIndex = 36;
             this.label23.Text = "Total Other School Fee:";
             // 
@@ -1546,7 +1546,7 @@
             this.label20.Location = new System.Drawing.Point(12, 170);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(144, 15);
+            this.label20.Size = new System.Drawing.Size(135, 15);
             this.label20.TabIndex = 34;
             this.label20.Text = "Total Miscellaneous Fee:";
             // 
@@ -1566,7 +1566,7 @@
             this.label21.Location = new System.Drawing.Point(12, 144);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(71, 15);
+            this.label21.Size = new System.Drawing.Size(69, 15);
             this.label21.TabIndex = 32;
             this.label21.Text = "Tuition Fee:";
             this.label21.Click += new System.EventHandler(this.label21_Click);
@@ -1691,11 +1691,11 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.Format = "n";
-            dataGridViewCellStyle14.NullValue = "0.00";
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle42.Format = "n";
+            dataGridViewCellStyle42.NullValue = "0.00";
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle42;
             this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -1727,7 +1727,7 @@
             this.lblSubjSemester.Location = new System.Drawing.Point(840, 22);
             this.lblSubjSemester.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSubjSemester.Name = "lblSubjSemester";
-            this.lblSubjSemester.Size = new System.Drawing.Size(49, 15);
+            this.lblSubjSemester.Size = new System.Drawing.Size(47, 15);
             this.lblSubjSemester.TabIndex = 1023;
             this.lblSubjSemester.Text = "Second";
             // 
@@ -1780,11 +1780,11 @@
             // 
             this.label135.AutoSize = true;
             this.label135.BackColor = System.Drawing.Color.Transparent;
-            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label135.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label135.ForeColor = System.Drawing.Color.White;
             this.label135.Location = new System.Drawing.Point(361, 21);
             this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(101, 16);
+            this.label135.Size = new System.Drawing.Size(79, 16);
             this.label135.TabIndex = 9;
             this.label135.Text = "School Year: ";
             // 
@@ -1808,7 +1808,7 @@
             this.ClientSize = new System.Drawing.Size(1314, 720);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAssesment";
@@ -1974,7 +1974,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtPayNumber;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.DataGridView dgvFeeHistory;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -2016,5 +2015,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.TextBox txtPayNumber;
     }
 }

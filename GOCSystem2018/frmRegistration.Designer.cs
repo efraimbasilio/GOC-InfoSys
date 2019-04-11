@@ -442,10 +442,11 @@
             // optMale
             // 
             this.optMale.AutoSize = true;
+            this.optMale.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optMale.Location = new System.Drawing.Point(10, 1);
             this.optMale.Margin = new System.Windows.Forms.Padding(4);
             this.optMale.Name = "optMale";
-            this.optMale.Size = new System.Drawing.Size(56, 20);
+            this.optMale.Size = new System.Drawing.Size(55, 20);
             this.optMale.TabIndex = 22;
             this.optMale.TabStop = true;
             this.optMale.Text = "Male";
@@ -455,10 +456,11 @@
             // optFemale
             // 
             this.optFemale.AutoSize = true;
+            this.optFemale.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.optFemale.Location = new System.Drawing.Point(82, 2);
             this.optFemale.Margin = new System.Windows.Forms.Padding(4);
             this.optFemale.Name = "optFemale";
-            this.optFemale.Size = new System.Drawing.Size(72, 20);
+            this.optFemale.Size = new System.Drawing.Size(67, 20);
             this.optFemale.TabIndex = 23;
             this.optFemale.TabStop = true;
             this.optFemale.Text = "Female";

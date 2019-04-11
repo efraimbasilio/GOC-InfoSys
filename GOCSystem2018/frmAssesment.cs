@@ -194,7 +194,7 @@ namespace GOCSystem2018
             }
             else
             {
-                MessageBox.Show(theSection);
+                //MessageBox.Show(theSection);
                 cmbSection.Text = theSection;
             }
 
@@ -567,7 +567,7 @@ namespace GOCSystem2018
             enrollee.Section = cmbSection.Text;
             //pass value to list
             enrollees = enrollee.CountStudInSection();
-            MessageBox.Show("sasa");
+            //MessageBox.Show("sasa");
             //loop through load it to list view
             foreach (var item in enrollees)
             {
@@ -760,7 +760,6 @@ namespace GOCSystem2018
                 dgvEnrolledList.Rows.Add(item.TheGOCNo, item.GradeLevel,item.Strand, item.Section , item.Semester);               
             }
 
-
             enrollees.Clear();
             dgvStudents.Rows.Clear();            
             enrollees = enrollee.Load();
@@ -769,8 +768,6 @@ namespace GOCSystem2018
             {
                 dgvStudents.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
             }
-
-
 
             btnEnroll.Enabled = true;
             if (btnEnroll.Text != "")
@@ -815,8 +812,7 @@ namespace GOCSystem2018
 
             for (int i = 0; i < dgvEnrolledList.Rows.Count; i++)
             {
-                 students = students + 1;
-                 
+                 students = students + 1;                 
             }
 
             if (Convert.ToInt32(lblCeiling.Text) == students)
@@ -824,8 +820,7 @@ namespace GOCSystem2018
                 MessageBox.Show("No more slot, Please Check or add new Section, Enrolled Students are:" + students);//option to add or create new section+
                 toSave = false;
                 return;
-            }
-            
+            }            
         }
 
         private void CheckDuplicateRecords()
@@ -945,7 +940,7 @@ namespace GOCSystem2018
 
                         //lblTotalFees.Text;
                         double ans = Convert.ToDouble(lblTotalFees.Text) - Convert.ToDouble(lblVoucherAmount.Text);
-                        MessageBox.Show(ans.ToString("n"));
+                       // MessageBox.Show(ans.ToString("n"));
 
                         studProfile.StudRegistrationNo = RegNo;
                         studProfile.PartialPayment = "1";
@@ -977,7 +972,7 @@ namespace GOCSystem2018
                             //if (optYES.Checked == true && GradeLevel.Equals("11"))
                             //{
                             studProfile.ReserveFor = lblGradeLevel.Text;
-                            MessageBox.Show(studProfile.ReserveFor);
+                           // MessageBox.Show(studProfile.ReserveFor);
                             studProfile.StudRegistrationNo = RegNo;
                             studProfile.Reservee = "1";
                             studProfile.ReserveOnly();
@@ -1029,13 +1024,13 @@ namespace GOCSystem2018
 
                     if (toSave == true)
                     {                     
-                        MessageBox.Show("To save records");
+                       // MessageBox.Show("To save records");
                         //for grade 11 Student Enrollment Module
 
-                        MessageBox.Show("section ----------- sectioning module 1");
+                       // MessageBox.Show("section ----------- sectioning module 1");
                         studProfile.StudRegistrationNo = lblRegNo.Text;
                         studProfile.Section = cmbSection.Text;
-                        MessageBox.Show("section ----------- sectioning module 1 - pass" + studProfile.Section);
+                       // MessageBox.Show("section ----------- sectioning module 1 - pass" + studProfile.Section);
                         studProfile.UpdateTheSection();
 
                         EnrolledStudents enroll = new EnrolledStudents();
@@ -1100,7 +1095,7 @@ namespace GOCSystem2018
                     //if (optYES.Checked == true && GradeLevel.Equals("11"))
                     //{
                         studProfile.ReserveFor = lblGradeLevel.Text;
-                        MessageBox.Show(studProfile.ReserveFor);
+                      //  MessageBox.Show(studProfile.ReserveFor);
                         studProfile.StudRegistrationNo = RegNo;
                         studProfile.Reservee = "1";
                         studProfile.ReserveOnly();
@@ -1147,7 +1142,7 @@ namespace GOCSystem2018
             {
                 sum += Convert.ToInt32(dgvSubjectLoad.Rows[i].Cells[1].Value);
             }
-            MessageBox.Show(sum.ToString());
+          //  MessageBox.Show(sum.ToString());
         }
 
         public void Reset()
