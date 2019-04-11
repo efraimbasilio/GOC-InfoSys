@@ -75,7 +75,7 @@ namespace GOCSystem2018
             rooms.Clear();
 
             //pass value to list
-            rooms = room.GetRoomSectionCapacity();
+            rooms = room.Load();
 
             //loop through load it to list view
             foreach (var item in rooms)
@@ -161,7 +161,9 @@ namespace GOCSystem2018
                     //pass value to textboxes
                     txtEditSection.Text = item.SectionName;
                     txtEditDesc.Text = item.SectionDesc;
-                    //txtEditMiscComment.Text = item.TuitionFeeDescription;
+                    cmbEditStrand.Text = item.Strand;
+                    cmbEditDept.Text = item.Dept;
+                    cmbEditRoom.Text = item.Room;
                 }
             }
         }
@@ -208,6 +210,7 @@ namespace GOCSystem2018
             this.LoadRecords();
             this.LoadStrand();
             this.LoadDept();
+            this.LoadRoomName();
 
             //reset
             this.Reset();

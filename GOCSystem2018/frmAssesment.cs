@@ -747,7 +747,7 @@ namespace GOCSystem2018
 
         private void cmbSection_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            toSave = true;
             LoadRoomCapacity();
             schedules.Clear();
             dgvSchedule.Rows.Clear();
@@ -829,12 +829,16 @@ namespace GOCSystem2018
             for (int i = 0; i < dgvEnrolledList.Rows.Count; i++)
             {
                  students = students + 1;
+                 
             }
 
             if (Convert.ToInt32(lblCeiling.Text) == students)
             {
-                MessageBox.Show("No more slot, Please Check or add new Section, Enrolled Students are:" + students);//option to add or create new section
+                MessageBox.Show("No more slot, Please Check or add new Section, Enrolled Students are:" + students);//option to add or create new section+
+                toSave = false;
+                return;
             }
+            
         }
 
         private void CheckDuplicateRecords()
@@ -1021,11 +1025,8 @@ namespace GOCSystem2018
                     frmBillingSearch.Show();
                 }
                 else
-                {
-                    
-
+                {                    
                     checkEnroleeCapacity();
-
                     CheckDuplicateRecords();
 
                     if (toSave == true)
