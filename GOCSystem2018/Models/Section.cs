@@ -147,7 +147,7 @@ namespace GOCSystem2018
                         section.sectionDesc = reader["section_desc"].ToString();
                         section.strand = reader["strand"].ToString();
                         section.dept = reader["dept"].ToString();
-                        section.room = reader["room"].ToString();
+                        section.room = reader["rooms"].ToString();
 
                         sections.Add(section);
 
@@ -273,7 +273,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO section(section_name,section_desc,strand,dept,room) " +
+                    string sql = "INSERT INTO section(section_name,section_desc,strand,dept,rooms) " +
                                     " VALUES (@sectionName,@sectionDesc,@strand,@dept,@room);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);

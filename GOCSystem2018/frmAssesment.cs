@@ -927,6 +927,17 @@ namespace GOCSystem2018
         {
             if (btnEnroll.Text == "&Next" && cmbSection.Text == "")
             {
+                if (cmbSection.Text == "" && lblEnStatus.Text =="Reservee")
+                {
+                    //pnlRES.Visible = false;
+                    string message = "Please choose the desired section.";
+                    string title = "GOC_INFO_SYS";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+                   // cmbSection.Focus();
+                    return;
+                }
                 
                 //Full Payment
                 //Partial Payment
