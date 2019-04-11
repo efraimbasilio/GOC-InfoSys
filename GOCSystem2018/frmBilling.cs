@@ -347,6 +347,14 @@ namespace GOCSystem2018
             lblOther.Text = sum.ToString("n");
         }
 
+        private void label12_Click(object sender, EventArgs e)
+        {
+            frmBillingSearch bill = new frmBillingSearch();
+            bill.Show();
+            this.Hide();
+            this.Dispose();
+        }
+
         public void ComputeVoucher()
         {
             //clear list
