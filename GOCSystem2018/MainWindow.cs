@@ -580,7 +580,7 @@ namespace GOCSystem2018
         {
             this.Hide();
             frmBillingSearch frmBillingSearch = new frmBillingSearch();
-            frmBillingSearch.Show();
+            frmBillingSearch.ShowDialog();
         }
 
         private void StudentlistPanel_Paint(object sender, PaintEventArgs e)
