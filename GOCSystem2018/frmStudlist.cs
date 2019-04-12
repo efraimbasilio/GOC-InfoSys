@@ -14,6 +14,103 @@ namespace GOCSystem2018
 {
     public partial class frmStudlist : Form
     {
+        #region shadow
+        private bool Drag;
+        private int MouseX;
+        private int MouseY;
+
+        private const int WM_NCHITTEST = 0x84;
+        private const int HTCLIENT = 0x1;
+        private const int HTCAPTION = 0x2;
+
+        private bool m_aeroEnabled;
+
+        private const int CS_DROPSHADOW = 0x00020000;
+        private const int WM_NCPAINT = 0x0085;
+        private const int WM_ACTIVATEAPP = 0x001C;
+
+        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
+        public static extern int DwmExtendFrameIntoClientArea(IntPtr hWnd, ref MARGINS pMarInset);
+        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
+        public static extern int DwmSetWindowAttribute(IntPtr hwnd, int attr, ref int attrValue, int attrSize);
+        [System.Runtime.InteropServices.DllImport("dwmapi.dll")]
+
+        public static extern int DwmIsCompositionEnabled(ref int pfEnabled);
+        [System.Runtime.InteropServices.DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn(
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+            );
+
+        public struct MARGINS
+        {
+            public int leftWidth;
+            public int rightWidth;
+            public int topHeight;
+            public int bottomHeight;
+        }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                m_aeroEnabled = CheckAeroEnabled();
+                CreateParams cp = base.CreateParams;
+                if (!m_aeroEnabled)
+                    cp.ClassStyle |= CS_DROPSHADOW; return cp;
+            }
+        }
+        private bool CheckAeroEnabled()
+        {
+            if (Environment.OSVersion.Version.Major >= 6)
+            {
+                int enabled = 0; DwmIsCompositionEnabled(ref enabled);
+                return (enabled == 1) ? true : false;
+            }
+            return false;
+        }
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case WM_NCPAINT:
+                    if (m_aeroEnabled)
+                    {
+                        var v = 2;
+                        DwmSetWindowAttribute(this.Handle, 2, ref v, 4);
+                        MARGINS margins = new MARGINS()
+                        {
+                            bottomHeight = 1,
+                            leftWidth = 0,
+                            rightWidth = 0,
+                            topHeight = 0
+                        }; DwmExtendFrameIntoClientArea(this.Handle, ref margins);
+                    }
+                    break;
+                default: break;
+            }
+            base.WndProc(ref m);
+            if (m.Msg == WM_NCHITTEST && (int)m.Result == HTCLIENT) m.Result = (IntPtr)HTCAPTION;
+        }
+        private void PanelMove_MouseDown(object sender, MouseEventArgs e)
+        {
+            Drag = true;
+            MouseX = Cursor.Position.X - this.Left;
+            MouseY = Cursor.Position.Y - this.Top;
+        }
+        private void PanelMove_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (Drag)
+            {
+                this.Top = Cursor.Position.Y - MouseY;
+                this.Left = Cursor.Position.X - MouseX;
+            }
+        }
+        private void PanelMove_MouseUp(object sender, MouseEventArgs e) { Drag = false; }
+        #endregion
         StudentProfile studProfile = new StudentProfile();
 
         List<StudentProfile> studProfiles = new List<StudentProfile>();
@@ -118,9 +215,9 @@ namespace GOCSystem2018
         {
             LoadRecords();
             #region removal of unneccessary header
-           // this.dgvSearch.Columns["id"].Visible = false;
-           // this.dgvSearch.Columns["IDNo"].Visible = false;
-           // this.dgvSearch.Columns["regNo"].Visible = false;
+           this.dgvSearch.Columns["id"].Visible = false;
+           //this.dgvSearch.Columns["IDNo"].Visible = false;
+            this.dgvSearch.Columns["regNo"].Visible = false;
             this.dgvSearch.Columns["Reservee"].Visible = false;
             this.dgvSearch.Columns["Reserve_for"].Visible = false;
             this.dgvSearch.Columns["Full_payment"].Visible = false;
@@ -157,6 +254,7 @@ namespace GOCSystem2018
             this.dgvSearch.Columns["sy_enrolled"].Visible = false;
             this.dgvSearch.Columns["1"].Visible = false;
             this.dgvSearch.Columns["2"].Visible = false;
+
             #endregion
             #region header name fix
             dgvSearch.Columns["LRN"].HeaderText = "LRN";
@@ -170,18 +268,25 @@ namespace GOCSystem2018
             dgvSearch.Columns["track"].HeaderText = "Track";
             dgvSearch.Columns["strand"].HeaderText = "Strand";
             #endregion
+
             #region designing DVG
+           
             dgvSearch.BorderStyle = BorderStyle.None;
-            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 246, 251);
             dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.Gray;
-            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 236, 240);
+            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.Gray;
             dgvSearch.BackgroundColor = Color.White;
 
             dgvSearch.EnableHeadersVisualStyles = false;
             dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(29, 150, 179);
-            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvSearch.AdvancedCellBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None;
+            
+            DataGridViewColumn gncol = dgvSearch.Columns[1];
+            gncol.Width = 220;
+            
             #endregion
         }
 

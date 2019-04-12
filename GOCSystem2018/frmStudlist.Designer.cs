@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label14 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel21.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,24 +60,29 @@
             this.label30.TabIndex = 1043;
             this.label30.Text = "Student List";
             // 
-            // panel21
-            // 
-            this.panel21.Controls.Add(this.dgvSearch);
-            this.panel21.Location = new System.Drawing.Point(63, 196);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(803, 445);
-            this.panel21.TabIndex = 1042;
-            // 
             // dgvSearch
             // 
+            this.dgvSearch.AllowDrop = true;
             this.dgvSearch.AllowUserToAddRows = false;
             this.dgvSearch.AllowUserToDeleteRows = false;
-            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(-38, -23);
+            this.dgvSearch.ColumnHeadersHeight = 40;
+            this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSearch.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSearch.Location = new System.Drawing.Point(12, 211);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
+            this.dgvSearch.RowHeadersVisible = false;
+            this.dgvSearch.RowTemplate.Height = 60;
+            this.dgvSearch.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(1153, 443);
+            this.dgvSearch.Size = new System.Drawing.Size(1012, 443);
             this.dgvSearch.TabIndex = 1036;
             this.dgvSearch.DoubleClick += new System.EventHandler(this.dgvSearch_DoubleClick);
             // 
@@ -108,17 +112,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1215, 666);
+            this.ClientSize = new System.Drawing.Size(1036, 666);
+            this.Controls.Add(this.dgvSearch);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label30);
-            this.Controls.Add(this.panel21);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStudlist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmStudlist";
             this.Load += new System.EventHandler(this.frmStudlist_Load);
-            this.panel21.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -130,7 +134,6 @@
 
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.DataGridView dgvSearch;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;

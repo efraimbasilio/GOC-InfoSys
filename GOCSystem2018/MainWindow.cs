@@ -457,8 +457,19 @@ namespace GOCSystem2018
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frmStudlist frmsl = new frmStudlist();
-            frmsl.ShowDialog();
+            //frmStudlist frmsl = new frmStudlist();
+            //frmsl.ShowDialog();
+            dispanel.Visible = true;
+            frmStudlist frm = new frmStudlist();
+            frm.TopLevel = false;
+            frm.AutoScroll = true;
+
+
+
+            dispanel.Controls.Add(frm);
+
+            frm.Show();
+
         }
     }
 
