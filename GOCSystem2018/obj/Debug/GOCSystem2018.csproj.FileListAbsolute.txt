@@ -1048,7 +1048,6 @@ C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\Crystal
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\stdole.dll
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.exe
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
-C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
 C:\Users\EF\Desktop\NEW_SYSTEM\GOC-InfoSys\GOCSystem2018\bin\Debug\GOCSystem2018.exe.config
 C:\Users\EF\Desktop\NEW_SYSTEM\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.exe
 C:\Users\EF\Desktop\NEW_SYSTEM\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
@@ -1172,3 +1171,6 @@ C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem201
 C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmMaintenance.resources
 C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStudlist.resources
 C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStudProf.resources
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmMaintenance.resources
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStudlist.resources
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStudProf.resources

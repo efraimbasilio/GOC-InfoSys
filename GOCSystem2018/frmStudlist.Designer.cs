@@ -74,12 +74,13 @@
             this.dgvSearch.AllowUserToAddRows = false;
             this.dgvSearch.AllowUserToDeleteRows = false;
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(-38, -28);
+            this.dgvSearch.Location = new System.Drawing.Point(-38, -23);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSearch.Size = new System.Drawing.Size(1153, 443);
             this.dgvSearch.TabIndex = 1036;
+            this.dgvSearch.DoubleClick += new System.EventHandler(this.dgvSearch_DoubleClick);
             // 
             // textBox1
             // 

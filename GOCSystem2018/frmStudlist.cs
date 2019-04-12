@@ -7,24 +7,120 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace GOCSystem2018
 {
     public partial class frmStudlist : Form
     {
+        StudentProfile studProfile = new StudentProfile();
+
+        List<StudentProfile> studProfiles = new List<StudentProfile>();
+
+        frmStudProf studProf = new frmStudProf();
+
+        //Private Method//
+        private void LoadRecords()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+                    string sql = "SELECT * FROM student_profile";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+                    dgvSearch.DataSource = dt;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void searchData(string valueToSearch)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM student_profile WHERE CONCAT(`last_name`, `first_name`,`regno`) LIKE '%" + valueToSearch + "%'";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+                    dgvSearch.DataSource = dt;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SelectData()
+        {
+            if (dgvSearch.SelectedRows.Count > 0)
+            {
+                //clear list
+                studProfiles.Clear();
+                //pass value
+                studProfile.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
+                studProfiles = studProfile.GetById();
+
+                foreach (var item in studProfiles)
+                {
+                    //pass variable to form Assesment
+                    studProf.Student_Name = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
+                    studProf.GOC_No = item.StudGOCNo;
+                    studProf.REG_No = item.StudRegistrationNo;
+                   
+                    //frmAssesment.LRN = item.StudLRN;
+                    //frmAssesment.GradeLevel = item.StudGradeLevel;
+                    //frmAssesment.Track = item.Track;
+                    //frmAssesment.RegNo = item.StudRegistrationNo;
+                    //frmAssesment.Strand = item.StudStrand;
+                    //frmAssesment.Voucher = item.VoucherType;
+                    //frmAssesment.GOCNo = item.StudGOCNo;
+                    //frmAssesment.partialPay = item.PartialPayment;
+                    //frmAssesment.theSection = item.Section;
+                }
+                studProf.Render();
+                studProf.Show();
+            }
+           
+        }
+
         public frmStudlist()
         {
             InitializeComponent();
         }
 
+
+
+
+
         private void frmStudlist_Load(object sender, EventArgs e)
         {
-            
-
+            LoadRecords();
             #region removal of unneccessary header
-            this.dgvSearch.Columns["id"].Visible = false;
-            this.dgvSearch.Columns["IDNo"].Visible = false;
-            this.dgvSearch.Columns["regNo"].Visible = false;
+           // this.dgvSearch.Columns["id"].Visible = false;
+           // this.dgvSearch.Columns["IDNo"].Visible = false;
+           // this.dgvSearch.Columns["regNo"].Visible = false;
             this.dgvSearch.Columns["Reservee"].Visible = false;
             this.dgvSearch.Columns["Reserve_for"].Visible = false;
             this.dgvSearch.Columns["Full_payment"].Visible = false;
@@ -64,6 +160,8 @@ namespace GOCSystem2018
             #endregion
             #region header name fix
             dgvSearch.Columns["LRN"].HeaderText = "LRN";
+            dgvSearch.Columns["regNo"].HeaderText = "RegNo";
+            dgvSearch.Columns["IDNo"].HeaderText = "GOCNo";
             dgvSearch.Columns["last_name"].HeaderText = "Last Name";
             dgvSearch.Columns["first_name"].HeaderText = "First Name";
             dgvSearch.Columns["middle_name"].HeaderText = "Middle Name";
@@ -85,6 +183,11 @@ namespace GOCSystem2018
             dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(29, 150, 179);
             dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             #endregion
+        }
+
+        private void dgvSearch_DoubleClick(object sender, EventArgs e)
+        {
+            SelectData();
         }
     }
 }

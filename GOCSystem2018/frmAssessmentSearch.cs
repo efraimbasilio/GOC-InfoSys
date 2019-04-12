@@ -118,6 +118,9 @@ namespace GOCSystem2018
 
         frmAssesment frmAssesment = new frmAssesment();
 
+      
+
+
         public frmAssessmentSearch()
         {
             InitializeComponent();
@@ -213,12 +216,11 @@ namespace GOCSystem2018
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     MySqlDataAdapter da = new MySqlDataAdapter();
                     da.SelectCommand = cmd;
+
                     //initialize new datatable
                     DataTable dt = new DataTable();
-
                     da.Fill(dt);
                     dgvSearch.DataSource = dt;
-
                 }
             }
             catch (MySqlException ex)
