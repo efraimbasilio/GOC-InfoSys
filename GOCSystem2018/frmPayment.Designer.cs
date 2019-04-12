@@ -68,7 +68,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label3);
@@ -104,6 +104,7 @@
             this.label12.Size = new System.Drawing.Size(17, 17);
             this.label12.TabIndex = 1024;
             this.label12.Text = "X";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label3
             // 
@@ -162,39 +163,41 @@
             // 
             // txtORNo
             // 
-            this.txtORNo.Location = new System.Drawing.Point(57, 66);
+            this.txtORNo.Font = new System.Drawing.Font("Lato Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtORNo.Location = new System.Drawing.Point(78, 66);
             this.txtORNo.Name = "txtORNo";
-            this.txtORNo.Size = new System.Drawing.Size(146, 20);
+            this.txtORNo.Size = new System.Drawing.Size(146, 25);
             this.txtORNo.TabIndex = 1026;
             this.txtORNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtORNo_KeyPress);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lato Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 69);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(59, 18);
             this.label2.TabIndex = 1035;
             this.label2.Text = "OR No:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(146, 240);
+            this.label1.Font = new System.Drawing.Font("Lato Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(62, 219);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 20);
+            this.label1.Size = new System.Drawing.Size(129, 18);
             this.label1.TabIndex = 1037;
             this.label1.Text = "Amount Tendered:";
             // 
             // txtAmountGiven
             // 
-            this.txtAmountGiven.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmountGiven.Location = new System.Drawing.Point(292, 227);
+            this.txtAmountGiven.Font = new System.Drawing.Font("Lato Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmountGiven.Location = new System.Drawing.Point(208, 206);
             this.txtAmountGiven.Name = "txtAmountGiven";
-            this.txtAmountGiven.Size = new System.Drawing.Size(146, 38);
+            this.txtAmountGiven.Size = new System.Drawing.Size(146, 25);
             this.txtAmountGiven.TabIndex = 1036;
             this.txtAmountGiven.Text = "0.00";
             this.txtAmountGiven.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -202,11 +205,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(172, 181);
+            this.label4.Font = new System.Drawing.Font("Lato Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(62, 160);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 20);
+            this.label4.Size = new System.Drawing.Size(95, 18);
             this.label4.TabIndex = 1039;
             this.label4.Text = "Amount Due:";
             // 
@@ -336,8 +339,9 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Lato Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(292, 280);
+            this.btnSave.Location = new System.Drawing.Point(208, 259);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(148, 31);
             this.btnSave.TabIndex = 1051;
@@ -393,11 +397,11 @@
             // lblAmount_Due
             // 
             this.lblAmount_Due.AutoSize = true;
-            this.lblAmount_Due.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount_Due.Location = new System.Drawing.Point(337, 181);
+            this.lblAmount_Due.Font = new System.Drawing.Font("Lato Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount_Due.Location = new System.Drawing.Point(204, 160);
             this.lblAmount_Due.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAmount_Due.Name = "lblAmount_Due";
-            this.lblAmount_Due.Size = new System.Drawing.Size(103, 20);
+            this.lblAmount_Due.Size = new System.Drawing.Size(96, 18);
             this.lblAmount_Due.TabIndex = 1056;
             this.lblAmount_Due.Text = "Payment For:";
             // 
