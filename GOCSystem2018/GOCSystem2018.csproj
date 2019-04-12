@@ -95,11 +95,29 @@
     <Compile Include="frmGrading.designer.cs">
       <DependentUpon>frmGrading.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaintenance.Designer.cs">
+      <DependentUpon>frmMaintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistration.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmRegistration.designer.cs">
       <DependentUpon>frmRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudlist.Designer.cs">
+      <DependentUpon>frmStudlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudProf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudProf.Designer.cs">
+      <DependentUpon>frmStudProf.cs</DependentUpon>
     </Compile>
     <Compile Include="Grading.cs" />
     <Compile Include="MainWindow.cs">
@@ -291,6 +309,9 @@
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMaintenance.resx">
+      <DependentUpon>frmMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMiscFees.resx">
       <DependentUpon>frmMiscFees.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,6 +341,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmStrand.resx">
       <DependentUpon>frmStrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudlist.resx">
+      <DependentUpon>frmStudlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudProf.resx">
+      <DependentUpon>frmStudProf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSubject.resx">
       <DependentUpon>frmSubject.cs</DependentUpon>
