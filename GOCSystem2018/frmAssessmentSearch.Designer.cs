@@ -55,7 +55,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DimGray;
-            this.label17.Location = new System.Drawing.Point(975, 13);
+            this.label17.Location = new System.Drawing.Point(971, 16);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(18, 17);
             this.label17.TabIndex = 1024;
@@ -66,7 +66,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(1006, 13);
+            this.label3.Location = new System.Drawing.Point(1002, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 17);
             this.label3.TabIndex = 1023;
@@ -78,11 +78,11 @@
             this.dgvSearch.AllowUserToAddRows = false;
             this.dgvSearch.AllowUserToDeleteRows = false;
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearch.Location = new System.Drawing.Point(59, 230);
+            this.dgvSearch.Location = new System.Drawing.Point(56, 191);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(597, 438);
+            this.dgvSearch.Size = new System.Drawing.Size(919, 477);
             this.dgvSearch.TabIndex = 1031;
             this.dgvSearch.DoubleClick += new System.EventHandler(this.dgvSearch_DoubleClick_1);
             // 
@@ -90,7 +90,7 @@
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(90, 170);
+            this.txtSearch.Location = new System.Drawing.Point(87, 131);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(281, 17);
@@ -103,7 +103,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(60, 202);
+            this.label1.Location = new System.Drawing.Point(57, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(280, 13);
             this.label1.TabIndex = 1027;
@@ -112,9 +112,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GOCSystem2018.Properties.Resources.Untitled_1;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 125);
+            this.pictureBox1.Location = new System.Drawing.Point(52, 90);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(354, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(354, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1028;
             this.pictureBox1.TabStop = false;
@@ -124,7 +124,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(54, 125);
+            this.label14.Location = new System.Drawing.Point(64, 103);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(181, 15);
             this.label14.TabIndex = 1041;
@@ -135,7 +135,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
-            this.label30.Location = new System.Drawing.Point(54, 87);
+            this.label30.Location = new System.Drawing.Point(51, 48);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(194, 25);
             this.label30.TabIndex = 1040;

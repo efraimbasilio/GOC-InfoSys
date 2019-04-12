@@ -573,7 +573,7 @@ namespace GOCSystem2018
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             frmAssessmentSearch frmAssessmentSearch = new frmAssessmentSearch();
-            frmAssessmentSearch.Show();
+            frmAssessmentSearch.ShowDialog();
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
