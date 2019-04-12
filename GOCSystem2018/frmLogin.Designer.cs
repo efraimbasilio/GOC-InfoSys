@@ -57,9 +57,9 @@
             this.label1.ForeColor = System.Drawing.Color.DimGray;
             this.label1.Location = new System.Drawing.Point(444, 64);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 19);
+            this.label1.Size = new System.Drawing.Size(51, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "SIGN IN";
+            this.label1.Text = "Log in";
             // 
             // txtUsername
             // 
@@ -79,11 +79,10 @@
             this.txtpassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpassword.ForeColor = System.Drawing.Color.Gray;
-            this.txtpassword.Location = new System.Drawing.Point(477, 157);
-            this.txtpassword.Multiline = true;
+            this.txtpassword.Location = new System.Drawing.Point(477, 161);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '•';
-            this.txtpassword.Size = new System.Drawing.Size(224, 20);
+            this.txtpassword.Size = new System.Drawing.Size(224, 15);
             this.txtpassword.TabIndex = 2;
             this.txtpassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txtpassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpassword_KeyDown);

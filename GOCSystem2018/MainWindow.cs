@@ -427,7 +427,13 @@ namespace GOCSystem2018
 
         private void button2_Click(object sender, EventArgs e)
         {
+            frmStudlist frmStudlist = new frmStudlist();
+            dispanel.Controls.Remove(frmStudlist);
+          
             dispanel.Visible = true;
+
+            
+
             frmRegistration frm = new frmRegistration();
             frm.TopLevel = false;
             frm.AutoScroll = true;
@@ -459,16 +465,22 @@ namespace GOCSystem2018
         {
             //frmStudlist frmsl = new frmStudlist();
             //frmsl.ShowDialog();
+            frmRegistration frm = new frmRegistration();
+            frm.Hide();
+            frm.Dispose();
+            
             dispanel.Visible = true;
-            frmStudlist frm = new frmStudlist();
-            frm.TopLevel = false;
-            frm.AutoScroll = true;
+            frmStudlist frmStudlist = new frmStudlist();
+            frmStudlist.TopLevel = false;
+            frmStudlist.AutoScroll = true;
 
 
 
-            dispanel.Controls.Add(frm);
+            dispanel.Controls.Add(frmStudlist);
 
-            frm.Show();
+            frmStudlist.Show();
+
+            Dashboardpanel.Visible = false;
 
         }
     }
