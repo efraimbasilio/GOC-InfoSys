@@ -25,7 +25,6 @@ namespace GOCSystem2018
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = true;
-            studprofpanel.Visible = false;
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = false;
             panel5.Height = pictureBox23.Height;
@@ -35,7 +34,6 @@ namespace GOCSystem2018
         private void EnrollmentBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = false;
-            studprofpanel.Visible = true;
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = false;
             panel5.Height = pictureBox24.Height;
@@ -45,7 +43,6 @@ namespace GOCSystem2018
         private void StudlistBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = false;
-            studprofpanel.Visible = false;
             StudentlistPanel.Visible = true;
             MaintenancePanel.Visible = false;
             panel5.Height = pictureBox25.Height;
@@ -55,7 +52,6 @@ namespace GOCSystem2018
         private void MaintenanceBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = false;
-            studprofpanel.Visible = false;
             StudentlistPanel.Visible = false;
             MaintenancePanel.Visible = true;
             panel5.Height = pictureBox29.Height;
@@ -442,8 +438,7 @@ namespace GOCSystem2018
 
             frm.Show();
             StudentlistPanel.Visible = false;
-            MaintenancePanel.Visible = false;
-            studprofpanel.Visible = false;
+  
             Dashboardpanel.Visible = false;
 
 
@@ -562,8 +557,7 @@ namespace GOCSystem2018
         {
             StudentlistPanel.Visible = true;
             Dashboardpanel.Visible = false;
-            MaintenancePanel.Visible = false;
-            studprofpanel.Visible = false;
+
             dispanel.Refresh();
             dispanel.Visible = false;
 
