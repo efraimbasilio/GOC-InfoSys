@@ -142,7 +142,6 @@
             this.txtAmountGiven.Name = "txtAmountGiven";
             this.txtAmountGiven.Size = new System.Drawing.Size(433, 18);
             this.txtAmountGiven.TabIndex = 1036;
-            this.txtAmountGiven.Text = "0.00";
             this.txtAmountGiven.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label4
