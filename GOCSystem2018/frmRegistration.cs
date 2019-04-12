@@ -166,6 +166,7 @@ namespace GOCSystem2018
                 return false;                           
             }
 
+
             if (opt1stYear.Checked == false || opt2ndYear.Checked == false || opt3rdYear.Checked == false || opt4thYear.Checked == false)
             {
                 if (opt1stYear.Checked == true)
@@ -188,6 +189,10 @@ namespace GOCSystem2018
                 }
                 return false;
             }
+
+
+
+
 
             if (optAcademic.Checked == false || optTVL.Checked == false || optCollege.Checked == false)
             {
@@ -389,6 +394,8 @@ namespace GOCSystem2018
             opt4thYear.Visible = false;
             cmbCourseStrand.Text = "";
             LoadCombo();
+
+            opt1stYear.Checked = true;
         }
 
         private void optAcademic_CheckedChanged(object sender, EventArgs e)
@@ -399,6 +406,8 @@ namespace GOCSystem2018
             opt4thYear.Visible = false;
             cmbCourseStrand.Text = "";
             LoadCombo();
+
+            opt1stYear.Checked = true;
         }
 
         private void optCollege_CheckedChanged(object sender, EventArgs e)
@@ -411,6 +420,8 @@ namespace GOCSystem2018
             opt4thYear.Text = "4";
             cmbCourseStrand.Text = "";
             LoadCombo();
+
+            opt1stYear.Checked = true;
         }
 
         private void chkEntranceExam_CheckedChanged(object sender, EventArgs e)
@@ -897,18 +908,58 @@ namespace GOCSystem2018
 
         }
 
+        private void txtStudCell_LostFocus(object sender, EventArgs e)
+        {
+
+           
+        }
+
+        private void txtStudCell_TextChanged(object sender, EventArgs e)
+        {
+            if (txtStudCell.MaskFull == true)
+            {
+                txtStudCell.BackColor = Color.White;
+            }
+        }
+
+        private void dtBirthday_TextChanged(object sender, EventArgs e)
+        {
+            if (dtBirthday.MaskFull == true)
+            {
+                dtBirthday.BackColor = Color.White;
+            }
+        }
+
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-            //if (string.IsNullOrWhiteSpace(LRNtxt.Text) && string.IsNullOrWhiteSpace(cmbVoucher.Text) && string.IsNullOrWhiteSpace(cmbStudType.Text) && string.IsNullOrWhiteSpace(cmbCourseStrand.Text) && string.IsNullOrWhiteSpace(LRNtxt.Text) &&
-            //    string.IsNullOrWhiteSpace(txtFName.Text) && string.IsNullOrWhiteSpace(txtMName.Text) && string.IsNullOrWhiteSpace(txtLastName.Text) && string.IsNullOrWhiteSpace(txtAddress.Text) && string.IsNullOrWhiteSpace(txtBarangay.Text) &&
-            //    string.IsNullOrWhiteSpace(cmbMunicipality.Text) && string.IsNullOrWhiteSpace(cmbProvince.Text) && string.IsNullOrWhiteSpace(txtage.Text) && string.IsNullOrWhiteSpace(txtReligion.Text) && string.IsNullOrWhiteSpace(txtBirthPlace.Text) &&
-            //    string.IsNullOrWhiteSpace(cmbNationality.Text) && string.IsNullOrWhiteSpace(txtLastSchool.Text) && string.IsNullOrWhiteSpace(txtLastSchAddress.Text) && (optMale.Checked || optFemale.Checked) && (optCollege.Checked || optAcademic.Checked || optTVL.Checked)
-            //    && (opt1stYear.Checked || opt2ndYear.Checked || opt3rdYear.Checked || opt4thYear.Checked)) {
+            bool required = true;
+           
+            if (txtStudCell.MaskFull == true && dtBirthday.MaskFull == true)
+            {
+                required = true;
 
-            //}
+            }
+            else
+            {
+                if (txtStudCell.MaskFull ==false)
+                {
+                    MessageBox.Show("Please Check Student Phone Number.");
+                    txtStudCell.BackColor = Color.LightBlue;
 
-          
-            if (this.CheckRequiredFields() == true)
+                    required = false;
+                }
+
+                if (dtBirthday.MaskFull == false)
+                {
+                    MessageBox.Show("Please Check the Birthday");
+                    dtBirthday.BackColor = Color.LightBlue;
+
+                    required = false;
+                }
+            }
+       
+
+            if (this.CheckRequiredFields() == true && required == true)
             {
                 registration.StudType = cmbStudType.Text;
 
@@ -923,7 +974,7 @@ namespace GOCSystem2018
                 registration.StudVoucher = cmbVoucher.Text;
                 registration.StudAddress1 = txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text;
 
-                registration.StudDateOfBirth = dtBirthday.Value.ToString("yyyy-MM-dd");
+                registration.StudDateOfBirth = dtBirthday2.Value.ToString("yyyy-MM-dd");
                 registration.StudBirthPlace = txtBirthPlace.Text;
 
                 registration.Religion = txtReligion.Text;
@@ -956,6 +1007,8 @@ namespace GOCSystem2018
                 registration.Section = "0";
 
                 //function to load important filtering
+
+              
                 checkYearLevel();
                 CheckTrack();
                 checkRequirements();
@@ -1008,7 +1061,7 @@ namespace GOCSystem2018
                     this.Hide();
                     //frmAssesment.Show();
                     this.Dispose();
-                    search.Show();
+                    search.ShowDialog();
                 }
                 else
                 {

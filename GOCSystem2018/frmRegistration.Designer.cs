@@ -38,7 +38,7 @@
             this.txtBirthPlace = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtage = new System.Windows.Forms.Label();
-            this.dtBirthday = new System.Windows.Forms.DateTimePicker();
+            this.dtBirthday2 = new System.Windows.Forms.DateTimePicker();
             this.label55 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
@@ -74,7 +74,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.cmbNationality = new System.Windows.Forms.ComboBox();
-            this.txtStudCell = new System.Windows.Forms.MaskedTextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.txtTelNo = new System.Windows.Forms.MaskedTextBox();
@@ -92,7 +91,6 @@
             this.txtGuardianTel = new System.Windows.Forms.MaskedTextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
-            this.txtGuardianCell = new System.Windows.Forms.MaskedTextBox();
             this.label37 = new System.Windows.Forms.Label();
             this.cmbProvince2 = new System.Windows.Forms.ComboBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -160,6 +158,9 @@
             this.label45 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtGuardianCell = new System.Windows.Forms.MaskedTextBox();
+            this.txtStudCell = new System.Windows.Forms.MaskedTextBox();
+            this.dtBirthday = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -175,16 +176,15 @@
             // 
             // txtRegno
             // 
-            this.txtRegno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.txtRegno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRegno.BackColor = System.Drawing.Color.White;
+            this.txtRegno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRegno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRegno.Location = new System.Drawing.Point(63, 205);
             this.txtRegno.Margin = new System.Windows.Forms.Padding(4);
             this.txtRegno.Name = "txtRegno";
             this.txtRegno.ReadOnly = true;
-            this.txtRegno.Size = new System.Drawing.Size(176, 15);
+            this.txtRegno.Size = new System.Drawing.Size(176, 22);
             this.txtRegno.TabIndex = 1;
-            this.txtRegno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtAddress
             // 
@@ -291,15 +291,15 @@
             this.txtage.Text = "Age here";
             this.txtage.Visible = false;
             // 
-            // dtBirthday
+            // dtBirthday2
             // 
-            this.dtBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtBirthday.Location = new System.Drawing.Point(67, 492);
-            this.dtBirthday.Margin = new System.Windows.Forms.Padding(4);
-            this.dtBirthday.MinDate = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
-            this.dtBirthday.Name = "dtBirthday";
-            this.dtBirthday.Size = new System.Drawing.Size(115, 22);
-            this.dtBirthday.TabIndex = 18;
+            this.dtBirthday2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtBirthday2.Location = new System.Drawing.Point(67, 492);
+            this.dtBirthday2.Margin = new System.Windows.Forms.Padding(4);
+            this.dtBirthday2.MinDate = new System.DateTime(1980, 1, 1, 0, 0, 0, 0);
+            this.dtBirthday2.Name = "dtBirthday2";
+            this.dtBirthday2.Size = new System.Drawing.Size(115, 22);
+            this.dtBirthday2.TabIndex = 18;
             // 
             // label55
             // 
@@ -439,7 +439,7 @@
             // 
             this.optMale.AutoSize = true;
             this.optMale.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optMale.Location = new System.Drawing.Point(10, -4);
+            this.optMale.Location = new System.Drawing.Point(10, 3);
             this.optMale.Margin = new System.Windows.Forms.Padding(4);
             this.optMale.Name = "optMale";
             this.optMale.Size = new System.Drawing.Size(55, 20);
@@ -453,7 +453,7 @@
             // 
             this.optFemale.AutoSize = true;
             this.optFemale.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optFemale.Location = new System.Drawing.Point(82, -3);
+            this.optFemale.Location = new System.Drawing.Point(82, 4);
             this.optFemale.Margin = new System.Windows.Forms.Padding(4);
             this.optFemale.Name = "optFemale";
             this.optFemale.Size = new System.Drawing.Size(67, 20);
@@ -606,7 +606,7 @@
             this.cmbMunicipality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMunicipality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMunicipality.FormattingEnabled = true;
-            this.cmbMunicipality.Location = new System.Drawing.Point(64, 707);
+            this.cmbMunicipality.Location = new System.Drawing.Point(430, 713);
             this.cmbMunicipality.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMunicipality.Name = "cmbMunicipality";
             this.cmbMunicipality.Size = new System.Drawing.Size(428, 24);
@@ -618,7 +618,7 @@
             this.label22.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label22.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label22.Location = new System.Drawing.Point(61, 689);
+            this.label22.Location = new System.Drawing.Point(420, 695);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(81, 15);
@@ -664,7 +664,7 @@
             "Pampanga",
             "Tarlac",
             "Zambales"});
-            this.cmbProvince.Location = new System.Drawing.Point(516, 708);
+            this.cmbProvince.Location = new System.Drawing.Point(64, 713);
             this.cmbProvince.Margin = new System.Windows.Forms.Padding(4);
             this.cmbProvince.Name = "cmbProvince";
             this.cmbProvince.Size = new System.Drawing.Size(342, 24);
@@ -677,7 +677,7 @@
             this.label24.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label24.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label24.Location = new System.Drawing.Point(513, 689);
+            this.label24.Location = new System.Drawing.Point(61, 694);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(61, 15);
@@ -760,15 +760,6 @@
             this.cmbNationality.Size = new System.Drawing.Size(238, 24);
             this.cmbNationality.TabIndex = 21;
             // 
-            // txtStudCell
-            // 
-            this.txtStudCell.Location = new System.Drawing.Point(63, 835);
-            this.txtStudCell.Margin = new System.Windows.Forms.Padding(4);
-            this.txtStudCell.Mask = "(9999) 000-0000";
-            this.txtStudCell.Name = "txtStudCell";
-            this.txtStudCell.Size = new System.Drawing.Size(256, 22);
-            this.txtStudCell.TabIndex = 24;
-            // 
             // label28
             // 
             this.label28.AutoSize = true;
@@ -797,12 +788,14 @@
             // 
             // txtTelNo
             // 
+            this.txtTelNo.BeepOnError = true;
             this.txtTelNo.Location = new System.Drawing.Point(327, 835);
             this.txtTelNo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelNo.Mask = "(999) 000-0000";
+            this.txtTelNo.Mask = "0000-000-0000";
             this.txtTelNo.Name = "txtTelNo";
-            this.txtTelNo.Size = new System.Drawing.Size(209, 22);
+            this.txtTelNo.Size = new System.Drawing.Size(165, 22);
             this.txtTelNo.TabIndex = 25;
+            this.txtTelNo.TextChanged += new System.EventHandler(this.txtStudCell_TextChanged);
             // 
             // button2
             // 
@@ -819,11 +812,11 @@
             // chckGM
             // 
             this.chckGM.AutoSize = true;
-            this.chckGM.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chckGM.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chckGM.Location = new System.Drawing.Point(402, 1664);
             this.chckGM.Margin = new System.Windows.Forms.Padding(4);
             this.chckGM.Name = "chckGM";
-            this.chckGM.Size = new System.Drawing.Size(90, 19);
+            this.chckGM.Size = new System.Drawing.Size(94, 20);
             this.chckGM.TabIndex = 44;
             this.chckGM.Text = "Good Moral";
             this.chckGM.UseVisualStyleBackColor = true;
@@ -831,11 +824,11 @@
             // chkNCAEResult
             // 
             this.chkNCAEResult.AutoSize = true;
-            this.chkNCAEResult.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkNCAEResult.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkNCAEResult.Location = new System.Drawing.Point(653, 1664);
             this.chkNCAEResult.Margin = new System.Windows.Forms.Padding(4);
             this.chkNCAEResult.Name = "chkNCAEResult";
-            this.chkNCAEResult.Size = new System.Drawing.Size(94, 19);
+            this.chkNCAEResult.Size = new System.Drawing.Size(102, 20);
             this.chkNCAEResult.TabIndex = 46;
             this.chkNCAEResult.Text = "NCAE Result";
             this.chkNCAEResult.UseVisualStyleBackColor = true;
@@ -843,12 +836,12 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.DimGray;
-            this.label16.Location = new System.Drawing.Point(60, 1616);
+            this.label16.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(60, 1607);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(530, 30);
+            this.label16.Size = new System.Drawing.Size(628, 36);
             this.label16.TabIndex = 139;
             this.label16.Text = "Make sure all required fields and requirements are accomplished before proceeding" +
     " in the next step.\r\nPlease check all the accomplished requirements below.\r\n";
@@ -856,11 +849,11 @@
             // chkEntranceExam
             // 
             this.chkEntranceExam.AutoSize = true;
-            this.chkEntranceExam.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkEntranceExam.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEntranceExam.Location = new System.Drawing.Point(514, 1664);
             this.chkEntranceExam.Margin = new System.Windows.Forms.Padding(4);
             this.chkEntranceExam.Name = "chkEntranceExam";
-            this.chkEntranceExam.Size = new System.Drawing.Size(105, 19);
+            this.chkEntranceExam.Size = new System.Drawing.Size(112, 20);
             this.chkEntranceExam.TabIndex = 45;
             this.chkEntranceExam.Text = "Entrance Exam";
             this.chkEntranceExam.UseVisualStyleBackColor = true;
@@ -868,11 +861,11 @@
             // chkDrugtest
             // 
             this.chkDrugtest.AutoSize = true;
-            this.chkDrugtest.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkDrugtest.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkDrugtest.Location = new System.Drawing.Point(297, 1664);
             this.chkDrugtest.Margin = new System.Windows.Forms.Padding(4);
             this.chkDrugtest.Name = "chkDrugtest";
-            this.chkDrugtest.Size = new System.Drawing.Size(76, 19);
+            this.chkDrugtest.Size = new System.Drawing.Size(83, 20);
             this.chkDrugtest.TabIndex = 43;
             this.chkDrugtest.Text = "Drug Test";
             this.chkDrugtest.UseVisualStyleBackColor = true;
@@ -880,11 +873,11 @@
             // chk138
             // 
             this.chk138.AutoSize = true;
-            this.chk138.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chk138.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk138.Location = new System.Drawing.Point(201, 1664);
             this.chk138.Margin = new System.Windows.Forms.Padding(4);
             this.chk138.Name = "chk138";
-            this.chk138.Size = new System.Drawing.Size(77, 19);
+            this.chk138.Size = new System.Drawing.Size(83, 20);
             this.chk138.TabIndex = 42;
             this.chk138.Text = "Form 138";
             this.chk138.UseVisualStyleBackColor = true;
@@ -892,11 +885,11 @@
             // chkBirthCertificate
             // 
             this.chkBirthCertificate.AutoSize = true;
-            this.chkBirthCertificate.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBirthCertificate.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkBirthCertificate.Location = new System.Drawing.Point(63, 1664);
             this.chkBirthCertificate.Margin = new System.Windows.Forms.Padding(4);
             this.chkBirthCertificate.Name = "chkBirthCertificate";
-            this.chkBirthCertificate.Size = new System.Drawing.Size(109, 19);
+            this.chkBirthCertificate.Size = new System.Drawing.Size(118, 20);
             this.chkBirthCertificate.TabIndex = 41;
             this.chkBirthCertificate.Text = "Birth Certificate";
             this.chkBirthCertificate.UseVisualStyleBackColor = true;
@@ -944,11 +937,11 @@
             // 
             // txtGuardianTel
             // 
-            this.txtGuardianTel.Location = new System.Drawing.Point(312, 1472);
+            this.txtGuardianTel.Location = new System.Drawing.Point(313, 1482);
             this.txtGuardianTel.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGuardianTel.Mask = "(999) 000-0000";
+            this.txtGuardianTel.Mask = "0000-000-0000";
             this.txtGuardianTel.Name = "txtGuardianTel";
-            this.txtGuardianTel.Size = new System.Drawing.Size(208, 22);
+            this.txtGuardianTel.Size = new System.Drawing.Size(109, 22);
             this.txtGuardianTel.TabIndex = 40;
             // 
             // label43
@@ -976,15 +969,6 @@
             this.label44.Size = new System.Drawing.Size(84, 15);
             this.label44.TabIndex = 157;
             this.label44.Text = "Telephone No.";
-            // 
-            // txtGuardianCell
-            // 
-            this.txtGuardianCell.Location = new System.Drawing.Point(64, 1472);
-            this.txtGuardianCell.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGuardianCell.Mask = "(9999) 000-0000";
-            this.txtGuardianCell.Name = "txtGuardianCell";
-            this.txtGuardianCell.Size = new System.Drawing.Size(219, 22);
-            this.txtGuardianCell.TabIndex = 39;
             // 
             // label37
             // 
@@ -1464,7 +1448,7 @@
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.Red;
-            this.label53.Location = new System.Drawing.Point(146, 689);
+            this.label53.Location = new System.Drawing.Point(505, 695);
             this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(54, 13);
@@ -1477,7 +1461,7 @@
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.Red;
-            this.label54.Location = new System.Drawing.Point(578, 689);
+            this.label54.Location = new System.Drawing.Point(126, 694);
             this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(54, 13);
@@ -1778,24 +1762,24 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.Gray;
+            this.label45.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.Black;
             this.label45.Location = new System.Drawing.Point(60, 1558);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(618, 30);
+            this.label45.Size = new System.Drawing.Size(786, 36);
             this.label45.TabIndex = 206;
             this.label45.Text = resources.GetString("label45.Text");
             // 
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Font = new System.Drawing.Font("Lato", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.Black;
             this.label61.Location = new System.Drawing.Point(60, 1532);
             this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(62, 15);
+            this.label61.Size = new System.Drawing.Size(77, 18);
             this.label61.TabIndex = 207;
             this.label61.Text = "Disclaimer:";
             // 
@@ -1806,13 +1790,48 @@
             this.panel3.Size = new System.Drawing.Size(1165, 15);
             this.panel3.TabIndex = 208;
             // 
+            // txtGuardianCell
+            // 
+            this.txtGuardianCell.Location = new System.Drawing.Point(63, 1482);
+            this.txtGuardianCell.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGuardianCell.Mask = "0000-000-0000";
+            this.txtGuardianCell.Name = "txtGuardianCell";
+            this.txtGuardianCell.Size = new System.Drawing.Size(109, 22);
+            this.txtGuardianCell.TabIndex = 209;
+            // 
+            // txtStudCell
+            // 
+            this.txtStudCell.BeepOnError = true;
+            this.txtStudCell.Location = new System.Drawing.Point(64, 835);
+            this.txtStudCell.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStudCell.Mask = "0000-000-0000";
+            this.txtStudCell.Name = "txtStudCell";
+            this.txtStudCell.Size = new System.Drawing.Size(158, 22);
+            this.txtStudCell.TabIndex = 210;
+            this.txtStudCell.TextChanged += new System.EventHandler(this.txtStudCell_TextChanged);
+            // 
+            // dtBirthday
+            // 
+            this.dtBirthday.BeepOnError = true;
+            this.dtBirthday.Location = new System.Drawing.Point(67, 492);
+            this.dtBirthday.Margin = new System.Windows.Forms.Padding(4);
+            this.dtBirthday.Mask = "00/00/0000";
+            this.dtBirthday.Name = "dtBirthday";
+            this.dtBirthday.Size = new System.Drawing.Size(116, 22);
+            this.dtBirthday.TabIndex = 211;
+            this.dtBirthday.ValidatingType = typeof(System.DateTime);
+            this.dtBirthday.TextChanged += new System.EventHandler(this.dtBirthday_TextChanged);
+            // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1215, 666);
+            this.ClientSize = new System.Drawing.Size(1232, 666);
+            this.Controls.Add(this.dtBirthday);
+            this.Controls.Add(this.txtStudCell);
+            this.Controls.Add(this.txtGuardianCell);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label61);
             this.Controls.Add(this.label45);
@@ -1834,7 +1853,6 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.label44);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.txtGuardianCell);
             this.Controls.Add(this.label57);
             this.Controls.Add(this.label37);
             this.Controls.Add(this.panel5);
@@ -1856,7 +1874,6 @@
             this.Controls.Add(this.txtGuardianWork);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.txtStudCell);
             this.Controls.Add(this.txtGuardianName);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label29);
@@ -1907,7 +1924,7 @@
             this.Controls.Add(this.label56);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.cmbStudType);
-            this.Controls.Add(this.dtBirthday);
+            this.Controls.Add(this.dtBirthday2);
             this.Controls.Add(this.label54);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label110);
@@ -1969,7 +1986,7 @@
         private System.Windows.Forms.TextBox txtBirthPlace;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label txtage;
-        private System.Windows.Forms.DateTimePicker dtBirthday;
+        private System.Windows.Forms.DateTimePicker dtBirthday2;
         private System.Windows.Forms.Label label55;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label57;
@@ -2005,7 +2022,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ComboBox cmbNationality;
-        private System.Windows.Forms.MaskedTextBox txtStudCell;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.MaskedTextBox txtTelNo;
@@ -2023,7 +2039,6 @@
         private System.Windows.Forms.MaskedTextBox txtGuardianTel;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.MaskedTextBox txtGuardianCell;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ComboBox cmbProvince2;
         private System.Windows.Forms.Label label38;
@@ -2091,5 +2106,8 @@
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.MaskedTextBox txtGuardianCell;
+        private System.Windows.Forms.MaskedTextBox txtStudCell;
+        private System.Windows.Forms.MaskedTextBox dtBirthday;
     }
 }
