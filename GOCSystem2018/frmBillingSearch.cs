@@ -137,7 +137,7 @@ namespace GOCSystem2018
                 //set up before form load
                 this.Hide();
                 frmBilling.Render();
-                frmBilling.Show();
+                frmBilling.ShowDialog();
                 //this.Dispose();
             }
         }
