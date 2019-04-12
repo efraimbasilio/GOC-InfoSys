@@ -260,6 +260,7 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblGOCNo = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel18.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -2330,6 +2331,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Controls.Add(this.btnEdit);
             this.panel6.Controls.Add(this.lblGOCNo);
             this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.gcontactnotxt);
@@ -2832,6 +2834,16 @@
             this.label11.TabIndex = 36;
             this.label11.Text = "Student No:";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(603, 55);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 38;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // frmStudProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3102,5 +3114,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblGOCNo;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

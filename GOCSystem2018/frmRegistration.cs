@@ -24,6 +24,12 @@ namespace GOCSystem2018
         List<SchoolYear> schoolYears = new List<SchoolYear>();
         List<StudentProfile> sps = new List<StudentProfile>();
 
+
+        public string RegNo, LRN, VType, StudType, Track, Grade_Level, StrandCourse, F_Name, M_Name, L_Name, Religion, Nationality, Gender, Birthdate, Place_of_birth;
+        public string House_No, Barangay, Provice, Municipality, Cell_No, Tel_No,Last_School, School_Address, Father,Mother, Guardian, F_Occupation,M_Occupation,G_Occupation,G_House_No, G_Barangay;
+        public string G_Municipality,G_Province,G_Relationship,G_CellNo,G_TelNo;
+
+
         public string School, RegistrationNumber;
         public void LoadSchoolYear()
         {

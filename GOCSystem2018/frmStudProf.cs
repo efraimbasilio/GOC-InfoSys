@@ -13,9 +13,13 @@ namespace GOCSystem2018
     public partial class frmStudProf : Form
     {
         Billing_Partial billingPartial = new Billing_Partial();
+        StudentProfile studProfile = new StudentProfile();
+
+
+        List<StudentProfile> studProfiles = new List<StudentProfile>();
         List<Billing_Partial> billingPartials = new List<Billing_Partial>();
 
-
+        frmRegistration frmReg = new frmRegistration();
 
         public string Student_Name,GOC_No,REG_No;
 
@@ -24,13 +28,62 @@ namespace GOCSystem2018
             InitializeComponent();
         }
 
-        public void Render()
+        
+        public void PassToEdit()
         {
-            lblStudName.Text = Student_Name;
-            txtRegNo.Text = REG_No;
-            lblGOCNo.Text = GOC_No;
+            //clear list
+            studProfiles.Clear();
+            //pass value
+            studProfile.StudGOCNo = GOC_No;
+            studProfiles = studProfile.GetByGOCNoToEdit();
 
-            LoadPaymentHistory();
+            foreach (var item in studProfiles)
+            {
+                //pass variable to form Assesment
+                frmReg.RegNo = item.StudRegistrationNo;
+                frmReg.LRN = item.StudLRN;
+                frmReg.VType = item.VoucherType;
+                frmReg.StudType = item.StudType;
+                frmReg.Track = item.Track;
+                frmReg.Grade_Level = item.StudGradeLevel;
+                frmReg.StrandCourse = item.StudStrand;
+                frmReg.F_Name = item.StudFirstName;
+                frmReg.M_Name = item.StudMiddleName;
+                frmReg.L_Name = item.StudLastName;
+                frmReg.Religion = item.Religion;
+                frmReg.Nationality = item.Nationality;
+                frmReg.Gender = item.StudGender;
+                frmReg.Birthdate = item.StudDateOfBirth;
+                frmReg.Place_of_birth = item.StudBirthPlace;
+
+                //frmReg.House_No = item.StudAddress1;\
+
+                frmReg.Cell_No = item.StudContactNo;
+                frmReg.Tel_No = item.StudTelNo;
+                frmReg.Last_School = item.StudPrevSchool;
+                frmReg.School_Address = item.StudPrevSchoolAddress;
+
+                frmReg.Father = item.FatherName;
+                frmReg.F_Occupation = item.FatherWork;
+                frmReg.Mother = item.MotherName;
+                frmReg.M_Occupation = item.MotherWork;
+
+                frmReg.Guardian = item.GuardianName;
+                frmReg.G_CellNo = item.GuardianContactNo;
+                frmReg.G_TelNo = item.GuardianTelNo;
+                frmReg.G_Occupation = item.GuardianWork;
+                frmReg.G_Relationship = item.GuardianRelationship;
+                //frmReg.G_House_No = item.GuardianCompleteAddress;
+                
+                
+                
+                
+                       
+
+
+            }
+            //frm.Render();
+            //studProf.Show();
         }
 
         public void LoadPaymentHistory()
@@ -40,7 +93,7 @@ namespace GOCSystem2018
             MessageBox.Show(REG_No);
             //pass value to list                    
             billingPartial.RegNo = REG_No;
-            MessageBox.Show("rrrrrrrrrr111");
+
             billingPartials = billingPartial.GetMonthlyDue();
 
             //loop through load it to list view
@@ -56,7 +109,7 @@ namespace GOCSystem2018
                 string Month_8 = "January   ";
                 string Month_9 = "February  ";
                 string Month_10 = "March   ";
-                MessageBox.Show("rrrrrrrrrr");
+
                 M1txt.Text = Month_1;
                 M2txt.Text = Month_2;
                 M3txt.Text = Month_3;
@@ -79,9 +132,28 @@ namespace GOCSystem2018
                 tp9txt.Text = item.P9;
                 tp10txt.Text = item.P10;
 
-               
-
             }
         }
+
+        public void Render()
+        {
+            lblStudName.Text = Student_Name;
+            txtRegNo.Text = REG_No;
+            lblGOCNo.Text = GOC_No;
+
+            LoadPaymentHistory();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            frmRegistration reg = new frmRegistration();
+            this.Hide();
+            this.Dispose();
+
+            reg.ShowDialog();
+
+        }
+
+
     }
 }
