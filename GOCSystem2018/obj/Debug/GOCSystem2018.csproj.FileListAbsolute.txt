@@ -1169,3 +1169,6 @@ C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem201
 C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.Properties.Resources.resources
 C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmReports.resources
 C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
+C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmMaintenance.resources
+C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStudlist.resources
+C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmStudProf.resources

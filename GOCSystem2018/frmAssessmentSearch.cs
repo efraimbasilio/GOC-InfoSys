@@ -195,7 +195,7 @@ namespace GOCSystem2018
 
             dgvSearch.EnableHeadersVisualStyles = false;
             dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(29, 150, 179);
+            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 33, 87);
             dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             #endregion
         }
