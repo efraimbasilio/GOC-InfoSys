@@ -25,8 +25,7 @@ namespace GOCSystem2018
         private void DashboardBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = true;
-            StudentlistPanel.Visible = false;
-            MaintenancePanel.Visible = false;
+
             panel5.Height = pictureBox23.Height;
             panel5.Top = pictureBox23.Top;
         }
@@ -34,8 +33,7 @@ namespace GOCSystem2018
         private void EnrollmentBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = false;
-            StudentlistPanel.Visible = false;
-            MaintenancePanel.Visible = false;
+
             panel5.Height = pictureBox24.Height;
             panel5.Top = pictureBox24.Top;
         }
@@ -43,8 +41,7 @@ namespace GOCSystem2018
         private void StudlistBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = false;
-            StudentlistPanel.Visible = true;
-            MaintenancePanel.Visible = false;
+
             panel5.Height = pictureBox25.Height;
             panel5.Top = pictureBox25.Top;
         }
@@ -52,131 +49,14 @@ namespace GOCSystem2018
         private void MaintenanceBtn_Click(object sender, EventArgs e)
         {
             Dashboardpanel.Visible = false;
-            StudentlistPanel.Visible = false;
-            MaintenancePanel.Visible = true;
+
             panel5.Height = pictureBox29.Height;
             panel5.Top = pictureBox29.Top;
         }
 
 
         #endregion
-        #region hover effect
-        private void pictureBox21_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox21.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/SECTION2.jpg");
-        }
-        private void pictureBox21_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox21.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/SECTION.jpg");
-        }
-        private void pictureBox6_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox6.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/TUITION2.jpg");
-        }
-        private void pictureBox6_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox6.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/TUITION.jpg");
-        }
 
-        private void pictureBox9_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox9.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/MISC2.jpg");
-        }
-        private void pictureBox9_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox9.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/MISC.jpg");
-        }
-
-        private void pictureBox11_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox11.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/OTHERFEES2.jpg");
-        }
-        private void pictureBox11_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox11.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/OTHERFEES.jpg");
-        }
-
-        private void pictureBox13_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox13.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/DISCOUNTS2.jpg");
-        }
-        private void pictureBox13_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox13.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/DISCOUNTS.jpg");
-        }
-
-        private void pictureBox12_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox12.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/VOUCHER2.jpg");
-        }
-        private void pictureBox12_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox12.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/VOUCHER.jpg");
-        }
-
-        private void pictureBox14_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox14.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/USER2.jpg");
-        }
-        private void pictureBox14_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox14.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/USER.jpg");
-        }
-
-        private void pictureBox20_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox20.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/TEACHERS2.jpg");
-        }
-        private void pictureBox20_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox20.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/TEACHERS.jpg");
-        }
-
-        private void pictureBox19_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox19.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/STRAND2.jpg");
-        }
-        private void pictureBox19_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox19.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/STRAND.jpg");
-        }
-
-        private void pictureBox18_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox18.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/ROOMS2.jpg");
-        }
-        private void pictureBox18_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox18.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/ROOMS.jpg");
-        }
-
-        private void pictureBox16_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox16.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/SCHEDULE2.jpg");
-        }
-        private void pictureBox16_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox16.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/SCHEDULE.jpg");
-        }
-
-        private void pictureBox17_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox17.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/SCHOOLYEAR2.jpg");
-        }
-        private void pictureBox17_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox17.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/SCHOOLYEAR.jpg");
-        }
-
-        private void pictureBox15_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox15.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/SUBJECT2.jpg");
-        }
-        private void pictureBox15_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox15.Image = Image.FromFile(System.Windows.Forms.Application.StartupPath + "/Icons/SUBJECT.jpg");
-        }
-        #endregion
         #region misc buttons click event
         private void pictureBox6_Click(object sender, EventArgs e)
         {
@@ -293,7 +173,7 @@ namespace GOCSystem2018
                     dt = new DataTable();
 
                     da.Fill(dt);
-                    dgvSearch.DataSource = dt;
+      
 
                 }
             }
@@ -344,70 +224,7 @@ namespace GOCSystem2018
             this.chart3.Series["Performance"].Points.AddXY("REAL ESTATE", 0);
             this.chart3.Series["Performance"].Points.AddXY("ACCOUNTANCY", 0);
 
-            #region removal of unneccessary header
-            this.dgvSearch.Columns["id"].Visible = false;
-            this.dgvSearch.Columns["IDNo"].Visible = false;
-            this.dgvSearch.Columns["regNo"].Visible = false;
-            this.dgvSearch.Columns["Reservee"].Visible = false;
-            this.dgvSearch.Columns["Reserve_for"].Visible = false;
-            this.dgvSearch.Columns["Full_payment"].Visible = false;
-            this.dgvSearch.Columns["Partial_payment"].Visible = false;
-            this.dgvSearch.Columns["photo_loc"].Visible = false;
-            this.dgvSearch.Columns["voucher_type"].Visible = false;
-            this.dgvSearch.Columns["address"].Visible = false;
-            this.dgvSearch.Columns["date_of_birth"].Visible = false;
-            this.dgvSearch.Columns["place_of_birth"].Visible = false;
-            this.dgvSearch.Columns["religion"].Visible = false;
-            this.dgvSearch.Columns["nationality"].Visible = false;
-            this.dgvSearch.Columns["gender"].Visible = false;
-            this.dgvSearch.Columns["stud_contactNo"].Visible = false;
-            this.dgvSearch.Columns["stud_telNo"].Visible = false;
-            this.dgvSearch.Columns["prev_school"].Visible = false;
-            this.dgvSearch.Columns["prev_school_address"].Visible = false;
-            this.dgvSearch.Columns["father_name"].Visible = false;
-            this.dgvSearch.Columns["father_work"].Visible = false;
-            this.dgvSearch.Columns["mother_name"].Visible = false;
-            this.dgvSearch.Columns["mother_work"].Visible = false;
-            this.dgvSearch.Columns["guardian_name"].Visible = false;
-            this.dgvSearch.Columns["guardian_work"].Visible = false;
-            this.dgvSearch.Columns["guardian_address"].Visible = false;
-            this.dgvSearch.Columns["guardian_relationship"].Visible = false;
-            this.dgvSearch.Columns["guardian_contactNo"].Visible = false;
-            this.dgvSearch.Columns["guardian_telNo"].Visible = false;
-            this.dgvSearch.Columns["bc"].Visible = false;
-            this.dgvSearch.Columns["form138"].Visible = false;
-            this.dgvSearch.Columns["drugtest"].Visible = false;
-            this.dgvSearch.Columns["good_moral"].Visible = false;
-            this.dgvSearch.Columns["en_exam"].Visible = false;
-            this.dgvSearch.Columns["ncae"].Visible = false;
-            this.dgvSearch.Columns["date_enrolled"].Visible = false;
-            this.dgvSearch.Columns["sy_enrolled"].Visible = false;
-            this.dgvSearch.Columns["1"].Visible = false;
-            this.dgvSearch.Columns["2"].Visible = false;
-#endregion
-            #region header name fix
-            dgvSearch.Columns["LRN"].HeaderText = "LRN";
-            dgvSearch.Columns["last_name"].HeaderText = "Last Name";
-            dgvSearch.Columns["first_name"].HeaderText = "First Name";
-            dgvSearch.Columns["middle_name"].HeaderText = "Middle Name";
-            dgvSearch.Columns["grade_Level"].HeaderText = "Grade Level";
-            dgvSearch.Columns["section"].HeaderText = "Section";
-            dgvSearch.Columns["track"].HeaderText = "Track";
-            dgvSearch.Columns["strand"].HeaderText = "Strand";
-            #endregion
-            #region designing DVG
-            dgvSearch.BorderStyle = BorderStyle.None;
-            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
-            dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.Gray;
-            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.White;
-            dgvSearch.BackgroundColor = Color.White;
-
-            dgvSearch.EnableHeadersVisualStyles = false;
-            dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(29, 150, 179);
-            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            #endregion
+            
 
         }
 
@@ -437,7 +254,7 @@ namespace GOCSystem2018
             dispanel.Controls.Add(frm);
 
             frm.Show();
-            StudentlistPanel.Visible = false;
+
   
             Dashboardpanel.Visible = false;
 
@@ -555,7 +372,7 @@ namespace GOCSystem2018
         //**************************************************************************************************************************************
         private void pictureBox25_Click_1(object sender, EventArgs e)
         {
-            StudentlistPanel.Visible = true;
+
             Dashboardpanel.Visible = false;
 
             dispanel.Refresh();
