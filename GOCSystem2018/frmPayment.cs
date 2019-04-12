@@ -60,6 +60,11 @@ namespace GOCSystem2018
         public string amountToPay, paymentFor, GOCNo, ctrpay,  DP, voucherInfo, reservationFee, paymentNo, toCheckGOCNo;
         public double  TotalMiscFee, TotalOtherFee, AmountGiven, BalancePartial , perMonthFee;
 
+        private void label12_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
         private void txtORNo_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))

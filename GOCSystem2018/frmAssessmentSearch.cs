@@ -179,7 +179,7 @@ namespace GOCSystem2018
             this.dgvSearch.Columns["good_moral"].Visible = false;
             this.dgvSearch.Columns["en_exam"].Visible = false;
             this.dgvSearch.Columns["ncae"].Visible = false;
-            //this.dgvSearch.Columns["date_enrolled"].Visible = false;
+            this.dgvSearch.Columns["date_enrolled"].Visible = false;
            // this.dgvSearch.Columns["sy_enrolled"].Visible = false;
             this.dgvSearch.Columns["1"].Visible = false;
             this.dgvSearch.Columns["2"].Visible = false;
@@ -275,8 +275,7 @@ namespace GOCSystem2018
                     frmAssesment.Voucher = item.VoucherType;
                     frmAssesment.GOCNo = item.StudGOCNo;
                     frmAssesment.partialPay = item.PartialPayment;
-                    frmAssesment.theSection = item.Section;
-                    
+                    frmAssesment.theSection = item.Section;                    
                 }
 
                 //set up before form load
@@ -288,18 +287,18 @@ namespace GOCSystem2018
                 frmAssesment.LoadAssesMiscFees();
                 frmAssesment.LoadAssesOtherFees();
                 frmAssesment.TotalTuition();
-
                 
                 frmAssesment.ComputeVoucher();
                 frmAssesment.GetDownPayment();
 
                 frmAssesment.LoadSubject();
                 frmAssesment.EnableMOP();
-
               
                 //show assesment                             
-                frmAssesment.Show();
+              
+                this.Hide();
                 this.Dispose();
+                frmAssesment.ShowDialog();
             }
         }
 
