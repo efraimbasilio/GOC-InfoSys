@@ -183,18 +183,24 @@ namespace GOCSystem2018
         private void frmBillingSearch_Load(object sender, EventArgs e)
         {
             LoadRecords();
-            #region designing dgv
+            #region designing DVG
+
             dgvSearch.BorderStyle = BorderStyle.None;
-            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 246, 251);
             dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(166, 176, 236);
-            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 236, 240);
+            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.Gray;
             dgvSearch.BackgroundColor = Color.White;
 
             dgvSearch.EnableHeadersVisualStyles = false;
             dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
-            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvSearch.AdvancedCellBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None;
+
+            DataGridViewColumn gncol = dgvSearch.Columns[1];
+            gncol.Width = 220;
+
             #endregion
         }
 
@@ -215,11 +221,6 @@ namespace GOCSystem2018
             {
                 SelectData();
             }
-        }
-
-        private void dgvSearch_DoubleClick(object sender, EventArgs e)
-        {
-           
         }
 
         private void dgvSearch_DoubleClick_1(object sender, EventArgs e)

@@ -189,17 +189,23 @@ namespace GOCSystem2018
             #endregion
 
             #region designing DVG
+
             dgvSearch.BorderStyle = BorderStyle.None;
-            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 246, 251);
             dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.Gray;
-            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.White;
+            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 236, 240);
+            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.Gray;
             dgvSearch.BackgroundColor = Color.White;
 
             dgvSearch.EnableHeadersVisualStyles = false;
             dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(0, 33, 87);
-            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvSearch.AdvancedCellBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None;
+
+            DataGridViewColumn gncol = dgvSearch.Columns[1];
+            gncol.Width = 220;
+
             #endregion
         }
         /// <summary>

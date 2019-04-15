@@ -207,10 +207,6 @@ namespace GOCSystem2018
             InitializeComponent();
         }
 
-
-
-
-
         private void frmStudlist_Load(object sender, EventArgs e)
         {
             LoadRecords();

@@ -424,12 +424,12 @@ namespace GOCSystem2018
         {
 
         }
-
+  
         private void button2_Click(object sender, EventArgs e)
         {
-            frmStudlist frmStudlist = new frmStudlist();
-            dispanel.Controls.Remove(frmStudlist);
-          
+
+            dispanel.Controls.Clear();
+            
             dispanel.Visible = true;
 
             
@@ -450,31 +450,44 @@ namespace GOCSystem2018
 
         private void button3_Click(object sender, EventArgs e)
         {
-            frmAssessmentSearch frmas = new frmAssessmentSearch();
-            frmas.ShowDialog();
+            
+            dispanel.Controls.Clear();
+            dispanel.Visible = true;
+            frmAssessmentSearch frmAssessmentSearch = new frmAssessmentSearch();
+            frmAssessmentSearch.TopLevel = false;
+            frmAssessmentSearch.AutoScroll = true;
+
+            dispanel.Controls.Add(frmAssessmentSearch);
+
+            frmAssessmentSearch.Show();
+
+            Dashboardpanel.Visible = false;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
+     
+            dispanel.Controls.Clear();
             frmBillingSearch frmbs = new frmBillingSearch();
-            frmbs.ShowDialog();
+            frmbs.TopLevel = false;
+            frmbs.AutoScroll = true;
+            dispanel.Controls.Add(frmbs);
+            frmbs.Show();
+            Dashboardpanel.Visible = false;
+            dispanel.Visible = true;
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //frmStudlist frmsl = new frmStudlist();
-            //frmsl.ShowDialog();
-            frmRegistration frm = new frmRegistration();
-            frm.Hide();
-            frm.Dispose();
-            
+
+            dispanel.Controls.Clear();
             dispanel.Visible = true;
             frmStudlist frmStudlist = new frmStudlist();
             frmStudlist.TopLevel = false;
             frmStudlist.AutoScroll = true;
-
-
 
             dispanel.Controls.Add(frmStudlist);
 
@@ -482,6 +495,28 @@ namespace GOCSystem2018
 
             Dashboardpanel.Visible = false;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dispanel.Controls.Clear();
+            dispanel.Visible = false;
+            Dashboardpanel.Visible = true;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            dispanel.Controls.Clear();
+            dispanel.Visible = true;
+            frmMaintenance frmMaintenance = new frmMaintenance();
+            frmMaintenance.TopLevel = false;
+            frmMaintenance.AutoScroll = true;
+
+            dispanel.Controls.Add(frmMaintenance);
+
+            frmMaintenance.Show();
+
+            Dashboardpanel.Visible = false;
         }
     }
 
