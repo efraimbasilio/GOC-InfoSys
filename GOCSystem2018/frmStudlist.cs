@@ -197,7 +197,7 @@ namespace GOCSystem2018
                     //frmAssesment.theSection = item.Section;
                 }
                 studProf.Render();
-                studProf.Show();
+                studProf.ShowDialog();
             }
            
         }

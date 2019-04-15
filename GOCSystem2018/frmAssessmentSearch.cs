@@ -357,13 +357,18 @@ namespace GOCSystem2018
 
         private void dgvSearch_DoubleClick_1(object sender, EventArgs e)
         {
-            SelectData();
+            
         }
 
         private void label3_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             this.Dispose();
+        }
+
+        private void dgvSearch_DoubleClick_2(object sender, EventArgs e)
+        {
+SelectData();
         }
     }
 }

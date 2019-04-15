@@ -225,7 +225,12 @@ namespace GOCSystem2018
 
         private void dgvSearch_DoubleClick_1(object sender, EventArgs e)
         {
-            SelectData();
+            
+        }
+
+        private void dgvSearch_DoubleClick(object sender, EventArgs e)
+        {
+SelectData();
         }
     }
 }
