@@ -518,6 +518,12 @@ namespace GOCSystem2018
 
             Dashboardpanel.Visible = false;
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            frmSetting set = new frmSetting();
+            set.ShowDialog();
+        }
     }
 
 

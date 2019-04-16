@@ -53,6 +53,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.Dashboardpanel = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -111,9 +112,9 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dispanel = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.SidebarPanel.SuspendLayout();
             this.Dashboardpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
@@ -128,7 +129,6 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // SidebarPanel
@@ -238,6 +238,7 @@
             this.button10.Text = "     Settings";
             this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
@@ -414,6 +415,16 @@
             this.Dashboardpanel.Name = "Dashboardpanel";
             this.Dashboardpanel.Size = new System.Drawing.Size(1048, 694);
             this.Dashboardpanel.TabIndex = 18;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(19, 159);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(985, 180);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 1025;
+            this.pictureBox5.TabStop = false;
             // 
             // panel6
             // 
@@ -1105,16 +1116,6 @@
             this.dispanel.TabIndex = 1037;
             this.dispanel.Visible = false;
             // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(19, 159);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(985, 180);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 1025;
-            this.pictureBox5.TabStop = false;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1134,6 +1135,7 @@
             this.SidebarPanel.PerformLayout();
             this.Dashboardpanel.ResumeLayout(false);
             this.Dashboardpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1155,7 +1157,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }

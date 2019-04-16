@@ -232,6 +232,7 @@
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmSetting";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSetting";
             this.Load += new System.EventHandler(this.frmSetting_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmSetting_KeyDown);

@@ -369,6 +369,11 @@ namespace GOCSystem2018
 
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void label4_Click(object sender, EventArgs e)
         {
             this.Hide();
