@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label14 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
@@ -43,7 +43,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(58, 107);
+            this.label14.Location = new System.Drawing.Point(23, 126);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(273, 15);
             this.label14.TabIndex = 1044;
@@ -54,7 +54,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
-            this.label30.Location = new System.Drawing.Point(58, 69);
+            this.label30.Location = new System.Drawing.Point(23, 88);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(125, 25);
             this.label30.TabIndex = 1043;
@@ -67,14 +67,14 @@
             this.dgvSearch.AllowUserToDeleteRows = false;
             this.dgvSearch.ColumnHeadersHeight = 40;
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSearch.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSearch.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSearch.Location = new System.Drawing.Point(12, 211);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
@@ -92,17 +92,16 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBox1.Location = new System.Drawing.Point(94, 150);
+            this.textBox1.Location = new System.Drawing.Point(61, 161);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(352, 22);
             this.textBox1.TabIndex = 1041;
-            this.textBox1.Text = "LRN, Name, Student No...";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GOCSystem2018.Properties.Resources.Untitled_1;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 95);
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 106);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(478, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

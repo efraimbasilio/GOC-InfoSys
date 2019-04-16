@@ -305,8 +305,7 @@ namespace GOCSystem2018
 
                 //show assesment                             
 
-                this.Hide();
-                this.Dispose();
+                
                 frmAssesment.ShowDialog();
             }
         }
@@ -369,7 +368,7 @@ namespace GOCSystem2018
 
         private void dgvSearch_DoubleClick_2(object sender, EventArgs e)
         {
-SelectData();
+        SelectData();
         }
 
         private void dgvSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)

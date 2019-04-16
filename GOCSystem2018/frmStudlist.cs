@@ -125,7 +125,7 @@ namespace GOCSystem2018
                 using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
                 {
                     con.Open();
-                    string sql = "SELECT * FROM student_profile";
+                    string sql = "SELECT * FROM Enrolled_Grade_11";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     MySqlDataAdapter da = new MySqlDataAdapter();
                     da.SelectCommand = cmd;
@@ -184,8 +184,27 @@ namespace GOCSystem2018
                     //pass variable to form Assesment
                     studProf.Student_Name = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
                     studProf.GOC_No = item.StudGOCNo;
+
+                    studProf.LRN = item.StudLRN;
+                    studProf.Strand = item.StudStrand;
+                    studProf.Glvl = item.StudGradeLevel;
+                    studProf.Section = item.Section;
+
                     studProf.REG_No = item.StudRegistrationNo;
-                   
+                    studProf.DOB = item.StudDateOfBirth;
+                    studProf.Gender = item.StudGender;
+                    studProf.Add = item.StudAddress1;
+                    studProf.ConNo = item.StudContactNo;
+                    studProf.Nat = item.Nationality;
+                    studProf.Rel = item.Religion;
+                    studProf.BirthPlace = item.StudBirthPlace;
+                    studProf.Fname = item.FatherName;
+                    studProf.Focc = item.FatherWork;
+                    studProf.Mname = item.MotherWork;
+                    studProf.Gname = item.GuardianName;
+                    studProf.Gocc = item.GuardianWork;
+
+
                     //frmAssesment.LRN = item.StudLRN;
                     //frmAssesment.GradeLevel = item.StudGradeLevel;
                     //frmAssesment.Track = item.Track;
@@ -213,56 +232,56 @@ namespace GOCSystem2018
             #region removal of unneccessary header
            this.dgvSearch.Columns["id"].Visible = false;
            //this.dgvSearch.Columns["IDNo"].Visible = false;
-            this.dgvSearch.Columns["regNo"].Visible = false;
-            this.dgvSearch.Columns["Reservee"].Visible = false;
-            this.dgvSearch.Columns["Reserve_for"].Visible = false;
-            this.dgvSearch.Columns["Full_payment"].Visible = false;
-            this.dgvSearch.Columns["Partial_payment"].Visible = false;
-            this.dgvSearch.Columns["photo_loc"].Visible = false;
-            this.dgvSearch.Columns["voucher_type"].Visible = false;
-            this.dgvSearch.Columns["address"].Visible = false;
-            this.dgvSearch.Columns["date_of_birth"].Visible = false;
-            this.dgvSearch.Columns["place_of_birth"].Visible = false;
-            this.dgvSearch.Columns["religion"].Visible = false;
-            this.dgvSearch.Columns["nationality"].Visible = false;
-            this.dgvSearch.Columns["gender"].Visible = false;
-            this.dgvSearch.Columns["stud_contactNo"].Visible = false;
-            this.dgvSearch.Columns["stud_telNo"].Visible = false;
-            this.dgvSearch.Columns["prev_school"].Visible = false;
-            this.dgvSearch.Columns["prev_school_address"].Visible = false;
-            this.dgvSearch.Columns["father_name"].Visible = false;
-            this.dgvSearch.Columns["father_work"].Visible = false;
-            this.dgvSearch.Columns["mother_name"].Visible = false;
-            this.dgvSearch.Columns["mother_work"].Visible = false;
-            this.dgvSearch.Columns["guardian_name"].Visible = false;
-            this.dgvSearch.Columns["guardian_work"].Visible = false;
-            this.dgvSearch.Columns["guardian_address"].Visible = false;
-            this.dgvSearch.Columns["guardian_relationship"].Visible = false;
-            this.dgvSearch.Columns["guardian_contactNo"].Visible = false;
-            this.dgvSearch.Columns["guardian_telNo"].Visible = false;
-            this.dgvSearch.Columns["bc"].Visible = false;
-            this.dgvSearch.Columns["form138"].Visible = false;
-            this.dgvSearch.Columns["drugtest"].Visible = false;
-            this.dgvSearch.Columns["good_moral"].Visible = false;
-            this.dgvSearch.Columns["en_exam"].Visible = false;
-            this.dgvSearch.Columns["ncae"].Visible = false;
-            this.dgvSearch.Columns["date_enrolled"].Visible = false;
-            this.dgvSearch.Columns["sy_enrolled"].Visible = false;
-            this.dgvSearch.Columns["1"].Visible = false;
-            this.dgvSearch.Columns["2"].Visible = false;
+            //this.dgvSearch.Columns["regNo"].Visible = false;
+            //this.dgvSearch.Columns["Reservee"].Visible = false;
+            //this.dgvSearch.Columns["Reserve_for"].Visible = false;
+            //this.dgvSearch.Columns["Full_payment"].Visible = false;
+            //this.dgvSearch.Columns["Partial_payment"].Visible = false;
+            //this.dgvSearch.Columns["photo_loc"].Visible = false;
+            //this.dgvSearch.Columns["voucher_type"].Visible = false;
+            //this.dgvSearch.Columns["address"].Visible = false;
+            //this.dgvSearch.Columns["date_of_birth"].Visible = false;
+            //this.dgvSearch.Columns["place_of_birth"].Visible = false;
+            //this.dgvSearch.Columns["religion"].Visible = false;
+            //this.dgvSearch.Columns["nationality"].Visible = false;
+            //this.dgvSearch.Columns["gender"].Visible = false;
+            //this.dgvSearch.Columns["stud_contactNo"].Visible = false;
+            //this.dgvSearch.Columns["stud_telNo"].Visible = false;
+            //this.dgvSearch.Columns["prev_school"].Visible = false;
+            //this.dgvSearch.Columns["prev_school_address"].Visible = false;
+            //this.dgvSearch.Columns["father_name"].Visible = false;
+            //this.dgvSearch.Columns["father_work"].Visible = false;
+            //this.dgvSearch.Columns["mother_name"].Visible = false;
+            //this.dgvSearch.Columns["mother_work"].Visible = false;
+            //this.dgvSearch.Columns["guardian_name"].Visible = false;
+            //this.dgvSearch.Columns["guardian_work"].Visible = false;
+            //this.dgvSearch.Columns["guardian_address"].Visible = false;
+            //this.dgvSearch.Columns["guardian_relationship"].Visible = false;
+            //this.dgvSearch.Columns["guardian_contactNo"].Visible = false;
+            //this.dgvSearch.Columns["guardian_telNo"].Visible = false;
+            //this.dgvSearch.Columns["bc"].Visible = false;
+            //this.dgvSearch.Columns["form138"].Visible = false;
+            //this.dgvSearch.Columns["drugtest"].Visible = false;
+            //this.dgvSearch.Columns["good_moral"].Visible = false;
+            //this.dgvSearch.Columns["en_exam"].Visible = false;
+            //this.dgvSearch.Columns["ncae"].Visible = false;
+            //this.dgvSearch.Columns["date_enrolled"].Visible = false;
+            //this.dgvSearch.Columns["sy_enrolled"].Visible = false;
+            //this.dgvSearch.Columns["1"].Visible = false;
+            //this.dgvSearch.Columns["2"].Visible = false;
 
             #endregion
             #region header name fix
-            dgvSearch.Columns["LRN"].HeaderText = "LRN";
-            dgvSearch.Columns["regNo"].HeaderText = "RegNo";
-            dgvSearch.Columns["IDNo"].HeaderText = "GOCNo";
-            dgvSearch.Columns["last_name"].HeaderText = "Last Name";
-            dgvSearch.Columns["first_name"].HeaderText = "First Name";
-            dgvSearch.Columns["middle_name"].HeaderText = "Middle Name";
-            dgvSearch.Columns["grade_Level"].HeaderText = "Grade Level";
-            dgvSearch.Columns["section"].HeaderText = "Section";
-            dgvSearch.Columns["track"].HeaderText = "Track";
-            dgvSearch.Columns["strand"].HeaderText = "Strand";
+            //dgvSearch.Columns["LRN"].HeaderText = "LRN";
+            //dgvSearch.Columns["regNo"].HeaderText = "RegNo";
+            //dgvSearch.Columns["IDNo"].HeaderText = "GOCNo";
+            //dgvSearch.Columns["last_name"].HeaderText = "Last Name";
+            //dgvSearch.Columns["first_name"].HeaderText = "First Name";
+            //dgvSearch.Columns["middle_name"].HeaderText = "Middle Name";
+            //dgvSearch.Columns["grade_Level"].HeaderText = "Grade Level";
+            //dgvSearch.Columns["section"].HeaderText = "Section";
+            //dgvSearch.Columns["track"].HeaderText = "Track";
+            //dgvSearch.Columns["strand"].HeaderText = "Strand";
             #endregion
 
             #region designing DVG

@@ -1300,8 +1300,8 @@ namespace GOCSystem2018
 
         private void label37_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Dispose();
+           
+            this.Close();
             frmAssessmentSearch frmAssessmentSearch = new frmAssessmentSearch();
             frmAssessmentSearch.LoadRecords();
 

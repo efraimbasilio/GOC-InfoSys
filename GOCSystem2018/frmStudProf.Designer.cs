@@ -231,7 +231,7 @@
             this.fcontactnotxt = new System.Windows.Forms.Label();
             this.fathertxt = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.sectiontxt = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.religiontxt = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -2343,7 +2343,7 @@
             this.panel6.Controls.Add(this.fcontactnotxt);
             this.panel6.Controls.Add(this.fathertxt);
             this.panel6.Controls.Add(this.label29);
-            this.panel6.Controls.Add(this.label25);
+            this.panel6.Controls.Add(this.sectiontxt);
             this.panel6.Controls.Add(this.label27);
             this.panel6.Controls.Add(this.religiontxt);
             this.panel6.Controls.Add(this.label28);
@@ -2375,7 +2375,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(603, 55);
+            this.btnEdit.Location = new System.Drawing.Point(566, 3);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 38;
@@ -2504,16 +2504,16 @@
             this.label29.TabIndex = 27;
             this.label29.Text = "Father:";
             // 
-            // label25
+            // sectiontxt
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.DimGray;
-            this.label25.Location = new System.Drawing.Point(780, 157);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(58, 15);
-            this.label25.TabIndex = 26;
-            this.label25.Text = "Data here";
+            this.sectiontxt.AutoSize = true;
+            this.sectiontxt.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sectiontxt.ForeColor = System.Drawing.Color.DimGray;
+            this.sectiontxt.Location = new System.Drawing.Point(780, 157);
+            this.sectiontxt.Name = "sectiontxt";
+            this.sectiontxt.Size = new System.Drawing.Size(58, 15);
+            this.sectiontxt.TabIndex = 26;
+            this.sectiontxt.Text = "Data here";
             // 
             // label27
             // 
@@ -3082,7 +3082,7 @@
         private System.Windows.Forms.Label fcontactnotxt;
         private System.Windows.Forms.Label fathertxt;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label sectiontxt;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label religiontxt;
         private System.Windows.Forms.Label label28;

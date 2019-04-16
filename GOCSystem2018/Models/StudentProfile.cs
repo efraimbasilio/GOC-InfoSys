@@ -551,28 +551,57 @@ namespace GOCSystem2018
                     while (reader.Read())
                     {
                         //instantiate model
-                        StudentProfile studentProfile = new StudentProfile();
+                        StudentProfile SP = new StudentProfile();
 
                         //prepare properties
-                        studentProfile.id = Convert.ToInt32(reader["id"].ToString());
-                        studentProfile.studLRN = reader["LRN"].ToString();
-                        studentProfile.studGOCNo = reader["IDNo"].ToString();
-                        studentProfile.studRegistrationNo = reader["regNo"].ToString();
-                        studentProfile.studLastName = reader["last_name"].ToString();
-                        studentProfile.studFirstName = reader["first_name"].ToString();
-                        studentProfile.studMiddleName = reader["middle_name"].ToString();
-                        studentProfile.studGradeLevel = reader["grade_level"].ToString();
-                        studentProfile.voucherType = reader["voucher_type"].ToString();
-                        studentProfile.studStrand = reader["strand"].ToString();
-                        studentProfile.track = reader["track"].ToString();
+                        //prepare properties
+                        SP.id = Convert.ToInt32(reader["id"].ToString());
+                        SP.studGOCNo = reader["IDNo"].ToString();
+                        SP.StudLRN = reader["LRN"].ToString();
+                        SP.studRegistrationNo = reader["regNo"].ToString();
+                        //SP.reservee = reader["Reservee"].ToString();
+                        //SP.reserveFor = reader["Reserve_for"].ToString();
+                        //SP.fullPayment = reader["Full_payment"].ToString();
+                        //SP.partialPayment = reader["Partial_payment"].ToString();
+                        SP.studLastName = reader["last_name"].ToString();
+                        SP.studFirstName = reader["first_name"].ToString();
+                        SP.studMiddleName = reader["middle_name"].ToString();
+                        SP.studGradeLevel = reader["grade_Level"].ToString();
 
-                        studentProfile.reservee = reader["reservee"].ToString();
-                        studentProfile.reserveFor = reader["reserve_for"].ToString();
-                        studentProfile.partialPayment = reader["partial_payment"].ToString();
-                        studentProfile.fullPayment = reader["full_payment"].ToString();
-                        studentProfile.section = reader["section"].ToString();
+                        SP.section = reader["section"].ToString();
+                        SP.track = reader["track"].ToString();
+                        SP.studStrand = reader["strand"].ToString();
+                        SP.voucherType = reader["voucher_type"].ToString();
+                        SP.studAddress1 = reader["address"].ToString();
+                        SP.studDateOfBirth = reader["date_of_birth"].ToString();
+                        SP.religion = reader["religion"].ToString();
+                        SP.nationality = reader["nationality"].ToString();
+                        SP.studGender = reader["gender"].ToString();
+                        SP.studContactNo = reader["stud_contactNo"].ToString();
+                        SP.StudTelNo = reader["stud_telNo"].ToString();
+                        SP.studPrevSchool = reader["prev_school"].ToString();
+                        SP.studPrevSchoolAddress = reader["prev_school_address"].ToString();
+                        SP.fatherName = reader["father_name"].ToString();
+                        SP.fatherWork = reader["father_work"].ToString();
+                        SP.studBirthPlace = reader["place_of_birth"].ToString();
 
-                        studentProfiles.Add(studentProfile);
+                        SP.guardianName = reader["guardian_name"].ToString();
+                        SP.guardianWork = reader["guardian_work"].ToString();
+                        SP.guardianCompleteAddress = reader["guardian_address"].ToString();
+                        SP.guardianRelationship = reader["guardian_relationship"].ToString();
+                        SP.guardianContactNo = reader["guardian_contactNo"].ToString();
+                        SP.guardianTelNo = reader["guardian_telNo"].ToString();
+
+                        SP.reqPSA = reader["bc"].ToString();
+                        SP.reqForm138 = reader["form138"].ToString();
+                        SP.reqDrugTest = reader["drugtest"].ToString();
+                        SP.reqGoodMoral = reader["good_moral"].ToString();
+                        SP.reqAdmissionTest = reader["en_exam"].ToString();
+                        SP.reqNCAE = reader["ncae"].ToString();
+                        //SP.dateEnrolled = reader["date_enrolled"].ToString();
+                        //SP.syEnrolled = reader["sy_enrolled"].ToString();
+
+                        studentProfiles.Add(SP);
                     }
                 }
             }

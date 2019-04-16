@@ -118,7 +118,7 @@ namespace GOCSystem2018
 
         frmRegistration frmReg = new frmRegistration();
 
-        public string Student_Name,GOC_No,REG_No;
+        public string Student_Name,GOC_No, LRN, REG_No, Strand, Glvl, Section, DOB, Add, Gender, ConNo, Nat, Rel, BirthPlace, Fname, Focc, Mname, Mocc, Gname, Gocc;
 
         public frmStudProf()
         {
@@ -187,7 +187,7 @@ namespace GOCSystem2018
         {
             //clear list
             billingPartials.Clear();
-            MessageBox.Show(REG_No);
+            //MessageBox.Show(REG_No);
             //pass value to list                    
             billingPartial.RegNo = REG_No;
 
@@ -242,6 +242,20 @@ namespace GOCSystem2018
             lblStudName.Text = Student_Name;
             txtRegNo.Text = REG_No;
             lblGOCNo.Text = GOC_No;
+            lrntxt.Text = LRN;
+            strandtxt.Text = Strand;
+            glvltxt.Text = Glvl;
+            sectiontxt.Text = Section;
+            bdtxt.Text = DOB;
+            addtxt.Text = Add;
+            Gendertxt.Text = Gender;
+            Contactnotxt.Text = ConNo;
+            nationalitytxt.Text = Nat;
+            religiontxt.Text = Rel;
+            bptxt.Text = BirthPlace;
+            fathertxt.Text = Fname;
+            mothertxt.Text = Mname;
+            guardiantxt.Text = Gname;
 
             LoadPaymentHistory();
         }

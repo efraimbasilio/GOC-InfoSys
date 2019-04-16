@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label17 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -36,6 +36,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.dgvSearch = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearch)).BeginInit();
             this.SuspendLayout();
@@ -45,29 +46,31 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DimGray;
-            this.label17.Location = new System.Drawing.Point(1170, 13);
+            this.label17.Location = new System.Drawing.Point(935, 19);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(18, 17);
             this.label17.TabIndex = 1024;
             this.label17.Text = "__";
+            this.label17.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(1201, 13);
+            this.label3.Location = new System.Drawing.Point(966, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 17);
             this.label3.TabIndex = 1023;
             this.label3.Text = "X";
+            this.label3.Visible = false;
             this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
             // txtSearch
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(61, 122);
+            this.txtSearch.Location = new System.Drawing.Point(61, 171);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(281, 17);
@@ -78,7 +81,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GOCSystem2018.Properties.Resources.Untitled_1;
-            this.pictureBox1.Location = new System.Drawing.Point(26, 81);
+            this.pictureBox1.Location = new System.Drawing.Point(19, 126);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(354, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -90,7 +93,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(18, 75);
+            this.label14.Location = new System.Drawing.Point(23, 126);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(181, 15);
             this.label14.TabIndex = 1041;
@@ -101,7 +104,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
-            this.label30.Location = new System.Drawing.Point(12, 50);
+            this.label30.Location = new System.Drawing.Point(23, 88);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(200, 25);
             this.label30.TabIndex = 1040;
@@ -114,14 +117,14 @@
             this.dgvSearch.AllowUserToDeleteRows = false;
             this.dgvSearch.ColumnHeadersHeight = 40;
             this.dgvSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSearch.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSearch.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSearch.Location = new System.Drawing.Point(17, 239);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
@@ -136,12 +139,23 @@
             this.dgvSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellContentClick);
             this.dgvSearch.DoubleClick += new System.EventHandler(this.dgvSearch_DoubleClick_2);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(47, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(306, 15);
+            this.label1.TabIndex = 1043;
+            this.label1.Text = "Type the registration no. or the lastname of the enrollee";
+            // 
             // frmAssessmentSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1048, 694);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvSearch);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label30);
@@ -171,5 +185,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.DataGridView dgvSearch;
+        private System.Windows.Forms.Label label1;
     }
 }
