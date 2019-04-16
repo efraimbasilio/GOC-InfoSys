@@ -1119,6 +1119,26 @@ namespace GOCSystem2018
            
         }
 
+        private void cmbMOP_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbMOP.Text.ToString().Equals("Partial Payment")){
+
+                pictureBox2.Visible = false;
+                label26.Visible = false;
+
+                pictureBox1.Visible = true;
+                label18.Visible = true;
+
+            }else if (cmbMOP.Text.ToString().Equals("Reservation"))
+            {
+                pictureBox2.Visible = true;
+                label26.Visible = true;
+
+                pictureBox1.Visible = false;
+                label18.Visible = false;
+            }
+        }
+
         private void button4_Click_4(object sender, EventArgs e)
         {
             frmSection frmSection = new frmSection();
