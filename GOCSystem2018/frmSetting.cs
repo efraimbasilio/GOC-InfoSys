@@ -17,7 +17,8 @@ namespace GOCSystem2018
             InitializeComponent();
         }
 
-        private void btnSaveConfiguration_Click(object sender, EventArgs e)
+        
+        public void setThis()
         {
             if (this.CheckRequiredFields() == true)
             {
@@ -33,7 +34,7 @@ namespace GOCSystem2018
 
                 if (GOCSystem2018.Config.TestConnection())
                 {
-                    MessageBox.Show("Server database configuration has been successfully updated", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Successfully Connected to Database", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //if (flag == "Client")
                     //{
@@ -47,7 +48,15 @@ namespace GOCSystem2018
             else
             {
                 MessageBox.Show("Please fill out all required fields", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+               
+                
             }
+        }
+
+
+        private void btnSaveConfiguration_Click(object sender, EventArgs e)
+        {
+            setThis();
         }
 
         private void frmSetting_Load(object sender, EventArgs e)

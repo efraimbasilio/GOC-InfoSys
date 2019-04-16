@@ -251,12 +251,12 @@
         private System.Windows.Forms.TextBox txtHost;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSaveConfiguration;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Button btnSaveConfiguration;
     }
 }

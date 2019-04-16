@@ -79,7 +79,11 @@ namespace GOCSystem2018
                 //error configuration
                 MessageBox.Show("Error: Cannot connect to server" + ex.Message.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                frmSetting set = new frmSetting();
+                set.ShowDialog();
                 return false;
+
+               
             }
         }
     }

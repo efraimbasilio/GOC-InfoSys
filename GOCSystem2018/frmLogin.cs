@@ -121,6 +121,7 @@ namespace GOCSystem2018
         }
         public void credential()
         {
+
             if (Flag == true)
             {
                 if (UserType.Equals("Admin"))
@@ -327,7 +328,7 @@ namespace GOCSystem2018
         private void button2_Click(object sender, EventArgs e)
         {
             frmSetting set = new frmSetting();
-            set.Show();
+            set.ShowDialog();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
@@ -337,6 +338,10 @@ namespace GOCSystem2018
 
             txtpassword.GotFocus += new System.EventHandler(this.txtpassword_GotFocus);
             txtpassword.LostFocus += new System.EventHandler(this.txtpassword_LostFocus);
+
+            frmSetting set = new frmSetting();
+            set.setThis();
+            
         }
 
         #region 

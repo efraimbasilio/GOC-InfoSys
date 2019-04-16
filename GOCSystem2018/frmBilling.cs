@@ -454,19 +454,18 @@ namespace GOCSystem2018
 
         private void label37_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Dispose();
+            this.Close();
 
             
-            MainWindow main = new MainWindow();
-            main.dispanel.Controls.Clear();
+            //MainWindow main = new MainWindow();
+            //main.dispanel.Controls.Clear();
 
-            frmBillingSearch frmBillingSearch = new frmBillingSearch();
-            frmBillingSearch.TopLevel = false;
-            frmBillingSearch.AutoScroll = true;
+            //frmBillingSearch frmBillingSearch = new frmBillingSearch();
+            //frmBillingSearch.TopLevel = false;
+            //frmBillingSearch.AutoScroll = true;
 
-            main.dispanel.Controls.Add(frmBillingSearch);
-            main.Dashboardpanel.Visible = false;
+            //main.dispanel.Controls.Add(frmBillingSearch);
+            //main.Dashboardpanel.Visible = false;
             
         }
 
