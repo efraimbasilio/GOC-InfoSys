@@ -592,7 +592,10 @@ namespace GOCSystem2018
 
                     billingPartial.Save();
 
-                    
+                    studProfile.StudRegistrationNo = reg_no;
+                    studProfile.PartialPayment = "1";
+                    studProfile.PartialOnly();
+
                     #endregion
                 }
 

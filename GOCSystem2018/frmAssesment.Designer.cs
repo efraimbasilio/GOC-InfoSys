@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssesment));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbSection = new System.Windows.Forms.ComboBox();
             this.lblEnStatus = new System.Windows.Forms.Label();
@@ -49,15 +49,87 @@
             this.lblSY = new System.Windows.Forms.Label();
             this.lblSem = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblSubjSemester = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label135 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.lblTotalFees = new System.Windows.Forms.Label();
+            this.lblDownpayment = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.pnlRES = new System.Windows.Forms.Panel();
+            this.optNO = new System.Windows.Forms.RadioButton();
+            this.optYES = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblTotalOtherFee = new System.Windows.Forms.Label();
+            this.dgvFeeHistory = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AmountGiven = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemainingBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblTotalMiscFee = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.dgvOtherFees = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lblTuition = new System.Windows.Forms.Label();
+            this.lblVoucher = new System.Windows.Forms.Label();
+            this.lblStrand = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblVoucherAmount = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvOtherFee = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblLRN = new System.Windows.Forms.Label();
+            this.dgvSubjectLoad = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgvSchedule = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblGradeLevel = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtPayNumber = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.lblCeiling = new System.Windows.Forms.Label();
+            this.lblRegNo = new System.Windows.Forms.Label();
             this.dgvEnrolledList = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTrack = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,9 +137,13 @@
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblGOCNo = new System.Windows.Forms.Label();
             this.lbltest = new System.Windows.Forms.Label();
+            this.cmbMOP = new System.Windows.Forms.ComboBox();
             this.lblRoomName = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.lblRoomCapacity = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
@@ -78,20 +154,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.dgvFeeHistory = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AmountGiven = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RemainingBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.dgvOtherFees = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -104,26 +166,6 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button4 = new System.Windows.Forms.Button();
-            this.pnlRES = new System.Windows.Forms.Panel();
-            this.optNO = new System.Windows.Forms.RadioButton();
-            this.optYES = new System.Windows.Forms.RadioButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblStrand = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblLRN = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lblGradeLevel = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblRegNo = new System.Windows.Forms.Label();
-            this.lblTrack = new System.Windows.Forms.Label();
-            this.lblGOCNo = new System.Windows.Forms.Label();
-            this.cmbMOP = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -138,50 +180,20 @@
             this.Subject1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Desc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEnroll = new System.Windows.Forms.Button();
-            this.dgvOtherFee = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblDownpayment = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.lblTotalFees = new System.Windows.Forms.Label();
-            this.lblVoucher = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.lblVoucherAmount = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.lblTotalOtherFee = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.lblTotalMiscFee = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.lblTuition = new System.Windows.Forms.Label();
-            this.dgvSchedule = new System.Windows.Forms.DataGridView();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSubjectLoad = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblSubjSemester = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label135 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label32 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel12.SuspendLayout();
+            this.pnlRES.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFeeHistory)).BeginInit();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFees)).BeginInit();
+            this.groupBox11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectLoad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolledList)).BeginInit();
             this.groupBox14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
@@ -189,30 +201,18 @@
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFeeHistory)).BeginInit();
-            this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFees)).BeginInit();
-            this.groupBox11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerMonth)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.pnlRES.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectLoad)).BeginInit();
-            this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
@@ -366,7 +366,6 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label36);
             this.panel1.Controls.Add(this.label35);
-            this.panel1.Controls.Add(this.label34);
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -449,12 +448,778 @@
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.cmbSection);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label34);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1121, 730);
             this.panel1.TabIndex = 43;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Black;
+            this.label36.Location = new System.Drawing.Point(53, 84);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(631, 15);
+            this.label36.TabIndex = 1068;
+            this.label36.Text = "Assessment Section of every enrollee. Here you can see the payment breakdown, Tui" +
+    "tion, Sectioning and payment plan";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
+            this.label35.Location = new System.Drawing.Point(50, 59);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(200, 25);
+            this.label35.TabIndex = 1067;
+            this.label35.Text = "Assessment Module";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label34.Location = new System.Drawing.Point(955, 734);
+            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(76, 16);
+            this.label34.TabIndex = 1066;
+            this.label34.Text = "Parameters";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label26.Location = new System.Drawing.Point(801, 655);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(65, 13);
+            this.label26.TabIndex = 1065;
+            this.label26.Text = "Reservation";
+            this.label26.Visible = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label18.Location = new System.Drawing.Point(785, 655);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(78, 13);
+            this.label18.TabIndex = 1064;
+            this.label18.Text = "Downpayment";
+            this.label18.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(874, 644);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1063;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(870, 645);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1062;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // lblSubjSemester
+            // 
+            this.lblSubjSemester.AutoSize = true;
+            this.lblSubjSemester.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubjSemester.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubjSemester.ForeColor = System.Drawing.Color.Black;
+            this.lblSubjSemester.Location = new System.Drawing.Point(210, 161);
+            this.lblSubjSemester.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSubjSemester.Name = "lblSubjSemester";
+            this.lblSubjSemester.Size = new System.Drawing.Size(42, 13);
+            this.lblSubjSemester.TabIndex = 1023;
+            this.lblSubjSemester.Text = "Second";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(89, 546);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 1025;
+            this.label3.Text = "Downpayment:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(1307, 57);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(18, 17);
+            this.label10.TabIndex = 1022;
+            this.label10.Text = "__";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label22.Location = new System.Drawing.Point(89, 672);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(179, 13);
+            this.label22.TabIndex = 1023;
+            this.label22.Text = "Total Tuition and Other School Fee:";
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.BackColor = System.Drawing.Color.Transparent;
+            this.label135.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label135.ForeColor = System.Drawing.Color.Black;
+            this.label135.Location = new System.Drawing.Point(52, 134);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(69, 13);
+            this.label135.TabIndex = 9;
+            this.label135.Text = "School Year: ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(1338, 57);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(17, 17);
+            this.label12.TabIndex = 1020;
+            this.label12.Text = "X";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
+            this.panel12.Controls.Add(this.label32);
+            this.panel12.Controls.Add(this.button1);
+            this.panel12.Location = new System.Drawing.Point(44, 181);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(1009, 36);
+            this.panel12.TabIndex = 1061;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.Color.White;
+            this.label32.Location = new System.Drawing.Point(8, 10);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(115, 15);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Student Information";
+            // 
+            // lblTotalFees
+            // 
+            this.lblTotalFees.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalFees.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTotalFees.Location = new System.Drawing.Point(242, 697);
+            this.lblTotalFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalFees.Name = "lblTotalFees";
+            this.lblTotalFees.Size = new System.Drawing.Size(89, 15);
+            this.lblTotalFees.TabIndex = 1022;
+            this.lblTotalFees.Text = "__________________";
+            this.lblTotalFees.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblDownpayment
+            // 
+            this.lblDownpayment.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDownpayment.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblDownpayment.Location = new System.Drawing.Point(242, 546);
+            this.lblDownpayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDownpayment.Name = "lblDownpayment";
+            this.lblDownpayment.Size = new System.Drawing.Size(89, 15);
+            this.lblDownpayment.TabIndex = 1024;
+            this.lblDownpayment.Text = "__________________";
+            this.lblDownpayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label23.Location = new System.Drawing.Point(89, 646);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(122, 13);
+            this.label23.TabIndex = 36;
+            this.label23.Text = "Total Other School Fee:";
+            // 
+            // pnlRES
+            // 
+            this.pnlRES.Controls.Add(this.optNO);
+            this.pnlRES.Controls.Add(this.optYES);
+            this.pnlRES.Controls.Add(this.label9);
+            this.pnlRES.Location = new System.Drawing.Point(44, 1446);
+            this.pnlRES.Name = "pnlRES";
+            this.pnlRES.Size = new System.Drawing.Size(289, 33);
+            this.pnlRES.TabIndex = 1041;
+            this.pnlRES.Visible = false;
+            // 
+            // optNO
+            // 
+            this.optNO.AutoSize = true;
+            this.optNO.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.optNO.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.optNO.Location = new System.Drawing.Point(213, 7);
+            this.optNO.Name = "optNO";
+            this.optNO.Size = new System.Drawing.Size(50, 20);
+            this.optNO.TabIndex = 1023;
+            this.optNO.TabStop = true;
+            this.optNO.Text = "NO";
+            this.optNO.UseVisualStyleBackColor = true;
+            // 
+            // optYES
+            // 
+            this.optYES.AutoSize = true;
+            this.optYES.Location = new System.Drawing.Point(137, 7);
+            this.optYES.Name = "optYES";
+            this.optYES.Size = new System.Drawing.Size(47, 19);
+            this.optYES.TabIndex = 1022;
+            this.optYES.Text = "YES";
+            this.optYES.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(2, 7);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(102, 15);
+            this.label9.TabIndex = 1021;
+            this.label9.Text = "Reservation Only:";
+            // 
+            // lblTotalOtherFee
+            // 
+            this.lblTotalOtherFee.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalOtherFee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTotalOtherFee.Location = new System.Drawing.Point(242, 643);
+            this.lblTotalOtherFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalOtherFee.Name = "lblTotalOtherFee";
+            this.lblTotalOtherFee.Size = new System.Drawing.Size(89, 15);
+            this.lblTotalOtherFee.TabIndex = 35;
+            this.lblTotalOtherFee.Text = "__________________";
+            this.lblTotalOtherFee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // dgvFeeHistory
+            // 
+            this.dgvFeeHistory.AllowUserToAddRows = false;
+            this.dgvFeeHistory.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvFeeHistory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvFeeHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFeeHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.IDNo,
+            this.AmountGiven,
+            this.RemainingBalance,
+            this.dataGridViewTextBoxColumn9});
+            this.dgvFeeHistory.GridColor = System.Drawing.Color.White;
+            this.dgvFeeHistory.Location = new System.Drawing.Point(44, 830);
+            this.dgvFeeHistory.Name = "dgvFeeHistory";
+            this.dgvFeeHistory.ReadOnly = true;
+            this.dgvFeeHistory.RowHeadersVisible = false;
+            this.dgvFeeHistory.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvFeeHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvFeeHistory.Size = new System.Drawing.Size(618, 276);
+            this.dgvFeeHistory.TabIndex = 1014;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTextBoxColumn6.HeaderText = "OR No.";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 75;
+            // 
+            // IDNo
+            // 
+            this.IDNo.HeaderText = "IDNo";
+            this.IDNo.Name = "IDNo";
+            this.IDNo.ReadOnly = true;
+            // 
+            // AmountGiven
+            // 
+            this.AmountGiven.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle2;
+            this.AmountGiven.HeaderText = "Amount Given";
+            this.AmountGiven.Name = "AmountGiven";
+            this.AmountGiven.ReadOnly = true;
+            this.AmountGiven.Width = 109;
+            // 
+            // RemainingBalance
+            // 
+            this.RemainingBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle3;
+            this.RemainingBalance.HeaderText = "Payment No.";
+            this.RemainingBalance.Name = "RemainingBalance";
+            this.RemainingBalance.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle4.NullValue = "0.00";
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Date and Time";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label20.Location = new System.Drawing.Point(89, 618);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(127, 13);
+            this.label20.TabIndex = 34;
+            this.label20.Text = "Total Miscellaneous Fee:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(89, 307);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 1040;
+            this.label2.Text = "ID No:";
+            // 
+            // lblTotalMiscFee
+            // 
+            this.lblTotalMiscFee.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalMiscFee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTotalMiscFee.Location = new System.Drawing.Point(242, 618);
+            this.lblTotalMiscFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTotalMiscFee.Name = "lblTotalMiscFee";
+            this.lblTotalMiscFee.Size = new System.Drawing.Size(89, 15);
+            this.lblTotalMiscFee.TabIndex = 33;
+            this.lblTotalMiscFee.Text = "__________________";
+            this.lblTotalMiscFee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.dgvOtherFees);
+            this.groupBox10.Location = new System.Drawing.Point(54, 830);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(170, 85);
+            this.groupBox10.TabIndex = 1041;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Breakdown for Partial Payment";
+            this.groupBox10.Visible = false;
+            // 
+            // dgvOtherFees
+            // 
+            this.dgvOtherFees.AllowUserToAddRows = false;
+            this.dgvOtherFees.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvOtherFees.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOtherFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOtherFees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11});
+            this.dgvOtherFees.GridColor = System.Drawing.Color.White;
+            this.dgvOtherFees.Location = new System.Drawing.Point(-40, 18);
+            this.dgvOtherFees.Name = "dgvOtherFees";
+            this.dgvOtherFees.ReadOnly = true;
+            this.dgvOtherFees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOtherFees.Size = new System.Drawing.Size(291, 67);
+            this.dgvOtherFees.TabIndex = 1014;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Payment ";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label21.Location = new System.Drawing.Point(89, 592);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(65, 13);
+            this.label21.TabIndex = 32;
+            this.label21.Text = "Tuition Fee:";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
+            // 
+            // lblTuition
+            // 
+            this.lblTuition.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTuition.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTuition.Location = new System.Drawing.Point(242, 592);
+            this.lblTuition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTuition.Name = "lblTuition";
+            this.lblTuition.Size = new System.Drawing.Size(89, 15);
+            this.lblTuition.TabIndex = 31;
+            this.lblTuition.Text = "__________________";
+            this.lblTuition.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblVoucher
+            // 
+            this.lblVoucher.AutoSize = true;
+            this.lblVoucher.BackColor = System.Drawing.Color.White;
+            this.lblVoucher.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVoucher.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblVoucher.Location = new System.Drawing.Point(239, 498);
+            this.lblVoucher.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVoucher.Name = "lblVoucher";
+            this.lblVoucher.Size = new System.Drawing.Size(79, 13);
+            this.lblVoucher.TabIndex = 1021;
+            this.lblVoucher.Text = "Public Voucher";
+            // 
+            // lblStrand
+            // 
+            this.lblStrand.AutoSize = true;
+            this.lblStrand.BackColor = System.Drawing.Color.White;
+            this.lblStrand.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStrand.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblStrand.Location = new System.Drawing.Point(182, 436);
+            this.lblStrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStrand.Name = "lblStrand";
+            this.lblStrand.Size = new System.Drawing.Size(132, 13);
+            this.lblStrand.TabIndex = 1039;
+            this.lblStrand.Text = "_________________________";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label24.Location = new System.Drawing.Point(89, 498);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(76, 13);
+            this.label24.TabIndex = 1020;
+            this.label24.Text = "Voucher Type:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label25.Location = new System.Drawing.Point(89, 523);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(90, 13);
+            this.label25.TabIndex = 38;
+            this.label25.Text = "Voucher Amount:";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.dataGridView1);
+            this.groupBox11.Location = new System.Drawing.Point(230, 840);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(179, 85);
+            this.groupBox11.TabIndex = 1040;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Miscellaneous Fee Break Down";
+            this.groupBox11.Visible = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13});
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(-40, 18);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(292, 67);
+            this.dataGridView1.TabIndex = 1014;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Fee Name";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "n";
+            dataGridViewCellStyle5.NullValue = "0.00";
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn13.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            // 
+            // lblVoucherAmount
+            // 
+            this.lblVoucherAmount.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVoucherAmount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblVoucherAmount.Location = new System.Drawing.Point(242, 523);
+            this.lblVoucherAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVoucherAmount.Name = "lblVoucherAmount";
+            this.lblVoucherAmount.Size = new System.Drawing.Size(89, 15);
+            this.lblVoucherAmount.TabIndex = 37;
+            this.lblVoucherAmount.Text = "__________________";
+            this.lblVoucherAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.Location = new System.Drawing.Point(89, 358);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 1025;
+            this.label1.Text = "Name:";
+            // 
+            // dgvOtherFee
+            // 
+            this.dgvOtherFee.AllowUserToAddRows = false;
+            this.dgvOtherFee.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvOtherFee.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvOtherFee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOtherFee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.dgvOtherFee.GridColor = System.Drawing.Color.White;
+            this.dgvOtherFee.Location = new System.Drawing.Point(1602, 162);
+            this.dgvOtherFee.Name = "dgvOtherFee";
+            this.dgvOtherFee.ReadOnly = true;
+            this.dgvOtherFee.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvOtherFee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvOtherFee.Size = new System.Drawing.Size(291, 263);
+            this.dgvOtherFee.TabIndex = 1014;
+            this.dgvOtherFee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOtherFee_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Fee Name";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "n";
+            dataGridViewCellStyle6.NullValue = "0.00";
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // lblLRN
+            // 
+            this.lblLRN.AutoSize = true;
+            this.lblLRN.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLRN.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblLRN.Location = new System.Drawing.Point(182, 283);
+            this.lblLRN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLRN.Name = "lblLRN";
+            this.lblLRN.Size = new System.Drawing.Size(45, 13);
+            this.lblLRN.TabIndex = 1034;
+            this.lblLRN.Text = "LRN_no";
+            // 
+            // dgvSubjectLoad
+            // 
+            this.dgvSubjectLoad.AllowUserToAddRows = false;
+            this.dgvSubjectLoad.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvSubjectLoad.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSubjectLoad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubjectLoad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.dgvSubjectLoad.GridColor = System.Drawing.Color.White;
+            this.dgvSubjectLoad.Location = new System.Drawing.Point(1286, 158);
+            this.dgvSubjectLoad.Name = "dgvSubjectLoad";
+            this.dgvSubjectLoad.ReadOnly = true;
+            this.dgvSubjectLoad.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dgvSubjectLoad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSubjectLoad.Size = new System.Drawing.Size(292, 262);
+            this.dgvSubjectLoad.TabIndex = 1014;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Fee Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "n";
+            dataGridViewCellStyle7.NullValue = "0.00";
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label15.Location = new System.Drawing.Point(89, 283);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(31, 13);
+            this.label15.TabIndex = 1033;
+            this.label15.Text = "LRN:";
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblName.Location = new System.Drawing.Point(182, 358);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(132, 13);
+            this.lblName.TabIndex = 1026;
+            this.lblName.Text = "_________________________";
+            // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(0, 1478);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1352, 10);
+            this.panel11.TabIndex = 1060;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label4.Location = new System.Drawing.Point(89, 382);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.TabIndex = 1027;
+            this.label4.Text = "Grade Level:";
+            // 
+            // dgvSchedule
+            // 
+            this.dgvSchedule.AllowUserToAddRows = false;
+            this.dgvSchedule.BackgroundColor = System.Drawing.Color.Silver;
+            this.dgvSchedule.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            this.dgvSchedule.Location = new System.Drawing.Point(44, 1192);
+            this.dgvSchedule.Name = "dgvSchedule";
+            this.dgvSchedule.ReadOnly = true;
+            this.dgvSchedule.RowHeadersVisible = false;
+            this.dgvSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSchedule.Size = new System.Drawing.Size(743, 262);
+            this.dgvSchedule.TabIndex = 39;
+            this.dgvSchedule.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Time Start";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Time End";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Monday";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Tuesday";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Wednesday";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Thursday";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Friday";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // lblGradeLevel
+            // 
+            this.lblGradeLevel.AutoSize = true;
+            this.lblGradeLevel.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGradeLevel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblGradeLevel.Location = new System.Drawing.Point(182, 382);
+            this.lblGradeLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGradeLevel.Name = "lblGradeLevel";
+            this.lblGradeLevel.Size = new System.Drawing.Size(132, 13);
+            this.lblGradeLevel.TabIndex = 1028;
+            this.lblGradeLevel.Text = "_________________________";
             // 
             // label33
             // 
@@ -466,6 +1231,18 @@
             this.label33.TabIndex = 1059;
             this.label33.Text = "Ceiling";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label11.Location = new System.Drawing.Point(89, 409);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(81, 13);
+            this.label11.TabIndex = 1030;
+            this.label11.Text = "Course / Track:";
+            // 
             // txtPayNumber
             // 
             this.txtPayNumber.Location = new System.Drawing.Point(1963, 94);
@@ -473,6 +1250,18 @@
             this.txtPayNumber.Size = new System.Drawing.Size(22, 22);
             this.txtPayNumber.TabIndex = 1042;
             this.txtPayNumber.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label13.Location = new System.Drawing.Point(89, 331);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 13);
+            this.label13.TabIndex = 1031;
+            this.label13.Text = "Student No:";
             // 
             // lblCeiling
             // 
@@ -483,6 +1272,18 @@
             this.lblCeiling.TabIndex = 1058;
             this.lblCeiling.Text = "__________________";
             this.lblCeiling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblRegNo
+            // 
+            this.lblRegNo.AutoSize = true;
+            this.lblRegNo.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegNo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblRegNo.Location = new System.Drawing.Point(182, 331);
+            this.lblRegNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRegNo.Name = "lblRegNo";
+            this.lblRegNo.Size = new System.Drawing.Size(132, 13);
+            this.lblRegNo.TabIndex = 1032;
+            this.lblRegNo.Text = "_________________________";
             // 
             // dgvEnrolledList
             // 
@@ -536,6 +1337,18 @@
             this.Column11.HeaderText = "Semester";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
+            // 
+            // lblTrack
+            // 
+            this.lblTrack.AutoSize = true;
+            this.lblTrack.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrack.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTrack.Location = new System.Drawing.Point(182, 409);
+            this.lblTrack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTrack.Name = "lblTrack";
+            this.lblTrack.Size = new System.Drawing.Size(132, 13);
+            this.lblTrack.TabIndex = 1037;
+            this.lblTrack.Text = "_________________________";
             // 
             // groupBox14
             // 
@@ -598,6 +1411,18 @@
             this.Column13.Name = "Column13";
             this.Column13.ReadOnly = true;
             // 
+            // lblGOCNo
+            // 
+            this.lblGOCNo.AutoSize = true;
+            this.lblGOCNo.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGOCNo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblGOCNo.Location = new System.Drawing.Point(182, 307);
+            this.lblGOCNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGOCNo.Name = "lblGOCNo";
+            this.lblGOCNo.Size = new System.Drawing.Size(97, 13);
+            this.lblGOCNo.TabIndex = 1038;
+            this.lblGOCNo.Text = "__________________";
+            // 
             // lbltest
             // 
             this.lbltest.Location = new System.Drawing.Point(1830, 97);
@@ -607,6 +1432,24 @@
             this.lbltest.TabIndex = 1057;
             this.lbltest.Text = "__________________";
             this.lbltest.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cmbMOP
+            // 
+            this.cmbMOP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbMOP.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMOP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.cmbMOP.FormattingEnabled = true;
+            this.cmbMOP.Items.AddRange(new object[] {
+            "Full Payment",
+            "Partial Payment",
+            "Reservation"});
+            this.cmbMOP.Location = new System.Drawing.Point(757, 619);
+            this.cmbMOP.Name = "cmbMOP";
+            this.cmbMOP.Size = new System.Drawing.Size(179, 21);
+            this.cmbMOP.TabIndex = 1036;
+            this.cmbMOP.SelectedIndexChanged += new System.EventHandler(this.cmbMOP_SelectedIndexChanged_1);
+            this.cmbMOP.SelectedValueChanged += new System.EventHandler(this.cmbMOP_SelectedValueChanged_1);
             // 
             // lblRoomName
             // 
@@ -619,6 +1462,18 @@
             this.lblRoomName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblRoomName.TextChanged += new System.EventHandler(this.lblRoomName_TextChanged);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Location = new System.Drawing.Point(757, 603);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.TabIndex = 1035;
+            this.label8.Text = "Paying for:";
+            // 
             // lblRoomCapacity
             // 
             this.lblRoomCapacity.Location = new System.Drawing.Point(1529, 100);
@@ -628,6 +1483,18 @@
             this.lblRoomCapacity.TabIndex = 1055;
             this.lblRoomCapacity.Text = "__________________";
             this.lblRoomCapacity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label7.Location = new System.Drawing.Point(89, 436);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.TabIndex = 1029;
+            this.label7.Text = "Strand:";
             // 
             // panel10
             // 
@@ -728,163 +1595,6 @@
             this.label16.Size = new System.Drawing.Size(203, 15);
             this.label16.TabIndex = 0;
             this.label16.Text = "Student Payment History Breakdown";
-            // 
-            // dgvFeeHistory
-            // 
-            this.dgvFeeHistory.AllowUserToAddRows = false;
-            this.dgvFeeHistory.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgvFeeHistory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvFeeHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFeeHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.IDNo,
-            this.AmountGiven,
-            this.RemainingBalance,
-            this.dataGridViewTextBoxColumn9});
-            this.dgvFeeHistory.GridColor = System.Drawing.Color.White;
-            this.dgvFeeHistory.Location = new System.Drawing.Point(44, 830);
-            this.dgvFeeHistory.Name = "dgvFeeHistory";
-            this.dgvFeeHistory.ReadOnly = true;
-            this.dgvFeeHistory.RowHeadersVisible = false;
-            this.dgvFeeHistory.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvFeeHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFeeHistory.Size = new System.Drawing.Size(618, 276);
-            this.dgvFeeHistory.TabIndex = 1014;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.NullValue = null;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridViewTextBoxColumn6.HeaderText = "OR No.";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 75;
-            // 
-            // IDNo
-            // 
-            this.IDNo.HeaderText = "IDNo";
-            this.IDNo.Name = "IDNo";
-            this.IDNo.ReadOnly = true;
-            // 
-            // AmountGiven
-            // 
-            this.AmountGiven.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Format = "N2";
-            dataGridViewCellStyle16.NullValue = null;
-            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle16;
-            this.AmountGiven.HeaderText = "Amount Given";
-            this.AmountGiven.Name = "AmountGiven";
-            this.AmountGiven.ReadOnly = true;
-            this.AmountGiven.Width = 109;
-            // 
-            // RemainingBalance
-            // 
-            this.RemainingBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle17;
-            this.RemainingBalance.HeaderText = "Payment No.";
-            this.RemainingBalance.Name = "RemainingBalance";
-            this.RemainingBalance.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle18.NullValue = "0.00";
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Date and Time";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.dgvOtherFees);
-            this.groupBox10.Location = new System.Drawing.Point(54, 830);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(170, 85);
-            this.groupBox10.TabIndex = 1041;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Breakdown for Partial Payment";
-            this.groupBox10.Visible = false;
-            // 
-            // dgvOtherFees
-            // 
-            this.dgvOtherFees.AllowUserToAddRows = false;
-            this.dgvOtherFees.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgvOtherFees.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvOtherFees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOtherFees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11});
-            this.dgvOtherFees.GridColor = System.Drawing.Color.White;
-            this.dgvOtherFees.Location = new System.Drawing.Point(-40, 18);
-            this.dgvOtherFees.Name = "dgvOtherFees";
-            this.dgvOtherFees.ReadOnly = true;
-            this.dgvOtherFees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOtherFees.Size = new System.Drawing.Size(291, 67);
-            this.dgvOtherFees.TabIndex = 1014;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Payment ";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.dataGridView1);
-            this.groupBox11.Location = new System.Drawing.Point(230, 840);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(179, 85);
-            this.groupBox11.TabIndex = 1040;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Miscellaneous Fee Break Down";
-            this.groupBox11.Visible = false;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Silver;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
-            this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(-40, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(292, 67);
-            this.dataGridView1.TabIndex = 1014;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Fee Name";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle21.Format = "n";
-            dataGridViewCellStyle21.NullValue = "0.00";
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle21;
-            this.dataGridViewTextBoxColumn13.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
             // 
             // panel8
             // 
@@ -1015,249 +1725,6 @@
             this.button4.Text = "Load Section";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click_4);
-            // 
-            // pnlRES
-            // 
-            this.pnlRES.Controls.Add(this.optNO);
-            this.pnlRES.Controls.Add(this.optYES);
-            this.pnlRES.Controls.Add(this.label9);
-            this.pnlRES.Location = new System.Drawing.Point(44, 1446);
-            this.pnlRES.Name = "pnlRES";
-            this.pnlRES.Size = new System.Drawing.Size(289, 33);
-            this.pnlRES.TabIndex = 1041;
-            this.pnlRES.Visible = false;
-            // 
-            // optNO
-            // 
-            this.optNO.AutoSize = true;
-            this.optNO.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.optNO.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.optNO.Location = new System.Drawing.Point(213, 7);
-            this.optNO.Name = "optNO";
-            this.optNO.Size = new System.Drawing.Size(50, 20);
-            this.optNO.TabIndex = 1023;
-            this.optNO.TabStop = true;
-            this.optNO.Text = "NO";
-            this.optNO.UseVisualStyleBackColor = true;
-            // 
-            // optYES
-            // 
-            this.optYES.AutoSize = true;
-            this.optYES.Location = new System.Drawing.Point(137, 7);
-            this.optYES.Name = "optYES";
-            this.optYES.Size = new System.Drawing.Size(47, 19);
-            this.optYES.TabIndex = 1022;
-            this.optYES.Text = "YES";
-            this.optYES.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(2, 7);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(102, 15);
-            this.label9.TabIndex = 1021;
-            this.label9.Text = "Reservation Only:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(89, 307);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 1040;
-            this.label2.Text = "ID No:";
-            // 
-            // lblStrand
-            // 
-            this.lblStrand.AutoSize = true;
-            this.lblStrand.BackColor = System.Drawing.Color.White;
-            this.lblStrand.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStrand.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblStrand.Location = new System.Drawing.Point(182, 436);
-            this.lblStrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblStrand.Name = "lblStrand";
-            this.lblStrand.Size = new System.Drawing.Size(132, 13);
-            this.lblStrand.TabIndex = 1039;
-            this.lblStrand.Text = "_________________________";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(89, 358);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 1025;
-            this.label1.Text = "Name:";
-            // 
-            // lblLRN
-            // 
-            this.lblLRN.AutoSize = true;
-            this.lblLRN.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLRN.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblLRN.Location = new System.Drawing.Point(182, 283);
-            this.lblLRN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLRN.Name = "lblLRN";
-            this.lblLRN.Size = new System.Drawing.Size(45, 13);
-            this.lblLRN.TabIndex = 1034;
-            this.lblLRN.Text = "LRN_no";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label15.Location = new System.Drawing.Point(89, 283);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 13);
-            this.label15.TabIndex = 1033;
-            this.label15.Text = "LRN:";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblName.Location = new System.Drawing.Point(182, 358);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(132, 13);
-            this.lblName.TabIndex = 1026;
-            this.lblName.Text = "_________________________";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label4.Location = new System.Drawing.Point(89, 382);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
-            this.label4.TabIndex = 1027;
-            this.label4.Text = "Grade Level:";
-            // 
-            // lblGradeLevel
-            // 
-            this.lblGradeLevel.AutoSize = true;
-            this.lblGradeLevel.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGradeLevel.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblGradeLevel.Location = new System.Drawing.Point(182, 382);
-            this.lblGradeLevel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblGradeLevel.Name = "lblGradeLevel";
-            this.lblGradeLevel.Size = new System.Drawing.Size(132, 13);
-            this.lblGradeLevel.TabIndex = 1028;
-            this.lblGradeLevel.Text = "_________________________";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(89, 409);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 13);
-            this.label11.TabIndex = 1030;
-            this.label11.Text = "Course / Track:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label13.Location = new System.Drawing.Point(89, 331);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 13);
-            this.label13.TabIndex = 1031;
-            this.label13.Text = "Student No:";
-            // 
-            // lblRegNo
-            // 
-            this.lblRegNo.AutoSize = true;
-            this.lblRegNo.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegNo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblRegNo.Location = new System.Drawing.Point(182, 331);
-            this.lblRegNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblRegNo.Name = "lblRegNo";
-            this.lblRegNo.Size = new System.Drawing.Size(132, 13);
-            this.lblRegNo.TabIndex = 1032;
-            this.lblRegNo.Text = "_________________________";
-            // 
-            // lblTrack
-            // 
-            this.lblTrack.AutoSize = true;
-            this.lblTrack.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrack.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTrack.Location = new System.Drawing.Point(182, 409);
-            this.lblTrack.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTrack.Name = "lblTrack";
-            this.lblTrack.Size = new System.Drawing.Size(132, 13);
-            this.lblTrack.TabIndex = 1037;
-            this.lblTrack.Text = "_________________________";
-            // 
-            // lblGOCNo
-            // 
-            this.lblGOCNo.AutoSize = true;
-            this.lblGOCNo.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGOCNo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblGOCNo.Location = new System.Drawing.Point(182, 307);
-            this.lblGOCNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblGOCNo.Name = "lblGOCNo";
-            this.lblGOCNo.Size = new System.Drawing.Size(97, 13);
-            this.lblGOCNo.TabIndex = 1038;
-            this.lblGOCNo.Text = "__________________";
-            // 
-            // cmbMOP
-            // 
-            this.cmbMOP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbMOP.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMOP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.cmbMOP.FormattingEnabled = true;
-            this.cmbMOP.Items.AddRange(new object[] {
-            "Full Payment",
-            "Partial Payment",
-            "Reservation"});
-            this.cmbMOP.Location = new System.Drawing.Point(757, 619);
-            this.cmbMOP.Name = "cmbMOP";
-            this.cmbMOP.Size = new System.Drawing.Size(179, 21);
-            this.cmbMOP.TabIndex = 1036;
-            this.cmbMOP.SelectedIndexChanged += new System.EventHandler(this.cmbMOP_SelectedIndexChanged_1);
-            this.cmbMOP.SelectedValueChanged += new System.EventHandler(this.cmbMOP_SelectedValueChanged_1);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(757, 603);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
-            this.label8.TabIndex = 1035;
-            this.label8.Text = "Paying for:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(89, 436);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
-            this.label7.TabIndex = 1029;
-            this.label7.Text = "Strand:";
             // 
             // panel7
             // 
@@ -1407,314 +1874,6 @@
             this.btnEnroll.UseVisualStyleBackColor = false;
             this.btnEnroll.Click += new System.EventHandler(this.btnEnroll_Click);
             // 
-            // dgvOtherFee
-            // 
-            this.dgvOtherFee.AllowUserToAddRows = false;
-            this.dgvOtherFee.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgvOtherFee.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvOtherFee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOtherFee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.dgvOtherFee.GridColor = System.Drawing.Color.White;
-            this.dgvOtherFee.Location = new System.Drawing.Point(1602, 162);
-            this.dgvOtherFee.Name = "dgvOtherFee";
-            this.dgvOtherFee.ReadOnly = true;
-            this.dgvOtherFee.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvOtherFee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvOtherFee.Size = new System.Drawing.Size(291, 263);
-            this.dgvOtherFee.TabIndex = 1014;
-            this.dgvOtherFee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvOtherFee_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Fee Name";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle19.Format = "n";
-            dataGridViewCellStyle19.NullValue = "0.00";
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle19;
-            this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(89, 546);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 1025;
-            this.label3.Text = "Downpayment:";
-            // 
-            // lblDownpayment
-            // 
-            this.lblDownpayment.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDownpayment.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblDownpayment.Location = new System.Drawing.Point(242, 546);
-            this.lblDownpayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDownpayment.Name = "lblDownpayment";
-            this.lblDownpayment.Size = new System.Drawing.Size(89, 15);
-            this.lblDownpayment.TabIndex = 1024;
-            this.lblDownpayment.Text = "__________________";
-            this.lblDownpayment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label22.Location = new System.Drawing.Point(89, 672);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(179, 13);
-            this.label22.TabIndex = 1023;
-            this.label22.Text = "Total Tuition and Other School Fee:";
-            // 
-            // lblTotalFees
-            // 
-            this.lblTotalFees.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalFees.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTotalFees.Location = new System.Drawing.Point(242, 697);
-            this.lblTotalFees.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotalFees.Name = "lblTotalFees";
-            this.lblTotalFees.Size = new System.Drawing.Size(89, 15);
-            this.lblTotalFees.TabIndex = 1022;
-            this.lblTotalFees.Text = "__________________";
-            this.lblTotalFees.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblVoucher
-            // 
-            this.lblVoucher.AutoSize = true;
-            this.lblVoucher.BackColor = System.Drawing.Color.White;
-            this.lblVoucher.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVoucher.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblVoucher.Location = new System.Drawing.Point(239, 498);
-            this.lblVoucher.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblVoucher.Name = "lblVoucher";
-            this.lblVoucher.Size = new System.Drawing.Size(79, 13);
-            this.lblVoucher.TabIndex = 1021;
-            this.lblVoucher.Text = "Public Voucher";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label24.Location = new System.Drawing.Point(89, 498);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(76, 13);
-            this.label24.TabIndex = 1020;
-            this.label24.Text = "Voucher Type:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label25.Location = new System.Drawing.Point(89, 523);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(90, 13);
-            this.label25.TabIndex = 38;
-            this.label25.Text = "Voucher Amount:";
-            // 
-            // lblVoucherAmount
-            // 
-            this.lblVoucherAmount.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVoucherAmount.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblVoucherAmount.Location = new System.Drawing.Point(242, 523);
-            this.lblVoucherAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblVoucherAmount.Name = "lblVoucherAmount";
-            this.lblVoucherAmount.Size = new System.Drawing.Size(89, 15);
-            this.lblVoucherAmount.TabIndex = 37;
-            this.lblVoucherAmount.Text = "__________________";
-            this.lblVoucherAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label23.Location = new System.Drawing.Point(89, 646);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(122, 13);
-            this.label23.TabIndex = 36;
-            this.label23.Text = "Total Other School Fee:";
-            // 
-            // lblTotalOtherFee
-            // 
-            this.lblTotalOtherFee.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalOtherFee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTotalOtherFee.Location = new System.Drawing.Point(242, 643);
-            this.lblTotalOtherFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotalOtherFee.Name = "lblTotalOtherFee";
-            this.lblTotalOtherFee.Size = new System.Drawing.Size(89, 15);
-            this.lblTotalOtherFee.TabIndex = 35;
-            this.lblTotalOtherFee.Text = "__________________";
-            this.lblTotalOtherFee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label20.Location = new System.Drawing.Point(89, 618);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(127, 13);
-            this.label20.TabIndex = 34;
-            this.label20.Text = "Total Miscellaneous Fee:";
-            // 
-            // lblTotalMiscFee
-            // 
-            this.lblTotalMiscFee.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalMiscFee.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTotalMiscFee.Location = new System.Drawing.Point(242, 618);
-            this.lblTotalMiscFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotalMiscFee.Name = "lblTotalMiscFee";
-            this.lblTotalMiscFee.Size = new System.Drawing.Size(89, 15);
-            this.lblTotalMiscFee.TabIndex = 33;
-            this.lblTotalMiscFee.Text = "__________________";
-            this.lblTotalMiscFee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label21.Location = new System.Drawing.Point(89, 592);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(65, 13);
-            this.label21.TabIndex = 32;
-            this.label21.Text = "Tuition Fee:";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
-            // 
-            // lblTuition
-            // 
-            this.lblTuition.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTuition.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTuition.Location = new System.Drawing.Point(242, 592);
-            this.lblTuition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTuition.Name = "lblTuition";
-            this.lblTuition.Size = new System.Drawing.Size(89, 15);
-            this.lblTuition.TabIndex = 31;
-            this.lblTuition.Text = "__________________";
-            this.lblTuition.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // dgvSchedule
-            // 
-            this.dgvSchedule.AllowUserToAddRows = false;
-            this.dgvSchedule.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgvSchedule.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSchedule.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
-            this.dgvSchedule.Location = new System.Drawing.Point(44, 1192);
-            this.dgvSchedule.Name = "dgvSchedule";
-            this.dgvSchedule.ReadOnly = true;
-            this.dgvSchedule.RowHeadersVisible = false;
-            this.dgvSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSchedule.Size = new System.Drawing.Size(743, 262);
-            this.dgvSchedule.TabIndex = 39;
-            this.dgvSchedule.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Time Start";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Time End";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Monday";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Tuesday";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Wednesday";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Thursday";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Friday";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // dgvSubjectLoad
-            // 
-            this.dgvSubjectLoad.AllowUserToAddRows = false;
-            this.dgvSubjectLoad.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgvSubjectLoad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSubjectLoad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSubjectLoad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.dgvSubjectLoad.GridColor = System.Drawing.Color.White;
-            this.dgvSubjectLoad.Location = new System.Drawing.Point(1286, 158);
-            this.dgvSubjectLoad.Name = "dgvSubjectLoad";
-            this.dgvSubjectLoad.ReadOnly = true;
-            this.dgvSubjectLoad.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvSubjectLoad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSubjectLoad.Size = new System.Drawing.Size(292, 262);
-            this.dgvSubjectLoad.TabIndex = 1014;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Fee Name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle20.Format = "n";
-            dataGridViewCellStyle20.NullValue = "0.00";
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
@@ -1723,165 +1882,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1121, 10);
             this.panel2.TabIndex = 1012;
-            // 
-            // lblSubjSemester
-            // 
-            this.lblSubjSemester.AutoSize = true;
-            this.lblSubjSemester.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubjSemester.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubjSemester.ForeColor = System.Drawing.Color.Black;
-            this.lblSubjSemester.Location = new System.Drawing.Point(210, 161);
-            this.lblSubjSemester.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblSubjSemester.Name = "lblSubjSemester";
-            this.lblSubjSemester.Size = new System.Drawing.Size(42, 13);
-            this.lblSubjSemester.TabIndex = 1023;
-            this.lblSubjSemester.Text = "Second";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(1307, 57);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(18, 17);
-            this.label10.TabIndex = 1022;
-            this.label10.Text = "__";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(1338, 57);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(17, 17);
-            this.label12.TabIndex = 1020;
-            this.label12.Text = "X";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // label135
-            // 
-            this.label135.AutoSize = true;
-            this.label135.BackColor = System.Drawing.Color.Transparent;
-            this.label135.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label135.ForeColor = System.Drawing.Color.Black;
-            this.label135.Location = new System.Drawing.Point(52, 134);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(69, 13);
-            this.label135.TabIndex = 9;
-            this.label135.Text = "School Year: ";
-            // 
-            // panel11
-            // 
-            this.panel11.Location = new System.Drawing.Point(0, 1478);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1352, 10);
-            this.panel11.TabIndex = 1060;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
-            this.panel12.Controls.Add(this.label32);
-            this.panel12.Controls.Add(this.button1);
-            this.panel12.Location = new System.Drawing.Point(44, 181);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1009, 36);
-            this.panel12.TabIndex = 1061;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.Color.White;
-            this.label32.Location = new System.Drawing.Point(8, 10);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(115, 15);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Student Information";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(870, 645);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1062;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(874, 644);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1063;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label18.Location = new System.Drawing.Point(785, 655);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(78, 13);
-            this.label18.TabIndex = 1064;
-            this.label18.Text = "Downpayment";
-            this.label18.Visible = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label26.Location = new System.Drawing.Point(801, 655);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(65, 13);
-            this.label26.TabIndex = 1065;
-            this.label26.Text = "Reservation";
-            this.label26.Visible = false;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label34.Location = new System.Drawing.Point(754, 560);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(76, 16);
-            this.label34.TabIndex = 1066;
-            this.label34.Text = "Parameters";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Lato", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
-            this.label35.Location = new System.Drawing.Point(50, 59);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(200, 25);
-            this.label35.TabIndex = 1067;
-            this.label35.Text = "Assessment Module";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(53, 84);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(631, 15);
-            this.label36.TabIndex = 1068;
-            this.label36.Text = "Assessment Section of every enrollee. Here you can see the payment breakdown, Tui" +
-    "tion, Sectioning and payment plan";
             // 
             // frmAssesment
             // 
@@ -1901,6 +1901,20 @@
             this.Load += new System.EventHandler(this.frmAssesment_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.pnlRES.ResumeLayout(false);
+            this.pnlRES.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFeeHistory)).EndInit();
+            this.groupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFees)).EndInit();
+            this.groupBox11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectLoad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEnrolledList)).EndInit();
             this.groupBox14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
@@ -1910,11 +1924,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFeeHistory)).EndInit();
-            this.groupBox10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFees)).EndInit();
-            this.groupBox11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -1923,8 +1932,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerMonth)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.pnlRES.ResumeLayout(false);
-            this.pnlRES.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -1935,13 +1942,6 @@
             this.panel4.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubject)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSchedule)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectLoad)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
