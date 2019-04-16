@@ -819,6 +819,7 @@ namespace GOCSystem2018
             {
                 MessageBox.Show("No more slot, Please Check or add new Section, Enrolled Students are:" + students);//option to add or create new section+
                 toSave = false;
+                button4.Visible = true;
                 return;
             }            
         }
