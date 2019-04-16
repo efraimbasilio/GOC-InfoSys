@@ -252,6 +252,7 @@ namespace GOCSystem2018
             lblRegNo.Text = RegNo;
             lblStrand.Text = Strand;
             lblVoucher.Text = Voucher;
+            
 
             LoadEnrolledStudents();
 
@@ -763,6 +764,12 @@ namespace GOCSystem2018
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (dgvSchedule.Rows.Count < 1)
+            {
+                MessageBox.Show("No Schedule Assign Yet");
+                return;
+            }
+
             frmAssesment frm = new frmAssesment();
             frm.Hide();
 
@@ -1044,11 +1051,24 @@ namespace GOCSystem2018
                         studProfile.PartialPayment = "1";
                         studProfile.PartialOnly();
 
-
                         frmBillingSearch frmBillingSearch = new frmBillingSearch();
                         this.Hide();
                         this.Dispose();
-                        frmBillingSearch.Show();
+
+                        frmBillingSearch.ShowDialog();
+
+                      
+                        //main.dispanel.Controls.Clear();
+                        //frmBillingSearch frmbs = new frmBillingSearch();
+
+                        //frmbs.TopLevel = false;
+                        //frmbs.AutoScroll = true;
+
+                        //main.dispanel.Controls.Add(frmbs);
+                        //frmbs.Show();
+                        //main.Dashboardpanel.Visible = false;
+                        //main.dispanel.Visible = true;
+
                     }
                 }
 
@@ -1079,7 +1099,7 @@ namespace GOCSystem2018
                     frmPayment frmPayment = new frmPayment();
                     this.Hide();
                     this.Dispose();
-                    frmPayment.Show();
+                    frmPayment.ShowDialog();
 
 
                     //    }
@@ -1285,6 +1305,30 @@ namespace GOCSystem2018
             frmAssessmentSearch frmAssessmentSearch = new frmAssessmentSearch();
             frmAssessmentSearch.LoadRecords();
 
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            // this.Hide();
+            // this.Dispose();
+
+            //MainWindow main = new MainWindow();
+
+            //main.dispanel.Controls.Clear();
+            //frmBillingSearch frmbs = new frmBillingSearch();
+
+            //frmbs.TopLevel = false;
+            //frmbs.AutoScroll = true;
+            //main.dispanel.Controls.Add(frmbs);
+            //frmbs.Show();
+            //main.Dashboardpanel.Visible = false;
+            //main.dispanel.Visible = true;
+
+            frmBillingSearch frmBillingSearch = new frmBillingSearch();
+            this.Hide();
+            this.Dispose();
+
+            frmBillingSearch.ShowDialog();
         }
 
         private void button4_Click_4(object sender, EventArgs e)

@@ -159,6 +159,22 @@ namespace GOCSystem2018
         public string amountToPay, paymentFor, GOCNo, ctrpay,  DP, voucherInfo, reservationFee, paymentNo, toCheckGOCNo;
         public double  TotalMiscFee, TotalOtherFee, AmountGiven, BalancePartial , perMonthFee;
 
+        public string S_LRN, S_GOC, S_NAME,S_PAYFOR,S_AMOUNT;
+
+        private void txtAmountGiven_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void label12_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -354,6 +370,9 @@ namespace GOCSystem2018
 
         public void PartialSecondPay()
         {
+            
+
+
             if (enroll_status == null)
             {
                 return;
@@ -756,23 +775,25 @@ namespace GOCSystem2018
         {
             lblAmount_Due.Text = amount_due.ToString("n");
 
-            lblLRN.Text = frmBilling.lblLRN.Text;
-            lblGOCNo.Text = frmBilling.lblGOCNo.Text;
-            lblRegNo.Text = frmBilling.lblRegNo.Text;
-
-        
+            lblLRN.Text = S_LRN;
+            lblGOCNo.Text = GOCNo;
+            lblName.Text = full_name;
+            lblPAYFOR.Text = S_PAYFOR;
+            
     }
 
         //For billing
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtORNo.Text == "")
+            if (txtORNo.Text == "" || txtAmountGiven.Text == "")
             {
-                MessageBox.Show("Please Add OR Number");
+                MessageBox.Show("Please check the OR Number or the Payment");
                 return;
             }
             else
             {
+
+
               //  MessageBox.Show(enroll_status + " " + payment_status + " " + payment_no);
 
                 Reservations();

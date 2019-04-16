@@ -360,8 +360,8 @@ namespace GOCSystem2018
         private void button3_Click(object sender, EventArgs e)
         {
             LogMein();
-            this.Hide();
-            this.Dispose();
+            //this.Hide();
+            //this.Dispose();
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)

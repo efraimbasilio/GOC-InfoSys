@@ -457,8 +457,17 @@ namespace GOCSystem2018
             this.Hide();
             this.Dispose();
 
+            
+            MainWindow main = new MainWindow();
+            main.dispanel.Controls.Clear();
+
             frmBillingSearch frmBillingSearch = new frmBillingSearch();
-            frmBillingSearch.LoadRecords();
+            frmBillingSearch.TopLevel = false;
+            frmBillingSearch.AutoScroll = true;
+
+            main.dispanel.Controls.Add(frmBillingSearch);
+            main.Dashboardpanel.Visible = false;
+            
         }
 
         public void ComputeVoucher()
@@ -539,9 +548,12 @@ namespace GOCSystem2018
 
                 //STUDENT INFORMATION
                 pay.full_name = lblName.Text;
+                pay.S_LRN = lblLRN.Text;
                 pay.reg_no = lblRegNo.Text;
+                pay.GOCNo = lblGOCNo.Text;
+                pay.S_PAYFOR = lblMOPInfo.Text;
 
-               //if Reservation or Partial
+                //if Reservation or Partial
                 pay.payment_status = lblMOPInfo.Text;
 
                 //Call Method to load info before transaction
@@ -575,9 +587,57 @@ namespace GOCSystem2018
                 pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
                 pay.voucher_info = lblVoucher.Text;
                 pay.voucher_amount = Convert.ToDouble(lblVoucherAmount.Text);
+                
 
                 //STUDENT INFORMATION
                 pay.full_name = lblName.Text;
+                pay.S_LRN = lblLRN.Text;
+                pay.reg_no = lblRegNo.Text;
+                pay.GOCNo = lblGOCNo.Text;
+
+                pay.S_PAYFOR = lblAmountDues.Text;
+
+                //if Reservation or Partial
+                pay.payment_status = lblMOPInfo.Text;
+                pay.payment_no = Convert.ToInt32(lblPaymentNoCheck.Text);
+
+                //Call Method to load info before transaction
+                pay.EnrollmentStatus(); //to check the payment if this is the second payment, check by the Enrollment Status tag
+                pay.Render();
+                //to show the form
+                pay.ShowDialog();
+
+            }
+
+            else if (lblMOPInfo.Text == "FULL PAYMENT")
+            {
+
+                //PAYMENT INFOS                               
+                if (Convert.ToInt32(lblPaymentNoCheck.Text) == 0)
+                {
+                    pay.fee_for_reservation = Convert.ToDouble(lblReserve.Text);
+                }
+                else
+                {
+                    if (EnStatus.Equals("Reservee"))
+                    {
+                        pay.amount_due = Convert.ToDouble(lblAmountDues.Text);
+                    }
+                    else
+                    {
+                        pay.amount_due = Convert.ToDouble(lblPerMonthAdv.Text);
+                    }
+
+                }
+
+                pay.amount_per_month = lblPerMonthAdv.Text;
+                pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
+                pay.voucher_info = lblVoucher.Text;
+                pay.voucher_amount = Convert.ToDouble(lblVoucherAmount.Text);
+
+                //STUDENT INFORMATION
+                pay.full_name = lblName.Text;
+                pay.S_LRN = lblLRN.Text;
                 pay.reg_no = lblRegNo.Text;
                 pay.GOCNo = lblGOCNo.Text;
                 //if Reservation or Partial

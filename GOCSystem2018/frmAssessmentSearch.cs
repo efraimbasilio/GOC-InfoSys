@@ -283,7 +283,8 @@ namespace GOCSystem2018
                     frmAssesment.Voucher = item.VoucherType;
                     frmAssesment.GOCNo = item.StudGOCNo;
                     frmAssesment.partialPay = item.PartialPayment;
-                    frmAssesment.theSection = item.Section;                    
+                    frmAssesment.theSection = item.Section;
+                                        
                 }
 
                 //set up before form load
@@ -301,11 +302,11 @@ namespace GOCSystem2018
 
                 frmAssesment.LoadSubject();
                 frmAssesment.EnableMOP();
-              
+
                 //show assesment                             
-              
-                
-               
+
+                this.Hide();
+                this.Dispose();
                 frmAssesment.ShowDialog();
             }
         }

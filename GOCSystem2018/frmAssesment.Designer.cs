@@ -49,6 +49,7 @@
             this.lblSY = new System.Windows.Forms.Label();
             this.lblSem = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -181,7 +182,6 @@
             this.btnEnroll = new System.Windows.Forms.Button();
             this.label34 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label37 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -226,7 +226,6 @@
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Section:";
-            this.label6.Visible = false;
             // 
             // cmbSection
             // 
@@ -237,7 +236,6 @@
             this.cmbSection.Name = "cmbSection";
             this.cmbSection.Size = new System.Drawing.Size(133, 21);
             this.cmbSection.TabIndex = 5;
-            this.cmbSection.Visible = false;
             this.cmbSection.SelectedIndexChanged += new System.EventHandler(this.cmbSection_SelectedIndexChanged);
             this.cmbSection.SelectedValueChanged += new System.EventHandler(this.cmbSection_SelectedValueChanged);
             // 
@@ -459,6 +457,18 @@
             this.panel1.Size = new System.Drawing.Size(1121, 730);
             this.panel1.TabIndex = 43;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Black;
+            this.label37.Location = new System.Drawing.Point(1081, 11);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(16, 16);
+            this.label37.TabIndex = 1069;
+            this.label37.Text = "X";
+            this.label37.Click += new System.EventHandler(this.label37_Click);
             // 
             // label36
             // 
@@ -1887,18 +1897,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1121, 10);
             this.panel2.TabIndex = 1012;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Black;
-            this.label37.Location = new System.Drawing.Point(1081, 11);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(16, 16);
-            this.label37.TabIndex = 1069;
-            this.label37.Text = "X";
-            this.label37.Click += new System.EventHandler(this.label37_Click);
             // 
             // frmAssesment
             // 

@@ -1164,7 +1164,6 @@
         #endregion
 
         private System.Windows.Forms.Panel SidebarPanel;
-        private System.Windows.Forms.Panel Dashboardpanel;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label label9;
@@ -1214,7 +1213,6 @@
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label sectiontxt;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Panel dispanel;
         private System.Windows.Forms.Label lblSY;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label13;
@@ -1242,5 +1240,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox5;
+        public System.Windows.Forms.Panel Dashboardpanel;
+        public System.Windows.Forms.Panel dispanel;
     }
 }
