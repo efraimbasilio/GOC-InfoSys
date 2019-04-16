@@ -107,6 +107,12 @@
     <Compile Include="frmRegistration.designer.cs">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSched.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSched.designer.cs">
+      <DependentUpon>frmSched.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStudlist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,12 +206,6 @@
     </Compile>
     <Compile Include="frmRoom.Designer.cs">
       <DependentUpon>frmRoom.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSched.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSched.Designer.cs">
-      <DependentUpon>frmSched.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSchoolYear.cs">
       <SubType>Form</SubType>
