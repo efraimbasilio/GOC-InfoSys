@@ -133,6 +133,7 @@
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSearch.Size = new System.Drawing.Size(1012, 443);
             this.dgvSearch.TabIndex = 1042;
+            this.dgvSearch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSearch_CellContentClick);
             this.dgvSearch.DoubleClick += new System.EventHandler(this.dgvSearch_DoubleClick_2);
             // 
             // frmAssessmentSearch

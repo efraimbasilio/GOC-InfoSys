@@ -135,14 +135,14 @@ namespace GOCSystem2018
 
 
                 //set up before form load
-                this.Hide();
+                
                 frmBilling.Render();
                 frmBilling.ShowDialog();
                 //this.Dispose();
             }
         }
 
-        private void LoadRecords()
+        public void LoadRecords()
         {
             try
             {
@@ -183,6 +183,64 @@ namespace GOCSystem2018
         private void frmBillingSearch_Load(object sender, EventArgs e)
         {
             LoadRecords();
+            #region header name fix
+
+            dgvSearch.Columns["LRN"].HeaderText = "LRN";
+            dgvSearch.Columns["regNo"].HeaderText = "REG No";
+            dgvSearch.Columns["IDNo"].HeaderText = "GOC No";
+            dgvSearch.Columns["last_name"].HeaderText = "Last Name";
+            dgvSearch.Columns["first_name"].HeaderText = "First Name";
+            dgvSearch.Columns["middle_name"].HeaderText = "Middle Name";
+            dgvSearch.Columns["grade_Level"].HeaderText = "Grade Level";
+            dgvSearch.Columns["section"].HeaderText = "Section";
+            dgvSearch.Columns["track"].HeaderText = "Track";
+            dgvSearch.Columns["strand"].HeaderText = "Strand";
+            dgvSearch.Columns["date_enrolled"].HeaderText = "Date Enrolled";
+            dgvSearch.Columns["sy_enrolled"].HeaderText = "SY";
+            #endregion
+
+            #region removal of unneccessary header
+            this.dgvSearch.Columns["id"].Visible = false;
+            // this.dgvSearch.Columns["IDNo"].Visible = false;
+            // this.dgvSearch.Columns["regNo"].Visible = false;
+            this.dgvSearch.Columns["Reservee"].Visible = false;
+            this.dgvSearch.Columns["Reserve_for"].Visible = false;
+            this.dgvSearch.Columns["Full_payment"].Visible = false;
+            this.dgvSearch.Columns["Partial_payment"].Visible = false;
+            this.dgvSearch.Columns["photo_loc"].Visible = false;
+            this.dgvSearch.Columns["voucher_type"].Visible = false;
+            this.dgvSearch.Columns["address"].Visible = false;
+            this.dgvSearch.Columns["date_of_birth"].Visible = false;
+            this.dgvSearch.Columns["place_of_birth"].Visible = false;
+            this.dgvSearch.Columns["religion"].Visible = false;
+            this.dgvSearch.Columns["nationality"].Visible = false;
+            this.dgvSearch.Columns["gender"].Visible = false;
+            this.dgvSearch.Columns["stud_contactNo"].Visible = false;
+            this.dgvSearch.Columns["stud_telNo"].Visible = false;
+            this.dgvSearch.Columns["prev_school"].Visible = false;
+            this.dgvSearch.Columns["prev_school_address"].Visible = false;
+            this.dgvSearch.Columns["father_name"].Visible = false;
+            this.dgvSearch.Columns["father_work"].Visible = false;
+            this.dgvSearch.Columns["mother_name"].Visible = false;
+            this.dgvSearch.Columns["mother_work"].Visible = false;
+            this.dgvSearch.Columns["guardian_name"].Visible = false;
+            this.dgvSearch.Columns["guardian_work"].Visible = false;
+            this.dgvSearch.Columns["guardian_address"].Visible = false;
+            this.dgvSearch.Columns["guardian_relationship"].Visible = false;
+            this.dgvSearch.Columns["guardian_contactNo"].Visible = false;
+            this.dgvSearch.Columns["guardian_telNo"].Visible = false;
+            this.dgvSearch.Columns["bc"].Visible = false;
+            this.dgvSearch.Columns["form138"].Visible = false;
+            this.dgvSearch.Columns["drugtest"].Visible = false;
+            this.dgvSearch.Columns["good_moral"].Visible = false;
+            this.dgvSearch.Columns["en_exam"].Visible = false;
+            this.dgvSearch.Columns["ncae"].Visible = false;
+            this.dgvSearch.Columns["date_enrolled"].Visible = false;
+            // this.dgvSearch.Columns["sy_enrolled"].Visible = false;
+            this.dgvSearch.Columns["1"].Visible = false;
+            this.dgvSearch.Columns["2"].Visible = false;
+            #endregion
+
             #region designing DVG
 
             dgvSearch.BorderStyle = BorderStyle.None;
@@ -231,6 +289,11 @@ namespace GOCSystem2018
         private void dgvSearch_DoubleClick(object sender, EventArgs e)
         {
 SelectData();
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

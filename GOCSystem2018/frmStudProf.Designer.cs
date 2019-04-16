@@ -219,6 +219,9 @@
             this.label80 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.lblGOCNo = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.gcontactnotxt = new System.Windows.Forms.Label();
             this.guardiantxt = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
@@ -258,9 +261,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.lblGOCNo = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.panel18.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -2373,6 +2373,38 @@
             this.panel6.Size = new System.Drawing.Size(936, 387);
             this.panel6.TabIndex = 0;
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(603, 55);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 38;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // lblGOCNo
+            // 
+            this.lblGOCNo.AutoSize = true;
+            this.lblGOCNo.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGOCNo.ForeColor = System.Drawing.Color.DimGray;
+            this.lblGOCNo.Location = new System.Drawing.Point(469, 130);
+            this.lblGOCNo.Name = "lblGOCNo";
+            this.lblGOCNo.Size = new System.Drawing.Size(58, 15);
+            this.lblGOCNo.TabIndex = 37;
+            this.lblGOCNo.Text = "Data here";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DimGray;
+            this.label11.Location = new System.Drawing.Point(399, 130);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 15);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Student No:";
+            // 
             // gcontactnotxt
             // 
             this.gcontactnotxt.AutoSize = true;
@@ -2812,38 +2844,6 @@
             this.pictureBox8.TabIndex = 1017;
             this.pictureBox8.TabStop = false;
             // 
-            // lblGOCNo
-            // 
-            this.lblGOCNo.AutoSize = true;
-            this.lblGOCNo.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGOCNo.ForeColor = System.Drawing.Color.DimGray;
-            this.lblGOCNo.Location = new System.Drawing.Point(469, 130);
-            this.lblGOCNo.Name = "lblGOCNo";
-            this.lblGOCNo.Size = new System.Drawing.Size(58, 15);
-            this.lblGOCNo.TabIndex = 37;
-            this.lblGOCNo.Text = "Data here";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(399, 130);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 15);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Student No:";
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(603, 55);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 38;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // frmStudProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2853,7 +2853,9 @@
             this.Controls.Add(this.studprofpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmStudProf";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmStudProf";
+            this.Load += new System.EventHandler(this.frmStudProf_Load);
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             this.panel3.ResumeLayout(false);
