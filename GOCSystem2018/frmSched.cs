@@ -176,8 +176,10 @@ namespace GOCSystem2018
                                "02:00",
                                "03:00",
                                "04:00", };
-            
-                              
+
+            String[] subsub2 = new String[10];
+
+
             for (int i = 0; i < 18; i++)
             {
                 Panel span = addSpan(i, startposition, endposition, sched[i]);
@@ -188,14 +190,22 @@ namespace GOCSystem2018
                 Panel span2 = addSpan2(i, startposition, endposition, sched[i]);
                 this.Controls.Add(span2);
 
+                span2.DoubleClick += new System.EventHandler(this.PanelDoubleClick);
+
                 Panel span3 = addSpan3(i, startposition, endposition, sched[i]);
                 this.Controls.Add(span3);
+
+                span3.DoubleClick += new System.EventHandler(this.PanelDoubleClick);
 
                 Panel span4 = addSpan4(i, startposition, endposition, sched[i]);
                 this.Controls.Add(span4);
 
+                span4.DoubleClick += new System.EventHandler(this.PanelDoubleClick);
+
                 Panel span5 = addSpan5(i, startposition, endposition, sched[i]);
                 this.Controls.Add(span5);
+
+                span5.DoubleClick += new System.EventHandler(this.PanelDoubleClick);
 
                 endposition += 32;
             }
@@ -211,11 +221,21 @@ namespace GOCSystem2018
                 endposition2 += 64;
             }
 
+            
             for (int i = 0; i < Secforschedcmb.Items.Count; i++)
             {
+                
+                subsub2[i] = Secforschedcmb.Items[i].ToString(); 
+            }
+
+
+            for (int i = 0; i < Secforschedcmb.Items.Count; i++)
+            {
+
                 RadioButton subrad = addSubRad(i, startposition2, endposition3, Secforschedcmb.Items[i].ToString());
                 subrad.Click += new System.EventHandler(this.RadiobutClicked);
                 this.panel1.Controls.Add(subrad);
+                subsub2[i] = subrad.Text;
 
                 Panel legendpanel = addlegendpan(i, startposition2, endposition3);
                 this.panel1.Controls.Add(legendpanel);
@@ -227,21 +247,37 @@ namespace GOCSystem2018
         void PanelDoubleClick(Object sender, EventArgs e)
         {
             Panel eveforPan = (Panel)sender;
-            if (Secforschedcmb.Text.Equals("English"))
+            if (textBox1.Text.Equals(Secforschedcmb.Items[0].ToString()))
             {
-                eveforPan.BackColor = Color.Black;
+                eveforPan.BackColor = Color.Blue;
             }
-            else if (Secforschedcmb.Text.Equals("Math"))
+            else if (textBox1.Text.Equals(Secforschedcmb.Items[1].ToString()))
             {
                 eveforPan.BackColor = Color.Red;
             }
-            else if (Secforschedcmb.Text.Equals("Science"))
+            else if (textBox1.Text.Equals(Secforschedcmb.Items[2].ToString()))
+            {
+                eveforPan.BackColor = Color.Green;
+            }
+            else if (textBox1.Text.Equals(Secforschedcmb.Items[3].ToString()))
             {
                 eveforPan.BackColor = Color.Yellow;
             }
-            else if (Secforschedcmb.Text.Equals("Filipino"))
+            else if (textBox1.Text.Equals(Secforschedcmb.Items[4].ToString()))
+            {
+                eveforPan.BackColor = Color.Orange;
+            }
+            else if (textBox1.Text.Equals(Secforschedcmb.Items[5].ToString()))
+            {
+                eveforPan.BackColor = Color.Purple;
+            }
+            else if (textBox1.Text.Equals(Secforschedcmb.Items[6].ToString()))
             {
                 eveforPan.BackColor = Color.Turquoise;
+            }
+            else if (textBox1.Text.Equals(Secforschedcmb.Items[7].ToString()))
+            {
+                eveforPan.BackColor = Color.Black;
             }
         }
 #endregion
@@ -258,6 +294,7 @@ namespace GOCSystem2018
             return subrad;
         }
         #endregion
+
         Panel addlegendpan(int i, int start, int end)
         {
             Panel legendpan = new Panel();
@@ -329,7 +366,7 @@ namespace GOCSystem2018
         Panel addSpan2(int i, int start, int end, string sched)
         {
             Panel stud = new Panel();
-            stud.Name = sched;
+            stud.Name = sched + "t";
             stud.Text = "Panel" + i;
             stud.BackColor = Color.Transparent;
             stud.Font = new Font("Century Gothic", 8);
@@ -345,7 +382,7 @@ namespace GOCSystem2018
         Panel addSpan3(int i, int start, int end, string sched)
         {
             Panel stud = new Panel();
-            stud.Name = sched;
+            stud.Name = sched + "w";
             stud.Text = "Panel" + i;
             stud.BackColor = Color.Transparent;
             stud.Font = new Font("Century Gothic", 8);
@@ -360,7 +397,7 @@ namespace GOCSystem2018
         Panel addSpan4(int i, int start, int end, string sched)
         {
             Panel stud = new Panel();
-            stud.Name = sched;
+            stud.Name = sched + "th";
             stud.Text = "Panel" + i;
             stud.BackColor = Color.Transparent;
             stud.Font = new Font("Century Gothic", 8);
@@ -375,7 +412,7 @@ namespace GOCSystem2018
         Panel addSpan5(int i, int start, int end, string sched)
         {
             Panel stud = new Panel();
-            stud.Name = "fri" + sched;
+            stud.Name = sched + "f";
             stud.Text = "Panel" + i;
             stud.BackColor = Color.Transparent;
             stud.Font = new Font("Century Gothic", 8);
@@ -415,5 +452,635 @@ namespace GOCSystem2018
         }
         #endregion
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            normalizationMon();
+            normalizationTues();
+            normalizationWed();
+            normalizationThurs();
+            normalizationFri();
+        }
+
+        public void normalizationMon()
+        {
+        #region Adding listbox
+                    listBox1.Items.Clear();
+                    listBox3.Items.Clear();
+
+                    String[] sched = { "08:00-08:30",
+                                       "08:30-09:00",
+                                       "09:00-09:30",
+                                       "09:30-010:00",
+                                       "10:00-10:30",
+                                       "10:30-11:00",
+                                       "11:00-11:30",
+                                       "11:30-12:00",
+                                       "12:00-12:30",
+                                       "12:30-01:00",
+                                       "01:00-01:30",
+                                       "01:30-02:00",
+                                       "02:00-02:30",
+                                       "02:30-03:00",
+                                       "03:00-03:30",
+                                       "03:30-04:00",
+                                       "04:00-04:30",
+                                       "04:30-05:00"};
+                    for (int j = 0; j <= 17; j++)
+                    {
+
+                        if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Blue)
+                        {
+
+                            listBox1.Items.Add(Secforschedcmb.Items[0] + "/ " + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                        }
+                        else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Red)
+                        {
+                            listBox1.Items.Add(Secforschedcmb.Items[1] + "/ " + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                        }
+                        else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Green)
+                        {
+                            listBox1.Items.Add(Secforschedcmb.Items[2] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                        }
+                        else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Yellow)
+                        {
+                            listBox1.Items.Add(Secforschedcmb.Items[3] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                        }
+                        else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Orange)
+                        {
+                            listBox1.Items.Add(Secforschedcmb.Items[4] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                        }
+                        else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Purple)
+                        {
+                            listBox1.Items.Add(Secforschedcmb.Items[5] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                        }
+                        else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Turquoise)
+                        {
+                            listBox1.Items.Add(Secforschedcmb.Items[6] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                        }
+                        else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Black)
+                        {
+                            listBox1.Items.Add(Secforschedcmb.Items[7] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                        }
+               
+                    }
+                    listBox1.Items.Add("Last Entry");
+
+                    #region normalize
+                    int curind = 0;
+                    String cursub = listBox1.Items[curind].ToString();
+
+                    for (int k = 0; k < listBox1.Items.Count; k++)
+                    {
+                        String curval = listBox1.Items[curind].ToString();
+                        for (int l = 0; l < curval.Length; l++)
+                        {
+                            if (curval[l].ToString().Equals("/"))
+                            {
+                                curval = curval.Substring(0, l + 1);
+                            }
+                        }
+
+                        String curval2 = listBox1.Items[k].ToString();
+                        for (int d = 0; d < curval2.Length; d++)
+                        {
+                            if (curval2[d].ToString().Equals("/"))
+                            {
+                                curval2 = curval2.Substring(0, d + 1);
+                            }
+                        }
+
+                        if (curval.Equals(curval2))
+                        {
+
+                            String curval3 = listBox1.Items[curind].ToString();
+                            String subjectsubs3;
+                            for (int l = 0; l < curval3.Length; l++)
+                            {
+                                if (curval3[l].ToString().Equals("-"))
+                                {
+
+                                    subjectsubs3 = curval3.Substring(0, l + 1);
+                                    cursub = subjectsubs3;
+                                }
+                            }
+                            String curval4 = listBox1.Items[k].ToString();
+                            String subjectsubs4;
+                            for (int l = 0; l < curval4.Length; l++)
+                            {
+                                if (curval4[l].ToString().Equals("-"))
+                                {
+                                    subjectsubs4 = curval4.Substring(l + 1);
+                                    cursub = cursub + subjectsubs4;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            listBox3.Items.Add(cursub);
+                            curind = k;
+                        }
+
+                    }
+                    #endregion
+        #endregion
+        }
+        public void normalizationTues()
+        {
+        #region Adding listbox
+            listBox1.Items.Clear();
+            lbTues.Items.Clear();
+
+            String[] schedt= { "08:00-08:30t",
+                                       "08:30-09:00t",
+                                       "09:00-09:30t",
+                                       "09:30-010:00t",
+                                       "10:00-10:30t",
+                                       "10:30-11:00t",
+                                       "11:00-11:30t",
+                                       "11:30-12:00t",
+                                       "12:00-12:30t",
+                                       "12:30-01:00t",
+                                       "01:00-01:30t",
+                                       "01:30-02:00t",
+                                       "02:00-02:30t",
+                                       "02:30-03:00t",
+                                       "03:00-03:30t",
+                                       "03:30-04:00t",
+                                       "04:00-04:30t",
+                                       "04:30-05:00t"};
+            for (int j2 = 0; j2 <= 17; j2++)
+            {
+
+                if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Blue)
+                {
+
+                    listBox1.Items.Add(Secforschedcmb.Items[0] + "/ " + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Red)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[1] + "/ " + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Green)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[2] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Yellow)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[3] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Orange)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[4] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Purple)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[5] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Turquoise)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[6] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Black)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[7] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+
+            }
+            listBox1.Items.Add("Last Entry");
+
+            #region normalize
+            int curind = 0;
+            String cursub = listBox1.Items[curind].ToString();
+
+            for (int k = 0; k < listBox1.Items.Count; k++)
+            {
+                String curval = listBox1.Items[curind].ToString();
+                for (int l = 0; l < curval.Length; l++)
+                {
+                    if (curval[l].ToString().Equals("/"))
+                    {
+                        curval = curval.Substring(0, l + 1);
+                    }
+                }
+
+                String curval2 = listBox1.Items[k].ToString();
+                for (int d = 0; d < curval2.Length; d++)
+                {
+                    if (curval2[d].ToString().Equals("/"))
+                    {
+                        curval2 = curval2.Substring(0, d + 1);
+                    }
+                }
+
+                if (curval.Equals(curval2))
+                {
+
+                    String curval3 = listBox1.Items[curind].ToString();
+                    String subjectsubs3;
+                    for (int l = 0; l < curval3.Length; l++)
+                    {
+                        if (curval3[l].ToString().Equals("-"))
+                        {
+
+                            subjectsubs3 = curval3.Substring(0, l + 1);
+                            cursub = subjectsubs3;
+                        }
+                    }
+                    String curval4 = listBox1.Items[k].ToString();
+                    String subjectsubs4;
+                    for (int l = 0; l < curval4.Length; l++)
+                    {
+                        if (curval4[l].ToString().Equals("-"))
+                        {
+                            subjectsubs4 = curval4.Substring(l + 1);
+                            cursub = cursub + subjectsubs4;
+                        }
+                    }
+                }
+                else
+                {
+                    lbTues.Items.Add(cursub);
+                    curind = k;
+                }
+
+            }
+            #endregion
+            #endregion
+        }
+        public void normalizationWed()
+        {
+            #region Adding listbox
+            listBox1.Items.Clear();
+            lbWed.Items.Clear();
+
+            String[] schedt = { "08:00-08:30w",
+                                       "08:30-09:00w",
+                                       "09:00-09:30w",
+                                       "09:30-010:00w",
+                                       "10:00-10:30w",
+                                       "10:30-11:00w",
+                                       "11:00-11:30w",
+                                       "11:30-12:00w",
+                                       "12:00-12:30w",
+                                       "12:30-01:00w",
+                                       "01:00-01:30w",
+                                       "01:30-02:00w",
+                                       "02:00-02:30w",
+                                       "02:30-03:00w",
+                                       "03:00-03:30w",
+                                       "03:30-04:00w",
+                                       "04:00-04:30w",
+                                       "04:30-05:00w"};
+            for (int j2 = 0; j2 <= 17; j2++)
+            {
+
+                if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Blue)
+                {
+
+                    listBox1.Items.Add(Secforschedcmb.Items[0] + "/ " + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Red)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[1] + "/ " + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Green)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[2] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Yellow)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[3] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Orange)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[4] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Purple)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[5] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Turquoise)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[6] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(schedt[j2], true)[0]).BackColor == Color.Black)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[7] + "/" + ((Panel)this.Controls.Find(schedt[j2], true)[0]).Name);
+                }
+
+            }
+            listBox1.Items.Add("Last Entry");
+
+            #region normalize
+            int curind = 0;
+            String cursub = listBox1.Items[curind].ToString();
+
+            for (int k = 0; k < listBox1.Items.Count; k++)
+            {
+                String curval = listBox1.Items[curind].ToString();
+                for (int l = 0; l < curval.Length; l++)
+                {
+                    if (curval[l].ToString().Equals("/"))
+                    {
+                        curval = curval.Substring(0, l + 1);
+                    }
+                }
+
+                String curval2 = listBox1.Items[k].ToString();
+                for (int d = 0; d < curval2.Length; d++)
+                {
+                    if (curval2[d].ToString().Equals("/"))
+                    {
+                        curval2 = curval2.Substring(0, d + 1);
+                    }
+                }
+
+                if (curval.Equals(curval2))
+                {
+
+                    String curval3 = listBox1.Items[curind].ToString();
+                    String subjectsubs3;
+                    for (int l = 0; l < curval3.Length; l++)
+                    {
+                        if (curval3[l].ToString().Equals("-"))
+                        {
+
+                            subjectsubs3 = curval3.Substring(0, l + 1);
+                            cursub = subjectsubs3;
+                        }
+                    }
+                    String curval4 = listBox1.Items[k].ToString();
+                    String subjectsubs4;
+                    for (int l = 0; l < curval4.Length; l++)
+                    {
+                        if (curval4[l].ToString().Equals("-"))
+                        {
+                            subjectsubs4 = curval4.Substring(l + 1);
+                            cursub = cursub + subjectsubs4;
+                        }
+                    }
+                }
+                else
+                {
+                    lbWed.Items.Add(cursub);
+                    curind = k;
+                }
+
+            }
+            #endregion
+            #endregion
+        }
+        public void normalizationThurs()
+        {
+            #region Adding listbox
+            listBox1.Items.Clear();
+            lbThurs.Items.Clear();
+
+            String[] sched = { "08:00-08:30th",
+                                       "08:30-09:00th",
+                                       "09:00-09:30th",
+                                       "09:30-010:00th",
+                                       "10:00-10:30th",
+                                       "10:30-11:00th",
+                                       "11:00-11:30th",
+                                       "11:30-12:00th",
+                                       "12:00-12:30th",
+                                       "12:30-01:00th",
+                                       "01:00-01:30th",
+                                       "01:30-02:00th",
+                                       "02:00-02:30th",
+                                       "02:30-03:00th",
+                                       "03:00-03:30th",
+                                       "03:30-04:00th",
+                                       "04:00-04:30th",
+                                       "04:30-05:00th"};
+            for (int j = 0; j <= 17; j++)
+            {
+
+                if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Blue)
+                {
+
+                    listBox1.Items.Add(Secforschedcmb.Items[0] + "/ " + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Red)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[1] + "/ " + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Green)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[2] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Yellow)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[3] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Orange)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[4] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Purple)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[5] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Turquoise)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[6] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Black)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[7] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+
+            }
+            listBox1.Items.Add("Last Entry");
+
+            #region normalize
+            int curind = 0;
+            String cursub = listBox1.Items[curind].ToString();
+
+            for (int k = 0; k < listBox1.Items.Count; k++)
+            {
+                String curval = listBox1.Items[curind].ToString();
+                for (int l = 0; l < curval.Length; l++)
+                {
+                    if (curval[l].ToString().Equals("/"))
+                    {
+                        curval = curval.Substring(0, l + 1);
+                    }
+                }
+
+                String curval2 = listBox1.Items[k].ToString();
+                for (int d = 0; d < curval2.Length; d++)
+                {
+                    if (curval2[d].ToString().Equals("/"))
+                    {
+                        curval2 = curval2.Substring(0, d + 1);
+                    }
+                }
+
+                if (curval.Equals(curval2))
+                {
+
+                    String curval3 = listBox1.Items[curind].ToString();
+                    String subjectsubs3;
+                    for (int l = 0; l < curval3.Length; l++)
+                    {
+                        if (curval3[l].ToString().Equals("-"))
+                        {
+
+                            subjectsubs3 = curval3.Substring(0, l + 1);
+                            cursub = subjectsubs3;
+                        }
+                    }
+                    String curval4 = listBox1.Items[k].ToString();
+                    String subjectsubs4;
+                    for (int l = 0; l < curval4.Length; l++)
+                    {
+                        if (curval4[l].ToString().Equals("-"))
+                        {
+                            subjectsubs4 = curval4.Substring(l + 1);
+                            cursub = cursub + subjectsubs4;
+                        }
+                    }
+                }
+                else
+                {
+                    lbThurs.Items.Add(cursub);
+                    curind = k;
+                }
+
+            }
+            #endregion
+            #endregion
+        }
+        public void normalizationFri()
+        {
+            #region Adding listbox
+            listBox1.Items.Clear();
+            lbFri.Items.Clear();
+
+            String[] sched = { "08:00-08:30f",
+                                       "08:30-09:00f",
+                                       "09:00-09:30f",
+                                       "09:30-010:00f",
+                                       "10:00-10:30f",
+                                       "10:30-11:00f",
+                                       "11:00-11:30f",
+                                       "11:30-12:00f",
+                                       "12:00-12:30f",
+                                       "12:30-01:00f",
+                                       "01:00-01:30f",
+                                       "01:30-02:00f",
+                                       "02:00-02:30f",
+                                       "02:30-03:00f",
+                                       "03:00-03:30f",
+                                       "03:30-04:00f",
+                                       "04:00-04:30f",
+                                       "04:30-05:00f"};
+            for (int j = 0; j <= 17; j++)
+            {
+
+                if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Blue)
+                {
+
+                    listBox1.Items.Add(Secforschedcmb.Items[0] + "/ " + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Red)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[1] + "/ " + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Green)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[2] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Yellow)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[3] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Orange)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[4] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Purple)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[5] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Turquoise)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[6] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+                else if (((Panel)this.Controls.Find(sched[j], true)[0]).BackColor == Color.Black)
+                {
+                    listBox1.Items.Add(Secforschedcmb.Items[7] + "/" + ((Panel)this.Controls.Find(sched[j], true)[0]).Name);
+                }
+
+            }
+            listBox1.Items.Add("Last Entry");
+
+            #region normalize
+            int curind = 0;
+            String cursub = listBox1.Items[curind].ToString();
+
+            for (int k = 0; k < listBox1.Items.Count; k++)
+            {
+                String curval = listBox1.Items[curind].ToString();
+                for (int l = 0; l < curval.Length; l++)
+                {
+                    if (curval[l].ToString().Equals("/"))
+                    {
+                        curval = curval.Substring(0, l + 1);
+                    }
+                }
+
+                String curval2 = listBox1.Items[k].ToString();
+                for (int d = 0; d < curval2.Length; d++)
+                {
+                    if (curval2[d].ToString().Equals("/"))
+                    {
+                        curval2 = curval2.Substring(0, d + 1);
+                    }
+                }
+
+                if (curval.Equals(curval2))
+                {
+
+                    String curval3 = listBox1.Items[curind].ToString();
+                    String subjectsubs3;
+                    for (int l = 0; l < curval3.Length; l++)
+                    {
+                        if (curval3[l].ToString().Equals("-"))
+                        {
+
+                            subjectsubs3 = curval3.Substring(0, l + 1);
+                            cursub = subjectsubs3;
+                        }
+                    }
+                    String curval4 = listBox1.Items[k].ToString();
+                    String subjectsubs4;
+                    for (int l = 0; l < curval4.Length; l++)
+                    {
+                        if (curval4[l].ToString().Equals("-"))
+                        {
+                            subjectsubs4 = curval4.Substring(l + 1);
+                            cursub = cursub + subjectsubs4;
+                        }
+                    }
+                }
+                else
+                {
+                    lbFri.Items.Add(cursub);
+                    curind = k;
+                }
+
+            }
+            #endregion
+            #endregion
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            label10.Text = textBox1.Text;
+        }
     }
 }
