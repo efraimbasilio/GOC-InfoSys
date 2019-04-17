@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Drawing2D;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -120,6 +121,62 @@ namespace GOCSystem2018
 
         public string Student_Name,GOC_No, LRN, REG_No, Strand, Glvl, Section, DOB, Add, Gender, ConNo, Nat, Rel, BirthPlace, Fname, Focc, Mname, Mocc, Gname, Gocc;
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmRegistration reg = new frmRegistration();
+            this.Hide();
+            this.Dispose();
+
+            reg.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PerInfoPanel.Visible = false;
+            Accpanel.Visible = false;
+            acadPanel.Visible = true;
+
+            button2.BackColor = Color.FromArgb(242, 242, 244);
+            button2.ForeColor = Color.DarkGray;
+
+            button3.BackColor = Color.FromArgb(242, 242, 244);
+            button3.ForeColor = Color.DarkGray;
+
+            button1.BackColor = Color.FromArgb(1, 172, 120);
+            button1.ForeColor = Color.White;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PerInfoPanel.Visible = false;
+            Accpanel.Visible = true;
+            acadPanel.Visible = false;
+
+            button3.BackColor = Color.FromArgb(242, 242, 244);
+            button3.ForeColor = Color.DarkGray;
+
+            button1.BackColor = Color.FromArgb(242, 242, 244);
+            button1.ForeColor = Color.DarkGray;
+
+            button2.BackColor = Color.FromArgb(1, 172, 120);
+            button2.ForeColor = Color.White;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PerInfoPanel.Visible = true;
+            Accpanel.Visible = false;
+            acadPanel.Visible = false;
+
+            button2.BackColor = Color.FromArgb(242, 242, 244);
+            button2.ForeColor = Color.DarkGray;
+
+            button1.BackColor = Color.FromArgb(242, 242, 244);
+            button1.ForeColor = Color.DarkGray;
+
+            button3.BackColor = Color.FromArgb(1, 172, 120);
+            button3.ForeColor = Color.White;
+        }
         public frmStudProf()
         {
             InitializeComponent();
@@ -258,16 +315,6 @@ namespace GOCSystem2018
             guardiantxt.Text = Gname;
 
             LoadPaymentHistory();
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            frmRegistration reg = new frmRegistration();
-            this.Hide();
-            this.Dispose();
-
-            reg.ShowDialog();
-
         }
 
 

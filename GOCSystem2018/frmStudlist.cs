@@ -117,6 +117,8 @@ namespace GOCSystem2018
 
         frmStudProf studProf = new frmStudProf();
 
+        MainWindow mainwin = new MainWindow();
+
         //Private Method//
         private void LoadRecords()
         {
@@ -216,7 +218,14 @@ namespace GOCSystem2018
                     //frmAssesment.theSection = item.Section;
                 }
                 studProf.Render();
-                studProf.ShowDialog();
+
+                MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                mainwin.dispanel.Controls.Clear();
+                studProf.TopLevel = false;
+                studProf.AutoScroll = true;
+                mainwin.dispanel.Controls.Add(studProf);
+                   
+                studProf.Show();
             }
            
         }
@@ -307,7 +316,9 @@ namespace GOCSystem2018
 
         private void dgvSearch_DoubleClick(object sender, EventArgs e)
         {
+            
             SelectData();
+            
         }
     }
 }
