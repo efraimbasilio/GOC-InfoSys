@@ -156,6 +156,16 @@ namespace GOCSystem2018
                 return false;
             }
 
+            if (txtFatherContact.Text == "")
+            {
+                return false;
+            }
+
+            if (txtMotherContact.Text == "")
+            {
+                return false;
+            }
+
 
             if (optMale.Checked == false || optFemale.Checked == false)
             {
@@ -328,6 +338,17 @@ namespace GOCSystem2018
             }
 
         }
+
+        private void txtFatherWork_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMotherWork_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public void LoadVoucher()
         {
             //clear list
@@ -995,6 +1016,9 @@ namespace GOCSystem2018
                 registration.MotherName = txtMother.Text;
                 registration.MotherWork = txtMotherWork.Text;
                 registration.FatherWork = txtFatherWork.Text;
+
+                registration.FatherContactNo = txtFatherContact.Text;
+                registration.MotherContactNo = txtMotherContact.Text;
 
                 registration.GuardianName = txtGuardianName.Text;
                 registration.GuardianWork = txtGuardianWork.Text;

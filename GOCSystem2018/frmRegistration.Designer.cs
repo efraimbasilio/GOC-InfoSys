@@ -161,6 +161,10 @@
             this.txtGuardianCell = new System.Windows.Forms.MaskedTextBox();
             this.txtStudCell = new System.Windows.Forms.MaskedTextBox();
             this.dtBirthday = new System.Windows.Forms.MaskedTextBox();
+            this.txtFatherContact = new System.Windows.Forms.MaskedTextBox();
+            this.label65 = new System.Windows.Forms.Label();
+            this.txtMotherContact = new System.Windows.Forms.MaskedTextBox();
+            this.label67 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -935,12 +939,12 @@
             this.txtRelation.Margin = new System.Windows.Forms.Padding(4);
             this.txtRelation.Multiline = true;
             this.txtRelation.Name = "txtRelation";
-            this.txtRelation.Size = new System.Drawing.Size(458, 23);
+            this.txtRelation.Size = new System.Drawing.Size(449, 23);
             this.txtRelation.TabIndex = 38;
             // 
             // txtGuardianTel
             // 
-            this.txtGuardianTel.Location = new System.Drawing.Point(313, 1482);
+            this.txtGuardianTel.Location = new System.Drawing.Point(749, 1405);
             this.txtGuardianTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuardianTel.Mask = "0000-000-0000";
             this.txtGuardianTel.Name = "txtGuardianTel";
@@ -953,7 +957,7 @@
             this.label43.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label43.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Location = new System.Drawing.Point(61, 1453);
+            this.label43.Location = new System.Drawing.Point(535, 1385);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(83, 15);
@@ -966,7 +970,7 @@
             this.label44.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label44.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(310, 1453);
+            this.label44.Location = new System.Drawing.Point(745, 1385);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(84, 15);
@@ -1153,7 +1157,7 @@
             this.label32.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label32.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label32.Location = new System.Drawing.Point(560, 1076);
+            this.label32.Location = new System.Drawing.Point(435, 1076);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(74, 15);
@@ -1166,12 +1170,13 @@
             this.txtMotherWork.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMotherWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotherWork.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtMotherWork.Location = new System.Drawing.Point(563, 1095);
+            this.txtMotherWork.Location = new System.Drawing.Point(438, 1095);
             this.txtMotherWork.Margin = new System.Windows.Forms.Padding(4);
             this.txtMotherWork.Multiline = true;
             this.txtMotherWork.Name = "txtMotherWork";
-            this.txtMotherWork.Size = new System.Drawing.Size(294, 23);
+            this.txtMotherWork.Size = new System.Drawing.Size(232, 23);
             this.txtMotherWork.TabIndex = 31;
+            this.txtMotherWork.TextChanged += new System.EventHandler(this.txtMotherWork_TextChanged);
             // 
             // label33
             // 
@@ -1179,7 +1184,7 @@
             this.label33.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label33.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label33.Location = new System.Drawing.Point(560, 1017);
+            this.label33.Location = new System.Drawing.Point(435, 1017);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(74, 15);
@@ -1192,12 +1197,13 @@
             this.txtFatherWork.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFatherWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFatherWork.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtFatherWork.Location = new System.Drawing.Point(563, 1036);
+            this.txtFatherWork.Location = new System.Drawing.Point(438, 1036);
             this.txtFatherWork.Margin = new System.Windows.Forms.Padding(4);
             this.txtFatherWork.Multiline = true;
             this.txtFatherWork.Name = "txtFatherWork";
-            this.txtFatherWork.Size = new System.Drawing.Size(294, 23);
+            this.txtFatherWork.Size = new System.Drawing.Size(232, 23);
             this.txtFatherWork.TabIndex = 29;
+            this.txtFatherWork.TextChanged += new System.EventHandler(this.txtFatherWork_TextChanged);
             // 
             // label31
             // 
@@ -1222,7 +1228,7 @@
             this.txtMother.Margin = new System.Windows.Forms.Padding(4);
             this.txtMother.Multiline = true;
             this.txtMother.Name = "txtMother";
-            this.txtMother.Size = new System.Drawing.Size(458, 23);
+            this.txtMother.Size = new System.Drawing.Size(311, 23);
             this.txtMother.TabIndex = 30;
             // 
             // label30
@@ -1248,7 +1254,7 @@
             this.txtFatherName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFatherName.Multiline = true;
             this.txtFatherName.Name = "txtFatherName";
-            this.txtFatherName.Size = new System.Drawing.Size(459, 23);
+            this.txtFatherName.Size = new System.Drawing.Size(312, 23);
             this.txtFatherName.TabIndex = 28;
             // 
             // txtLastSchool
@@ -1795,7 +1801,7 @@
             // 
             // txtGuardianCell
             // 
-            this.txtGuardianCell.Location = new System.Drawing.Point(63, 1482);
+            this.txtGuardianCell.Location = new System.Drawing.Point(538, 1405);
             this.txtGuardianCell.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuardianCell.Mask = "0000-000-0000";
             this.txtGuardianCell.Name = "txtGuardianCell";
@@ -1825,13 +1831,61 @@
             this.dtBirthday.ValidatingType = typeof(System.DateTime);
             this.dtBirthday.TextChanged += new System.EventHandler(this.dtBirthday_TextChanged);
             // 
+            // txtFatherContact
+            // 
+            this.txtFatherContact.Location = new System.Drawing.Point(746, 1035);
+            this.txtFatherContact.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFatherContact.Mask = "0000-000-0000";
+            this.txtFatherContact.Name = "txtFatherContact";
+            this.txtFatherContact.Size = new System.Drawing.Size(109, 22);
+            this.txtFatherContact.TabIndex = 213;
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label65.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.ForeColor = System.Drawing.Color.Black;
+            this.label65.Location = new System.Drawing.Point(743, 1017);
+            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(83, 15);
+            this.label65.TabIndex = 212;
+            this.label65.Text = "Cellphone No.";
+            // 
+            // txtMotherContact
+            // 
+            this.txtMotherContact.Location = new System.Drawing.Point(746, 1094);
+            this.txtMotherContact.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMotherContact.Mask = "0000-000-0000";
+            this.txtMotherContact.Name = "txtMotherContact";
+            this.txtMotherContact.Size = new System.Drawing.Size(109, 22);
+            this.txtMotherContact.TabIndex = 215;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.label67.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label67.ForeColor = System.Drawing.Color.Black;
+            this.label67.Location = new System.Drawing.Point(743, 1076);
+            this.label67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(83, 15);
+            this.label67.TabIndex = 214;
+            this.label67.Text = "Cellphone No.";
+            // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1232, 666);
+            this.ClientSize = new System.Drawing.Size(1170, 666);
+            this.Controls.Add(this.txtMotherContact);
+            this.Controls.Add(this.label67);
+            this.Controls.Add(this.txtFatherContact);
+            this.Controls.Add(this.label65);
             this.Controls.Add(this.dtBirthday);
             this.Controls.Add(this.txtStudCell);
             this.Controls.Add(this.txtGuardianCell);
@@ -2112,5 +2166,9 @@
         private System.Windows.Forms.MaskedTextBox txtGuardianCell;
         private System.Windows.Forms.MaskedTextBox txtStudCell;
         private System.Windows.Forms.MaskedTextBox dtBirthday;
+        private System.Windows.Forms.MaskedTextBox txtFatherContact;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.MaskedTextBox txtMotherContact;
+        private System.Windows.Forms.Label label67;
     }
 }

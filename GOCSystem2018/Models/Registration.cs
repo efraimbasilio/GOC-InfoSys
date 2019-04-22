@@ -49,6 +49,12 @@ namespace GOCSystem2018
         protected string motherName;//*
         protected string fatherWork;//*
         protected string motherWork;//*
+
+        protected string fatherContactNo;//*
+        protected string motherContactNo;//*
+
+
+
         protected string guardianName;
         protected string guardianWork;//*
         protected string guardianRelationship;//*
@@ -69,6 +75,19 @@ namespace GOCSystem2018
         protected string reserveFor;
         protected string partialPayment;
         protected string fullPayment;
+
+        public string FatherContactNo
+        {
+            get { return fatherContactNo; }
+            set { fatherContactNo = value; }
+        }
+
+        public string MotherContactNo
+        {
+            get { return motherContactNo; }
+            set { motherContactNo = value; }
+        }
+
 
         public string Section
         {

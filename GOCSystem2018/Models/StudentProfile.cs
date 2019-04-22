@@ -98,7 +98,8 @@ namespace GOCSystem2018
         //    set { fullPayment = value; }
         //}
 
-
+        protected string fatherContactNo;//*
+        protected string motherContactNo;//*
         ///
         protected string guardianEmail;
         protected string relationshipToGuardian;
@@ -406,6 +407,18 @@ namespace GOCSystem2018
         {
             get { return relationshipToGuardian; }
             set { relationshipToGuardian = value; }
+        }
+
+        public string FatherContactNo
+        {
+            get { return fatherContactNo; }
+            set { fatherContactNo = value; }
+        }
+
+        public string MotherContactNo
+        {
+            get { return motherContactNo; }
+            set { motherContactNo = value; }
         }
 
         #endregion
