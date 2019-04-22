@@ -771,7 +771,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Lato Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(33, 17);
+            this.label4.Location = new System.Drawing.Point(38, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(150, 18);
             this.label4.TabIndex = 1019;
@@ -2744,7 +2744,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Lato Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(59, 15);
+            this.label3.Location = new System.Drawing.Point(59, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 23);
             this.label3.TabIndex = 1013;
@@ -2773,9 +2773,9 @@
             this.panel5.Controls.Add(this.lblStudName);
             this.panel5.Controls.Add(this.lblGOCNo);
             this.panel5.Controls.Add(this.circularPictureBox1);
-            this.panel5.Location = new System.Drawing.Point(-37, 45);
+            this.panel5.Location = new System.Drawing.Point(0, 41);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1224, 279);
+            this.panel5.Size = new System.Drawing.Size(1036, 279);
             this.panel5.TabIndex = 1026;
             // 
             // button4
@@ -2803,7 +2803,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DarkGray;
-            this.button2.Location = new System.Drawing.Point(314, 248);
+            this.button2.Location = new System.Drawing.Point(277, 248);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(209, 31);
             this.button2.TabIndex = 1029;
@@ -2818,7 +2818,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DarkGray;
-            this.button1.Location = new System.Drawing.Point(529, 248);
+            this.button1.Location = new System.Drawing.Point(492, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(209, 31);
             this.button1.TabIndex = 1028;
@@ -2833,7 +2833,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Lato", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(100, 248);
+            this.button3.Location = new System.Drawing.Point(63, 248);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(209, 31);
             this.button3.TabIndex = 1027;
@@ -2911,7 +2911,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(1454, 666);
+            this.ClientSize = new System.Drawing.Size(1107, 666);
             this.Controls.Add(this.acadPanel);
             this.Controls.Add(this.Accpanel);
             this.Controls.Add(this.panel5);
