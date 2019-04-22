@@ -48,6 +48,11 @@ namespace GOCSystem2018
         protected string motherName;//*
         protected string fatherWork;//*
         protected string motherWork;//*
+
+        protected string fatherContactNo;
+        protected string motherContactNo;
+
+
         protected string guardianName;
         protected string guardianWork;//*
         protected string guardianRelationship;//*
@@ -98,6 +103,17 @@ namespace GOCSystem2018
         //    set { fullPayment = value; }
         //}
 
+        public string FatherContactNo
+        {
+            get { return fatherContactNo; }
+            set { fatherContactNo = value; }
+        }
+
+        public string MotherContactNo
+        {
+            get { return motherContactNo; }
+            set { motherContactNo = value; }
+        }
 
         ///
         protected string guardianEmail;
@@ -525,6 +541,8 @@ namespace GOCSystem2018
             set { track = value; }
         }
 
+      
+
         List<StudentProfile> studentProfiles = new List<StudentProfile>();
 
 
@@ -562,7 +580,8 @@ namespace GOCSystem2018
                         //SP.reservee = reader["Reservee"].ToString();
                         //SP.reserveFor = reader["Reserve_for"].ToString();
                         //SP.fullPayment = reader["Full_payment"].ToString();
-                        //SP.partialPayment = reader["Partial_payment"].ToString();
+
+                       
                         SP.studLastName = reader["last_name"].ToString();
                         SP.studFirstName = reader["first_name"].ToString();
                         SP.studMiddleName = reader["middle_name"].ToString();
@@ -584,6 +603,9 @@ namespace GOCSystem2018
                         SP.fatherName = reader["father_name"].ToString();
                         SP.fatherWork = reader["father_work"].ToString();
                         SP.studBirthPlace = reader["place_of_birth"].ToString();
+
+                        SP.fatherContactNo = reader["fatherContactNo"].ToString();
+                        SP.motherContactNo = reader["motherContactNo"].ToString();
 
                         SP.guardianName = reader["guardian_name"].ToString();
                         SP.guardianWork = reader["guardian_work"].ToString();
