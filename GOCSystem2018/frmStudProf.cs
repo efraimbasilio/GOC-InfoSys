@@ -136,10 +136,10 @@ namespace GOCSystem2018
             Accpanel.Visible = false;
             acadPanel.Visible = true;
 
-            button2.BackColor = Color.FromArgb(242, 242, 244);
+            button2.BackColor = Color.FromArgb(245, 246, 251);
             button2.ForeColor = Color.DarkGray;
 
-            button3.BackColor = Color.FromArgb(242, 242, 244);
+            button3.BackColor = Color.FromArgb(245, 246, 251);
             button3.ForeColor = Color.DarkGray;
 
             button1.BackColor = Color.FromArgb(1, 172, 120);
@@ -152,10 +152,10 @@ namespace GOCSystem2018
             Accpanel.Visible = true;
             acadPanel.Visible = false;
 
-            button3.BackColor = Color.FromArgb(242, 242, 244);
+            button3.BackColor = Color.FromArgb(245, 246, 251);
             button3.ForeColor = Color.DarkGray;
 
-            button1.BackColor = Color.FromArgb(242, 242, 244);
+            button1.BackColor = Color.FromArgb(245, 246, 251);
             button1.ForeColor = Color.DarkGray;
 
             button2.BackColor = Color.FromArgb(1, 172, 120);
@@ -168,10 +168,10 @@ namespace GOCSystem2018
             Accpanel.Visible = false;
             acadPanel.Visible = false;
 
-            button2.BackColor = Color.FromArgb(242, 242, 244);
+            button2.BackColor = Color.FromArgb(245, 246, 251);
             button2.ForeColor = Color.DarkGray;
 
-            button1.BackColor = Color.FromArgb(242, 242, 244);
+            button1.BackColor = Color.FromArgb(245, 246, 251);
             button1.ForeColor = Color.DarkGray;
 
             button3.BackColor = Color.FromArgb(1, 172, 120);
