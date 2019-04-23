@@ -215,6 +215,8 @@
             this.label80 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
             this.PerInfoPanel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.bptxt = new System.Windows.Forms.Label();
@@ -259,9 +261,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.Accpanel = new System.Windows.Forms.Panel();
             this.acadPanel = new System.Windows.Forms.Panel();
+            this.txtFromDB = new System.Windows.Forms.TextBox();
+            this.txtFileName = new System.Windows.Forms.TextBox();
+            this.txtPath = new System.Windows.Forms.TextBox();
             this.circularPictureBox1 = new GOCSystem2018.CircularPictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -2332,6 +2335,28 @@
             this.PerInfoPanel.Size = new System.Drawing.Size(854, 661);
             this.PerInfoPanel.TabIndex = 0;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(113, 396);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 15);
+            this.label8.TabIndex = 1026;
+            this.label8.Text = "Data here";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DimGray;
+            this.label11.Location = new System.Drawing.Point(48, 395);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(43, 15);
+            this.label11.TabIndex = 1025;
+            this.label11.Text = "Status:";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -2709,9 +2734,9 @@
             this.lblGOCNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(192)))), ((int)(((byte)(195)))));
             this.lblGOCNo.Location = new System.Drawing.Point(262, 111);
             this.lblGOCNo.Name = "lblGOCNo";
-            this.lblGOCNo.Size = new System.Drawing.Size(58, 15);
+            this.lblGOCNo.Size = new System.Drawing.Size(55, 15);
             this.lblGOCNo.TabIndex = 37;
-            this.lblGOCNo.Text = "Data here";
+            this.lblGOCNo.Text = "Datahere";
             this.lblGOCNo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lrntxt
@@ -2721,9 +2746,9 @@
             this.lrntxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(192)))), ((int)(((byte)(195)))));
             this.lrntxt.Location = new System.Drawing.Point(262, 96);
             this.lrntxt.Name = "lrntxt";
-            this.lrntxt.Size = new System.Drawing.Size(58, 15);
+            this.lrntxt.Size = new System.Drawing.Size(28, 15);
             this.lrntxt.TabIndex = 12;
-            this.lrntxt.Text = "Data here";
+            this.lrntxt.Text = "300";
             this.lrntxt.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblStudName
@@ -2860,6 +2885,30 @@
             this.acadPanel.TabIndex = 1031;
             this.acadPanel.Visible = false;
             // 
+            // txtFromDB
+            // 
+            this.txtFromDB.Location = new System.Drawing.Point(1163, 41);
+            this.txtFromDB.Name = "txtFromDB";
+            this.txtFromDB.Size = new System.Drawing.Size(100, 20);
+            this.txtFromDB.TabIndex = 1033;
+            this.txtFromDB.Visible = false;
+            // 
+            // txtFileName
+            // 
+            this.txtFileName.Location = new System.Drawing.Point(1042, 67);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.Size = new System.Drawing.Size(100, 20);
+            this.txtFileName.TabIndex = 1032;
+            this.txtFileName.Visible = false;
+            // 
+            // txtPath
+            // 
+            this.txtPath.Location = new System.Drawing.Point(1042, 41);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.Size = new System.Drawing.Size(100, 20);
+            this.txtPath.TabIndex = 1031;
+            this.txtPath.Visible = false;
+            // 
             // circularPictureBox1
             // 
             this.circularPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -2870,28 +2919,7 @@
             this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.circularPictureBox1.TabIndex = 1022;
             this.circularPictureBox1.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(113, 396);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 15);
-            this.label8.TabIndex = 1026;
-            this.label8.Text = "Data here";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(48, 395);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 15);
-            this.label11.TabIndex = 1025;
-            this.label11.Text = "Status:";
+            this.circularPictureBox1.Click += new System.EventHandler(this.circularPictureBox1_Click);
             // 
             // frmStudProf
             // 
@@ -2899,9 +2927,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1107, 666);
+            this.ClientSize = new System.Drawing.Size(1328, 666);
+            this.Controls.Add(this.txtFromDB);
             this.Controls.Add(this.PerInfoPanel);
+            this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.Accpanel);
+            this.Controls.Add(this.txtPath);
             this.Controls.Add(this.acadPanel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label3);
@@ -3176,5 +3207,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtFromDB;
+        private System.Windows.Forms.TextBox txtFileName;
+        private System.Windows.Forms.TextBox txtPath;
     }
 }

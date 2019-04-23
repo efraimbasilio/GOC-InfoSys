@@ -120,6 +120,34 @@ namespace GOCSystem2018
         frmRegistration frmReg = new frmRegistration();
 
         public string Student_Name,GOC_No, LRN, REG_No, Strand, Glvl, Section, DOB, Add, Gender, ConNo, Nat, Rel, BirthPlace, Fname, Focc, Mname, Mocc, Gname, Gocc;
+        String apppath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).ToString();
+       
+
+        private void circularPictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog opf = new OpenFileDialog();
+            opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+            if (opf.ShowDialog() == DialogResult.OK)
+            {
+                circularPictureBox1.Image = Image.FromFile(opf.FileName);
+                string fullPath = opf.FileName;
+                string fileName = opf.SafeFileName;
+                string path = fullPath.Replace(fileName, "");
+
+                txtPath.Text = path;//path name from browse file
+                txtFileName.Text = fileName; // filename from browse
+
+                //copy image*********************************************************************************
+                string[] files = System.IO.Directory.GetFiles(txtPath.Text);
+
+                foreach (string file in files)
+                {
+                    System.IO.File.Copy(txtPath.Text + txtFileName.Text, txtFromDB.Text + lrntxt.Text + ".jpg", true);
+                    break;
+                }
+                //*******************************************************************************************
+            }
+        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -291,7 +319,10 @@ namespace GOCSystem2018
 
         private void frmStudProf_Load(object sender, EventArgs e)
         {
-
+            
+            apppath = apppath.Substring(6) + @"\Pictures\";
+            txtFromDB.Text = apppath;
+            circularPictureBox1.ImageLocation = apppath + lrntxt.Text +".jpg";
         }
 
         public void Render()
