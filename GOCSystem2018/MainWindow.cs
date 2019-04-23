@@ -119,7 +119,7 @@ namespace GOCSystem2018
         List<SchoolYear> schoolYears = new List<SchoolYear>();
 
         #region sidebar code
-        
+
 
 
         #endregion
@@ -204,7 +204,7 @@ namespace GOCSystem2018
             //clear list
 
             //dgvDiscount.Rows.Clear();
-           
+
             schoolYears.Clear();
 
             //pass value to list
@@ -240,7 +240,7 @@ namespace GOCSystem2018
                     dt = new DataTable();
 
                     da.Fill(dt);
-      
+
 
                 }
             }
@@ -291,7 +291,7 @@ namespace GOCSystem2018
             setting.ShowDialog();
         }
 
-        
+
         //dynamic label*************************************************************************************************************************
         //**************************************************************************************************************************************
         #region dynamic label
@@ -304,8 +304,8 @@ namespace GOCSystem2018
         //    spb.BorderStyle = BorderStyle.Fixed3D;
         //    spb.Size = new Size(32,32);
         //    spb.Location = new Point(start-3, end);
-            
-            
+
+
         //    return spb;
         //}
 
@@ -316,7 +316,7 @@ namespace GOCSystem2018
             ph.BackColor = Color.White;
             ph.Size = new Size(1122, 56);
             ph.Location = new Point(start2, end2);
-            
+
             return ph;
 
         }
@@ -404,8 +404,8 @@ namespace GOCSystem2018
             dispanel.Refresh();
             dispanel.Visible = false;
 
-            
-            }
+
+        }
 
         private void pictureBox10_Click(object sender, EventArgs e)
         {
@@ -424,15 +424,15 @@ namespace GOCSystem2018
         {
 
         }
-  
+
         private void button2_Click(object sender, EventArgs e)
         {
 
             dispanel.Controls.Clear();
-            
+
             dispanel.Visible = true;
 
-            
+
 
             frmRegistration frm = new frmRegistration();
             frm.TopLevel = false;
@@ -450,7 +450,7 @@ namespace GOCSystem2018
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             dispanel.Controls.Clear();
             dispanel.Visible = true;
             frmAssessmentSearch frmAssessmentSearch = new frmAssessmentSearch();
@@ -467,8 +467,8 @@ namespace GOCSystem2018
 
         private void button4_Click(object sender, EventArgs e)
         {
-            
-     
+
+
             dispanel.Controls.Clear();
             frmBillingSearch frmbs = new frmBillingSearch();
             frmbs.TopLevel = false;
@@ -524,11 +524,15 @@ namespace GOCSystem2018
             frmSetting set = new frmSetting();
             set.ShowDialog();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+
     }
-
-
-        
-      
     }
     
 

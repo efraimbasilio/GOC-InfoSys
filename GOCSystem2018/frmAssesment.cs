@@ -838,47 +838,7 @@ namespace GOCSystem2018
 
         private void cmbSection_SelectedValueChanged(object sender, EventArgs e)
         {
-            toSave = true;
-            LoadRoomCapacity();
-            schedules.Clear();
-            dgvSchedule.Rows.Clear();
-            schedules = schedule.GetScheduleById();
-
-            foreach (var item in schedules)
-            {
-                if (item.Section.Equals(cmbSection.Text))
-                {
-                    dgvSchedule.Rows.Add(item.TimeStart, item.TimeEnd, item.Day1, item.Day2, item.Day3, item.Day4, item.Day5, item.Section);
-                }
-               
-            }
-
-            enrollees.Clear();
-            dgvEnrolledList.Rows.Clear();
-
-            enrollee.Section = cmbSection.Text;
-            enrollees = enrollee.CountStudInSection();
-
-            foreach (var item in enrollees)
-            {             
-                dgvEnrolledList.Rows.Add(item.TheGOCNo, item.GradeLevel,item.Strand, item.Section , item.Semester);               
-            }
-
-            enrollees.Clear();
-            dgvStudents.Rows.Clear();            
-            enrollees = enrollee.Load();
-
-            foreach (var item in enrollees)
-            {
-                dgvStudents.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
-            }
-
-            btnEnroll.Enabled = true;
-            if (btnEnroll.Text != "")
-            {
-                btnEnroll.Text = "&Enroll";
-            }
-            
+           
            
         }
 
@@ -1051,11 +1011,11 @@ namespace GOCSystem2018
                         studProfile.PartialPayment = "1";
                         studProfile.PartialOnly();
 
-                        frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                        this.Hide();
-                        this.Dispose();
+                        //frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                        //this.Hide();
+                        //this.Dispose();
 
-                        frmBillingSearch.ShowDialog();
+                        //frmBillingSearch.ShowDialog();
 
                       
                         //main.dispanel.Controls.Clear();
@@ -1096,10 +1056,10 @@ namespace GOCSystem2018
                     //        studProfile.ReserveOnly();
 
 
-                    frmPayment frmPayment = new frmPayment();
-                    this.Hide();
-                    this.Dispose();
-                    frmPayment.ShowDialog();
+                    //frmPayment frmPayment = new frmPayment();
+                    //this.Hide();
+                    //this.Dispose();
+                    //frmPayment.ShowDialog();
 
 
                     //    }
@@ -1136,10 +1096,10 @@ namespace GOCSystem2018
                             studProfile.Reservee = "1";
                             studProfile.ReserveOnly();
 
-                            frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                            this.Hide();
-                            this.Dispose();
-                            frmBillingSearch.Show();                            
+                            //frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                            //this.Hide();
+                            //this.Dispose();
+                            //frmBillingSearch.Show();                            
                         }
                     }
                     else
@@ -1171,10 +1131,10 @@ namespace GOCSystem2018
 
                     SaveForGrading();
 
-                    frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                    this.Hide();
-                    this.Dispose();
-                    frmBillingSearch.Show();
+                    //frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                    //this.Hide();
+                    //this.Dispose();
+                    //frmBillingSearch.Show();
                 }
                 else
                 {                    
@@ -1206,10 +1166,10 @@ namespace GOCSystem2018
 
                         SaveForGrading();
 
-                        frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                        this.Hide();
-                        this.Dispose();
-                        frmBillingSearch.Show();
+                        //frmBillingSearch frmBillingSearch = new frmBillingSearch();
+                        //this.Hide();
+                        //this.Dispose();
+                        //frmBillingSearch.Show();
                     }
 
                 }
@@ -1329,6 +1289,51 @@ namespace GOCSystem2018
             this.Dispose();
 
             frmBillingSearch.ShowDialog();
+        }
+
+        private void cmbSection_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+            toSave = true;
+            LoadRoomCapacity();
+            schedules.Clear();
+            dgvSchedule.Rows.Clear();
+            schedules = schedule.GetScheduleById();
+
+            foreach (var item in schedules)
+            {
+                if (item.Section.Equals(cmbSection.Text))
+                {
+                    dgvSchedule.Rows.Add(item.TimeStart, item.TimeEnd, item.Day1, item.Day2, item.Day3, item.Day4, item.Day5, item.Section);
+                }
+
+            }
+
+            enrollees.Clear();
+            dgvEnrolledList.Rows.Clear();
+
+            enrollee.Section = cmbSection.Text;
+            enrollees = enrollee.CountStudInSection();
+
+            foreach (var item in enrollees)
+            {
+                dgvEnrolledList.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
+            }
+
+            enrollees.Clear();
+            dgvStudents.Rows.Clear();
+            enrollees = enrollee.Load();
+
+            foreach (var item in enrollees)
+            {
+                dgvStudents.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
+            }
+
+            btnEnroll.Enabled = true;
+            if (btnEnroll.Text != "")
+            {
+                btnEnroll.Text = "&Enroll";
+            }
+
         }
 
         private void button4_Click_4(object sender, EventArgs e)
