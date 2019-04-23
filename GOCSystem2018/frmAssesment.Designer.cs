@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAssesment));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbSection = new System.Windows.Forms.ComboBox();
             this.lblEnStatus = new System.Windows.Forms.Label();
@@ -232,11 +232,11 @@
             this.cmbSection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.cmbSection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSection.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSection.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSection.FormattingEnabled = true;
             this.cmbSection.Location = new System.Drawing.Point(720, 667);
             this.cmbSection.Name = "cmbSection";
-            this.cmbSection.Size = new System.Drawing.Size(133, 22);
+            this.cmbSection.Size = new System.Drawing.Size(133, 23);
             this.cmbSection.TabIndex = 5;
             this.cmbSection.UseWaitCursor = true;
             this.cmbSection.SelectedIndexChanged += new System.EventHandler(this.cmbSection_SelectedIndexChanged);
@@ -647,9 +647,9 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.NullValue = null;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn6.HeaderText = "OR No.";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -664,10 +664,10 @@
             // AmountGiven
             // 
             this.AmountGiven.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle2;
             this.AmountGiven.HeaderText = "Amount Given";
             this.AmountGiven.Name = "AmountGiven";
             this.AmountGiven.ReadOnly = true;
@@ -676,8 +676,8 @@
             // RemainingBalance
             // 
             this.RemainingBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle3;
             this.RemainingBalance.HeaderText = "Payment No.";
             this.RemainingBalance.Name = "RemainingBalance";
             this.RemainingBalance.ReadOnly = true;
@@ -685,9 +685,9 @@
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.NullValue = "0.00";
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.NullValue = "0.00";
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn9.HeaderText = "Date and Time";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
@@ -797,7 +797,7 @@
             // lblVoucher
             // 
             this.lblVoucher.AutoSize = true;
-            this.lblVoucher.BackColor = System.Drawing.Color.White;
+            this.lblVoucher.BackColor = System.Drawing.Color.Transparent;
             this.lblVoucher.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVoucher.ForeColor = System.Drawing.Color.Black;
             this.lblVoucher.Location = new System.Drawing.Point(215, 480);
@@ -810,7 +810,7 @@
             // lblStrand
             // 
             this.lblStrand.AutoSize = true;
-            this.lblStrand.BackColor = System.Drawing.Color.White;
+            this.lblStrand.BackColor = System.Drawing.Color.Transparent;
             this.lblStrand.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStrand.ForeColor = System.Drawing.Color.Black;
             this.lblStrand.Location = new System.Drawing.Point(158, 418);
@@ -882,11 +882,11 @@
             // 
             // dataGridViewTextBoxColumn13
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.Format = "n";
-            dataGridViewCellStyle12.NullValue = "0.00";
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "n";
+            dataGridViewCellStyle5.NullValue = "0.00";
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn13.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
@@ -944,11 +944,11 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle13.Format = "n";
-            dataGridViewCellStyle13.NullValue = "0.00";
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "n";
+            dataGridViewCellStyle6.NullValue = "0.00";
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -993,11 +993,11 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle14.Format = "n";
-            dataGridViewCellStyle14.NullValue = "0.00";
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "n";
+            dataGridViewCellStyle7.NullValue = "0.00";
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn2.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -1341,7 +1341,7 @@
             // 
             this.cmbMOP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMOP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbMOP.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMOP.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMOP.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.cmbMOP.FormattingEnabled = true;
             this.cmbMOP.Items.AddRange(new object[] {
@@ -1350,7 +1350,7 @@
             "Reservation"});
             this.cmbMOP.Location = new System.Drawing.Point(717, 616);
             this.cmbMOP.Name = "cmbMOP";
-            this.cmbMOP.Size = new System.Drawing.Size(179, 21);
+            this.cmbMOP.Size = new System.Drawing.Size(179, 23);
             this.cmbMOP.TabIndex = 1036;
             this.cmbMOP.SelectedIndexChanged += new System.EventHandler(this.cmbMOP_SelectedIndexChanged_1);
             this.cmbMOP.SelectedValueChanged += new System.EventHandler(this.cmbMOP_SelectedValueChanged_1);

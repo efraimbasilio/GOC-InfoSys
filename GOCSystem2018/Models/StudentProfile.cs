@@ -572,10 +572,10 @@ namespace GOCSystem2018
                         SP.studGOCNo = reader["IDNo"].ToString();
                         SP.StudLRN = reader["LRN"].ToString();
                         SP.studRegistrationNo = reader["regNo"].ToString();
-                        //SP.reservee = reader["Reservee"].ToString();
-                        //SP.reserveFor = reader["Reserve_for"].ToString();
-                        //SP.fullPayment = reader["Full_payment"].ToString();
-                        //SP.partialPayment = reader["Partial_payment"].ToString();
+                        SP.reservee = reader["Reservee"].ToString();
+                        SP.reserveFor = reader["Reserve_for"].ToString();
+                        SP.fullPayment = reader["Full_payment"].ToString();
+                        SP.partialPayment = reader["Partial_payment"].ToString();
                         SP.studLastName = reader["last_name"].ToString();
                         SP.studFirstName = reader["first_name"].ToString();
                         SP.studMiddleName = reader["middle_name"].ToString();
