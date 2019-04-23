@@ -16,7 +16,7 @@ namespace GOCSystem2018
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmStudProf());
+            Application.Run(new frmLogin());
         }
     }
 }
