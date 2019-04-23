@@ -674,6 +674,24 @@ namespace GOCSystem2018
             }//End LoadSchedule()
         }
 
+        public void LoadEnrolledStudents12()
+        {
+            //clear list
+            enrollees.Clear();
+
+
+            enrollee.Section = cmbSection.Text;
+            //pass value to list
+            enrollees = enrollee.CountStudInSection12();
+            //MessageBox.Show("sasa");
+            //loop through load it to list view
+            foreach (var item in enrollees)
+            {
+                //Load to datagridView
+                dgvStudent12.Rows.Add(item.RegNo, item.TheGOCNo, item.FullName, item.GradeLevel, item.Strand, item.Section, item.Section, item.Semester, item.SyEnroll);
+            }//End LoadSchedule()
+        }
+
         private void frmAssesment_Load_1(object sender, EventArgs e)
         {
 
@@ -888,11 +906,42 @@ namespace GOCSystem2018
             }            
         }
 
+        private void checkEnroleeCapacity12()
+        {
+            int students = 0;
+
+            for (int i = 0; i < dgvEnrolledList.Rows.Count; i++)
+            {
+                students = students + 1;
+            }
+
+            if (Convert.ToInt32(lblCeiling.Text) == students)
+            {
+                MessageBox.Show("No more slot, Please Check or add new Section, Enrolled Students are:" + students);//option to add or create new section+
+                toSave = false;
+                button4.Visible = true;
+                return;
+            }
+        }
+
         private void CheckDuplicateRecords()
         {
             for (int i = 0; i < dgvStudents.Rows.Count; i++)
             {
                 if (dgvStudents.Rows[i].Cells[0].FormattedValue.ToString() == lblGOCNo.Text && dgvStudents.Rows[i].Cells[4].FormattedValue.ToString() == lblSem.Text)  //GOC NO
+                {
+                    MessageBox.Show("Duplicate Detected");
+                    toSave = false;
+                    return;
+                }
+            }
+        }
+
+        private void CheckDuplicateRecords12()
+        {
+            for (int i = 0; i < dgvStudent12.Rows.Count; i++)
+            {
+                if (dgvStudent12.Rows[i].Cells[0].FormattedValue.ToString() == lblGOCNo.Text && dgvStudents.Rows[i].Cells[4].FormattedValue.ToString() == lblSem.Text)  //GOC NO
                 {
                     MessageBox.Show("Duplicate Detected");
                     toSave = false;
@@ -1017,7 +1066,7 @@ namespace GOCSystem2018
 
                         //frmBillingSearch.ShowDialog();
 
-                      
+
                         //main.dispanel.Controls.Clear();
                         //frmBillingSearch frmbs = new frmBillingSearch();
 
@@ -1028,6 +1077,7 @@ namespace GOCSystem2018
                         //frmbs.Show();
                         //main.Dashboardpanel.Visible = false;
                         //main.dispanel.Visible = true;
+                        this.Close();
 
                     }
                 }
@@ -1060,6 +1110,7 @@ namespace GOCSystem2018
                     //this.Hide();
                     //this.Dispose();
                     //frmPayment.ShowDialog();
+                    this.Close();
 
 
                     //    }
@@ -1098,7 +1149,7 @@ namespace GOCSystem2018
 
                             //frmBillingSearch frmBillingSearch = new frmBillingSearch();
                             //this.Hide();
-                            //this.Dispose();
+                            this.Close();
                             //frmBillingSearch.Show();                            
                         }
                     }
@@ -1135,13 +1186,16 @@ namespace GOCSystem2018
                     //this.Hide();
                     //this.Dispose();
                     //frmBillingSearch.Show();
+                    this.Close();
                 }
-                else
+                else 
                 {                    
                     checkEnroleeCapacity();
                     CheckDuplicateRecords();
 
-                    if (toSave == true)
+                    checkEnroleeCapacity12();
+                    CheckDuplicateRecords12();
+                    if (toSave == true && Convert.ToInt32(lblGradeLevel.Text) == 11)
                     {                     
                        // MessageBox.Show("To save records");
                         //for grade 11 Student Enrollment Module
@@ -1170,8 +1224,35 @@ namespace GOCSystem2018
                         //this.Hide();
                         //this.Dispose();
                         //frmBillingSearch.Show();
+                        this.Close();
                     }
+                   
+                    else if (toSave == true && Convert.ToInt32(lblGradeLevel.Text) == 12)
+                    {
+                        // MessageBox.Show("To save records");
+                        //for grade 11 Student Enrollment Module
 
+                        // MessageBox.Show("section ----------- sectioning module 1");
+                        studProfile.StudRegistrationNo = lblRegNo.Text;
+                        studProfile.Section = cmbSection.Text;
+                        // MessageBox.Show("section ----------- sectioning module 1 - pass" + studProfile.Section);
+                        studProfile.UpdateTheSection();
+
+                        EnrolledStudents enroll = new EnrolledStudents();
+                        enroll.RegNo = lblRegNo.Text;
+                        enroll.TheGOCNo = lblGOCNo.Text;
+                        enroll.FullName = lblName.Text;
+                        enroll.GradeLevel = lblGradeLevel.Text;
+                        enroll.Strand = lblStrand.Text;
+                        enroll.Section = cmbSection.Text;
+                        enroll.Semester = lblSem.Text;//semester
+                        enroll.SyEnroll = lblSY.Text;
+
+                        enroll.SaveGrade12();//grade 12
+
+                        //SaveForGrading(); // subjects                      
+                        this.Close();
+                    }
                 }
             }
 
@@ -1319,6 +1400,9 @@ namespace GOCSystem2018
                 dgvEnrolledList.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
             }
 
+
+
+
             enrollees.Clear();
             dgvStudents.Rows.Clear();
             enrollees = enrollee.Load();
@@ -1327,6 +1411,8 @@ namespace GOCSystem2018
             {
                 dgvStudents.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
             }
+
+
 
             btnEnroll.Enabled = true;
             if (btnEnroll.Text != "")

@@ -243,6 +243,55 @@ namespace GOCSystem2018
             return enrollees;
         }
 
+        public List<EnrolledStudents> CountStudInSection12()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM enrolled_grade_12  WHERE section =@section;";
+
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("section", section);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        EnrolledStudents enroll = new EnrolledStudents();
+
+                        //prepare properties
+                        enroll.id = Convert.ToInt32(reader["id"].ToString());
+                        enroll.regNo = reader["regno"].ToString();
+                        enroll.theGOCNo = reader["gocno"].ToString();
+                        enroll.fullName = reader["full_name"].ToString();
+                        enroll.gradeLevel = reader["grade_level"].ToString();
+                        enroll.strand = reader["strand"].ToString();
+                        enroll.section = reader["section"].ToString();
+                        enroll.semester = reader["semester"].ToString();
+                        enroll.syEnroll = reader["sy_enrolled"].ToString();
+
+                        //  MessageBox.Show("sasa");
+
+                        enrollees.Add(enroll);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return enrollees;
+        }
 
     }
 }
