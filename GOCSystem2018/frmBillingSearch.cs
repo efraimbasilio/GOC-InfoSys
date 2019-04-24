@@ -137,8 +137,14 @@ namespace GOCSystem2018
                 //set up before form load
                 
                 frmBilling.Render();
-                frmBilling.ShowDialog();
-                //this.Dispose();
+
+                MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                mainwin.dispanel.Controls.Clear();
+                frmBilling.TopLevel = false;
+                frmBilling.AutoScroll = true;
+                mainwin.dispanel.Controls.Add(frmBilling);
+
+                frmBilling.Show();
             }
         }
 

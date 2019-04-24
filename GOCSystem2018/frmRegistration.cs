@@ -1162,12 +1162,12 @@ namespace GOCSystem2018
                 
 
 
-                string message = "Do you want to assess this Enrollee?";
-                string title = "Next Step";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show(message, title, buttons);
-                if (result == DialogResult.Yes)
-                {
+                //string message = "Do you want to assess this Enrollee?";
+                //string title = "Next Step";
+                //MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                //DialogResult result = MessageBox.Show(message, title, buttons);
+                //if (result == DialogResult.Yes)
+                //{
 
                     frmAssesment.Reset();
                     assements.Clear();
@@ -1188,29 +1188,30 @@ namespace GOCSystem2018
 
                     frmAssesment.LoadTuitionFee();
                     frmAssesment.TotalTuition();
-                    //frmAssesment.RenderStudNo();
+                   
+                    //frmAssesment.Reset();
+                   // frmAssesment.LoadSection();
+                   // frmAssesment.LoadSchoolYear();
 
-                    this.Hide();
-                    frmAssesment.Show();
+                    //this.Close();
+                    frmAssessmentSearch search = new frmAssessmentSearch();                   
+                   
 
-                    frmAssesment.Reset();
-                    frmAssesment.LoadSection();
-                    frmAssesment.LoadSchoolYear();
+                MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                mainwin.dispanel.Controls.Clear();
+                search.TopLevel = false;
+                search.AutoScroll = true;
+                mainwin.dispanel.Controls.Add(search);
+
+                search.Show();
+                //}
+                //else
+                //{
+                //    this.Hide();
+                //    this.Dispose();
+                //}
 
 
-                    frmAssessmentSearch search = new frmAssessmentSearch();
-                    this.Hide();
-                    //frmAssesment.Show();
-                    this.Dispose();
-                    search.ShowDialog();
-                }
-                else
-                {
-                    this.Hide();
-                    this.Dispose();
-                }
-
-               
 
             }
             else

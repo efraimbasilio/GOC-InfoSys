@@ -288,25 +288,35 @@ namespace GOCSystem2018
                 }
 
                 //set up before form load
+               
+
+                //show assesment                             
+
+               
+
+
+                MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                mainwin.dispanel.Controls.Clear();
+                frmAssesment.TopLevel = false;
+                frmAssesment.AutoScroll = true;
+                mainwin.dispanel.Controls.Add(frmAssesment);
+
                 frmAssesment.Reset();
-               
+
                 frmAssesment.LoadSchoolYear();
-               
+
                 frmAssesment.LoadTuitionFee();
                 frmAssesment.LoadAssesMiscFees();
                 frmAssesment.LoadAssesOtherFees();
                 frmAssesment.TotalTuition();
-                
+
                 frmAssesment.ComputeVoucher();
                 frmAssesment.GetDownPayment();
 
                 frmAssesment.LoadSubject();
                 frmAssesment.EnableMOP();
 
-                //show assesment                             
-
-                
-                frmAssesment.ShowDialog();
+                frmAssesment.Show();
             }
         }
 
@@ -362,8 +372,7 @@ namespace GOCSystem2018
 
         private void label3_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            this.Dispose();
+            this.Close();
         }
 
         private void dgvSearch_DoubleClick_2(object sender, EventArgs e)

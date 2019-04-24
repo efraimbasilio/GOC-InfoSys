@@ -279,16 +279,16 @@ namespace GOCSystem2018
             LoadBillingHistory();
 
 
-            if (Convert.ToInt32((lblGradeLevel.Text)) == 11)
-            {
-                LoadEnrolledStudents();
-            }else
-            {
-                LoadEnrolledStudents12();
-            }
+            //if (Convert.ToInt32((lblGradeLevel.Text)) == 11)
+            //{
+            //    LoadEnrolledStudents();
+            //}else
+            //{
+            //    LoadEnrolledStudents12();
+            //}
+            LoadEnrolledStudents();
 
-            
-           
+
 
             if (Convert.ToInt32(partialPay) > 0)
             {
@@ -1071,15 +1071,17 @@ namespace GOCSystem2018
                         studProfile.PartialOnly();
 
                        
-                        this.Close();
+                       
 
                     }
+                    this.Close();
                 }
 
                 else if (cmbMOP.Text == "Full Payment")
                 {
-                   
-                    this.Close();
+
+                    frmBillingSearch bill = new frmBillingSearch();
+                    bill.Show();
 
 
                   
@@ -1207,7 +1209,7 @@ namespace GOCSystem2018
                     }
                 }
             }
-
+            this.Close();
             
         }
 

@@ -177,7 +177,8 @@ namespace GOCSystem2018
 
         private void label12_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            this.Hide();
+           
         }
 
         private void txtORNo_KeyPress(object sender, KeyPressEventArgs e)
@@ -799,10 +800,19 @@ namespace GOCSystem2018
                 Reservations();
                 PartialNoReserve();
                 PartialSecondPay();
-                this.Hide();
+                //    this.Hide();
 
-                frmBillingSearch search = new frmBillingSearch();
-                search.Show();
+                //    frmBillingSearch search = new frmBillingSearch();
+                //    search.Show();
+
+                MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                mainwin.dispanel.Controls.Clear();
+                mainwin.dispanel.Visible = false;
+
+                mainwin.Dashboardpanel.Visible = true;
+
+
+                this.Close();
             }
 
            
