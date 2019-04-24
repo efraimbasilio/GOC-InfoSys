@@ -168,9 +168,10 @@ namespace GOCSystem2018
 
         private void frmAssesment_Load(object sender, EventArgs e)
         {
-            
+            LoadEnrolledStudents12();
+
             #region DGV Design
-           
+
             dataGridView2.BorderStyle = BorderStyle.None;
             dataGridView2.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
             dataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
@@ -254,7 +255,8 @@ namespace GOCSystem2018
             lblVoucher.Text = Voucher;
             
 
-            LoadEnrolledStudents();
+            //LoadEnrolledStudents();
+            //LoadEnrolledStudents12();
 
             //if (partialPay == null)
             //{
@@ -287,7 +289,7 @@ namespace GOCSystem2018
             //    LoadEnrolledStudents12();
             //}
             LoadEnrolledStudents();
-
+        
 
 
             if (Convert.ToInt32(partialPay) > 0)
@@ -684,23 +686,7 @@ namespace GOCSystem2018
             }//End LoadSchedule()
         }
 
-        public void LoadEnrolledStudents12()
-        {
-            //clear list
-            enrollees.Clear();
-
-
-            enrollee.Section = cmbSection.Text;
-            //pass value to list
-            enrollees = enrollee.CountStudInSection12();
-            //MessageBox.Show("sasa");
-            //loop through load it to list view
-            foreach (var item in enrollees)
-            {
-                //Load to datagridView
-                dgvStudent12.Rows.Add(item.RegNo, item.TheGOCNo, item.FullName, item.GradeLevel, item.Strand, item.Section, item.Section, item.Semester, item.SyEnroll);
-            }//End LoadSchedule()
-        }
+      
 
         private void frmAssesment_Load_1(object sender, EventArgs e)
         {
@@ -916,23 +902,7 @@ namespace GOCSystem2018
             }            
         }
 
-        private void checkEnroleeCapacity12()
-        {
-            int students = 0;
-
-            for (int i = 0; i < dgvEnrolledList.Rows.Count; i++)
-            {
-                students = students + 1;
-            }
-
-            if (Convert.ToInt32(lblCeiling.Text) == students)
-            {
-                MessageBox.Show("No more slot, Please Check or add new Section, Enrolled Students are:" + students);//option to add or create new section+
-                toSave = false;
-                button4.Visible = true;
-                return;
-            }
-        }
+       
 
         private void CheckDuplicateRecords()
         {
@@ -947,18 +917,7 @@ namespace GOCSystem2018
             }
         }
 
-        private void CheckDuplicateRecords12()
-        {
-            for (int i = 0; i < dgvStudent12.Rows.Count; i++)
-            {
-                if (dgvStudent12.Rows[i].Cells[0].FormattedValue.ToString() == lblGOCNo.Text && dgvStudents.Rows[i].Cells[4].FormattedValue.ToString() == lblSem.Text)  //GOC NO
-                {
-                    MessageBox.Show("Duplicate Detected");
-                    toSave = false;
-                    return;
-                }
-            }
-        }
+      
 
         private void Schedule_loop()
         {
@@ -1069,22 +1028,15 @@ namespace GOCSystem2018
                         studProfile.StudRegistrationNo = RegNo;
                         studProfile.PartialPayment = "1";
                         studProfile.PartialOnly();
-
-                       
-                       
-
+                                            
                     }
                     this.Close();
                 }
 
                 else if (cmbMOP.Text == "Full Payment")
                 {
-
                     frmBillingSearch bill = new frmBillingSearch();
-                    bill.Show();
-
-
-                  
+                    bill.Show();                  
                 }
 
                 else if (cmbMOP.Text == "Reservation")
@@ -1304,20 +1256,7 @@ namespace GOCSystem2018
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            // this.Hide();
-            // this.Dispose();
-
-            //MainWindow main = new MainWindow();
-
-            //main.dispanel.Controls.Clear();
-            //frmBillingSearch frmbs = new frmBillingSearch();
-
-            //frmbs.TopLevel = false;
-            //frmbs.AutoScroll = true;
-            //main.dispanel.Controls.Add(frmbs);
-            //frmbs.Show();
-            //main.Dashboardpanel.Visible = false;
-            //main.dispanel.Visible = true;
+            
 
             frmBillingSearch frmBillingSearch = new frmBillingSearch();
             this.Hide();
@@ -1353,8 +1292,6 @@ namespace GOCSystem2018
             {
                 dgvEnrolledList.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
             }
-
-
 
 
             enrollees.Clear();
@@ -1465,6 +1402,60 @@ namespace GOCSystem2018
 
             }
         }
+
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        public void LoadEnrolledStudents12()
+        {
+            //clear list
+            enrollees.Clear();
+
+
+            enrollee.Section = cmbSection.Text;
+            //pass value to list
+            enrollees = enrollee.CountStudInSection12();
+            //MessageBox.Show("sasa");
+            //loop through load it to list view
+            foreach (var item in enrollees)
+            {
+                //Load to datagridView
+                dgvStudent12.Rows.Add(item.RegNo, item.TheGOCNo, item.FullName, item.GradeLevel, item.Strand, item.Section, item.Section, item.Semester, item.SyEnroll);
+            }//End LoadSchedule()
+        }
+
+        private void checkEnroleeCapacity12()
+        {
+            int students = 0;
+
+            for (int i = 0; i < dgvEnrolledList.Rows.Count; i++)
+            {
+                students = students + 1;
+            }
+
+            if (Convert.ToInt32(lblCeiling.Text) == students)
+            {
+                MessageBox.Show("No more slot, Please Check or add new Section, Enrolled Students are:" + students);//option to add or create new section+
+                toSave = false;
+                button4.Visible = true;
+                return;
+            }
+        }
+
+        private void CheckDuplicateRecords12()
+        {
+            for (int i = 0; i < dgvStudent12.Rows.Count; i++)
+            {
+                if (dgvStudent12.Rows[i].Cells[0].FormattedValue.ToString() == lblGOCNo.Text && dgvStudents.Rows[i].Cells[4].FormattedValue.ToString() == lblSem.Text)  //GOC NO
+                {
+                    MessageBox.Show("Duplicate Detected");
+                    toSave = false;
+                    return;
+                }
+            }
+        }
+
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }
 

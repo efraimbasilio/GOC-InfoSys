@@ -255,7 +255,7 @@ namespace GOCSystem2018
                     con.Open();
 
                     //prepare sql query
-                    string sql = "SELECT * FROM enrolled_grade_12  WHERE section =@section;";
+                    string sql = "SELECT * FROM enrolled_grade_12 WHERE section =@section;";
 
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
