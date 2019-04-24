@@ -47,7 +47,7 @@ namespace GOCSystem2018
         /// <returns>String - Connectionstring</returns>
         public static string GetConnectionString()
         {
-            return string.Format("Server={0};Database={1};Uid={2};Pwd={3};Convert Zero Datetime=True; Default Command Timeout=0", DB_HOST, DB_NAME, DB_USER, DB_PASSWORD);
+            return string.Format("Server={0};Database={1};Uid={2};Pwd={3};Convert Zero Datetime=True; Default Command Timeout=0;SslMode=none; persistsecurityinfo=True", DB_HOST, DB_NAME, DB_USER, DB_PASSWORD);
         }
 
         //test connection for server

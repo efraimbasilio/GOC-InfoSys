@@ -1178,3 +1178,5 @@ C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSyst
 C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\MySql.Data.dll
 C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\Google.Protobuf.dll
 C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\MySql.Data.xml
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\Google.Protobuf.dll
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\MySql.Data.xml
