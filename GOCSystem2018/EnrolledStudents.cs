@@ -17,6 +17,7 @@ namespace GOCSystem2018
         protected string gradeLevel;
         protected string strand;
         protected string section;
+        protected string section2;
         protected string semester;
         protected string syEnroll;
 
@@ -59,6 +60,12 @@ namespace GOCSystem2018
         {
             get { return section; }
             set { section = value; }
+        }
+
+        public string Section2
+        {
+            get { return section2; }
+            set { section2 = value; }
         }
 
         public string Semester
@@ -193,6 +200,52 @@ namespace GOCSystem2018
 
         }//End of Load
 
+        public List<EnrolledStudents> Load12()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+
+
+                    string sql = "SELECT * FROM enrolled_grade_12";
+
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        EnrolledStudents enroll = new EnrolledStudents();
+
+                        //prepare properties
+                        enroll.id = Convert.ToInt32(reader["id"].ToString());
+                        enroll.regNo = reader["regno"].ToString();
+                        enroll.theGOCNo = reader["gocno"].ToString();
+                        enroll.fullName = reader["full_name"].ToString();
+                        enroll.gradeLevel = reader["grade_level"].ToString();
+                        enroll.strand = reader["strand"].ToString();
+                        enroll.section = reader["section"].ToString();
+                        enroll.semester = reader["semester"].ToString();
+                        enroll.syEnroll = reader["sy_enrolled"].ToString();
+
+                        enrollees.Add(enroll);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return enrollees;
+
+        }//End of Load
+
         public List<EnrolledStudents> CountStudInSection()
         {
             try
@@ -256,7 +309,6 @@ namespace GOCSystem2018
 
                     //prepare sql query
                     string sql = "SELECT * FROM enrolled_grade_12 WHERE section =@section;";
-
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("section", section);

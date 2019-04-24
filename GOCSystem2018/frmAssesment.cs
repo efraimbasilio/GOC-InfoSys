@@ -158,7 +158,7 @@ namespace GOCSystem2018
        
 
         public string StudName,GOCNo, LRN, Track, GradeLevel, RegNo, Strand,Voucher,theSection;
-        public string partialPay, roomName;
+        public string partialPay, roomName,sectionThis;
         public bool toSave = true;
 
         public frmAssesment()
@@ -168,7 +168,7 @@ namespace GOCSystem2018
 
         private void frmAssesment_Load(object sender, EventArgs e)
         {
-            LoadEnrolledStudents12();
+            
 
             #region DGV Design
 
@@ -289,7 +289,9 @@ namespace GOCSystem2018
             //    LoadEnrolledStudents12();
             //}
             LoadEnrolledStudents();
-        
+            sectionThis = cmbSection.Text;
+            LoadEnrolledStudents12();
+
 
 
             if (Convert.ToInt32(partialPay) > 0)
@@ -672,9 +674,9 @@ namespace GOCSystem2018
         {
             //clear list
             enrollees.Clear();
-            
 
-            enrollee.Section = cmbSection.Text;
+
+            enrollee.Section = sectionThis;
             //pass value to list
             enrollees = enrollee.CountStudInSection();
             //MessageBox.Show("sasa");
@@ -1030,7 +1032,15 @@ namespace GOCSystem2018
                         studProfile.PartialOnly();
                                             
                     }
-                    this.Close();
+                    frmBillingSearch bill = new frmBillingSearch();
+                    MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin2.dispanel.Controls.Clear();
+                    bill.TopLevel = false;
+                    bill.AutoScroll = true;
+                    mainwin2.dispanel.Controls.Add(bill);
+
+                    bill.Show();
+
                 }
 
                 else if (cmbMOP.Text == "Full Payment")
@@ -1078,35 +1088,21 @@ namespace GOCSystem2018
             }
             else
             {
-                if (lblEnStatus.Text.Equals("Enrolled") && Convert.ToInt32(lblGradeLevel.Text) > 11)
+                if (Convert.ToInt32(lblGradeLevel.Text) == 11)
                 {
-                    EnrolledStudents enroll = new EnrolledStudents();
-                    enroll.RegNo = lblRegNo.Text;
-                    enroll.TheGOCNo = lblGOCNo.Text;
-                    enroll.FullName = lblName.Text;
-                    enroll.GradeLevel = lblGradeLevel.Text;
-                    enroll.Strand = lblStrand.Text;
-                    enroll.Section = cmbSection.Text;
-                    enroll.Semester = lblSem.Text;
-                    enroll.SyEnroll = lblSY.Text;                    
-                    enroll.SaveGrade12();
-
-                    studProfile.StudRegistrationNo = lblRegNo.Text;
-                    studProfile.Section = cmbSection.Text;
-                    studProfile.UpdateTheSection();
-
-                    SaveForGrading();
-             
-                    this.Close();
-                }
-                else 
-                {                    
                     checkEnroleeCapacity();
                     CheckDuplicateRecords();
-
+                }
+                else
+                {
+                   
                     checkEnroleeCapacity12();
+               
                     CheckDuplicateRecords12();
-                    if (toSave == true && Convert.ToInt32(lblGradeLevel.Text) == 11)
+
+                }
+
+                if (toSave == true && Convert.ToInt32(lblGradeLevel.Text) == 11)
                     {                     
                        // MessageBox.Show("To save records");
                         //for grade 11 Student Enrollment Module
@@ -1130,11 +1126,20 @@ namespace GOCSystem2018
                         enroll.Save();//grade 11
 
                         SaveForGrading();
-                        this.Close();
-                    }
-                   
-                    else if (toSave == true && Convert.ToInt32(lblGradeLevel.Text) == 12)
+                    MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin.dispanel.Controls.Clear();
+                    mainwin.dispanel.Visible = false;
+
+                    mainwin.Dashboardpanel.Visible = true;
+
+
+                    this.Close();
+
+                }
+
+                else if (toSave == true && Convert.ToInt32(lblGradeLevel.Text) == 12)
                     {
+                        
                         // MessageBox.Show("To save records");
                         //for grade 11 Student Enrollment Module
 
@@ -1156,12 +1161,18 @@ namespace GOCSystem2018
 
                         enroll.SaveGrade12();//grade 12
 
-                        //SaveForGrading(); // subjects                      
-                        this.Close();
-                    }
+                    MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin.dispanel.Controls.Clear();
+                    mainwin.dispanel.Visible = false;
+
+                    mainwin.Dashboardpanel.Visible = true;
+
+
+                    this.Close();
+
                 }
+
             }
-            this.Close();
             
         }
 
@@ -1303,6 +1314,28 @@ namespace GOCSystem2018
                 dgvStudents.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
             }
 
+            /////////////////////////////////////12///////////////////////////////////////////////////////////
+            enrollees.Clear();
+            dgvEnrolled12.Rows.Clear();
+
+            enrollee.Section2 = cmbSection.Text;
+            enrollees = enrollee.CountStudInSection12();
+
+            foreach (var item in enrollees)
+            {
+                dgvEnrolled12.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
+            }
+
+
+            enrollees.Clear();
+            dgvStudent12.Rows.Clear();
+            enrollees = enrollee.Load12();
+
+            foreach (var item in enrollees)
+            {
+                dgvStudent12.Rows.Add(item.TheGOCNo, item.GradeLevel, item.Strand, item.Section, item.Semester);
+            }
+            /////////////////////////////////////12///////////////////////////////////////////////////////////
 
 
             btnEnroll.Enabled = true;
@@ -1412,13 +1445,14 @@ namespace GOCSystem2018
             enrollees.Clear();
 
 
-            enrollee.Section = cmbSection.Text;
+            enrollee.Section = sectionThis;
             //pass value to list
             enrollees = enrollee.CountStudInSection12();
-            //MessageBox.Show("sasa");
+            MessageBox.Show("sasa");
             //loop through load it to list view
             foreach (var item in enrollees)
             {
+                MessageBox.Show("sasa222");
                 //Load to datagridView
                 dgvStudent12.Rows.Add(item.RegNo, item.TheGOCNo, item.FullName, item.GradeLevel, item.Strand, item.Section, item.Section, item.Semester, item.SyEnroll);
             }//End LoadSchedule()
@@ -1426,9 +1460,10 @@ namespace GOCSystem2018
 
         private void checkEnroleeCapacity12()
         {
+           // MessageBox.Show("this Detected4444444444444444444444444444");
             int students = 0;
 
-            for (int i = 0; i < dgvEnrolledList.Rows.Count; i++)
+            for (int i = 0; i < dgvEnrolled12.Rows.Count; i++)
             {
                 students = students + 1;
             }
@@ -1444,9 +1479,10 @@ namespace GOCSystem2018
 
         private void CheckDuplicateRecords12()
         {
+            //MessageBox.Show("this Detected4444444444444444444444444444");
             for (int i = 0; i < dgvStudent12.Rows.Count; i++)
             {
-                if (dgvStudent12.Rows[i].Cells[0].FormattedValue.ToString() == lblGOCNo.Text && dgvStudents.Rows[i].Cells[4].FormattedValue.ToString() == lblSem.Text)  //GOC NO
+                if (dgvStudent12.Rows[i].Cells[0].FormattedValue.ToString() == lblGOCNo.Text && dgvStudent12.Rows[i].Cells[4].FormattedValue.ToString() == lblSem.Text)  //GOC NO
                 {
                     MessageBox.Show("Duplicate Detected");
                     toSave = false;
