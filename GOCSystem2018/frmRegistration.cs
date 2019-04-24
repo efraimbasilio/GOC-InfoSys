@@ -372,19 +372,9 @@ namespace GOCSystem2018
             }
         }//End LoadRecords(
 
-        private void frmRegistration_Load(object sender, EventArgs e)
+        public void CheckRegNo()
         {
-           
             
-            //string message = "Total Number of Registrant is:" + frm.dgvTempRegno.Rows.Count + "\nDo you want to proceed?";
-            string message = "Do you want to proceed?";
-            string title = "GOC_INFO_SYS";
-
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
-
-            if (result == DialogResult.Yes)
-            {
                 LoadRecordsTempRegNo();
                 RegNoCount();
                 CheckRegNoCount();
@@ -397,15 +387,15 @@ namespace GOCSystem2018
                 cmbCourseStrand.Text = "";
                 LoadCombo();
                 LoadVoucher();
-            }
-             else
-            { 
-
-                this.Hide();
-                MainWindow main = new MainWindow();
-                main.Dashboardpanel.Visible = true;
             
-             }
+           
+        }
+
+        private void frmRegistration_Load(object sender, EventArgs e)
+        {
+           
+            
+            
 
               
 

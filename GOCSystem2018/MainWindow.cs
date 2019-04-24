@@ -471,24 +471,33 @@ namespace GOCSystem2018
         private void button2_Click(object sender, EventArgs e)
         {
 
-            dispanel.Controls.Clear();
+            
 
-            dispanel.Visible = true;
+            //string message = "Total Number of Registrant is:" + frm.dgvTempRegno.Rows.Count + "\nDo you want to proceed?";
+            string message = "Do you want to proceed?";
+            string title = "GOC_INFO_SYS";
 
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
 
+            if (result == DialogResult.Yes)
+            {
+                dispanel.Controls.Clear();
+                dispanel.Visible = true;
+                frmRegistration frm = new frmRegistration();
+                frm.TopLevel = false;
+                frm.AutoScroll = true;
+                dispanel.Controls.Add(frm);
 
-            frmRegistration frm = new frmRegistration();
-            frm.TopLevel = false;
-            frm.AutoScroll = true;
+                frm.CheckRegNo();
+                frm.Show();
+                Dashboardpanel.Visible = false;
+            }
 
-
-
-            dispanel.Controls.Add(frm);
-
-            frm.Show();
-
-
-            Dashboardpanel.Visible = false;
+            else
+            {
+                return;
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
