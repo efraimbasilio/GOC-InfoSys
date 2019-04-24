@@ -109,7 +109,6 @@
             this.txtHost.Name = "txtHost";
             this.txtHost.Size = new System.Drawing.Size(200, 23);
             this.txtHost.TabIndex = 130;
-            this.txtHost.Text = "CLABSERVER";
             // 
             // label3
             // 
@@ -155,7 +154,6 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(200, 23);
             this.txtPassword.TabIndex = 133;
-            this.txtPassword.Text = "0332018";
             // 
             // txtUser
             // 
@@ -165,7 +163,6 @@
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(200, 23);
             this.txtUser.TabIndex = 132;
-            this.txtUser.Text = "emaru04";
             // 
             // label1
             // 

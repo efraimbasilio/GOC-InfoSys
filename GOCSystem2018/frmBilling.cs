@@ -558,7 +558,7 @@ namespace GOCSystem2018
                 //Call Method to load info before transaction
                 pay.Render();
                 //to show the form
-                pay.ShowDialog();
+                pay.Show();
             }
 
             else if (lblMOPInfo.Text == "PARTIAL PAYMENT")
@@ -647,10 +647,10 @@ namespace GOCSystem2018
                 pay.EnrollmentStatus(); //to check the payment if this is the second payment, check by the Enrollment Status tag
                 pay.Render();
                 //to show the form
-                pay.ShowDialog();
+                pay.Show();
 
             }
-            this.Hide();
+           // this.Hide();
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)

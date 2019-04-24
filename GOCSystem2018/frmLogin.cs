@@ -354,8 +354,10 @@ namespace GOCSystem2018
             txtpassword.GotFocus += new System.EventHandler(this.txtpassword_GotFocus);
             txtpassword.LostFocus += new System.EventHandler(this.txtpassword_LostFocus);
 
-            frmSetting set = new frmSetting();
-            set.setThis();
+            MessageBox.Show(Properties.Settings.Default.HOST);
+
+            //frmSetting set = new frmSetting();
+            //set.setThis();
             
         }
 
