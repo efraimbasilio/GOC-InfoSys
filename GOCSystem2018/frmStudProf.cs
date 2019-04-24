@@ -320,7 +320,7 @@ namespace GOCSystem2018
         private void frmStudProf_Load(object sender, EventArgs e)
         {
             
-            apppath = apppath.Substring(6) + @"\Pictures\";
+            apppath = @"\\server\Main_File_Server\IT\gocinfosys_resource\";
             txtFromDB.Text = apppath;
             circularPictureBox1.ImageLocation = apppath + lrntxt.Text +".jpg";
         }

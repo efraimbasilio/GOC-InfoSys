@@ -255,28 +255,28 @@
             this.lblStudName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.circularPictureBox1 = new GOCSystem2018.CircularPictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.Accpanel = new System.Windows.Forms.Panel();
             this.acadPanel = new System.Windows.Forms.Panel();
             this.txtFromDB = new System.Windows.Forms.TextBox();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.txtPath = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.circularPictureBox1 = new GOCSystem2018.CircularPictureBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -290,10 +290,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.Accpanel.SuspendLayout();
             this.acadPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label9
@@ -2745,7 +2745,7 @@
             this.lblGOCNo.AutoSize = true;
             this.lblGOCNo.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGOCNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(192)))), ((int)(((byte)(195)))));
-            this.lblGOCNo.Location = new System.Drawing.Point(560, 67);
+            this.lblGOCNo.Location = new System.Drawing.Point(499, 72);
             this.lblGOCNo.Name = "lblGOCNo";
             this.lblGOCNo.Size = new System.Drawing.Size(55, 15);
             this.lblGOCNo.TabIndex = 37;
@@ -2757,7 +2757,7 @@
             this.lrntxt.AutoSize = true;
             this.lrntxt.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lrntxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(192)))), ((int)(((byte)(195)))));
-            this.lrntxt.Location = new System.Drawing.Point(337, 67);
+            this.lrntxt.Location = new System.Drawing.Point(276, 72);
             this.lrntxt.Name = "lrntxt";
             this.lrntxt.Size = new System.Drawing.Size(28, 15);
             this.lrntxt.TabIndex = 12;
@@ -2770,7 +2770,7 @@
             this.lblStudName.BackColor = System.Drawing.Color.White;
             this.lblStudName.Font = new System.Drawing.Font("Lato Heavy", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStudName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(172)))), ((int)(((byte)(120)))));
-            this.lblStudName.Location = new System.Drawing.Point(296, 31);
+            this.lblStudName.Location = new System.Drawing.Point(235, 36);
             this.lblStudName.Name = "lblStudName";
             this.lblStudName.Size = new System.Drawing.Size(261, 33);
             this.lblStudName.TabIndex = 11;
@@ -2815,6 +2815,126 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(854, 279);
             this.panel5.TabIndex = 1026;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Gray;
+            this.label19.Location = new System.Drawing.Point(360, 190);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(33, 18);
+            this.label19.TabIndex = 1041;
+            this.label19.Text = "Data";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Gray;
+            this.label20.Location = new System.Drawing.Point(360, 165);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(33, 18);
+            this.label20.TabIndex = 1040;
+            this.label20.Text = "Data";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Gray;
+            this.label21.Location = new System.Drawing.Point(360, 140);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(33, 18);
+            this.label21.TabIndex = 1039;
+            this.label21.Text = "Data";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Gray;
+            this.label22.Location = new System.Drawing.Point(360, 115);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(33, 18);
+            this.label22.TabIndex = 1038;
+            this.label22.Text = "Data";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(243, 190);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(54, 18);
+            this.label17.TabIndex = 1036;
+            this.label17.Text = "Adviser:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(243, 165);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(67, 18);
+            this.label16.TabIndex = 1035;
+            this.label16.Text = "Facebook:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(243, 140);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(41, 18);
+            this.label15.TabIndex = 1034;
+            this.label15.Text = "Email:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(243, 115);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(34, 18);
+            this.label14.TabIndex = 1033;
+            this.label14.Text = "Age:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(240, 72);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(30, 15);
+            this.label13.TabIndex = 1032;
+            this.label13.Text = "LRN";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(403, 72);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(90, 15);
+            this.label12.TabIndex = 1031;
+            this.label12.Text = "School Number";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button4
             // 
@@ -2879,6 +2999,43 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // circularPictureBox1
+            // 
+            this.circularPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.circularPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.circularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circularPictureBox1.Image")));
+            this.circularPictureBox1.Location = new System.Drawing.Point(50, 39);
+            this.circularPictureBox1.Name = "circularPictureBox1";
+            this.circularPictureBox1.Size = new System.Drawing.Size(169, 169);
+            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.circularPictureBox1.TabIndex = 1022;
+            this.circularPictureBox1.TabStop = false;
+            this.circularPictureBox1.Click += new System.EventHandler(this.circularPictureBox1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(48, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(171, 171);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1042;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Gray;
+            this.label18.Location = new System.Drawing.Point(241, 83);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(423, 16);
+            this.label18.TabIndex = 1037;
+            this.label18.Text = "_________________________________________________________________________________" +
+    "__";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Accpanel
             // 
             this.Accpanel.BackColor = System.Drawing.Color.White;
@@ -2935,170 +3092,13 @@
             this.txtPath.TabIndex = 1031;
             this.txtPath.Visible = false;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(464, 67);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 15);
-            this.label12.TabIndex = 1031;
-            this.label12.Text = "School Number";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Lato", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(301, 67);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 15);
-            this.label13.TabIndex = 1032;
-            this.label13.Text = "LRN";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(304, 110);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(34, 18);
-            this.label14.TabIndex = 1033;
-            this.label14.Text = "Age:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(304, 135);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 18);
-            this.label15.TabIndex = 1034;
-            this.label15.Text = "Email:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(304, 160);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(67, 18);
-            this.label16.TabIndex = 1035;
-            this.label16.Text = "Facebook:";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(304, 185);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(54, 18);
-            this.label17.TabIndex = 1036;
-            this.label17.Text = "Adviser:";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Gray;
-            this.label18.Location = new System.Drawing.Point(302, 78);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(423, 16);
-            this.label18.TabIndex = 1037;
-            this.label18.Text = "_________________________________________________________________________________" +
-    "__";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Gray;
-            this.label19.Location = new System.Drawing.Point(421, 185);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(33, 18);
-            this.label19.TabIndex = 1041;
-            this.label19.Text = "Data";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Gray;
-            this.label20.Location = new System.Drawing.Point(421, 160);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(33, 18);
-            this.label20.TabIndex = 1040;
-            this.label20.Text = "Data";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Gray;
-            this.label21.Location = new System.Drawing.Point(421, 135);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(33, 18);
-            this.label21.TabIndex = 1039;
-            this.label21.Text = "Data";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Sultan Nahia", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Gray;
-            this.label22.Location = new System.Drawing.Point(421, 110);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(33, 18);
-            this.label22.TabIndex = 1038;
-            this.label22.Text = "Data";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(109, 32);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 171);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1042;
-            this.pictureBox1.TabStop = false;
-            // 
-            // circularPictureBox1
-            // 
-            this.circularPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.circularPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.circularPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circularPictureBox1.Image")));
-            this.circularPictureBox1.Location = new System.Drawing.Point(111, 34);
-            this.circularPictureBox1.Name = "circularPictureBox1";
-            this.circularPictureBox1.Size = new System.Drawing.Size(169, 169);
-            this.circularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.circularPictureBox1.TabIndex = 1022;
-            this.circularPictureBox1.TabStop = false;
-            this.circularPictureBox1.Click += new System.EventHandler(this.circularPictureBox1_Click);
-            // 
             // frmStudProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1379, 666);
+            this.ClientSize = new System.Drawing.Size(1396, 666);
             this.Controls.Add(this.txtFromDB);
             this.Controls.Add(this.PerInfoPanel);
             this.Controls.Add(this.txtFileName);
@@ -3134,12 +3134,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Accpanel.ResumeLayout(false);
             this.Accpanel.PerformLayout();
             this.acadPanel.ResumeLayout(false);
             this.acadPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.circularPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
