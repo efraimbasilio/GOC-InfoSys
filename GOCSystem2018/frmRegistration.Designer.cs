@@ -165,6 +165,7 @@
             this.label65 = new System.Windows.Forms.Label();
             this.txtMotherContact = new System.Windows.Forms.MaskedTextBox();
             this.label67 = new System.Windows.Forms.Label();
+            this.dgvTempRegno = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -176,6 +177,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTempRegno)).BeginInit();
             this.SuspendLayout();
             // 
             // txtRegno
@@ -1875,6 +1877,15 @@
             this.label67.TabIndex = 214;
             this.label67.Text = "Cellphone No.";
             // 
+            // dgvTempRegno
+            // 
+            this.dgvTempRegno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTempRegno.Location = new System.Drawing.Point(862, 12);
+            this.dgvTempRegno.Name = "dgvTempRegno";
+            this.dgvTempRegno.Size = new System.Drawing.Size(134, 150);
+            this.dgvTempRegno.TabIndex = 216;
+            this.dgvTempRegno.Visible = false;
+            // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1882,6 +1893,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1170, 666);
+            this.Controls.Add(this.dgvTempRegno);
             this.Controls.Add(this.txtMotherContact);
             this.Controls.Add(this.label67);
             this.Controls.Add(this.txtFatherContact);
@@ -2028,6 +2040,7 @@
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTempRegno)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2170,5 +2183,6 @@
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.MaskedTextBox txtMotherContact;
         private System.Windows.Forms.Label label67;
+        public System.Windows.Forms.DataGridView dgvTempRegno;
     }
 }

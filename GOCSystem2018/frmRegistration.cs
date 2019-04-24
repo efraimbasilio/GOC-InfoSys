@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace GOCSystem2018
 {
@@ -17,6 +18,7 @@ namespace GOCSystem2018
         Assesment assesment = new Assesment();
         Voucher voucher = new Voucher();
         StudentProfile sp = new StudentProfile();
+        TempRegNo tempRegno = new TempRegNo();
 
         List<Voucher> vouchers = new List<Voucher>();
         List<Assesment> assements = new List<Assesment>();
@@ -24,13 +26,15 @@ namespace GOCSystem2018
         List<SchoolYear> schoolYears = new List<SchoolYear>();
         List<StudentProfile> sps = new List<StudentProfile>();
 
+        List<TempRegNo> tempRegNos = new List<TempRegNo>();
+
 
         public string RegNo, LRN, VType, StudType, Track, Grade_Level, StrandCourse, F_Name, M_Name, L_Name, Religion, Nationality, Gender, Birthdate, Place_of_birth;
         public string House_No, Barangay, Provice, Municipality, Cell_No, Tel_No,Last_School, School_Address, Father,Mother, Guardian, F_Occupation,M_Occupation,G_Occupation,G_House_No, G_Barangay;
         public string G_Municipality,G_Province,G_Relationship,G_CellNo,G_TelNo;
 
 
-        public string School, RegistrationNumber;
+        public string School, RegistrationNumber , TempRegNumber;
         public void LoadSchoolYear()
         {
             //clear list
@@ -61,7 +65,8 @@ namespace GOCSystem2018
         {
             //clear list           
             sps.Clear();
-
+            MessageBox.Show(sps.Count().ToString());
+            
             //pass value to list
             //MessageBox.Show(assements.Count().ToString());
             if (sps.Count() < 1)
@@ -369,21 +374,137 @@ namespace GOCSystem2018
 
         private void frmRegistration_Load(object sender, EventArgs e)
         {
-            LoadAutoGen();
-
-            LoadSchoolYear();   
-            opt1stYear.Text = "11";
-            opt2ndYear.Text = "12";
-            opt3rdYear.Visible = false;
-            opt4thYear.Visible = false;
-            cmbCourseStrand.Text = "";
-            LoadCombo();
            
-            LoadVoucher();
+            
+            //string message = "Total Number of Registrant is:" + frm.dgvTempRegno.Rows.Count + "\nDo you want to proceed?";
+            string message = "Do you want to proceed?";
+            string title = "GOC_INFO_SYS";
 
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
+
+            if (result == DialogResult.Yes)
+            {
+                LoadRecordsTempRegNo();
+                RegNoCount();
+                CheckRegNoCount();
+
+                LoadSchoolYear();
+                opt1stYear.Text = "11";
+                opt2ndYear.Text = "12";
+                opt3rdYear.Visible = false;
+                opt4thYear.Visible = false;
+                cmbCourseStrand.Text = "";
+                LoadCombo();
+                LoadVoucher();
+            }
+             else
+            { 
+
+                this.Hide();
+                MainWindow main = new MainWindow();
+                main.Dashboardpanel.Visible = true;
+            
+             }
+
+              
+
+
+                               
         }
 
-    void LoadCombo()
+        public void TempRegNo()
+        {
+            tempRegno.Temp_RegNo = txtRegno.Text;
+            tempRegno.Save();
+        }
+
+        public void CheckRegNoCount()
+        {
+            //clear list           
+            tempRegNos.Clear();
+
+            
+            //pass value to list
+            //MessageBox.Show(assements.Count().ToString());
+            if (dgvTempRegno.Rows.Count - 1 < 1)
+            {
+                //MessageBox.Show(tempRegNos.Count().ToString());
+                txtRegno.Text = "REG-" + DateTime.Today.ToString("yyyy") + "-" + (1).ToString("0000");
+                TempRegNo();//save temp Regno
+            }
+            else
+            {
+                //MessageBox.Show(tempRegNos.Count().ToString() + "meron na laman");
+                tempRegNos = tempRegno.Load();
+
+                foreach (var item in tempRegNos)
+                {
+
+                    txtRegno.Text = "REG-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");
+                    
+                }
+                TempRegNo();//save temp Regno
+            }     
+        }//End LoadRecords() OK
+
+        public void RegNoCount()
+        {
+            int sum = 0;
+            for (int i = 0; i < dgvTempRegno.Rows.Count -1; i++)
+            {
+                 sum = sum + 1;
+            }
+           // MessageBox.Show("Laman is" + sum);
+        }
+
+        public void LoadRecordsTempRegNo()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+                    string sql = "SELECT * FROM tempregno";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgvTempRegno.DataSource = dt;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
+        }
+
+        public void LoadTempRegNo()
+        {
+            //clear list
+            tempRegNos.Clear();
+
+            //pass value to list
+            tempRegNos = tempRegno.Load();
+
+            //loop through load it to list view
+            foreach (var item in tempRegNos)
+            {
+                //Load to datagridView
+                //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
+                TempRegNumber = item.Temp_RegNo;
+                MessageBox.Show(TempRegNumber);
+            }
+        }//End LoadRecords(
+
+
+
+        void LoadCombo()
         {
             if (optTVL.Checked)
             {

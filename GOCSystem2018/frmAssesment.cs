@@ -278,7 +278,17 @@ namespace GOCSystem2018
             EnrollmentStatus();
             LoadBillingHistory();
 
-            LoadEnrolledStudents();
+
+            if (Convert.ToInt32((lblGradeLevel.Text)) == 11)
+            {
+                LoadEnrolledStudents();
+            }else
+            {
+                LoadEnrolledStudents12();
+            }
+
+            
+           
 
             if (Convert.ToInt32(partialPay) > 0)
             {
@@ -1060,23 +1070,7 @@ namespace GOCSystem2018
                         studProfile.PartialPayment = "1";
                         studProfile.PartialOnly();
 
-                        //frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                        //this.Hide();
-                        //this.Dispose();
-
-                        //frmBillingSearch.ShowDialog();
-
-
-                        //main.dispanel.Controls.Clear();
-                        //frmBillingSearch frmbs = new frmBillingSearch();
-
-                        //frmbs.TopLevel = false;
-                        //frmbs.AutoScroll = true;
-
-                        //main.dispanel.Controls.Add(frmbs);
-                        //frmbs.Show();
-                        //main.Dashboardpanel.Visible = false;
-                        //main.dispanel.Visible = true;
+                       
                         this.Close();
 
                     }
@@ -1084,44 +1078,11 @@ namespace GOCSystem2018
 
                 else if (cmbMOP.Text == "Full Payment")
                 {
-                    //pnlRES.Visible = true;
-
-                    //string message = "Do you want to proceed the Payment?";
-                    //string title = "GOC_INFO_SYS";
-
-                    //MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                    //DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
-
-                    //if (result == DialogResult.Yes)
-                    //{
-                    //    // this.optYES.Checked = true;
-                    //    if (cmbMOP.SelectedItem.Equals("Reservation"))
-                    //    {
-                    //        //if (optYES.Checked == true && GradeLevel.Equals("11"))
-                    //        //{
-                    //        studProfile.ReserveFor = lblGradeLevel.Text;
-                    //        // MessageBox.Show(studProfile.ReserveFor);
-                    //        studProfile.StudRegistrationNo = RegNo;
-                    //        studProfile.Reservee = "1";
-                    //        studProfile.ReserveOnly();
-
-
-                    //frmPayment frmPayment = new frmPayment();
-                    //this.Hide();
-                    //this.Dispose();
-                    //frmPayment.ShowDialog();
+                   
                     this.Close();
 
 
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    optNO.Checked = true;
-                    //    pnlRES.Visible = false;
-                    //    cmbMOP.Text = "";
-                    //}
-
+                  
                 }
 
                 else if (cmbMOP.Text == "Reservation")
@@ -1181,11 +1142,7 @@ namespace GOCSystem2018
                     studProfile.UpdateTheSection();
 
                     SaveForGrading();
-
-                    //frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                    //this.Hide();
-                    //this.Dispose();
-                    //frmBillingSearch.Show();
+             
                     this.Close();
                 }
                 else 
@@ -1219,11 +1176,6 @@ namespace GOCSystem2018
                         enroll.Save();//grade 11
 
                         SaveForGrading();
-
-                        //frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                        //this.Hide();
-                        //this.Dispose();
-                        //frmBillingSearch.Show();
                         this.Close();
                     }
                    

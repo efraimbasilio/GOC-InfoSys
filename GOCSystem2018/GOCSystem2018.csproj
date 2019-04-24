@@ -287,6 +287,7 @@
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Models\StudentProfile.cs" />
+    <Compile Include="TempRegNo.cs" />
     <EmbeddedResource Include="crpHeader.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpHeader.cs</LastGenOutput>
