@@ -120,6 +120,7 @@ namespace GOCSystem2018
         frmRegistration frmReg = new frmRegistration();
 
         public string Student_Name,GOC_No, LRN, REG_No, Strand, Glvl, Section, DOB, Add, Gender, ConNo, Nat, Rel, BirthPlace, Fname, Focc, Mname, Mocc, Gname, Gocc;
+        //
         String apppath = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().CodeBase).ToString();
        
 

@@ -320,5 +320,10 @@ namespace GOCSystem2018
             SelectData();
             
         }
+
+        private void dgvSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

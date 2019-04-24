@@ -13,6 +13,7 @@ namespace GOCSystem2018
 {
     public partial class MainWindow : Form
     {
+        public string accver;
         #region shadow
         private bool Drag;
         private int MouseX;
@@ -197,7 +198,39 @@ namespace GOCSystem2018
         }//sched form
         #endregion
 
+        public void accverification()
+        {
 
+            if (accver.Equals("Registrar"))
+            {
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button8.Enabled = false;
+                button9.Enabled = false;
+            }
+            else if (accver.Equals("Teacher"))
+            {
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button8.Enabled = false;
+                button9.Enabled = false;
+            }
+            else if (accver.Equals("Cashier"))
+            {
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button6.Enabled = false;
+                button7.Enabled = false;
+                button8.Enabled = false;
+                button9.Enabled = false;
+            }
+
+        }
 
         public void LoadSchoolYear()
         {
@@ -280,6 +313,7 @@ namespace GOCSystem2018
             this.chart2.Series["Population"].Points.AddXY("REAL ESTATE", label129.Text);
             this.chart2.Series["Population"].Points.AddXY("ACCOUNTANCY", label128.Text);
 
+           accverification();
 
 
 

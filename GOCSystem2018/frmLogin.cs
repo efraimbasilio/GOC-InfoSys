@@ -113,6 +113,8 @@ namespace GOCSystem2018
         User user = new User();
         List<User> users = new List<User>();
 
+ 
+
         public string UserType, Username, Password;
         public bool Flag;
         public frmLogin()
@@ -121,33 +123,46 @@ namespace GOCSystem2018
         }
         public void credential()
         {
+            MessageBox.Show(UserType);
 
             if (Flag == true)
             {
                 if (UserType.Equals("Admin"))
                 {
                     MainWindow main = new MainWindow();
+                    main.accver = UserType.ToString();
                     main.Show();
-                    this.Hide();
+                    this.Close();
                 }
 
                 else if (UserType.Equals("Cashier"))
                 {
-                    frmBillingSearch bill = new frmBillingSearch();
-                    bill.Show();
+                    MainWindow main = new MainWindow();
+                    main.accver = UserType.ToString();
+                    main.Show();
+                    //frmBillingSearch bill = new frmBillingSearch
+                    //bill.Show     
                     this.Hide();
                 }
 
                 else if (UserType.Equals("Registrar"))
                 {
-                    frmAssessmentSearch assess = new frmAssessmentSearch();
-                    assess.Show();
+                    MainWindow main = new MainWindow();
+                    main.accver = "Registrar";
+                    main.Show();
+                    //frmAssessmentSearch assess = new frmAssessmentSearch();
+                    // assess.Show();
+                    
                     this.Hide();
                 }
                 else if (UserType.Equals("Teacher"))
                 {
-                    frmGrading grade = new frmGrading();
-                    grade.Show();
+                    MainWindow main = new MainWindow();
+                    main.accver = "Teacher";
+                    main.Show();
+                    //frmGrading grade = new frmGrading();
+                    //grade.Show();
+                    
                     this.Hide();
                 }
                 else
