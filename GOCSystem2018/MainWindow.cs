@@ -229,6 +229,15 @@ namespace GOCSystem2018
                 button8.Enabled = false;
                 button9.Enabled = false;
             }
+            else if (accver.Equals("Admin"))
+            {
+                button2.Enabled = true;
+                button3.Enabled = true;
+                button6.Enabled = true;
+                button7.Enabled = true;
+                button8.Enabled = true;
+                button9.Enabled = true;
+            }
 
         }
 

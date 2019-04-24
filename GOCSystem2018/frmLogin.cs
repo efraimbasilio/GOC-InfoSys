@@ -132,7 +132,7 @@ namespace GOCSystem2018
                     MainWindow main = new MainWindow();
                     main.accver = UserType.ToString();
                     main.Show();
-                    this.Close();
+                    this.Hide();
                 }
 
                 else if (UserType.Equals("Cashier"))
