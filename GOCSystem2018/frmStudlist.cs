@@ -127,7 +127,7 @@ namespace GOCSystem2018
                 using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
                 {
                     con.Open();
-                    string sql = "SELECT * FROM Enrolled_Grade_11";
+                    string sql = "SELECT * FROM enrolled_grade_11";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     MySqlDataAdapter da = new MySqlDataAdapter();
                     da.SelectCommand = cmd;

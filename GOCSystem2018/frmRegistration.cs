@@ -374,8 +374,8 @@ namespace GOCSystem2018
 
         public void CheckRegNo()
         {
-            
-                LoadRecordsTempRegNo();
+            LoadTempRegNo();
+                //LoadRecordsTempRegNo();
                 RegNoCount();
                 CheckRegNoCount();
 
@@ -450,26 +450,26 @@ namespace GOCSystem2018
 
         public void LoadRecordsTempRegNo()
         {
-            try
-            {
-                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
-                {
-                    con.Open();
-                    string sql = "SELECT * FROM tempregno";
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
-                    MySqlDataAdapter da = new MySqlDataAdapter();
-                    da.SelectCommand = cmd;
+            //try
+            //{
+            //    using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+            //    {
+            //        con.Open();
+            //        string sql = "SELECT * FROM tempregno";
+            //        MySqlCommand cmd = new MySqlCommand(sql, con);
+            //        MySqlDataAdapter da = new MySqlDataAdapter();
+            //        da.SelectCommand = cmd;
 
-                    //initialize new datatable
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    dgvTempRegno.DataSource = dt;
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //        //initialize new datatable
+            //        DataTable dt = new DataTable();
+            //        da.Fill(dt);
+            //        dgvTempRegno.DataSource = dt;
+            //    }
+            //}
+            //catch (MySqlException ex)
+            //{
+            //    MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
 
             
         }
@@ -478,7 +478,7 @@ namespace GOCSystem2018
         {
             //clear list
             tempRegNos.Clear();
-
+            dgvTempRegno.Rows.Clear();
             //pass value to list
             tempRegNos = tempRegno.Load();
 
@@ -487,8 +487,10 @@ namespace GOCSystem2018
             {
                 //Load to datagridView
                 //dgvDiscount.Rows.Add(item.Id, item.DiscountName, item.DiscountAmount);
-                TempRegNumber = item.Temp_RegNo;
-                MessageBox.Show(TempRegNumber);
+                //TempRegNumber = item.Temp_RegNo;
+                //MessageBox.Show(TempRegNumber);
+                dgvTempRegno.Rows.Add(item.Id,item.Temp_RegNo);
+
             }
         }//End LoadRecords(
 

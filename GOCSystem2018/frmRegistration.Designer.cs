@@ -166,6 +166,8 @@
             this.txtMotherContact = new System.Windows.Forms.MaskedTextBox();
             this.label67 = new System.Windows.Forms.Label();
             this.dgvTempRegno = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -1880,11 +1882,24 @@
             // dgvTempRegno
             // 
             this.dgvTempRegno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTempRegno.Location = new System.Drawing.Point(862, 12);
+            this.dgvTempRegno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dgvTempRegno.Location = new System.Drawing.Point(957, 12);
             this.dgvTempRegno.Name = "dgvTempRegno";
-            this.dgvTempRegno.Size = new System.Drawing.Size(134, 150);
+            this.dgvTempRegno.Size = new System.Drawing.Size(133, 150);
             this.dgvTempRegno.TabIndex = 216;
             this.dgvTempRegno.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "id";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "regno";
+            this.Column2.Name = "Column2";
             // 
             // frmRegistration
             // 
@@ -2184,5 +2199,7 @@
         private System.Windows.Forms.MaskedTextBox txtMotherContact;
         private System.Windows.Forms.Label label67;
         public System.Windows.Forms.DataGridView dgvTempRegno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

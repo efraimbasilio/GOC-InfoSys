@@ -37,7 +37,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO tempRegNo(RegNo) " +
+                    string sql = "INSERT INTO tempregno(RegNo) " +
                                  "VALUES (@tempRegNo); ";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -65,7 +65,7 @@ namespace GOCSystem2018
                 {
                     con.Open();
 
-                    string sql = "SELECT * FROM tempRegNo";
+                    string sql = "SELECT * FROM tempregno";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
