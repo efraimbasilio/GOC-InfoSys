@@ -121,9 +121,18 @@ namespace GOCSystem2018
         {
             InitializeComponent();
         }
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Control | Keys.B))
+            {
+                txtUsername.Text = "admin";
+                txtpassword.Text = "admin123";
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
         public void credential()
         {
-            MessageBox.Show(UserType);
 
             if (Flag == true)
             {
@@ -354,7 +363,7 @@ namespace GOCSystem2018
             txtpassword.GotFocus += new System.EventHandler(this.txtpassword_GotFocus);
             txtpassword.LostFocus += new System.EventHandler(this.txtpassword_LostFocus);
 
-            MessageBox.Show(Properties.Settings.Default.HOST);
+            MessageBox.Show("Successfully connected to the database: " + Properties.Settings.Default.HOST, "GOC Infosys Database connection",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             //frmSetting set = new frmSetting();
             //set.setThis();

@@ -1180,3 +1180,5 @@ C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\Google.Proto
 C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\MySql.Data.xml
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\Google.Protobuf.dll
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\bin\Debug\MySql.Data.xml
+C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.Models.frmcustommsgbox.resources
+C:\Users\Admin\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmcmb.resources

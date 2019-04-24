@@ -469,6 +469,11 @@ namespace GOCSystem2018
             
         }
 
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         public void ComputeVoucher()
         {
             //clear list

@@ -478,8 +478,10 @@ namespace GOCSystem2018
                 grade.Save();
 
             }
-            MessageBox.Show("Subject Saved to grading!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            //MessageBox.Show("Subject Saved to grading!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            frmcmb frmcustommsgbox = new frmcmb();
+            frmcustommsgbox.ShowDialog();
             //lblGradeLevel.Text;
             //lblSem.Text;
             //cmbSection.Text;
@@ -1126,12 +1128,8 @@ namespace GOCSystem2018
                         enroll.Save();//grade 11
 
                         SaveForGrading();
-                    MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
-                    mainwin.dispanel.Controls.Clear();
-                    mainwin.dispanel.Visible = false;
 
-                    mainwin.Dashboardpanel.Visible = true;
-
+                   
 
                     this.Close();
 
@@ -1238,22 +1236,7 @@ namespace GOCSystem2018
 
         private void cmbMOP_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            if (cmbMOP.Text.ToString().Equals("Partial Payment")){
-
-                pictureBox2.Visible = false;
-                label26.Visible = false;
-
-                pictureBox1.Visible = true;
-                label18.Visible = true;
-
-            }else if (cmbMOP.Text.ToString().Equals("Reservation"))
-            {
-                pictureBox2.Visible = true;
-                label26.Visible = true;
-
-                pictureBox1.Visible = false;
-                label18.Visible = false;
-            }
+           
         }
 
         private void label37_Click(object sender, EventArgs e)
@@ -1448,11 +1431,11 @@ namespace GOCSystem2018
             enrollee.Section = sectionThis;
             //pass value to list
             enrollees = enrollee.CountStudInSection12();
-            MessageBox.Show("sasa");
+            //MessageBox.Show("sasa");
             //loop through load it to list view
             foreach (var item in enrollees)
             {
-                MessageBox.Show("sasa222");
+               // MessageBox.Show("sasa222");
                 //Load to datagridView
                 dgvStudent12.Rows.Add(item.RegNo, item.TheGOCNo, item.FullName, item.GradeLevel, item.Strand, item.Section, item.Section, item.Semester, item.SyEnroll);
             }//End LoadSchedule()

@@ -86,6 +86,12 @@
     <Compile Include="frmAssessmentSearch.designer.cs">
       <DependentUpon>frmAssessmentSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmcmb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcmb.Designer.cs">
+      <DependentUpon>frmcmb.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDiscountFee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBillingSearch.resx">
       <DependentUpon>frmBillingSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcmb.resx">
+      <DependentUpon>frmcmb.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDiscountFee.resx">
       <DependentUpon>frmDiscountFee.cs</DependentUpon>

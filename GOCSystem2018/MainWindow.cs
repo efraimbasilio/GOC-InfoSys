@@ -296,7 +296,7 @@ namespace GOCSystem2018
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-
+            
             LoadSchoolYear();
             LoadRecords();
 
