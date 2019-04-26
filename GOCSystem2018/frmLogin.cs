@@ -129,7 +129,23 @@ namespace GOCSystem2018
                 txtpassword.Text = "admin123";
                 return true;
             }
+
+            if (keyData == (Keys.Control | Keys.Alt | Keys.S))
+            {
+                frmSetting set = new frmSetting();
+                set.Show();
+                return true;
+            }
+
+            if (keyData == (Keys.Enter))
+            {
+                button3.PerformClick();
+                return true;
+            }
+
             return base.ProcessCmdKey(ref msg, keyData);
+
+
         }
         public void credential()
         {

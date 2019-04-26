@@ -145,6 +145,32 @@ namespace GOCSystem2018
             }
         }
 
+        private void LoadRecords12()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+                    string sql = "SELECT * FROM enrolled_grade_12";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+                    dgvSearch.DataSource = dt;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         public void searchData(string valueToSearch)
         {
             try
@@ -153,7 +179,33 @@ namespace GOCSystem2018
                 {
                     con.Open();
 
-                    string sql = "SELECT * FROM student_profile WHERE CONCAT(`last_name`, `first_name`,`regno`) LIKE '%" + valueToSearch + "%'";
+                    string sql = "SELECT * FROM enrolled_grade_11 WHERE CONCAT(`regno`, `full_name`,`gocno`) LIKE '%" + valueToSearch + "%'";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+                    dgvSearch.DataSource = dt;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void searchData12(string valueToSearch)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM enrolled_grade_12 WHERE CONCAT(`regno`, `full_name`,`gocno`) LIKE '%" + valueToSearch + "%'";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     MySqlDataAdapter da = new MySqlDataAdapter();
@@ -178,8 +230,8 @@ namespace GOCSystem2018
                 //clear list
                 studProfiles.Clear();
                 //pass value
-                studProfile.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
-                studProfiles = studProfile.GetById();
+                studProfile.StudRegistrationNo = dgvSearch.CurrentRow.Cells[1].FormattedValue.ToString();
+                studProfiles = studProfile.GetByRegNo();
 
                 foreach (var item in studProfiles)
                 {
@@ -217,6 +269,7 @@ namespace GOCSystem2018
                     //frmAssesment.partialPay = item.PartialPayment;
                     //frmAssesment.theSection = item.Section;
                 }
+
                 studProf.Render();
 
                 MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
@@ -324,6 +377,16 @@ namespace GOCSystem2018
         private void dgvSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void optG11_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadRecords();
+        }
+
+        private void optG12_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadRecords12();
         }
     }
 }
