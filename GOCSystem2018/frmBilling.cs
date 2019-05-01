@@ -520,10 +520,17 @@ namespace GOCSystem2018
 
             //June to March SY 
             if (Convert.ToInt32(sMonth2) < 6)
-            {
-                
+            {                
                 MonthNumber = Convert.ToInt32(sMonth2) + 8;
-                AutoComputePerMonth(MonthNumber);
+
+                if (MonthNumber > 11)
+                {
+                    MonthNumber = 11;
+                    AutoComputePerMonth(MonthNumber);
+                }
+                else { AutoComputePerMonth(MonthNumber); }
+               
+               
             }
 
             
@@ -531,7 +538,12 @@ namespace GOCSystem2018
             {
                 
                 MonthNumber = Convert.ToInt32(sMonth2) - 4;
-                AutoComputePerMonth(MonthNumber);
+                if (MonthNumber > 11)
+                {
+                    MonthNumber = 11;
+                    AutoComputePerMonth(MonthNumber);
+                }
+                else { AutoComputePerMonth(MonthNumber); }
             }
 
             #endregion
