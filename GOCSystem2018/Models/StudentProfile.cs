@@ -465,11 +465,11 @@ namespace GOCSystem2018
             get { return partialPayment; }
             set { partialPayment = value; }
         }
-        //public string FullPayment
-        //{
-        //    get { return fullPayment; }
-        //    set { fullPayment = value; }
-        //}
+        public string FullPayment
+        {
+            get { return fullPayment; }
+            set { fullPayment = value; }
+        }
 
         ////FOR REGISTRATION
 
@@ -569,6 +569,10 @@ namespace GOCSystem2018
                         //prepare properties
                         //prepare properties
                         SP.id = Convert.ToInt32(reader["id"].ToString());
+
+
+                        SP.studType = reader["stud_Type"].ToString();
+
                         SP.studGOCNo = reader["IDNo"].ToString();
                         SP.StudLRN = reader["LRN"].ToString();
                         SP.studRegistrationNo = reader["regNo"].ToString();
@@ -653,7 +657,12 @@ namespace GOCSystem2018
 
                         //prepare properties
                         //prepare properties
+
+
                         SP.id = Convert.ToInt32(reader["id"].ToString());
+
+                        SP.studType = reader["stud_Type"].ToString();
+
                         SP.studGOCNo = reader["IDNo"].ToString();
                         SP.StudLRN = reader["LRN"].ToString();
                         SP.studRegistrationNo = reader["regNo"].ToString();
@@ -711,6 +720,9 @@ namespace GOCSystem2018
             return studentProfiles;
         }
 
+
+
+
         public List<StudentProfile> GetByGOCNoToEdit()
         {
             try
@@ -736,8 +748,13 @@ namespace GOCSystem2018
                         //instantiate model
                         StudentProfile SP = new StudentProfile();
 
+
                         //prepare properties
                         SP.id = Convert.ToInt32(reader["id"].ToString());
+
+
+                        SP.studType = reader["stud_Type"].ToString();
+
                         SP.studGOCNo = reader["IDNo"].ToString();
                         SP.StudLRN = reader["LRN"].ToString();
                         SP.studRegistrationNo = reader["regNo"].ToString();
@@ -755,9 +772,14 @@ namespace GOCSystem2018
                         SP.section = reader["section"].ToString();
                         SP.track = reader["track"].ToString();
                         SP.studStrand = reader["strand"].ToString();
+
                         SP.voucherType = reader["voucher_type"].ToString();
+
                         SP.studAddress1 = reader["address"].ToString();
                         SP.studDateOfBirth = reader["date_of_birth"].ToString();
+
+                        SP.studBirthPlace = reader["place_of_birth"].ToString();
+
                         SP.religion = reader["religion"].ToString();
                         SP.nationality = reader["nationality"].ToString();
                         SP.studGender = reader["gender"].ToString();
@@ -765,8 +787,17 @@ namespace GOCSystem2018
                         SP.StudTelNo = reader["stud_telNo"].ToString();
                         SP.studPrevSchool = reader["prev_school"].ToString();
                         SP.studPrevSchoolAddress = reader["prev_school_address"].ToString();
+
+
+
                         SP.fatherName = reader["father_name"].ToString();
                         SP.fatherWork = reader["father_work"].ToString();
+
+                        SP.motherName = reader["mother_name"].ToString();
+                        SP.motherWork = reader["mother_work"].ToString();
+
+                        SP.motherContactNo = reader["motherContactNo"].ToString();
+                        SP.fatherContactNo = reader["fatherContactNo"].ToString();
 
                         SP.guardianName = reader["guardian_name"].ToString();
                         SP.guardianWork = reader["guardian_work"].ToString();
@@ -781,6 +812,7 @@ namespace GOCSystem2018
                         SP.reqGoodMoral = reader["good_moral"].ToString();
                         SP.reqAdmissionTest = reader["en_exam"].ToString();
                         SP.reqNCAE = reader["ncae"].ToString();
+
                         //SP.dateEnrolled = reader["date_enrolled"].ToString();
                         //SP.syEnrolled = reader["sy_enrolled"].ToString();
 
@@ -795,6 +827,78 @@ namespace GOCSystem2018
 
             }
             return studentProfiles;
+        }
+
+        public void UpdateStudProfile()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    string sql = "UPDATE student_profile SET LRN=@studLRN,regNo=@studRegistrationNo,last_name=@studLastName,middle_name=@studMiddleName,first_name=@studFirstName,grade_Level=@studGradeLevel,strand=@studStrand,track=@studAcadTrack,voucher_type=@studVoucher,address=@studAddress1,date_of_birth=@studDateOfBirth,place_of_birth=@studBirthPlace,religion=@religion,nationality=@nationality,gender= @studGender,stud_contactNo=@studContactNo,stud_telNo= @studTelNo,prev_school=@studPrevSchool,prev_school_address=@studPrevSchoolAddress,father_name=@fatherName,mother_name=@motherName,mother_work=@motherWork,father_work= @fatherWork,guardian_name=@guardianName,guardian_work= @guardianWork,guardian_address=@guardianCompleteAddress,guardian_relationship= @guardianRelationship,guardian_contactNo=@guardianContactNo,guardian_telNo=@guardianTelNo,bc=@reqPSA,form138= @reqForm138,drugtest=@reqDrugTest,good_moral=@reqGoodMoral,en_exam=@reqAdmissionTest,ncae=@reqNCAE" +
+                                    " WHERE regno=@studRegistrationNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                   
+                    //cmd.Parameters.AddWithValue("studGOCNo", studGOCNo);
+                    cmd.Parameters.AddWithValue("studLRN", studLRN);
+                    cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
+                    cmd.Parameters.AddWithValue("studLastName", studLastName);
+                    cmd.Parameters.AddWithValue("studMiddleName", studMiddleName);
+                    cmd.Parameters.AddWithValue("studFirstName", studFirstName);
+
+                    cmd.Parameters.AddWithValue("studGradeLevel", studGradeLevel);
+                    cmd.Parameters.AddWithValue("studStrand", studStrand);
+                    cmd.Parameters.AddWithValue("studAcadTrack", studAcadTrack);
+                    cmd.Parameters.AddWithValue("studVoucher", studVoucher);
+                    cmd.Parameters.AddWithValue("studAddress1", studAddress1);
+                    cmd.Parameters.AddWithValue("studDateOfBirth", studDateOfBirth);
+
+                    cmd.Parameters.AddWithValue("studBirthPlace", studBirthPlace);
+                    cmd.Parameters.AddWithValue("religion", religion);
+                    cmd.Parameters.AddWithValue("nationality", nationality);
+                    cmd.Parameters.AddWithValue("studGender", studGender);
+                    cmd.Parameters.AddWithValue("studContactNo", studContactNo);
+
+                    cmd.Parameters.AddWithValue("studTelNo", studTelNo);
+                    cmd.Parameters.AddWithValue("studPrevSchool", studPrevSchool);
+                    cmd.Parameters.AddWithValue("studPrevSchoolAddress", studPrevSchoolAddress);
+                    cmd.Parameters.AddWithValue("fatherName", fatherName);
+                    cmd.Parameters.AddWithValue("motherName", motherName);
+
+                    cmd.Parameters.AddWithValue("motherWork", motherWork);
+                    cmd.Parameters.AddWithValue("fatherWork", fatherWork);
+
+                    cmd.Parameters.AddWithValue("guardianName", guardianName);
+                    cmd.Parameters.AddWithValue("guardianWork", guardianWork);
+                    cmd.Parameters.AddWithValue("guardianCompleteAddress", guardianCompleteAddress);
+                    cmd.Parameters.AddWithValue("guardianRelationship", guardianRelationship);
+                    cmd.Parameters.AddWithValue("guardianContactNo", guardianContactNo);
+                    cmd.Parameters.AddWithValue("guardianTelNo", guardianTelNo);
+
+                    cmd.Parameters.AddWithValue("reqPSA", reqPSA);
+                    cmd.Parameters.AddWithValue("reqForm138", reqForm138);
+                    cmd.Parameters.AddWithValue("reqDrugTest", reqDrugTest);
+                    cmd.Parameters.AddWithValue("reqGoodMoral", reqGoodMoral);
+                    cmd.Parameters.AddWithValue("reqAdmissionTest", reqAdmissionTest);
+                    cmd.Parameters.AddWithValue("reqNCAE", reqNCAE);
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Recorde Updated!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         public List<StudentProfile> CheckGOCNo()
@@ -1023,12 +1127,15 @@ namespace GOCSystem2018
                         //prepare properties
                         SP.id = Convert.ToInt32(reader["id"].ToString());
                         SP.studGOCNo = reader["IDNo"].ToString();
-                        SP.StudLRN = reader["LRN"].ToString();
+                        SP.studLRN = reader["LRN"].ToString();
                         SP.studRegistrationNo = reader["regNo"].ToString();
                         //SP.reservee = reader["Reservee"].ToString();
                         //SP.reserveFor = reader["Reserve_for"].ToString();
                         //SP.fullPayment = reader["Full_payment"].ToString();
                         //SP.partialPayment = reader["Partial_payment"].ToString();
+
+                        SP.studType = reader["stud_Type"].ToString();
+
                         SP.studLastName = reader["last_name"].ToString();
                         SP.studFirstName = reader["first_name"].ToString();
                         SP.studMiddleName = reader["middle_name"].ToString();
@@ -1043,7 +1150,7 @@ namespace GOCSystem2018
                         SP.nationality = reader["nationality"].ToString();
                         SP.studGender = reader["gender"].ToString();
                         SP.studContactNo = reader["stud_contactNo"].ToString();
-                        SP.StudTelNo = reader["stud_telNo"].ToString();
+                        SP.studTelNo = reader["stud_telNo"].ToString();
                         SP.studPrevSchool = reader["prev_school"].ToString();
                         SP.studPrevSchoolAddress = reader["prev_school_address"].ToString();
                         SP.fatherName = reader["father_name"].ToString();

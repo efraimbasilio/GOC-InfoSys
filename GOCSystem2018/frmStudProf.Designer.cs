@@ -255,6 +255,7 @@
             this.lblStudName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -277,7 +278,6 @@
             this.txtFromDB = new System.Windows.Forms.TextBox();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.txtPath = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -2818,6 +2818,14 @@
             this.panel5.Size = new System.Drawing.Size(854, 279);
             this.panel5.TabIndex = 1026;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(729, 67);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 1043;
+            this.textBox1.Visible = false;
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -3094,20 +3102,13 @@
             this.txtPath.TabIndex = 1031;
             this.txtPath.Visible = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(584, 71);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1043;
-            // 
             // frmStudProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1396, 666);
+            this.ClientSize = new System.Drawing.Size(1413, 666);
             this.Controls.Add(this.txtFromDB);
             this.Controls.Add(this.PerInfoPanel);
             this.Controls.Add(this.txtFileName);

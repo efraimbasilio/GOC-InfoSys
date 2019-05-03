@@ -84,7 +84,6 @@
             this.chkDrugtest = new System.Windows.Forms.CheckBox();
             this.chk138 = new System.Windows.Forms.CheckBox();
             this.chkBirthCertificate = new System.Windows.Forms.CheckBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.label46 = new System.Windows.Forms.Label();
             this.txtRelation = new System.Windows.Forms.TextBox();
             this.txtGuardianTel = new System.Windows.Forms.MaskedTextBox();
@@ -171,6 +170,19 @@
             this.txtOtherAddress = new System.Windows.Forms.TextBox();
             this.label68 = new System.Windows.Forms.Label();
             this.chkOtherAddress = new System.Windows.Forms.CheckBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.txtEditTrack = new System.Windows.Forms.TextBox();
+            this.txtEditGLevel = new System.Windows.Forms.TextBox();
+            this.txtGender = new System.Windows.Forms.TextBox();
+            this.txtEditAddress = new System.Windows.Forms.TextBox();
+            this.txtEditAddressGuardian = new System.Windows.Forms.TextBox();
+            this.txtEditPSA = new System.Windows.Forms.TextBox();
+            this.txtEdit138 = new System.Windows.Forms.TextBox();
+            this.txtEditMC = new System.Windows.Forms.TextBox();
+            this.txtESC = new System.Windows.Forms.TextBox();
+            this.txtEditGM = new System.Windows.Forms.TextBox();
+            this.txtEditNCAE = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -202,7 +214,7 @@
             this.txtAddress.BackColor = System.Drawing.Color.White;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtAddress.Location = new System.Drawing.Point(63, 636);
+            this.txtAddress.Location = new System.Drawing.Point(64, 613);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
@@ -339,7 +351,7 @@
             this.label64.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label64.Location = new System.Drawing.Point(60, 617);
+            this.label64.Location = new System.Drawing.Point(61, 594);
             this.label64.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(159, 15);
@@ -601,7 +613,7 @@
             this.cmbMunicipality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMunicipality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMunicipality.FormattingEnabled = true;
-            this.cmbMunicipality.Location = new System.Drawing.Point(430, 713);
+            this.cmbMunicipality.Location = new System.Drawing.Point(431, 690);
             this.cmbMunicipality.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMunicipality.Name = "cmbMunicipality";
             this.cmbMunicipality.Size = new System.Drawing.Size(428, 24);
@@ -613,7 +625,7 @@
             this.label22.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label22.Location = new System.Drawing.Point(420, 695);
+            this.label22.Location = new System.Drawing.Point(421, 672);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(94, 15);
@@ -625,7 +637,7 @@
             this.txtBarangay.BackColor = System.Drawing.Color.White;
             this.txtBarangay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBarangay.ForeColor = System.Drawing.Color.Black;
-            this.txtBarangay.Location = new System.Drawing.Point(578, 636);
+            this.txtBarangay.Location = new System.Drawing.Point(579, 613);
             this.txtBarangay.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarangay.Multiline = true;
             this.txtBarangay.Name = "txtBarangay";
@@ -638,7 +650,7 @@
             this.label23.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label23.Location = new System.Drawing.Point(575, 617);
+            this.label23.Location = new System.Drawing.Point(576, 594);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(77, 15);
@@ -659,7 +671,7 @@
             "Pampanga",
             "Tarlac",
             "Zambales"});
-            this.cmbProvince.Location = new System.Drawing.Point(64, 713);
+            this.cmbProvince.Location = new System.Drawing.Point(65, 690);
             this.cmbProvince.Margin = new System.Windows.Forms.Padding(4);
             this.cmbProvince.Name = "cmbProvince";
             this.cmbProvince.Size = new System.Drawing.Size(342, 24);
@@ -672,7 +684,7 @@
             this.label24.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label24.Location = new System.Drawing.Point(61, 694);
+            this.label24.Location = new System.Drawing.Point(62, 671);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(72, 15);
@@ -889,24 +901,6 @@
             this.chkBirthCertificate.TabIndex = 41;
             this.chkBirthCertificate.Text = "PSA / Birth Certificate";
             this.chkBirthCertificate.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(63, 1708);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(123, 42);
-            this.btnSave.TabIndex = 47;
-            this.btnSave.Text = "  &Register";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
             // label46
             // 
@@ -1424,7 +1418,7 @@
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.ForeColor = System.Drawing.Color.Red;
-            this.label51.Location = new System.Drawing.Point(207, 617);
+            this.label51.Location = new System.Drawing.Point(208, 594);
             this.label51.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(54, 13);
@@ -1437,7 +1431,7 @@
             this.label52.AutoSize = true;
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.ForeColor = System.Drawing.Color.Red;
-            this.label52.Location = new System.Drawing.Point(635, 617);
+            this.label52.Location = new System.Drawing.Point(636, 594);
             this.label52.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(54, 13);
@@ -1450,7 +1444,7 @@
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.ForeColor = System.Drawing.Color.Red;
-            this.label53.Location = new System.Drawing.Point(522, 694);
+            this.label53.Location = new System.Drawing.Point(523, 671);
             this.label53.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(54, 13);
@@ -1463,7 +1457,7 @@
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.ForeColor = System.Drawing.Color.Red;
-            this.label54.Location = new System.Drawing.Point(126, 694);
+            this.label54.Location = new System.Drawing.Point(127, 671);
             this.label54.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(54, 13);
@@ -1680,7 +1674,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.DarkGray;
-            this.label25.Location = new System.Drawing.Point(95, 663);
+            this.label25.Location = new System.Drawing.Point(96, 640);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(423, 13);
             this.label25.TabIndex = 202;
@@ -1949,13 +1943,198 @@
             this.chkOtherAddress.UseVisualStyleBackColor = true;
             this.chkOtherAddress.CheckedChanged += new System.EventHandler(this.chkOtherAddress_CheckedChanged);
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.Location = new System.Drawing.Point(63, 1708);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(123, 42);
+            this.btnSave.TabIndex = 47;
+            this.btnSave.Text = "  &Register";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
+            // 
+            // txtEditTrack
+            // 
+            this.txtEditTrack.BackColor = System.Drawing.Color.White;
+            this.txtEditTrack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEditTrack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditTrack.Location = new System.Drawing.Point(957, 176);
+            this.txtEditTrack.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditTrack.Name = "txtEditTrack";
+            this.txtEditTrack.ReadOnly = true;
+            this.txtEditTrack.Size = new System.Drawing.Size(133, 22);
+            this.txtEditTrack.TabIndex = 221;
+            this.txtEditTrack.Text = "track";
+            // 
+            // txtEditGLevel
+            // 
+            this.txtEditGLevel.BackColor = System.Drawing.Color.White;
+            this.txtEditGLevel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEditGLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditGLevel.Location = new System.Drawing.Point(957, 226);
+            this.txtEditGLevel.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditGLevel.Name = "txtEditGLevel";
+            this.txtEditGLevel.ReadOnly = true;
+            this.txtEditGLevel.Size = new System.Drawing.Size(133, 22);
+            this.txtEditGLevel.TabIndex = 222;
+            this.txtEditGLevel.Text = "glevel";
+            // 
+            // txtGender
+            // 
+            this.txtGender.BackColor = System.Drawing.Color.White;
+            this.txtGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.Location = new System.Drawing.Point(957, 278);
+            this.txtGender.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.ReadOnly = true;
+            this.txtGender.Size = new System.Drawing.Size(133, 22);
+            this.txtGender.TabIndex = 223;
+            this.txtGender.Text = "txtGender";
+            // 
+            // txtEditAddress
+            // 
+            this.txtEditAddress.BackColor = System.Drawing.Color.White;
+            this.txtEditAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEditAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtEditAddress.Location = new System.Drawing.Point(65, 738);
+            this.txtEditAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditAddress.Multiline = true;
+            this.txtEditAddress.Name = "txtEditAddress";
+            this.txtEditAddress.Size = new System.Drawing.Size(794, 23);
+            this.txtEditAddress.TabIndex = 224;
+            this.txtEditAddress.Visible = false;
+            // 
+            // txtEditAddressGuardian
+            // 
+            this.txtEditAddressGuardian.BackColor = System.Drawing.Color.White;
+            this.txtEditAddressGuardian.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEditAddressGuardian.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditAddressGuardian.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtEditAddressGuardian.Location = new System.Drawing.Point(62, 1505);
+            this.txtEditAddressGuardian.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditAddressGuardian.Multiline = true;
+            this.txtEditAddressGuardian.Name = "txtEditAddressGuardian";
+            this.txtEditAddressGuardian.Size = new System.Drawing.Size(803, 23);
+            this.txtEditAddressGuardian.TabIndex = 225;
+            this.txtEditAddressGuardian.Visible = false;
+            // 
+            // txtEditPSA
+            // 
+            this.txtEditPSA.BackColor = System.Drawing.Color.White;
+            this.txtEditPSA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEditPSA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditPSA.Location = new System.Drawing.Point(983, 1642);
+            this.txtEditPSA.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditPSA.Name = "txtEditPSA";
+            this.txtEditPSA.ReadOnly = true;
+            this.txtEditPSA.Size = new System.Drawing.Size(133, 22);
+            this.txtEditPSA.TabIndex = 226;
+            this.txtEditPSA.Text = "textBox1";
+            // 
+            // txtEdit138
+            // 
+            this.txtEdit138.BackColor = System.Drawing.Color.White;
+            this.txtEdit138.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEdit138.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdit138.Location = new System.Drawing.Point(983, 1672);
+            this.txtEdit138.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEdit138.Name = "txtEdit138";
+            this.txtEdit138.ReadOnly = true;
+            this.txtEdit138.Size = new System.Drawing.Size(133, 22);
+            this.txtEdit138.TabIndex = 227;
+            this.txtEdit138.Text = "textBox2";
+            // 
+            // txtEditMC
+            // 
+            this.txtEditMC.BackColor = System.Drawing.Color.White;
+            this.txtEditMC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEditMC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditMC.Location = new System.Drawing.Point(983, 1700);
+            this.txtEditMC.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditMC.Name = "txtEditMC";
+            this.txtEditMC.ReadOnly = true;
+            this.txtEditMC.Size = new System.Drawing.Size(133, 22);
+            this.txtEditMC.TabIndex = 228;
+            this.txtEditMC.Text = "textBox3";
+            // 
+            // txtESC
+            // 
+            this.txtESC.BackColor = System.Drawing.Color.White;
+            this.txtESC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtESC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtESC.Location = new System.Drawing.Point(983, 1758);
+            this.txtESC.Margin = new System.Windows.Forms.Padding(4);
+            this.txtESC.Name = "txtESC";
+            this.txtESC.ReadOnly = true;
+            this.txtESC.Size = new System.Drawing.Size(133, 22);
+            this.txtESC.TabIndex = 229;
+            this.txtESC.Text = "textBox4";
+            // 
+            // txtEditGM
+            // 
+            this.txtEditGM.BackColor = System.Drawing.Color.White;
+            this.txtEditGM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEditGM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditGM.Location = new System.Drawing.Point(983, 1730);
+            this.txtEditGM.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditGM.Name = "txtEditGM";
+            this.txtEditGM.ReadOnly = true;
+            this.txtEditGM.Size = new System.Drawing.Size(133, 22);
+            this.txtEditGM.TabIndex = 230;
+            this.txtEditGM.Text = "textBox5";
+            // 
+            // txtEditNCAE
+            // 
+            this.txtEditNCAE.BackColor = System.Drawing.Color.White;
+            this.txtEditNCAE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEditNCAE.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEditNCAE.Location = new System.Drawing.Point(983, 1788);
+            this.txtEditNCAE.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEditNCAE.Name = "txtEditNCAE";
+            this.txtEditNCAE.ReadOnly = true;
+            this.txtEditNCAE.Size = new System.Drawing.Size(133, 22);
+            this.txtEditNCAE.TabIndex = 231;
+            this.txtEditNCAE.Text = "textBox6";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(957, 332);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 232;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1170, 666);
+            this.ClientSize = new System.Drawing.Size(1143, 666);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtEditNCAE);
+            this.Controls.Add(this.txtEditGM);
+            this.Controls.Add(this.txtESC);
+            this.Controls.Add(this.txtEditMC);
+            this.Controls.Add(this.txtEdit138);
+            this.Controls.Add(this.txtEditPSA);
+            this.Controls.Add(this.txtEditAddressGuardian);
+            this.Controls.Add(this.txtEditAddress);
+            this.Controls.Add(this.txtGender);
+            this.Controls.Add(this.txtEditGLevel);
+            this.Controls.Add(this.txtEditTrack);
             this.Controls.Add(this.chkOtherAddress);
             this.Controls.Add(this.txtOtherAddress);
             this.Controls.Add(this.label68);
@@ -2084,7 +2263,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmRegistration";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "                                                                                 " +
     "                rrrRr";
             this.Load += new System.EventHandler(this.frmRegistration_Load);
@@ -2255,5 +2434,17 @@
         private System.Windows.Forms.TextBox txtOtherAddress;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.CheckBox chkOtherAddress;
+        private System.Windows.Forms.TextBox txtEditTrack;
+        private System.Windows.Forms.TextBox txtEditGLevel;
+        private System.Windows.Forms.TextBox txtGender;
+        private System.Windows.Forms.TextBox txtEditAddress;
+        private System.Windows.Forms.TextBox txtEditAddressGuardian;
+        private System.Windows.Forms.TextBox txtEditPSA;
+        private System.Windows.Forms.TextBox txtEdit138;
+        private System.Windows.Forms.TextBox txtEditMC;
+        private System.Windows.Forms.TextBox txtESC;
+        private System.Windows.Forms.TextBox txtEditGM;
+        private System.Windows.Forms.TextBox txtEditNCAE;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -152,11 +152,10 @@ namespace GOCSystem2018
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmRegistration reg = new frmRegistration();
-            this.Hide();
-            this.Dispose();
+            PassToEdit();
 
-            reg.ShowDialog();
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -239,6 +238,7 @@ namespace GOCSystem2018
                 frmReg.Birthdate = item.StudDateOfBirth;
                 frmReg.Place_of_birth = item.StudBirthPlace;
 
+                frmReg.Edit_Address = item.StudAddress1;
                 //frmReg.House_No = item.StudAddress1;\
 
                 frmReg.Cell_No = item.StudContactNo;
@@ -251,22 +251,36 @@ namespace GOCSystem2018
                 frmReg.Mother = item.MotherName;
                 frmReg.M_Occupation = item.MotherWork;
 
+                frmReg.M_Contact = item.MotherContactNo;
+                frmReg.F_Contact = item.FatherContactNo;
+
                 frmReg.Guardian = item.GuardianName;
                 frmReg.G_CellNo = item.GuardianContactNo;
                 frmReg.G_TelNo = item.GuardianTelNo;
                 frmReg.G_Occupation = item.GuardianWork;
                 frmReg.G_Relationship = item.GuardianRelationship;
+
+                frmReg.Edit_GuardianAddress = item.GuardianCompleteAddress;
+
+                frmReg._PSA = item.ReqPSA;
+                frmReg._FORM_138 = item.ReqForm138;
+                frmReg._GM = item.ReqGoodMoral;
+                frmReg._MD = item.ReqDrugTest;
+                frmReg._ESV = item.ReqAdmissionTest;
+                frmReg._NCAE = item.ReqNCAE;
+
+                frmReg.toEdit = true;
                 //frmReg.G_House_No = item.GuardianCompleteAddress;
-                
-                
-                
-                
-                       
-
-
             }
-            //frm.Render();
-            //studProf.Show();
+            frmReg.EditRender();
+
+            MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+            mainwin.dispanel.Controls.Clear();
+            frmReg.TopLevel = false;
+            frmReg.AutoScroll = true;
+            mainwin.dispanel.Controls.Add(frmReg);
+
+            frmReg.Show();
         }
 
         public void LoadPaymentHistory()
@@ -354,3 +368,4 @@ namespace GOCSystem2018
 
     }
 }
+

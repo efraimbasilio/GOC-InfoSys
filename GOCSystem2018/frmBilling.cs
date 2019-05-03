@@ -569,7 +569,7 @@ namespace GOCSystem2018
             else if (lblMOPInfo.Text == "PARTIAL PAYMENT")
             {
 
-                //PAYMENT INFOS                               
+
                 if (Convert.ToInt32(lblPaymentNoCheck.Text) == 0)
                 {
                     pay.fee_for_reservation = Convert.ToDouble(lblReserve.Text);
@@ -584,7 +584,7 @@ namespace GOCSystem2018
                     {
                         pay.amount_due = Convert.ToDouble(lblPerMonthAdv.Text);
                     }
-                    
+
                 }
 
                 pay.amount_per_month = lblPerMonthAdv.Text;

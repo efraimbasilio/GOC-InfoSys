@@ -30,11 +30,147 @@ namespace GOCSystem2018
 
 
         public string RegNo, LRN, VType, StudType, Track, Grade_Level, StrandCourse, F_Name, M_Name, L_Name, Religion, Nationality, Gender, Birthdate, Place_of_birth;
-        public string House_No, Barangay, Provice, Municipality, Cell_No, Tel_No,Last_School, School_Address, Father,Mother, Guardian, F_Occupation,M_Occupation,G_Occupation,G_House_No, G_Barangay;
+        public string House_No, Barangay, Provice, Municipality, Cell_No, Tel_No,Last_School, School_Address, Father,Mother, Guardian, F_Contact, M_Contact, F_Occupation,M_Occupation,G_Occupation,G_House_No, G_Barangay;
         public string G_Municipality,G_Province,G_Relationship,G_CellNo,G_TelNo;
+        public string Edit_Address, Edit_GuardianAddress;
 
+        public string _PSA, _FORM_138, _MD, _GM, _ESV, _NCAE;
+
+        public bool toEdit = false;
         public bool other_address;
+
         public string School, RegistrationNumber , TempRegNumber;
+
+
+
+        public void EditRender()
+        {
+            LoadVoucher();
+            
+
+            //pass variable to form Assesment
+            txtRegno.Text = RegNo;
+            LRNtxt.Text = LRN;
+
+            //MessageBox.Show(VType.ToString());
+            cmbVoucher.Text = VType.ToString();
+            cmbStudType.Text = StudType;
+
+            txtEditTrack.Text = Track;
+            txtEditGLevel.Text = Grade_Level;
+            txtGender.Text = Gender;
+
+            txtEditGM.Text = _GM;
+            txtEditMC.Text = _MD;
+            txtEditNCAE.Text = _NCAE;
+            txtEditPSA.Text = _PSA;
+            txtEdit138.Text = _FORM_138;
+            txtESC.Text = _ESV;
+
+
+            if (txtEditTrack.Text.Equals("ACADEMIC"))
+            {
+                optAcademic.Checked = true;
+            }
+
+            if (txtEditTrack.Text.Equals("TECH-VOC"))
+            {
+                optTVL.Checked = true;
+            }
+
+            if (txtEditTrack.Text.Equals("COLLEGE"))
+            {
+                optCollege.Checked = true;
+            }
+
+
+            if (txtEditGLevel.Text.Equals("11"))
+            {
+                opt1stYear.Checked = true;
+            }
+
+            if (txtEditGLevel.Text.Equals("12"))
+            {
+                opt2ndYear.Checked = true;
+            }
+
+
+            if (txtGender.Text.Equals("Male"))
+            {
+                optMale.Checked = true;
+            }
+
+            if (txtGender.Text.Equals("Female"))
+            {
+                optFemale.Checked = true;
+            }
+
+            if (txtEditPSA.Text.Equals("PSA / Birth Certificate"))
+            {
+                chkBirthCertificate.Checked = true;
+            }
+
+            if (txtEdit138.Text.Equals("Form 138"))
+            {
+                chk138.Checked = true;
+            }
+
+            if (txtEditMC.Text.Equals("Medical Certificate"))
+            {
+                chkDrugtest.Checked = true;
+            }
+
+            if (txtEditGM.Text.Equals("Good Moral"))
+            {
+                chckGM.Checked = true;
+            }
+            if (txtESC.Text.Equals("ESC Voucher"))
+            {
+                chkEntranceExam.Checked = true;
+            }
+            if (txtEditNCAE.Text.Equals("NCAE Result"))
+            {
+                chkNCAEResult.Checked = true;
+            }
+
+
+            cmbCourseStrand.Text = StrandCourse;
+            txtFName.Text = F_Name;
+            txtMName.Text = M_Name;
+            txtLastName.Text = L_Name;
+            txtReligion.Text = Religion;
+            cmbNationality.Text = Nationality;
+          
+            dtBirthday.Text = Birthdate;
+            txtBirthPlace.Text = Place_of_birth;
+
+            txtEditAddress.Text = Edit_Address;
+
+            txtStudCell.Text = Cell_No;
+            txtTelNo.Text = Tel_No;
+            txtLastSchool.Text = Last_School;
+            txtLastSchAddress.Text = School_Address;
+
+            txtFatherName.Text = Father;
+            txtFatherWork.Text = F_Occupation;
+            txtMother.Text = Mother;
+            txtMotherWork.Text = M_Occupation;
+
+            txtMotherContact.Text = M_Contact;
+            txtFatherContact.Text = F_Contact;
+
+            txtGuardianName.Text = Guardian;
+            txtGuardianCell.Text = G_CellNo;
+            txtGuardianTel.Text = G_TelNo;
+
+            txtGuardianWork.Text = G_Occupation;
+            txtRelation.Text = G_Relationship;
+
+            txtEditAddressGuardian.Text = Edit_GuardianAddress;
+           
+        }
+
+
         public void LoadSchoolYear()
         {
             //clear list
@@ -239,6 +375,9 @@ namespace GOCSystem2018
         }
 
 
+
+        
+
         private void btnSave_Click(object sender, EventArgs e)
         {
 
@@ -251,11 +390,13 @@ namespace GOCSystem2018
             if (optMale.Checked)
             {
                 registration.StudGender = optMale.Text;
+                sp.StudGender = optMale.Text;
             }
 
             else if (optFemale.Checked)
             {
                 registration.StudGender = optFemale.Text;
+                sp.StudGender = optFemale.Text;
             }
         }
         private void checkYearLevel()
@@ -263,23 +404,28 @@ namespace GOCSystem2018
            if (opt1stYear.Checked)
             {
                 registration.StudGradeLevel = opt1stYear.Text;
+                sp.StudGradeLevel = opt1stYear.Text;
                 frmAssesment.GradeLevel = opt1stYear.Text;
+
             }
 
             else if (opt2ndYear.Checked)
             {
                 registration.StudGradeLevel = opt2ndYear.Text;
+                sp.StudGradeLevel = opt2ndYear.Text;
                 frmAssesment.GradeLevel = opt1stYear.Text;
             }
 
             else if (opt3rdYear.Checked)
             {
+                sp.StudGradeLevel = opt3rdYear.Text;
                 registration.StudGradeLevel = opt3rdYear.Text;
                 frmAssesment.GradeLevel = opt1stYear.Text;
             }
             else if (opt4thYear.Checked)
             {
                 registration.StudGradeLevel = opt4thYear.Text;
+                sp.StudGradeLevel = opt4thYear.Text;
                 frmAssesment.GradeLevel = opt1stYear.Text;
             }
         }
@@ -289,18 +435,21 @@ namespace GOCSystem2018
             if (optAcademic.Checked)
             {
                 registration.StudAcadTrack = optAcademic.Text;
+                sp.StudAcadTrack = optAcademic.Text;
                 frmAssesment.Track = optAcademic.Text;
             }
 
             else if (optTVL.Checked)
             {
                 registration.StudAcadTrack = optTVL.Text;
+                sp.StudAcadTrack = optTVL.Text;
                 frmAssesment.Track = optTVL.Text;
             }
 
             else if (optCollege.Checked)
             {
                 registration.StudAcadTrack = optTVL.Text;
+                sp.StudAcadTrack = optTVL.Text;
                 frmAssesment.Track = optCollege.Text;
             }
         }
@@ -310,36 +459,80 @@ namespace GOCSystem2018
             if (chkEntranceExam.Checked)
             {
                 registration.ReqAdmissionTest = chkEntranceExam.Text;
+                sp.ReqAdmissionTest = chkEntranceExam.Text;
+            }
+            else
+            {
+                registration.ReqAdmissionTest = "NA";
+                sp.ReqAdmissionTest = "NA";
             }
 
             if (chkBirthCertificate.Checked)
             {
                 registration.ReqPSA = chkBirthCertificate.Text;
+                sp.ReqPSA = chkBirthCertificate.Text;
             }
+            else
+            {
+                registration.ReqPSA = "NA";
+                sp.ReqPSA = "NA";
+            }
+
 
             if (chkDrugtest.Checked)
             {
                 registration.ReqDrugTest = chkDrugtest.Text;
+                sp.ReqDrugTest = chkDrugtest.Text;
+            }
+            else
+            {
+                registration.ReqDrugTest = "NA";
+                sp.ReqDrugTest = "NA";
             }
 
             if (chk138.Checked)
             {
                 registration.ReqForm138 = chk138.Text;
+                sp.ReqForm138 = chk138.Text;
+            }
+            else
+            {
+                registration.ReqForm138 = "NA";
+                sp.ReqForm138 = "NA";
             }
 
             if (chckGM.Checked)
             {
                 registration.ReqGoodMoral = chckGM.Text;
+                sp.ReqGoodMoral = chckGM.Text;
             }
+            else
+            {
+                registration.ReqGoodMoral = "NA";
+                sp.ReqGoodMoral = "NA";
+            }
+
 
             if (chkEntranceExam.Checked)
             {
                 registration.ReqAdmissionTest = chkEntranceExam.Text;
+                sp.ReqAdmissionTest = chkEntranceExam.Text;
+            }
+            else
+            {
+                registration.ReqAdmissionTest = "NA";
+                sp.ReqAdmissionTest = "NA";
             }
 
             if (chkNCAEResult.Checked)
             {
                 registration.ReqNCAE = chkNCAEResult.Text;
+                sp.ReqNCAE = chkNCAEResult.Text;
+            }
+            else
+            {
+                registration.ReqNCAE = "NA";
+                sp.ReqNCAE = "NA";
             }
 
         }
@@ -497,6 +690,13 @@ namespace GOCSystem2018
             {
                 txtGuardianCell.Select(0, 0);
             });
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+           
+
+          
         }
 
         private void txtGuardianTel_Enter(object sender, EventArgs e)
@@ -1249,156 +1449,290 @@ namespace GOCSystem2018
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-            bool required = true;
            
-            if (txtStudCell.MaskFull == true && dtBirthday.MaskFull == true && LRNtxt.MaskFull == true && other_address == true)
+
+            if (toEdit==true)
             {
-                required = true;
+                sp.StudType = cmbStudType.Text;
+                sp.StudLRN = LRNtxt.Text;
+                //sp.StudGOCNo = "N/A";
+                sp.StudRegistrationNo = txtRegno.Text;
+                sp.StudLastName = txtLastName.Text.ToUpper();
+                sp.StudMiddleName = txtMName.Text.ToUpper();
+                sp.StudFirstName = txtFName.Text.ToUpper();
+                sp.StudStrand = cmbCourseStrand.Text.ToUpper(); ;
+                sp.StudVoucher = cmbVoucher.Text;
 
-            }
-            else
-            {
-                if (LRNtxt.MaskFull == false)
-                {
-                    MessageBox.Show("Please Check the LRN Number if Completed");
-                    LRNtxt.BackColor = Color.LightBlue;
+                sp.StudAddress1 = txtEditAddress.Text;
 
-                    required = false;
-                }
+                sp.StudDateOfBirth = dtBirthday.Text.ToString();
+                sp.StudBirthPlace = txtBirthPlace.Text;
+                sp.Religion = txtReligion.Text;
+                sp.Nationality = cmbNationality.Text;
+                //sp.StudGender = checkGender.Text;
+                sp.StudContactNo = txtStudCell.Text;
+                sp.StudTelNo = txtTelNo.Text;
+                sp.StudPrevSchool = txtLastSchool.Text;
+                sp.StudPrevSchoolAddress = txtLastSchAddress.Text;
+                sp.StudType = cmbStudType.Text;
+                sp.FatherName = txtFatherName.Text;
+                sp.MotherName = txtMother.Text;
+                sp.MotherWork = txtMotherWork.Text;
+                sp.FatherWork = txtFatherWork.Text;
+                sp.FatherContactNo = txtFatherContact.Text;
+                sp.MotherContactNo = txtMotherContact.Text;
+                sp.GuardianName = txtGuardianName.Text;
+                sp.GuardianWork = txtGuardianWork.Text;
 
-                if (txtStudCell.MaskFull ==false)
-                {
-                    MessageBox.Show("Please Check Student Phone Number.");
-                    txtStudCell.BackColor = Color.LightBlue;
+                sp.GuardianCompleteAddress = txtEditAddressGuardian.Text;
 
-                    required = false;
-                }
-
-                if (dtBirthday.MaskFull == false)
-                {
-                    MessageBox.Show("Please Check the Birthday");
-                    dtBirthday.BackColor = Color.LightBlue;
-
-                    required = false;
-                }
-
-               
-
-
-            }
-       
-
-            if (this.CheckRequiredFields() == true && required == true)
-            {
-                registration.StudType = cmbStudType.Text;
-
-                registration.StudLRN = LRNtxt.Text;
-                registration.StudGOCNo = "N/A";
-                registration.StudRegistrationNo = txtRegno.Text;
-                registration.StudLastName = txtLastName.Text.ToUpper();
-                registration.StudMiddleName = txtMName.Text.ToUpper(); 
-                registration.StudFirstName = txtFName.Text.ToUpper(); 
-
-                registration.StudStrand = cmbCourseStrand.Text.ToUpper(); ;
-                registration.StudVoucher = cmbVoucher.Text;
-                registration.StudAddress1 = txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text;
-
-                registration.StudDateOfBirth = dtBirthday2.Value.ToString("yyyy-MM-dd");
-                registration.StudBirthPlace = txtBirthPlace.Text;
-
-                registration.Religion = txtReligion.Text;
-                registration.Nationality = cmbNationality.Text;
-                //registration.StudGender = checkGender.Text;
-                registration.StudContactNo = txtStudCell.Text;
-                registration.StudTelNo = txtTelNo.Text;
-                registration.StudPrevSchool = txtLastSchool.Text;
-                registration.StudPrevSchoolAddress = txtLastSchAddress.Text;
-
-                registration.FatherName = txtFatherName.Text;
-                registration.MotherName = txtMother.Text;
-                registration.MotherWork = txtMotherWork.Text;
-                registration.FatherWork = txtFatherWork.Text;
-
-                registration.FatherContactNo = txtFatherContact.Text;
-                registration.MotherContactNo = txtMotherContact.Text;
-
-                registration.GuardianName = txtGuardianName.Text;
-                registration.GuardianWork = txtGuardianWork.Text;
-                registration.GuardianCompleteAddress = txtAddress2.Text + " " + txtBarangay2.Text + " " + cmbMunicipality2.Text + " " + cmbProvince2.Text;
-                registration.GuardianRelationship = txtRelation.Text;
-                registration.GuardianContactNo = txtGuardianCell.Text;
-                registration.GuardianTelNo = txtGuardianTel.Text;
-                registration.SYEnrolled = School;
-                registration.DateEnrolled = DateTime.Today.ToString("yyyy-mm-dd");
+                sp.GuardianRelationship = txtRelation.Text;
+                sp.GuardianContactNo = txtGuardianCell.Text;
+                sp.GuardianTelNo = txtGuardianTel.Text;
+                //sp.SYEnrolled = School;
+                //sp.DateEnrolled = DateTime.Today.ToString("yyyy-mm-dd");
                 //////////////////////////////////////
-                registration.Reservee = "0";
-                registration.ReserveFor = "0";
-                registration.PartialPayment = "0";
-                registration.FullPayment = "0";
+                sp.Reservee = "0";
+                sp.ReserveFor = "0";
+                sp.PartialPayment = "0";
+                sp.FullPayment = "0";
+                sp.Section = "0";
+                //function to load important filtering            
 
-                registration.Section = "0";
-
-                //function to load important filtering
-
-              
                 checkYearLevel();
                 CheckTrack();
                 checkRequirements();
                 checkGender();
 
-                string message = "Please double check the information, click ok to save record."+
+                string message = "Please double check the information, click ok to update records.";
 
-                    "\n\nRegistration No.: " + txtRegno.Text +
-                    "\nLRN: " + LRNtxt.Text +
-                    "\nVoucher Type: " + cmbVoucher.Text +
-                    "\nStudent Type: " + cmbStudType.Text +
-                    "\nTrack: " + frmAssesment.Track +
+                   //"\n\nRegistration No.: " + txtRegno.Text +
+                   //"\nLRN: " + LRNtxt.Text +
+                   //"\nVoucher Type: " + cmbVoucher.Text +
+                   //"\nStudent Type: " + cmbStudType.Text +
+                   //"\nTrack: " + frmAssesment.Track +
 
-                    "\n\nGrade Level/Year Level: " + frmAssesment.GradeLevel +
-                    "\nStrand/Course: " + cmbCourseStrand.Text +
-                    "\nFirst Name: " + txtFName.Text +
-                    "\nMiddle Name: " + txtMName.Text +
-                    "\nLast Name: " + txtLastName.Text +
+                   //"\n\nGrade Level/Year Level: " + frmAssesment.GradeLevel +
+                   //"\nStrand/Course: " + cmbCourseStrand.Text +
+                   //"\nFirst Name: " + txtFName.Text +
+                   //"\nMiddle Name: " + txtMName.Text +
+                   //"\nLast Name: " + txtLastName.Text +
 
-                    "\n\nReligion : " + txtReligion.Text +
-                    "\nNationality: " + cmbNationality.Text +                   
-                    "\nGender: " + registration.StudGender +
-                    "\nContact No.: " + txtStudCell.Text +
+                   //"\n\nReligion : " + txtReligion.Text +
+                   //"\nNationality: " + cmbNationality.Text +
+                   //"\nGender: " + registration.StudGender +
+                   //"\nContact No.: " + txtStudCell.Text +
 
-                    "\n\nBirthdate: " + dtBirthday.Text +
-                    "\nPlace of Birth: " + txtBirthPlace.Text +
-                    "\nAddress: " + txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text +
+                   //"\n\nBirthdate: " + dtBirthday.Text +
+                   //"\nPlace of Birth: " + txtBirthPlace.Text +
+                   //"\nAddress: " + txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text +
 
-                    "\n\nPrevious School Name : " + txtLastSchool.Text +
-                    "\nPrevious School Address: " + txtLastSchAddress.Text;
+                   //"\n\nPrevious School Name : " + txtLastSchool.Text +
+                   //"\nPrevious School Address: " + txtLastSchAddress.Text;
 
                 string title = "GOC_INFO_SYS";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show(message, title, buttons,MessageBoxIcon.Information);
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
-                    //save the info to database
-                    registration.Save();
+                    //update the info to database
+                  
+                    sp.UpdateStudProfile();
                 }
                 else
                 {
                     return;
                 }
+            }
+            else
+            {
 
-
-
-              
-
-                //clear in assesment
                 
 
+                    //toedit is false
+                    bool required = true;
 
-                //string message = "Do you want to assess this Enrollee?";
-                //string title = "Next Step";
-                //MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                //DialogResult result = MessageBox.Show(message, title, buttons);
-                //if (result == DialogResult.Yes)
-                //{
+                if (txtStudCell.MaskFull == true && dtBirthday.MaskFull == true && LRNtxt.MaskFull == true && other_address == true)
+                {
+                    required = true;
+
+                }
+                else
+                {
+                    if (LRNtxt.MaskFull == false)
+                    {
+                        MessageBox.Show("Please Check the LRN Number if Completed");
+                        LRNtxt.BackColor = Color.LightBlue;
+
+                        required = false;
+                    }
+
+                    if (txtStudCell.MaskFull == false)
+                    {
+                        MessageBox.Show("Please Check Student Phone Number.");
+                        txtStudCell.BackColor = Color.LightBlue;
+
+                        required = false;
+                    }
+
+                    if (dtBirthday.MaskFull == false)
+                    {
+                        MessageBox.Show("Please Check the Birthday");
+                        dtBirthday.BackColor = Color.LightBlue;
+
+                        required = false;
+                    }
+                }
+
+                if (this.CheckRequiredFields() == true && required == true)
+                {
+
+                    foreach (Control child in Controls)
+                    {
+                        if (child is TextBox)
+                        {
+                            TextBox tb = child as TextBox;
+                            if (string.IsNullOrEmpty(tb.Text))
+                            {
+                                tb.Text = @"N/A";
+                            }
+                        }
+                    }
+
+                    registration.StudType = cmbStudType.Text;
+                    registration.StudLRN = LRNtxt.Text;
+                    registration.StudGOCNo = "N/A";
+                    registration.StudRegistrationNo = txtRegno.Text;
+                    registration.StudLastName = txtLastName.Text.ToUpper();
+                    registration.StudMiddleName = txtMName.Text.ToUpper();
+                    registration.StudFirstName = txtFName.Text.ToUpper();
+                    registration.StudStrand = cmbCourseStrand.Text.ToUpper(); ;
+                    registration.StudVoucher = cmbVoucher.Text;
+                    registration.StudAddress1 = txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text;
+                    registration.StudDateOfBirth = dtBirthday.Text.ToString();
+                    registration.StudBirthPlace = txtBirthPlace.Text;
+                    registration.Religion = txtReligion.Text;
+                    registration.Nationality = cmbNationality.Text;
+                    //registration.StudGender = checkGender.Text;
+                    registration.StudContactNo = txtStudCell.Text;
+                    registration.StudTelNo = txtTelNo.Text;
+                    registration.StudPrevSchool = txtLastSchool.Text;
+                    registration.StudPrevSchoolAddress = txtLastSchAddress.Text;
+
+                    registration.StudType = cmbStudType.Text;
+
+                    registration.FatherName = txtFatherName.Text;
+                    registration.MotherName = txtMother.Text;
+                    registration.MotherWork = txtMotherWork.Text;
+                    registration.FatherWork = txtFatherWork.Text;
+                    //registration.FatherContactNo = txtFatherContact.Text;
+                    //registration.MotherContactNo = txtMotherContact.Text;
+                    registration.GuardianName = txtGuardianName.Text;
+                    registration.GuardianWork = txtGuardianWork.Text;
+                    registration.GuardianCompleteAddress = txtAddress2.Text + " " + txtBarangay2.Text + " " + cmbMunicipality2.Text + " " + cmbProvince2.Text;
+                    registration.GuardianRelationship = txtRelation.Text;
+                    //registration.GuardianContactNo = txtGuardianCell.Text;
+                    //registration.GuardianTelNo = txtGuardianTel.Text;
+
+                    if (txtFatherContact.Equals(""))
+                    {
+                        registration.FatherContactNo = "0000-000-0000";
+                    }
+                    else
+                    {
+                        registration.FatherContactNo = txtFatherContact.Text;
+                    }
+
+                    if (txtMotherContact.Text == "")
+                    {
+                        registration.MotherContactNo = "0000-000-0000";
+                    }
+                    else
+                    {
+                        registration.MotherContactNo = txtMotherContact.Text;
+                    }
+
+                   
+
+                    if (txtGuardianCell.Text == "")
+                    {
+                        registration.GuardianContactNo = "0000-000-0000";
+                    }
+                    else
+                    {
+                        registration.GuardianContactNo = txtGuardianCell.Text;
+                    }
+
+                    if (txtGuardianTel.Text == "")
+                    {
+                        registration.GuardianTelNo = "0000-000-0000";
+                    }
+                    else
+                    {
+                        registration.GuardianTelNo = txtGuardianTel.Text;
+                    }
+
+                  
+
+                    
+
+
+
+
+
+                    registration.SYEnrolled = School;
+                    //registration.DateEnrolled = DateTime.Today.ToString("yyyy-mm-dd");
+                    //////////////////////////////////////
+                    registration.Reservee = "0";
+                    registration.ReserveFor = "0";
+                    registration.PartialPayment = "0";
+                    registration.FullPayment = "0";
+                    registration.Section = "0";
+                    //function to load important filtering            
+
+                    checkYearLevel();
+                    CheckTrack();
+                    checkRequirements();
+                    checkGender();
+
+                    string message = "Please double check the information, click ok to save record." +
+
+                        "\n\nRegistration No.: " + txtRegno.Text +
+                        "\nLRN: " + LRNtxt.Text +
+                        "\nVoucher Type: " + cmbVoucher.Text +
+                        "\nStudent Type: " + cmbStudType.Text +
+                        "\nTrack: " + frmAssesment.Track +
+
+                        "\n\nGrade Level/Year Level: " + frmAssesment.GradeLevel +
+                        "\nStrand/Course: " + cmbCourseStrand.Text +
+                        "\nFirst Name: " + txtFName.Text +
+                        "\nMiddle Name: " + txtMName.Text +
+                        "\nLast Name: " + txtLastName.Text +
+
+                        "\n\nReligion : " + txtReligion.Text +
+                        "\nNationality: " + cmbNationality.Text +
+                        "\nGender: " + registration.StudGender +
+                        "\nContact No.: " + txtStudCell.Text +
+
+                        "\n\nBirthdate: " + dtBirthday.Text +
+                        "\nPlace of Birth: " + txtBirthPlace.Text +
+                        "\nAddress: " + txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text +
+
+                        "\n\nPrevious School Name : " + txtLastSchool.Text +
+                        "\nPrevious School Address: " + txtLastSchAddress.Text;
+
+                    string title = "GOC_INFO_SYS";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        //save the info to database
+                        registration.Save();
+                    }
+                    else
+                    {
+                        return;
+                    }
 
                     frmAssesment.Reset();
                     assements.Clear();
@@ -1407,49 +1741,38 @@ namespace GOCSystem2018
                     frmAssesment.StudName = txtLastName.Text.ToUpper() + " , " + txtFName.Text.ToUpper() + " " + txtMName.Text.ToUpper();
                     frmAssesment.LRN = LRNtxt.Text;
                     frmAssesment.Strand = cmbCourseStrand.Text.ToUpper();
-                    //frmAssesment.tuitionFees2();
 
                     frmAssesment.LoadSection();
                     frmAssesment.LoadSchoolYear();
                     frmAssesment.Voucher = cmbVoucher.Text;
                     frmAssesment.ComputeVoucher();
-
                     frmAssesment.LoadAssesOtherFees();
                     frmAssesment.LoadAssesMiscFees();
-
                     frmAssesment.LoadTuitionFee();
                     frmAssesment.TotalTuition();
-                   
-                    //frmAssesment.Reset();
-                   // frmAssesment.LoadSection();
-                   // frmAssesment.LoadSchoolYear();
 
-                    //this.Close();
-                    frmAssessmentSearch search = new frmAssessmentSearch();                   
-                   
+                    frmAssessmentSearch search = new frmAssessmentSearch();
+                    MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin.dispanel.Controls.Clear();
+                    search.TopLevel = false;
+                    search.AutoScroll = true;
+                    mainwin.dispanel.Controls.Add(search);
 
-                MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
-                mainwin.dispanel.Controls.Clear();
-                search.TopLevel = false;
-                search.AutoScroll = true;
-                mainwin.dispanel.Controls.Add(search);
-
-                search.Show();
-                //}
-                //else
-                //{
-                //    this.Hide();
-                //    this.Dispose();
-                //}
-
-
-
+                    search.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Please fill out all required fields", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
-            else
-            {
-                MessageBox.Show("Please fill out all required fields", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
+
+           
+
+
 
         }
+
+
+
     }
 }
