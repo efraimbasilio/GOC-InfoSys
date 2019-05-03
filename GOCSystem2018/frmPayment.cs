@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace GOCSystem2018
 {
@@ -160,7 +161,7 @@ namespace GOCSystem2018
         public double  TotalMiscFee, TotalOtherFee, AmountGiven, BalancePartial , perMonthFee;
 
         public string S_LRN, S_GOC, S_NAME,S_PAYFOR,S_AMOUNT;
-
+        public bool toSave = true;
         private void txtAmountGiven_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
@@ -370,10 +371,7 @@ namespace GOCSystem2018
         }
 
         public void PartialSecondPay()
-        {
-            
-
-
+        {           
             if (enroll_status == null)
             {
                 return;
@@ -780,46 +778,142 @@ namespace GOCSystem2018
             lblGOCNo.Text = GOCNo;
             lblName.Text = full_name;
             lblPAYFOR.Text = S_PAYFOR;
-            
-    }
+
+            LoadRecordsORPartial();
+            LoadRecordsOR();
+        }
 
         //For billing
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtORNo.Text == "" || txtAmountGiven.Text == "")
+            try
             {
-                MessageBox.Show("Please check the OR Number or the Payment");
+                if (txtORNo.Text == "" || txtAmountGiven.Text == "")
+                {
+                    MessageBox.Show("Please check the OR Number or the Payment");
+                    return;
+                }
+                else
+                {
+                    checkdup();
+                    checkdupPartial();
+                    if ( toSave == true)
+                    {
+
+                        Reservations();
+                        PartialNoReserve();
+                        PartialSecondPay();
+
+                        MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                        mainwin.dispanel.Controls.Clear();
+                        mainwin.dispanel.Visible = false;
+
+                        mainwin.Dashboardpanel.Visible = true;
+                        this.Close();
+                    }
+                    else
+                    {
+                        return;
+                    }
+                    
+                }
+            }
+            catch (Exception ex)
+            {               
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }                              
+        }
+
+
+        public void LoadRecordsOR()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM billing_or";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+                    dgvORCheck.DataSource = dt;
+
+                }
             }
-            else
+            catch (MySqlException ex)
             {
 
-
-              //  MessageBox.Show(enroll_status + " " + payment_status + " " + payment_no);
-
-                Reservations();
-                PartialNoReserve();
-                PartialSecondPay();
-                //    this.Hide();
-
-                //    frmBillingSearch search = new frmBillingSearch();
-                //    search.Show();
-
-                MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
-                mainwin.dispanel.Controls.Clear();
-                mainwin.dispanel.Visible = false;
-
-                mainwin.Dashboardpanel.Visible = true;
-
-
-                this.Close();
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-           
-            
         }
-        
-                      
+
+        public void LoadRecordsORPartial()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM billing_partial";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+                    dgvORCheckPartial.DataSource = dt;
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        public void checkdup()
+        {
+            for (int i = 0; i < dgvORCheck.Rows.Count -1; i++)
+            {
+                if (dgvORCheck.Rows[i].Cells[3].FormattedValue.ToString() == txtORNo.Text)  //GOC NO
+                {
+                    MessageBox.Show("Duplicate OR Number Detected, Please check the OR Number","GOC_INFO_SYS",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                   toSave = false;
+
+                    return;
+                }
+            }
+            txtORNo.Focus();
+        }
+
+        public void checkdupPartial()
+        {
+            for (int i = 0; i < dgvORCheck.Rows.Count - 1; i++)
+            {
+                if (dgvORCheckPartial.Rows[i].Cells[1].FormattedValue.ToString() == txtORNo.Text)  //GOC NO
+                {
+                    MessageBox.Show("Duplicate OR Number Detected, Please check the OR Number", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    toSave = false;
+                    return;
+                }
+            }
+            txtORNo.Focus();
+        }
+
         private void btnProcess_Click(object sender, EventArgs e)
         {
             if (fee_for_reservation == Convert.ToDouble(txtAmountGiven.Text))

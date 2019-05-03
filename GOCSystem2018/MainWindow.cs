@@ -203,12 +203,9 @@ namespace GOCSystem2018
 
             if (accver.Equals("Registrar"))
             {
-                button2.Enabled = false;
-                button3.Enabled = false;
-                button6.Enabled = false;
-                button7.Enabled = false;
-                button8.Enabled = false;
-                button9.Enabled = false;
+               
+                button4.Enabled = false;//Accounting
+                button5.Enabled = false;//StudentList
             }
             else if (accver.Equals("Teacher"))
             {
@@ -223,11 +220,8 @@ namespace GOCSystem2018
             else if (accver.Equals("Cashier"))
             {
                 button2.Enabled = false;
-                button3.Enabled = false;
-                button6.Enabled = false;
-                button7.Enabled = false;
-                button8.Enabled = false;
-                button9.Enabled = false;
+                
+              
             }
             else if (accver.Equals("Admin"))
             {
@@ -292,7 +286,6 @@ namespace GOCSystem2018
                 MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
@@ -469,10 +462,7 @@ namespace GOCSystem2018
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-
-            
-
+        {           
             //string message = "Total Number of Registrant is:" + frm.dgvTempRegno.Rows.Count + "\nDo you want to proceed?";
             string message = "Do you want to proceed?";
             string title = "GOC_INFO_SYS";
@@ -514,13 +504,10 @@ namespace GOCSystem2018
             frmAssessmentSearch.Show();
 
             Dashboardpanel.Visible = false;
-
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
-
             dispanel.Controls.Clear();
             frmBillingSearch frmbs = new frmBillingSearch();
             frmbs.TopLevel = false;

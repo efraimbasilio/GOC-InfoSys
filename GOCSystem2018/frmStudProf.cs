@@ -346,6 +346,8 @@ namespace GOCSystem2018
             mothertxt.Text = Mname;
             guardiantxt.Text = Gname;
 
+            textBox1.Text = LRN;
+
             LoadPaymentHistory();
         }
 

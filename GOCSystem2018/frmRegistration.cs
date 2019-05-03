@@ -33,7 +33,7 @@ namespace GOCSystem2018
         public string House_No, Barangay, Provice, Municipality, Cell_No, Tel_No,Last_School, School_Address, Father,Mother, Guardian, F_Occupation,M_Occupation,G_Occupation,G_House_No, G_Barangay;
         public string G_Municipality,G_Province,G_Relationship,G_CellNo,G_TelNo;
 
-
+        public bool other_address;
         public string School, RegistrationNumber , TempRegNumber;
         public void LoadSchoolYear()
         {
@@ -113,10 +113,10 @@ namespace GOCSystem2018
                 return false;
             }
 
-            if (txtMName.Text == "")
-            {
-                return false;
-            }
+            //if (txtMName.Text == "")
+            //{
+            //    return false;
+            //}
             if (txtLastName.Text == "")
             {
                 return false;
@@ -438,6 +438,168 @@ namespace GOCSystem2018
             }     
         }//End LoadRecords() OK
 
+        private void cmbStudType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            optAcademic.Checked = true;
+            if (cmbStudType.Text.Equals("Old Student"))
+            {
+                opt2ndYear.Checked = true;
+            }
+            else
+            {
+                opt1stYear.Checked = true;
+            }
+        }
+
+        private void dtBirthday_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                dtBirthday.Select(0, 0);
+            });
+        }
+
+        private void txtStudCell_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                txtStudCell.Select(0, 0);
+            });
+        }
+
+        private void txtTelNo_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                txtTelNo.Select(0, 0);
+            });
+        }
+
+        private void txtFatherContact_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                txtFatherContact.Select(0, 0);
+            });
+        }
+
+        private void txtMotherContact_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                txtMotherContact.Select(0, 0);
+            });
+        }
+
+        private void txtGuardianCell_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                txtGuardianCell.Select(0, 0);
+            });
+        }
+
+        private void txtGuardianTel_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                txtGuardianTel.Select(0, 0);
+            });
+        }
+
+        private void dtBirthday_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void LRNtxt_TextChanged_1(object sender, EventArgs e)
+        {
+            if (LRNtxt.MaskFull == true)
+            {
+                LRNtxt.BackColor = Color.White;
+            }
+        }
+
+        private void LRNtxt_Enter(object sender, EventArgs e)
+        {
+            this.BeginInvoke((MethodInvoker)delegate ()
+            {
+                LRNtxt.Select(0, 0);
+            });
+        }
+
+        private void label68_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool otherAddress()
+        {
+            if (txtAddress.Text == "" && other_address == true)
+            {
+               
+                return true;
+            }
+
+            if (txtBarangay.Text == "" && other_address == true)
+            {
+               
+                return true;
+            }
+
+            if (cmbProvince.Text == "" && other_address == true)
+            {
+                
+                return true;
+            }
+
+            if (cmbMunicipality.Text == "" && other_address == true)
+            {
+                
+                return true;
+            }
+
+            return false;
+        }
+
+        private void chkOtherAddress_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkOtherAddress.Checked == true)
+            {
+                other_address = true;
+                otherAddress();
+                txtOtherAddress.Enabled = true;
+            
+                txtAddress.Text = string.Empty;
+                
+                cmbProvince.Text = string.Empty;
+                cmbMunicipality.Text = string.Empty;
+                txtBarangay.Text = string.Empty;
+
+                txtAddress.Enabled = false;
+                cmbMunicipality.Enabled = false;
+                cmbProvince.Enabled = false;
+                txtBarangay.Enabled = false;
+
+            }
+            else
+            {
+                other_address = false;
+                otherAddress();
+
+                txtOtherAddress.Enabled = false;
+                txtOtherAddress.Text = string.Empty;
+
+                txtAddress.Enabled = true;
+                cmbMunicipality.Enabled = true;
+                cmbProvince.Enabled = true;
+                txtBarangay.Enabled = true;
+
+               
+                
+            }  
+        }
+
         public void RegNoCount()
         {
             int sum = 0;
@@ -535,7 +697,7 @@ namespace GOCSystem2018
             cmbCourseStrand.Text = "";
             LoadCombo();
 
-            opt1stYear.Checked = true;
+          //  opt1stYear.Checked = true;
         }
 
         private void optAcademic_CheckedChanged(object sender, EventArgs e)
@@ -547,7 +709,7 @@ namespace GOCSystem2018
             cmbCourseStrand.Text = "";
             LoadCombo();
 
-            opt1stYear.Checked = true;
+           // opt1stYear.Checked = true;
         }
 
         private void optCollege_CheckedChanged(object sender, EventArgs e)
@@ -561,7 +723,7 @@ namespace GOCSystem2018
             cmbCourseStrand.Text = "";
             LoadCombo();
 
-            opt1stYear.Checked = true;
+           // opt1stYear.Checked = true;
         }
 
         private void chkEntranceExam_CheckedChanged(object sender, EventArgs e)
@@ -583,8 +745,6 @@ namespace GOCSystem2018
         private void button2_Click(object sender, EventArgs e)
         {
             
-
-
         }
 
         private void LRNtxt_KeyPress(object sender, KeyPressEventArgs e)
@@ -622,8 +782,21 @@ namespace GOCSystem2018
 
         private void txtFName_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if ((e.KeyChar == '-') && ((sender as TextBox).Text.IndexOf('-') > -1))
+            {
                 e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+          
+
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '-'))
+                e.Handled = true;
+
         }
 
         private void txtFName_KeyDown(object sender, KeyEventArgs e)
@@ -645,7 +818,12 @@ namespace GOCSystem2018
 
         private void cmbProvince_SelectedValueChanged(object sender, EventArgs e)
         {
+            LoadComboAddress();
+           
+        }
 
+        public void LoadComboAddress()
+        {
             if (cmbProvince.SelectedItem.Equals("Aurora"))
             {
                 cmbMunicipality.Items.Clear();
@@ -819,7 +997,6 @@ namespace GOCSystem2018
                 cmbMunicipality.Items.Add("Olongapo City");
             }
         }
-
         private void label19_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -1074,13 +1251,21 @@ namespace GOCSystem2018
         {
             bool required = true;
            
-            if (txtStudCell.MaskFull == true && dtBirthday.MaskFull == true)
+            if (txtStudCell.MaskFull == true && dtBirthday.MaskFull == true && LRNtxt.MaskFull == true && other_address == true)
             {
                 required = true;
 
             }
             else
             {
+                if (LRNtxt.MaskFull == false)
+                {
+                    MessageBox.Show("Please Check the LRN Number if Completed");
+                    LRNtxt.BackColor = Color.LightBlue;
+
+                    required = false;
+                }
+
                 if (txtStudCell.MaskFull ==false)
                 {
                     MessageBox.Show("Please Check Student Phone Number.");
@@ -1096,6 +1281,10 @@ namespace GOCSystem2018
 
                     required = false;
                 }
+
+               
+
+
             }
        
 
@@ -1157,8 +1346,48 @@ namespace GOCSystem2018
                 checkRequirements();
                 checkGender();
 
-                //save the info to database
-                registration.Save();
+                string message = "Please double check the information, click ok to save record."+
+
+                    "\n\nRegistration No.: " + txtRegno.Text +
+                    "\nLRN: " + LRNtxt.Text +
+                    "\nVoucher Type: " + cmbVoucher.Text +
+                    "\nStudent Type: " + cmbStudType.Text +
+                    "\nTrack: " + frmAssesment.Track +
+
+                    "\n\nGrade Level/Year Level: " + frmAssesment.GradeLevel +
+                    "\nStrand/Course: " + cmbCourseStrand.Text +
+                    "\nFirst Name: " + txtFName.Text +
+                    "\nMiddle Name: " + txtMName.Text +
+                    "\nLast Name: " + txtLastName.Text +
+
+                    "\n\nReligion : " + txtReligion.Text +
+                    "\nNationality: " + cmbNationality.Text +                   
+                    "\nGender: " + registration.StudGender +
+                    "\nContact No.: " + txtStudCell.Text +
+
+                    "\n\nBirthdate: " + dtBirthday.Text +
+                    "\nPlace of Birth: " + txtBirthPlace.Text +
+                    "\nAddress: " + txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text +
+
+                    "\n\nPrevious School Name : " + txtLastSchool.Text +
+                    "\nPrevious School Address: " + txtLastSchAddress.Text;
+
+                string title = "GOC_INFO_SYS";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons,MessageBoxIcon.Information);
+                if (result == DialogResult.Yes)
+                {
+                    //save the info to database
+                    registration.Save();
+                }
+                else
+                {
+                    return;
+                }
+
+
+
+              
 
                 //clear in assesment
                 
