@@ -1636,6 +1636,7 @@ namespace GOCSystem2018
 
                     if (txtFatherContact.Equals(""))
                     {
+
                         registration.FatherContactNo = "0000-000-0000";
                     }
                     else

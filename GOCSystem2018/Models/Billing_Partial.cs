@@ -190,6 +190,59 @@ namespace GOCSystem2018
             }
         }
 
+        public List<Billing_Partial> Load()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+
+                    string sql = "SELECT * FROM billing_partial";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        Billing_Partial billingPartial = new Billing_Partial();
+
+                        //prepare properties
+                        billingPartial.id = Convert.ToInt32(reader["id"].ToString());
+                        billingPartial.enStatus = reader["enrollment_status"].ToString();
+                        billingPartial.oRNo = reader["or_no"].ToString();
+                        billingPartial.idNo = reader["idno"].ToString();
+                        billingPartial.full_name = reader["full_name"].ToString();
+                        billingPartial.downPayment = reader["dp"].ToString();
+                        billingPartial.p1 = reader["1p"].ToString();
+                        billingPartial.p2 = reader["2p"].ToString();
+                        billingPartial.p3 = reader["3p"].ToString();
+                        billingPartial.p4 = reader["4p"].ToString();
+                        billingPartial.p5 = reader["5p"].ToString();
+                        billingPartial.p6 = reader["6p"].ToString();
+                        billingPartial.p7 = reader["7p"].ToString();
+                        billingPartial.p8 = reader["8p"].ToString();
+                        billingPartial.p9 = reader["9p"].ToString();
+                        billingPartial.p10 = reader["10p"].ToString();
+                        billingPartial.regNo = reader["regno"].ToString();
+                        billingPartial.balance = reader["balance"].ToString();
+
+                        billingPartials.Add(billingPartial);
+
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return billingPartials;
+        }//End of Load
+
         public List<Billing_Partial> GetPaymentPartial()
         {
             try

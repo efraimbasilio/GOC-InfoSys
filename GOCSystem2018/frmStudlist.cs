@@ -388,5 +388,11 @@ namespace GOCSystem2018
         {
             LoadRecords12();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string valueToSearch = textBox1.Text.ToString();
+            searchData(valueToSearch);
+        }
     }
 }

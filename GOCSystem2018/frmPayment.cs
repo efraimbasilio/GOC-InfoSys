@@ -265,27 +265,52 @@ namespace GOCSystem2018
             }
         } //Display the Amount per month
         
+        //public void StudNoGenerate()
+        //{
+        //    int ctrGOCNum = 1;
+        //    //clear list           
+        //    bills.Clear();
+        //    //pass value to list
+        //    //MessageBox.Show(assements.Count().ToString());
+        //    if (bills.Count() < 1)
+        //    {
+        //        GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (ctrGOCNum).ToString("0000");
+        //    }
+
+        //    bills = bill.Load();
+
+        //    foreach (var item in bills)
+        //    {
+        //        //GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");
+        //        ctrGOCNum = ctrGOCNum + 1;
+        //        GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (ctrGOCNum).ToString("0000");
+        //    }
+        //}//StudNoGenerate
+
+
+
         public void StudNoGenerate()
         {
             int ctrGOCNum = 1;
             //clear list           
-            bills.Clear();
+            billingPartials.Clear();
             //pass value to list
             //MessageBox.Show(assements.Count().ToString());
-            if (bills.Count() < 1)
+            if (billingPartials.Count() < 1)
             {
                 GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (ctrGOCNum).ToString("0000");
             }
 
-            bills = bill.Load();
+            billingPartials = billingPartial.Load();
 
-            foreach (var item in bills)
+            foreach (var item in billingPartials)
             {
                 //GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");
                 ctrGOCNum = ctrGOCNum + 1;
                 GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (ctrGOCNum).ToString("0000");
             }
         }//StudNoGenerate
+
 
         public void CountPayment()
         {
