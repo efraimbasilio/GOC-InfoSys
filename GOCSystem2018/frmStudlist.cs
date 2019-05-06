@@ -205,16 +205,16 @@ namespace GOCSystem2018
                 {
                     con.Open();
 
-                    string sql = "SELECT * FROM enrolled_grade_12 WHERE CONCAT(`regno`, `full_name`,`gocno`) LIKE '%" + valueToSearch + "%'";
+                    string sql = "SELECT * FROM enrolled_grade_12 WHERE CONCAT(`regno`, `Full_name`,`GOCNo`) LIKE '%" + valueToSearch + "%'";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     MySqlDataAdapter da = new MySqlDataAdapter();
                     da.SelectCommand = cmd;
                     //initialize new datatable
-                    DataTable dt = new DataTable();
+                    DataTable dt2 = new DataTable();
 
-                    da.Fill(dt);
-                    dgvSearch.DataSource = dt;
+                    da.Fill(dt2);
+                    dgvSearch.DataSource = dt2;
                 }
             }
             catch (MySqlException ex)
@@ -393,6 +393,65 @@ namespace GOCSystem2018
         {
             string valueToSearch = textBox1.Text.ToString();
             searchData(valueToSearch);
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string valueToSearch = textBox2.Text.ToString();
+            searchData12(valueToSearch);
+        }
+
+        private void optG11_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void optG12_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoadRecords();
+            textBox2.Visible = false;
+            textBox1.Visible = true;
+            button2.BackColor = Color.FromArgb(245, 246, 251);
+            button2.ForeColor = Color.DarkGray;
+
+            button1.BackColor = Color.FromArgb(245, 246, 251);
+            button1.ForeColor = Color.DarkGray;
+
+            button3.BackColor = Color.FromArgb(1, 172, 120);
+            button3.ForeColor = Color.White;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoadRecords12();
+            textBox2.Visible = true;
+            textBox1.Visible = false;
+
+            button3.BackColor = Color.FromArgb(245, 246, 251);
+            button3.ForeColor = Color.DarkGray;
+
+            button1.BackColor = Color.FromArgb(245, 246, 251);
+            button1.ForeColor = Color.DarkGray;
+
+            button2.BackColor = Color.FromArgb(1, 172, 120);
+            button2.ForeColor = Color.White;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            button2.BackColor = Color.FromArgb(245, 246, 251);
+            button2.ForeColor = Color.DarkGray;
+
+            button3.BackColor = Color.FromArgb(245, 246, 251);
+            button3.ForeColor = Color.DarkGray;
+
+            button1.BackColor = Color.FromArgb(1, 172, 120);
+            button1.ForeColor = Color.White;
         }
     }
 }

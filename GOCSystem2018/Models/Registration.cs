@@ -78,6 +78,8 @@ namespace GOCSystem2018
         protected string partialPayment;
         protected string fullPayment;
 
+        protected string oldstudentNo;
+
         public string OtherAddress
         {
             get { return otherAddress; }
@@ -438,6 +440,12 @@ namespace GOCSystem2018
             set { relationshipToGuardian = value; }
         }
 
+        public string OldStudentNo
+        {
+            get { return oldstudentNo; }
+            set { oldstudentNo = value; }
+        }
+
         /// <summary>
         /// For Senior High School Registration
         /// </summary>
@@ -452,12 +460,15 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO student_profile(IDNo,LRN,regNo,last_name,middle_name,first_name,grade_Level,strand,track,voucher_type,address,date_of_birth,place_of_birth,religion,nationality,gender,stud_contactNo,stud_telNo,prev_school,prev_school_address,father_name,mother_name,mother_work,father_work,guardian_name,guardian_work,guardian_address,guardian_relationship,guardian_contactNo,guardian_telNo,bc,form138,drugtest,good_moral,en_exam,ncae,sy_enrolled,reservee,reserve_for,partial_Payment,full_Payment,section,otheraddress,stud_type,fatherContactNo,motherContactNo) " +
-                                 "VALUES (@studGOCNo,@studLRN,@studRegistrationNo,@studLastName,@studMiddleName,@studFirstName,@studGradeLevel, @studStrand, @studAcadTrack, @studVoucher, @studAddress1, @studDateOfBirth,@studBirthPlace, @religion, @nationality, @studGender, @studContactNo, @studTelNo, @studPrevSchool, @studPrevSchoolAddress, @fatherName,@motherName, @motherWork, @fatherWork, @guardianName, @guardianWork, @guardianCompleteAddress, @guardianRelationship,@guardianContactNo,@guardianTelNo,@reqPSA, @reqForm138, @reqDrugTest,@reqAdmissionTest,@reqNCAE,@reqGoodMoral,@syEnrolled,@reservee,@reserveFor,@partialPayment,@fullPayment,@section,@otherAddress,@studType,@fatherContactNo,@motherContactNo); ";
+                    string sql = "INSERT INTO student_profile(id_old_stud,IDNo,LRN,regNo,last_name,middle_name,first_name,grade_Level,strand,track,voucher_type,address,date_of_birth,place_of_birth,religion,nationality,gender,stud_contactNo,stud_telNo,prev_school,prev_school_address,father_name,mother_name,mother_work,father_work,guardian_name,guardian_work,guardian_address,guardian_relationship,guardian_contactNo,guardian_telNo,bc,form138,drugtest,good_moral,en_exam,ncae,sy_enrolled,reservee,reserve_for,partial_Payment,full_Payment,section,otheraddress,stud_type,fatherContactNo,motherContactNo) " +
+                                 "VALUES (@oldstudentNo,@studGOCNo,@studLRN,@studRegistrationNo,@studLastName,@studMiddleName,@studFirstName,@studGradeLevel, @studStrand, @studAcadTrack, @studVoucher, @studAddress1, @studDateOfBirth,@studBirthPlace, @religion, @nationality, @studGender, @studContactNo, @studTelNo, @studPrevSchool, @studPrevSchoolAddress, @fatherName,@motherName, @motherWork, @fatherWork, @guardianName, @guardianWork, @guardianCompleteAddress, @guardianRelationship,@guardianContactNo,@guardianTelNo,@reqPSA, @reqForm138, @reqDrugTest,@reqAdmissionTest,@reqNCAE,@reqGoodMoral,@syEnrolled,@reservee,@reserveFor,@partialPayment,@fullPayment,@section,@otherAddress,@studType,@fatherContactNo,@motherContactNo); ";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
                     //reservee,reserve_for,partial_Payment,full_Payment
                     //,@reservee,@reserveFor,@partialPayment,@fullPayment
+
+                    //OldStudent
+                    cmd.Parameters.AddWithValue("oldstudentNo", oldstudentNo);
 
                     //Billing
                     cmd.Parameters.AddWithValue("reservee", reservee);

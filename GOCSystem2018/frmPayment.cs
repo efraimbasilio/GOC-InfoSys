@@ -287,28 +287,63 @@ namespace GOCSystem2018
         //    }
         //}//StudNoGenerate
 
-
-
         public void StudNoGenerate()
         {
-            int ctrGOCNum = 1;
-            //clear list           
-            billingPartials.Clear();
-            //pass value to list
-            //MessageBox.Show(assements.Count().ToString());
-            if (billingPartials.Count() < 1)
+            bool OldStud = false;
+
+            studentProfiles.Clear();
+            studentProfile.StudRegistrationNo = reg_no;
+            studentProfiles = studentProfile.GetByRegNo();
+
+
+            foreach (var item in studentProfiles)
             {
-                GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (ctrGOCNum).ToString("0000");
+                if (item.StudType.Equals("Old Student"))
+                {
+                    OldStud = true;
+                }
+                else
+                {
+                    OldStud = false;
+                }
             }
 
-            billingPartials = billingPartial.Load();
-
-            foreach (var item in billingPartials)
+            if (OldStud == true)
             {
-                //GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");
-                ctrGOCNum = ctrGOCNum + 1;
-                GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (ctrGOCNum).ToString("0000");
+                studentProfiles.Clear();
+                studentProfile.StudRegistrationNo = reg_no;
+                studentProfiles = studentProfile.GetByRegNo();
+
+                foreach (var item in studentProfiles)
+                {
+                    GOCNo = item.OldStudentNo;
+                }               
             }
+            else//OLD way
+            {
+                MessageBox.Show("Old Way");
+                int ctrGOCNum = 1;
+                //clear list           
+                billingPartials.Clear();
+                //pass value to list
+                //MessageBox.Show(assements.Count().ToString());
+                if (billingPartials.Count() < 1)
+                {
+                    GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (ctrGOCNum).ToString("0000");
+                }
+
+                billingPartials = billingPartial.Load();
+
+                foreach (var item in billingPartials)
+                {
+                    //GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");
+                    ctrGOCNum = ctrGOCNum + 1;
+                    GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (ctrGOCNum).ToString("0000");
+                }
+            }
+
+
+           
         }//StudNoGenerate
 
 
@@ -820,9 +855,9 @@ namespace GOCSystem2018
                 }
                 else
                 {
-                    checkdup();
-                    checkdupPartial();
-                    if ( toSave == true)
+                    //checkdup();
+                    //checkdupPartial();
+                    if (toSave == true)
                     {
 
                         Reservations();
@@ -840,7 +875,7 @@ namespace GOCSystem2018
                     {
                         return;
                     }
-                    
+
                 }
             }
             catch (Exception ex)
@@ -917,11 +952,12 @@ namespace GOCSystem2018
                 if (dgvORCheck.Rows[i].Cells[3].FormattedValue.ToString() == txtORNo.Text)  //GOC NO
                 {
                     MessageBox.Show("Duplicate OR Number Detected, Please check the OR Number","GOC_INFO_SYS",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                   toSave = false;
+                  
 
                     return;
                 }
             }
+            toSave = false;
             txtORNo.Focus();
         }
 
@@ -932,11 +968,12 @@ namespace GOCSystem2018
                 if (dgvORCheckPartial.Rows[i].Cells[1].FormattedValue.ToString() == txtORNo.Text)  //GOC NO
                 {
                     MessageBox.Show("Duplicate OR Number Detected, Please check the OR Number", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    toSave = false;
+                    
                     return;
                 }
             }
             txtORNo.Focus();
+            toSave = false;
         }
 
         private void btnProcess_Click(object sender, EventArgs e)

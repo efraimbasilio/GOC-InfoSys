@@ -42,7 +42,7 @@ namespace GOCSystem2018
                 {
                     con.Open();
 
-                    string sql = "SELECT * FROM student_profile WHERE CONCAT(`last_name`, `first_name`,`regno`) LIKE '%" + valueToSearch + "%'";
+                    string sql = "SELECT * FROM student_profile WHERE CONCAT(`last_name`, `first_name`,`regno`,`LRN`) LIKE '%" + valueToSearch + "%'";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
@@ -247,23 +247,28 @@ namespace GOCSystem2018
             this.dgvSearch.Columns["2"].Visible = false;
             #endregion
 
-            #region designing DVG
 
+            #region designing DVG
             dgvSearch.BorderStyle = BorderStyle.None;
-            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 246, 251);
+            //dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 244, 246);
             dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 236, 240);
-            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.Gray;
+            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 244, 246);
+            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgvSearch.BackgroundColor = Color.White;
 
             dgvSearch.EnableHeadersVisualStyles = false;
             dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
-            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvSearch.ColumnHeadersDefaultCellStyle.Font = new Font("Open Sans Light", 14F, GraphicsUnit.Pixel);
+            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(91, 87, 91);
             dgvSearch.AdvancedCellBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None;
 
-            DataGridViewColumn gncol = dgvSearch.Columns[1];
-            gncol.Width = 220;
+            DataGridViewColumn gncol = dgvSearch.Columns["GOCNo"];
+            //gncol.Width = 220;
+
+            DataGridViewColumn gncol2 = dgvSearch.Columns["Full_Name"];
+            //gncol2.Width = 575;
+
 
             #endregion
         }
@@ -275,9 +280,7 @@ namespace GOCSystem2018
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string valueToSearch = txtSearch.Text.ToString();
-            searchData(valueToSearch);
-        }
+           
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
@@ -301,5 +304,12 @@ SelectData();
         {
             
         }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
+            string valueToSearch = txtSearch.Text.ToString();
+            searchData(valueToSearch);
+        }
+    }
     }
 }

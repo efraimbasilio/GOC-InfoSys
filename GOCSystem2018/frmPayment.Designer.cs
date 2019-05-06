@@ -372,7 +372,7 @@
             this.lblAmount_Due.AutoSize = true;
             this.lblAmount_Due.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmount_Due.ForeColor = System.Drawing.Color.White;
-            this.lblAmount_Due.Location = new System.Drawing.Point(364, 10);
+            this.lblAmount_Due.Location = new System.Drawing.Point(327, 10);
             this.lblAmount_Due.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAmount_Due.Name = "lblAmount_Due";
             this.lblAmount_Due.Size = new System.Drawing.Size(64, 25);
@@ -392,7 +392,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(331, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(294, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -564,7 +564,7 @@
             this.dgvORCheck.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvORCheck.Location = new System.Drawing.Point(513, 408);
             this.dgvORCheck.Name = "dgvORCheck";
-            this.dgvORCheck.Size = new System.Drawing.Size(139, 150);
+            this.dgvORCheck.Size = new System.Drawing.Size(286, 150);
             this.dgvORCheck.TabIndex = 1080;
             // 
             // dgvORCheckPartial
@@ -586,9 +586,9 @@
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvORCheckPartial.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dgvORCheckPartial.Location = new System.Drawing.Point(664, 408);
+            this.dgvORCheckPartial.Location = new System.Drawing.Point(825, 411);
             this.dgvORCheckPartial.Name = "dgvORCheckPartial";
-            this.dgvORCheckPartial.Size = new System.Drawing.Size(139, 150);
+            this.dgvORCheckPartial.Size = new System.Drawing.Size(248, 150);
             this.dgvORCheckPartial.TabIndex = 1081;
             // 
             // frmPayment
@@ -596,7 +596,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(453, 573);
+            this.ClientSize = new System.Drawing.Size(456, 573);
             this.Controls.Add(this.dgvORCheckPartial);
             this.Controls.Add(this.dgvORCheck);
             this.Controls.Add(this.label9);

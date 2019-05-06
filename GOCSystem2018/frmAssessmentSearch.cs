@@ -129,7 +129,6 @@ namespace GOCSystem2018
         private void frmStudSearch_Load(object sender, EventArgs e)
         {
             LoadRecords();
-
             #region header name fix
 
             dgvSearch.Columns["LRN"].HeaderText = "LRN";
@@ -143,13 +142,13 @@ namespace GOCSystem2018
             dgvSearch.Columns["track"].HeaderText = "Track";
             dgvSearch.Columns["strand"].HeaderText = "Strand";
             dgvSearch.Columns["date_enrolled"].HeaderText = "Date Enrolled";
-            dgvSearch.Columns["sy_enrolled"].HeaderText = "SY";        
+            dgvSearch.Columns["sy_enrolled"].HeaderText = "SY";
             #endregion
 
             #region removal of unneccessary header
             this.dgvSearch.Columns["id"].Visible = false;
-           // this.dgvSearch.Columns["IDNo"].Visible = false;
-           // this.dgvSearch.Columns["regNo"].Visible = false;
+            // this.dgvSearch.Columns["IDNo"].Visible = false;
+            // this.dgvSearch.Columns["regNo"].Visible = false;
             this.dgvSearch.Columns["Reservee"].Visible = false;
             this.dgvSearch.Columns["Reserve_for"].Visible = false;
             this.dgvSearch.Columns["Full_payment"].Visible = false;
@@ -183,28 +182,33 @@ namespace GOCSystem2018
             this.dgvSearch.Columns["en_exam"].Visible = false;
             this.dgvSearch.Columns["ncae"].Visible = false;
             this.dgvSearch.Columns["date_enrolled"].Visible = false;
-           // this.dgvSearch.Columns["sy_enrolled"].Visible = false;
+            // this.dgvSearch.Columns["sy_enrolled"].Visible = false;
             this.dgvSearch.Columns["1"].Visible = false;
             this.dgvSearch.Columns["2"].Visible = false;
             #endregion
 
-            #region designing DVG
 
+            #region designing DVG
             dgvSearch.BorderStyle = BorderStyle.None;
-            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 246, 251);
+            //dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 244, 246);
             dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 236, 240);
-            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.Gray;
+            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 244, 246);
+            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgvSearch.BackgroundColor = Color.White;
 
             dgvSearch.EnableHeadersVisualStyles = false;
             dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
-            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvSearch.ColumnHeadersDefaultCellStyle.Font = new Font("Open Sans Light", 14F, GraphicsUnit.Pixel);
+            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(91, 87, 91);
             dgvSearch.AdvancedCellBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None;
 
-            DataGridViewColumn gncol = dgvSearch.Columns[1];
-            gncol.Width = 220;
+            //DataGridViewColumn gncol = dgvSearch.Columns["GOCNo"];
+            //gncol.Width = 220;
+
+            //DataGridViewColumn gncol2 = dgvSearch.Columns["Full_Name"];
+            //gncol2.Width = 575;
+
 
             #endregion
         }
@@ -243,7 +247,7 @@ namespace GOCSystem2018
                 {
                     con.Open();
 
-                    string sql = "SELECT * FROM student_profile WHERE CONCAT(`last_name`, `first_name`,`regno`) LIKE '%" + valueToSearch + "%'";
+                    string sql = "SELECT * FROM student_profile WHERE CONCAT(`last_name`, `first_name`,`regno`,`LRN`) LIKE '%" + valueToSearch + "%'";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     MySqlDataAdapter da = new MySqlDataAdapter();
@@ -353,8 +357,7 @@ namespace GOCSystem2018
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            string valueToSearch = txtSearch.Text.ToString();
-            searchData(valueToSearch);
+           
         }
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
@@ -383,6 +386,12 @@ namespace GOCSystem2018
         private void dgvSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
+            string valueToSearch = txtSearch.Text.ToString();
+            searchData(valueToSearch);
         }
     }
 }

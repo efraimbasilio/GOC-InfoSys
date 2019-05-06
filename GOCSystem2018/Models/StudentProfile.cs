@@ -68,6 +68,13 @@ namespace GOCSystem2018
         protected string reserveFor;
         protected string partialPayment;
         protected string fullPayment;
+        protected string oldstudentNo;
+
+        public string OldStudentNo
+        {
+            get { return oldstudentNo; }
+            set { oldstudentNo = value; }
+        }
 
         public string Section
         {
@@ -569,7 +576,7 @@ namespace GOCSystem2018
                         //prepare properties
                         //prepare properties
                         SP.id = Convert.ToInt32(reader["id"].ToString());
-
+                        SP.oldstudentNo = reader["id_old_stud"].ToString();
 
                         SP.studType = reader["stud_Type"].ToString();
 
@@ -662,6 +669,7 @@ namespace GOCSystem2018
                         SP.id = Convert.ToInt32(reader["id"].ToString());
 
                         SP.studType = reader["stud_Type"].ToString();
+                        SP.oldstudentNo = reader["id_old_stud"].ToString();
 
                         SP.studGOCNo = reader["IDNo"].ToString();
                         SP.StudLRN = reader["LRN"].ToString();
@@ -751,7 +759,7 @@ namespace GOCSystem2018
 
                         //prepare properties
                         SP.id = Convert.ToInt32(reader["id"].ToString());
-
+                        SP.oldstudentNo = reader["id_old_stud"].ToString();
 
                         SP.studType = reader["stud_Type"].ToString();
 
@@ -840,7 +848,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE student_profile SET LRN=@studLRN,regNo=@studRegistrationNo,last_name=@studLastName,middle_name=@studMiddleName,first_name=@studFirstName,grade_Level=@studGradeLevel,strand=@studStrand,track=@studAcadTrack,voucher_type=@studVoucher,address=@studAddress1,date_of_birth=@studDateOfBirth,place_of_birth=@studBirthPlace,religion=@religion,nationality=@nationality,gender= @studGender,stud_contactNo=@studContactNo,stud_telNo= @studTelNo,prev_school=@studPrevSchool,prev_school_address=@studPrevSchoolAddress,father_name=@fatherName,mother_name=@motherName,mother_work=@motherWork,father_work= @fatherWork,guardian_name=@guardianName,guardian_work= @guardianWork,guardian_address=@guardianCompleteAddress,guardian_relationship= @guardianRelationship,guardian_contactNo=@guardianContactNo,guardian_telNo=@guardianTelNo,bc=@reqPSA,form138= @reqForm138,drugtest=@reqDrugTest,good_moral=@reqGoodMoral,en_exam=@reqAdmissionTest,ncae=@reqNCAE" +
+                    string sql = "UPDATE student_profile SET id_old_stud=@oldstudentNo, LRN=@studLRN,regNo=@studRegistrationNo,last_name=@studLastName,middle_name=@studMiddleName,first_name=@studFirstName,grade_Level=@studGradeLevel,strand=@studStrand,track=@studAcadTrack,voucher_type=@studVoucher,address=@studAddress1,date_of_birth=@studDateOfBirth,place_of_birth=@studBirthPlace,religion=@religion,nationality=@nationality,gender= @studGender,stud_contactNo=@studContactNo,stud_telNo= @studTelNo,prev_school=@studPrevSchool,prev_school_address=@studPrevSchoolAddress,father_name=@fatherName,mother_name=@motherName,mother_work=@motherWork,father_work= @fatherWork,guardian_name=@guardianName,guardian_work= @guardianWork,guardian_address=@guardianCompleteAddress,guardian_relationship= @guardianRelationship,guardian_contactNo=@guardianContactNo,guardian_telNo=@guardianTelNo,bc=@reqPSA,form138= @reqForm138,drugtest=@reqDrugTest,good_moral=@reqGoodMoral,en_exam=@reqAdmissionTest,ncae=@reqNCAE" +
                                     " WHERE regno=@studRegistrationNo;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -852,6 +860,8 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("studLastName", studLastName);
                     cmd.Parameters.AddWithValue("studMiddleName", studMiddleName);
                     cmd.Parameters.AddWithValue("studFirstName", studFirstName);
+
+                    cmd.Parameters.AddWithValue("oldstudentNo", oldstudentNo);
 
                     cmd.Parameters.AddWithValue("studGradeLevel", studGradeLevel);
                     cmd.Parameters.AddWithValue("studStrand", studStrand);
@@ -1133,6 +1143,7 @@ namespace GOCSystem2018
                         //SP.reserveFor = reader["Reserve_for"].ToString();
                         //SP.fullPayment = reader["Full_payment"].ToString();
                         //SP.partialPayment = reader["Partial_payment"].ToString();
+                        SP.oldstudentNo = reader["id_old_stud"].ToString();
 
                         SP.studType = reader["stud_Type"].ToString();
 

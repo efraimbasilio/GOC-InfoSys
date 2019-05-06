@@ -227,6 +227,15 @@ namespace GOCSystem2018
 
         private bool CheckRequiredFields()
         {
+            if (cmbStudType.Text.Equals("Old Student"))
+            {
+                if (txtOldStudNo.Text == "")
+                {
+                    //MessageBox.Show("LRN Missing");
+                    return false;
+                }
+            }
+
             if (LRNtxt.Text == "")
             {
                 //MessageBox.Show("LRN Missing");
@@ -697,6 +706,14 @@ namespace GOCSystem2018
            
 
           
+        }
+
+        private void cmbStudType_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cmbStudType.Text.Equals("Old Student"))
+            {
+                txtOldStudNo.Visible = true;
+            }
         }
 
         private void txtGuardianTel_Enter(object sender, EventArgs e)
@@ -1453,6 +1470,8 @@ namespace GOCSystem2018
 
             if (toEdit==true)
             {
+                sp.OldStudentNo = txtOldStudNo.Text;
+
                 sp.StudType = cmbStudType.Text;
                 sp.StudLRN = LRNtxt.Text;
                 //sp.StudGOCNo = "N/A";
@@ -1599,6 +1618,16 @@ namespace GOCSystem2018
                         }
                     }
 
+
+                    if (cmbStudType.Text.Equals("Old Student"))
+                    {
+                        registration.OldStudentNo = txtOldStudNo.Text;
+                    }
+                    else
+                    {
+                        registration.OldStudentNo = "N/A";
+                    }
+
                     registration.StudType = cmbStudType.Text;
                     registration.StudLRN = LRNtxt.Text;
                     registration.StudGOCNo = "N/A";
@@ -1672,14 +1701,6 @@ namespace GOCSystem2018
                     {
                         registration.GuardianTelNo = txtGuardianTel.Text;
                     }
-
-                  
-
-                    
-
-
-
-
 
                     registration.SYEnrolled = School;
                     //registration.DateEnrolled = DateTime.Today.ToString("yyyy-mm-dd");

@@ -183,6 +183,7 @@
             this.txtEditGM = new System.Windows.Forms.TextBox();
             this.txtEditNCAE = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtOldStudNo = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -595,6 +596,7 @@
             this.cmbStudType.Size = new System.Drawing.Size(160, 24);
             this.cmbStudType.TabIndex = 4;
             this.cmbStudType.SelectedIndexChanged += new System.EventHandler(this.cmbStudType_SelectedIndexChanged);
+            this.cmbStudType.SelectedValueChanged += new System.EventHandler(this.cmbStudType_SelectedValueChanged);
             // 
             // label2
             // 
@@ -1874,7 +1876,7 @@
             this.dgvTempRegno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dgvTempRegno.Location = new System.Drawing.Point(957, 12);
+            this.dgvTempRegno.Location = new System.Drawing.Point(1074, 33);
             this.dgvTempRegno.Name = "dgvTempRegno";
             this.dgvTempRegno.Size = new System.Drawing.Size(133, 150);
             this.dgvTempRegno.TabIndex = 216;
@@ -1966,39 +1968,42 @@
             this.txtEditTrack.BackColor = System.Drawing.Color.White;
             this.txtEditTrack.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEditTrack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditTrack.Location = new System.Drawing.Point(957, 176);
+            this.txtEditTrack.Location = new System.Drawing.Point(1074, 197);
             this.txtEditTrack.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditTrack.Name = "txtEditTrack";
             this.txtEditTrack.ReadOnly = true;
             this.txtEditTrack.Size = new System.Drawing.Size(133, 22);
             this.txtEditTrack.TabIndex = 221;
             this.txtEditTrack.Text = "track";
+            this.txtEditTrack.Visible = false;
             // 
             // txtEditGLevel
             // 
             this.txtEditGLevel.BackColor = System.Drawing.Color.White;
             this.txtEditGLevel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEditGLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEditGLevel.Location = new System.Drawing.Point(957, 226);
+            this.txtEditGLevel.Location = new System.Drawing.Point(1074, 247);
             this.txtEditGLevel.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditGLevel.Name = "txtEditGLevel";
             this.txtEditGLevel.ReadOnly = true;
             this.txtEditGLevel.Size = new System.Drawing.Size(133, 22);
             this.txtEditGLevel.TabIndex = 222;
             this.txtEditGLevel.Text = "glevel";
+            this.txtEditGLevel.Visible = false;
             // 
             // txtGender
             // 
             this.txtGender.BackColor = System.Drawing.Color.White;
             this.txtGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGender.Location = new System.Drawing.Point(957, 278);
+            this.txtGender.Location = new System.Drawing.Point(1074, 299);
             this.txtGender.Margin = new System.Windows.Forms.Padding(4);
             this.txtGender.Name = "txtGender";
             this.txtGender.ReadOnly = true;
             this.txtGender.Size = new System.Drawing.Size(133, 22);
             this.txtGender.TabIndex = 223;
             this.txtGender.Text = "txtGender";
+            this.txtGender.Visible = false;
             // 
             // txtEditAddress
             // 
@@ -2040,6 +2045,7 @@
             this.txtEditPSA.Size = new System.Drawing.Size(133, 22);
             this.txtEditPSA.TabIndex = 226;
             this.txtEditPSA.Text = "textBox1";
+            this.txtEditPSA.Visible = false;
             // 
             // txtEdit138
             // 
@@ -2053,6 +2059,7 @@
             this.txtEdit138.Size = new System.Drawing.Size(133, 22);
             this.txtEdit138.TabIndex = 227;
             this.txtEdit138.Text = "textBox2";
+            this.txtEdit138.Visible = false;
             // 
             // txtEditMC
             // 
@@ -2066,6 +2073,7 @@
             this.txtEditMC.Size = new System.Drawing.Size(133, 22);
             this.txtEditMC.TabIndex = 228;
             this.txtEditMC.Text = "textBox3";
+            this.txtEditMC.Visible = false;
             // 
             // txtESC
             // 
@@ -2079,6 +2087,7 @@
             this.txtESC.Size = new System.Drawing.Size(133, 22);
             this.txtESC.TabIndex = 229;
             this.txtESC.Text = "textBox4";
+            this.txtESC.Visible = false;
             // 
             // txtEditGM
             // 
@@ -2092,6 +2101,7 @@
             this.txtEditGM.Size = new System.Drawing.Size(133, 22);
             this.txtEditGM.TabIndex = 230;
             this.txtEditGM.Text = "textBox5";
+            this.txtEditGM.Visible = false;
             // 
             // txtEditNCAE
             // 
@@ -2105,16 +2115,33 @@
             this.txtEditNCAE.Size = new System.Drawing.Size(133, 22);
             this.txtEditNCAE.TabIndex = 231;
             this.txtEditNCAE.Text = "textBox6";
+            this.txtEditNCAE.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(957, 332);
+            this.button1.Location = new System.Drawing.Point(1074, 353);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 232;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // txtOldStudNo
+            // 
+            this.txtOldStudNo.BackColor = System.Drawing.Color.White;
+            this.txtOldStudNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtOldStudNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOldStudNo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtOldStudNo.Location = new System.Drawing.Point(863, 202);
+            this.txtOldStudNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOldStudNo.MaxLength = 14;
+            this.txtOldStudNo.Multiline = true;
+            this.txtOldStudNo.Name = "txtOldStudNo";
+            this.txtOldStudNo.Size = new System.Drawing.Size(112, 23);
+            this.txtOldStudNo.TabIndex = 233;
+            this.txtOldStudNo.Visible = false;
             // 
             // frmRegistration
             // 
@@ -2123,6 +2150,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1143, 666);
+            this.Controls.Add(this.txtOldStudNo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtEditNCAE);
             this.Controls.Add(this.txtEditGM);
@@ -2446,5 +2474,6 @@
         private System.Windows.Forms.TextBox txtEditGM;
         private System.Windows.Forms.TextBox txtEditNCAE;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtOldStudNo;
     }
 }
