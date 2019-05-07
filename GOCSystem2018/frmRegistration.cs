@@ -32,7 +32,7 @@ namespace GOCSystem2018
         public string RegNo, LRN, VType, StudType, Track, Grade_Level, StrandCourse, F_Name, M_Name, L_Name, Religion, Nationality, Gender, Birthdate, Place_of_birth;
         public string House_No, Barangay, Provice, Municipality, Cell_No, Tel_No,Last_School, School_Address, Father,Mother, Guardian, F_Contact, M_Contact, F_Occupation,M_Occupation,G_Occupation,G_House_No, G_Barangay;
         public string G_Municipality,G_Province,G_Relationship,G_CellNo,G_TelNo;
-        public string Edit_Address, Edit_GuardianAddress;
+        public string Edit_Address, Edit_GuardianAddress, The_GOC_No;
 
         public string _PSA, _FORM_138, _MD, _GM, _ESV, _NCAE;
 
@@ -1470,6 +1470,26 @@ namespace GOCSystem2018
             }
         }
 
+        public void UpdateEnrollee()
+        {
+            EnrolledStudents enrollee = new EnrolledStudents();
+
+            if (txtEditGLevel.Text == "11")
+            {
+                enrollee.FullName = txtLastName.Text.ToUpper() + ", " + txtFName.Text.ToUpper() + " " + txtMName.Text.ToUpper();
+
+                enrollee.TheGOCNo = The_GOC_No;
+                enrollee.UpdateEnrollee11();
+            }
+            else
+            {
+                enrollee.FullName = txtLastName.Text.ToUpper() + ", " + txtFName.Text.ToUpper() + " " + txtMName.Text.ToUpper();
+
+                enrollee.TheGOCNo = The_GOC_No;
+                enrollee.UpdateEnrollee12();
+            }
+        }
+
         private void btnSave_Click_1(object sender, EventArgs e)
         {
            
@@ -1561,7 +1581,7 @@ namespace GOCSystem2018
                 if (result == DialogResult.Yes)
                 {
                     //update the info to database
-                  
+                    UpdateEnrollee();
                     sp.UpdateStudProfile();
                 }
                 else
