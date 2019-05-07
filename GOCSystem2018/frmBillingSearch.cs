@@ -280,8 +280,8 @@ namespace GOCSystem2018
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-           
 
+        }
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Enter)
@@ -310,6 +310,6 @@ SelectData();
             string valueToSearch = txtSearch.Text.ToString();
             searchData(valueToSearch);
         }
-    }
+    
     }
 }
