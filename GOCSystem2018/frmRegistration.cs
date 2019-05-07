@@ -1490,6 +1490,15 @@ namespace GOCSystem2018
             }
         }
 
+        public void UpdateEnrolle_Billing()
+        {
+            Billing_Partial BP = new Billing_Partial();
+
+            BP.Full_name = txtLastName.Text.ToUpper() + ", " + txtFName.Text.ToUpper() + " " + txtMName.Text.ToUpper();
+            BP.IdNo = The_GOC_No;
+            BP.UpdateEnrolleeName();
+        }
+
         private void btnSave_Click_1(object sender, EventArgs e)
         {
            
@@ -1582,6 +1591,7 @@ namespace GOCSystem2018
                 {
                     //update the info to database
                     UpdateEnrollee();
+                    UpdateEnrolle_Billing();
                     sp.UpdateStudProfile();
                 }
                 else

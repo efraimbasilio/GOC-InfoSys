@@ -87,8 +87,8 @@
     <Compile Include="CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Department.cs" />
-    <Compile Include="EnrolledStudents.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\EnrolledStudents.cs" />
     <Compile Include="frmAssesment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -155,7 +155,7 @@
     <Compile Include="frmStudProf.Designer.cs">
       <DependentUpon>frmStudProf.cs</DependentUpon>
     </Compile>
-    <Compile Include="Grading.cs" />
+    <Compile Include="Models\Grading.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,7 +314,7 @@
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Models\StudentProfile.cs" />
-    <Compile Include="TempRegNo.cs" />
+    <Compile Include="Models\TempRegNo.cs" />
     <EmbeddedResource Include="crpHeader.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpHeader.cs</LastGenOutput>
