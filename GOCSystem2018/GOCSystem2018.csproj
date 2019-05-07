@@ -84,6 +84,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="blackfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="blackfrm.Designer.cs">
+      <DependentUpon>blackfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CircularPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     <Compile Include="Settings.cs" />
     <Compile Include="Models\StudentProfile.cs" />
     <Compile Include="Models\TempRegNo.cs" />
+    <EmbeddedResource Include="blackfrm.resx">
+      <DependentUpon>blackfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="crpHeader.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpHeader.cs</LastGenOutput>

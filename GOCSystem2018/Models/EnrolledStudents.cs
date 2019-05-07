@@ -108,7 +108,7 @@ namespace GOCSystem2018
 
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (MySqlException ex)
@@ -144,7 +144,9 @@ namespace GOCSystem2018
 
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    blackfrm blackfrm = new blackfrm();
+                    blackfrm.ShowDialog();
+                    //MessageBox.Show("Record Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (MySqlException ex)
