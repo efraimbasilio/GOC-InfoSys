@@ -117,8 +117,8 @@ namespace GOCSystem2018
         List<Assesment> assesments = new List<Assesment>();
 
         frmAssesment frmAssesment = new frmAssesment();
+        frmRegistration frmReg = new frmRegistration();
 
-      
 
 
         public frmAssessmentSearch()
@@ -211,6 +211,8 @@ namespace GOCSystem2018
 
 
             #endregion
+
+            txtSearch.Focus();
         }
         /// <summary>
         /// Methods
@@ -402,6 +404,86 @@ namespace GOCSystem2018
             {
                 SelectData();
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            PassToEdit();
+        }
+
+        public void PassToEdit()
+        {
+            //clear list
+            studProfiles.Clear();
+            //pass value
+            studProfile.StudLRN = dgvSearch.CurrentRow.Cells[3].FormattedValue.ToString();
+            studProfiles = studProfile.GetByLRN();
+
+            foreach (var item in studProfiles)
+            {
+               
+
+                //pass variable to form Assesment
+                frmReg.The_GOC_No = item.StudGOCNo;
+                frmReg.RegNo = item.StudRegistrationNo;
+                frmReg.LRN = item.StudLRN;
+                frmReg.VType = item.VoucherType;
+                frmReg.StudType = item.StudType;
+                frmReg.Track = item.Track;
+                frmReg.Grade_Level = item.StudGradeLevel;
+                frmReg.StrandCourse = item.StudStrand;
+                frmReg.F_Name = item.StudFirstName;
+                frmReg.M_Name = item.StudMiddleName;
+                frmReg.L_Name = item.StudLastName;
+                frmReg.Religion = item.Religion;
+                frmReg.Nationality = item.Nationality;
+                frmReg.Gender = item.StudGender;
+                frmReg.Birthdate = item.StudDateOfBirth;
+                frmReg.Place_of_birth = item.StudBirthPlace;
+
+                frmReg.Edit_Address = item.StudAddress1;
+                //frmReg.House_No = item.StudAddress1;\
+
+                frmReg.Cell_No = item.StudContactNo;
+                frmReg.Tel_No = item.StudTelNo;
+                frmReg.Last_School = item.StudPrevSchool;
+                frmReg.School_Address = item.StudPrevSchoolAddress;
+
+                frmReg.Father = item.FatherName;
+                frmReg.F_Occupation = item.FatherWork;
+                frmReg.Mother = item.MotherName;
+                frmReg.M_Occupation = item.MotherWork;
+
+                frmReg.M_Contact = item.MotherContactNo;
+                frmReg.F_Contact = item.FatherContactNo;
+
+                frmReg.Guardian = item.GuardianName;
+                frmReg.G_CellNo = item.GuardianContactNo;
+                frmReg.G_TelNo = item.GuardianTelNo;
+                frmReg.G_Occupation = item.GuardianWork;
+                frmReg.G_Relationship = item.GuardianRelationship;
+
+                frmReg.Edit_GuardianAddress = item.GuardianCompleteAddress;
+
+                frmReg._PSA = item.ReqPSA;
+                frmReg._FORM_138 = item.ReqForm138;
+                frmReg._GM = item.ReqGoodMoral;
+                frmReg._MD = item.ReqDrugTest;
+                frmReg._ESV = item.ReqAdmissionTest;
+                frmReg._NCAE = item.ReqNCAE;
+
+                frmReg.toEdit = true;
+                //frmReg.G_House_No = item.GuardianCompleteAddress;
+            }
+            frmReg.EditRender();
+
+            MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+            mainwin.dispanel.Controls.Clear();
+            frmReg.TopLevel = false;
+            frmReg.AutoScroll = true;
+            mainwin.dispanel.Controls.Add(frmReg);
+
+            frmReg.Show();
         }
     }
 }

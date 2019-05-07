@@ -434,14 +434,18 @@ namespace GOCSystem2018
 
             button3.BackColor = Color.FromArgb(1, 172, 120);
             button3.ForeColor = Color.White;
+
+            textBox1.Focus();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+           
             LoadRecords12();
+           
             textBox2.Visible = true;
             textBox1.Visible = false;
-
+           
             button3.BackColor = Color.FromArgb(245, 246, 251);
             button3.ForeColor = Color.DarkGray;
 
@@ -450,6 +454,8 @@ namespace GOCSystem2018
 
             button2.BackColor = Color.FromArgb(1, 172, 120);
             button2.ForeColor = Color.White;
+
+            textBox2.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)

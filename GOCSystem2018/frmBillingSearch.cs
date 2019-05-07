@@ -206,6 +206,8 @@ namespace GOCSystem2018
             dgvSearch.Columns["sy_enrolled"].HeaderText = "SY";
             #endregion
 
+
+
             #region removal of unneccessary header
             this.dgvSearch.Columns["id"].Visible = false;
             // this.dgvSearch.Columns["IDNo"].Visible = false;
@@ -272,6 +274,8 @@ namespace GOCSystem2018
 
 
             #endregion
+
+            txtSearch.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)
