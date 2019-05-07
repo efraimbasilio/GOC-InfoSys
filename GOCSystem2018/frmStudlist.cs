@@ -290,8 +290,8 @@ namespace GOCSystem2018
 
         private void frmStudlist_Load(object sender, EventArgs e)
         {
-            LoadRecords();
-            LoadRecords();
+            textBox1.Focus();
+            LoadRecords();            
             #region removal of unneccessary header
             this.dgvSearch.Columns["id"].Visible = false;
             this.dgvSearch.Columns["regNo"].Visible = false;

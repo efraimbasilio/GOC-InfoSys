@@ -188,6 +188,7 @@ namespace GOCSystem2018
 
         private void frmBillingSearch_Load(object sender, EventArgs e)
         {
+           
             LoadRecords();
             #region header name fix
 
