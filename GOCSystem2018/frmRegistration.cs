@@ -730,6 +730,24 @@ namespace GOCSystem2018
             });
         }
 
+        private void opt1stYear_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void opt1stYear_Click(object sender, EventArgs e)
+        {
+            cmbStudType.Text = "New Student";
+            txtOldStudNo.Visible = false;
+        }
+
+        private void opt2ndYear_Click(object sender, EventArgs e)
+        {
+            cmbStudType.Text = "Old Student";
+            txtOldStudNo.Visible = true;
+            txtOldStudNo.Focus();
+        }
+
         private void dtBirthday_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 

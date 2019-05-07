@@ -527,6 +527,8 @@
             this.opt1stYear.TabIndex = 8;
             this.opt1stYear.Text = "1";
             this.opt1stYear.UseVisualStyleBackColor = true;
+            this.opt1stYear.CheckedChanged += new System.EventHandler(this.opt1stYear_CheckedChanged);
+            this.opt1stYear.Click += new System.EventHandler(this.opt1stYear_Click);
             // 
             // opt2ndYear
             // 
@@ -540,6 +542,7 @@
             this.opt2ndYear.TabIndex = 9;
             this.opt2ndYear.Text = "2";
             this.opt2ndYear.UseVisualStyleBackColor = true;
+            this.opt2ndYear.Click += new System.EventHandler(this.opt2ndYear_Click);
             // 
             // opt3rdYear
             // 
