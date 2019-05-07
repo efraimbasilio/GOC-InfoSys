@@ -422,20 +422,20 @@ namespace GOCSystem2018
             {
                 registration.StudGradeLevel = opt2ndYear.Text;
                 sp.StudGradeLevel = opt2ndYear.Text;
-                frmAssesment.GradeLevel = opt1stYear.Text;
+                frmAssesment.GradeLevel = opt2ndYear.Text;
             }
 
             else if (opt3rdYear.Checked)
             {
                 sp.StudGradeLevel = opt3rdYear.Text;
                 registration.StudGradeLevel = opt3rdYear.Text;
-                frmAssesment.GradeLevel = opt1stYear.Text;
+                frmAssesment.GradeLevel = opt3rdYear.Text;
             }
             else if (opt4thYear.Checked)
             {
                 registration.StudGradeLevel = opt4thYear.Text;
                 sp.StudGradeLevel = opt4thYear.Text;
-                frmAssesment.GradeLevel = opt1stYear.Text;
+                frmAssesment.GradeLevel = opt4thYear.Text;
             }
         }
 
@@ -457,8 +457,8 @@ namespace GOCSystem2018
 
             else if (optCollege.Checked)
             {
-                registration.StudAcadTrack = optTVL.Text;
-                sp.StudAcadTrack = optTVL.Text;
+                registration.StudAcadTrack = optCollege.Text;
+                sp.StudAcadTrack = optCollege.Text;
                 frmAssesment.Track = optCollege.Text;
             }
         }
@@ -714,6 +714,12 @@ namespace GOCSystem2018
             {
                 txtOldStudNo.Visible = true;
             }
+        }
+
+        private void txtBarangay2_TextChanged(object sender, EventArgs e)
+        {
+
+
         }
 
         private void txtGuardianTel_Enter(object sender, EventArgs e)
