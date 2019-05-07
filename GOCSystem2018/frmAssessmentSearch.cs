@@ -362,10 +362,7 @@ namespace GOCSystem2018
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.Enter)
-            {
-                SelectData();
-            }
+            
         }
 
         private void dgvSearch_DoubleClick_1(object sender, EventArgs e)
@@ -392,6 +389,19 @@ namespace GOCSystem2018
         {
             string valueToSearch = txtSearch.Text.ToString();
             searchData(valueToSearch);
+        }
+
+        private void dgvSearch_DoubleClick_3(object sender, EventArgs e)
+        {
+            SelectData();
+        }
+
+        private void txtSearch_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                SelectData();
+            }
         }
     }
 }

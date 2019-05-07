@@ -310,6 +310,18 @@ SelectData();
             string valueToSearch = txtSearch.Text.ToString();
             searchData(valueToSearch);
         }
-    
+
+        private void txtSearch_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                SelectData();
+            }
+        }
+
+        private void dgvSearch_DoubleClick_2(object sender, EventArgs e)
+        {
+            SelectData();
+        }
     }
 }

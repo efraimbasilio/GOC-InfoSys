@@ -291,9 +291,15 @@ namespace GOCSystem2018
         private void frmStudlist_Load(object sender, EventArgs e)
         {
             LoadRecords();
+            LoadRecords();
             #region removal of unneccessary header
-           this.dgvSearch.Columns["id"].Visible = false;
-           //this.dgvSearch.Columns["IDNo"].Visible = false;
+            this.dgvSearch.Columns["id"].Visible = false;
+            this.dgvSearch.Columns["regNo"].Visible = false;
+            this.dgvSearch.Columns["Semester"].Visible = false;
+            this.dgvSearch.Columns["Date_Enrolled"].Visible = false;
+            this.dgvSearch.Columns["Grade_Level"].Visible = false;
+            this.dgvSearch.Columns["SY_Enrolled"].Visible = false;
+
             //this.dgvSearch.Columns["regNo"].Visible = false;
             //this.dgvSearch.Columns["Reservee"].Visible = false;
             //this.dgvSearch.Columns["Reserve_for"].Visible = false;
@@ -334,36 +340,40 @@ namespace GOCSystem2018
 
             #endregion
             #region header name fix
-            //dgvSearch.Columns["LRN"].HeaderText = "LRN";
-            //dgvSearch.Columns["regNo"].HeaderText = "RegNo";
-            //dgvSearch.Columns["IDNo"].HeaderText = "GOCNo";
-            //dgvSearch.Columns["last_name"].HeaderText = "Last Name";
-            //dgvSearch.Columns["first_name"].HeaderText = "First Name";
+            dgvSearch.Columns["Full_Name"].HeaderText = "FullName";
+            //dgvSearch.Columns["regNo"].HeaderText = "Registration No";
+            dgvSearch.Columns["GOCNo"].HeaderText = "ID No";
+            dgvSearch.Columns["SY_Enrolled"].HeaderText = "S.Y.";
+            dgvSearch.Columns["Date_Enrolled"].HeaderText = "Enrolled";
             //dgvSearch.Columns["middle_name"].HeaderText = "Middle Name";
-            //dgvSearch.Columns["grade_Level"].HeaderText = "Grade Level";
+            dgvSearch.Columns["Grade_Level"].HeaderText = "Grade Level";
             //dgvSearch.Columns["section"].HeaderText = "Section";
             //dgvSearch.Columns["track"].HeaderText = "Track";
             //dgvSearch.Columns["strand"].HeaderText = "Strand";
             #endregion
 
             #region designing DVG
-           
             dgvSearch.BorderStyle = BorderStyle.None;
-            dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 246, 251);
+            //dgvSearch.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(245, 244, 246);
             dgvSearch.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(217, 236, 240);
-            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.Gray;
+            dgvSearch.DefaultCellStyle.SelectionBackColor = Color.FromArgb(245, 244, 246);
+            dgvSearch.DefaultCellStyle.SelectionForeColor = Color.Black;
             dgvSearch.BackgroundColor = Color.White;
 
             dgvSearch.EnableHeadersVisualStyles = false;
             dgvSearch.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dgvSearch.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
-            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            dgvSearch.ColumnHeadersDefaultCellStyle.Font = new Font("Open Sans Light", 14F, GraphicsUnit.Pixel);
+            dgvSearch.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(91, 87, 91);
             dgvSearch.AdvancedCellBorderStyle.All = DataGridViewAdvancedCellBorderStyle.None;
-            
-            DataGridViewColumn gncol = dgvSearch.Columns[1];
+
+            DataGridViewColumn gncol = dgvSearch.Columns["GOCNo"];
             gncol.Width = 220;
-            
+
+            DataGridViewColumn gncol2 = dgvSearch.Columns["Full_Name"];
+            gncol2.Width = 575;
+
+
             #endregion
         }
 
@@ -452,6 +462,27 @@ namespace GOCSystem2018
 
             button1.BackColor = Color.FromArgb(1, 172, 120);
             button1.ForeColor = Color.White;
+        }
+
+        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                SelectData();
+            }
+        }
+
+        private void dgvSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                SelectData();
+            }
         }
     }
 }
