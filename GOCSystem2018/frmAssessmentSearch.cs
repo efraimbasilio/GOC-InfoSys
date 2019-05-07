@@ -427,7 +427,7 @@ namespace GOCSystem2018
                 frmReg.The_GOC_No = item.StudGOCNo;
                 frmReg.RegNo = item.StudRegistrationNo;
                 frmReg.LRN = item.StudLRN;
-                frmReg.VType = item.VoucherType;
+               // frmReg.VType = item.VoucherType;
                 frmReg.StudType = item.StudType;
                 frmReg.Track = item.Track;
                 frmReg.Grade_Level = item.StudGradeLevel;

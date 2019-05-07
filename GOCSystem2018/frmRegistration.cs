@@ -43,6 +43,7 @@ namespace GOCSystem2018
 
 
 
+
         public void EditRender()
         {
             LoadVoucher();
