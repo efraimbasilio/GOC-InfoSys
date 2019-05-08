@@ -17,6 +17,8 @@ namespace GOCSystem2018
         protected int id;
         protected string yearStart;
         protected string yearEnd;
+        protected string semester;
+        protected string quaterGrading;
 
         //protected int flag;
 
@@ -43,6 +45,19 @@ namespace GOCSystem2018
             get { return yearEnd; }
             set { yearEnd = value; }
         }
+
+        public string Semester
+        {
+            get { return semester; }
+            set { semester = value; }
+        }
+
+        public string Quarter
+        {
+            get { return quaterGrading; }
+            set { quaterGrading = value; }
+        }
+
         //variable name should always to be plural for every list
         //Camel casing
         List<SchoolYear> schoolYears = new List<SchoolYear>();
@@ -79,6 +94,8 @@ namespace GOCSystem2018
                         schoolYear.id = Convert.ToInt32(reader["id"].ToString());
                         schoolYear.yearStart = reader["year_start"].ToString();
                         schoolYear.yearEnd = reader["year_end"].ToString();
+                        schoolYear.semester = reader["semster"].ToString();
+                        schoolYear.quaterGrading = reader["quarter_grading"].ToString();
 
                         schoolYears.Add(schoolYear);
 
@@ -123,6 +140,8 @@ namespace GOCSystem2018
                         schoolYear.id = Convert.ToInt32(reader["id"].ToString());
                         schoolYear.yearStart = reader["year_start"].ToString();
                         schoolYear.yearEnd = reader["year_end"].ToString();
+                        schoolYear.semester = reader["semster"].ToString();
+                        schoolYear.quaterGrading = reader["quarter_grading"].ToString();
 
                         schoolYears.Add(schoolYear);
 
@@ -148,13 +167,16 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO school_year(year_start,year_end) " +
-                                    " VALUES (@yearStart,@yearEnd);";
+                    string sql = "INSERT INTO school_year(year_start,year_end,semester,quater_grading) " +
+                                    " VALUES (@yearStart,@yearEnd,@semester,@quaterGrading);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("yearStart", yearStart);
                     cmd.Parameters.AddWithValue("yearEnd", yearEnd);
+                    cmd.Parameters.AddWithValue("semester", semester);
+                    cmd.Parameters.AddWithValue("quaterGrading", quaterGrading);
+
 
 
                     cmd.ExecuteNonQuery();
@@ -180,7 +202,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE school_year SET year_start=@yearStart,year_end=@yearEnd" +
+                    string sql = "UPDATE school_year SET year_start=@yearStart,year_end=@yearEnd,semester=@semester,quarter=@quater_grading" +
                                     " WHERE id=@id;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -188,7 +210,8 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("id", id);
                     cmd.Parameters.AddWithValue("yearStart", yearStart);
                     cmd.Parameters.AddWithValue("yearEnd", yearEnd);
-
+                    cmd.Parameters.AddWithValue("quaterGrading", quaterGrading);
+                    cmd.Parameters.AddWithValue("semester", semester);
 
                     cmd.ExecuteNonQuery();
 
