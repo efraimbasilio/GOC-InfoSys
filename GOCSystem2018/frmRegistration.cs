@@ -32,16 +32,26 @@ namespace GOCSystem2018
         public string RegNo, LRN, VType, StudType, Track, Grade_Level, StrandCourse, F_Name, M_Name, L_Name, Religion, Nationality, Gender, Birthdate, Place_of_birth;
         public string House_No, Barangay, Provice, Municipality, Cell_No, Tel_No,Last_School, School_Address, Father,Mother, Guardian, F_Contact, M_Contact, F_Occupation,M_Occupation,G_Occupation,G_House_No, G_Barangay;
         public string G_Municipality,G_Province,G_Relationship,G_CellNo,G_TelNo;
-        public string Edit_Address, Edit_GuardianAddress, The_GOC_No;
+        public string Edit_Address, Edit_GuardianAddress, The_GOC_No, OLD_IDNO;
 
         public string _PSA, _FORM_138, _MD, _GM, _ESV, _NCAE;
 
         public bool toEdit = false;
+        public bool Profile_edit = false;
         public bool other_address;
 
         public string School, RegistrationNumber , TempRegNumber;
 
 
+
+        public void UpdateAssess()
+        {
+            LRNtxt.Text = LRN;
+            txtRegno.Text = RegNo;
+            txtFName.Text = F_Name;
+            txtMName.Text = M_Name;
+            txtLastName.Text = L_Name;
+        }
 
 
         public void EditRender()
@@ -52,7 +62,7 @@ namespace GOCSystem2018
             //pass variable to form Assesment
             txtRegno.Text = RegNo;
             LRNtxt.Text = LRN;
-
+            txtOldStudNo.Text = OLD_IDNO;
             //MessageBox.Show(VType.ToString());
             cmbVoucher.Text = VType.ToString();
             cmbStudType.Text = StudType;
@@ -1524,7 +1534,7 @@ namespace GOCSystem2018
 
             if (toEdit==true)
             {
-                sp.OldStudentNo = txtOldStudNo.Text;
+                
 
                 sp.StudType = cmbStudType.Text;
                 sp.StudLRN = LRNtxt.Text;
@@ -1576,55 +1586,35 @@ namespace GOCSystem2018
                 CheckTrack();
                 checkRequirements();
                 checkGender();
-
+                sp.OldStudentNo = txtOldStudNo.Text;
                 string message = "Please double check the information, click ok to update records.";
-
-                   //"\n\nRegistration No.: " + txtRegno.Text +
-                   //"\nLRN: " + LRNtxt.Text +
-                   //"\nVoucher Type: " + cmbVoucher.Text +
-                   //"\nStudent Type: " + cmbStudType.Text +
-                   //"\nTrack: " + frmAssesment.Track +
-
-                   //"\n\nGrade Level/Year Level: " + frmAssesment.GradeLevel +
-                   //"\nStrand/Course: " + cmbCourseStrand.Text +
-                   //"\nFirst Name: " + txtFName.Text +
-                   //"\nMiddle Name: " + txtMName.Text +
-                   //"\nLast Name: " + txtLastName.Text +
-
-                   //"\n\nReligion : " + txtReligion.Text +
-                   //"\nNationality: " + cmbNationality.Text +
-                   //"\nGender: " + registration.StudGender +
-                   //"\nContact No.: " + txtStudCell.Text +
-
-                   //"\n\nBirthdate: " + dtBirthday.Text +
-                   //"\nPlace of Birth: " + txtBirthPlace.Text +
-                   //"\nAddress: " + txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text +
-
-                   //"\n\nPrevious School Name : " + txtLastSchool.Text +
-                   //"\nPrevious School Address: " + txtLastSchAddress.Text;
-
                 string title = "GOC_INFO_SYS";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
-                    //update the info to database
-                    UpdateEnrollee();
-                    UpdateEnrolle_Billing();
-                    sp.UpdateStudProfile();
+                    if (Profile_edit == true)
+                    {
+                        sp.UpdateStudProfile();
+                    }                    
+                    else
+                    {
+                        //update the info to database
+                        UpdateEnrollee();
+                        UpdateEnrolle_Billing();
+                        sp.UpdateStudProfile();
+                    }                
                 }
                 else
                 {
                     return;
                 }
             }
+
             else
-            {
-
-                
-
-                    //toedit is false
-                    bool required = true;
+            {               
+               //For Registration
+               bool required = true;
 
                 if (txtStudCell.MaskFull == true && dtBirthday.MaskFull == true && LRNtxt.MaskFull == true && other_address == true)
                 {
@@ -1841,15 +1831,8 @@ namespace GOCSystem2018
                 {
                     MessageBox.Show("Please fill out all required fields", "System Message", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
-            }
-
-           
-
-
-
+            }         
         }
-
-
 
     }
 }

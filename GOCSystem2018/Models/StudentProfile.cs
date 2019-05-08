@@ -740,110 +740,7 @@ namespace GOCSystem2018
             return studentProfiles;
         }
 
-        public List<StudentProfile> GetByLRN()
-        {
-            try
-            {
-                //prepare connection string 
-                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
-                {
-
-                    //try to open connection
-                    con.Open();
-
-                    //prepare sql query
-                    string sql = "SELECT * FROM student_profile WHERE LRN =@studLRN;";
-
-                    MySqlCommand cmd = new MySqlCommand(sql, con);
-                    cmd.Parameters.AddWithValue("studLRN)", studLRN);
-
-                    MySqlDataReader reader = cmd.ExecuteReader();
-
-                    //loop while have record
-                    while (reader.Read())
-                    {
-                        //instantiate model
-                        StudentProfile SP = new StudentProfile();
-
-                        SP.id = Convert.ToInt32(reader["id"].ToString());
-                        SP.oldstudentNo = reader["id_old_stud"].ToString();
-
-                        SP.studType = reader["stud_Type"].ToString();
-
-                        SP.studGOCNo = reader["IDNo"].ToString();
-                        SP.StudLRN = reader["LRN"].ToString();
-                        SP.studRegistrationNo = reader["regNo"].ToString();
-                        //SP.reservee = reader["Reservee"].ToString();
-                        //SP.reserveFor = reader["Reserve_for"].ToString();
-                        //SP.fullPayment = reader["Full_payment"].ToString();
-                        //SP.partialPayment = reader["Partial_payment"].ToString();
-                        SP.studLastName = reader["last_name"].ToString();
-                        SP.studFirstName = reader["first_name"].ToString();
-                        SP.studMiddleName = reader["middle_name"].ToString();
-                        SP.studGradeLevel = reader["grade_Level"].ToString();
-
-                        SP.studAddress1 = reader["address"].ToString();
-
-                        SP.section = reader["section"].ToString();
-                        SP.track = reader["track"].ToString();
-                        SP.studStrand = reader["strand"].ToString();
-
-                        SP.voucherType = reader["voucher_type"].ToString();
-
-                        SP.studAddress1 = reader["address"].ToString();
-                        SP.studDateOfBirth = reader["date_of_birth"].ToString();
-
-                        SP.studBirthPlace = reader["place_of_birth"].ToString();
-
-                        SP.religion = reader["religion"].ToString();
-                        SP.nationality = reader["nationality"].ToString();
-                        SP.studGender = reader["gender"].ToString();
-                        SP.studContactNo = reader["stud_contactNo"].ToString();
-                        SP.StudTelNo = reader["stud_telNo"].ToString();
-                        SP.studPrevSchool = reader["prev_school"].ToString();
-                        SP.studPrevSchoolAddress = reader["prev_school_address"].ToString();
-
-
-
-                        SP.fatherName = reader["father_name"].ToString();
-                        SP.fatherWork = reader["father_work"].ToString();
-
-                        SP.motherName = reader["mother_name"].ToString();
-                        SP.motherWork = reader["mother_work"].ToString();
-
-                        SP.motherContactNo = reader["motherContactNo"].ToString();
-                        SP.fatherContactNo = reader["fatherContactNo"].ToString();
-
-                        SP.guardianName = reader["guardian_name"].ToString();
-                        SP.guardianWork = reader["guardian_work"].ToString();
-                        SP.guardianCompleteAddress = reader["guardian_address"].ToString();
-                        SP.guardianRelationship = reader["guardian_relationship"].ToString();
-                        SP.guardianContactNo = reader["guardian_contactNo"].ToString();
-                        SP.guardianTelNo = reader["guardian_telNo"].ToString();
-
-                        SP.reqPSA = reader["bc"].ToString();
-                        SP.reqForm138 = reader["form138"].ToString();
-                        SP.reqDrugTest = reader["drugtest"].ToString();
-                        SP.reqGoodMoral = reader["good_moral"].ToString();
-                        SP.reqAdmissionTest = reader["en_exam"].ToString();
-                        SP.reqNCAE = reader["ncae"].ToString();
-
-                        //SP.dateEnrolled = reader["date_enrolled"].ToString();
-                        //SP.syEnrolled = reader["sy_enrolled"].ToString();
-
-                        studentProfiles.Add(SP);
-                    }
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            return studentProfiles;
-        }
-
-
+       
 
         public List<StudentProfile> GetByGOCNoToEdit()
         {
@@ -863,7 +760,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("studGOCNo", studGOCNo);
 
                     MySqlDataReader reader = cmd.ExecuteReader();
-
+                   
                     //loop while have record
                     while (reader.Read())
                     {
@@ -890,13 +787,13 @@ namespace GOCSystem2018
                         SP.studGradeLevel = reader["grade_Level"].ToString();
 
                         SP.studAddress1 = reader["address"].ToString();
-
+                       
                         SP.section = reader["section"].ToString();
                         SP.track = reader["track"].ToString();
                         SP.studStrand = reader["strand"].ToString();
 
                         SP.voucherType = reader["voucher_type"].ToString();
-
+                       
                         SP.studAddress1 = reader["address"].ToString();
                         SP.studDateOfBirth = reader["date_of_birth"].ToString();
 
@@ -962,7 +859,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE student_profile SET id_old_stud=@oldstudentNo, LRN=@studLRN,regNo=@studRegistrationNo,last_name=@studLastName,middle_name=@studMiddleName,first_name=@studFirstName,grade_Level=@studGradeLevel,strand=@studStrand,track=@studAcadTrack,voucher_type=@studVoucher,address=@studAddress1,date_of_birth=@studDateOfBirth,place_of_birth=@studBirthPlace,religion=@religion,nationality=@nationality,gender= @studGender,stud_contactNo=@studContactNo,stud_telNo= @studTelNo,prev_school=@studPrevSchool,prev_school_address=@studPrevSchoolAddress,father_name=@fatherName,mother_name=@motherName,mother_work=@motherWork,father_work= @fatherWork,guardian_name=@guardianName,guardian_work= @guardianWork,guardian_address=@guardianCompleteAddress,guardian_relationship= @guardianRelationship,guardian_contactNo=@guardianContactNo,guardian_telNo=@guardianTelNo,bc=@reqPSA,form138= @reqForm138,drugtest=@reqDrugTest,good_moral=@reqGoodMoral,en_exam=@reqAdmissionTest,ncae=@reqNCAE" +
+                    string sql = "UPDATE student_profile SET stud_Type=@studType, id_old_stud=@oldstudentNo, LRN=@studLRN,regNo=@studRegistrationNo,last_name=@studLastName,middle_name=@studMiddleName,first_name=@studFirstName,grade_Level=@studGradeLevel,strand=@studStrand,track=@studAcadTrack,voucher_type=@studVoucher,address=@studAddress1,date_of_birth=@studDateOfBirth,place_of_birth=@studBirthPlace,religion=@religion,nationality=@nationality,gender= @studGender,stud_contactNo=@studContactNo,stud_telNo= @studTelNo,prev_school=@studPrevSchool,prev_school_address=@studPrevSchoolAddress,father_name=@fatherName,mother_name=@motherName,mother_work=@motherWork,father_work= @fatherWork,guardian_name=@guardianName,guardian_work= @guardianWork,guardian_address=@guardianCompleteAddress,guardian_relationship= @guardianRelationship,guardian_contactNo=@guardianContactNo,guardian_telNo=@guardianTelNo,bc=@reqPSA,form138= @reqForm138,drugtest=@reqDrugTest,good_moral=@reqGoodMoral,en_exam=@reqAdmissionTest,ncae=@reqNCAE" +
                                     " WHERE regno=@studRegistrationNo;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -976,6 +873,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("studFirstName", studFirstName);
 
                     cmd.Parameters.AddWithValue("oldstudentNo", oldstudentNo);
+                    cmd.Parameters.AddWithValue("studType", studType);
 
                     cmd.Parameters.AddWithValue("studGradeLevel", studGradeLevel);
                     cmd.Parameters.AddWithValue("studStrand", studStrand);
@@ -1345,6 +1243,112 @@ namespace GOCSystem2018
             }
         }
 
-       
+        public List<StudentProfile> GetByLRNS()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    //prepare sql query
+                    string sql = "SELECT * FROM student_profile WHERE LRN =@studLRN;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    cmd.Parameters.AddWithValue("studLRN", studLRN);
+
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    //loop while have record
+                    while (reader.Read())
+                    {
+                        //instantiate model
+                        StudentProfile SP = new StudentProfile();
+
+
+                        //prepare properties
+                        SP.id = Convert.ToInt32(reader["id"].ToString());
+                        SP.oldstudentNo = reader["id_old_stud"].ToString();
+
+                        SP.studType = reader["stud_Type"].ToString();
+
+                        SP.studGOCNo = reader["IDNo"].ToString();
+                        SP.studLRN = reader["LRN"].ToString();
+                        SP.studRegistrationNo = reader["regNo"].ToString();
+                        //SP.reservee = reader["Reservee"].ToString();
+                        //SP.reserveFor = reader["Reserve_for"].ToString();
+                        //SP.fullPayment = reader["Full_payment"].ToString();
+                        //SP.partialPayment = reader["Partial_payment"].ToString();
+                        SP.studLastName = reader["last_name"].ToString();
+                        SP.studFirstName = reader["first_name"].ToString();
+                        SP.studMiddleName = reader["middle_name"].ToString();
+                        SP.studGradeLevel = reader["grade_Level"].ToString();
+
+                        SP.studAddress1 = reader["address"].ToString();
+                       
+                        SP.section = reader["section"].ToString();
+                        SP.track = reader["track"].ToString();
+                        SP.studStrand = reader["strand"].ToString();
+
+                        SP.voucherType = reader["voucher_type"].ToString();
+                        
+                        SP.studAddress1 = reader["address"].ToString();
+                        SP.studDateOfBirth = reader["date_of_birth"].ToString();
+
+                        SP.studBirthPlace = reader["place_of_birth"].ToString();
+
+                        SP.religion = reader["religion"].ToString();
+                        SP.nationality = reader["nationality"].ToString();
+                        SP.studGender = reader["gender"].ToString();
+                        SP.studContactNo = reader["stud_contactNo"].ToString();
+                        SP.StudTelNo = reader["stud_telNo"].ToString();
+                        SP.studPrevSchool = reader["prev_school"].ToString();
+                        SP.studPrevSchoolAddress = reader["prev_school_address"].ToString();
+
+
+
+                        SP.fatherName = reader["father_name"].ToString();
+                        SP.fatherWork = reader["father_work"].ToString();
+
+                        SP.motherName = reader["mother_name"].ToString();
+                        SP.motherWork = reader["mother_work"].ToString();
+
+                        SP.motherContactNo = reader["motherContactNo"].ToString();
+                        SP.fatherContactNo = reader["fatherContactNo"].ToString();
+
+                        SP.guardianName = reader["guardian_name"].ToString();
+                        SP.guardianWork = reader["guardian_work"].ToString();
+                        SP.guardianCompleteAddress = reader["guardian_address"].ToString();
+                        SP.guardianRelationship = reader["guardian_relationship"].ToString();
+                        SP.guardianContactNo = reader["guardian_contactNo"].ToString();
+                        SP.guardianTelNo = reader["guardian_telNo"].ToString();
+
+                        SP.reqPSA = reader["bc"].ToString();
+                        SP.reqForm138 = reader["form138"].ToString();
+                        SP.reqDrugTest = reader["drugtest"].ToString();
+                        SP.reqGoodMoral = reader["good_moral"].ToString();
+                        SP.reqAdmissionTest = reader["en_exam"].ToString();
+                        SP.reqNCAE = reader["ncae"].ToString();
+
+                        //SP.dateEnrolled = reader["date_enrolled"].ToString();
+                        //SP.syEnrolled = reader["sy_enrolled"].ToString();
+
+
+                        studentProfiles.Add(SP);
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            return studentProfiles;
+        }
+
+
     }
 }

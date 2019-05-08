@@ -222,6 +222,7 @@ namespace GOCSystem2018
             foreach (var item in studProfiles)
             {
                 //pass variable to form Assesment
+                frmReg.OLD_IDNO = item.OldStudentNo;
                 frmReg.The_GOC_No = item.StudGOCNo;
                 frmReg.RegNo = item.StudRegistrationNo;
                 frmReg.LRN = item.StudLRN;

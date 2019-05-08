@@ -23,7 +23,7 @@ namespace GOCSystem2018
         frmAssesment frmAssesment = new frmAssesment();
         frmRegistration frmReg = new frmRegistration();
 
-
+       // public string Assess_GOC_No = "GOC-2018-0428";
 
         public frmAssessmentSearch()
         {
@@ -53,6 +53,16 @@ namespace GOCSystem2018
             this.dgvSearch.Columns["id"].Visible = false;
             // this.dgvSearch.Columns["IDNo"].Visible = false;
             // this.dgvSearch.Columns["regNo"].Visible = false;
+
+            this.dgvSearch.Columns["id_old_stud"].Visible = false;
+
+            this.dgvSearch.Columns["FatherContactNo"].Visible = false;
+            this.dgvSearch.Columns["MotherContactNo"].Visible = false;
+            this.dgvSearch.Columns["track"].Visible = false;
+            this.dgvSearch.Columns["stud_type"].Visible = false;
+            this.dgvSearch.Columns["otherAddress"].Visible = false;
+            
+
             this.dgvSearch.Columns["Reservee"].Visible = false;
             this.dgvSearch.Columns["Reserve_for"].Visible = false;
             this.dgvSearch.Columns["Full_payment"].Visible = false;
@@ -86,7 +96,7 @@ namespace GOCSystem2018
             this.dgvSearch.Columns["en_exam"].Visible = false;
             this.dgvSearch.Columns["ncae"].Visible = false;
             this.dgvSearch.Columns["date_enrolled"].Visible = false;
-            // this.dgvSearch.Columns["sy_enrolled"].Visible = false;
+            this.dgvSearch.Columns["sy_enrolled"].Visible = false;
             this.dgvSearch.Columns["1"].Visible = false;
             this.dgvSearch.Columns["2"].Visible = false;
             #endregion
@@ -312,7 +322,9 @@ namespace GOCSystem2018
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+
             PassToEdit();
+
         }
 
         public void PassToEdit()
@@ -321,17 +333,17 @@ namespace GOCSystem2018
             studProfiles.Clear();
             //pass value
             studProfile.StudLRN = dgvSearch.CurrentRow.Cells[3].FormattedValue.ToString();
-            studProfiles = studProfile.GetByLRN();
-
+            studProfiles = studProfile.GetByLRNS();
+           
             foreach (var item in studProfiles)
             {
-               
 
                 //pass variable to form Assesment
+                frmReg.OLD_IDNO = item.OldStudentNo;
                 frmReg.The_GOC_No = item.StudGOCNo;
                 frmReg.RegNo = item.StudRegistrationNo;
                 frmReg.LRN = item.StudLRN;
-               // frmReg.VType = item.VoucherType;
+                frmReg.VType = item.VoucherType;
                 frmReg.StudType = item.StudType;
                 frmReg.Track = item.Track;
                 frmReg.Grade_Level = item.StudGradeLevel;
@@ -377,6 +389,7 @@ namespace GOCSystem2018
                 frmReg._NCAE = item.ReqNCAE;
 
                 frmReg.toEdit = true;
+                frmReg.Profile_edit = true;
                 //frmReg.G_House_No = item.GuardianCompleteAddress;
             }
             frmReg.EditRender();
