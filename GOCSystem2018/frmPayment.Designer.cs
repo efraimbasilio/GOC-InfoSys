@@ -28,20 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayment));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label12 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtORNo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtAmountGiven = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnProcess = new System.Windows.Forms.Button();
             this.lblAmountDue = new System.Windows.Forms.Label();
@@ -60,7 +59,6 @@
             this.lblTheAmount = new System.Windows.Forms.Label();
             this.lblEnStatus = new System.Windows.Forms.Label();
             this.lblAmount_Due = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -77,14 +75,25 @@
             this.lblPAYFOR = new System.Windows.Forms.Label();
             this.dgvORCheck = new System.Windows.Forms.DataGridView();
             this.dgvORCheckPartial = new System.Windows.Forms.DataGridView();
+            this.btnOtherFee = new System.Windows.Forms.Button();
+            this.txtAmountGiven = new System.Windows.Forms.TextBox();
+            this.pnlOtherFee = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtLocker = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtBooks = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtUniform = new System.Windows.Forms.TextBox();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerMonth)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvORCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvORCheckPartial)).BeginInit();
+            this.pnlOtherFee.SuspendLayout();
             this.SuspendLayout();
             // 
             // label12
@@ -92,7 +101,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(427, 9);
+            this.label12.Location = new System.Drawing.Point(420, 9);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(16, 16);
             this.label12.TabIndex = 1024;
@@ -112,11 +121,12 @@
             // 
             // txtORNo
             // 
-            this.txtORNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtORNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtORNo.Location = new System.Drawing.Point(16, 161);
             this.txtORNo.Name = "txtORNo";
-            this.txtORNo.Size = new System.Drawing.Size(412, 24);
+            this.txtORNo.Size = new System.Drawing.Size(412, 26);
             this.txtORNo.TabIndex = 1;
+            this.txtORNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtORNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtORNo_KeyPress);
             // 
             // label2
@@ -137,23 +147,12 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(5, 399);
+            this.label1.Location = new System.Drawing.Point(3, 483);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 1037;
             this.label1.Text = "Amount Tendered:";
-            // 
-            // txtAmountGiven
-            // 
-            this.txtAmountGiven.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAmountGiven.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmountGiven.Location = new System.Drawing.Point(11, 6);
-            this.txtAmountGiven.Name = "txtAmountGiven";
-            this.txtAmountGiven.Size = new System.Drawing.Size(433, 31);
-            this.txtAmountGiven.TabIndex = 2;
-            this.txtAmountGiven.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtAmountGiven.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountGiven_KeyPress);
             // 
             // label4
             // 
@@ -172,7 +171,7 @@
             this.btnProcess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProcess.ForeColor = System.Drawing.Color.White;
-            this.btnProcess.Location = new System.Drawing.Point(617, 234);
+            this.btnProcess.Location = new System.Drawing.Point(828, 225);
             this.btnProcess.Name = "btnProcess";
             this.btnProcess.Size = new System.Drawing.Size(146, 31);
             this.btnProcess.TabIndex = 1040;
@@ -183,7 +182,7 @@
             // lblAmountDue
             // 
             this.lblAmountDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmountDue.Location = new System.Drawing.Point(613, 163);
+            this.lblAmountDue.Location = new System.Drawing.Point(824, 154);
             this.lblAmountDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAmountDue.Name = "lblAmountDue";
             this.lblAmountDue.Size = new System.Drawing.Size(150, 20);
@@ -195,7 +194,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(549, 128);
+            this.label5.Location = new System.Drawing.Point(760, 119);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 20);
@@ -206,7 +205,7 @@
             // 
             this.lblPaymentFor.AutoSize = true;
             this.lblPaymentFor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaymentFor.Location = new System.Drawing.Point(660, 128);
+            this.lblPaymentFor.Location = new System.Drawing.Point(871, 119);
             this.lblPaymentFor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPaymentFor.Name = "lblPaymentFor";
             this.lblPaymentFor.Size = new System.Drawing.Size(103, 20);
@@ -216,7 +215,7 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.dgvPerMonth);
-            this.groupBox4.Location = new System.Drawing.Point(780, 60);
+            this.groupBox4.Location = new System.Drawing.Point(991, 51);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(310, 342);
             this.groupBox4.TabIndex = 1048;
@@ -228,27 +227,27 @@
             this.dgvPerMonth.AllowUserToAddRows = false;
             this.dgvPerMonth.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvPerMonth.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPerMonth.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPerMonth.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPerMonth.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPerMonth.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PaymentMonth,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPerMonth.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPerMonth.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPerMonth.GridColor = System.Drawing.Color.White;
             this.dgvPerMonth.Location = new System.Drawing.Point(-39, 15);
             this.dgvPerMonth.Name = "dgvPerMonth";
@@ -275,9 +274,9 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle9.Format = "N2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn4.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
@@ -287,7 +286,7 @@
             // 
             this.lblPerMonthAdv.AutoSize = true;
             this.lblPerMonthAdv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPerMonthAdv.Location = new System.Drawing.Point(670, 323);
+            this.lblPerMonthAdv.Location = new System.Drawing.Point(881, 314);
             this.lblPerMonthAdv.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPerMonthAdv.Name = "lblPerMonthAdv";
             this.lblPerMonthAdv.Size = new System.Drawing.Size(103, 20);
@@ -298,7 +297,7 @@
             // 
             this.lblCalc.AutoSize = true;
             this.lblCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalc.Location = new System.Drawing.Point(670, 81);
+            this.lblCalc.Location = new System.Drawing.Point(881, 72);
             this.lblCalc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCalc.Name = "lblCalc";
             this.lblCalc.Size = new System.Drawing.Size(103, 20);
@@ -313,7 +312,7 @@
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(156, 514);
+            this.btnSave.Location = new System.Drawing.Point(156, 543);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(163, 47);
             this.btnSave.TabIndex = 3;
@@ -326,7 +325,7 @@
             // 
             this.lblpayNumber.AutoSize = true;
             this.lblpayNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblpayNumber.Location = new System.Drawing.Point(660, 22);
+            this.lblpayNumber.Location = new System.Drawing.Point(871, 13);
             this.lblpayNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblpayNumber.Name = "lblpayNumber";
             this.lblpayNumber.Size = new System.Drawing.Size(103, 20);
@@ -337,7 +336,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(515, 323);
+            this.label6.Location = new System.Drawing.Point(726, 314);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(147, 20);
@@ -348,7 +347,7 @@
             // 
             this.lblTheAmount.AutoSize = true;
             this.lblTheAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTheAmount.Location = new System.Drawing.Point(641, 283);
+            this.lblTheAmount.Location = new System.Drawing.Point(852, 274);
             this.lblTheAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTheAmount.Name = "lblTheAmount";
             this.lblTheAmount.Size = new System.Drawing.Size(122, 24);
@@ -360,7 +359,7 @@
             // 
             this.lblEnStatus.AutoSize = true;
             this.lblEnStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnStatus.Location = new System.Drawing.Point(660, 211);
+            this.lblEnStatus.Location = new System.Drawing.Point(871, 202);
             this.lblEnStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEnStatus.Name = "lblEnStatus";
             this.lblEnStatus.Size = new System.Drawing.Size(91, 20);
@@ -375,24 +374,14 @@
             this.lblAmount_Due.Location = new System.Drawing.Point(327, 10);
             this.lblAmount_Due.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAmount_Due.Name = "lblAmount_Due";
-            this.lblAmount_Due.Size = new System.Drawing.Size(64, 25);
+            this.lblAmount_Due.Size = new System.Drawing.Size(97, 25);
             this.lblAmount_Due.TabIndex = 1056;
-            this.lblAmount_Due.Text = "2000";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.txtAmountGiven);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(2, 425);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(450, 45);
-            this.panel1.TabIndex = 1057;
+            this.lblAmount_Due.Text = "2000.00";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(294, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(264, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -438,9 +427,9 @@
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.lblAmount_Due);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(2, 351);
+            this.panel4.Location = new System.Drawing.Point(2, 420);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(450, 45);
+            this.panel4.Size = new System.Drawing.Size(434, 45);
             this.panel4.TabIndex = 1059;
             // 
             // label7
@@ -459,7 +448,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.label15.Location = new System.Drawing.Point(29, 209);
+            this.label15.Location = new System.Drawing.Point(16, 242);
             this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(32, 13);
@@ -470,7 +459,7 @@
             // 
             this.lblGOCNo.AutoSize = true;
             this.lblGOCNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.lblGOCNo.Location = new System.Drawing.Point(153, 237);
+            this.lblGOCNo.Location = new System.Drawing.Point(140, 270);
             this.lblGOCNo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblGOCNo.Name = "lblGOCNo";
             this.lblGOCNo.Size = new System.Drawing.Size(115, 13);
@@ -481,7 +470,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.label3.Location = new System.Drawing.Point(29, 237);
+            this.label3.Location = new System.Drawing.Point(16, 270);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
@@ -492,7 +481,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.label8.Location = new System.Drawing.Point(29, 273);
+            this.label8.Location = new System.Drawing.Point(16, 306);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 13);
@@ -503,7 +492,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.lblName.Location = new System.Drawing.Point(153, 273);
+            this.lblName.Location = new System.Drawing.Point(140, 306);
             this.lblName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(157, 13);
@@ -514,7 +503,7 @@
             // 
             this.lblLRN.AutoSize = true;
             this.lblLRN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.lblLRN.Location = new System.Drawing.Point(153, 209);
+            this.lblLRN.Location = new System.Drawing.Point(140, 242);
             this.lblLRN.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblLRN.Name = "lblLRN";
             this.lblLRN.Size = new System.Drawing.Size(47, 13);
@@ -525,7 +514,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.label9.Location = new System.Drawing.Point(29, 303);
+            this.label9.Location = new System.Drawing.Point(16, 336);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 13);
@@ -536,7 +525,7 @@
             // 
             this.lblPAYFOR.AutoSize = true;
             this.lblPAYFOR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.lblPAYFOR.Location = new System.Drawing.Point(153, 303);
+            this.lblPAYFOR.Location = new System.Drawing.Point(140, 336);
             this.lblPAYFOR.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPAYFOR.Name = "lblPAYFOR";
             this.lblPAYFOR.Size = new System.Drawing.Size(157, 13);
@@ -545,58 +534,181 @@
             // 
             // dgvORCheck
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvORCheck.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvORCheck.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvORCheck.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvORCheck.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvORCheck.Location = new System.Drawing.Point(513, 408);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvORCheck.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvORCheck.Location = new System.Drawing.Point(724, 399);
             this.dgvORCheck.Name = "dgvORCheck";
             this.dgvORCheck.Size = new System.Drawing.Size(286, 150);
             this.dgvORCheck.TabIndex = 1080;
             // 
             // dgvORCheckPartial
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvORCheckPartial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvORCheckPartial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvORCheckPartial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvORCheckPartial.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dgvORCheckPartial.Location = new System.Drawing.Point(825, 411);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvORCheckPartial.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvORCheckPartial.Location = new System.Drawing.Point(1036, 402);
             this.dgvORCheckPartial.Name = "dgvORCheckPartial";
             this.dgvORCheckPartial.Size = new System.Drawing.Size(248, 150);
             this.dgvORCheckPartial.TabIndex = 1081;
+            // 
+            // btnOtherFee
+            // 
+            this.btnOtherFee.Location = new System.Drawing.Point(660, 41);
+            this.btnOtherFee.Name = "btnOtherFee";
+            this.btnOtherFee.Size = new System.Drawing.Size(101, 30);
+            this.btnOtherFee.TabIndex = 1082;
+            this.btnOtherFee.Text = "With Other Fees";
+            this.btnOtherFee.UseVisualStyleBackColor = true;
+            this.btnOtherFee.Click += new System.EventHandler(this.btnOtherFee_Click);
+            // 
+            // txtAmountGiven
+            // 
+            this.txtAmountGiven.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAmountGiven.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmountGiven.Location = new System.Drawing.Point(2, 499);
+            this.txtAmountGiven.Name = "txtAmountGiven";
+            this.txtAmountGiven.Size = new System.Drawing.Size(426, 38);
+            this.txtAmountGiven.TabIndex = 2;
+            this.txtAmountGiven.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAmountGiven.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountGiven_KeyPress);
+            // 
+            // pnlOtherFee
+            // 
+            this.pnlOtherFee.Controls.Add(this.label16);
+            this.pnlOtherFee.Controls.Add(this.textBox1);
+            this.pnlOtherFee.Controls.Add(this.label14);
+            this.pnlOtherFee.Controls.Add(this.txtLocker);
+            this.pnlOtherFee.Controls.Add(this.label11);
+            this.pnlOtherFee.Controls.Add(this.txtBooks);
+            this.pnlOtherFee.Controls.Add(this.label10);
+            this.pnlOtherFee.Controls.Add(this.txtUniform);
+            this.pnlOtherFee.Location = new System.Drawing.Point(514, 51);
+            this.pnlOtherFee.Name = "pnlOtherFee";
+            this.pnlOtherFee.Size = new System.Drawing.Size(256, 212);
+            this.pnlOtherFee.TabIndex = 1089;
+            this.pnlOtherFee.Visible = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.DimGray;
+            this.label16.Location = new System.Drawing.Point(41, 29);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(46, 13);
+            this.label16.TabIndex = 1096;
+            this.label16.Text = "Uniform:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(44, 45);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(202, 24);
+            this.textBox1.TabIndex = 1095;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DimGray;
+            this.label14.Location = new System.Drawing.Point(43, 168);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(43, 13);
+            this.label14.TabIndex = 1094;
+            this.label14.Text = "Locker:";
+            // 
+            // txtLocker
+            // 
+            this.txtLocker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocker.Location = new System.Drawing.Point(46, 184);
+            this.txtLocker.Name = "txtLocker";
+            this.txtLocker.Size = new System.Drawing.Size(202, 24);
+            this.txtLocker.TabIndex = 1093;
+            this.txtLocker.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DimGray;
+            this.label11.Location = new System.Drawing.Point(43, 121);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 13);
+            this.label11.TabIndex = 1092;
+            this.label11.Text = "Books:";
+            // 
+            // txtBooks
+            // 
+            this.txtBooks.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBooks.Location = new System.Drawing.Point(46, 137);
+            this.txtBooks.Name = "txtBooks";
+            this.txtBooks.Size = new System.Drawing.Size(202, 24);
+            this.txtBooks.TabIndex = 1091;
+            this.txtBooks.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(43, 72);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 13);
+            this.label10.TabIndex = 1090;
+            this.label10.Text = "Uniform:";
+            // 
+            // txtUniform
+            // 
+            this.txtUniform.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUniform.Location = new System.Drawing.Point(46, 88);
+            this.txtUniform.Name = "txtUniform";
+            this.txtUniform.Size = new System.Drawing.Size(202, 24);
+            this.txtUniform.TabIndex = 1089;
+            this.txtUniform.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(456, 573);
+            this.ClientSize = new System.Drawing.Size(439, 602);
+            this.Controls.Add(this.txtAmountGiven);
+            this.Controls.Add(this.btnOtherFee);
             this.Controls.Add(this.dgvORCheckPartial);
             this.Controls.Add(this.dgvORCheck);
             this.Controls.Add(this.label9);
@@ -611,7 +723,6 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.txtORNo);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.lblEnStatus);
             this.Controls.Add(this.lblTheAmount);
@@ -627,6 +738,7 @@
             this.Controls.Add(this.btnProcess);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.pnlOtherFee);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -636,8 +748,6 @@
             this.Load += new System.EventHandler(this.frmPayment_Load);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerMonth)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -645,6 +755,8 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvORCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvORCheckPartial)).EndInit();
+            this.pnlOtherFee.ResumeLayout(false);
+            this.pnlOtherFee.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -656,7 +768,6 @@
         private System.Windows.Forms.TextBox txtORNo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAmountGiven;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnProcess;
         private System.Windows.Forms.Label label5;
@@ -675,7 +786,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentMonth;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -692,5 +802,16 @@
         private System.Windows.Forms.Label lblPAYFOR;
         private System.Windows.Forms.DataGridView dgvORCheck;
         private System.Windows.Forms.DataGridView dgvORCheckPartial;
+        private System.Windows.Forms.Button btnOtherFee;
+        private System.Windows.Forms.TextBox txtAmountGiven;
+        private System.Windows.Forms.Panel pnlOtherFee;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtLocker;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtBooks;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtUniform;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

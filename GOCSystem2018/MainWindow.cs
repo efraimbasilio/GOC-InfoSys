@@ -205,7 +205,7 @@ namespace GOCSystem2018
             {
                
                 button4.Enabled = false;//Accounting
-                button5.Enabled = false;//StudentList
+                //button5.Enabled = false;//StudentList
             }
             else if (accver.Equals("Teacher"))
             {
@@ -220,9 +220,10 @@ namespace GOCSystem2018
             else if (accver.Equals("Cashier"))
             {
                 button2.Enabled = false;
-                
-              
+                button3.Enabled = false;
+                button5.Enabled = false;
             }
+
             else if (accver.Equals("Admin"))
             {
                 button2.Enabled = true;
@@ -254,6 +255,8 @@ namespace GOCSystem2018
                 string School;
                 School = (item.YearStart + " - " + item.YearEnd);
                 lblSY.Text = School;
+                lblSemester.Text = item.Semester;
+                lblQGrading.Text = item.Quarter;
                 //cmbSchoolYear.Items.Add(School);
             }
         }//End LoadRecords()

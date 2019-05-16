@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Billing_Other_Fees.cs" />
     <Compile Include="blackfrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +93,12 @@
     </Compile>
     <Compile Include="CircularPictureBox.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmBilling_OtherFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBilling_OtherFee.Designer.cs">
+      <DependentUpon>frmBilling_OtherFee.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\EnrolledStudents.cs" />
@@ -339,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBillingSearch.resx">
       <DependentUpon>frmBillingSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBilling_OtherFee.resx">
+      <DependentUpon>frmBilling_OtherFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChoosePayment.resx">
       <DependentUpon>frmChoosePayment.cs</DependentUpon>

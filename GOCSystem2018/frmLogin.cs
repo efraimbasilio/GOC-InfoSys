@@ -130,6 +130,20 @@ namespace GOCSystem2018
                 return true;
             }
 
+            if (keyData == (Keys.Control | Keys.C))
+            {
+                txtUsername.Text = "cashier";
+                txtpassword.Text = "cashier123";
+                return true;
+            }
+
+            if (keyData == (Keys.Control | Keys.R))
+            {
+                txtUsername.Text = "registrar";
+                txtpassword.Text = "registrar123";
+                return true;
+            }
+
             if (keyData == (Keys.Control | Keys.Alt | Keys.S))
             {
                 frmSetting set = new frmSetting();

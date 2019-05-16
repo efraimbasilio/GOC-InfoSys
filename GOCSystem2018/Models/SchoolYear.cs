@@ -94,7 +94,7 @@ namespace GOCSystem2018
                         schoolYear.id = Convert.ToInt32(reader["id"].ToString());
                         schoolYear.yearStart = reader["year_start"].ToString();
                         schoolYear.yearEnd = reader["year_end"].ToString();
-                        schoolYear.semester = reader["semster"].ToString();
+                        schoolYear.semester = reader["semester"].ToString();
                         schoolYear.quaterGrading = reader["quarter_grading"].ToString();
 
                         schoolYears.Add(schoolYear);
