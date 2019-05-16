@@ -34,7 +34,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblAmount_Due = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtORNo = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.lblRegNo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlOtherFee = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.txtTuitionFee = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.txtBooks = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtUniform = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblAmount_Due = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -67,8 +67,11 @@
             this.txtAmountGiven.Location = new System.Drawing.Point(7, 490);
             this.txtAmountGiven.Name = "txtAmountGiven";
             this.txtAmountGiven.Size = new System.Drawing.Size(418, 38);
-            this.txtAmountGiven.TabIndex = 1091;
+            this.txtAmountGiven.TabIndex = 19;
             this.txtAmountGiven.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAmountGiven.Click += new System.EventHandler(this.txtAmountGiven_Click);
+            this.txtAmountGiven.Enter += new System.EventHandler(this.txtAmountGiven_Enter);
+            this.txtAmountGiven.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountGiven_KeyPress);
             this.txtAmountGiven.Leave += new System.EventHandler(this.txtAmountGiven_Leave);
             // 
             // btnOtherFee
@@ -76,9 +79,10 @@
             this.btnOtherFee.Location = new System.Drawing.Point(320, 100);
             this.btnOtherFee.Name = "btnOtherFee";
             this.btnOtherFee.Size = new System.Drawing.Size(101, 30);
-            this.btnOtherFee.TabIndex = 1098;
+            this.btnOtherFee.TabIndex = 11;
             this.btnOtherFee.Text = "With Other Fees";
             this.btnOtherFee.UseVisualStyleBackColor = true;
+            this.btnOtherFee.Click += new System.EventHandler(this.btnOtherFee_Click);
             // 
             // label7
             // 
@@ -95,10 +99,10 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
-            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.lblAmount_Due);
+            this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(6, 422);
+            this.panel4.Location = new System.Drawing.Point(7, 422);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(425, 45);
             this.panel4.TabIndex = 1096;
@@ -106,24 +110,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(264, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(94, 7);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1058;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblAmount_Due
-            // 
-            this.lblAmount_Due.AutoSize = true;
-            this.lblAmount_Due.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount_Due.ForeColor = System.Drawing.Color.White;
-            this.lblAmount_Due.Location = new System.Drawing.Point(327, 10);
-            this.lblAmount_Due.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAmount_Due.Name = "lblAmount_Due";
-            this.lblAmount_Due.Size = new System.Drawing.Size(97, 25);
-            this.lblAmount_Due.TabIndex = 1056;
-            this.lblAmount_Due.Text = "0000.00";
             // 
             // label4
             // 
@@ -143,8 +135,9 @@
             this.txtORNo.Location = new System.Drawing.Point(9, 133);
             this.txtORNo.Name = "txtORNo";
             this.txtORNo.Size = new System.Drawing.Size(412, 26);
-            this.txtORNo.TabIndex = 1090;
+            this.txtORNo.TabIndex = 10;
             this.txtORNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtORNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtORNo_KeyPress);
             // 
             // label18
             // 
@@ -168,7 +161,7 @@
             this.btnSave.Location = new System.Drawing.Point(258, 534);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(163, 47);
-            this.btnSave.TabIndex = 1092;
+            this.btnSave.TabIndex = 20;
             this.btnSave.Text = "&Confirm Amount";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSave.UseVisualStyleBackColor = false;
@@ -179,7 +172,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(6, 470);
+            this.label1.Location = new System.Drawing.Point(6, 474);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
@@ -246,7 +239,18 @@
             this.pnlOtherFee.Location = new System.Drawing.Point(9, 166);
             this.pnlOtherFee.Name = "pnlOtherFee";
             this.pnlOtherFee.Size = new System.Drawing.Size(412, 250);
-            this.pnlOtherFee.TabIndex = 1099;
+            this.pnlOtherFee.TabIndex = 12;
+            this.pnlOtherFee.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(305, 209);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(101, 30);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Compute";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label16
             // 
@@ -267,9 +271,11 @@
             this.txtTuitionFee.Location = new System.Drawing.Point(204, 37);
             this.txtTuitionFee.Name = "txtTuitionFee";
             this.txtTuitionFee.Size = new System.Drawing.Size(202, 24);
-            this.txtTuitionFee.TabIndex = 1095;
+            this.txtTuitionFee.TabIndex = 13;
             this.txtTuitionFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTuitionFee.Click += new System.EventHandler(this.txtTuitionFee_Click);
             this.txtTuitionFee.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtTuitionFee.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTuitionFee_KeyPress);
             this.txtTuitionFee.Leave += new System.EventHandler(this.txtTuitionFee_Leave);
             // 
             // label14
@@ -291,8 +297,10 @@
             this.txtLocker.Location = new System.Drawing.Point(204, 176);
             this.txtLocker.Name = "txtLocker";
             this.txtLocker.Size = new System.Drawing.Size(202, 24);
-            this.txtLocker.TabIndex = 1093;
+            this.txtLocker.TabIndex = 16;
             this.txtLocker.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLocker.Click += new System.EventHandler(this.txtLocker_Click);
+            this.txtLocker.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLocker_KeyPress);
             this.txtLocker.Leave += new System.EventHandler(this.txtLocker_Leave);
             // 
             // label11
@@ -314,8 +322,10 @@
             this.txtBooks.Location = new System.Drawing.Point(204, 129);
             this.txtBooks.Name = "txtBooks";
             this.txtBooks.Size = new System.Drawing.Size(202, 24);
-            this.txtBooks.TabIndex = 1091;
+            this.txtBooks.TabIndex = 15;
             this.txtBooks.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBooks.Click += new System.EventHandler(this.txtBooks_Click);
+            this.txtBooks.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBooks_KeyPress);
             this.txtBooks.Leave += new System.EventHandler(this.txtBooks_Leave);
             // 
             // label10
@@ -337,25 +347,30 @@
             this.txtUniform.Location = new System.Drawing.Point(204, 80);
             this.txtUniform.Name = "txtUniform";
             this.txtUniform.Size = new System.Drawing.Size(202, 24);
-            this.txtUniform.TabIndex = 1089;
+            this.txtUniform.TabIndex = 14;
             this.txtUniform.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUniform.Click += new System.EventHandler(this.txtUniform_Click);
+            this.txtUniform.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUniform_KeyPress);
             this.txtUniform.Leave += new System.EventHandler(this.txtUniform_Leave);
             // 
-            // button1
+            // lblAmount_Due
             // 
-            this.button1.Location = new System.Drawing.Point(305, 209);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 30);
-            this.button1.TabIndex = 1100;
-            this.button1.Text = "Compute";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lblAmount_Due.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
+            this.lblAmount_Due.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lblAmount_Due.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmount_Due.ForeColor = System.Drawing.Color.White;
+            this.lblAmount_Due.Location = new System.Drawing.Point(131, 7);
+            this.lblAmount_Due.Name = "lblAmount_Due";
+            this.lblAmount_Due.ReadOnly = true;
+            this.lblAmount_Due.Size = new System.Drawing.Size(284, 31);
+            this.lblAmount_Due.TabIndex = 18;
+            this.lblAmount_Due.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmBilling_OtherFee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 592);
+            this.ClientSize = new System.Drawing.Size(436, 592);
             this.Controls.Add(this.txtAmountGiven);
             this.Controls.Add(this.btnOtherFee);
             this.Controls.Add(this.label7);
@@ -368,7 +383,9 @@
             this.Controls.Add(this.pnlOtherFee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmBilling_OtherFee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmBilling_OtherFee";
+            this.Load += new System.EventHandler(this.frmBilling_OtherFee_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -388,7 +405,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblAmount_Due;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtORNo;
         private System.Windows.Forms.Label label18;
@@ -408,5 +424,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtUniform;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox lblAmount_Due;
     }
 }

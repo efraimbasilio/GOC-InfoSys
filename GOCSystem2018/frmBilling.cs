@@ -443,7 +443,8 @@ namespace GOCSystem2018
         private void btnPayment_Click(object sender, EventArgs e)
         {
             frmPayment pay = new frmPayment();
-                  
+            pay.level = lblGradeLevel.Text;
+         
             if (lblMOPInfo.Text == "RESERVATION")
             {
                 //PAYMENT INFOS
@@ -460,7 +461,7 @@ namespace GOCSystem2018
                 pay.reg_no = lblRegNo.Text;
                 pay.GOCNo = lblGOCNo.Text;
                 pay.S_PAYFOR = lblMOPInfo.Text;
-
+                
                 //if Reservation or Partial
                 pay.payment_status = lblMOPInfo.Text;
 
@@ -472,8 +473,6 @@ namespace GOCSystem2018
 
             else if (lblMOPInfo.Text == "PARTIAL PAYMENT")
             {
-
-
                 if (Convert.ToInt32(lblPaymentNoCheck.Text) == 0)
                 {
                     pay.fee_for_reservation = Convert.ToDouble(lblReserve.Text);
@@ -559,7 +558,8 @@ namespace GOCSystem2018
                 pay.Show();
 
             }
-           // this.Hide();
+            // this.Hide();
+            
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)

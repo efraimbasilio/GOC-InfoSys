@@ -76,13 +76,13 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO billing_other_fees(gocnumber,orno, grade_level, uniforms, books, locker) " +
-                                    " VALUES (@miscFeeName,@miscFeeAmount);";
+                    string sql = "INSERT INTO billing_other_fees(gocnumber,orno, grade_level, uniform, books, locker) " +
+                                    " VALUES (@gocNumber,@orNo,@gLevel,@uniform,@books,@locker);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("gocNumber", gocNumber);
-                    cmd.Parameters.AddWithValue("OrNo", OrNo);
+                    cmd.Parameters.AddWithValue("orNo", orNo);
                     cmd.Parameters.AddWithValue("gLevel", gLevel);
                     cmd.Parameters.AddWithValue("uniform", uniform);
                     cmd.Parameters.AddWithValue("books", books);
