@@ -114,7 +114,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.txtSearch);
-            this.panel4.Location = new System.Drawing.Point(14, 177);
+            this.panel4.Location = new System.Drawing.Point(14, 154);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(335, 30);
             this.panel4.TabIndex = 1057;
@@ -167,7 +167,7 @@
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit.Location = new System.Drawing.Point(959, 176);
+            this.btnEdit.Location = new System.Drawing.Point(969, 201);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(67, 26);
             this.btnEdit.TabIndex = 1060;

@@ -67,7 +67,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.txtSearch);
-            this.panel4.Location = new System.Drawing.Point(12, 178);
+            this.panel4.Location = new System.Drawing.Point(5, 204);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(335, 30);
             this.panel4.TabIndex = 1058;
@@ -145,7 +145,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSearch.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSearch.Location = new System.Drawing.Point(9, 214);
+            this.dgvSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvSearch.Location = new System.Drawing.Point(0, 238);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -162,7 +163,7 @@
             this.dgvSearch.RowTemplate.Height = 60;
             this.dgvSearch.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSearch.Size = new System.Drawing.Size(1027, 456);
+            this.dgvSearch.Size = new System.Drawing.Size(1048, 456);
             this.dgvSearch.TabIndex = 1059;
             this.dgvSearch.DoubleClick += new System.EventHandler(this.dgvSearch_DoubleClick_2);
             // 

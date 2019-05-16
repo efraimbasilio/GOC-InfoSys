@@ -303,7 +303,7 @@
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(278, 550);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(139, 47);
+            this.btnSave.Size = new System.Drawing.Size(139, 38);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "&Confirm Amount";
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -755,7 +755,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1226, 609);
+            this.ClientSize = new System.Drawing.Size(432, 609);
             this.Controls.Add(this.dgvORCheckPartial);
             this.Controls.Add(this.dgvPerMonth);
             this.Controls.Add(this.label17);

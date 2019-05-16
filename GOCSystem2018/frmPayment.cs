@@ -224,7 +224,7 @@ namespace GOCSystem2018
                 txtUniform.Text = "0.00";
                 txtBooks.Text = "0.00";
                 txtLocker.Text = "0.00";
-                lblAmountDue.Text = "0.00";
+                lblAmount_Due.Text = "0.00";
 
                 toOtherFees = false;
             }

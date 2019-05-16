@@ -36,6 +36,8 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.SidebarPanel = new System.Windows.Forms.Panel();
+            this.lblSemester = new System.Windows.Forms.Label();
+            this.lblQGrading = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -112,8 +114,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dispanel = new System.Windows.Forms.Panel();
-            this.lblSemester = new System.Windows.Forms.Label();
-            this.lblQGrading = new System.Windows.Forms.Label();
             this.SidebarPanel.SuspendLayout();
             this.Dashboardpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -160,6 +160,28 @@
             this.SidebarPanel.Name = "SidebarPanel";
             this.SidebarPanel.Size = new System.Drawing.Size(232, 720);
             this.SidebarPanel.TabIndex = 0;
+            // 
+            // lblSemester
+            // 
+            this.lblSemester.AutoSize = true;
+            this.lblSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSemester.ForeColor = System.Drawing.Color.Transparent;
+            this.lblSemester.Location = new System.Drawing.Point(15, 631);
+            this.lblSemester.Name = "lblSemester";
+            this.lblSemester.Size = new System.Drawing.Size(31, 13);
+            this.lblSemester.TabIndex = 1027;
+            this.lblSemester.Text = "S.Y.";
+            // 
+            // lblQGrading
+            // 
+            this.lblQGrading.AutoSize = true;
+            this.lblQGrading.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQGrading.ForeColor = System.Drawing.Color.Transparent;
+            this.lblQGrading.Location = new System.Drawing.Point(148, 631);
+            this.lblQGrading.Name = "lblQGrading";
+            this.lblQGrading.Size = new System.Drawing.Size(75, 13);
+            this.lblQGrading.TabIndex = 1026;
+            this.lblQGrading.Text = "2018 - 2019";
             // 
             // lblTime
             // 
@@ -419,6 +441,7 @@
             this.Dashboardpanel.Name = "Dashboardpanel";
             this.Dashboardpanel.Size = new System.Drawing.Size(1048, 694);
             this.Dashboardpanel.TabIndex = 18;
+            this.Dashboardpanel.Visible = false;
             // 
             // pictureBox5
             // 
@@ -1115,33 +1138,12 @@
             // dispanel
             // 
             this.dispanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.dispanel.Location = new System.Drawing.Point(232, 28);
+            this.dispanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dispanel.Location = new System.Drawing.Point(232, 30);
             this.dispanel.Name = "dispanel";
-            this.dispanel.Size = new System.Drawing.Size(1048, 692);
+            this.dispanel.Size = new System.Drawing.Size(1048, 0);
             this.dispanel.TabIndex = 1037;
             this.dispanel.Visible = false;
-            // 
-            // lblSemester
-            // 
-            this.lblSemester.AutoSize = true;
-            this.lblSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemester.ForeColor = System.Drawing.Color.Transparent;
-            this.lblSemester.Location = new System.Drawing.Point(15, 631);
-            this.lblSemester.Name = "lblSemester";
-            this.lblSemester.Size = new System.Drawing.Size(31, 13);
-            this.lblSemester.TabIndex = 1027;
-            this.lblSemester.Text = "S.Y.";
-            // 
-            // lblQGrading
-            // 
-            this.lblQGrading.AutoSize = true;
-            this.lblQGrading.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQGrading.ForeColor = System.Drawing.Color.Transparent;
-            this.lblQGrading.Location = new System.Drawing.Point(148, 631);
-            this.lblQGrading.Name = "lblQGrading";
-            this.lblQGrading.Size = new System.Drawing.Size(75, 13);
-            this.lblQGrading.TabIndex = 1026;
-            this.lblQGrading.Text = "2018 - 2019";
             // 
             // MainWindow
             // 
@@ -1149,8 +1151,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.Dashboardpanel);
             this.Controls.Add(this.dispanel);
+            this.Controls.Add(this.Dashboardpanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SidebarPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
