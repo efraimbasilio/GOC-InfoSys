@@ -67,7 +67,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.txtSearch);
-            this.panel4.Location = new System.Drawing.Point(5, 204);
+            this.panel4.Location = new System.Drawing.Point(9, 181);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(335, 30);
             this.panel4.TabIndex = 1058;
@@ -145,8 +145,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSearch.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSearch.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvSearch.Location = new System.Drawing.Point(0, 238);
+            this.dgvSearch.Location = new System.Drawing.Point(4, 215);
             this.dgvSearch.Name = "dgvSearch";
             this.dgvSearch.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

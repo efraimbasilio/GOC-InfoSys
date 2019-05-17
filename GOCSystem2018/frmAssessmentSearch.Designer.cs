@@ -167,7 +167,7 @@
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEdit.Location = new System.Drawing.Point(969, 201);
+            this.btnEdit.Location = new System.Drawing.Point(969, 160);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(67, 26);
             this.btnEdit.TabIndex = 1060;

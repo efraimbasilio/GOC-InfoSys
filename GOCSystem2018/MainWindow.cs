@@ -310,14 +310,14 @@ namespace GOCSystem2018
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-            #region Screen_Setting
-            int intX = Screen.PrimaryScreen.Bounds.Width;
-            int intY = Screen.PrimaryScreen.Bounds.Height;
-            this.Width = intX;
-            this.Height = intY;
-            this.Left = 0;
-            this.Top = 0;
-            #endregion 
+            //#region Screen_Setting
+            //int intX = Screen.PrimaryScreen.Bounds.Width;
+            //int intY = Screen.PrimaryScreen.Bounds.Height;
+            //this.Width = intX;
+            //this.Height = intY;
+            //this.Left = 0;
+            //this.Top = 0;
+            //#endregion 
             StartTimer();
 
             LoadSchoolYear();

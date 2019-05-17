@@ -302,6 +302,27 @@ namespace GOCSystem2018
 
         public int count = 1;
         public int  DPCheck;
+
+        private void txtTuitionFee_Click(object sender, EventArgs e)
+        {
+            txtTuitionFee.SelectAll();
+        }
+
+        private void txtUniform_Click(object sender, EventArgs e)
+        {
+            txtUniform.SelectAll();
+        }
+
+        private void txtBooks_Click(object sender, EventArgs e)
+        {
+            txtBooks.SelectAll();
+        }
+
+        private void txtLocker_Click(object sender, EventArgs e)
+        {
+            txtLocker.SelectAll();
+        }
+
         public string OrNo, PayNum;
 
         /***********************************************************************************/
@@ -370,29 +391,7 @@ namespace GOCSystem2018
                 perMonthFee = Convert.ToDouble(item.P10);
             }
         } //Display the Amount per month
-        
-        //public void StudNoGenerate()
-        //{
-        //    int ctrGOCNum = 1;
-        //    //clear list           
-        //    bills.Clear();
-        //    //pass value to list
-        //    //MessageBox.Show(assements.Count().ToString());
-        //    if (bills.Count() < 1)
-        //    {
-        //        GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (ctrGOCNum).ToString("0000");
-        //    }
-
-        //    bills = bill.Load();
-
-        //    foreach (var item in bills)
-        //    {
-        //        //GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (item.Id + 1).ToString("0000");
-        //        ctrGOCNum = ctrGOCNum + 1;
-        //        GOCNo = "GOC-" + DateTime.Today.ToString("yyyy") + "-" + (ctrGOCNum).ToString("0000");
-        //    }
-        //}//StudNoGenerate
-
+             
         public void StudNoGenerate()
         {
             bool OldStud = false;
@@ -451,7 +450,6 @@ namespace GOCSystem2018
 
            
         }//StudNoGenerate
-
 
         public void CountPayment()
         {
@@ -1324,13 +1322,23 @@ namespace GOCSystem2018
 
             LoadRecordsORPartial();
             LoadRecordsOR();
+            LoadRecordsOtherFee();
         }
 
         //For billing
         private void button1_Click(object sender, EventArgs e)
         {
-            toSave = true;
-            checkdup();
+
+            if (toOtherFees == true)
+            {
+                checkdupOtherFee();
+            }
+            else
+            {
+                toSave = true;
+                checkdup();
+            }
+                     
            // checkdupPartial();
 
             if (txtORNo.Text == "" || txtAmountGiven.Text == "")
@@ -1347,27 +1355,50 @@ namespace GOCSystem2018
                 }
                 else
                 {
-                    MessageBox.Show("with other Fee");
-                   
-
+                    //MessageBox.Show("with other Fee");                  
                     if (toSave == true)
                     {
-                        Reservations_2(txtTuitionFee);
-                        PartialNoReserve_2(txtTuitionFee);
-                        PartialSecondPay_2(txtTuitionFee);
 
-                        Billing_Other_Fees fee = new Billing_Other_Fees();
+                        string message = "Please double check the information." +
 
-                        MessageBox.Show(GOCNo);
+                       "\n\nReciept No.: " + txtORNo.Text +
+                       "\nTuition Fee: " + txtTuitionFee.Text +
+                       "\nUniform: " + txtUniform.Text +
+                       "\nBooks: " + txtBooks.Text +
+                       "\nLocker: " + txtLocker.Text;
 
-                        fee.GocNumber = GOCNo;
-                        fee.OrNo = txtORNo.Text;
-                        fee.GLevel = label17.Text;
-                        fee.Uniform = txtUniform.Text;
-                        fee.Books = txtBooks.Text;
-                        fee.Locker = txtLocker.Text;
+                        string title = "GOC_INFO_SYS";
+                        MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                        DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
+                        if (result == DialogResult.Yes)
+                        {
+                            if (Convert.ToDouble(txtTuitionFee.Text) > 0)
+                            {
+                                Reservations_2(txtTuitionFee);
+                                PartialNoReserve_2(txtTuitionFee);
+                                PartialSecondPay_2(txtTuitionFee);
+                            }
 
-                        fee.Save();
+                            Billing_Other_Fees fee = new Billing_Other_Fees();
+
+                            MessageBox.Show(GOCNo);
+
+                            fee.GocNumber = GOCNo;
+                            fee.OrNo = txtORNo.Text;
+                            fee.GLevel = label17.Text;
+                            fee.Uniform = txtUniform.Text;
+                            fee.Books = txtBooks.Text;
+                            fee.Locker = txtLocker.Text;
+
+                            fee.Save();
+                        }
+                        else
+                        {
+                            return;
+                        }
+
+
+                       
                     }
                     else
                     {
@@ -1400,46 +1431,41 @@ namespace GOCSystem2018
                 }
             }
 
-            //try
-            //{
-            //    if (txtORNo.Text == "" || txtAmountGiven.Text == "")
-            //    {
-            //        MessageBox.Show("Please check the OR Number or the Payment","GOC_INFO_SYS",MessageBoxButtons.OK,MessageBoxIcon.Information);
-            //        return;
-            //    }
-            //    else
-            //    {
-            //        //checkdup();
-            //        //checkdupPartial();
-            //        if (toSave == true)
-            //        {
+            MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+            mainwin2.dispanel.Controls.Clear();
+            mainwin2.dispanel.Visible = false;
 
-            //            Reservations();
-            //            PartialNoReserve();
-            //            PartialSecondPay();
+            mainwin2.Dashboardpanel.Visible = true;
+            this.Close();
+        }
 
-            //            MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
-            //            mainwin.dispanel.Controls.Clear();
-            //            mainwin.dispanel.Visible = false;
+        public void LoadRecordsOtherFee()
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
 
-            //            mainwin.Dashboardpanel.Visible = true;
-            //            this.Close();
-            //        }
-            //        else
-            //        {
-            //            return;
-            //        }
+                    string sql = "SELECT * FROM billing_other_fees";
 
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
 
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
 
+                    da.Fill(dt);
+                    dgvOtherFee.DataSource = dt;
 
-            //    }
-            //}
-            //catch (Exception ex)
-            //{               
-            //    MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}                              
+                }
+            }
+            catch (MySqlException ex)
+            {
+
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
@@ -1515,6 +1541,23 @@ namespace GOCSystem2018
                     txtORNo.Focus();
                     
                 }                             
+            }
+            return;
+        }
+
+        public void checkdupOtherFee()
+        {
+
+            for (int i = 0; i < dgvORCheck.Rows.Count; i++)
+            {
+                if (dgvORCheck.Rows[i].Cells[1].FormattedValue.ToString() == txtORNo.Text)  //GOC NO
+                {
+                    MessageBox.Show("Duplicate OR Number Detected, Please check the OR Number", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    toSave = false;
+                    txtORNo.Focus();
+
+                }
             }
             return;
         }

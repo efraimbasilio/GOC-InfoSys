@@ -36,6 +36,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label12 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtORNo = new System.Windows.Forms.TextBox();
@@ -89,6 +92,7 @@
             this.btnOtherFee = new System.Windows.Forms.Button();
             this.txtAmountOtherFee = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.dgvOtherFee = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerMonth)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvORCheck)).BeginInit();
@@ -96,6 +100,7 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlOtherFee.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFee)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -204,7 +209,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Location = new System.Drawing.Point(916, 274);
+            this.groupBox4.Location = new System.Drawing.Point(1053, 9);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(310, 418);
             this.groupBox4.TabIndex = 1048;
@@ -238,11 +243,11 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPerMonth.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPerMonth.GridColor = System.Drawing.Color.White;
-            this.dgvPerMonth.Location = new System.Drawing.Point(466, 46);
+            this.dgvPerMonth.Location = new System.Drawing.Point(436, 12);
             this.dgvPerMonth.Name = "dgvPerMonth";
             this.dgvPerMonth.ReadOnly = true;
             this.dgvPerMonth.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPerMonth.Size = new System.Drawing.Size(342, 321);
+            this.dgvPerMonth.Size = new System.Drawing.Size(198, 302);
             this.dgvPerMonth.TabIndex = 1014;
             // 
             // PaymentMonth
@@ -509,7 +514,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvORCheck.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvORCheck.Location = new System.Drawing.Point(829, 34);
+            this.dgvORCheck.Location = new System.Drawing.Point(676, 9);
             this.dgvORCheck.Name = "dgvORCheck";
             this.dgvORCheck.ReadOnly = true;
             this.dgvORCheck.Size = new System.Drawing.Size(286, 252);
@@ -536,7 +541,7 @@
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvORCheckPartial.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvORCheckPartial.Location = new System.Drawing.Point(576, 314);
+            this.dgvORCheckPartial.Location = new System.Drawing.Point(436, 328);
             this.dgvORCheckPartial.Name = "dgvORCheckPartial";
             this.dgvORCheckPartial.ReadOnly = true;
             this.dgvORCheckPartial.Size = new System.Drawing.Size(248, 269);
@@ -648,6 +653,7 @@
             this.txtTuitionFee.Size = new System.Drawing.Size(202, 24);
             this.txtTuitionFee.TabIndex = 13;
             this.txtTuitionFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTuitionFee.Click += new System.EventHandler(this.txtTuitionFee_Click);
             this.txtTuitionFee.Leave += new System.EventHandler(this.txtTuitionFee_Leave);
             // 
             // label14
@@ -671,6 +677,7 @@
             this.txtLocker.Size = new System.Drawing.Size(202, 24);
             this.txtLocker.TabIndex = 16;
             this.txtLocker.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtLocker.Click += new System.EventHandler(this.txtLocker_Click);
             this.txtLocker.Leave += new System.EventHandler(this.txtLocker_Leave);
             // 
             // label11
@@ -694,6 +701,7 @@
             this.txtBooks.Size = new System.Drawing.Size(202, 24);
             this.txtBooks.TabIndex = 15;
             this.txtBooks.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtBooks.Click += new System.EventHandler(this.txtBooks_Click);
             this.txtBooks.Leave += new System.EventHandler(this.txtBooks_Leave);
             // 
             // label10
@@ -717,6 +725,7 @@
             this.txtUniform.Size = new System.Drawing.Size(202, 24);
             this.txtUniform.TabIndex = 14;
             this.txtUniform.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtUniform.Click += new System.EventHandler(this.txtUniform_Click);
             this.txtUniform.Leave += new System.EventHandler(this.txtUniform_Leave);
             // 
             // btnOtherFee
@@ -738,24 +747,62 @@
             this.txtAmountOtherFee.Size = new System.Drawing.Size(263, 38);
             this.txtAmountOtherFee.TabIndex = 1100;
             this.txtAmountOtherFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAmountOtherFee.Visible = false;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.label17.Location = new System.Drawing.Point(149, 34);
+            this.label17.Location = new System.Drawing.Point(380, 58);
             this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(47, 13);
             this.label17.TabIndex = 1101;
             this.label17.Text = "LRN_no";
+            this.label17.Visible = false;
+            // 
+            // dgvOtherFee
+            // 
+            this.dgvOtherFee.AllowUserToAddRows = false;
+            this.dgvOtherFee.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOtherFee.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvOtherFee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOtherFee.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvOtherFee.Location = new System.Drawing.Point(736, 328);
+            this.dgvOtherFee.Name = "dgvOtherFee";
+            this.dgvOtherFee.ReadOnly = true;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOtherFee.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvOtherFee.Size = new System.Drawing.Size(248, 269);
+            this.dgvOtherFee.TabIndex = 1102;
             // 
             // frmPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(432, 609);
+            this.ClientSize = new System.Drawing.Size(1085, 609);
+            this.Controls.Add(this.dgvOtherFee);
             this.Controls.Add(this.dgvORCheckPartial);
             this.Controls.Add(this.dgvPerMonth);
             this.Controls.Add(this.label17);
@@ -808,6 +855,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlOtherFee.ResumeLayout(false);
             this.pnlOtherFee.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOtherFee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -867,5 +915,6 @@
         private System.Windows.Forms.Button btnOtherFee;
         private System.Windows.Forms.TextBox txtAmountOtherFee;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DataGridView dgvOtherFee;
     }
 }
