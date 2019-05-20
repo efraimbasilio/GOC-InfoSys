@@ -801,7 +801,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1085, 609);
+            this.ClientSize = new System.Drawing.Size(434, 609);
             this.Controls.Add(this.dgvOtherFee);
             this.Controls.Add(this.dgvORCheckPartial);
             this.Controls.Add(this.dgvPerMonth);
