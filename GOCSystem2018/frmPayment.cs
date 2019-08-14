@@ -667,16 +667,19 @@ namespace GOCSystem2018
                     double Total_Amount = 0;
                     for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
                     {
-                        Total_Amount += Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value);
+                        Total_Amount += Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value);                       
                     }
+                    //MessageBox.Show(Total_Amount.ToString());
 
-                    if (Total_Amount > Convert.ToDouble(txtAmountGiven.Text))
+                    if (Total_Amount >= Convert.ToDouble(txtAmountGiven.Text))
                     {
                         //get the sum of all amount in dgv
                         for (int i = 0; i < dgvPerMonth.Rows.Count; i++)
                         {
                             TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value));
                         }
+
+                        //MessageBox.Show(TotalFee.ToString());
 
                         Payments = TotalFee - Convert.ToDouble(txtAmountGiven.Text);
 
@@ -1358,7 +1361,6 @@ namespace GOCSystem2018
                     //MessageBox.Show("with other Fee");                  
                     if (toSave == true)
                     {
-
                         string message = "Please double check the information." +
 
                        "\n\nReciept No.: " + txtORNo.Text +
@@ -1381,7 +1383,7 @@ namespace GOCSystem2018
 
                             Billing_Other_Fees fee = new Billing_Other_Fees();
 
-                            MessageBox.Show(GOCNo);
+                            //MessageBox.Show(GOCNo);
 
                             fee.GocNumber = GOCNo;
                             fee.OrNo = txtORNo.Text;
@@ -1395,10 +1397,7 @@ namespace GOCSystem2018
                         else
                         {
                             return;
-                        }
-
-
-                       
+                        }                       
                     }
                     else
                     {

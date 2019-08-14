@@ -398,11 +398,11 @@
             this.id,
             this.Misc_Name,
             this.misc_amount});
-            this.dgvSchoolYear.Location = new System.Drawing.Point(468, 144);
+            this.dgvSchoolYear.Location = new System.Drawing.Point(354, 124);
             this.dgvSchoolYear.Name = "dgvSchoolYear";
             this.dgvSchoolYear.ReadOnly = true;
             this.dgvSchoolYear.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSchoolYear.Size = new System.Drawing.Size(345, 407);
+            this.dgvSchoolYear.Size = new System.Drawing.Size(502, 407);
             this.dgvSchoolYear.TabIndex = 56;
             this.dgvSchoolYear.Click += new System.EventHandler(this.dgvSchoolYear_Click);
             // 

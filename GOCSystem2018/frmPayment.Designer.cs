@@ -579,7 +579,7 @@
             this.lblAmount_Due.Location = new System.Drawing.Point(131, 7);
             this.lblAmount_Due.Name = "lblAmount_Due";
             this.lblAmount_Due.ReadOnly = true;
-            this.lblAmount_Due.Size = new System.Drawing.Size(284, 31);
+            this.lblAmount_Due.Size = new System.Drawing.Size(270, 31);
             this.lblAmount_Due.TabIndex = 18;
             this.lblAmount_Due.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
