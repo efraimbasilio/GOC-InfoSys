@@ -114,7 +114,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dispanel = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnSectioning = new System.Windows.Forms.Button();
             this.SidebarPanel.SuspendLayout();
             this.Dashboardpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -137,7 +137,7 @@
             // SidebarPanel
             // 
             this.SidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.SidebarPanel.Controls.Add(this.button11);
+            this.SidebarPanel.Controls.Add(this.btnSectioning);
             this.SidebarPanel.Controls.Add(this.lblSemester);
             this.SidebarPanel.Controls.Add(this.lblQGrading);
             this.SidebarPanel.Controls.Add(this.lblTime);
@@ -1146,21 +1146,21 @@
             this.dispanel.TabIndex = 1037;
             this.dispanel.Visible = false;
             // 
-            // button11
+            // btnSectioning
             // 
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(12, 299);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(208, 40);
-            this.button11.TabIndex = 1028;
-            this.button11.Text = "     Sectioning";
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnSectioning.FlatAppearance.BorderSize = 0;
+            this.btnSectioning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSectioning.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSectioning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.btnSectioning.Image = ((System.Drawing.Image)(resources.GetObject("btnSectioning.Image")));
+            this.btnSectioning.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSectioning.Location = new System.Drawing.Point(12, 299);
+            this.btnSectioning.Name = "btnSectioning";
+            this.btnSectioning.Size = new System.Drawing.Size(208, 40);
+            this.btnSectioning.TabIndex = 1028;
+            this.btnSectioning.Text = "     Sectioning";
+            this.btnSectioning.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSectioning.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 
@@ -1291,6 +1291,6 @@
         public System.Windows.Forms.Panel dispanel;
         private System.Windows.Forms.Label lblSemester;
         private System.Windows.Forms.Label lblQGrading;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnSectioning;
     }
 }

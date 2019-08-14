@@ -100,6 +100,12 @@
     <Compile Include="frmBilling_OtherFee.Designer.cs">
       <DependentUpon>frmBilling_OtherFee.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSectioning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSectioning.Designer.cs">
+      <DependentUpon>frmSectioning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\EnrolledStudents.cs" />
     <Compile Include="frmAssesment.cs">
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSection.resx">
       <DependentUpon>frmSection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSectioning.resx">
+      <DependentUpon>frmSectioning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSetting.resx">
       <DependentUpon>frmSetting.cs</DependentUpon>
