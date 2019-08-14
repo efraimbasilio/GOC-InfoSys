@@ -29,12 +29,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.SidebarPanel = new System.Windows.Forms.Panel();
             this.lblSemester = new System.Windows.Forms.Label();
             this.lblQGrading = new System.Windows.Forms.Label();
@@ -114,6 +114,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dispanel = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
             this.SidebarPanel.SuspendLayout();
             this.Dashboardpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -136,6 +137,7 @@
             // SidebarPanel
             // 
             this.SidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.SidebarPanel.Controls.Add(this.button11);
             this.SidebarPanel.Controls.Add(this.lblSemester);
             this.SidebarPanel.Controls.Add(this.lblQGrading);
             this.SidebarPanel.Controls.Add(this.lblTime);
@@ -339,7 +341,7 @@
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(15, 254);
+            this.button5.Location = new System.Drawing.Point(12, 253);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(208, 40);
             this.button5.TabIndex = 52;
@@ -1144,6 +1146,22 @@
             this.dispanel.TabIndex = 1037;
             this.dispanel.Visible = false;
             // 
+            // button11
+            // 
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.Location = new System.Drawing.Point(12, 299);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(208, 40);
+            this.button11.TabIndex = 1028;
+            this.button11.Text = "     Sectioning";
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button11.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1273,5 +1291,6 @@
         public System.Windows.Forms.Panel dispanel;
         private System.Windows.Forms.Label lblSemester;
         private System.Windows.Forms.Label lblQGrading;
+        private System.Windows.Forms.Button button11;
     }
 }
