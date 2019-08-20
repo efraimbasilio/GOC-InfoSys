@@ -29,13 +29,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.SidebarPanel = new System.Windows.Forms.Panel();
+            this.btnSectioning = new System.Windows.Forms.Button();
             this.lblSemester = new System.Windows.Forms.Label();
             this.lblQGrading = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
@@ -114,7 +115,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dispanel = new System.Windows.Forms.Panel();
-            this.btnSectioning = new System.Windows.Forms.Button();
             this.SidebarPanel.SuspendLayout();
             this.Dashboardpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -162,6 +162,23 @@
             this.SidebarPanel.Name = "SidebarPanel";
             this.SidebarPanel.Size = new System.Drawing.Size(232, 720);
             this.SidebarPanel.TabIndex = 0;
+            // 
+            // btnSectioning
+            // 
+            this.btnSectioning.FlatAppearance.BorderSize = 0;
+            this.btnSectioning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSectioning.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSectioning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            this.btnSectioning.Image = ((System.Drawing.Image)(resources.GetObject("btnSectioning.Image")));
+            this.btnSectioning.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSectioning.Location = new System.Drawing.Point(12, 299);
+            this.btnSectioning.Name = "btnSectioning";
+            this.btnSectioning.Size = new System.Drawing.Size(208, 40);
+            this.btnSectioning.TabIndex = 1028;
+            this.btnSectioning.Text = "     Sectioning";
+            this.btnSectioning.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSectioning.UseVisualStyleBackColor = true;
+            this.btnSectioning.Click += new System.EventHandler(this.btnSectioning_Click);
             // 
             // lblSemester
             // 
@@ -1145,22 +1162,6 @@
             this.dispanel.Size = new System.Drawing.Size(1048, 0);
             this.dispanel.TabIndex = 1037;
             this.dispanel.Visible = false;
-            // 
-            // btnSectioning
-            // 
-            this.btnSectioning.FlatAppearance.BorderSize = 0;
-            this.btnSectioning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSectioning.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSectioning.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.btnSectioning.Image = ((System.Drawing.Image)(resources.GetObject("btnSectioning.Image")));
-            this.btnSectioning.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSectioning.Location = new System.Drawing.Point(12, 299);
-            this.btnSectioning.Name = "btnSectioning";
-            this.btnSectioning.Size = new System.Drawing.Size(208, 40);
-            this.btnSectioning.TabIndex = 1028;
-            this.btnSectioning.Text = "     Sectioning";
-            this.btnSectioning.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSectioning.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 

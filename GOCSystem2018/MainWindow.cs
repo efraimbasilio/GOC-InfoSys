@@ -599,8 +599,20 @@ namespace GOCSystem2018
             Application.Exit();
         }
 
+        private void btnSectioning_Click(object sender, EventArgs e)
+        {
+            dispanel.Controls.Clear();
+            dispanel.Visible = true;
+            frmSectioning frmSectioning = new frmSectioning();
+            frmSectioning.TopLevel = false;
+            frmSectioning.AutoScroll = true;
 
+            dispanel.Controls.Add(frmSectioning);
 
+            frmSectioning.Show();
+
+            Dashboardpanel.Visible = false;
+        }
     }
     }
     

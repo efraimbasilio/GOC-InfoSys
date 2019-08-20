@@ -1485,5 +1485,5 @@ C:\Users\IT\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.c
 C:\Users\IT\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.exe
 C:\Users\IT\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.blackfrm.resources
-C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmBilling_OtherFee.resources
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.frmSectioning.resources
