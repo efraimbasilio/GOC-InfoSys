@@ -13,6 +13,10 @@ namespace GOCSystem2018
 {
     public partial class frmSectioning : Form
     {
+        StudentProfile studProfile = new StudentProfile();
+
+        List<StudentProfile> studProfiles = new List<StudentProfile>();
+
         public frmSectioning()
         {
             InitializeComponent();
@@ -68,8 +72,7 @@ namespace GOCSystem2018
         }
 
         public void LoadUnSectionStudent(ComboBox criteria,ComboBox grade_level)
-        {
-            //cmbStrand.text,dgvBefore,student_profile,grade_level,txtGradelevel.text
+        {            
             try
             {
                 using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
@@ -77,7 +80,7 @@ namespace GOCSystem2018
                     con.Open();
                     //string sql = "SELECT * FROM student_profile";
                     //string sql2 = string.Concat("SELECT * FROM student_profile WHERE CONCAT("+ query_field +") LIKE '%" + valueToSearch + "%'");
-                    string sql2 = string.Concat("SELECT * FROM student_profile WHERE STRAND LIKE '%" + criteria.Text + "%' AND GRADE_LEVEL LIKE '%" + grade_level.Text + "%'");
+                    string sql2 = string.Concat("SELECT IdNo,last_name, first_name, middle_name,strand,grade_level,section FROM student_profile WHERE STRAND LIKE '%" + criteria.Text + "%' AND GRADE_LEVEL LIKE '%" + grade_level.Text + "%'");
 
                     MySqlCommand cmd = new MySqlCommand(sql2, con);
                     MySqlDataAdapter da = new MySqlDataAdapter();
@@ -94,7 +97,7 @@ namespace GOCSystem2018
                 MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+     
         public void LoadStrand(ComboBox cmb, string query_table, string query_field)
         {
             cmb.Items.Clear();
@@ -134,8 +137,74 @@ namespace GOCSystem2018
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {           
+            NoSectionStudents();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
-            LoadUnSectionStudent(cmbStrand,cmbGradeLevel);
+            WithSectionStudents();
+        }
+
+        public void NoSectionStudents()
+        {          
+            //clear list
+            studProfiles.Clear();
+            dgvSectionBefore.Rows.Clear();
+
+            //pass value to list
+            studProfiles = studProfile.Load();
+            foreach (var item in studProfiles)
+            {               
+                if (item.Section == "0" && item.StudStrand.Equals(cmbStrand.SelectedItem.ToString()) && item.StudGradeLevel.Equals(cmbGradeLevel.SelectedItem.ToString()))
+                {
+                    dgvSectionBefore.Rows.Add(item.StudGOCNo, item.StudLastName, item.StudFirstName, item.StudMiddleName, item.StudStrand, item.StudGradeLevel, item.Section);
+                }
+                                
+                int sum = 0;
+                sum = dgvSectionBefore.Rows.Count;
+                lblCount.Text = sum.ToString();
+            }//End LoadSchedule()           
+        }
+
+        public void WithSectionStudents()
+        {           
+            //clear list
+            studProfiles.Clear();
+            dgvSectionBefore.Rows.Clear();
+
+            //pass value to list
+            studProfiles = studProfile.Load();
+            foreach (var item in studProfiles)
+            {
+                if (item.StudGOCNo.Equals("N/A"))
+                {
+                    return;
+                }
+                else
+                {
+                    //if (item.StudStrand.Equals(cmbStrand.SelectedItem.ToString()) && item.StudGradeLevel.Equals(cmbGradeLevel.SelectedItem.ToString()) && item.Section != "0")
+                    if (item.StudStrand.Equals(cmbStrand.SelectedItem.ToString()) && item.StudGradeLevel.Equals(cmbGradeLevel.SelectedItem.ToString()) && item.Section != "0")
+                    {
+                        dgvSectionBefore.Rows.Add(item.StudGOCNo, item.StudLastName, item.StudFirstName, item.StudMiddleName, item.StudStrand, item.StudGradeLevel, item.Section);
+                    }                    
+                    //Load to datagridView                   
+                }
+                int sum = 0;
+                sum = dgvSectionBefore.Rows.Count;
+                lblCount.Text = sum.ToString();
+            }//End LoadSchedule()
+
+            
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmSectionAndRoom frm = new frmSectionAndRoom();
+            frm.strand = cmbStrand.Text;
+            frm.CheckSectionInfo();
+            frm.ShowDialog();
         }
     }
 }
