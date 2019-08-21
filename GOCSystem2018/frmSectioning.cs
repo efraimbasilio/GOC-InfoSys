@@ -204,6 +204,7 @@ namespace GOCSystem2018
             frmSectionAndRoom frm = new frmSectionAndRoom();
             frm.strand = cmbStrand.Text;
             frm.CheckSectionInfo();
+            frm.CheckRoomInfo();
             frm.ShowDialog();
         }
     }

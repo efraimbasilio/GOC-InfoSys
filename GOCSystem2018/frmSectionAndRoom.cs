@@ -18,7 +18,11 @@ namespace GOCSystem2018
         }
 
         Section section = new Section();
+        Room room = new Room();
+
         List<Section> sections = new List<Section>();
+        List<Room> rooms = new List<Room>();
+
 
         public string strand;
 
@@ -39,5 +43,31 @@ namespace GOCSystem2018
             }           
         }
 
+        public void CheckRoomInfo()
+        {
+            rooms.Clear();
+            dgvRoom.Rows.Clear();            
+                            
+               rooms = room.Load();
+
+            foreach (var item in rooms)
+            {
+                for (int i = 0; i < dgvSectionInfo.Rows.Count; i++)
+                {
+
+                    if (item.RoomName == dgvSectionInfo.Rows[i].Cells[1].FormattedValue.ToString())
+                    {
+                        dgvRoom.Rows.Add(item.RoomName, item.RoomCapacity);
+                        //ssageBox.Show(item.RoomCapacity);                        
+                    }
+                }
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
