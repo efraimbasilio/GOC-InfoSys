@@ -2100,7 +2100,6 @@
         private System.Windows.Forms.Label lblTrack;
         private System.Windows.Forms.Label lblGOCNo;
         public System.Windows.Forms.ComboBox cmbMOP;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel8;
@@ -2178,5 +2177,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
         private System.Windows.Forms.Label label38;
+        public System.Windows.Forms.Label label8;
     }
 }

@@ -60,6 +60,15 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvRoom = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionBefore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionAfter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionCount)).BeginInit();
@@ -89,6 +98,7 @@
             this.dgvSectionBefore.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSectionBefore.Size = new System.Drawing.Size(707, 438);
             this.dgvSectionBefore.TabIndex = 0;
+            this.dgvSectionBefore.DoubleClick += new System.EventHandler(this.dgvSectionBefore_DoubleClick);
             // 
             // IDNo
             // 
@@ -134,11 +144,23 @@
             // 
             // dgvSectionAfter
             // 
+            this.dgvSectionAfter.AllowUserToAddRows = false;
+            this.dgvSectionAfter.AllowUserToDeleteRows = false;
             this.dgvSectionAfter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSectionAfter.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14,
+            this.Column15});
             this.dgvSectionAfter.Location = new System.Drawing.Point(730, 284);
             this.dgvSectionAfter.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvSectionAfter.Name = "dgvSectionAfter";
-            this.dgvSectionAfter.Size = new System.Drawing.Size(399, 139);
+            this.dgvSectionAfter.ReadOnly = true;
+            this.dgvSectionAfter.RowHeadersVisible = false;
+            this.dgvSectionAfter.Size = new System.Drawing.Size(504, 438);
             this.dgvSectionAfter.TabIndex = 1;
             // 
             // button1
@@ -366,11 +388,75 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.Width = 110;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1034, 725);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 15);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Record Count:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(1115, 725);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(14, 15);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "0";
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "ID No.";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Firstname";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Middlename";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Lastname";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Grade Level";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.HeaderText = "Strand";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "Section";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
             // frmSectioning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvRoom);
             this.Controls.Add(this.dgvSectionNumber);
             this.Controls.Add(this.dgvSectionCount);
@@ -440,5 +526,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridView dgvRoom;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -293,6 +293,10 @@ namespace GOCSystem2018
         private void button1_Click(object sender, EventArgs e)
         {           
             NoSectionStudents();
+            //CountStudPerSection();
+            strand = cmbStrand.Text;
+            CheckSectionInfo();
+            CheckRoomInfo();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -323,6 +327,61 @@ namespace GOCSystem2018
         private void btnGenerate_Click(object sender, EventArgs e)
         {
                                
+        }
+
+        private void dgvSectionBefore_DoubleClick(object sender, EventArgs e)
+        {
+            frmAssesment frmAssesment = new frmAssesment();
+            if (dgvSectionBefore.SelectedRows.Count > 0)
+            {
+                //clear list
+                studProfiles.Clear();
+                //pass value
+                studProfile.StudGOCNo = dgvSectionBefore.CurrentRow.Cells[0].FormattedValue.ToString();
+                studProfiles = studProfile.GetByGOCNoToEdit();
+
+                foreach (var item in studProfiles)
+                {
+                    //pass variable to form Assesment
+                    frmAssesment.StudName = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
+                    frmAssesment.LRN = item.StudLRN;
+                    frmAssesment.GradeLevel = item.StudGradeLevel;
+                    frmAssesment.Track = item.Track;
+                    frmAssesment.RegNo = item.StudRegistrationNo;
+                    frmAssesment.Strand = item.StudStrand;
+                    frmAssesment.Voucher = item.VoucherType;
+                    frmAssesment.GOCNo = item.StudGOCNo;
+                    frmAssesment.partialPay = item.PartialPayment;
+                    frmAssesment.theSection = item.Section;
+
+                    frmAssesment.cmbMOP.Visible = false;
+                    frmAssesment.label8.Visible = false;
+
+                }
+            }
+
+            MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+            mainwin.dispanel.Controls.Clear();
+            frmAssesment.TopLevel = false;
+            frmAssesment.AutoScroll = true;
+            mainwin.dispanel.Controls.Add(frmAssesment);
+
+            frmAssesment.Reset();
+
+            frmAssesment.LoadSchoolYear();
+
+            frmAssesment.LoadTuitionFee();
+            frmAssesment.LoadAssesMiscFees();
+            frmAssesment.LoadAssesOtherFees();
+            frmAssesment.TotalTuition();
+
+            frmAssesment.ComputeVoucher();
+            frmAssesment.GetDownPayment();
+
+            frmAssesment.LoadSubject();
+            frmAssesment.EnableMOP();
+
+            frmAssesment.Show();
         }
     }
 }
