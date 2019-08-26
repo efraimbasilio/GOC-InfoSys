@@ -57,7 +57,7 @@ namespace GOCSystem2018
 
                     if (item.RoomName == dgvSectionInfo.Rows[i].Cells[1].FormattedValue.ToString())
                     {
-                        dgvRoom.Rows.Add(item.RoomName, item.RoomCapacity);
+                        dgvRoom.Rows.Add(item.RoomName, item.RoomCapacity,item.RoomCeiling);
                         //ssageBox.Show(item.RoomCapacity);                        
                     }
                 }

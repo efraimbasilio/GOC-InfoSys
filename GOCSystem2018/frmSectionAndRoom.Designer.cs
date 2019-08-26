@@ -35,6 +35,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).BeginInit();
             this.SuspendLayout();
@@ -75,14 +76,15 @@
             this.dgvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.dgvRoom.Location = new System.Drawing.Point(338, 24);
+            this.dataGridViewTextBoxColumn2,
+            this.Column2});
+            this.dgvRoom.Location = new System.Drawing.Point(235, 24);
             this.dgvRoom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvRoom.Name = "dgvRoom";
             this.dgvRoom.ReadOnly = true;
             this.dgvRoom.RowHeadersVisible = false;
             this.dgvRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoom.Size = new System.Drawing.Size(205, 531);
+            this.dgvRoom.Size = new System.Drawing.Size(305, 531);
             this.dgvRoom.TabIndex = 2;
             // 
             // dataGridViewTextBoxColumn1
@@ -106,6 +108,12 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // frmSectionAndRoom
             // 
@@ -132,5 +140,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
