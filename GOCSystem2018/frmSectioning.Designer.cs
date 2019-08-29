@@ -67,7 +67,9 @@
             this.lblMAX = new System.Windows.Forms.Label();
             this.lblMin = new System.Windows.Forms.Label();
             this.dgvSectionBefore = new System.Windows.Forms.DataGridView();
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNoStudent = new System.Windows.Forms.Label();
+            this.lblAvailable = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +77,10 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblSemester = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionAfter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionNumber)).BeginInit();
@@ -96,7 +102,7 @@
             this.Column13,
             this.Column14,
             this.Column15});
-            this.dgvSectionAfter.Location = new System.Drawing.Point(730, 284);
+            this.dgvSectionAfter.Location = new System.Drawing.Point(719, 267);
             this.dgvSectionAfter.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvSectionAfter.Name = "dgvSectionAfter";
             this.dgvSectionAfter.ReadOnly = true;
@@ -148,7 +154,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(544, 245);
+            this.button1.Location = new System.Drawing.Point(514, 230);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(76, 29);
@@ -161,7 +167,7 @@
             // 
             this.cmbStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStrand.FormattingEnabled = true;
-            this.cmbStrand.Location = new System.Drawing.Point(68, 249);
+            this.cmbStrand.Location = new System.Drawing.Point(57, 232);
             this.cmbStrand.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmbStrand.Name = "cmbStrand";
             this.cmbStrand.Size = new System.Drawing.Size(108, 23);
@@ -171,7 +177,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 253);
+            this.label3.Location = new System.Drawing.Point(11, 235);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 15);
@@ -185,7 +191,7 @@
             this.cmbGradeLevel.Items.AddRange(new object[] {
             "12",
             "11"});
-            this.cmbGradeLevel.Location = new System.Drawing.Point(256, 249);
+            this.cmbGradeLevel.Location = new System.Drawing.Point(245, 232);
             this.cmbGradeLevel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmbGradeLevel.Name = "cmbGradeLevel";
             this.cmbGradeLevel.Size = new System.Drawing.Size(64, 23);
@@ -194,7 +200,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(184, 253);
+            this.label5.Location = new System.Drawing.Point(173, 236);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 15);
@@ -222,7 +228,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 27);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(14, 716);
+            this.panel3.Size = new System.Drawing.Size(10, 716);
             this.panel3.TabIndex = 17;
             // 
             // panel4
@@ -235,7 +241,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(454, 244);
+            this.button6.Location = new System.Drawing.Point(411, 229);
             this.button6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(86, 29);
@@ -247,7 +253,7 @@
             // lblCount
             // 
             this.lblCount.AutoSize = true;
-            this.lblCount.Location = new System.Drawing.Point(672, 725);
+            this.lblCount.Location = new System.Drawing.Point(691, 237);
             this.lblCount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCount.Name = "lblCount";
             this.lblCount.Size = new System.Drawing.Size(14, 15);
@@ -257,7 +263,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(591, 725);
+            this.label6.Location = new System.Drawing.Point(610, 237);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 15);
@@ -271,7 +277,7 @@
             this.dgvSectionCount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSectionCount.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Section_Name});
-            this.dgvSectionCount.Location = new System.Drawing.Point(19, 33);
+            this.dgvSectionCount.Location = new System.Drawing.Point(10, 27);
             this.dgvSectionCount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvSectionCount.Name = "dgvSectionCount";
             this.dgvSectionCount.RowHeadersVisible = false;
@@ -293,7 +299,7 @@
             this.dgvSectionNumber.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSectionNumber.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            this.dgvSectionNumber.Location = new System.Drawing.Point(487, 33);
+            this.dgvSectionNumber.Location = new System.Drawing.Point(478, 27);
             this.dgvSectionNumber.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvSectionNumber.Name = "dgvSectionNumber";
             this.dgvSectionNumber.RowHeadersVisible = false;
@@ -318,7 +324,7 @@
             this.Column16,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dgvSectionInfo.Location = new System.Drawing.Point(601, 33);
+            this.dgvSectionInfo.Location = new System.Drawing.Point(592, 27);
             this.dgvSectionInfo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvSectionInfo.Name = "dgvSectionInfo";
             this.dgvSectionInfo.ReadOnly = true;
@@ -369,7 +375,7 @@
             this.dataGridViewTextBoxColumn2,
             this.Column7,
             this.Column8});
-            this.dgvRoom.Location = new System.Drawing.Point(183, 33);
+            this.dgvRoom.Location = new System.Drawing.Point(174, 27);
             this.dgvRoom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvRoom.Name = "dgvRoom";
             this.dgvRoom.RowHeadersVisible = false;
@@ -381,7 +387,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1034, 725);
+            this.label1.Location = new System.Drawing.Point(1018, 669);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 15);
@@ -391,7 +397,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1115, 725);
+            this.label2.Location = new System.Drawing.Point(1099, 669);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(14, 15);
@@ -401,18 +407,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(730, 254);
+            this.label4.Location = new System.Drawing.Point(719, 237);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 15);
+            this.label4.Size = new System.Drawing.Size(98, 15);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Assign Section";
+            this.label4.Text = "Assign to Section:";
             // 
             // cmbToAssign
             // 
             this.cmbToAssign.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbToAssign.FormattingEnabled = true;
-            this.cmbToAssign.Location = new System.Drawing.Point(816, 250);
+            this.cmbToAssign.Location = new System.Drawing.Point(821, 233);
             this.cmbToAssign.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmbToAssign.Name = "cmbToAssign";
             this.cmbToAssign.Size = new System.Drawing.Size(110, 23);
@@ -422,7 +428,7 @@
             // lblMAX
             // 
             this.lblMAX.AutoSize = true;
-            this.lblMAX.Location = new System.Drawing.Point(941, 254);
+            this.lblMAX.Location = new System.Drawing.Point(604, 217);
             this.lblMAX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMAX.Name = "lblMAX";
             this.lblMAX.Size = new System.Drawing.Size(12, 15);
@@ -432,7 +438,7 @@
             // lblMin
             // 
             this.lblMin.AutoSize = true;
-            this.lblMin.Location = new System.Drawing.Point(1007, 254);
+            this.lblMin.Location = new System.Drawing.Point(636, 217);
             this.lblMin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMin.Name = "lblMin";
             this.lblMin.Size = new System.Drawing.Size(12, 15);
@@ -445,28 +451,56 @@
             this.dgvSectionBefore.AllowUserToDeleteRows = false;
             this.dgvSectionBefore.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSectionBefore.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.No,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn11});
-            this.dgvSectionBefore.Location = new System.Drawing.Point(19, 284);
+            this.dataGridViewTextBoxColumn11,
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvSectionBefore.Location = new System.Drawing.Point(8, 267);
             this.dgvSectionBefore.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvSectionBefore.Name = "dgvSectionBefore";
             this.dgvSectionBefore.ReadOnly = true;
             this.dgvSectionBefore.RowHeadersVisible = false;
+            this.dgvSectionBefore.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSectionBefore.Size = new System.Drawing.Size(707, 438);
             this.dgvSectionBefore.TabIndex = 35;
+            this.dgvSectionBefore.DoubleClick += new System.EventHandler(this.dgvSectionBefore_DoubleClick_1);
             // 
-            // No
+            // lblNoStudent
             // 
-            this.No.HeaderText = "No";
-            this.No.Name = "No";
-            this.No.ReadOnly = true;
-            this.No.Width = 50;
+            this.lblNoStudent.AutoSize = true;
+            this.lblNoStudent.Location = new System.Drawing.Point(682, 217);
+            this.lblNoStudent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoStudent.Name = "lblNoStudent";
+            this.lblNoStudent.Size = new System.Drawing.Size(12, 15);
+            this.lblNoStudent.TabIndex = 36;
+            this.lblNoStudent.Text = "_";
+            // 
+            // lblAvailable
+            // 
+            this.lblAvailable.AutoSize = true;
+            this.lblAvailable.Location = new System.Drawing.Point(818, 215);
+            this.lblAvailable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAvailable.Name = "lblAvailable";
+            this.lblAvailable.Size = new System.Drawing.Size(12, 15);
+            this.lblAvailable.TabIndex = 37;
+            this.lblAvailable.Text = "_";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(935, 217);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 44);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "Add to Section";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -510,11 +544,43 @@
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "reg";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "sem";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "sy";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // lblSemester
+            // 
+            this.lblSemester.AutoSize = true;
+            this.lblSemester.Location = new System.Drawing.Point(899, 30);
+            this.lblSemester.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSemester.Name = "lblSemester";
+            this.lblSemester.Size = new System.Drawing.Size(12, 15);
+            this.lblSemester.TabIndex = 39;
+            this.lblSemester.Text = "_";
+            // 
             // frmSectioning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.Controls.Add(this.lblSemester);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lblAvailable);
+            this.Controls.Add(this.lblNoStudent);
             this.Controls.Add(this.dgvSectionBefore);
             this.Controls.Add(this.lblMin);
             this.Controls.Add(this.lblMAX);
@@ -596,7 +662,9 @@
         private System.Windows.Forms.Label lblMAX;
         private System.Windows.Forms.Label lblMin;
         private System.Windows.Forms.DataGridView dgvSectionBefore;
-        private System.Windows.Forms.DataGridViewTextBoxColumn No;
+        private System.Windows.Forms.Label lblNoStudent;
+        private System.Windows.Forms.Label lblAvailable;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
@@ -604,5 +672,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Label lblSemester;
     }
 }

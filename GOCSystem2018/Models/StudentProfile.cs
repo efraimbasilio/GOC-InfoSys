@@ -1060,6 +1060,39 @@ namespace GOCSystem2018
             }
         }
 
+        public void UpdateTheSectionWithGOCNO()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    string sql = "UPDATE student_profile SET  section=@section" +
+                                    " WHERE idno=@studGOCNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("studGOCNo", studGOCNo);
+                    cmd.Parameters.AddWithValue("section", section);
+
+
+
+                    cmd.ExecuteNonQuery();
+
+                    
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
         public void UpdateMOP()
         {
             try
@@ -1193,7 +1226,8 @@ namespace GOCSystem2018
                         SP.reqAdmissionTest = reader["en_exam"].ToString();
                         SP.reqNCAE = reader["ncae"].ToString();
                         //SP.dateEnrolled = reader["date_enrolled"].ToString();
-                        //SP.syEnrolled = reader["sy_enrolled"].ToString();
+                        SP.syEnrolled = reader["sy_enrolled"].ToString();
+                        SP.studSemEnroll = reader["sy_enrolled"].ToString();
 
                         //add object to list
                         studentProfiles.Add(SP);
