@@ -13,16 +13,19 @@ namespace GOCSystem2018
 {
     public partial class frmSectioning : Form
     {
-        StudentProfile studProfile = new StudentProfile();
+        StudentProfile studProfile = new StudentProfile();       
+        Section section = new Section();
+        Room room = new Room();
 
         List<StudentProfile> studProfiles = new List<StudentProfile>();
+        List<Section> sections = new List<Section>();
+        List<Room> rooms = new List<Room>();
         int a = 0;
         public int ans;
 
         public frmSectioning()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
 
         //Functions----------------------------------------------------------------------------------------------------------------------------//
@@ -100,7 +103,6 @@ namespace GOCSystem2018
                 MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         
         public void LoadSectionAfter()
         {
@@ -288,15 +290,7 @@ namespace GOCSystem2018
                 this.dgvSectionNumber.Rows.Add(sum.ToString());
             }
         }
-
-
-        Section section = new Section();
-        Room room = new Room();
-
-        List<Section> sections = new List<Section>();
-        List<Room> rooms = new List<Room>();
-
-
+       
         public string strand;
 
         public void CheckSectionInfo()
@@ -406,17 +400,10 @@ namespace GOCSystem2018
 
         //--------------------------------------------------------------------------------------------------------------------------------------//
 
-
-
-
-
-
         private void cmbStrand_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
+        {            
             LoadSection();
             CheckRoomInfo();
-
         }
 
         private void frmSectioning_Load(object sender, EventArgs e)
@@ -449,16 +436,12 @@ namespace GOCSystem2018
                 strand = cmbStrand.Text;
                 CheckSectionInfo();
                 CheckRoomInfo();
-            }
-            
+            }            
         }
-
-       
-
+      
         private void button7_Click(object sender, EventArgs e)
         {            
-           
-            
+                       
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
@@ -519,15 +502,14 @@ namespace GOCSystem2018
                     if (dgvSectionBefore.Rows[i].Cells[5].FormattedValue.ToString() == "11")
                     {
                         enroll.Save();//grade 11    
-                        MessageBox.Show("Section Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
                     }
                     else
                     {
-                        enroll.SaveGrade12();//grade 12
-                        MessageBox.Show("Section Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }                    
+                        enroll.SaveGrade12();//grade 12                       
+                    }                                        
                 }
-               
+                MessageBox.Show("Section Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 a = 0;
                 WithSectionStudents();
                 CountStudPerSection();
@@ -536,54 +518,53 @@ namespace GOCSystem2018
                 CheckRoomInfo();
             }
             else
-            {
-                //string message2 = "How many student do you want to assign to section " + cmbToAssign.Text + "?";
-                //string title2 = "GOC_INFOSYS";
-                //MessageBoxButtons buttons2 = MessageBoxButtons.YesNo;
-                //DialogResult result2 = MessageBox.Show(message2, title2, buttons2);
-                //if (result2 == DialogResult.Yes)
-                //{
-
-                //}
+            {                
                 string input = Microsoft.VisualBasic.Interaction.InputBox("How many student do you want to assign to section " + cmbToAssign.Text + "?", "GOC_INFOSYS","",-1, -1);
                 int listSize;
                 bool success = int.TryParse(input, out listSize);
-                //MessageBox.Show(listSize.ToString());
 
-                for (int i = 0; i < listSize; i++)
+                if (listSize > dgvSectionBefore.Rows.Count)//check if the current no is not greaterthan the input
                 {
-                    studProfile.StudGOCNo = dgvSectionBefore.Rows[i].Cells[0].FormattedValue.ToString();
-                    studProfile.Section = cmbToAssign.Text;
-                    studProfile.UpdateTheSectionWithGOCNO();
-
-                    EnrolledStudents enroll = new EnrolledStudents();
-                    enroll.RegNo = dgvSectionBefore.Rows[i].Cells[7].FormattedValue.ToString();
-                    enroll.TheGOCNo = dgvSectionBefore.Rows[i].Cells[0].FormattedValue.ToString();
-                    enroll.FullName = dgvSectionBefore.Rows[i].Cells[3].FormattedValue.ToString() + ", " + dgvSectionBefore.Rows[i].Cells[1].FormattedValue.ToString() + " " + dgvSectionBefore.Rows[i].Cells[2].FormattedValue.ToString();
-                    enroll.GradeLevel = dgvSectionBefore.Rows[i].Cells[5].FormattedValue.ToString();
-                    enroll.Strand = dgvSectionBefore.Rows[i].Cells[4].FormattedValue.ToString();
-                    enroll.Section = cmbToAssign.Text;
-                    enroll.Semester = lblSemester.Text;
-                    enroll.SyEnroll = dgvSectionBefore.Rows[i].Cells[9].FormattedValue.ToString();
-
-                    if (dgvSectionBefore.Rows[i].Cells[5].FormattedValue.ToString() == "11")
-                    {
-                        enroll.Save();//grade 11    
-                        MessageBox.Show("Section Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        enroll.SaveGrade12();//grade 12
-                        MessageBox.Show("Section Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    MessageBox.Show("Sorry you cannot assign morethan "+ dgvSectionBefore.Rows.Count + " students.");                    
                 }
+                else
+                {
+                    for (int i = 0; i < listSize; i++)
+                    {
+                        studProfile.StudGOCNo = dgvSectionBefore.Rows[i].Cells[0].FormattedValue.ToString();
+                        studProfile.Section = cmbToAssign.Text;
+                        studProfile.UpdateTheSectionWithGOCNO();
 
-                a = 0;
-                WithSectionStudents();
-                CountStudPerSection();
-                strand = cmbStrand.Text;
-                CheckSectionInfo();
-                CheckRoomInfo();
+                        EnrolledStudents enroll = new EnrolledStudents();
+                        enroll.RegNo = dgvSectionBefore.Rows[i].Cells[7].FormattedValue.ToString();
+                        enroll.TheGOCNo = dgvSectionBefore.Rows[i].Cells[0].FormattedValue.ToString();
+                        enroll.FullName = dgvSectionBefore.Rows[i].Cells[3].FormattedValue.ToString() + ", " + dgvSectionBefore.Rows[i].Cells[1].FormattedValue.ToString() + " " + dgvSectionBefore.Rows[i].Cells[2].FormattedValue.ToString();
+                        enroll.GradeLevel = dgvSectionBefore.Rows[i].Cells[5].FormattedValue.ToString();
+                        enroll.Strand = dgvSectionBefore.Rows[i].Cells[4].FormattedValue.ToString();
+                        enroll.Section = cmbToAssign.Text;
+                        enroll.Semester = lblSemester.Text;
+                        enroll.SyEnroll = dgvSectionBefore.Rows[i].Cells[9].FormattedValue.ToString();
+
+                        if (dgvSectionBefore.Rows[i].Cells[5].FormattedValue.ToString() == "11")
+                        {
+                            enroll.Save();//grade 11    
+                            MessageBox.Show("Section Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            enroll.SaveGrade12();//grade 12
+                            MessageBox.Show("Section Saved!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+
+                    a = 0;
+                    WithSectionStudents();
+                    CountStudPerSection();
+                    strand = cmbStrand.Text;
+                    CheckSectionInfo();
+                    CheckRoomInfo();
+                }
+                return;             
             }
            
         }
