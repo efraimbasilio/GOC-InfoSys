@@ -178,5 +178,32 @@ namespace GOCSystem2018
 
             LoadThisGrades();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvGrades2.Rows.Add();
+            dgvGrades2.Rows[0].Cells[0].Value = 123;
+            dgvGrades2.Rows[0].Cells[1].Value = 156;
+
+            dgvGrades2.Rows.Add();
+            dgvGrades2.Rows[1].Cells[0].Value = 123;
+            dgvGrades2.Rows[1].Cells[1].Value = 500;
+
+            //foreach (DataGridViewRow item in dgvGrades.Rows)
+            //{
+            //                int n = item.Index;
+            //MessageBox.Show(n.ToString());
+            //dgvGrades2.Rows[n].Cells[2].Value =(Double.Parse(dgvGrades2.Rows[n].Cells[0].Value.ToString()) + Double.Parse(dgvGrades2.Rows[n].Cells[1].Value.ToString())).ToString();
+            //}
+
+            MessageBox.Show(dgvGrades.Rows.Count.ToString());
+            for (int n = 0; n < dgvGrades2.Rows.Count; n++)
+            {
+               
+                dgvGrades2.Rows[n].Cells[2].Value = (Double.Parse(dgvGrades2.Rows[n].Cells[0].Value.ToString()) + Double.Parse(dgvGrades2.Rows[n].Cells[1].Value.ToString())).ToString("0.##");
+               
+            }
+          
+        }
     }
 }

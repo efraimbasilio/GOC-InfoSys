@@ -232,6 +232,7 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Section:";
             this.label6.UseWaitCursor = true;
+            this.label6.Visible = false;
             // 
             // lblEnStatus
             // 
@@ -1876,6 +1877,7 @@
             this.cmbSection.Name = "cmbSection";
             this.cmbSection.Size = new System.Drawing.Size(179, 23);
             this.cmbSection.TabIndex = 1071;
+            this.cmbSection.Visible = false;
             this.cmbSection.SelectedValueChanged += new System.EventHandler(this.cmbSection_SelectedValueChanged_1);
             // 
             // frmAssesment

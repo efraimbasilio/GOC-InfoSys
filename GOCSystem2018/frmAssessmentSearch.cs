@@ -244,8 +244,9 @@ namespace GOCSystem2018
 
                 frmAssesment.LoadSubject();
                 frmAssesment.EnableMOP();
-
+                
                 frmAssesment.Show();
+                frmAssesment.checkPayment();
             }
         }
 

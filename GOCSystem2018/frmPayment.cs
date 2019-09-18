@@ -206,27 +206,39 @@ namespace GOCSystem2018
 
         private void btnOtherFee_Click_1(object sender, EventArgs e)
         {
-            if (btnOtherFee.Text == "With Other Fees")
+            string message = "Proceed to payment with other fee?";
+            string title = "GOC_INFO_SYS";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
+            if (result == DialogResult.Yes)
             {
-                pnlOtherFee.Visible = true;
-                btnOtherFee.Text = "&Cancel";
+                if (btnOtherFee.Text == "With Other Fees")
+                {
+                    pnlOtherFee.Visible = true;
+                    btnOtherFee.Text = "&Cancel";
 
-                txtTuitionFee.Focus();
-                txtTuitionFee.SelectAll();
+                    txtTuitionFee.Focus();
+                    txtTuitionFee.SelectAll();
 
-                toOtherFees = true;
+                    toOtherFees = true;
+                }
+                else
+                {
+                    pnlOtherFee.Visible = false;
+                    btnOtherFee.Text = "With Other Fees";
+                    txtTuitionFee.Text = "0.00";
+                    txtUniform.Text = "0.00";
+                    txtBooks.Text = "0.00";
+                    txtLocker.Text = "0.00";
+                    lblAmount_Due.Text = "0.00";
+
+                    toOtherFees = false;
+                }
             }
             else
             {
-                pnlOtherFee.Visible = false;
-                btnOtherFee.Text = "With Other Fees";
-                txtTuitionFee.Text = "0.00";
-                txtUniform.Text = "0.00";
-                txtBooks.Text = "0.00";
-                txtLocker.Text = "0.00";
-                lblAmount_Due.Text = "0.00";
-
                 toOtherFees = false;
+                return;                
             }
         }
 
@@ -602,7 +614,12 @@ namespace GOCSystem2018
                 //save for the billing OR table
                 bill.Save();
 
-                this.Hide();
+                MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                mainwin.dispanel.Controls.Clear();
+                mainwin.dispanel.Visible = false;
+
+                mainwin.Dashboardpanel.Visible = true;
+                this.Close();
             }
 
             else if (enroll_status.Equals("Enrolled"))
@@ -653,6 +670,13 @@ namespace GOCSystem2018
                     UpdateMonthlyPayment();
                     SavePaymentHistory();
                     #endregion
+
+                    MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin.dispanel.Controls.Clear();
+                    mainwin.dispanel.Visible = false;
+
+                    mainwin.Dashboardpanel.Visible = true;
+                    this.Close();
                 }
                 else if (Convert.ToDouble(txtAmountGiven.Text) > Convert.ToDouble(lblAmountDue.Text))
                 {
@@ -716,10 +740,19 @@ namespace GOCSystem2018
                         }
                         UpdateMonthlyPayment();
                         SavePaymentHistory();
+
+                        MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                        mainwin.dispanel.Controls.Clear();
+                        mainwin.dispanel.Visible = false;
+
+                        mainwin.Dashboardpanel.Visible = true;
+                        this.Close();
+
                     }
                     else
                     {
                         MessageBox.Show("Please check the amount given is morethan the Total Balance", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
                     }
 
                     #endregion
@@ -788,7 +821,12 @@ namespace GOCSystem2018
                 //save for the billing OR table
                 bill.Save();
 
-                this.Hide();
+                //MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+                //mainwin2.dispanel.Controls.Clear();
+                //mainwin2.dispanel.Visible = false;
+
+                //mainwin2.Dashboardpanel.Visible = true;
+                //this.Close();
             }
 
             else if (enroll_status.Equals("Enrolled"))
@@ -1105,6 +1143,13 @@ namespace GOCSystem2018
                     studProfile.PartialPayment = "1";
                     studProfile.PartialOnly();
 
+                    MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin2.dispanel.Controls.Clear();
+                    mainwin2.dispanel.Visible = false;
+
+                    mainwin2.Dashboardpanel.Visible = true;
+                    this.Close();
+
                     #endregion
                 }
 
@@ -1257,11 +1302,18 @@ namespace GOCSystem2018
                     studProfile.SaveGOCNumber();
 
                     Reservation();//Computation per month and Balance
-                    return;
+
+                    MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin2.dispanel.Controls.Clear();
+                    mainwin2.dispanel.Visible = false;
+
+                    mainwin2.Dashboardpanel.Visible = true;
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Please pay the exact reservation fee", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
                 #endregion
             }
@@ -1300,7 +1352,14 @@ namespace GOCSystem2018
                 billingPartial.Update();
             
            
-            MessageBox.Show("Bill Updated!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Payment Updated!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+            mainwin2.dispanel.Controls.Clear();
+            mainwin2.dispanel.Visible = false;
+
+            mainwin2.Dashboardpanel.Visible = true;
+            this.Close();
         }
 
         /***********************************************************************************/
@@ -1334,7 +1393,8 @@ namespace GOCSystem2018
 
             if (toOtherFees == true)
             {
-                checkdupOtherFee();
+                toSave = false;
+                checkdupOtherFee(); // check reciept
             }
             else
             {
@@ -1350,6 +1410,7 @@ namespace GOCSystem2018
                 return;
             }
 
+
             if (toOtherFees == true)
             {
                 if (Convert.ToDouble(txtAmountGiven.Text) < Convert.ToDouble(lblAmount_Due.Text))
@@ -1358,8 +1419,9 @@ namespace GOCSystem2018
                 }
                 else
                 {
+                    #region ForOtherFee
                     //MessageBox.Show("with other Fee");                  
-                    if (toSave == true)
+                    if (toSave == false)
                     {
                         string message = "Please double check the information." +
 
@@ -1381,10 +1443,8 @@ namespace GOCSystem2018
                                 PartialSecondPay_2(txtTuitionFee);
                             }
 
-                            Billing_Other_Fees fee = new Billing_Other_Fees();
-
-                            //MessageBox.Show(GOCNo);
-
+                            //For the Other Fee Saving
+                            Billing_Other_Fees fee = new Billing_Other_Fees();                            
                             fee.GocNumber = GOCNo;
                             fee.OrNo = txtORNo.Text;
                             fee.GLevel = label17.Text;
@@ -1397,45 +1457,44 @@ namespace GOCSystem2018
                         else
                         {
                             return;
-                        }                       
+                        }
                     }
                     else
                     {
                         return;
                     }
-                      
+                    #endregion
+
                 }
             }
             else if (toOtherFees == false)          
             {
-             
-
                 if (toSave == true)
                 {
-
-                    Reservations();
-                    PartialNoReserve();
-                    PartialSecondPay();
-
-                    MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
-                    mainwin.dispanel.Controls.Clear();
-                    mainwin.dispanel.Visible = false;
-
-                    mainwin.Dashboardpanel.Visible = true;
-                    this.Close();
+                    string message = "Amount given: " + txtAmountGiven.Text;                     
+                    string title = "GOC_INFO_SYS";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        Reservations();
+                        PartialNoReserve();
+                        PartialSecondPay();                                               
+                    }
+                    //else
+                    //{
+                    //    return;
+                    //}
                 }
-                else
-                {
-                    return;
-                }
+
             }
 
-            MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
-            mainwin2.dispanel.Controls.Clear();
-            mainwin2.dispanel.Visible = false;
+            //MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+            //mainwin2.dispanel.Controls.Clear();
+            //mainwin2.dispanel.Visible = false;
 
-            mainwin2.Dashboardpanel.Visible = true;
-            this.Close();
+            //mainwin2.Dashboardpanel.Visible = true;
+            //this.Close();
         }
 
         public void LoadRecordsOtherFee()

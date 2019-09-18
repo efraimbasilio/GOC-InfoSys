@@ -57,10 +57,16 @@
             this.gradelevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.section1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.strand = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dgvGrades2 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrades2)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbGradeLevel
@@ -234,9 +240,9 @@
             this.gradelevel,
             this.section1,
             this.strand});
-            this.dgvGrades.Location = new System.Drawing.Point(12, 94);
+            this.dgvGrades.Location = new System.Drawing.Point(12, 295);
             this.dgvGrades.Name = "dgvGrades";
-            this.dgvGrades.Size = new System.Drawing.Size(1256, 614);
+            this.dgvGrades.Size = new System.Drawing.Size(1256, 415);
             this.dgvGrades.TabIndex = 1045;
             // 
             // id
@@ -321,11 +327,52 @@
             this.strand.Name = "strand";
             this.strand.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(250, 67);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1046;
+            this.button1.Text = "Compute";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dgvGrades2
+            // 
+            this.dgvGrades2.AllowUserToAddRows = false;
+            this.dgvGrades2.AllowUserToDeleteRows = false;
+            this.dgvGrades2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrades2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dgvGrades2.Location = new System.Drawing.Point(202, 108);
+            this.dgvGrades2.Name = "dgvGrades2";
+            this.dgvGrades2.Size = new System.Drawing.Size(355, 150);
+            this.dgvGrades2.TabIndex = 1047;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Column3";
+            this.Column3.Name = "Column3";
+            // 
             // frmGrading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.dgvGrades2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvGrades);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label5);
@@ -347,6 +394,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrades2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,5 +429,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gradelevel;
         private System.Windows.Forms.DataGridViewTextBoxColumn section1;
         private System.Windows.Forms.DataGridViewTextBoxColumn strand;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvGrades2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

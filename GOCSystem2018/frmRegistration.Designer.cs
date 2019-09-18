@@ -184,6 +184,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.txtOldStudNo = new System.Windows.Forms.TextBox();
             this.txtBarangay = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -2180,6 +2182,30 @@
             this.txtBarangay.Size = new System.Drawing.Size(270, 23);
             this.txtBarangay.TabIndex = 17;
             // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.ForeColor = System.Drawing.Color.DimGray;
+            this.label69.Location = new System.Drawing.Point(66, 518);
+            this.label69.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(76, 15);
+            this.label69.TabIndex = 7778;
+            this.label69.Text = "mm/dd/yyyy";
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label70.ForeColor = System.Drawing.Color.DimGray;
+            this.label70.Location = new System.Drawing.Point(455, 594);
+            this.label70.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(110, 15);
+            this.label70.TabIndex = 7779;
+            this.label70.Text = "ex. 123 Main Street";
+            // 
             // frmRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2187,6 +2213,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(1143, 666);
+            this.Controls.Add(this.label70);
+            this.Controls.Add(this.label69);
             this.Controls.Add(this.txtBarangay);
             this.Controls.Add(this.txtOldStudNo);
             this.Controls.Add(this.button1);
@@ -2512,5 +2540,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtOldStudNo;
         private System.Windows.Forms.TextBox txtBarangay;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Label label70;
     }
 }

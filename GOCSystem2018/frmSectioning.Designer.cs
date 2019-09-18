@@ -67,9 +67,6 @@
             this.lblMAX = new System.Windows.Forms.Label();
             this.lblMin = new System.Windows.Forms.Label();
             this.dgvSectionBefore = new System.Windows.Forms.DataGridView();
-            this.lblNoStudent = new System.Windows.Forms.Label();
-            this.lblAvailable = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +77,9 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblNoStudent = new System.Windows.Forms.Label();
+            this.lblAvailable = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.lblSemester = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionAfter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSectionCount)).BeginInit();
@@ -109,6 +109,7 @@
             this.dgvSectionAfter.RowHeadersVisible = false;
             this.dgvSectionAfter.Size = new System.Drawing.Size(399, 438);
             this.dgvSectionAfter.TabIndex = 1;
+            this.dgvSectionAfter.Visible = false;
             // 
             // Column9
             // 
@@ -434,6 +435,7 @@
             this.lblMAX.Size = new System.Drawing.Size(12, 15);
             this.lblMAX.TabIndex = 32;
             this.lblMAX.Text = "_";
+            this.lblMAX.Visible = false;
             // 
             // lblMin
             // 
@@ -444,6 +446,7 @@
             this.lblMin.Size = new System.Drawing.Size(12, 15);
             this.lblMin.TabIndex = 33;
             this.lblMin.Text = "_";
+            this.lblMin.Visible = false;
             // 
             // dgvSectionBefore
             // 
@@ -470,37 +473,6 @@
             this.dgvSectionBefore.Size = new System.Drawing.Size(707, 438);
             this.dgvSectionBefore.TabIndex = 35;
             this.dgvSectionBefore.DoubleClick += new System.EventHandler(this.dgvSectionBefore_DoubleClick_1);
-            // 
-            // lblNoStudent
-            // 
-            this.lblNoStudent.AutoSize = true;
-            this.lblNoStudent.Location = new System.Drawing.Point(682, 217);
-            this.lblNoStudent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNoStudent.Name = "lblNoStudent";
-            this.lblNoStudent.Size = new System.Drawing.Size(12, 15);
-            this.lblNoStudent.TabIndex = 36;
-            this.lblNoStudent.Text = "_";
-            // 
-            // lblAvailable
-            // 
-            this.lblAvailable.AutoSize = true;
-            this.lblAvailable.Location = new System.Drawing.Point(818, 215);
-            this.lblAvailable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAvailable.Name = "lblAvailable";
-            this.lblAvailable.Size = new System.Drawing.Size(12, 15);
-            this.lblAvailable.TabIndex = 37;
-            this.lblAvailable.Text = "_";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(935, 217);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 44);
-            this.button2.TabIndex = 38;
-            this.button2.Text = "Add to Section";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -562,6 +534,38 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
+            // lblNoStudent
+            // 
+            this.lblNoStudent.AutoSize = true;
+            this.lblNoStudent.Location = new System.Drawing.Point(682, 217);
+            this.lblNoStudent.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoStudent.Name = "lblNoStudent";
+            this.lblNoStudent.Size = new System.Drawing.Size(12, 15);
+            this.lblNoStudent.TabIndex = 36;
+            this.lblNoStudent.Text = "_";
+            this.lblNoStudent.Visible = false;
+            // 
+            // lblAvailable
+            // 
+            this.lblAvailable.AutoSize = true;
+            this.lblAvailable.Location = new System.Drawing.Point(818, 215);
+            this.lblAvailable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAvailable.Name = "lblAvailable";
+            this.lblAvailable.Size = new System.Drawing.Size(12, 15);
+            this.lblAvailable.TabIndex = 37;
+            this.lblAvailable.Text = "_";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(935, 217);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(76, 44);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "Add to Section";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // lblSemester
             // 
             this.lblSemester.AutoSize = true;
@@ -571,6 +575,7 @@
             this.lblSemester.Size = new System.Drawing.Size(12, 15);
             this.lblSemester.TabIndex = 39;
             this.lblSemester.Text = "_";
+            this.lblSemester.Visible = false;
             // 
             // frmSectioning
             // 

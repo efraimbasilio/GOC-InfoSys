@@ -475,11 +475,22 @@ namespace GOCSystem2018
             }
         }
 
+        public void checkPayment()
+        {
+            //MessageBox.Show("asdasd" + dgvFeeHistory.Rows.Count);
+            if (dgvFeeHistory.Rows.Count > 0)
+            {
+                label6.Visible = true;
+                cmbSection.Visible = true;
+            }
+        }
 
         public void LoadSection()
         {
+            checkPayment();
             //clear list
-
+            //label6.Visible = true;
+            //cmbSection.Visible = true;
             //dgvDiscount.Rows.Clear();
             cmbSection.Items.Clear();
             sections.Clear();
