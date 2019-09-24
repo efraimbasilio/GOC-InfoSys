@@ -160,7 +160,7 @@
             this.SidebarPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SidebarPanel.Location = new System.Drawing.Point(0, 0);
             this.SidebarPanel.Name = "SidebarPanel";
-            this.SidebarPanel.Size = new System.Drawing.Size(232, 720);
+            this.SidebarPanel.Size = new System.Drawing.Size(232, 768);
             this.SidebarPanel.TabIndex = 0;
             // 
             // btnSectioning
@@ -317,6 +317,7 @@
             this.button8.Text = "     Inventory";
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
             // 
             // button7
             // 
@@ -333,6 +334,7 @@
             this.button7.Text = "     Bibliotheca";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Visible = false;
             // 
             // button6
             // 
@@ -349,6 +351,7 @@
             this.button6.Text = "     SDO Cases";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
             // 
             // button5
             // 
@@ -456,9 +459,9 @@
             this.Dashboardpanel.Controls.Add(this.label9);
             this.Dashboardpanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Dashboardpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dashboardpanel.Location = new System.Drawing.Point(232, 26);
+            this.Dashboardpanel.Location = new System.Drawing.Point(232, 74);
             this.Dashboardpanel.Name = "Dashboardpanel";
-            this.Dashboardpanel.Size = new System.Drawing.Size(1048, 694);
+            this.Dashboardpanel.Size = new System.Drawing.Size(1134, 694);
             this.Dashboardpanel.TabIndex = 18;
             // 
             // pictureBox5
@@ -1127,7 +1130,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(232, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1048, 30);
+            this.panel1.Size = new System.Drawing.Size(1134, 30);
             this.panel1.TabIndex = 1011;
             // 
             // label17
@@ -1159,7 +1162,7 @@
             this.dispanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dispanel.Location = new System.Drawing.Point(232, 30);
             this.dispanel.Name = "dispanel";
-            this.dispanel.Size = new System.Drawing.Size(1048, 0);
+            this.dispanel.Size = new System.Drawing.Size(1134, 44);
             this.dispanel.TabIndex = 1037;
             this.dispanel.Visible = false;
             // 
@@ -1168,7 +1171,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.dispanel);
             this.Controls.Add(this.Dashboardpanel);
             this.Controls.Add(this.panel1);
@@ -1177,7 +1180,6 @@
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainWindow";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.SidebarPanel.ResumeLayout(false);
             this.SidebarPanel.PerformLayout();

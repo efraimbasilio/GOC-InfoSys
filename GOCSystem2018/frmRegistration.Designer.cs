@@ -831,7 +831,7 @@
             // 
             this.chckGM.AutoSize = true;
             this.chckGM.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chckGM.Location = new System.Drawing.Point(471, 1664);
+            this.chckGM.Location = new System.Drawing.Point(470, 1589);
             this.chckGM.Margin = new System.Windows.Forms.Padding(4);
             this.chckGM.Name = "chckGM";
             this.chckGM.Size = new System.Drawing.Size(90, 19);
@@ -843,7 +843,7 @@
             // 
             this.chkNCAEResult.AutoSize = true;
             this.chkNCAEResult.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkNCAEResult.Location = new System.Drawing.Point(698, 1664);
+            this.chkNCAEResult.Location = new System.Drawing.Point(697, 1589);
             this.chkNCAEResult.Margin = new System.Windows.Forms.Padding(4);
             this.chkNCAEResult.Name = "chkNCAEResult";
             this.chkNCAEResult.Size = new System.Drawing.Size(94, 19);
@@ -856,7 +856,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(60, 1607);
+            this.label16.Location = new System.Drawing.Point(61, 1546);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(530, 30);
@@ -868,7 +868,7 @@
             // 
             this.chkEntranceExam.AutoSize = true;
             this.chkEntranceExam.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkEntranceExam.Location = new System.Drawing.Point(583, 1664);
+            this.chkEntranceExam.Location = new System.Drawing.Point(582, 1589);
             this.chkEntranceExam.Margin = new System.Windows.Forms.Padding(4);
             this.chkEntranceExam.Name = "chkEntranceExam";
             this.chkEntranceExam.Size = new System.Drawing.Size(95, 19);
@@ -880,7 +880,7 @@
             // 
             this.chkDrugtest.AutoSize = true;
             this.chkDrugtest.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkDrugtest.Location = new System.Drawing.Point(319, 1664);
+            this.chkDrugtest.Location = new System.Drawing.Point(318, 1589);
             this.chkDrugtest.Margin = new System.Windows.Forms.Padding(4);
             this.chkDrugtest.Name = "chkDrugtest";
             this.chkDrugtest.Size = new System.Drawing.Size(126, 19);
@@ -892,7 +892,7 @@
             // 
             this.chk138.AutoSize = true;
             this.chk138.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chk138.Location = new System.Drawing.Point(223, 1664);
+            this.chk138.Location = new System.Drawing.Point(222, 1589);
             this.chk138.Margin = new System.Windows.Forms.Padding(4);
             this.chk138.Name = "chk138";
             this.chk138.Size = new System.Drawing.Size(77, 19);
@@ -904,7 +904,7 @@
             // 
             this.chkBirthCertificate.AutoSize = true;
             this.chkBirthCertificate.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBirthCertificate.Location = new System.Drawing.Point(63, 1664);
+            this.chkBirthCertificate.Location = new System.Drawing.Point(62, 1589);
             this.chkBirthCertificate.Margin = new System.Windows.Forms.Padding(4);
             this.chkBirthCertificate.Name = "chkBirthCertificate";
             this.chkBirthCertificate.Size = new System.Drawing.Size(144, 19);
@@ -918,7 +918,7 @@
             this.label46.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label46.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label46.Location = new System.Drawing.Point(60, 1442);
+            this.label46.Location = new System.Drawing.Point(60, 1400);
             this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(74, 15);
@@ -931,7 +931,7 @@
             this.txtRelation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRelation.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRelation.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtRelation.Location = new System.Drawing.Point(63, 1461);
+            this.txtRelation.Location = new System.Drawing.Point(63, 1419);
             this.txtRelation.Margin = new System.Windows.Forms.Padding(4);
             this.txtRelation.Multiline = true;
             this.txtRelation.Name = "txtRelation";
@@ -941,7 +941,7 @@
             // txtGuardianTel
             // 
             this.txtGuardianTel.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGuardianTel.Location = new System.Drawing.Point(748, 1462);
+            this.txtGuardianTel.Location = new System.Drawing.Point(748, 1420);
             this.txtGuardianTel.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuardianTel.Mask = "0000-000-0000";
             this.txtGuardianTel.Name = "txtGuardianTel";
@@ -955,7 +955,7 @@
             this.label43.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label43.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.Black;
-            this.label43.Location = new System.Drawing.Point(534, 1442);
+            this.label43.Location = new System.Drawing.Point(534, 1400);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(83, 15);
@@ -968,7 +968,7 @@
             this.label44.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label44.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.Black;
-            this.label44.Location = new System.Drawing.Point(744, 1442);
+            this.label44.Location = new System.Drawing.Point(744, 1400);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(84, 15);
@@ -981,7 +981,7 @@
             this.label37.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label37.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label37.Location = new System.Drawing.Point(534, 1384);
+            this.label37.Location = new System.Drawing.Point(534, 1355);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(53, 15);
@@ -1003,7 +1003,7 @@
             "Pampanga",
             "Tarlac",
             "Zambales"});
-            this.cmbProvince2.Location = new System.Drawing.Point(537, 1402);
+            this.cmbProvince2.Location = new System.Drawing.Point(537, 1373);
             this.cmbProvince2.Margin = new System.Windows.Forms.Padding(4);
             this.cmbProvince2.Name = "cmbProvince2";
             this.cmbProvince2.Size = new System.Drawing.Size(320, 23);
@@ -1016,7 +1016,7 @@
             this.label38.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label38.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label38.Location = new System.Drawing.Point(557, 1302);
+            this.label38.Location = new System.Drawing.Point(557, 1281);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(56, 15);
@@ -1029,7 +1029,7 @@
             this.txtBarangay2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBarangay2.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBarangay2.ForeColor = System.Drawing.Color.Black;
-            this.txtBarangay2.Location = new System.Drawing.Point(560, 1321);
+            this.txtBarangay2.Location = new System.Drawing.Point(560, 1300);
             this.txtBarangay2.Margin = new System.Windows.Forms.Padding(4);
             this.txtBarangay2.Multiline = true;
             this.txtBarangay2.Name = "txtBarangay2";
@@ -1043,7 +1043,7 @@
             this.label39.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label39.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label39.Location = new System.Drawing.Point(60, 1384);
+            this.label39.Location = new System.Drawing.Point(60, 1355);
             this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(73, 15);
@@ -1057,7 +1057,7 @@
             this.cmbMunicipality2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbMunicipality2.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMunicipality2.FormattingEnabled = true;
-            this.cmbMunicipality2.Location = new System.Drawing.Point(63, 1402);
+            this.cmbMunicipality2.Location = new System.Drawing.Point(63, 1373);
             this.cmbMunicipality2.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMunicipality2.Name = "cmbMunicipality2";
             this.cmbMunicipality2.Size = new System.Drawing.Size(458, 23);
@@ -1069,7 +1069,7 @@
             this.label40.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label40.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label40.Location = new System.Drawing.Point(60, 1302);
+            this.label40.Location = new System.Drawing.Point(60, 1281);
             this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(131, 15);
@@ -1082,7 +1082,7 @@
             this.txtAddress2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress2.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress2.ForeColor = System.Drawing.Color.Black;
-            this.txtAddress2.Location = new System.Drawing.Point(62, 1321);
+            this.txtAddress2.Location = new System.Drawing.Point(62, 1300);
             this.txtAddress2.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress2.Multiline = true;
             this.txtAddress2.Name = "txtAddress2";
@@ -1160,7 +1160,7 @@
             this.label32.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label32.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label32.Location = new System.Drawing.Point(434, 1133);
+            this.label32.Location = new System.Drawing.Point(435, 1109);
             this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(74, 15);
@@ -1173,7 +1173,7 @@
             this.txtMotherWork.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMotherWork.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotherWork.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtMotherWork.Location = new System.Drawing.Point(437, 1152);
+            this.txtMotherWork.Location = new System.Drawing.Point(438, 1128);
             this.txtMotherWork.Margin = new System.Windows.Forms.Padding(4);
             this.txtMotherWork.Multiline = true;
             this.txtMotherWork.Name = "txtMotherWork";
@@ -1187,7 +1187,7 @@
             this.label33.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label33.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label33.Location = new System.Drawing.Point(434, 1074);
+            this.label33.Location = new System.Drawing.Point(435, 1050);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(74, 15);
@@ -1200,7 +1200,7 @@
             this.txtFatherWork.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFatherWork.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFatherWork.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtFatherWork.Location = new System.Drawing.Point(437, 1093);
+            this.txtFatherWork.Location = new System.Drawing.Point(438, 1069);
             this.txtFatherWork.Margin = new System.Windows.Forms.Padding(4);
             this.txtFatherWork.Multiline = true;
             this.txtFatherWork.Name = "txtFatherWork";
@@ -1214,7 +1214,7 @@
             this.label31.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label31.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label31.Location = new System.Drawing.Point(60, 1133);
+            this.label31.Location = new System.Drawing.Point(61, 1109);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(97, 15);
@@ -1227,7 +1227,7 @@
             this.txtMother.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMother.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMother.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtMother.Location = new System.Drawing.Point(63, 1152);
+            this.txtMother.Location = new System.Drawing.Point(64, 1128);
             this.txtMother.Margin = new System.Windows.Forms.Padding(4);
             this.txtMother.Multiline = true;
             this.txtMother.Name = "txtMother";
@@ -1240,7 +1240,7 @@
             this.label30.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label30.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label30.Location = new System.Drawing.Point(60, 1074);
+            this.label30.Location = new System.Drawing.Point(61, 1050);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(91, 15);
@@ -1253,7 +1253,7 @@
             this.txtFatherName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFatherName.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFatherName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtFatherName.Location = new System.Drawing.Point(62, 1093);
+            this.txtFatherName.Location = new System.Drawing.Point(63, 1069);
             this.txtFatherName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFatherName.Multiline = true;
             this.txtFatherName.Name = "txtFatherName";
@@ -1708,7 +1708,7 @@
             this.panel8.Controls.Add(this.pictureBox5);
             this.panel8.Controls.Add(this.label41);
             this.panel8.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel8.Location = new System.Drawing.Point(63, 818);
+            this.panel8.Location = new System.Drawing.Point(62, 802);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(794, 33);
             this.panel8.TabIndex = 203;
@@ -1771,7 +1771,7 @@
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.DarkGray;
-            this.label42.Location = new System.Drawing.Point(79, 1348);
+            this.label42.Location = new System.Drawing.Point(79, 1327);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(438, 15);
             this.label42.TabIndex = 205;
@@ -1783,7 +1783,7 @@
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.Black;
-            this.label45.Location = new System.Drawing.Point(60, 1558);
+            this.label45.Location = new System.Drawing.Point(60, 1503);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(660, 30);
@@ -1795,7 +1795,7 @@
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.ForeColor = System.Drawing.Color.Black;
-            this.label61.Location = new System.Drawing.Point(60, 1532);
+            this.label61.Location = new System.Drawing.Point(60, 1477);
             this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(65, 15);
@@ -1812,7 +1812,7 @@
             // txtGuardianCell
             // 
             this.txtGuardianCell.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGuardianCell.Location = new System.Drawing.Point(537, 1462);
+            this.txtGuardianCell.Location = new System.Drawing.Point(537, 1420);
             this.txtGuardianCell.Margin = new System.Windows.Forms.Padding(4);
             this.txtGuardianCell.Mask = "0000-000-0000";
             this.txtGuardianCell.Name = "txtGuardianCell";
@@ -1850,7 +1850,7 @@
             // txtFatherContact
             // 
             this.txtFatherContact.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFatherContact.Location = new System.Drawing.Point(745, 1092);
+            this.txtFatherContact.Location = new System.Drawing.Point(746, 1068);
             this.txtFatherContact.Margin = new System.Windows.Forms.Padding(4);
             this.txtFatherContact.Mask = "0000-000-0000";
             this.txtFatherContact.Name = "txtFatherContact";
@@ -1864,7 +1864,7 @@
             this.label65.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label65.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label65.ForeColor = System.Drawing.Color.Black;
-            this.label65.Location = new System.Drawing.Point(742, 1074);
+            this.label65.Location = new System.Drawing.Point(743, 1050);
             this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(83, 15);
@@ -1874,7 +1874,7 @@
             // txtMotherContact
             // 
             this.txtMotherContact.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMotherContact.Location = new System.Drawing.Point(745, 1151);
+            this.txtMotherContact.Location = new System.Drawing.Point(746, 1127);
             this.txtMotherContact.Margin = new System.Windows.Forms.Padding(4);
             this.txtMotherContact.Mask = "0000-000-0000";
             this.txtMotherContact.Name = "txtMotherContact";
@@ -1888,7 +1888,7 @@
             this.label67.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label67.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label67.ForeColor = System.Drawing.Color.Black;
-            this.label67.Location = new System.Drawing.Point(742, 1133);
+            this.label67.Location = new System.Drawing.Point(743, 1109);
             this.label67.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(83, 15);
@@ -1937,7 +1937,7 @@
             this.txtOtherAddress.Enabled = false;
             this.txtOtherAddress.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOtherAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtOtherAddress.Location = new System.Drawing.Point(67, 788);
+            this.txtOtherAddress.Location = new System.Drawing.Point(66, 772);
             this.txtOtherAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtOtherAddress.Multiline = true;
             this.txtOtherAddress.Name = "txtOtherAddress";
@@ -1950,7 +1950,7 @@
             this.label68.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label68.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label68.Location = new System.Drawing.Point(68, 769);
+            this.label68.Location = new System.Drawing.Point(67, 753);
             this.label68.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(88, 15);
@@ -1963,7 +1963,7 @@
             this.chkOtherAddress.AutoSize = true;
             this.chkOtherAddress.Enabled = false;
             this.chkOtherAddress.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkOtherAddress.Location = new System.Drawing.Point(178, 768);
+            this.chkOtherAddress.Location = new System.Drawing.Point(177, 752);
             this.chkOtherAddress.Name = "chkOtherAddress";
             this.chkOtherAddress.Size = new System.Drawing.Size(44, 19);
             this.chkOtherAddress.TabIndex = 220;
@@ -1978,7 +1978,7 @@
             this.btnSave.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.Location = new System.Drawing.Point(63, 1708);
+            this.btnSave.Location = new System.Drawing.Point(62, 1616);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(123, 42);
@@ -2037,7 +2037,7 @@
             this.txtEditAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEditAddress.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEditAddress.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtEditAddress.Location = new System.Drawing.Point(65, 738);
+            this.txtEditAddress.Location = new System.Drawing.Point(64, 722);
             this.txtEditAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditAddress.Multiline = true;
             this.txtEditAddress.Name = "txtEditAddress";
@@ -2051,7 +2051,7 @@
             this.txtEditAddressGuardian.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEditAddressGuardian.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEditAddressGuardian.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtEditAddressGuardian.Location = new System.Drawing.Point(62, 1505);
+            this.txtEditAddressGuardian.Location = new System.Drawing.Point(63, 1450);
             this.txtEditAddressGuardian.Margin = new System.Windows.Forms.Padding(4);
             this.txtEditAddressGuardian.Multiline = true;
             this.txtEditAddressGuardian.Name = "txtEditAddressGuardian";
