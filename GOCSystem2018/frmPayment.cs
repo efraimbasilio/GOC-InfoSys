@@ -153,7 +153,7 @@ namespace GOCSystem2018
         frmBilling frmBilling = new frmBilling();
 
         public string amount_per_month, payment_status, full_name, voucher_info;
-        public double fee_for_reservation, total_tuition, voucher_amount, down_payment, amount_due;
+        public double fee_for_reservation, total_tuition, voucher_amount, down_payment, amount_due , tuitionFeeMinusVC;
         public int payment_no;
         public string reg_no, enroll_status;
 
@@ -345,6 +345,8 @@ namespace GOCSystem2018
             GetPerMonth();// paymernt history to dgv 
             lblAmount_Due.Text = fee_for_reservation.ToString("n");
             label17.Text = level;
+
+           // MessageBox.Show(total_tuition.ToString());
         }
 
         //PAYMENT - ENROLLMENT STATUS
@@ -960,6 +962,16 @@ namespace GOCSystem2018
 
                 AmountGiven = Convert.ToDouble(txtAmountGiven.Text); //Convert to Double               
 
+                if (AmountGiven > tuitionFeeMinusVC)
+                {
+                    string message = "For total tuition fee pay: " + tuitionFeeMinusVC + " pesos.";
+                    string title = "GOC_INFO_SYS";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Error);
+                    return;
+                }
+
                 if (AmountGiven > Convert.ToDouble(fee_for_reservation))//kapag mas malaki ang binigay na amount kaysa initial reservation fee this will be then divide to 10
                 {
                     #region PARTIAL PAYMENT - NO RESERVATION                                 
@@ -1014,6 +1026,13 @@ namespace GOCSystem2018
                     studProfile.PartialPayment = "1";
                     studProfile.PartialOnly();
 
+                    MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin.dispanel.Controls.Clear();
+                    mainwin.dispanel.Visible = false;
+
+                    mainwin.Dashboardpanel.Visible = true;
+                    this.Close();
+
                     #endregion
                 }
 
@@ -1066,6 +1085,13 @@ namespace GOCSystem2018
                         studProfile.SaveGOCNumber();
 
                         Reservation();//Computation per month and Balance
+
+                        MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                        mainwin.dispanel.Controls.Clear();
+                        mainwin.dispanel.Visible = false;
+
+                        mainwin.Dashboardpanel.Visible = true;
+                        this.Close();
                         #endregion
                     }
                     else
@@ -1256,6 +1282,7 @@ namespace GOCSystem2018
 
                     Reservation();//Computation per month and Balance
                     return;
+
                 }
                 else
                 {

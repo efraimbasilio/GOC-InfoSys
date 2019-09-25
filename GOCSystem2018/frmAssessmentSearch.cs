@@ -237,6 +237,7 @@ namespace GOCSystem2018
                 frmAssesment.LoadTuitionFee();
                 frmAssesment.LoadAssesMiscFees();
                 frmAssesment.LoadAssesOtherFees();
+                frmAssesment.LoadAssesOtherFeesSTRAND_ICT();
                 frmAssesment.TotalTuition();
 
                 frmAssesment.ComputeVoucher();
@@ -244,9 +245,11 @@ namespace GOCSystem2018
 
                 frmAssesment.LoadSubject();
                 frmAssesment.EnableMOP();
-                
+                               
                 frmAssesment.Show();
                 frmAssesment.checkPayment();
+
+               
             }
         }
 

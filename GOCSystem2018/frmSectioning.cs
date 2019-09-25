@@ -408,7 +408,7 @@ namespace GOCSystem2018
 
         private void frmSectioning_Load(object sender, EventArgs e)
         {
-            LoadStrand(cmbStrand, "STRAND", "strand_name");
+            LoadStrand(cmbStrand, "strand", "strand_name");
             LoadSchoolYear();
         }
 

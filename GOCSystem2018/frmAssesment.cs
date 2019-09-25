@@ -393,6 +393,52 @@ namespace GOCSystem2018
             //lblName.Text;
         }
 
+
+        public void LoadAssesOtherFeesSTRAND_ICT()
+        {
+            //clear list                      
+            otherFees.Clear();
+            dgvOtherFee.Rows.Clear();
+            //pass value to list
+            otherFees = otherFee.Load();
+
+            //loop through load it to list view
+            if (Strand.Equals("TVL - ICT"))
+            {
+                Strand = "STEM";
+               // MessageBox.Show(Strand);
+            }
+            foreach (var item in otherFees)
+            {
+                if (item.Strand.Equals(Strand))
+                {
+                    dgvOtherFee.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
+
+
+                    foreach (var item2 in otherFees)
+                    {
+                        if (item.Strand.Equals("Non-STEM"))
+                        {
+                            dgvOtherFee.Rows.Add(item2.OtherFeeName, item2.OtherFeeAmount);
+                        }
+                    }
+                }
+
+                if (item.Strand.Equals("Non-STEM"))
+                {
+                    dgvOtherFee.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
+                }
+            }
+
+            double sum = 0;
+            for (int i = 0; i < dgvOtherFee.Rows.Count; i++)
+            {
+                sum += Convert.ToDouble(dgvOtherFee.Rows[i].Cells[1].Value);
+            }
+            lblTotalOtherFee.Text = sum.ToString("n");
+            Strand = "TVL - ICT";
+        } 
+
         public void LoadAssesOtherFees()
         {
             //clear list                      
@@ -430,6 +476,7 @@ namespace GOCSystem2018
             }
             lblTotalOtherFee.Text = sum.ToString("n");           
         }
+
                              
         private void Render()
         {

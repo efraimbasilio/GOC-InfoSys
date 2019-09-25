@@ -28,17 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cmbPaymentFor = new System.Windows.Forms.ComboBox();
             this.lblFullPayment = new System.Windows.Forms.Label();
             this.lblReservationTag = new System.Windows.Forms.Label();
             this.lblPartial = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblTotPay = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.dgvFeeHistory = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -115,6 +119,12 @@
             this.dgvSubjectLoad = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lblTotalBalance = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFeeHistory)).BeginInit();
@@ -129,6 +139,8 @@
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectLoad)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -218,12 +230,38 @@
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.groupBox5);
             this.panel4.Controls.Add(this.groupBox3);
+            this.panel4.Controls.Add(this.panel2);
+            this.panel4.Controls.Add(this.panel5);
             this.panel4.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(-5, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1262, 737);
             this.panel4.TabIndex = 1051;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            // 
+            // lblTotPay
+            // 
+            this.lblTotPay.AutoSize = true;
+            this.lblTotPay.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotPay.ForeColor = System.Drawing.Color.White;
+            this.lblTotPay.Location = new System.Drawing.Point(458, 6);
+            this.lblTotPay.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTotPay.Name = "lblTotPay";
+            this.lblTotPay.Size = new System.Drawing.Size(62, 15);
+            this.lblTotPay.TabIndex = 1082;
+            this.lblTotPay.Text = "10,000.00";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(363, 6);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 15);
+            this.label12.TabIndex = 1081;
+            this.label12.Text = "Total Payment:";
             // 
             // dgvFeeHistory
             // 
@@ -238,20 +276,20 @@
             this.RemainingBalance,
             this.dataGridViewTextBoxColumn8});
             this.dgvFeeHistory.GridColor = System.Drawing.Color.White;
-            this.dgvFeeHistory.Location = new System.Drawing.Point(366, 405);
+            this.dgvFeeHistory.Location = new System.Drawing.Point(364, 405);
             this.dgvFeeHistory.Name = "dgvFeeHistory";
             this.dgvFeeHistory.ReadOnly = true;
             this.dgvFeeHistory.RowHeadersVisible = false;
             this.dgvFeeHistory.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvFeeHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvFeeHistory.Size = new System.Drawing.Size(528, 160);
+            this.dgvFeeHistory.Size = new System.Drawing.Size(529, 247);
             this.dgvFeeHistory.TabIndex = 1014;
             // 
             // dataGridViewTextBoxColumn7
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle15.NullValue = null;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridViewTextBoxColumn7.HeaderText = "OR";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -266,10 +304,10 @@
             // AmountGiven
             // 
             this.AmountGiven.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle16.Format = "N2";
+            dataGridViewCellStyle16.NullValue = null;
+            this.AmountGiven.DefaultCellStyle = dataGridViewCellStyle16;
             this.AmountGiven.HeaderText = "Pay";
             this.AmountGiven.Name = "AmountGiven";
             this.AmountGiven.ReadOnly = true;
@@ -277,21 +315,22 @@
             // RemainingBalance
             // 
             this.RemainingBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.RemainingBalance.DefaultCellStyle = dataGridViewCellStyle17;
             this.RemainingBalance.HeaderText = "Payment No.";
             this.RemainingBalance.Name = "RemainingBalance";
             this.RemainingBalance.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.NullValue = "0.00";
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle18.NullValue = "0.00";
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewTextBoxColumn8.HeaderText = "Date and Time";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 109;
             // 
             // groupBox1
             // 
@@ -350,7 +389,7 @@
             this.dgvPerMonth.ReadOnly = true;
             this.dgvPerMonth.RowHeadersVisible = false;
             this.dgvPerMonth.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPerMonth.Size = new System.Drawing.Size(528, 289);
+            this.dgvPerMonth.Size = new System.Drawing.Size(528, 271);
             this.dgvPerMonth.TabIndex = 1014;
             // 
             // PaymentMonth
@@ -364,6 +403,8 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridViewTextBoxColumn3.HeaderText = "Payment  No.";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -372,6 +413,8 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridViewTextBoxColumn4.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
@@ -417,16 +460,16 @@
             this.cmbMOP.Items.AddRange(new object[] {
             "Full Payment",
             "Partial Payment"});
-            this.cmbMOP.Location = new System.Drawing.Point(537, 638);
+            this.cmbMOP.Location = new System.Drawing.Point(901, 92);
             this.cmbMOP.Name = "cmbMOP";
-            this.cmbMOP.Size = new System.Drawing.Size(149, 23);
+            this.cmbMOP.Size = new System.Drawing.Size(165, 23);
             this.cmbMOP.TabIndex = 1028;
             this.cmbMOP.SelectedValueChanged += new System.EventHandler(this.cmbMOP_SelectedValueChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(412, 641);
+            this.label8.Location = new System.Drawing.Point(898, 71);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 15);
@@ -736,9 +779,9 @@
             this.btnPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayment.ForeColor = System.Drawing.Color.White;
-            this.btnPayment.Location = new System.Drawing.Point(692, 628);
+            this.btnPayment.Location = new System.Drawing.Point(932, 125);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(134, 40);
+            this.btnPayment.Size = new System.Drawing.Size(115, 34);
             this.btnPayment.TabIndex = 1053;
             this.btnPayment.Text = "&Proceed to Billing";
             this.btnPayment.UseVisualStyleBackColor = false;
@@ -748,16 +791,16 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
             this.panel8.Controls.Add(this.label19);
-            this.panel8.Location = new System.Drawing.Point(366, 571);
+            this.panel8.Location = new System.Drawing.Point(898, 26);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(528, 42);
+            this.panel8.Size = new System.Drawing.Size(183, 42);
             this.panel8.TabIndex = 1051;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(9, 12);
+            this.label19.Location = new System.Drawing.Point(12, 16);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(92, 15);
             this.label19.TabIndex = 0;
@@ -787,7 +830,7 @@
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
             this.panel6.Controls.Add(this.label28);
             this.panel6.Controls.Add(this.txtPayNumber);
-            this.panel6.Location = new System.Drawing.Point(366, 363);
+            this.panel6.Location = new System.Drawing.Point(365, 363);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(528, 42);
             this.panel6.TabIndex = 1049;
@@ -823,7 +866,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(9, 12);
+            this.label17.Location = new System.Drawing.Point(11, 18);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(172, 15);
             this.label17.TabIndex = 0;
@@ -1054,14 +1097,76 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "n";
-            dataGridViewCellStyle5.NullValue = "0.00";
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle21.Format = "n";
+            dataGridViewCellStyle21.NullValue = "0.00";
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridViewTextBoxColumn6.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel2.Controls.Add(this.lblTotalBalance);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Location = new System.Drawing.Point(366, 340);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(526, 25);
+            this.panel2.TabIndex = 1050;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(554, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(25, 22);
+            this.textBox1.TabIndex = 1042;
+            this.textBox1.Visible = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel5.Controls.Add(this.lblTotPay);
+            this.panel5.Controls.Add(this.textBox2);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Location = new System.Drawing.Point(364, 658);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(528, 25);
+            this.panel5.TabIndex = 1083;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(554, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(25, 22);
+            this.textBox2.TabIndex = 1042;
+            this.textBox2.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(361, 6);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 15);
+            this.label10.TabIndex = 1083;
+            this.label10.Text = "Total Payment:";
+            // 
+            // lblTotalBalance
+            // 
+            this.lblTotalBalance.AutoSize = true;
+            this.lblTotalBalance.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotalBalance.ForeColor = System.Drawing.Color.White;
+            this.lblTotalBalance.Location = new System.Drawing.Point(456, 5);
+            this.lblTotalBalance.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTotalBalance.Name = "lblTotalBalance";
+            this.lblTotalBalance.Size = new System.Drawing.Size(62, 15);
+            this.lblTotalBalance.TabIndex = 1084;
+            this.lblTotalBalance.Text = "10,000.00";
             // 
             // frmBilling
             // 
@@ -1099,6 +1204,10 @@
             this.groupBox5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubjectLoad)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1119,7 +1228,6 @@
         private System.Windows.Forms.Label lblTotalMiscFee;
         private System.Windows.Forms.Label lblTuition;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.DataGridView dgvFeeHistory;
         private System.Windows.Forms.Label label21;
         public System.Windows.Forms.Label lblReservationTag;
         public System.Windows.Forms.Label lblPartial;
@@ -1141,7 +1249,6 @@
         public System.Windows.Forms.Label lblReserve;
         private System.Windows.Forms.TextBox txtPayNumber;
         public System.Windows.Forms.Label lblAmountDue;
-        private System.Windows.Forms.DataGridView dgvPerMonth;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel6;
@@ -1178,13 +1285,23 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label37;
+        public System.Windows.Forms.DataGridView dgvPerMonth;
+        private System.Windows.Forms.Label lblTotPay;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn AmountGiven;
         private System.Windows.Forms.DataGridViewTextBoxColumn RemainingBalance;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        public System.Windows.Forms.DataGridView dgvFeeHistory;
         private System.Windows.Forms.DataGridViewTextBoxColumn PaymentMonth;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label lblTotalBalance;
+        private System.Windows.Forms.Label label10;
     }
 }

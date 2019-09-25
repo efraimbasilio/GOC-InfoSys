@@ -310,6 +310,51 @@ namespace GOCSystem2018
 
         }
 
+        public void LoadAssesOtherFeesSTRAND_ICT()
+        {
+            //clear list                      
+            otherFees.Clear();
+            dgvOtherFees.Rows.Clear();
+            //pass value to list
+            otherFees = otherFee.Load();
+
+            //loop through load it to list view
+            if (Strand.Equals("TVL - ICT"))
+            {
+                Strand = "STEM";
+               
+            }
+            foreach (var item in otherFees)
+            {
+                if (item.Strand.Equals(Strand))
+                {
+                    dgvOtherFees.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
+
+
+                    foreach (var item2 in otherFees)
+                    {
+                        if (item.Strand.Equals("Non-STEM"))
+                        {
+                            dgvOtherFees.Rows.Add(item2.OtherFeeName, item2.OtherFeeAmount);
+                        }
+                    }
+                }
+
+                if (item.Strand.Equals("Non-STEM"))
+                {
+                    dgvOtherFees.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
+                }
+            }
+
+            double sum = 0;
+            for (int i = 0; i < dgvOtherFees.Rows.Count; i++)
+            {
+                sum += Convert.ToDouble(dgvOtherFees.Rows[i].Cells[1].Value);
+            }
+            lblOther.Text = sum.ToString("n");
+            Strand = "TVL - ICT";
+        }
+
         public void LoadAssesOtherFees()
         {
             //clear list                      
@@ -378,6 +423,11 @@ namespace GOCSystem2018
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ComputePerMonth2(dgvPerMonth.Rows.Count);
+        }
+
         public void ComputeVoucher()
         {
             //clear list
@@ -434,6 +484,28 @@ namespace GOCSystem2018
             lblPerMonthAdv.Text = sum1.ToString("n");
         }
 
+        public void ComputePerMonth2(int range)
+        {
+            // MessageBox.Show(sMonth2);
+            double sum1 = 0;
+            for (int i = 0; i < range; i++)
+            {
+                sum1 += Convert.ToDouble(dgvPerMonth.Rows[i].Cells[2].Value);
+            }
+            lblTotalBalance.Text = "P " + sum1.ToString("n");
+        }
+
+        public void ComputeTotalPayment(int range)
+        {
+            // MessageBox.Show(sMonth2);
+            double sum1 = 0;
+            for (int i = 0; i < range; i++)
+            {
+                sum1 += Convert.ToDouble(dgvFeeHistory.Rows[i].Cells[2].Value);
+            }
+            lblTotPay.Text = "P " + sum1.ToString("n");
+        }
+
         public void Criterias()
         {
 
@@ -452,6 +524,9 @@ namespace GOCSystem2018
                 pay.amount_due = Convert.ToDouble(lblReserve.Text);
                 pay.amount_per_month = lblPerMonthAdv.Text;                                            
                 pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
+
+                pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
+
                 pay.voucher_info = lblVoucher.Text;
                 pay.voucher_amount = Convert.ToDouble(lblVoucherAmount.Text);
 
@@ -492,6 +567,10 @@ namespace GOCSystem2018
 
                 pay.amount_per_month = lblPerMonthAdv.Text;
                 pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
+
+                pay.tuitionFeeMinusVC = Convert.ToDouble(lblTuition.Text);
+
+
                 pay.voucher_info = lblVoucher.Text;
                 pay.voucher_amount = Convert.ToDouble(lblVoucherAmount.Text);
                 
@@ -674,14 +753,19 @@ namespace GOCSystem2018
             LoadTuitionFee();
             LoadAssesMiscFees();
             LoadAssesOtherFees();
+            LoadAssesOtherFeesSTRAND_ICT();
             ComputeVoucher();
             TheTotalTuition();
             GetDownPayment();
             LoadReservationFee();
 
+            ComputePerMonth2(dgvPerMonth.Rows.Count);
+           
+
             LoadBillingHistory(); //get Billing History
             LoadPaymentNo(); //payment count
             GetPartialBalance();
+            ComputeTotalPayment(dgvFeeHistory.Rows.Count);
         }
                    
         /***********************************************************************************/
