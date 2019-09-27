@@ -728,10 +728,10 @@ namespace GOCSystem2018
 
         private void cmbStudType_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (cmbStudType.Text.Equals("Old Student"))
-            {
+            //if (cmbStudType.Text.Equals("Old Student"))
+           // {
                 txtOldStudNo.Visible = true;
-            }
+           // }
         }
 
         private void txtBarangay2_TextChanged(object sender, EventArgs e)
@@ -756,7 +756,8 @@ namespace GOCSystem2018
         private void opt1stYear_Click(object sender, EventArgs e)
         {
             cmbStudType.Text = "New Student";
-            txtOldStudNo.Visible = false;
+            txtOldStudNo.Visible = true; ////to true for saving SY: 2019 : 2020 temp: 9.27.2019
+            txtOldStudNo.Focus();
         }
 
         private void opt2ndYear_Click(object sender, EventArgs e)
@@ -1593,7 +1594,9 @@ namespace GOCSystem2018
                 CheckTrack();
                 checkRequirements();
                 checkGender();
+
                 sp.OldStudentNo = txtOldStudNo.Text;
+
                 string message = "Please double check the information, click ok to update records.";
                 string title = "GOC_INFO_SYS";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -1638,6 +1641,14 @@ namespace GOCSystem2018
                         required = false;
                     }
 
+                    if (txtOldStudNo.Text == "")
+                    {
+                        MessageBox.Show("Please Check the Student Number if Completed");
+                        txtOldStudNo.BackColor = Color.LightBlue;
+
+                        required = false;
+                    }
+
                     if (txtStudCell.MaskFull == false)
                     {
                         MessageBox.Show("Please Check Student Phone Number.");
@@ -1677,7 +1688,7 @@ namespace GOCSystem2018
                     }
                     else
                     {
-                        registration.OldStudentNo = "N/A";
+                        registration.OldStudentNo = txtOldStudNo.Text; // //to true for saving SY: 2019 : 2020 temp: 9.27.2019
                     }
 
                     registration.StudType = cmbStudType.Text;

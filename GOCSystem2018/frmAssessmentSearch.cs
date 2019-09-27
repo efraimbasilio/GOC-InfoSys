@@ -236,8 +236,16 @@ namespace GOCSystem2018
 
                 frmAssesment.LoadTuitionFee();
                 frmAssesment.LoadAssesMiscFees();
-                frmAssesment.LoadAssesOtherFees();
-                frmAssesment.LoadAssesOtherFeesSTRAND_ICT();
+
+                if (frmAssesment.Strand =="STEM")
+                {
+                    frmAssesment.LoadAssesOtherFeesSTRAND_ICT();
+                }
+                else
+                {
+                    frmAssesment.LoadAssesOtherFees();
+                }
+                               
                 frmAssesment.TotalTuition();
 
                 frmAssesment.ComputeVoucher();

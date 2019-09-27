@@ -436,6 +436,7 @@ namespace GOCSystem2018
                 sum += Convert.ToDouble(dgvOtherFee.Rows[i].Cells[1].Value);
             }
             lblTotalOtherFee.Text = sum.ToString("n");
+
             Strand = "TVL - ICT";
         } 
 

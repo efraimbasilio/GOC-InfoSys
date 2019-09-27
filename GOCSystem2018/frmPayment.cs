@@ -423,7 +423,8 @@ namespace GOCSystem2018
                 }
                 else
                 {
-                    OldStud = false;
+                    OldStud = true;//to true for saving SY: 2019 : 2020 temp: 9.27.2019
+
                 }
             }
 
