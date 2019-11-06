@@ -153,7 +153,7 @@ namespace GOCSystem2018
         frmBilling frmBilling = new frmBilling();
 
         public string amount_per_month, payment_status, full_name, voucher_info;
-        public double fee_for_reservation, total_tuition, voucher_amount, down_payment, amount_due , tuitionFeeMinusVC;
+        public double fee_for_reservation, total_tuition, voucher_amount, down_payment, amount_due , tuitionFeeMinusVC, fullPayAmount;
         public int payment_no;
         public string reg_no, enroll_status;
 
@@ -163,6 +163,8 @@ namespace GOCSystem2018
         public string S_LRN, S_GOC, S_NAME,S_PAYFOR,S_AMOUNT,level;
         public bool toSave = true;
         public bool toOtherFees = false;
+
+        public string fullPayStat;
 
         private void txtAmountGiven_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -347,6 +349,48 @@ namespace GOCSystem2018
             label17.Text = level;
 
            // MessageBox.Show(total_tuition.ToString());
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (lblFullPayStat.Text == "FullPayment")
+            {
+                if (Convert.ToDecimal(txtAmountGiven.Text) > Convert.ToDecimal(lblAmount_Due.Text))
+                {
+                    MessageBox.Show("Please pay the exact amount due", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else if(Convert.ToDecimal(txtAmountGiven.Text) == Convert.ToDecimal(lblAmount_Due.Text))
+                {                   
+                    string message = "Do you want to make a full payment for this account?";
+                    string title = "GOC_INFO_SYS";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        FullPayment(txtTuitionFee);
+
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }                               
+            }
+
+        }
+
+        public void RenderFullpay()
+        {
+           //GetPerMonth();// paymernt history to dgv 
+            lblAmount_Due.Text = fullPayAmount.ToString("n");
+
+            //MessageBox.Show(fullPayStat);
+            lblFullPayStat.Text = fullPayStat;
+            //label17.Text = level;
+
+            // MessageBox.Show(total_tuition.ToString());
         }
 
         //PAYMENT - ENROLLMENT STATUS
@@ -956,6 +1000,72 @@ namespace GOCSystem2018
             //}
         }
 
+        public void FullPayment(TextBox AmountGiven_2)
+        {
+            #region PARTIAL PAYMENT - NO RESERVATION                                 
+            //madidivide ang tutiton sa 10
+            total_tuition = total_tuition - AmountGiven;
+            total_tuition = total_tuition - voucher_amount;
+            total_tuition = total_tuition / 10;
+
+            StudNoGenerate(); // Generate StudNo
+            CountPayment(); // Count the payment
+            bill.AmountGiven = Convert.ToDouble(txtAmountGiven.Text);
+            bill.OrNo = txtORNo.Text;
+            bill.StudentId = GOCNo;
+            bill.RegNo = reg_no;
+            bill.PaymentNo = count.ToString();
+            bill.MOP = "Partial Payment " + count;
+            bill.Save();
+
+            //Update the GOC Number in Studprofile Table
+            studProfile.StudRegistrationNo = reg_no;
+            studProfile.StudGOCNo = GOCNo;
+            studProfile.Reservee = "0";
+            studProfile.SaveGOCNumber(); //update GOC number in the student profile table
+
+            //For reservation - Public Voucher            
+            billingPartial.IdNo = GOCNo;
+            billingPartial.ORNo = txtORNo.Text;
+            billingPartial.Full_name = full_name;
+
+            billingPartial.DownPayment = Convert.ToDouble(DP).ToString("n");
+
+            billingPartial.P1 = "0.00";
+            billingPartial.P2 = "0.00";
+            billingPartial.P3 = "0.00";
+            billingPartial.P4 = "0.00";
+            billingPartial.P5 = "0.00";
+            billingPartial.P6 = "0.00";
+            billingPartial.P7 = "0.00";
+            billingPartial.P8 = "0.00";
+            billingPartial.P9 = "0.00";
+            billingPartial.P10 = "0.00";
+
+            Double sum = 0;
+            sum = Convert.ToDouble(billingPartial.P1) + Convert.ToDouble(billingPartial.P2) + Convert.ToDouble(billingPartial.P3) + Convert.ToDouble(billingPartial.P4) + Convert.ToDouble(billingPartial.P5) + Convert.ToDouble(billingPartial.P6) + Convert.ToDouble(billingPartial.P7) + Convert.ToDouble(billingPartial.P8) + Convert.ToDouble(billingPartial.P9) + Convert.ToDouble(billingPartial.P10);
+            billingPartial.Balance = sum.ToString("n");
+            billingPartial.EnStatus = "Enrolled";
+            billingPartial.RegNo = reg_no;
+
+            billingPartial.Save();
+
+            studProfile.StudRegistrationNo = reg_no;
+            studProfile.FullPayment = "1";
+            studProfile.Fullpayment();
+
+            studProfile.PartialPayment = "1";
+            studProfile.PartialOnly();
+
+            MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+            mainwin.dispanel.Controls.Clear();
+            mainwin.dispanel.Visible = false;
+
+            mainwin.Dashboardpanel.Visible = true;
+            this.Close();
+        }
+
+
         public void PartialNoReserve()
         {
             if (payment_status.Equals("PARTIAL PAYMENT") && payment_no == 0)// magbabayad palang for FIRST payment - no reservation
@@ -1390,6 +1500,49 @@ namespace GOCSystem2018
             this.Close();
         }
 
+        public void PayFullPayment()
+        {
+            //string a,b;
+
+            billingPartial.ORNo = txtORNo.Text;
+            billingPartial.RegNo = reg_no;
+            billingPartial.IdNo = GOCNo;
+            billingPartial.Full_name = full_name;
+            billingPartial.DownPayment = "0.00";
+            billingPartial.P1 = "0.00";
+            billingPartial.P2 = "0.00";
+            billingPartial.P3 = "0.00";
+            billingPartial.P4 = "0.00";
+            billingPartial.P5 = "0.00";
+            billingPartial.P6 = "0.00";
+            billingPartial.P7 = "0.00";
+            billingPartial.P8 = "0.00";
+            billingPartial.P9 = "0.00";
+            billingPartial.P10 = "0.00";
+
+
+            double TotalFee = 0;                //get the sum of all amount in dgv
+            for (int x = 0; x < dgvPerMonth.Rows.Count; x++)
+            {
+                TotalFee += (Convert.ToDouble(dgvPerMonth.Rows[x].Cells[2].Value));
+            }
+
+            billingPartial.Balance = TotalFee.ToString("n");
+            billingPartial.EnStatus = "Enrolled";
+
+            billingPartial.Update();
+
+            MessageBox.Show("Payment Updated!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+            mainwin2.dispanel.Controls.Clear();
+            mainwin2.dispanel.Visible = false;
+
+            mainwin2.Dashboardpanel.Visible = true;
+            this.Close();
+        }
+
+
         /***********************************************************************************/
         /*Private Methods*/
         /**********************************************************************************/
@@ -1418,6 +1571,7 @@ namespace GOCSystem2018
         //For billing
         private void button1_Click(object sender, EventArgs e)
         {
+           
 
             if (toOtherFees == true)
             {
@@ -1493,7 +1647,6 @@ namespace GOCSystem2018
                         return;
                     }
                     #endregion
-
                 }
             }
             else if (toOtherFees == false)          
@@ -1524,7 +1677,34 @@ namespace GOCSystem2018
 
             //mainwin2.Dashboardpanel.Visible = true;
             //this.Close();
+
+            if (lblFullPayStat.Text == "FullPayment")
+            {
+                if (Convert.ToDecimal(txtAmountGiven.Text) > Convert.ToDecimal(lblAmount_Due.Text))
+                {
+                    MessageBox.Show("Please pay the exact amount due", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else if (Convert.ToDecimal(txtAmountGiven.Text) == Convert.ToDecimal(lblAmount_Due.Text))
+                {
+                    string message = "Do you want to make a full payment for this account?";
+                    string title = "GOC_INFO_SYS";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        FullPayment(txtTuitionFee);
+
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+            }
         }
+        #endregion
 
         public void LoadRecordsOtherFee()
         {

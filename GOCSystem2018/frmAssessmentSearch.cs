@@ -217,12 +217,22 @@ namespace GOCSystem2018
                 }
 
                 //set up before form load
-               
+
 
                 //show assesment                             
-
-               
-
+                if (frmAssesment.Strand == "STEM")
+                {
+                    frmAssesment.LoadAssesOtherFeesSTRAND_ICT();
+                    MessageBox.Show("STEM");
+                }
+                else if (frmAssesment.Strand == "TVL - ICT")
+                {
+                    frmAssesment.LoadAssesOtherFeesSTRAND_STEM();
+                }
+                else
+                {
+                    frmAssesment.LoadAssesOtherFees();
+                }
 
                 MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
                 mainwin.dispanel.Controls.Clear();
@@ -231,29 +241,14 @@ namespace GOCSystem2018
                 mainwin.dispanel.Controls.Add(frmAssesment);
 
                 frmAssesment.Reset();
-
                 frmAssesment.LoadSchoolYear();
-
                 frmAssesment.LoadTuitionFee();
-                frmAssesment.LoadAssesMiscFees();
-
-                if (frmAssesment.Strand =="STEM")
-                {
-                    frmAssesment.LoadAssesOtherFeesSTRAND_ICT();
-                }
-                else
-                {
-                    frmAssesment.LoadAssesOtherFees();
-                }
-                               
+                frmAssesment.LoadAssesMiscFees();                                            
                 frmAssesment.TotalTuition();
-
                 frmAssesment.ComputeVoucher();
                 frmAssesment.GetDownPayment();
-
                 frmAssesment.LoadSubject();
-                frmAssesment.EnableMOP();
-                               
+                frmAssesment.EnableMOP();                               
                 frmAssesment.Show();
                 frmAssesment.checkPayment();
 

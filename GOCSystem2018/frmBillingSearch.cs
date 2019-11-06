@@ -102,6 +102,16 @@ namespace GOCSystem2018
                     frmBilling.VoucherType = item.VoucherType;
                     frmBilling.RegNo = item.StudRegistrationNo;
 
+                   
+
+                frmBilling.CallPaymentNumber();
+                frmBilling.GetPerMonth();
+
+
+                //set up before form load
+                
+                frmBilling.Render();
+
                     if (item.Reservee.Equals("1"))
                     {
                         frmBilling.lblMOPInfo.Text = "RESERVATION";
@@ -110,7 +120,7 @@ namespace GOCSystem2018
                         //frmBilling.lblReservationTag.BackColor = Color.Black;
                         frmBilling.CTRpayment = 1;
                         frmBilling.cmbMOP.Enabled = false;
-                        
+
                         //frmBilling.cmbPaymentFor.Items.Clear();
                         //frmBilling.cmbPaymentFor.Items.Add("Reservation");
                         //frmBilling.cmbPaymentFor.Text = "Reservation";
@@ -121,6 +131,11 @@ namespace GOCSystem2018
                         frmBilling.RenderMOP();
                     }
 
+                    else if (item.FullPayment.Equals("1"))
+                    {
+                        frmBilling.RenderFullpayment();
+                    }
+
                     //if (item.FullPayment.Equals("1"))
                     //{
                     //    frmBilling.lblFullPayment.ForeColor = Color.Red;
@@ -129,14 +144,6 @@ namespace GOCSystem2018
                     //    frmBilling.CTRpayment = 3;
                     //}                    
                 }
-
-                frmBilling.CallPaymentNumber();
-                frmBilling.GetPerMonth();
-
-
-                //set up before form load
-                
-                frmBilling.Render();
 
                 MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
                 mainwin.dispanel.Controls.Clear();

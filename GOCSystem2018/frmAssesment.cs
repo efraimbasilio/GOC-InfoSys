@@ -288,6 +288,8 @@ namespace GOCSystem2018
             }
         }//End LoadRecords
 
+        
+
         public void ComputeVoucher()
         {
             //clear list
@@ -406,8 +408,9 @@ namespace GOCSystem2018
             if (Strand.Equals("TVL - ICT"))
             {
                 Strand = "STEM";
-               // MessageBox.Show(Strand);
+               MessageBox.Show("fdsdfsdf");
             }
+
             foreach (var item in otherFees)
             {
                 if (item.Strand.Equals(Strand))
@@ -435,10 +438,60 @@ namespace GOCSystem2018
             {
                 sum += Convert.ToDouble(dgvOtherFee.Rows[i].Cells[1].Value);
             }
+
+            lblTotalOtherFee.Text = sum.ToString("n");
+
+            Strand = "STEM";
+        }
+
+        public void LoadAssesOtherFeesSTRAND_STEM()
+        {
+            //clear list                      
+            otherFees.Clear();
+            dgvOtherFee.Rows.Clear();
+            //pass value to list
+            otherFees = otherFee.Load();
+
+            //loop through load it to list view
+            if (Strand.Equals("TVL - ICT"))
+            {
+                Strand = "STEM";
+                MessageBox.Show("fdsdfsdf");
+            }
+
+            foreach (var item in otherFees)
+            {
+                if (item.Strand.Equals(Strand))
+                {
+                    dgvOtherFee.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
+
+
+                    foreach (var item2 in otherFees)
+                    {
+                        if (item.Strand.Equals("Non-STEM"))
+                        {
+                            dgvOtherFee.Rows.Add(item2.OtherFeeName, item2.OtherFeeAmount);
+                        }
+                    }
+                }
+
+                if (item.Strand.Equals("Non-STEM"))
+                {
+                    dgvOtherFee.Rows.Add(item.OtherFeeName, item.OtherFeeAmount);
+                }
+            }
+
+            double sum = 0;
+            for (int i = 0; i < dgvOtherFee.Rows.Count; i++)
+            {
+                sum += Convert.ToDouble(dgvOtherFee.Rows[i].Cells[1].Value);
+            }
+
             lblTotalOtherFee.Text = sum.ToString("n");
 
             Strand = "TVL - ICT";
-        } 
+        }
+
 
         public void LoadAssesOtherFees()
         {
@@ -1010,8 +1063,37 @@ namespace GOCSystem2018
 
                 else if (cmbMOP.Text == "Full Payment")
                 {
+                    //pnlRES.Visible = false;
+                    string message = "Do you want to proceed to payment ?";
+                    string title = "GOC_INFO_SYS";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        
+                        billingPartial.IdNo = lblGOCNo.Text;
+                        billingPartial.Full_name = lblName.Text;
+                        billingPartial.DownPayment = lblDownpayment.Text;
+
+                        //lblTotalFees.Text;
+                        double ans = Convert.ToDouble(lblTotalFees.Text) - Convert.ToDouble(lblVoucherAmount.Text);
+                        // MessageBox.Show(ans.ToString("n"));
+
+                        studProfile.StudRegistrationNo = RegNo;
+                        studProfile.FullPayment = "1";
+                        studProfile.Fullpayment();                       
+                    }
+
                     frmBillingSearch bill = new frmBillingSearch();
-                    bill.Show();                  
+                    MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin2.dispanel.Controls.Clear();
+                    bill.TopLevel = false;
+                    bill.AutoScroll = true;
+                    mainwin2.dispanel.Controls.Add(bill);
+
+                    bill.Show();
                 }
 
                 else if (cmbMOP.Text == "Reservation")

@@ -76,7 +76,7 @@ namespace GOCSystem2018
 
         public void RenderMOP()
         {
-            CallPaymentNumber2();
+            CallPaymentNumber2();            
             lblMOPInfo.Text = "PARTIAL PAYMENT";
             cmbMOP.Text = "Partial Payment";
 
@@ -86,6 +86,23 @@ namespace GOCSystem2018
                cmbMOP.Enabled = false;
             }
         }
+
+        public void RenderFullpayment()
+        {
+            if (lblGOCNo.Text.Equals("N/A"))
+            {
+                double fpay = Convert.ToDouble(lblTotalPayment.Text) - Convert.ToDouble(lblVoucherAmount.Text);
+                lblFullpaymentCTR.Text = fpay.ToString("n");
+                lblMOPInfo.Text = "FULL PAYMENT";
+                cmbMOP.Text = "Full Payment";
+            }
+            else
+            {
+                lblMOPInfo.Text = "FULL PAYMENT";
+                cmbMOP.Text = "Full Payment";
+            }                                                     
+        }
+
 
         /***********************************************************************************/
         /*PUBLIC METHOD*/
@@ -453,6 +470,11 @@ namespace GOCSystem2018
             lblTotalPayment.Text = total.ToString("n");
         }
 
+        private void cmbMOP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         public void GetDownPayment()
         {
             //clear list
@@ -516,13 +538,13 @@ namespace GOCSystem2018
         {
             frmPayment pay = new frmPayment();
             pay.level = lblGradeLevel.Text;
-         
+
             if (lblMOPInfo.Text == "RESERVATION")
             {
                 //PAYMENT INFOS
                 pay.fee_for_reservation = Convert.ToDouble(lblReserve.Text);
                 pay.amount_due = Convert.ToDouble(lblReserve.Text);
-                pay.amount_per_month = lblPerMonthAdv.Text;                                            
+                pay.amount_per_month = lblPerMonthAdv.Text;
                 pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
 
                 pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
@@ -536,14 +558,14 @@ namespace GOCSystem2018
                 pay.reg_no = lblRegNo.Text;
                 pay.GOCNo = lblGOCNo.Text;
                 pay.S_PAYFOR = lblMOPInfo.Text;
-                
+
                 //if Reservation or Partial
                 pay.payment_status = lblMOPInfo.Text;
 
                 //Call Method to load info before transaction
                 pay.Render();
                 //to show the form
-                pay.Show();
+                pay.ShowDialog();
             }
 
             else if (lblMOPInfo.Text == "PARTIAL PAYMENT")
@@ -573,7 +595,7 @@ namespace GOCSystem2018
 
                 pay.voucher_info = lblVoucher.Text;
                 pay.voucher_amount = Convert.ToDouble(lblVoucherAmount.Text);
-                
+
 
                 //STUDENT INFORMATION
                 pay.full_name = lblName.Text;
@@ -598,48 +620,41 @@ namespace GOCSystem2018
             else if (lblMOPInfo.Text == "FULL PAYMENT")
             {
 
-                //PAYMENT INFOS                               
-                if (Convert.ToInt32(lblPaymentNoCheck.Text) == 0)
+                //// double a = Convert.ToDouble(lblPerMonthAdv.Text);
+                // double a = Convert.ToDouble(lblAmountDues.Text);
+                if (lblGOCNo.Text.Equals("N/A"))
                 {
-                    pay.fee_for_reservation = Convert.ToDouble(lblReserve.Text);
+                    //STUDENT INFORMATION
+                    pay.full_name = lblName.Text;
+                    pay.S_LRN = lblLRN.Text;
+                    pay.reg_no = lblRegNo.Text;
+                    pay.GOCNo = lblGOCNo.Text;
+
+                    //pay.S_PAYFOR = lblTotalPayment.Text;
+
+                    //if Reservation or Partial
+                    pay.payment_status = lblMOPInfo.Text;
+                    pay.payment_no = Convert.ToInt32(lblPaymentNoCheck.Text);
+
+                    //pay.amount_due = Convert.ToDouble(lblTotalPayment.Text);
+
+                    pay.amount_due = Convert.ToDouble(lblTotalPayment.Text) - Convert.ToDouble(lblVoucherAmount.Text);
+
+                    //Call Method to load info before transaction
+                    pay.EnrollmentStatus(); //to check the payment if this is the second payment, check by the Enrollment Status tag
+
+                    pay.fullPayStat = "FullPayment";
+                    pay.RenderFullpay();
+                    //to show the form
+                    pay.ShowDialog();
+
                 }
                 else
                 {
-                    if (EnStatus.Equals("Reservee"))
-                    {
-                        pay.amount_due = Convert.ToDouble(lblAmountDues.Text);
-                    }
-                    else
-                    {
-                        pay.amount_due = Convert.ToDouble(lblPerMonthAdv.Text);
-                    }
-
+                    return;  
                 }
-
-                pay.amount_per_month = lblPerMonthAdv.Text;
-                pay.total_tuition = Convert.ToDouble(lblTotalPayment.Text);
-                pay.voucher_info = lblVoucher.Text;
-                pay.voucher_amount = Convert.ToDouble(lblVoucherAmount.Text);
-
-                //STUDENT INFORMATION
-                pay.full_name = lblName.Text;
-                pay.S_LRN = lblLRN.Text;
-                pay.reg_no = lblRegNo.Text;
-                pay.GOCNo = lblGOCNo.Text;
-                //if Reservation or Partial
-                pay.payment_status = lblMOPInfo.Text;
-                pay.payment_no = Convert.ToInt32(lblPaymentNoCheck.Text);
-
-                //Call Method to load info before transaction
-                pay.EnrollmentStatus(); //to check the payment if this is the second payment, check by the Enrollment Status tag
-                pay.Render();
-                //to show the form
-                pay.Show();
-
             }
-            // this.Hide();
-            
-        }
+          }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {

@@ -1027,6 +1027,40 @@ namespace GOCSystem2018
             }
         }
 
+        public void Fullpayment()
+        {
+            try
+            {
+                //prepare connection string 
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+
+                    //try to open connection
+                    con.Open();
+
+                    string sql = "UPDATE student_profile SET full_Payment=@fullPayment" +
+                                    " WHERE regno=@studRegistrationNo;";
+
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+
+                    cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
+                    cmd.Parameters.AddWithValue("fullPayment", fullPayment);
+                    //cmd.Parameters.AddWithValue("reserveFor", reserveFor);
+
+
+                    cmd.ExecuteNonQuery();
+
+                     MessageBox.Show("Record Saved Full payment!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+
         public void UpdateTheSection()
         {
             try
