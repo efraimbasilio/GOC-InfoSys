@@ -408,7 +408,7 @@ namespace GOCSystem2018
             if (Strand.Equals("TVL - ICT"))
             {
                 Strand = "STEM";
-               MessageBox.Show("fdsdfsdf");
+               //MessageBox.Show("fdsdfsdf");
             }
 
             foreach (var item in otherFees)
@@ -456,7 +456,7 @@ namespace GOCSystem2018
             if (Strand.Equals("TVL - ICT"))
             {
                 Strand = "STEM";
-                MessageBox.Show("fdsdfsdf");
+                //MessageBox.Show("fdsdfsdf");
             }
 
             foreach (var item in otherFees)

@@ -223,7 +223,7 @@ namespace GOCSystem2018
                 if (frmAssesment.Strand == "STEM")
                 {
                     frmAssesment.LoadAssesOtherFeesSTRAND_ICT();
-                    MessageBox.Show("STEM");
+                   // MessageBox.Show("STEM");
                 }
                 else if (frmAssesment.Strand == "TVL - ICT")
                 {

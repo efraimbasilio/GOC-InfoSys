@@ -728,10 +728,10 @@ namespace GOCSystem2018
 
         private void cmbStudType_SelectedValueChanged(object sender, EventArgs e)
         {
-            //if (cmbStudType.Text.Equals("Old Student"))
-           // {
+            if (cmbStudType.Text.Equals("Old Student"))
+            {
                 txtOldStudNo.Visible = true;
-           // }
+            }
         }
 
         private void txtBarangay2_TextChanged(object sender, EventArgs e)
@@ -1537,13 +1537,10 @@ namespace GOCSystem2018
         }
 
         private void btnSave_Click_1(object sender, EventArgs e)
-        {
-           
-
+        {          
             if (toEdit==true)
             {
-                
-
+                #region reginfo        
                 sp.StudType = cmbStudType.Text;
                 sp.StudLRN = LRNtxt.Text;
                 //sp.StudGOCNo = "N/A";
@@ -1588,15 +1585,17 @@ namespace GOCSystem2018
                 sp.PartialPayment = "0";
                 sp.FullPayment = "0";
                 sp.Section = "0";
-                //function to load important filtering            
 
+                #endregion
+
+                #region Update_Student_Info
+                //function to load important filtering            
                 checkYearLevel();
                 CheckTrack();
                 checkRequirements();
                 checkGender();
 
                 sp.OldStudentNo = txtOldStudNo.Text;
-
                 string message = "Please double check the information, click ok to update records.";
                 string title = "GOC_INFO_SYS";
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -1619,20 +1618,22 @@ namespace GOCSystem2018
                 {
                     return;
                 }
+                #endregion
             }
 
             else
             {               
                //For Registration
-               bool required = true;
+                bool required = true;
 
                 if (txtStudCell.MaskFull == true && dtBirthday.MaskFull == true && LRNtxt.MaskFull == true && other_address == true)
                 {
                     required = true;
-
                 }
+
                 else
                 {
+                    #region Required_fields
                     if (LRNtxt.MaskFull == false)
                     {
                         MessageBox.Show("Please Check the LRN Number if Completed");
@@ -1643,10 +1644,17 @@ namespace GOCSystem2018
 
                     if (txtOldStudNo.Text == "")
                     {
-                        MessageBox.Show("Please Check the Student Number if Completed");
-                        txtOldStudNo.BackColor = Color.LightBlue;
-
-                        required = false;
+                        if (cmbStudType.Text == "Old Student")
+                        {
+                            MessageBox.Show("Please Check the Student Number if Completed");
+                            txtOldStudNo.BackColor = Color.LightBlue;
+                            required = false;
+                        }
+                        else
+                        {
+                            required = true;
+                        }
+                       
                     }
 
                     if (txtStudCell.MaskFull == false)
@@ -1664,7 +1672,9 @@ namespace GOCSystem2018
 
                         required = false;
                     }
+                    #endregion
                 }
+
 
                 if (this.CheckRequiredFields() == true && required == true)
                 {
@@ -1686,10 +1696,11 @@ namespace GOCSystem2018
                     {
                         registration.OldStudentNo = txtOldStudNo.Text;
                     }
-                    else
-                    {
-                        registration.OldStudentNo = txtOldStudNo.Text; // //to true for saving SY: 2019 : 2020 temp: 9.27.2019
-                    }
+                    //else
+                    //{
+                    //    /*registration.OldStudentNo = txtOldStudNo.Text; registration.OldStudentNo = txtOldStudNo.Text;*/// //to true for saving SY: 2019 : 2020 temp: 9.27.2019
+                    //    registration.OldStudentNo = txtOldStudNo.Text;
+                    //}
 
                     registration.StudType = cmbStudType.Text;
                     registration.StudLRN = LRNtxt.Text;
