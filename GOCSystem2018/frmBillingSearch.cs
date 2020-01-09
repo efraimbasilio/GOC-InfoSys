@@ -340,7 +340,25 @@ SelectData();
 
         private void dgvSearch_DoubleClick_2(object sender, EventArgs e)
         {
-            SelectData();
+            
+            DialogResult result = MessageBox.Show("Proceed to Production Billing?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                SelectData();
+            }
+            else if (result == DialogResult.No)
+            {
+                //...
+            }
+            else
+            {
+                //...
+            }
+        }
+
+        private void dgvSearch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

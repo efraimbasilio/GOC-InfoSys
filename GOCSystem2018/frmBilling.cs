@@ -797,7 +797,16 @@ namespace GOCSystem2018
         }
         /*************************************************************************************/
         private void frmBilling_Load(object sender, EventArgs e)
-        {           
+        {
+            //if (txtPayNumber.Equals("0"))
+            //{
+            //    cmbMOP.Enabled = true;
+            //}
+            //else
+            //{
+            //    cmbMOP.Enabled = false;
+            //}    
+
             LoadBillingHistory();
 
             #region designing DVG

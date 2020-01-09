@@ -467,7 +467,7 @@ namespace GOCSystem2018
                 }
                 else
                 {
-                    OldStud = true;//to true for saving SY: 2019 : 2020 temp: 9.27.2019
+                    OldStud = false;//to true for saving SY: 2019 : 2020 temp: 9.27.2019
 
                 }
             }
@@ -1571,8 +1571,7 @@ namespace GOCSystem2018
         //For billing
         private void button1_Click(object sender, EventArgs e)
         {
-           
-
+            #region ValidationDuplicate
             if (toOtherFees == true)
             {
                 toSave = false;
@@ -1583,8 +1582,8 @@ namespace GOCSystem2018
                 toSave = true;
                 checkdup();
             }
-                     
-           // checkdupPartial();
+            #endregion
+            // checkdupPartial();
 
             if (txtORNo.Text == "" || txtAmountGiven.Text == "")
             {
@@ -1649,7 +1648,7 @@ namespace GOCSystem2018
                     #endregion
                 }
             }
-            else if (toOtherFees == false)          
+            else if (toOtherFees == false)//false meaning tuition payment          
             {
                 if (toSave == true)
                 {

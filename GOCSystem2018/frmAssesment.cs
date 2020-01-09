@@ -204,15 +204,7 @@ namespace GOCSystem2018
                 cmbMOP.Enabled = false;
             }
 
-            if (theSection == null)
-            {
-                cmbSection.Text = "";
-            }
-            else
-            {
-                //MessageBox.Show(theSection);
-                cmbSection.Text = theSection;
-            }
+            
 
             if (lblEnStatus.Text == "Pending")
             {
@@ -225,7 +217,19 @@ namespace GOCSystem2018
                 button4.Enabled = true;
             }
 
-            
+            //MessageBox.Show(theSection);
+            if (theSection == "0")
+            {
+                cmbSection.Text = "";
+                cmbSection.Enabled = true;
+            }
+            else
+            {
+                cmbSection.Enabled = false;
+                //MessageBox.Show(theSection);
+                cmbSection.Text = theSection;
+            }
+
         }
 
         public void LoadBillingHistory()
@@ -1383,6 +1387,11 @@ namespace GOCSystem2018
         private void cmbMOP_SelectedValueChanged_1(object sender, EventArgs e)
         {
             btnEnroll.Enabled = true;
+        }
+
+        private void cmbSection_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
 
         private void optYES_CheckedChanged(object sender, EventArgs e)

@@ -225,7 +225,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(707, 507);
+            this.label6.Location = new System.Drawing.Point(750, 442);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 15);
@@ -1404,9 +1404,8 @@
             this.cmbMOP.FormattingEnabled = true;
             this.cmbMOP.Items.AddRange(new object[] {
             "Full Payment",
-            "Partial Payment",
-            "Reservation"});
-            this.cmbMOP.Location = new System.Drawing.Point(707, 472);
+            "Partial Payment"});
+            this.cmbMOP.Location = new System.Drawing.Point(411, 467);
             this.cmbMOP.Name = "cmbMOP";
             this.cmbMOP.Size = new System.Drawing.Size(179, 23);
             this.cmbMOP.TabIndex = 1036;
@@ -1430,12 +1429,12 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Lato Semibold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(704, 454);
+            this.label8.Location = new System.Drawing.Point(408, 449);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(63, 15);
+            this.label8.Size = new System.Drawing.Size(101, 15);
             this.label8.TabIndex = 1035;
-            this.label8.Text = "Paying for:";
+            this.label8.Text = "Mode of Payment";
             // 
             // lblRoomCapacity
             // 
@@ -1682,7 +1681,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Lato", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(902, 532);
+            this.button4.Location = new System.Drawing.Point(945, 467);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(89, 25);
             this.button4.TabIndex = 1032;
@@ -1833,9 +1832,9 @@
             this.btnEnroll.Enabled = false;
             this.btnEnroll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnroll.ForeColor = System.Drawing.Color.White;
-            this.btnEnroll.Location = new System.Drawing.Point(710, 569);
+            this.btnEnroll.Location = new System.Drawing.Point(411, 510);
             this.btnEnroll.Name = "btnEnroll";
-            this.btnEnroll.Size = new System.Drawing.Size(309, 37);
+            this.btnEnroll.Size = new System.Drawing.Size(98, 37);
             this.btnEnroll.TabIndex = 1020;
             this.btnEnroll.Text = "&Next";
             this.btnEnroll.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1873,11 +1872,12 @@
             "Full Payment",
             "Partial Payment",
             "Reservation"});
-            this.cmbSection.Location = new System.Drawing.Point(710, 532);
+            this.cmbSection.Location = new System.Drawing.Point(753, 467);
             this.cmbSection.Name = "cmbSection";
             this.cmbSection.Size = new System.Drawing.Size(179, 23);
             this.cmbSection.TabIndex = 1071;
             this.cmbSection.Visible = false;
+            this.cmbSection.SelectedIndexChanged += new System.EventHandler(this.cmbSection_SelectedIndexChanged_1);
             this.cmbSection.SelectedValueChanged += new System.EventHandler(this.cmbSection_SelectedValueChanged_1);
             // 
             // frmAssesment

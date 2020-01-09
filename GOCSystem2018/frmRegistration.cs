@@ -282,20 +282,20 @@ namespace GOCSystem2018
                 return false;
             }
 
-            if (txtBarangay.Text == "")
-            {
-                return false;
-            }
+            //if (txtBarangay.Text == "")
+            //{
+            //    return false;
+            //}
 
-            if (cmbMunicipality.Text == "")
-            {
-                return false;
-            }
+            //if (cmbMunicipality.Text == "")
+            //{
+            //    return false;
+            //}
 
-            if (cmbProvince.Text == "")
-            {
-                return false;
-            }
+            //if (cmbProvince.Text == "")
+            //{
+            //    return false;
+            //}
 
             if (txtBirthPlace.Text == "")
             {
@@ -732,6 +732,10 @@ namespace GOCSystem2018
             {
                 txtOldStudNo.Visible = true;
             }
+            else
+            {
+                txtOldStudNo.Visible = false;
+            }
         }
 
         private void txtBarangay2_TextChanged(object sender, EventArgs e)
@@ -758,6 +762,186 @@ namespace GOCSystem2018
             cmbStudType.Text = "New Student";
             txtOldStudNo.Visible = true; ////to true for saving SY: 2019 : 2020 temp: 9.27.2019
             txtOldStudNo.Focus();
+        }
+
+        private void txtEditAddressGuardian_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGuardianCell_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void chckGM_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label42_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkNCAEResult_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label46_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkEntranceExam_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRelation_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkDrugtest_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chk138_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGuardianTel_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void chkBirthCertificate_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label43_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label44_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label37_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbProvince2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label38_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbMunicipality2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAddress2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label35_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label36_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGuardianWork_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtGuardianName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMotherContact_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label67_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFatherContact_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label65_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMother_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label33_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label71_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFatherName_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void opt2ndYear_Click(object sender, EventArgs e)
@@ -1711,7 +1895,7 @@ namespace GOCSystem2018
                     registration.StudFirstName = txtFName.Text.ToUpper();
                     registration.StudStrand = cmbCourseStrand.Text.ToUpper(); ;
                     registration.StudVoucher = cmbVoucher.Text;
-                    registration.StudAddress1 = txtAddress.Text + " " + txtBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text;
+                    registration.StudAddress1 = txtAddress.Text;
                     registration.StudDateOfBirth = dtBirthday.Text.ToString();
                     registration.StudBirthPlace = txtBirthPlace.Text;
                     registration.Religion = txtReligion.Text;
