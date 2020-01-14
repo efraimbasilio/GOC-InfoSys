@@ -58,6 +58,23 @@ namespace GOCSystem2018
             }
         }
 
+        public void ValidateTextBox3(TextBox one, TextBox two, TextBox third)
+        {
+            TextBox[] newTextBox = { one, two, third };
+            for (int inti = 0; inti < newTextBox.Length; inti++)
+            {
+                if (newTextBox[inti].Text == string.Empty)
+                {
+                    MessageBox.Show("Please fill the required Text");
+                    newTextBox[inti].Focus();
+
+                    readyToSave = 0;
+                    return;
+                }
+                readyToSave = 1;
+            }
+        }
+
 
     }
 }

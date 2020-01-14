@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace GOCSystem2018
 {
@@ -61,7 +62,30 @@ namespace GOCSystem2018
         /******************************
          * Public Method
          * ***************************/
+        public void LoadDataTable(DataGridView dgv)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+                    string sql = "SELECT * FROM voucher";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
 
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgv.DataSource = dt;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
         public List<Voucher> Load()
         {
             try
@@ -198,13 +222,14 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO voucher(voucher_from,voucher_amount) " +
-                                    " VALUES (@voucherFrom,@voucherAmount);";
+                    string sql = "INSERT INTO voucher(voucher_from,voucher_amount,DP_amount) " +
+                                    " VALUES (@voucherFrom,@voucherAmount,@dpAmount);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("voucherFrom", voucherFrom);
                     cmd.Parameters.AddWithValue("voucherAmount", voucherAmount);
+                    cmd.Parameters.AddWithValue("dpAmount", dpAmount);
 
 
                     cmd.ExecuteNonQuery();
@@ -230,7 +255,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE voucher SET voucher_from=@voucherFrom,voucher_amount=@voucherAmount" +
+                    string sql = "UPDATE voucher SET voucher_from=@voucherFrom,voucher_amount=@voucherAmount,DP_amount =@dpAmount" +
                                     " WHERE id=@id;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -239,6 +264,7 @@ namespace GOCSystem2018
 
                     cmd.Parameters.AddWithValue("voucherFrom", voucherFrom);
                     cmd.Parameters.AddWithValue("voucherAmount", voucherAmount);
+                    cmd.Parameters.AddWithValue("dpAmount", dpAmount);
 
 
                     cmd.ExecuteNonQuery();

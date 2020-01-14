@@ -84,13 +84,13 @@ namespace GOCSystem2018
 
         private void button12_Click(object sender, EventArgs e)
         {
-            frmMiscFees frmMiscFees = new frmMiscFees();
+            frmNewMiscFee frmMiscFees = new frmNewMiscFee();
             frmMiscFees.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            frmVoucher frmVoucher = new frmVoucher();
+            frmNewVoucher frmVoucher = new frmNewVoucher();
             frmVoucher.ShowDialog();
         }
 
