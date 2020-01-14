@@ -93,5 +93,11 @@ namespace GOCSystem2018
             frmVoucher frmVoucher = new frmVoucher();
             frmVoucher.ShowDialog();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            Maintenance.frmNewDiscountFee frm = new Maintenance.frmNewDiscountFee();
+            frm.ShowDialog();
+        }
     }
 }

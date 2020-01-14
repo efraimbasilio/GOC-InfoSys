@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace GOCSystem2018
 {
@@ -17,6 +18,7 @@ namespace GOCSystem2018
         protected int id;
         protected string discountName;
         protected string discountAmount;
+        protected string percentage;
 
         //protected int flag;
 
@@ -44,6 +46,12 @@ namespace GOCSystem2018
             set { discountAmount = value; }
         }
 
+        public string Percentage
+        {
+            get { return percentage; }
+            set { percentage = value; }
+        }
+
         List<Discount> discounts = new List<Discount>();
         /******************************
         * Protected Method
@@ -54,6 +62,31 @@ namespace GOCSystem2018
         /******************************
          * Public Method
          * ***************************/
+
+        public  void LoadDataTable(DataGridView dgv)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+                    string sql = "SELECT * FROM discount";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgv.DataSource = dt;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
         public List<Discount> Load()
         {
             try
@@ -77,7 +110,8 @@ namespace GOCSystem2018
                         //prepare properties
                         discount.id = Convert.ToInt32(reader["id"].ToString());
                         discount.discountName = reader["discount_name"].ToString();
-                        discount.discountAmount = reader["discount_percent_amount"].ToString();
+                        discount.discountAmount = reader["amount"].ToString();
+                        discount.percentage = reader["percentage"].ToString();
 
                         discounts.Add(discount);
 
@@ -121,7 +155,8 @@ namespace GOCSystem2018
                         //prepare properties
                         discount.id = Convert.ToInt32(reader["id"].ToString());
                         discount.discountName = reader["discount_name"].ToString();
-                        discount.discountAmount = reader["discount_percent_amount"].ToString();
+                        discount.discountAmount = reader["amount"].ToString();
+                        discount.percentage = reader["percentage"].ToString();
 
                         discounts.Add(discount);
 
@@ -147,13 +182,14 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO discount(discount_name,discount_percent_amount) " +
-                                    " VALUES (@discountName,@discountAmount);";
+                    string sql = "INSERT INTO discount(discount_name,amount,percentage) " +
+                                    " VALUES (@discountName,@discountAmount,@percentage);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("discountName", discountName);
                     cmd.Parameters.AddWithValue("discountAmount", discountAmount);
+                    cmd.Parameters.AddWithValue("percentage", percentage);
 
 
                     cmd.ExecuteNonQuery();
@@ -179,7 +215,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE discount SET discount_name=@discountName,discount_percent_amount=@discountAmount" +
+                    string sql = "UPDATE discount SET discount_name=@discountName,amount=@discountAmount,percentage =@percentage" +
                                     " WHERE id=@id;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -187,6 +223,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("id", id);
                     cmd.Parameters.AddWithValue("discountName", discountName);
                     cmd.Parameters.AddWithValue("discountAmount", discountAmount);
+                    cmd.Parameters.AddWithValue("percentage", percentage);
 
 
                     cmd.ExecuteNonQuery();

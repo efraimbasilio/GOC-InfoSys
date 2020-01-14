@@ -112,12 +112,18 @@
     <Compile Include="frmSectioning.Designer.cs">
       <DependentUpon>frmSectioning.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Department.cs" />
-    <Compile Include="Models\EnrolledStudents.cs" />
-    <Compile Include="frmAssesment.cs">
+    <Compile Include="Maintenance\New\frmNewDiscountFee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAssesment.designer.cs">
+    <Compile Include="Maintenance\New\frmNewDiscountFee.Designer.cs">
+      <DependentUpon>frmNewDiscountFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\EnrolledStudents.cs" />
+    <Compile Include="Maintenance\frmAssesment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\frmAssesment.designer.cs">
       <DependentUpon>frmAssesment.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAssessmentSearch.cs">
@@ -138,10 +144,10 @@
     <Compile Include="frmcmb.Designer.cs">
       <DependentUpon>frmcmb.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDiscountFee.cs">
+    <Compile Include="Maintenance\frmDiscountFee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDiscountFee.designer.cs">
+    <Compile Include="Maintenance\frmDiscountFee.designer.cs">
       <DependentUpon>frmDiscountFee.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGrading.cs">
@@ -202,10 +208,10 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalConnection1.cs" />
-    <Compile Include="frmBilling.cs">
+    <Compile Include="Maintenance\frmBilling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBilling.Designer.cs">
+    <Compile Include="Maintenance\frmBilling.Designer.cs">
       <DependentUpon>frmBilling.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPayment.cs">
@@ -244,28 +250,28 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMiscFees.cs">
+    <Compile Include="Maintenance\frmMiscFees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMiscFees.Designer.cs">
+    <Compile Include="Maintenance\frmMiscFees.Designer.cs">
       <DependentUpon>frmMiscFees.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmOtherFees.cs">
+    <Compile Include="Maintenance\frmOtherFees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOtherFees.Designer.cs">
+    <Compile Include="Maintenance\frmOtherFees.Designer.cs">
       <DependentUpon>frmOtherFees.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRoom.cs">
+    <Compile Include="Maintenance\frmRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRoom.Designer.cs">
+    <Compile Include="Maintenance\frmRoom.Designer.cs">
       <DependentUpon>frmRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSchoolYear.cs">
+    <Compile Include="Maintenance\frmSchoolYear.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSchoolYear.Designer.cs">
+    <Compile Include="Maintenance\frmSchoolYear.Designer.cs">
       <DependentUpon>frmSchoolYear.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSection.cs">
@@ -274,40 +280,40 @@
     <Compile Include="frmSection.Designer.cs">
       <DependentUpon>frmSection.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmStrand.cs">
+    <Compile Include="Maintenance\frmStrand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmStrand.Designer.cs">
+    <Compile Include="Maintenance\frmStrand.Designer.cs">
       <DependentUpon>frmStrand.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSubject.cs">
+    <Compile Include="Maintenance\frmSubject.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSubject.Designer.cs">
+    <Compile Include="Maintenance\frmSubject.Designer.cs">
       <DependentUpon>frmSubject.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTeacher.cs">
+    <Compile Include="Maintenance\frmTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTeacher.Designer.cs">
+    <Compile Include="Maintenance\frmTeacher.Designer.cs">
       <DependentUpon>frmTeacher.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTuition.cs">
+    <Compile Include="Maintenance\frmTuition.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTuition.Designer.cs">
+    <Compile Include="Maintenance\frmTuition.Designer.cs">
       <DependentUpon>frmTuition.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUser.cs">
+    <Compile Include="Maintenance\frmUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUser.Designer.cs">
+    <Compile Include="Maintenance\frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVoucher.cs">
+    <Compile Include="Maintenance\frmVoucher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVoucher.Designer.cs">
+    <Compile Include="Maintenance\frmVoucher.Designer.cs">
       <DependentUpon>frmVoucher.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\MiscFee.cs" />
@@ -340,6 +346,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="Models\StudentProfile.cs" />
     <Compile Include="Models\TempRegNo.cs" />
+    <Compile Include="Util_RequiredFields.cs" />
     <EmbeddedResource Include="blackfrm.resx">
       <DependentUpon>blackfrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,13 +354,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpHeader.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAssesment.resx">
+    <EmbeddedResource Include="Maintenance\frmAssesment.resx">
       <DependentUpon>frmAssesment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAssessmentSearch.resx">
       <DependentUpon>frmAssessmentSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmBilling.resx">
+    <EmbeddedResource Include="Maintenance\frmBilling.resx">
       <DependentUpon>frmBilling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBillingSearch.resx">
@@ -368,7 +375,7 @@
     <EmbeddedResource Include="frmcmb.resx">
       <DependentUpon>frmcmb.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDiscountFee.resx">
+    <EmbeddedResource Include="Maintenance\frmDiscountFee.resx">
       <DependentUpon>frmDiscountFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGrading.resx">
@@ -380,10 +387,10 @@
     <EmbeddedResource Include="frmMaintenance.resx">
       <DependentUpon>frmMaintenance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMiscFees.resx">
+    <EmbeddedResource Include="Maintenance\frmMiscFees.resx">
       <DependentUpon>frmMiscFees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOtherFees.resx">
+    <EmbeddedResource Include="Maintenance\frmOtherFees.resx">
       <DependentUpon>frmOtherFees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPayment.resx">
@@ -392,13 +399,13 @@
     <EmbeddedResource Include="frmRegistration.resx">
       <DependentUpon>frmRegistration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRoom.resx">
+    <EmbeddedResource Include="Maintenance\frmRoom.resx">
       <DependentUpon>frmRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSched.resx">
       <DependentUpon>frmSched.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSchoolYear.resx">
+    <EmbeddedResource Include="Maintenance\frmSchoolYear.resx">
       <DependentUpon>frmSchoolYear.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSection.resx">
@@ -413,7 +420,7 @@
     <EmbeddedResource Include="frmSetting.resx">
       <DependentUpon>frmSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmStrand.resx">
+    <EmbeddedResource Include="Maintenance\frmStrand.resx">
       <DependentUpon>frmStrand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStudlist.resx">
@@ -422,20 +429,23 @@
     <EmbeddedResource Include="frmStudProf.resx">
       <DependentUpon>frmStudProf.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSubject.resx">
+    <EmbeddedResource Include="Maintenance\frmSubject.resx">
       <DependentUpon>frmSubject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTeacher.resx">
+    <EmbeddedResource Include="Maintenance\frmTeacher.resx">
       <DependentUpon>frmTeacher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTuition.resx">
+    <EmbeddedResource Include="Maintenance\frmTuition.resx">
       <DependentUpon>frmTuition.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUser.resx">
+    <EmbeddedResource Include="Maintenance\frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVoucher.resx">
+    <EmbeddedResource Include="Maintenance\frmVoucher.resx">
       <DependentUpon>frmVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\New\frmNewDiscountFee.resx">
+      <DependentUpon>frmNewDiscountFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>
@@ -486,6 +496,7 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Function\" />
     <Folder Include="Reports\" />
   </ItemGroup>
   <ItemGroup>
@@ -502,6 +513,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
