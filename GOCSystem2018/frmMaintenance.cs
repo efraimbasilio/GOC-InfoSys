@@ -78,7 +78,7 @@ namespace GOCSystem2018
 
         private void button10_Click(object sender, EventArgs e)
         {
-            frmOtherFees frmOtherFees = new frmOtherFees();
+            frmNewOtherFee frmOtherFees = new frmNewOtherFee();
             frmOtherFees.ShowDialog();
         }
 

@@ -100,6 +100,12 @@
     <Compile Include="frmBilling_OtherFee.Designer.cs">
       <DependentUpon>frmBilling_OtherFee.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNewOtherFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewOtherFee.Designer.cs">
+      <DependentUpon>frmNewOtherFee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maintenance\New\frmNewMiscFee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +371,9 @@
     <EmbeddedResource Include="crpHeader.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpHeader.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewOtherFee.resx">
+      <DependentUpon>frmNewOtherFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\New\frmNewMiscFee.resx">
       <DependentUpon>frmNewMiscFee.cs</DependentUpon>

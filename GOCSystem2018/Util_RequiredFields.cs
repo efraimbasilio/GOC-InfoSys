@@ -25,7 +25,24 @@ namespace GOCSystem2018
                 readyToSave = 1;
             }
         }
-        public void ValidateCombobox1(TextBox one, TextBox two)
+
+        public void ValidateCombobox1(TextBox one)
+        {
+            TextBox[] newTextBox = { one };
+            for (int inti = 0; inti < newTextBox.Length; inti++)
+            {
+                if (newTextBox[inti].Text == string.Empty)
+                {
+                    MessageBox.Show("Please fill the required drop down list");
+                    newTextBox[inti].Focus();
+                    readyToSave = 0;
+                    return;
+                }
+                readyToSave = 1;
+            }
+        }
+
+        public void ValidateCombobox2(TextBox one, TextBox two)
         {
             TextBox[] newTextBox = { one, two };
             for (int inti = 0; inti < newTextBox.Length; inti++)
