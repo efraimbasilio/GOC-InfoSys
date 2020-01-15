@@ -128,7 +128,7 @@ namespace GOCSystem2018
                     miscFee.Id = id;
                     miscFee.MiscFeeName = txtMiscName.Text;
                     miscFee.MiscFeeAmount = Convert.ToDouble(txtAmount.Text);
-                    miscFee.Update();
+                    miscFee.Save();
                     Reset();
                     #endregion   
                 }
@@ -146,6 +146,9 @@ namespace GOCSystem2018
             Reset();
         }
 
+        private void frmNewMiscFee_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

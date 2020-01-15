@@ -91,13 +91,13 @@ namespace GOCSystem2018
                 util.ValidateTextBox3(txtAmount, txtDPAmount, txtVoucherName);// Validation before saving
                 if (util.readyToSave == 1)
                 {
-                    #region UPDATE DISCOUNT
+                    #region save DISCOUNT
                     voucher.Id = id;
                     voucher.VoucherFrom = txtVoucherName.Text;
                     voucher.VoucherAmount = txtAmount.Text;
                     voucher.DpAmount = txtDPAmount.Text;
 
-                    voucher.Update();
+                    voucher.Save();
                     Reset();
                     #endregion   
                 }

@@ -92,6 +92,22 @@ namespace GOCSystem2018
             }
         }
 
+        public void ValidateTextBox4(TextBox one, TextBox two, TextBox three, TextBox four)
+        {
+            TextBox[] newTextBox = { one, two, three, four };
+            for (int inti = 0; inti < newTextBox.Length; inti++)
+            {
+                if (newTextBox[inti].Text == string.Empty)
+                {
+                    MessageBox.Show("Please fill the required Text");
+                    newTextBox[inti].Focus();
+
+                    readyToSave = 0;
+                    return;
+                }
+                readyToSave = 1;
+            }
+        }
 
     }
 }

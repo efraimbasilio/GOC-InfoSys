@@ -72,7 +72,7 @@ namespace GOCSystem2018
 
         private void button11_Click(object sender, EventArgs e)
         {
-            frmTuition frmTuition = new frmTuition();
+            frmNewTuitionFee frmTuition = new frmNewTuitionFee();
             frmTuition.ShowDialog();
         }
 

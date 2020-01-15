@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 //For Message Box
 using System.Windows.Forms;
+using System.Data;
 
 namespace GOCSystem2018.Models
 {
@@ -20,8 +21,10 @@ namespace GOCSystem2018.Models
         protected string tuitionFeeAmount;
         protected string tuitionFeeDescription;
         protected string status;
-
+        protected string dept;
+        protected string revFee;
         protected string reservationFee;
+
         public string ReservationFee
         {
             get { return reservationFee; }
@@ -66,6 +69,18 @@ namespace GOCSystem2018.Models
             set { tuitionFeeDescription = value; }
         }
 
+        public string Dept
+        {
+            get { return dept; }
+            set { dept = value; }
+        }
+
+        public string RevFee
+        {
+            get { return revFee; }
+            set { revFee = value; }
+        }
+
         //variable name should always to be plural for every list
         //Camel casing
         List<TuitionFee> tuitionFees = new List<TuitionFee>();
@@ -80,6 +95,31 @@ namespace GOCSystem2018.Models
          * Public Method
          * ***************************/
 
+        public void LoadDataTable(DataGridView dgv)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(GOCSystem2018.Config.GetConnectionString()))
+                {
+                    con.Open();
+                    string sql = "SELECT * FROM tuition_fee";
+                    MySqlCommand cmd = new MySqlCommand(sql, con);
+                    MySqlDataAdapter da = new MySqlDataAdapter();
+                    da.SelectCommand = cmd;
+
+                    //initialize new datatable
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dgv.DataSource = dt;
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("ERROR : " + ex.Message.ToString(), "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
         public void Save()
         {
             try
@@ -91,15 +131,17 @@ namespace GOCSystem2018.Models
                     //try to open connection
                     con.Open();
 
-                    string sql = "INSERT INTO tuition_fee(tuition_fee_name,tuition_amount,tuition_desc) " +
-                                    " VALUES (@tuitionFeeName,@tuitionFeeAmount,@tuitionFeeDescription);";
+                    string sql = "INSERT INTO tuition_fee(tuition_fee_name, tuition_amount, tuition_desc, status, Department, Reservation_Fee) " +
+                                    " VALUES (@tuitionFeeName, @tuitionFeeAmount, @tuitionFeeDescription, @status, @dept, @reservationFee);";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("tuitionFeeName", tuitionFeeName);
                     cmd.Parameters.AddWithValue("tuitionFeeAmount", tuitionFeeAmount);
                     cmd.Parameters.AddWithValue("tuitionFeeDescription", tuitionFeeDescription);
-                    //cmd.Parameters.AddWithValue("status", status);
+                    cmd.Parameters.AddWithValue("status", status);
+                    cmd.Parameters.AddWithValue("dept", dept );
+                    cmd.Parameters.AddWithValue("reservationFee", reservationFee);
 
                     cmd.ExecuteNonQuery();
 
@@ -139,8 +181,8 @@ namespace GOCSystem2018.Models
                         tuitionFee.tuitionFeeAmount = reader["tuition_amount"].ToString();
                         tuitionFee.tuitionFeeDescription = reader["tuition_desc"].ToString();
                         tuitionFee.status = reader["status"].ToString();
-                        tuitionFee.reservationFee = reader["Reservation-Fee"].ToString();
-
+                        tuitionFee.reservationFee = reader["Reservation_Fee"].ToString();
+                        tuitionFee.dept = reader["Department"].ToString();
 
                         tuitionFees.Add(tuitionFee);
 
@@ -166,15 +208,17 @@ namespace GOCSystem2018.Models
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE tuition_fee SET tuition_fee_name=@tuitionFeeName,tuition_amount=@tuitionFeeAmount,tuition_desc=@tuitionFeeDescription" +
+                    string sql = "UPDATE tuition_fee SET tuition_fee_name=@tuitionFeeName,tuition_amount=@tuitionFeeAmount,tuition_desc=@tuitionFeeDescription, Reservation_Fee=@reservationFee, Department=@dept, status=@status" +
                                     " WHERE id=@id;";
-
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("id", id);
                     cmd.Parameters.AddWithValue("tuitionFeeName", tuitionFeeName);
                     cmd.Parameters.AddWithValue("tuitionFeeAmount", tuitionFeeAmount);
                     cmd.Parameters.AddWithValue("tuitionFeeDescription", tuitionFeeDescription);
+                    cmd.Parameters.AddWithValue("dept", dept);
+                    cmd.Parameters.AddWithValue("status", status);
+                    cmd.Parameters.AddWithValue("reservationFee", reservationFee);
 
                     cmd.ExecuteNonQuery();
 
@@ -218,6 +262,8 @@ namespace GOCSystem2018.Models
                         tuitionFee.tuitionFeeAmount = reader["tuition_amount"].ToString();
                         tuitionFee.tuitionFeeDescription = reader["tuition_desc"].ToString();
                         tuitionFee.status = reader["status"].ToString();
+                        tuitionFee.reservationFee = reader["Reservation_Fee"].ToString();
+                        tuitionFee.dept = reader["Department"].ToString();
 
                         tuitionFees.Add(tuitionFee);
                     }
@@ -263,6 +309,8 @@ namespace GOCSystem2018.Models
                         tuitionFee.tuitionFeeAmount = reader["tuition_amount"].ToString();
                         tuitionFee.tuitionFeeDescription = reader["tuition_desc"].ToString();
                         tuitionFee.status = reader["status"].ToString();
+                        tuitionFee.reservationFee = reader["Reservation_Fee"].ToString();
+                        tuitionFee.dept = reader["Department"].ToString();
 
                         tuitionFees.Add(tuitionFee);
 
@@ -276,6 +324,7 @@ namespace GOCSystem2018.Models
             }
             return tuitionFees;
         }
+
         public void Delete()
         {
             try
@@ -303,10 +352,8 @@ namespace GOCSystem2018.Models
                 MessageBox.Show("ERROR : " + ex.ToString(), "System Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-        }
-
-
-
-        
+        }        
     }
 }
+
+

@@ -48,24 +48,25 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(764, 182);
+            this.btnCancel.Location = new System.Drawing.Point(922, 186);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(85, 36);
             this.btnCancel.TabIndex = 7810;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // txtAmount
             // 
-            this.txtAmount.Location = new System.Drawing.Point(673, 37);
+            this.txtAmount.Location = new System.Drawing.Point(831, 41);
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(176, 23);
+            this.txtAmount.Size = new System.Drawing.Size(85, 23);
             this.txtAmount.TabIndex = 7809;
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtTuitionFeeName
             // 
-            this.txtTuitionFeeName.Location = new System.Drawing.Point(673, 8);
+            this.txtTuitionFeeName.Location = new System.Drawing.Point(831, 12);
             this.txtTuitionFeeName.Name = "txtTuitionFeeName";
             this.txtTuitionFeeName.Size = new System.Drawing.Size(176, 23);
             this.txtTuitionFeeName.TabIndex = 7808;
@@ -76,7 +77,7 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label2.Font = new System.Drawing.Font("Roboto Cn", 9.75F);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(615, 40);
+            this.label2.Location = new System.Drawing.Point(773, 44);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 15);
@@ -85,12 +86,13 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(673, 182);
+            this.btnAdd.Location = new System.Drawing.Point(831, 186);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 36);
             this.btnAdd.TabIndex = 7806;
             this.btnAdd.Text = "&Add New";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label1
             // 
@@ -98,7 +100,7 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label1.Font = new System.Drawing.Font("Roboto Cn", 9.75F);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(586, 11);
+            this.label1.Location = new System.Drawing.Point(744, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 15);
@@ -118,16 +120,16 @@
             this.dgvTuitionFee.ReadOnly = true;
             this.dgvTuitionFee.RowHeadersVisible = false;
             this.dgvTuitionFee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTuitionFee.Size = new System.Drawing.Size(567, 628);
+            this.dgvTuitionFee.Size = new System.Drawing.Size(725, 628);
             this.dgvTuitionFee.TabIndex = 7804;
+            this.dgvTuitionFee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTuitionFee_CellContentClick);
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(673, 66);
+            this.txtDesc.Location = new System.Drawing.Point(831, 70);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(176, 23);
             this.txtDesc.TabIndex = 7812;
-            this.txtDesc.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -135,7 +137,7 @@
             this.label3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label3.Font = new System.Drawing.Font("Roboto Cn", 9.75F);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(596, 69);
+            this.label3.Location = new System.Drawing.Point(754, 73);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 15);
@@ -148,7 +150,7 @@
             this.label4.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label4.Font = new System.Drawing.Font("Roboto Cn", 9.75F);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(623, 98);
+            this.label4.Location = new System.Drawing.Point(781, 102);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 15);
@@ -161,7 +163,7 @@
             this.label5.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label5.Font = new System.Drawing.Font("Roboto Cn", 9.75F);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(596, 127);
+            this.label5.Location = new System.Drawing.Point(754, 131);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 15);
@@ -170,9 +172,9 @@
             // 
             // txtReservation
             // 
-            this.txtReservation.Location = new System.Drawing.Point(673, 153);
+            this.txtReservation.Location = new System.Drawing.Point(831, 157);
             this.txtReservation.Name = "txtReservation";
-            this.txtReservation.Size = new System.Drawing.Size(176, 23);
+            this.txtReservation.Size = new System.Drawing.Size(85, 23);
             this.txtReservation.TabIndex = 7818;
             this.txtReservation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -182,7 +184,7 @@
             this.label6.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.label6.Font = new System.Drawing.Font("Roboto Cn", 9.75F);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(575, 156);
+            this.label6.Location = new System.Drawing.Point(733, 160);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 15);
@@ -195,9 +197,9 @@
             this.cmbStatus.Items.AddRange(new object[] {
             "1",
             "0"});
-            this.cmbStatus.Location = new System.Drawing.Point(673, 95);
+            this.cmbStatus.Location = new System.Drawing.Point(831, 99);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(121, 23);
+            this.cmbStatus.Size = new System.Drawing.Size(85, 23);
             this.cmbStatus.TabIndex = 7823;
             // 
             // cmbDept
@@ -206,9 +208,9 @@
             this.cmbDept.Items.AddRange(new object[] {
             "SHS",
             "COLLEGE"});
-            this.cmbDept.Location = new System.Drawing.Point(673, 124);
+            this.cmbDept.Location = new System.Drawing.Point(831, 128);
             this.cmbDept.Name = "cmbDept";
-            this.cmbDept.Size = new System.Drawing.Size(121, 23);
+            this.cmbDept.Size = new System.Drawing.Size(85, 23);
             this.cmbDept.TabIndex = 7824;
             // 
             // frmNewTuitionFee
@@ -234,7 +236,8 @@
             this.Font = new System.Drawing.Font("Roboto Cn", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmNewTuitionFee";
-            this.Text = "Tuition Fee";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Tuition fee";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTuitionFee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -133,6 +133,7 @@
             this.Name = "frmNewMiscFee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Misc Fee";
+            this.Load += new System.EventHandler(this.frmNewMiscFee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMiscFee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
