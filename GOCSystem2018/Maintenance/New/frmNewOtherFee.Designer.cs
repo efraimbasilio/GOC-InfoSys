@@ -132,6 +132,7 @@
             // 
             // cmbStrand
             // 
+            this.cmbStrand.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStrand.FormattingEnabled = true;
             this.cmbStrand.Items.AddRange(new object[] {
             "STEM",

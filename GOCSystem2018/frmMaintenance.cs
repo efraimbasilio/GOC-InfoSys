@@ -31,7 +31,7 @@ namespace GOCSystem2018
 
         private void button2_Click(object sender, EventArgs e)
         {
-            frmRoom frmRoom = new frmRoom();
+            frmNewRoom frmRoom = new frmNewRoom();
             frmRoom.ShowDialog();
         }
 
@@ -66,7 +66,7 @@ namespace GOCSystem2018
 
         private void button6_Click(object sender, EventArgs e)
         {
-            frmSection frmSection = new frmSection();
+            frmNewSection frmSection = new frmNewSection();
             frmSection.ShowDialog();
         }
 

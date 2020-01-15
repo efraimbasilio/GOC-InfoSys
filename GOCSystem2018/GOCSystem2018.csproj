@@ -106,6 +106,12 @@
     <Compile Include="frmNewRoom.Designer.cs">
       <DependentUpon>frmNewRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNewSection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewSection.Designer.cs">
+      <DependentUpon>frmNewSection.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNewTuitionFee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -386,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewRoom.resx">
       <DependentUpon>frmNewRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewSection.resx">
+      <DependentUpon>frmNewSection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewTuitionFee.resx">
       <DependentUpon>frmNewTuitionFee.cs</DependentUpon>

@@ -60,6 +60,7 @@ namespace GOCSystem2018
             cmbDept.Text = "";
             txtReservation.Text = "";
 
+
             //optAmount.Checked = false;
             //optPercent.Checked = false;
             btnAdd.Text = "&Add New";

@@ -149,5 +149,10 @@ namespace GOCSystem2018
             }
             room.LoadDataTable(dgvRoom);
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
     }
 }

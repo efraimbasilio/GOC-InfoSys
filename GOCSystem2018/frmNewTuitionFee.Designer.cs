@@ -193,6 +193,7 @@
             // 
             // cmbStatus
             // 
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
             "1",
@@ -204,6 +205,7 @@
             // 
             // cmbDept
             // 
+            this.cmbDept.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDept.FormattingEnabled = true;
             this.cmbDept.Items.AddRange(new object[] {
             "SHS",
@@ -236,7 +238,7 @@
             this.Font = new System.Drawing.Font("Roboto Cn", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmNewTuitionFee";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tuition fee";
             ((System.ComponentModel.ISupportInitialize)(this.dgvTuitionFee)).EndInit();
             this.ResumeLayout(false);
