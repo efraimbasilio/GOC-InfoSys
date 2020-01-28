@@ -62,7 +62,8 @@ namespace GOCSystem2018
        
 
         public string StudName,GOCNo, LRN, Track, GradeLevel, RegNo, Strand,Voucher,theSection;
-        public string partialPay, roomName,sectionThis;
+        public string partialPay, fullPay, roomName,sectionThis;
+        public double _fullPayBalance;
         public bool toSave = true;
 
         public frmAssesment()
@@ -198,11 +199,26 @@ namespace GOCSystem2018
 
 
 
-            if (Convert.ToInt32(partialPay) > 0)
+            if (Convert.ToInt32(partialPay) == 0)//No payment yet
+            {
+                //cmbMOP.Text = "Partial Payment";
+                cmbMOP.Enabled = true;
+                cmbMOP.Select();
+            }
+
+            else if (Convert.ToInt32(partialPay) > 0)
             {
                 cmbMOP.Text = "Partial Payment";
                 cmbMOP.Enabled = false;
             }
+            else if (Convert.ToInt32(_fullPayBalance) < 1)//no existing Balance , Fully paid account
+            {
+                cmbMOP.Text = "Full Payment";
+                cmbMOP.Enabled = false;
+                cmbSection.Select();
+                btnEnroll.Enabled = false;           
+            }
+
 
             
 
@@ -923,7 +939,12 @@ namespace GOCSystem2018
                 toSave = false;
                 button4.Visible = true;
                 return;
-            }            
+            }
+            //else
+            //{
+            //    MessageBox.Show("Please select a section", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}          
         }
 
        
@@ -934,7 +955,7 @@ namespace GOCSystem2018
             {
                 if (dgvStudents.Rows[i].Cells[0].FormattedValue.ToString() == lblGOCNo.Text && dgvStudents.Rows[i].Cells[4].FormattedValue.ToString() == lblSem.Text)  //GOC NO
                 {
-                    MessageBox.Show("Duplicate Detected");
+                    MessageBox.Show("Student already have a section", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     toSave = false;
                     return;
                 }

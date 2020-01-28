@@ -16,9 +16,11 @@ namespace GOCSystem2018
 
         Assesment assesment = new Assesment();
         StudentProfile studProfile = new StudentProfile();
+        Billing_Partial bill = new Billing_Partial();
 
         List<StudentProfile> studProfiles = new List<StudentProfile>();
         List<Assesment> assesments = new List<Assesment>();
+        List<Billing_Partial> bills = new List<Billing_Partial>();
 
         frmAssesment frmAssesment = new frmAssesment();
         frmRegistration frmReg = new frmRegistration();
@@ -190,10 +192,28 @@ namespace GOCSystem2018
             }
         }
 
-        private void SelectData()
+        public void CheckBalance()
         {
+            //clear list
+            bills.Clear();
+            //pass value
+            bill.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
+            bills = bill.GetById();
+
+            foreach (var item in bills)
+            {
+                //pass variable to form Assesment
+                
+                frmAssesment._fullPayBalance = Convert.ToDouble(item.Balance);                
+            }
+        }
+
+        private void SelectData()
+        {                                         
             if (dgvSearch.SelectedRows.Count > 0)
             {
+                //CheckBalance();//for fullpay no balance
+
                 //clear list
                 studProfiles.Clear();
                 //pass value
@@ -212,8 +232,8 @@ namespace GOCSystem2018
                     frmAssesment.Voucher = item.VoucherType;
                     frmAssesment.GOCNo = item.StudGOCNo;
                     frmAssesment.partialPay = item.PartialPayment;
-                    frmAssesment.theSection = item.Section;
-                                        
+                    //frmAssesment.fullPay = item.FullPayment;
+                    frmAssesment.theSection = item.Section;                                        
                 }
 
                 //set up before form load
@@ -251,10 +271,10 @@ namespace GOCSystem2018
                 frmAssesment.LoadSubject();
                 frmAssesment.EnableMOP();                               
                 frmAssesment.Show();
-                frmAssesment.checkPayment();
-
-               
+                frmAssesment.checkPayment();               
             }
+            
+                
         }
 
 
