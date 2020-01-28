@@ -42,9 +42,9 @@ namespace GOCSystem2018
             }
         }
 
-        public void ValidateCombobox2(TextBox one, TextBox two)
+        public void ValidateCombobox2(ComboBox one, ComboBox two)
         {
-            TextBox[] newTextBox = { one, two };
+            ComboBox[] newTextBox = { one, two };
             for (int inti = 0; inti < newTextBox.Length; inti++)
             {
                 if (newTextBox[inti].Text == string.Empty)

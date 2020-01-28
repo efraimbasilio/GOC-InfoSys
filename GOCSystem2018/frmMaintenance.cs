@@ -25,7 +25,7 @@ namespace GOCSystem2018
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmSchoolYear frmSchoolYear = new frmSchoolYear();
+            frmNewSchoolYear frmSchoolYear = new frmNewSchoolYear();
             frmSchoolYear.ShowDialog();
         }
 
@@ -43,7 +43,7 @@ namespace GOCSystem2018
 
         private void button9_Click(object sender, EventArgs e)
         {
-            frmStrand frmStrand = new frmStrand();
+            frmNewStrand frmStrand = new frmNewStrand();
             frmStrand.ShowDialog();
         }
 

@@ -84,7 +84,7 @@ namespace GOCSystem2018.Models
         //variable name should always to be plural for every list
         //Camel casing
         List<TuitionFee> tuitionFees = new List<TuitionFee>();
-
+       
         /******************************
          * Protected Method
          * ***************************/
@@ -208,7 +208,7 @@ namespace GOCSystem2018.Models
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE tuition_fee SET tuition_fee_name=@tuitionFeeName,tuition_amount=@tuitionFeeAmount,tuition_desc=@tuitionFeeDescription, Reservation_Fee=@reservationFee, Department=@dept, status=@status" +
+                    string sql = "UPDATE tuition_fee SET tuition_fee_name=@tuitionFeeName,tuition_amount=@tuitionFeeAmount,tuition_desc=@tuitionFeeDescription, Department=@dept, status=@status , Reservation_Fee=@reservationFee" +
                                     " WHERE id=@id;";
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 

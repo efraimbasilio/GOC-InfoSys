@@ -100,22 +100,34 @@
     <Compile Include="frmBilling_OtherFee.Designer.cs">
       <DependentUpon>frmBilling_OtherFee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewRoom.cs">
+    <Compile Include="frmNewSchoolYear.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewRoom.Designer.cs">
+    <Compile Include="frmNewSchoolYear.Designer.cs">
+      <DependentUpon>frmNewSchoolYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewStrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewStrand.Designer.cs">
+      <DependentUpon>frmNewStrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance\New\frmNewRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintenance\New\frmNewRoom.Designer.cs">
       <DependentUpon>frmNewRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewSection.cs">
+    <Compile Include="Maintenance\New\frmNewSection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewSection.Designer.cs">
+    <Compile Include="Maintenance\New\frmNewSection.Designer.cs">
       <DependentUpon>frmNewSection.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewTuitionFee.cs">
+    <Compile Include="Maintenance\New\frmNewTuitionFee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewTuitionFee.Designer.cs">
+    <Compile Include="Maintenance\New\frmNewTuitionFee.Designer.cs">
       <DependentUpon>frmNewTuitionFee.cs</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\New\frmNewOtherFee.cs">
@@ -390,13 +402,19 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpHeader.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewRoom.resx">
+    <EmbeddedResource Include="frmNewSchoolYear.resx">
+      <DependentUpon>frmNewSchoolYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewStrand.resx">
+      <DependentUpon>frmNewStrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintenance\New\frmNewRoom.resx">
       <DependentUpon>frmNewRoom.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewSection.resx">
+    <EmbeddedResource Include="Maintenance\New\frmNewSection.resx">
       <DependentUpon>frmNewSection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewTuitionFee.resx">
+    <EmbeddedResource Include="Maintenance\New\frmNewTuitionFee.resx">
       <DependentUpon>frmNewTuitionFee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\New\frmNewOtherFee.resx">
