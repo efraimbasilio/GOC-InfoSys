@@ -100,16 +100,16 @@
     <Compile Include="frmBilling_OtherFee.Designer.cs">
       <DependentUpon>frmBilling_OtherFee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewSchoolYear.cs">
+    <Compile Include="Maintenance\New\frmNewSchoolYear.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewSchoolYear.Designer.cs">
+    <Compile Include="Maintenance\New\frmNewSchoolYear.Designer.cs">
       <DependentUpon>frmNewSchoolYear.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewStrand.cs">
+    <Compile Include="Maintenance\New\frmNewStrand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewStrand.Designer.cs">
+    <Compile Include="Maintenance\New\frmNewStrand.Designer.cs">
       <DependentUpon>frmNewStrand.cs</DependentUpon>
     </Compile>
     <Compile Include="Maintenance\New\frmNewRoom.cs">
@@ -402,10 +402,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>crpHeader.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewSchoolYear.resx">
+    <EmbeddedResource Include="Maintenance\New\frmNewSchoolYear.resx">
       <DependentUpon>frmNewSchoolYear.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewStrand.resx">
+    <EmbeddedResource Include="Maintenance\New\frmNewStrand.resx">
       <DependentUpon>frmNewStrand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintenance\New\frmNewRoom.resx">
