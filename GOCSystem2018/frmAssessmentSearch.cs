@@ -25,6 +25,7 @@ namespace GOCSystem2018
         frmAssesment frmAssesment = new frmAssesment();
         frmRegistration frmReg = new frmRegistration();
 
+        public string FullPaymentTag;
        // public string Assess_GOC_No = "GOC-2018-0428";
 
         public frmAssessmentSearch()
@@ -203,78 +204,228 @@ namespace GOCSystem2018
             foreach (var item in bills)
             {
                 //pass variable to form Assesment
-                
-                frmAssesment._fullPayBalance = Convert.ToDouble(item.Balance);                
+
+                FullPaymentTag = item.Balance;                
+            }
+        }
+
+
+        private void LoadMe()
+        {
+            //clear list
+            studProfiles.Clear();
+            //pass value
+            studProfile.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
+            studProfiles = studProfile.GetById();
+
+            foreach (var item in studProfiles)
+            {
+                //pass variable to form Assesment
+                frmAssesment.StudName = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
+                frmAssesment.LRN = item.StudLRN;
+                frmAssesment.GradeLevel = item.StudGradeLevel;
+                frmAssesment.Track = item.Track;
+                frmAssesment.RegNo = item.StudRegistrationNo;
+                frmAssesment.Strand = item.StudStrand;
+                frmAssesment.Voucher = item.VoucherType;
+                frmAssesment.GOCNo = item.StudGOCNo;
+                frmAssesment.partialPay = item.PartialPayment;
+                frmAssesment.fullPay = item.FullPayment;
+                frmAssesment.theSection = item.Section;
             }
         }
 
         private void SelectData()
-        {                                         
+        {
+            //if (dgvSearch.SelectedRows.Count < 1)
+            //{
+            //    CheckBalance();//for fullpay no balance
+            //    if (FullPaymentTag.Equals("0"))
+            //    {
+
+            //    }  
+            //}
+            LoadMe();
+            CheckBalance();
             if (dgvSearch.SelectedRows.Count > 0)
             {
-                //CheckBalance();//for fullpay no balance
-
-                //clear list
-                studProfiles.Clear();
-                //pass value
-                studProfile.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
-                studProfiles = studProfile.GetById();
-
-                foreach (var item in studProfiles)
+                if (frmAssesment.partialPay.Equals("0") && frmAssesment.fullPay.Equals("0") )
                 {
-                    //pass variable to form Assesment
-                    frmAssesment.StudName = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
-                    frmAssesment.LRN = item.StudLRN;
-                    frmAssesment.GradeLevel = item.StudGradeLevel;
-                    frmAssesment.Track = item.Track;
-                    frmAssesment.RegNo = item.StudRegistrationNo;
-                    frmAssesment.Strand = item.StudStrand;
-                    frmAssesment.Voucher = item.VoucherType;
-                    frmAssesment.GOCNo = item.StudGOCNo;
-                    frmAssesment.partialPay = item.PartialPayment;
-                    //frmAssesment.fullPay = item.FullPayment;
-                    frmAssesment.theSection = item.Section;                                        
-                }
+                    //clear list
+                    studProfiles.Clear();
+                    //pass value
+                    studProfile.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
+                    studProfiles = studProfile.GetById();
 
-                //set up before form load
+                    foreach (var item in studProfiles)
+                    {
+                        //pass variable to form Assesment
+                        frmAssesment.StudName = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
+                        frmAssesment.LRN = item.StudLRN;
+                        frmAssesment.GradeLevel = item.StudGradeLevel;
+                        frmAssesment.Track = item.Track;
+                        frmAssesment.RegNo = item.StudRegistrationNo;
+                        frmAssesment.Strand = item.StudStrand;
+                        frmAssesment.Voucher = item.VoucherType;
+                        frmAssesment.GOCNo = item.StudGOCNo;
+                        frmAssesment.partialPay = item.PartialPayment;
+                        frmAssesment.fullPay = item.FullPayment;
+                        frmAssesment.theSection = item.Section;
+                    }
+                    #region Payment
+                    //set up before form load
+                    //STATIC
+                    //show assesment                             
+                    if (frmAssesment.Strand == "STEM")
+                    {
+                        frmAssesment.LoadAssesOtherFeesSTRAND_ICT();
+                        // MessageBox.Show("STEM");
+                    }
+                    else if (frmAssesment.Strand == "TVL - ICT")
+                    {
+                        frmAssesment.LoadAssesOtherFeesSTRAND_STEM();
+                    }
+                    else
+                    {
+                        frmAssesment.LoadAssesOtherFees();
+                    }
 
-                //STATIC
+                    MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin.dispanel.Controls.Clear();
+                    frmAssesment.TopLevel = false;
+                    frmAssesment.AutoScroll = true;
+                    mainwin.dispanel.Controls.Add(frmAssesment);
 
-                //show assesment                             
-                if (frmAssesment.Strand == "STEM")
-                {
-                    frmAssesment.LoadAssesOtherFeesSTRAND_ICT();
-                   // MessageBox.Show("STEM");
-                }
-                else if (frmAssesment.Strand == "TVL - ICT")
-                {
-                    frmAssesment.LoadAssesOtherFeesSTRAND_STEM();
+                    frmAssesment.Reset();
+                    frmAssesment.LoadSchoolYear();
+                    frmAssesment.LoadTuitionFee();
+                    frmAssesment.LoadAssesMiscFees();
+                    frmAssesment.TotalTuition();
+                    frmAssesment.ComputeVoucher();
+                    frmAssesment.GetDownPayment();
+                    frmAssesment.LoadSubject();
+                    frmAssesment.EnableMOP();
+                    frmAssesment.Show();
+                    frmAssesment.checkPayment();
+                    #endregion
                 }
                 else
                 {
-                    frmAssesment.LoadAssesOtherFees();
+                    MessageBox.Show("aa");
+                    LoadMe();
+                    #region Payment
+                    //set up before form load
+                    //STATIC
+                    //show assesment                             
+                    if (frmAssesment.Strand == "STEM")
+                    {
+                        frmAssesment.LoadAssesOtherFeesSTRAND_ICT();
+                        // MessageBox.Show("STEM");
+                    }
+                    else if (frmAssesment.Strand == "TVL - ICT")
+                    {
+                        frmAssesment.LoadAssesOtherFeesSTRAND_STEM();
+                    }
+                    else
+                    {
+                        frmAssesment.LoadAssesOtherFees();
+                    }
+
+                    MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin.dispanel.Controls.Clear();
+                    frmAssesment.TopLevel = false;
+                    frmAssesment.AutoScroll = true;
+                    mainwin.dispanel.Controls.Add(frmAssesment);
+
+                    frmAssesment.Reset();
+                    frmAssesment.LoadSchoolYear();
+                    frmAssesment.LoadTuitionFee();
+                    frmAssesment.LoadAssesMiscFees();
+                    frmAssesment.TotalTuition();
+                    frmAssesment.ComputeVoucher();
+                    frmAssesment.GetDownPayment();
+                    frmAssesment.LoadSubject();
+                    frmAssesment.EnableMOP();
+                    frmAssesment.Show();
+                    frmAssesment.checkPayment();
                 }
-
-                MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
-                mainwin.dispanel.Controls.Clear();
-                frmAssesment.TopLevel = false;
-                frmAssesment.AutoScroll = true;
-                mainwin.dispanel.Controls.Add(frmAssesment);
-
-                frmAssesment.Reset();
-                frmAssesment.LoadSchoolYear();
-                frmAssesment.LoadTuitionFee();
-                frmAssesment.LoadAssesMiscFees();                                            
-                frmAssesment.TotalTuition();
-                frmAssesment.ComputeVoucher();
-                frmAssesment.GetDownPayment();
-                frmAssesment.LoadSubject();
-                frmAssesment.EnableMOP();                               
-                frmAssesment.Show();
-                frmAssesment.checkPayment();               
             }
-            
-                
+            //else
+            //{
+            //    //For Fullpayment
+            //    if (frmAssesment.fullPay.Equals("1"))
+            //    {
+            //        //clear list
+            //        studProfiles.Clear();
+            //        //pass value
+            //        studProfile.Id = Int32.Parse(dgvSearch.CurrentRow.Cells[0].FormattedValue.ToString());
+            //        studProfiles = studProfile.GetById();
+
+            //        foreach (var item in studProfiles)
+            //        {
+            //            //pass variable to form Assesment
+            //            frmAssesment.StudName = item.StudLastName + ", " + item.StudFirstName + " " + item.StudMiddleName;
+            //            frmAssesment.LRN = item.StudLRN;
+            //            frmAssesment.GradeLevel = item.StudGradeLevel;
+            //            frmAssesment.Track = item.Track;
+            //            frmAssesment.RegNo = item.StudRegistrationNo;
+            //            frmAssesment.Strand = item.StudStrand;
+            //            frmAssesment.Voucher = item.VoucherType;
+            //            frmAssesment.GOCNo = item.StudGOCNo;
+            //            frmAssesment.partialPay = item.PartialPayment;
+            //            frmAssesment.fullPay = item.FullPayment;
+            //            frmAssesment.theSection = item.Section;
+            //        }
+            //        #region Payment
+            //        //set up before form load
+            //        //STATIC
+            //        //show assesment                             
+            //        if (frmAssesment.Strand == "STEM")
+            //        {
+            //            frmAssesment.LoadAssesOtherFeesSTRAND_ICT();
+            //            // MessageBox.Show("STEM");
+            //        }
+            //        else if (frmAssesment.Strand == "TVL - ICT")
+            //        {
+            //            frmAssesment.LoadAssesOtherFeesSTRAND_STEM();
+            //        }
+            //        else
+            //        {
+            //            frmAssesment.LoadAssesOtherFees();
+            //        }
+
+            //        MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
+            //        mainwin.dispanel.Controls.Clear();
+            //        frmAssesment.TopLevel = false;
+            //        frmAssesment.AutoScroll = true;
+            //        mainwin.dispanel.Controls.Add(frmAssesment);
+
+            //        frmAssesment.Reset();
+            //        frmAssesment.LoadSchoolYear();
+            //        frmAssesment.LoadTuitionFee();
+            //        frmAssesment.LoadAssesMiscFees();
+            //        frmAssesment.TotalTuition();
+            //        frmAssesment.ComputeVoucher();
+            //        frmAssesment.GetDownPayment();
+            //        frmAssesment.LoadSubject();
+            //        frmAssesment.EnableMOP();
+            //        frmAssesment.Show();
+            //        frmAssesment.checkPayment();
+            //        #endregion
+            //    }
+
+
+            //    //#endregion
+
+            //    //if (dgvSearch.SelectedRows.Count > 0)
+            //    //{
+
+
+            //    //}                            
+            //}
+
+
+
         }
 
 
@@ -438,6 +589,7 @@ namespace GOCSystem2018
             mainwin.dispanel.Controls.Add(frmReg);
 
             frmReg.Show();
+            #endregion
         }
     }
 }

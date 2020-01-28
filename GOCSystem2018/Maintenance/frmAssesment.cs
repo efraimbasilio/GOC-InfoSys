@@ -198,29 +198,44 @@ namespace GOCSystem2018
             LoadEnrolledStudents12();
 
 
-
-            if (Convert.ToInt32(partialPay) == 0)//No payment yet
+           
+            if (Convert.ToInt32(partialPay) == 0 && Convert.ToInt32(fullPay) == 0)//No payment yet
             {
+                MessageBox.Show("partialPay");
                 //cmbMOP.Text = "Partial Payment";
                 cmbMOP.Enabled = true;
                 cmbMOP.Select();
             }
-
-            else if (Convert.ToInt32(partialPay) > 0)
+            else if(Convert.ToInt32(fullPay) == 1)
             {
-                cmbMOP.Text = "Partial Payment";
-                cmbMOP.Enabled = false;
-            }
-            else if (Convert.ToInt32(_fullPayBalance) < 1)//no existing Balance , Fully paid account
-            {
+                MessageBox.Show(fullPay);
                 cmbMOP.Text = "Full Payment";
-                cmbMOP.Enabled = false;
-                cmbSection.Select();
-                btnEnroll.Enabled = false;           
+                    cmbMOP.Enabled = false;
+                    cmbSection.Select();
+                    btnEnroll.Enabled = false;
             }
 
+            //if (Convert.ToInt32(partialPay) > 0)2nd payment
+            //{
+            //    cmbMOP.Text = "Partial Payment";
+            //    cmbMOP.Enabled = false;
+            //}
 
-            
+            //if (Convert.ToInt32(_fullPayBalance) < 1)//no existing Balance , Fully paid account
+            //{
+            //    cmbMOP.Text = "Full Payment";
+            //    cmbMOP.Enabled = false;
+            //    cmbSection.Select();
+            //    btnEnroll.Enabled = false;
+            //}
+            //else
+            //{
+            //    cmbMOP.Text = "Partial Payment";
+            //    cmbMOP.Enabled = false;
+            //}
+
+
+
 
             if (lblEnStatus.Text == "Pending")
             {

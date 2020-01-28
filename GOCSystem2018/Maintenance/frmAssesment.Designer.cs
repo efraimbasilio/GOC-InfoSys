@@ -565,6 +565,7 @@
             // dgvFeeHistory
             // 
             this.dgvFeeHistory.AllowUserToAddRows = false;
+            this.dgvFeeHistory.AllowUserToDeleteRows = false;
             this.dgvFeeHistory.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvFeeHistory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvFeeHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1886,7 +1887,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1121, 742);
+            this.ClientSize = new System.Drawing.Size(1138, 759);
             this.Controls.Add(this.dgvStudents);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dgvEnrolledList);
