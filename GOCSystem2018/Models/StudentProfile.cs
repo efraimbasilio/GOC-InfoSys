@@ -1005,13 +1005,14 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE student_profile SET partial_Payment=@partialPayment" +
+                    string sql = "UPDATE student_profile SET full_Payment=@fullPayment, partial_Payment=@partialPayment" +
                                     " WHERE regno=@studRegistrationNo;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
                     cmd.Parameters.AddWithValue("partialPayment", partialPayment);
+                    cmd.Parameters.AddWithValue("fullPayment", fullPayment);
                     //cmd.Parameters.AddWithValue("reserveFor", reserveFor);
 
 
@@ -1038,14 +1039,16 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE student_profile SET full_Payment=@fullPayment" +
+                    string sql = "UPDATE student_profile SET full_Payment=@fullPayment, Partial_payment=@partialPayment" +
                                     " WHERE regno=@studRegistrationNo;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
 
                     cmd.Parameters.AddWithValue("studRegistrationNo", studRegistrationNo);
+                    cmd.Parameters.AddWithValue("partialPayment", partialPayment);
                     cmd.Parameters.AddWithValue("fullPayment", fullPayment);
                     //cmd.Parameters.AddWithValue("reserveFor", reserveFor);
+                    //cmd.Parameters.AddWithValue("reservee", reservee);
 
 
                     cmd.ExecuteNonQuery();

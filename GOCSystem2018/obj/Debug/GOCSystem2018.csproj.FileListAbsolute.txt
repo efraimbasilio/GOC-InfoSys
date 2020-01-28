@@ -74,3 +74,4 @@ C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSyst
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csproj.GenerateResource.Cache
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.exe
 C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.pdb
+C:\Users\Instructor\Documents\GitHub\GOC-InfoSys\GOCSystem2018\obj\Debug\GOCSystem2018.csprojResolveAssemblyReference.cache

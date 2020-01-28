@@ -100,30 +100,19 @@ namespace GOCSystem2018
                     frmBilling.Track = item.Track;
                     frmBilling.Strand = item.StudStrand;
                     frmBilling.VoucherType = item.VoucherType;
-                    frmBilling.RegNo = item.StudRegistrationNo;
+                    frmBilling.RegNo = item.StudRegistrationNo;  
+                                     
+                    frmBilling.CallPaymentNumber();
+                    frmBilling.GetPerMonth();
 
-                   
-
-                frmBilling.CallPaymentNumber();
-                frmBilling.GetPerMonth();
-
-
-                //set up before form load
-                
-                frmBilling.Render();
+                    //set up before form load                
+                    frmBilling.Render();
 
                     if (item.Reservee.Equals("1"))
                     {
-                        frmBilling.lblMOPInfo.Text = "RESERVATION";
-
-                        //frmBilling.lblReservationTag.ForeColor = Color.Red;
-                        //frmBilling.lblReservationTag.BackColor = Color.Black;
+                        frmBilling.lblMOPInfo.Text = "RESERVATION";                        
                         frmBilling.CTRpayment = 1;
                         frmBilling.cmbMOP.Enabled = false;
-
-                        //frmBilling.cmbPaymentFor.Items.Clear();
-                        //frmBilling.cmbPaymentFor.Items.Add("Reservation");
-                        //frmBilling.cmbPaymentFor.Text = "Reservation";
                     }
 
                     else if (item.PartialPayment.Equals("1"))
@@ -134,17 +123,10 @@ namespace GOCSystem2018
                     else if (item.FullPayment.Equals("1"))
                     {
                         frmBilling.RenderFullpayment();
-                    }
-
-                    //if (item.FullPayment.Equals("1"))
-                    //{
-                    //    frmBilling.lblFullPayment.ForeColor = Color.Red;
-                    //    frmBilling.lblFullPayment.BackColor = Color.Black;
-                    //    frmBilling.cmbMOP.Text = "Full Payment";
-                    //    frmBilling.CTRpayment = 3;
-                    //}                    
+                    }                                      
                 }
 
+                //To Call the M Ain Window
                 MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
                 mainwin.dispanel.Controls.Clear();
                 frmBilling.TopLevel = false;

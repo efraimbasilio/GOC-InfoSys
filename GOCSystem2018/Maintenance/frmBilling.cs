@@ -94,12 +94,13 @@ namespace GOCSystem2018
                 double fpay = Convert.ToDouble(lblTotalPayment.Text) - Convert.ToDouble(lblVoucherAmount.Text);
                 lblFullpaymentCTR.Text = fpay.ToString("n");
                 lblMOPInfo.Text = "FULL PAYMENT";
-                cmbMOP.Text = "Full Payment";
+                cmbMOP.Text = "Full Payment";                
             }
             else
             {
                 lblMOPInfo.Text = "FULL PAYMENT";
                 cmbMOP.Text = "Full Payment";
+                cmbMOP.Enabled = false;
             }                                                     
         }
 
@@ -651,7 +652,7 @@ namespace GOCSystem2018
                 }
                 else
                 {
-                    return;  
+                    MessageBox.Show("Account is Fully Paid","Enrollment System",MessageBoxButtons.OK,MessageBoxIcon.Information);  
                 }
             }
           }

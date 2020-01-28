@@ -1022,6 +1022,7 @@ namespace GOCSystem2018
             studProfile.StudRegistrationNo = reg_no;
             studProfile.StudGOCNo = GOCNo;
             studProfile.Reservee = "0";
+
             studProfile.SaveGOCNumber(); //update GOC number in the student profile table
 
             //For reservation - Public Voucher            
@@ -1052,10 +1053,14 @@ namespace GOCSystem2018
 
             studProfile.StudRegistrationNo = reg_no;
             studProfile.FullPayment = "1";
+            studProfile.PartialPayment = "0";
+            studProfile.Reservee = "0";
+            studProfile.ReserveFor = "0";
+
             studProfile.Fullpayment();
 
-            studProfile.PartialPayment = "1";
-            studProfile.PartialOnly();
+            //studProfile.PartialPayment = "1";
+            //studProfile.PartialOnly();
 
             MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
             mainwin.dispanel.Controls.Clear();
@@ -1679,9 +1684,9 @@ namespace GOCSystem2018
 
             if (lblFullPayStat.Text == "FullPayment")
             {
-                if (Convert.ToDecimal(txtAmountGiven.Text) > Convert.ToDecimal(lblAmount_Due.Text))
+                if (Convert.ToDecimal(txtAmountGiven.Text) < Convert.ToDecimal(lblAmount_Due.Text) || Convert.ToDecimal(txtAmountGiven.Text) > Convert.ToDecimal(lblAmount_Due.Text))
                 {
-                    MessageBox.Show("Please pay the exact amount due", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Please pay the exact amount due for Full payment", "GOC_INFO_SYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 else if (Convert.ToDecimal(txtAmountGiven.Text) == Convert.ToDecimal(lblAmount_Due.Text))
@@ -1700,7 +1705,7 @@ namespace GOCSystem2018
                     {
                         return;
                     }
-                }
+                }               
             }
         }
         #endregion

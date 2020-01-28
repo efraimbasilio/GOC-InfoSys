@@ -1051,6 +1051,7 @@ namespace GOCSystem2018
 
                         studProfile.StudRegistrationNo = RegNo;
                         studProfile.PartialPayment = "1";
+                        studProfile.FullPayment = "0";
                         studProfile.PartialOnly();
                                             
                     }
@@ -1086,7 +1087,10 @@ namespace GOCSystem2018
                         // MessageBox.Show(ans.ToString("n"));
 
                         studProfile.StudRegistrationNo = RegNo;
-                        studProfile.FullPayment = "1";
+
+                        studProfile.FullPayment = "1";                        
+                        studProfile.PartialPayment = "0";
+
                         studProfile.Fullpayment();                       
                     }
 
