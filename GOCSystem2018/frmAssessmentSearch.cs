@@ -298,8 +298,12 @@ namespace GOCSystem2018
                     frmAssesment.GetDownPayment();
                     frmAssesment.LoadSubject();
                     frmAssesment.EnableMOP();
+
+                    
+
                     frmAssesment.Show();
                     frmAssesment.checkPayment();
+                   
                     #endregion
                 }
                 else
@@ -338,10 +342,15 @@ namespace GOCSystem2018
                     frmAssesment.GetDownPayment();
                     frmAssesment.LoadSubject();
                     frmAssesment.EnableMOP();
+
+                    
+
                     frmAssesment.Show();
                     frmAssesment.checkPayment();
+                    //frmAssesment.computeDgv();
                 }
-            }            
+            }
+    
         }
 
 

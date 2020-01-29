@@ -1405,7 +1405,8 @@
             this.cmbMOP.FormattingEnabled = true;
             this.cmbMOP.Items.AddRange(new object[] {
             "Full Payment",
-            "Partial Payment"});
+            "Partial Payment",
+            "Reservation"});
             this.cmbMOP.Location = new System.Drawing.Point(411, 467);
             this.cmbMOP.Name = "cmbMOP";
             this.cmbMOP.Size = new System.Drawing.Size(179, 23);
@@ -1887,7 +1888,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
-            this.ClientSize = new System.Drawing.Size(1138, 759);
+            this.ClientSize = new System.Drawing.Size(1155, 776);
             this.Controls.Add(this.dgvStudents);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dgvEnrolledList);

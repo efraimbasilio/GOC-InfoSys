@@ -61,8 +61,10 @@
             this.lblTheAmount = new System.Windows.Forms.Label();
             this.lblEnStatus = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblFullPayStat = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lblRegNo = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.lblGOCNo = new System.Windows.Forms.Label();
@@ -91,9 +93,7 @@
             this.txtUniform = new System.Windows.Forms.TextBox();
             this.btnOtherFee = new System.Windows.Forms.Button();
             this.txtAmountOtherFee = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.dgvOtherFee = new System.Windows.Forms.DataGridView();
-            this.lblFullPayStat = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerMonth)).BeginInit();
             this.panel3.SuspendLayout();
@@ -365,7 +365,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
-            this.panel3.Controls.Add(this.lblFullPayStat);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.lblRegNo);
             this.panel3.Controls.Add(this.label17);
@@ -374,6 +373,18 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(420, 25);
             this.panel3.TabIndex = 1058;
+            // 
+            // lblFullPayStat
+            // 
+            this.lblFullPayStat.AutoSize = true;
+            this.lblFullPayStat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
+            this.lblFullPayStat.Location = new System.Drawing.Point(237, 46);
+            this.lblFullPayStat.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblFullPayStat.Name = "lblFullPayStat";
+            this.lblFullPayStat.Size = new System.Drawing.Size(157, 13);
+            this.lblFullPayStat.TabIndex = 1103;
+            this.lblFullPayStat.Text = "_________________________";
+            this.lblFullPayStat.Visible = false;
             // 
             // label13
             // 
@@ -397,6 +408,18 @@
             this.lblRegNo.Size = new System.Drawing.Size(157, 13);
             this.lblRegNo.TabIndex = 1073;
             this.lblRegNo.Text = "_________________________";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
+            this.label17.Location = new System.Drawing.Point(131, 5);
+            this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(47, 13);
+            this.label17.TabIndex = 1101;
+            this.label17.Text = "LRN_no";
+            this.label17.Visible = false;
             // 
             // label7
             // 
@@ -754,18 +777,6 @@
             this.txtAmountOtherFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtAmountOtherFee.Visible = false;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.label17.Location = new System.Drawing.Point(131, 5);
-            this.label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(47, 13);
-            this.label17.TabIndex = 1101;
-            this.label17.Text = "LRN_no";
-            this.label17.Visible = false;
-            // 
             // dgvOtherFee
             // 
             this.dgvOtherFee.AllowUserToAddRows = false;
@@ -801,18 +812,6 @@
             this.dgvOtherFee.Size = new System.Drawing.Size(248, 269);
             this.dgvOtherFee.TabIndex = 1102;
             // 
-            // lblFullPayStat
-            // 
-            this.lblFullPayStat.AutoSize = true;
-            this.lblFullPayStat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
-            this.lblFullPayStat.Location = new System.Drawing.Point(230, 5);
-            this.lblFullPayStat.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblFullPayStat.Name = "lblFullPayStat";
-            this.lblFullPayStat.Size = new System.Drawing.Size(157, 13);
-            this.lblFullPayStat.TabIndex = 1103;
-            this.lblFullPayStat.Text = "_________________________";
-            this.lblFullPayStat.Visible = false;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(91)))), ((int)(((byte)(107)))));
@@ -836,6 +835,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(251)))));
             this.ClientSize = new System.Drawing.Size(428, 609);
+            this.Controls.Add(this.lblFullPayStat);
             this.Controls.Add(this.dgvOtherFee);
             this.Controls.Add(this.dgvORCheckPartial);
             this.Controls.Add(this.dgvPerMonth);

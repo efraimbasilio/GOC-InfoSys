@@ -560,6 +560,7 @@ namespace GOCSystem2018
                 pay.reg_no = lblRegNo.Text;
                 pay.GOCNo = lblGOCNo.Text;
                 pay.S_PAYFOR = lblMOPInfo.Text;
+                pay.ifFullPay = cmbMOP.Text;
 
                 //if Reservation or Partial
                 pay.payment_status = lblMOPInfo.Text;

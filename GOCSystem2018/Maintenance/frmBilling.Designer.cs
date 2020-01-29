@@ -81,10 +81,16 @@
             this.lblMOPInfo = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.lblPaymentNoCheck = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.lblBalance = new System.Windows.Forms.Label();
+            this.lblOther = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblTotalMiscFee = new System.Windows.Forms.Label();
             this.lblDPCheck = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lblTuition = new System.Windows.Forms.Label();
             this.btnPayment = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
@@ -107,12 +113,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.lblVoucherAmount = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.lblOther = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.lblTotalMiscFee = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.lblTuition = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvSubjectLoad = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -670,7 +670,7 @@
             this.lblMOPInfo.BackColor = System.Drawing.Color.White;
             this.lblMOPInfo.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMOPInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(33)))), ((int)(((byte)(87)))));
-            this.lblMOPInfo.Location = new System.Drawing.Point(142, 29);
+            this.lblMOPInfo.Location = new System.Drawing.Point(142, 21);
             this.lblMOPInfo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblMOPInfo.Name = "lblMOPInfo";
             this.lblMOPInfo.Size = new System.Drawing.Size(133, 16);
@@ -699,6 +699,17 @@
             this.lblPaymentNoCheck.Text = "0";
             this.lblPaymentNoCheck.Visible = false;
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(897, 494);
+            this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(131, 15);
+            this.label23.TabIndex = 36;
+            this.label23.Text = "Total Other School Fee:";
+            this.label23.Visible = false;
+            // 
             // lblBalance
             // 
             this.lblBalance.Location = new System.Drawing.Point(211, 741);
@@ -708,6 +719,17 @@
             this.lblBalance.TabIndex = 1070;
             this.lblBalance.Text = "__________________";
             this.lblBalance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lblOther
+            // 
+            this.lblOther.Location = new System.Drawing.Point(1047, 490);
+            this.lblOther.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblOther.Name = "lblOther";
+            this.lblOther.Size = new System.Drawing.Size(104, 17);
+            this.lblOther.TabIndex = 35;
+            this.lblOther.Text = "__________________";
+            this.lblOther.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblOther.Visible = false;
             // 
             // btnSearch
             // 
@@ -723,6 +745,17 @@
             this.btnSearch.Visible = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(897, 462);
+            this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(135, 15);
+            this.label20.TabIndex = 34;
+            this.label20.Text = "Total Miscellaneous Fee:";
+            this.label20.Visible = false;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -734,6 +767,17 @@
             this.label6.Text = "Payment For:";
             this.label6.Visible = false;
             // 
+            // lblTotalMiscFee
+            // 
+            this.lblTotalMiscFee.Location = new System.Drawing.Point(1049, 462);
+            this.lblTotalMiscFee.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTotalMiscFee.Name = "lblTotalMiscFee";
+            this.lblTotalMiscFee.Size = new System.Drawing.Size(104, 17);
+            this.lblTotalMiscFee.TabIndex = 33;
+            this.lblTotalMiscFee.Text = "__________________";
+            this.lblTotalMiscFee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTotalMiscFee.Visible = false;
+            // 
             // lblDPCheck
             // 
             this.lblDPCheck.AutoSize = true;
@@ -744,6 +788,28 @@
             this.lblDPCheck.TabIndex = 1053;
             this.lblDPCheck.Text = "DP CHECK";
             this.lblDPCheck.Visible = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(898, 437);
+            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(98, 15);
+            this.label21.TabIndex = 32;
+            this.label21.Text = "Total Tuition Fee:";
+            this.label21.Visible = false;
+            // 
+            // lblTuition
+            // 
+            this.lblTuition.Location = new System.Drawing.Point(1050, 437);
+            this.lblTuition.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblTuition.Name = "lblTuition";
+            this.lblTuition.Size = new System.Drawing.Size(104, 17);
+            this.lblTuition.TabIndex = 31;
+            this.lblTuition.Text = "__________________";
+            this.lblTuition.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTuition.Visible = false;
             // 
             // btnPayment
             // 
@@ -977,72 +1043,6 @@
             this.lblVoucherAmount.TabIndex = 37;
             this.lblVoucherAmount.Text = "__________________";
             this.lblVoucherAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(897, 494);
-            this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(131, 15);
-            this.label23.TabIndex = 36;
-            this.label23.Text = "Total Other School Fee:";
-            this.label23.Visible = false;
-            // 
-            // lblOther
-            // 
-            this.lblOther.Location = new System.Drawing.Point(1047, 490);
-            this.lblOther.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblOther.Name = "lblOther";
-            this.lblOther.Size = new System.Drawing.Size(104, 17);
-            this.lblOther.TabIndex = 35;
-            this.lblOther.Text = "__________________";
-            this.lblOther.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblOther.Visible = false;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(897, 462);
-            this.label20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(135, 15);
-            this.label20.TabIndex = 34;
-            this.label20.Text = "Total Miscellaneous Fee:";
-            this.label20.Visible = false;
-            // 
-            // lblTotalMiscFee
-            // 
-            this.lblTotalMiscFee.Location = new System.Drawing.Point(1049, 462);
-            this.lblTotalMiscFee.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblTotalMiscFee.Name = "lblTotalMiscFee";
-            this.lblTotalMiscFee.Size = new System.Drawing.Size(104, 17);
-            this.lblTotalMiscFee.TabIndex = 33;
-            this.lblTotalMiscFee.Text = "__________________";
-            this.lblTotalMiscFee.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblTotalMiscFee.Visible = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(898, 437);
-            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(98, 15);
-            this.label21.TabIndex = 32;
-            this.label21.Text = "Total Tuition Fee:";
-            this.label21.Visible = false;
-            // 
-            // lblTuition
-            // 
-            this.lblTuition.Location = new System.Drawing.Point(1050, 437);
-            this.lblTuition.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblTuition.Name = "lblTuition";
-            this.lblTuition.Size = new System.Drawing.Size(104, 17);
-            this.lblTuition.TabIndex = 31;
-            this.lblTuition.Text = "__________________";
-            this.lblTuition.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblTuition.Visible = false;
             // 
             // groupBox3
             // 

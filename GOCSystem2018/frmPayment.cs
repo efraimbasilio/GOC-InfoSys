@@ -157,7 +157,7 @@ namespace GOCSystem2018
         public int payment_no;
         public string reg_no, enroll_status;
 
-        public string amountToPay, paymentFor, GOCNo, ctrpay,  DP, voucherInfo, reservationFee, paymentNo, toCheckGOCNo;
+        public string amountToPay, paymentFor, GOCNo, ctrpay,  DP, voucherInfo, reservationFee, paymentNo, toCheckGOCN, ifFullPay;
         public double TotalMiscFee, TotalOtherFee, AmountGiven, BalancePartial, perMonthFee;
 
         public string S_LRN, S_GOC, S_NAME,S_PAYFOR,S_AMOUNT,level;
@@ -660,6 +660,19 @@ namespace GOCSystem2018
                 bill.MOP = "Partial Payment No: " + count;
                 //save for the billing OR table
                 bill.Save();
+
+                #region testingSample
+                    studProfile.StudRegistrationNo = reg_no;
+                    studProfile.StudGOCNo = GOCNo;
+
+                    studProfile.FullPayment = "0";
+                    studProfile.Reservee = "0";
+                    studProfile.PartialPayment = "1";
+
+                    MessageBox.Show("After REserve payment update");
+                    studProfile.SaveGOCNumber();
+                #endregion
+
 
                 MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
                 mainwin.dispanel.Controls.Clear();
@@ -1405,7 +1418,14 @@ namespace GOCSystem2018
                     studProfile.SaveGOCNumber();
 
                     Reservation();//Computation per month and Balance
-                    return;
+
+                    //New Added
+                    MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+                    mainwin2.dispanel.Controls.Clear();
+                    mainwin2.dispanel.Visible = false;
+
+                    mainwin2.Dashboardpanel.Visible = true;
+                    this.Close();
 
                 }
                 else
@@ -1598,7 +1618,20 @@ namespace GOCSystem2018
 
         //For billing
         private void button1_Click(object sender, EventArgs e)
-        {
+        {            
+           
+            //if (double.Parse(billingPartial.Balance) > AmountGiven && billingPartial.EnStatus == "Reservee" && ifFullPay.Equals("Full Payment"))
+            //{
+
+            //}
+             //codes
+
+
+            //if (payment_status.Equals("RESERVATION") )
+            //{
+
+            //}
+
             #region ValidationDuplicate
             if (toOtherFees == true)
             {

@@ -69,11 +69,28 @@ namespace GOCSystem2018
         public frmAssesment()
         {
             InitializeComponent();
+            
+        }
+
+        public void computeDgv()
+        {
+            double TotalFee=0;
+            //get the sum of all amount in dgv
+
+            if (dgvFeeHistory.Rows.Count < 1)
+            {
+                MessageBox.Show("No Entry");
+            }
+            for (int i = 0; i < dgvFeeHistory.Rows.Count; i++)
+            {
+                TotalFee += (Convert.ToDouble(dgvFeeHistory.Rows[i].Cells[2].Value));
+            }
+            MessageBox.Show(TotalFee.ToString("n"));
+            //Payments = TotalFee - Convert.ToDouble(txtAmountGiven.Text);
         }
 
         private void frmAssesment_Load(object sender, EventArgs e)
-        {
-            
+        {            
 
             #region DGV Design
 
@@ -184,7 +201,7 @@ namespace GOCSystem2018
             LoadSection();
             EnrollmentStatus();
             LoadBillingHistory();
-
+            computeDgv();
 
             //if (Convert.ToInt32((lblGradeLevel.Text)) == 11)
             //{
@@ -944,9 +961,7 @@ namespace GOCSystem2018
             //    MessageBox.Show("Please select a section", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //    return;
             //}          
-        }
-
-       
+        } 
 
         private void CheckDuplicateRecords()
         {
@@ -960,9 +975,7 @@ namespace GOCSystem2018
                 }
             }
         }
-
       
-
         private void Schedule_loop()
         {
             schedules.Clear();
@@ -1147,10 +1160,14 @@ namespace GOCSystem2018
                             studProfile.Reservee = "1";
                             studProfile.ReserveOnly();
 
-                            //frmBillingSearch frmBillingSearch = new frmBillingSearch();
-                            //this.Hide();
-                            this.Close();
-                            //frmBillingSearch.Show();                            
+                            frmBillingSearch bill = new frmBillingSearch();
+                            MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
+                            mainwin2.dispanel.Controls.Clear();
+                            bill.TopLevel = false;
+                            bill.AutoScroll = true;
+                            mainwin2.dispanel.Controls.Add(bill);
+
+                            bill.Show();
                         }
                     }
                     else
@@ -1202,7 +1219,7 @@ namespace GOCSystem2018
 
                         SaveForGrading();
 
-                   
+
 
                     this.Close();
 
@@ -1231,13 +1248,6 @@ namespace GOCSystem2018
                         enroll.SyEnroll = lblSY.Text;
 
                         enroll.SaveGrade12();//grade 12
-
-                    MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
-                    mainwin.dispanel.Controls.Clear();
-                    mainwin.dispanel.Visible = false;
-
-                    mainwin.Dashboardpanel.Visible = true;
-
 
                     this.Close();
 
@@ -1478,6 +1488,7 @@ namespace GOCSystem2018
             frmAssessmentSearch.Show();
             //this.Dispose();           
         }
+
         public void LoadRecordsWithRegno()
         {
             //clear list                      
