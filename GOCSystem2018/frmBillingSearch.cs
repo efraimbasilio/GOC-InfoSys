@@ -100,8 +100,11 @@ namespace GOCSystem2018
                     frmBilling.Track = item.Track;
                     frmBilling.Strand = item.StudStrand;
                     frmBilling.VoucherType = item.VoucherType;
-                    frmBilling.RegNo = item.StudRegistrationNo;  
-                                     
+                    frmBilling.RegNo = item.StudRegistrationNo;
+                    frmBilling.partial = item.PartialPayment;
+                    frmBilling.fullpay = item.FullPayment;
+
+
                     frmBilling.CallPaymentNumber();
                     frmBilling.GetPerMonth();
 
@@ -115,15 +118,15 @@ namespace GOCSystem2018
                         frmBilling.cmbMOP.Enabled = false;
                     }
 
-                    else if (item.PartialPayment.Equals("1"))
-                    {
-                        frmBilling.RenderMOP();
-                    }
+                    //else if (item.PartialPayment.Equals("1"))
+                    //{
+                    //    frmBilling.RenderMOP();
+                    //}
 
-                    else if (item.FullPayment.Equals("1"))
-                    {
-                        frmBilling.RenderFullpayment();
-                    }                                      
+                    //else if (item.FullPayment.Equals("1"))
+                    //{
+                    //    frmBilling.RenderFullpayment();
+                    //}                                      
                 }
 
                 //To Call the M Ain Window

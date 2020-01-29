@@ -1022,8 +1022,9 @@ namespace GOCSystem2018
             studProfile.StudRegistrationNo = reg_no;
             studProfile.StudGOCNo = GOCNo;
             studProfile.Reservee = "0";
-
+            studentProfile.FullPayment = "1";
             studProfile.SaveGOCNumber(); //update GOC number in the student profile table
+            MessageBox.Show("FULL PAYMENT this is full");
 
             //For reservation - Public Voucher            
             billingPartial.IdNo = GOCNo;
@@ -1110,6 +1111,7 @@ namespace GOCSystem2018
                     studProfile.StudRegistrationNo = reg_no;
                     studProfile.StudGOCNo = GOCNo;
                     studProfile.Reservee = "0";
+                    MessageBox.Show("kapag mas malaki ang binigay na amount kaysa initial reservation fee this will be then divide to 10");
                     studProfile.SaveGOCNumber(); //update GOC number in the student profile table
 
                     //For reservation - Public Voucher            
@@ -1140,6 +1142,7 @@ namespace GOCSystem2018
 
                     studProfile.StudRegistrationNo = reg_no;
                     studProfile.PartialPayment = "1";
+                    studProfile.FullPayment = "0";
                     studProfile.PartialOnly();
 
                     MainWindow mainwin = (MainWindow)Application.OpenForms["MainWindow"];
@@ -1197,6 +1200,8 @@ namespace GOCSystem2018
 
                         studProfile.Reservee = "0";//update the status
                         studProfile.PartialPayment = "1";
+                        studProfile.FullPayment = "0";
+                        MessageBox.Show("reservation");
                         //update GOC number in the student profile table
                         studProfile.SaveGOCNumber();
 
@@ -1253,7 +1258,9 @@ namespace GOCSystem2018
                     studProfile.StudRegistrationNo = reg_no;
                     studProfile.StudGOCNo = GOCNo;
                     studProfile.Reservee = "0";
+                    MessageBox.Show("MAs malaki bayad");
                     studProfile.SaveGOCNumber(); //update GOC number in the student profile table
+
 
                     //For reservation - Public Voucher            
                     billingPartial.IdNo = GOCNo;
@@ -1392,7 +1399,8 @@ namespace GOCSystem2018
                     studProfile.StudGOCNo = GOCNo;
 
                     studProfile.Reservee = "0";//update the status
-                    studProfile.PartialPayment = "1";//update the status
+                    studProfile.PartialPayment = "0";//update the status
+                    studProfile.FullPayment = "0";
                     //update GOC number in the student profile table
                     studProfile.SaveGOCNumber();
 
@@ -1441,8 +1449,11 @@ namespace GOCSystem2018
 
                     studProfile.Reservee = "0";//update the status
                     studProfile.PartialPayment = "1";//update the status
+                    studProfile.FullPayment = "0";//update the status
+
                     //update GOC number in the student profile table
                     studProfile.SaveGOCNumber();
+                    MessageBox.Show("FULL PAYMENT");
 
                     Reservation();//Computation per month and Balance
 
@@ -1493,8 +1504,20 @@ namespace GOCSystem2018
                 billingPartial.EnStatus ="Enrolled";
 
                 billingPartial.Update();
-            
-           
+
+            #region testingSample
+            studProfile.StudRegistrationNo = reg_no;
+            studProfile.StudGOCNo = GOCNo;
+
+            studProfile.FullPayment = "0";
+            studProfile.Reservee = "0";
+            studProfile.PartialPayment = "1";
+
+            MessageBox.Show("kto update");
+            studProfile.SaveGOCNumber();
+            #endregion
+
+
             MessageBox.Show("Payment Updated!", "GOCINFOSYS", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             MainWindow mainwin2 = (MainWindow)Application.OpenForms["MainWindow"];
@@ -1865,6 +1888,9 @@ namespace GOCSystem2018
                 studProfile.StudRegistrationNo = reg_no;
                 studProfile.StudGOCNo = GOCNo;
                 studProfile.Reservee = "0";
+                studProfile.PartialPayment = "0";//update the status
+                studProfile.FullPayment = "0";//update the status
+                MessageBox.Show("FULL PAYMENT");
                 studProfile.SaveGOCNumber(); //update GOC number in the student profile table
 
              //   Reservation();

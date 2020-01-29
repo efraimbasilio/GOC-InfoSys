@@ -56,10 +56,11 @@ namespace GOCSystem2018
         public int CTRpayment,perMonthRange;
         public double BalancePartial, Balance_Amount;
         int MonthNumber = 0;
-        public string partialCTR, EnStatus, MOP, MOP_stat;
+        public string partialCTR, EnStatus, MOP, MOP_stat, partial, fullpay;
 
         public string sMonth2 = DateTime.Now.ToString("MM");
         public int payNo;
+
         public void CallPaymentNumber2()
         {
             //clear list
@@ -693,6 +694,15 @@ namespace GOCSystem2018
         public void Render()
         {
 
+            if (partial.Equals("1") && fullpay.Equals("0"))
+            {
+                RenderMOP();
+            }
+            else if (fullpay.Equals("1") && partial.Equals("0"))
+            {
+                RenderFullpayment();
+            }
+
             #region For validating amount due anutomatic per month catching
 
             //June to March SY 
@@ -835,6 +845,8 @@ namespace GOCSystem2018
             dgvPerMonth.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(166, 176, 236);
             dgvPerMonth.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             #endregion
+
+            
         }
 
         private void cmbMOP_SelectedValueChanged(object sender, EventArgs e)

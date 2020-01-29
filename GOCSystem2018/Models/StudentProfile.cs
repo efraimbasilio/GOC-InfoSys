@@ -1290,7 +1290,7 @@ namespace GOCSystem2018
                     //try to open connection
                     con.Open();
 
-                    string sql = "UPDATE student_profile SET IdNo=@studGOCNo, reservee=@reservee , partial_Payment=@partialPayment" +
+                    string sql = "UPDATE student_profile SET IdNo=@studGOCNo, reservee=@reservee , partial_Payment=@partialPayment, full_Payment=@fullPayment" +
                                     " WHERE regno=@studRegistrationNo;";
 
                     MySqlCommand cmd = new MySqlCommand(sql, con);
@@ -1299,6 +1299,7 @@ namespace GOCSystem2018
                     cmd.Parameters.AddWithValue("studGOCNo", studGOCNo);
                     cmd.Parameters.AddWithValue("reservee",reservee);
                     cmd.Parameters.AddWithValue("partialPayment", partialPayment);
+                    cmd.Parameters.AddWithValue("fullPayment", fullPayment);
 
 
 
